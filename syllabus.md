@@ -1,20 +1,14 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
 # MACS 30000 - Perspectives on Analysis
 
-* Instructors
-    * [Dr. Richard Evans](https://sites.google.com/site/rickecon/)
-    * [Dr. Benjamin Soltoff](http://www.bensoltoff.com)
-* Teaching Assistant: [Ms. Ging Cee Ng](https://sites.google.com/a/uchicago.edu/gingceeng/)
-* Meeting day/time: MW 11:30-12:50pm, 247 Saieh Hall for Economics
-* Lab session: W 5-5:50pm, location TBD
-* Office hours
-    * Richard - W 2-4pm (248 Saieh Hall)
-    * Benjamin - Th 2-4pm (249 Saieh Hall)
-    * Ging Cee - TBD
+|  | [Dr. Richard Evans](https://sites.google.com/site/rickecon/) | [Dr. Benjamin Soltoff](http://www.bensoltoff.com/) | [Ms. Ging Cee Ng](https://sites.google.com/a/uchicago.edu/gingceeng/) (TA) |
+|--------------|--------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------|
+| Email | rwevans@uchicago.edu | soltoffbc@uchicago.edu | gingcee@uchicago.edu |
+| Office | 250 Saieh Hall | 249 Saieh Hall | 251 Saieh Hall |
+| Office Hours | W 2-4pm | Th 2-4pm | TBD |
+| GitHub | [rickecon](https://github.com/rickecon) | [bensoltoff](https://github.com/bensoltoff) | TBD |
+
+* **Meeting day/time**: MW 11:30-12:50pm, 247 Saieh Hall for Economics
+* **Lab session**: W 5-5:50pm, location TBD
 
 ## Course description
 
@@ -69,7 +63,7 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Fri, Dec. 2 |  |  | Problem Set 4 due |
 | Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |  |
 
-# Course schedule (detailed)
+## Course schedule (detailed)
 
 1. Introduction to computational social science
     * Objectives

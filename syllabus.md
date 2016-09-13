@@ -8,7 +8,7 @@
 | GitHub | [rickecon](https://github.com/rickecon) | [bensoltoff](https://github.com/bensoltoff) | TBD |
 
 * **Meeting day/time**: MW 11:30-12:50pm, 247 Saieh Hall for Economics
-* **Lab session**: W 5-5:50pm, location TBD
+* **Lab session**: T 5-5:50pm, location TBD
 
 ## Course description
 

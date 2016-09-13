@@ -27,7 +27,7 @@ Massive digital traces of human behavior and ubiquitous computation have both ex
 
 Assignment | Quantity | Points | Total Points
 -----------|----------|--------|-------------
-Short paper| 4 | 10 | 40
+Short paper| 4 | 15 | 60
 Problem set| 4 | 10 | 40
 Final exam | 1 | 20 | 20
 

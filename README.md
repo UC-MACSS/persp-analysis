@@ -4,7 +4,7 @@
 |--------------|--------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------|
 | Email | rwevans@uchicago.edu | soltoffbc@uchicago.edu | gingcee@uchicago.edu |
 | Office | 250 Saieh Hall | 249 Saieh Hall | 251 Saieh Hall |
-| Office Hours | W 2-4pm | Th 2-4pm | TBD |
+| Office Hours | W 2:30-4:30pm | Th 2-4pm | TBD |
 | GitHub | [rickecon](https://github.com/rickecon) | [bensoltoff](https://github.com/bensoltoff) | TBD |
 
 * **Meeting day/time**: MW 11:30-12:50pm, 247 Saieh Hall for Economics

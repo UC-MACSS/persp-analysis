@@ -1,3 +1,7 @@
+---
+output: pdf_document
+---
+
 # MACS 30000 - Perspectives on Computational Analysis
 
 |  | [Dr. Richard Evans](https://sites.google.com/site/rickecon/) | [Dr. Benjamin Soltoff](http://www.bensoltoff.com/) | [Ms. Ging Cee Ng](https://sites.google.com/a/uchicago.edu/gingceeng/) (TA) |

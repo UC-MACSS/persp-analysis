@@ -131,7 +131,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [U.S. Survey Research: Our survey methodology in detail](http://www.pewresearch.org/methodology/u-s-survey-research/our-survey-methodology-in-detail/)
         * [U.S. Survey Research: Sampling](http://www.pewresearch.org/methodology/u-s-survey-research/sampling/)
     * [Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. *International Journal of Forecasting*, 31(3), 980-991.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0169207014000879)
-    * [FiveThirtyEight: Is A 50-State Poll As Good As 50 State Polls?](http://fivethirtyeight.com/features/is-a-50-state-poll-as-good-as-50-state-polls/)
+    * [The Upshot: We Gave Four Good Pollsters the Same Raw Data. They Had Four Different Results.](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=1)
 10. Collecting data (digitally-enriched)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.5-3.7.
     * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)

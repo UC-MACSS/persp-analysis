@@ -36,40 +36,40 @@ If you need any special accommodations, please provide us with a copy of your Ac
 
 ## Course schedule (lite)
 
-| Date | Topic | Lab | Assignment |
-|--------------|---------------------------------------|-----|-------------------|
-| Mon, Sep. 26 | Intro to Computational Social Science |  |  |
-| Tue, Sep. 27 |  | TBD |  |
-| Wed, Sep. 28 | Scientific method |  |  |
-| Mon, Oct. 3 | No class (conference) |  |  |
-| Tue, Oct. 4 |  | TBD |  |
-| Wed, Oct. 5 | Ethics |  |  |
-| Mon, Oct. 10 | Observational data |  | Short Paper 1 due |
-| Tue, Oct. 11 |  | TBD |  |
-| Wed, Oct. 12 | Observational data |  |  |
-| Mon, Oct. 17 | Observational data |  |  |
-| Tue, Oct. 18 |  | TBD |  |
-| Wed, Oct. 19 | Observational data |  |  |
-| Mon, Oct. 24 | Collecting your own data |  | Short Paper 2 due |
-| Tue, Oct. 25 |  | TBD |  |
-| Wed, Oct. 26 | Collecting your own data |  |  |
-| Mon, Oct. 31 | Experiments |  | Short Paper 3 due |
-| Tue, Nov. 1 |  | TBD |  |
-| Wed, Nov. 2 | Simulated data |  |  |
-| Mon, Nov. 7 | Simulated data |  | Short Paper 4 due |
-| Tue, Nov. 8 |  | TBD |  |
-| Wed, Nov. 9 | Data visualization and description |  | Problem Set 1 due |
-| Mon, Nov. 14 | Data visualization and description |  |  |
-| Tue, Nov. 15 |  | TBD |  |
-| Wed, Nov. 16 | Data visualization and description |  |  |
-| Mon, Nov. 21 | Data visualization and description |  | Problem Set 2 due |
-| Tue, Nov. 22 |  | TBD |  |
-| Wed, Nov. 23 | Data visualization and description |  |  |
-| Mon, Nov. 28 | Collaboration |  | Problem Set 3 due |
-| Tue, Nov. 29 |  | TBD |  |
-| Wed, Nov. 30 | Collaboration |  |  |
-| Fri, Dec. 2 |  |  | Problem Set 4 due |
-| Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |  |
+| Date | Topic | Assignment |
+|--------------|---------------------------------------|-------------------|
+| Mon, Sep. 26 | Intro to Computational Social Science |  |
+| Tue, Sep. 27 |  |  |
+| Wed, Sep. 28 | Scientific method |  |
+| Mon, Oct. 3 | No class (conference) |  |
+| Tue, Oct. 4 |  |  |
+| Wed, Oct. 5 | Ethics |  |
+| Mon, Oct. 10 | Observational data | [Ethics Paper due](assignments/ethics-paper.md) |
+| Tue, Oct. 11 |  |  |
+| Wed, Oct. 12 | Observational data |  |
+| Mon, Oct. 17 | Observational data |  |
+| Tue, Oct. 18 |  |  |
+| Wed, Oct. 19 | Observational data |  |
+| Mon, Oct. 24 | Collecting your own data | Short Paper 2 due |
+| Tue, Oct. 25 |  |  |
+| Wed, Oct. 26 | Collecting your own data |  |
+| Mon, Oct. 31 | Experiments | Short Paper 3 due |
+| Tue, Nov. 1 |  |  |
+| Wed, Nov. 2 | Simulated data |  |
+| Mon, Nov. 7 | Simulated data | Short Paper 4 due |
+| Tue, Nov. 8 |  |  |
+| Wed, Nov. 9 | Data visualization and description | Problem Set 1 due |
+| Mon, Nov. 14 | Data visualization and description |  |
+| Tue, Nov. 15 |  |  |
+| Wed, Nov. 16 | Data visualization and description |  |
+| Mon, Nov. 21 | Data visualization and description | Problem Set 2 due |
+| Tue, Nov. 22 |  |  |
+| Wed, Nov. 23 | Data visualization and description |  |
+| Mon, Nov. 28 | Collaboration | Problem Set 3 due |
+| Tue, Nov. 29 |  |  |
+| Wed, Nov. 30 | Collaboration |  |
+| Fri, Dec. 2 |  | Problem Set 4 due |
+| Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |
 
 ## Course schedule (readings)
 

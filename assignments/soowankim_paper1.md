@@ -29,3 +29,5 @@ Zimmer, Michael. "But the Data Is Already Public”: On the Ethics of Research i
 Kaiser, Tiffany. "Harvard Sociologists in Hot Water Over Facebook Study; Student Privacy Called into Question." DailyTech. July 11, 2011. Accessed October 9, 2016. http://www.dailytech.com/Harvard+Sociologists+in+Hot+Water+Over+Facebook+Study+Student+Privacy+Called+into+Question/article22116.htm.
 
 Parry, Marc. "Harvard Researchers Accused of Breaching Students' Privacy." The Chronicle of Higher Education. July 10, 2011. Accessed October 9, 2016. http://www.chronicle.com/article/Harvards-Privacy-Meltdown/128166/.
+
+Salganik, Matthew J. 2017. *Bit by Bit: Social Research in the Digital Age*. Princeton, NJ: Princeton University Press. Open review edition.

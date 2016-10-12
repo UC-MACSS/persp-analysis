@@ -116,9 +116,6 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * Google Flu Trends
         * [Ginsberg, J., Mohebbi, M. H., Patel, R. S., Brammer, L., Smolinski, M. S., & Brilliant, L. (2009). Detecting influenza epidemics using search engine query data. *Nature*, 457(7232), 1012-1014.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v457/n7232/full/nature07634.html)
         * [Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google flu: traps in big data analysis. *Science*, 343(6176), 1203-1205.](http://science.sciencemag.org.proxy.uchicago.edu/content/343/6176/1203.full)
-    * Forecasting terrorism
-        * [Schrodt, P. A., Yonamine, J., & Bagozzi, B. E. (2013). Data-based computational approaches to forecasting political violence. In *Handbook of computational approaches to counterterrorism* (pp. 129-162). Springer New York.](http://link.springer.com.proxy.uchicago.edu/chapter/10.1007/978-1-4614-5311-6_7)
-        * [Brandt, P. T., Freeman, J. R., & Schrodt, P. A. (2011). Real time, time series forecasting of inter-and intra-state political conflict. *Conflict Management and Peace Science*, 28(1), 41-64.](http://cmp.sagepub.com.proxy.uchicago.edu/content/28/1/41.short)
 8. Observational data (approximating experiments)
     * [2.4.3 Approximating experiments. *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/designs/approximating-experiments/).
     * [Phan, T. Q., & Airoldi, E. M. (2015). A natural experiment of social network formation and dynamics. *PNAS*, 112(21), 6595-6600.](http://www.pnas.org/content/112/21/6595.full)

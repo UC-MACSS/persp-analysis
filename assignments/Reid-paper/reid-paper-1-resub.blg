@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: reid-paper-1-resub.aux
+The style file: unsrt.bst
+Database file #1: reid-paper-1.bib
+Warning--empty institution in belmont
+Warning--empty year in belmont
+You've used 12 entries,
+            1791 wiz_defined-function locations,
+            507 strings with 5233 characters,
+and the built_in function-call counts, 2032 in all, are:
+= -- 170
+> -- 73
+< -- 0
++ -- 31
+- -- 19
+* -- 113
+:= -- 330
+add.period$ -- 33
+call.type$ -- 12
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 87
+empty$ -- 232
+format.name$ -- 19
+if$ -- 453
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 7
+newline$ -- 60
+num.names$ -- 11
+pop$ -- 43
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 39
+stack$ -- 0
+substring$ -- 97
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 17
+width$ -- 14
+write$ -- 120
+(There were 2 warnings)

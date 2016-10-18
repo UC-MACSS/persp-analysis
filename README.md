@@ -44,13 +44,13 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Mon, Oct. 3 | No class (conference) |  |
 | Tue, Oct. 4 |  |  |
 | Wed, Oct. 5 | Ethics |  |
-| Mon, Oct. 10 | Observational data | [Ethics Paper due](assignments/ethics-paper.md) |
+| Mon, Oct. 10 | Observational data | [Ethics paper due](assignments/ethics-paper.md) |
 | Tue, Oct. 11 |  |  |
 | Wed, Oct. 12 | Observational data |  |
 | Mon, Oct. 17 | Observational data |  |
 | Tue, Oct. 18 |  |  |
 | Wed, Oct. 19 | Observational data |  |
-| Mon, Oct. 24 | Collecting your own data | Short Paper 2 due |
+| Mon, Oct. 24 | Collecting your own data | [Observational data paper due](assignments/observational-data-paper.md) |
 | Tue, Oct. 25 |  |  |
 | Wed, Oct. 26 | Collecting your own data |  |
 | Mon, Oct. 31 | Experiments | Short Paper 3 due |

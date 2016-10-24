@@ -121,7 +121,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Phan, T. Q., & Airoldi, E. M. (2015). A natural experiment of social network formation and dynamics. *PNAS*, 112(21), 6595-6600.](http://www.pnas.org/content/112/21/6595.full)
     * [Hersh, E. D. (2013). Long-term effect of September 11 on the political behavior of victims' families and neighbors. *PNAS*, 110(52), 20959-20963.](http://www.pnas.org/content/110/52/20959.full)
     * [Cohen, P., et al. (2016). Using Big Data to Estimate Consumer Surplus: The Case of Uber. Working paper.](https://drive.google.com/file/d/0B3y6Efb4V73TdG9pV1F0VGpsM1E/view)
-9. Collecting data (fundamentals)
+9. Asking questions (fundamentals)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.1-3.4.
     * [Schuldt, J. P., Konrath, S. H., & Schwarz, N. (2011). "Global warming" or "climate change"? Whether the planet is warming depends on question wording. *Public Opinion Quarterly*, 75(1): 115-124.](http://poq.oxfordjournals.org.proxy.uchicago.edu/content/75/1/115)
     * Pew Research Center Survey Methodology
@@ -129,12 +129,11 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [U.S. Survey Research: Sampling](http://www.pewresearch.org/methodology/u-s-survey-research/sampling/)
     * [Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. *International Journal of Forecasting*, 31(3), 980-991.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0169207014000879)
     * [The Upshot: We Gave Four Good Pollsters the Same Raw Data. They Had Four Different Results.](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=1)
-10. Collecting data (digitally-enriched)
+    * [Introducing the YouGov Referendum Model](https://yougov.co.uk/news/2016/06/21/yougov-referendum-model/)
+10. Asking questions (digitally-enriched)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.5-3.7.
     * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
-    * [Ansolabehere, S., & Hersh, E. (2012). Validation: What big data reveal about survey misreporting and the real electorate. *Political Analysis*, 20(4): 437-459.](http://pan.oxfordjournals.org.proxy.uchicago.edu/content/20/4/437.full)
     * [Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. *Science*, 350(6264), 1073-1076.](http://science.sciencemag.org.proxy.uchicago.edu/content/350/6264/1073.full)
-    * [Salganik, M. J., & Levy, K. E. (2015). Wiki surveys: Open and quantifiable social data collection. *PLoS One*, 10(5), e0123483.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0123483)
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
 11. Experiments
     * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)

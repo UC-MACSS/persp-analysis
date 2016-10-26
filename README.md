@@ -39,34 +39,24 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Date | Topic | Assignment |
 |--------------|---------------------------------------|-------------------|
 | Mon, Sep. 26 | Intro to Computational Social Science |  |
-| Tue, Sep. 27 |  |  |
 | Wed, Sep. 28 | Scientific method |  |
 | Mon, Oct. 3 | No class (conference) |  |
-| Tue, Oct. 4 |  |  |
 | Wed, Oct. 5 | Ethics |  |
 | Mon, Oct. 10 | Observational data | [Ethics paper due](assignments/ethics-paper.md) |
-| Tue, Oct. 11 |  |  |
 | Wed, Oct. 12 | Observational data |  |
 | Mon, Oct. 17 | Observational data |  |
-| Tue, Oct. 18 |  |  |
 | Wed, Oct. 19 | Observational data |  |
 | Mon, Oct. 24 | Collecting your own data | [Observational data paper due](assignments/observational-data-paper.md) |
-| Tue, Oct. 25 |  |  |
 | Wed, Oct. 26 | Collecting your own data |  |
-| Mon, Oct. 31 | Experiments | Short Paper 3 due |
-| Tue, Nov. 1 |  |  |
+| Mon, Oct. 31 | Experiments | [Asking questions paper due](assignments/asking-questions-paper.md) |
 | Wed, Nov. 2 | Simulated data |  |
 | Mon, Nov. 7 | Simulated data | Short Paper 4 due |
-| Tue, Nov. 8 |  |  |
 | Wed, Nov. 9 | Data visualization and description | Problem Set 1 due |
 | Mon, Nov. 14 | Data visualization and description |  |
-| Tue, Nov. 15 |  |  |
 | Wed, Nov. 16 | Data visualization and description |  |
 | Mon, Nov. 21 | Data visualization and description | Problem Set 2 due |
-| Tue, Nov. 22 |  |  |
 | Wed, Nov. 23 | Data visualization and description |  |
 | Mon, Nov. 28 | Collaboration | Problem Set 3 due |
-| Tue, Nov. 29 |  |  |
 | Wed, Nov. 30 | Collaboration |  |
 | Fri, Dec. 2 |  | Problem Set 4 due |
 | Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |
@@ -137,10 +127,9 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
 11. Experiments
     * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
-    * [Adams, T. G., Stewart, P. A., & Blanchar, J. C. (2014). Disgust and the politics of sex: exposure to a disgusting odorant increases politically conservative views on sex and decreases support for gay marriage. *PLoS One*, 9(5), e95572.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0095572)
-    * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
     * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
     * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.hbs.edu/faculty/Pages/item.aspx?num=50258)
+    * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
 12. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
     * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.

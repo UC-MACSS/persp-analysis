@@ -128,7 +128,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 11. Experiments
     * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
     * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
-    * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.hbs.edu/faculty/Pages/item.aspx?num=50258)
+    * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.benedelman.org/publications/airbnb-guest-discrimination-2016-09-16.pdf)
     * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
 12. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics

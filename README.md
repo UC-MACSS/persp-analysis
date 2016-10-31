@@ -50,7 +50,7 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Wed, Oct. 26 | Collecting your own data |  |
 | Mon, Oct. 31 | Experiments | [Asking questions paper due](assignments/asking-questions-paper.md) |
 | Wed, Nov. 2 | Simulated data |  |
-| Mon, Nov. 7 | Simulated data | Short Paper 4 due |
+| Mon, Nov. 7 | Simulated data | [Experiments paper due](assignments/experiments-paper.md) |
 | Wed, Nov. 9 | Data visualization and description | Problem Set 1 due |
 | Mon, Nov. 14 | Data visualization and description |  |
 | Wed, Nov. 16 | Data visualization and description |  |

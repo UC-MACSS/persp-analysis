@@ -143,8 +143,9 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 17. Data visualization and description (cont.)
 18. Data visualization and description (cont.)
 19. Collaboration: distributed data collection and analysis
-    * ["Chapter 5: Collaborating." *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
+    * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
     * Chacon, Scott and Ben Straub, [*Pro Git: Everything You Need to Know about Git*](https://git-scm.com/book/en/v2), 2nd edition, Apress, 2014.
+    * Evans, Richard W., ["Chapter 3: Git and GitHub.com". *Overlapping Generations Models for Policy Analysis: Theory and Computation*.](https://github.com/UC-MACSS/persp-analysis/blob/master/handouts/git_tutorial.pdf), unpublished draft (2016).
     * OSPC Data Visualizations project
 20. Collaboration: distributed data collection and analysis (cont.)
 

@@ -1,50 +1,49 @@
-# Short Paper #1: Ethics of "Taste, Ties, and Time"
-
-In this week's readings, you read about a controversial research project which collected data from Facebook profiles of all members of the Class of 2009 at a "diverse private college in the Northeastern U.S." As you are now well aware, there has been a significant ethical debate over the propriety of this project and whether researchers should use this dataset.
-
-In a short paper (1000-1200 words), assess this project's adherence to Salganik's four principles of ethical research. As a reminder, the four principles are:
-
-1. Respect for persons
-2. Beneficence
-3. Justice
-4. Respect for law and public interest
-
-In addition, explain whether or not you would use this data for your own research (if made available) and why.
-
-I am not asking you to summarize the project or its related publications. Rather, I'm asking you to engage the material and conduct your own independent analysis. Cite outside papers and articles as necessary. You are of course free to discuss specific components of the data or aspects of the project that you feel are relevant to your arguments, but the paper should not read as an extended summary of the project.
-
-You will probably find it helpful to read some of the original publications based on this dataset, as well as scholarly responses. Here is a selection of relevant papers (this is only a partial list - you may find more if you conduct your own search):
-
-* [Lewis, K., Kaufman, J., Gonzalez, M., Wimmer, A., & Christakis, N. (2008). Tastes, ties, and time: A new social network dataset using Facebook.com. *Social networks*, 30(4), 330-342.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0378873308000385)
-* [Wimmer, A., & Lewis, K. (2010). Beyond and below racial homophily: Erg models of a friendship network documented on facebook. *American Journal of Sociology*, 116(2), 583-642.](http://www.jstor.org.proxy.uchicago.edu/stable/10.1086/653658)
-* [Lewis, K., Gonzalez, M., & Kaufman, J. (2012). Social selection and peer influence in an online social network. *Proceedings of the National Academy of Sciences*, 109(1), 68-72.](http://www.pnas.org/content/109/1/68)
-* [Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. *Ethics and information technology*, 12(4), 313-325.](http://link.springer.com.proxy.uchicago.edu/article/10.1007%2Fs10676-010-9227-5)
-
-## Submitting your assignment
-
-All assignments for this course should be submitted via [GitHub pull request](https://help.github.com/articles/about-pull-requests/). The basic workflow for homework should be:
-
-1. [Fork](https://guides.github.com/activities/forking/) the [class repository](https://github.com/UC-MACSS/persp-analysis)
-1. [Clone](https://help.github.com/articles/cloning-a-repository/) the repository to your computer
-1. Modify the files and [commit changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) to complete your paper/problem set.
-1. [Push](https://help.github.com/articles/pushing-to-a-remote/) the changes up to your forked repository on GitHub.
-1. [Create a pull request](https://help.github.com/articles/creating-a-pull-request) on the original repository to turn in the assignment. *Make sure to include your name in the pull request.*
-
-Once you have forked the repository the first time, you do not need to make a new fork for each assignment. Rather, [sync your fork with the upstream repository](https://help.github.com/articles/syncing-a-fork/). This will merge updates to the course repository with your fork, including additional demonstration files and new assignments as they are created.
-
-Dr. Evans has written a guide to using [GitHub and this specific workflow](../handouts/git_tutorial.pdf) you may find useful.
-
-### Paper format
-
-You may write your paper in whatever format you wish (e.g. Word document, PDF, Markdown). As long as we can read it, we will review and grade it. *Please don't make it difficult for us to do that.* Save your paper in the same directory as the assignment instructions.
-
-### Submission deadline
-
-Submit your paper before class on Monday, October 10th (11:30 am).
+Short Paper 1: Ethics of "Taste, Ties, and Time"
 
 
+# Reassessing the *Taste, Ties and Time* through Four Principles#
+by Tong Ju
 
+As Matthew Salganik advocates, social scientists need to examine their own research project from a principle-based perspective rather than the rule-based one(1), simply because the pace of rules and guidelines developed in this field is much slower than the progress of computational methodology and techniques. Against this backdrop, social scientists are confronted with the intellectual challenges not only from how to exploit new methods creatively to resolve the old questions, but also from how to minimize the ethical risks caused by the new means. The debates over the article, Tastes, ties, and time (T3)(2) reveals the very ethical uncertainty encountered by social science in our time. On one side, ethicist argues that T3 team had “numerous conceptual gap” on the fundamental understanding toward the informed consent and privacy risk (3); on the other side, social scientists suggest to analyze the ethical situation of the project from a more comprehensive framework, so that the creativity of social scientific research will not be chilled by the rigid adherence to ethical judgement. This short essay will follow the four principles (Respect for Persons, Beneficence, Justice, Respect for Law and Public Interest) suggested by Matthew Salganik to reassess this controversial study (1). I aim to provide a relatively contextual understanding of the ethical situation of this research, and argue that although T3 team`s dataset leads to insightful findings in the social network study, its data collection procedure does not comply with the *minimal risk standard* (4) and thus flaws this research work. 
+ 
+First, from the perspective of the respect for human subject, it is obvious that T3 team did not ask its participants for any informed consent. Nevertheless, this violation cannot solely constitute the reason why this study is improperly undertaken. Without the procedure of informed consent, some studies take certain degree of advantage to avoid the interference of the experimental results (*e.g.* study on Emotional Contagion by Facebook) or to protect the participants from potential political risks (*e.g.* study based on Encore system). But according to the principle of Respect, informed consent is a requirement for the researchers under the possible conditions. To reassess the T3 study, we need to ask whether it is possible for the T3 researchers to collect data with similar quality when following this principle. Is it necessary to violate this principle of Respect in this specific study? If yes, why? In addition, we need to notice it is the in-network research assistants, who are able to circumvent the privacy setting on Facebook, that collect the data. This is the real reason why the T3 researcher can obtain the myriad information without the consent from the college users. This data collection method obscures the role of the RAs and generate another ethical problem: when RAs are collecting data, who are they? The researchers or the friends of the human subjects they studied? Again, besides this method, do the researcher have other approaches to conduct the research and minimize the ethical risk and confusions?
 
+Second, to perform the benefit/risk analysis would be a more difficult task compared with the analysis in other three perspectives. Definitely, this study has several advantages over the previous studies. Through four-year monitoring, T3 team established a comprehensive dataset on a whole cohort of college students, including their profile information as well as the information on their social networks, and even their cultural preference and political views. As a matter of fact, the collected dataset leads to series of papers with insightful understandings on the racial homogeneity (5) and peer influences (6) However, the potential risks of releasing the data was recognized by both of the T3 researchers and the critics. Although the researchers had removed or encoded the personally identifiable information, only through the publicly accessible codebook, the college in question could be easily identified. It also implies some students with unique features, like special majors, ethnical affiliation, cultural preference, will be exposed to higher privacy risk than others (2). Potential risk does not mean the study could lead some students into a troublesome situation in reality, but it is easy to imagine how an ordinary person feels and reacts when his or her comprehensive personal information exposed to the public, not to mention when this information could be manipulated illegally. The benefit of this study and its dataset is obvious, so is its risks. The ethical situation of this project under this perspective is whether we should burden on a specific group of people to extend our knowledge potentially useful for all human beings. Like in the ethical dilemma of Trolley problem, to give a definite answer is quite difficult. 
+
+Third, considering the justice, although the publication of the research result based on this dataset have enabled the “transparency-based accountability”, clearly, the power relation between the researchers and their subjects in question was like the relation between the watcher and the watched. There is no equality: the “participants” had no liberty to withdraw from the monitoring and reaffirm any information they provided on Facebook, for they were totally unaware of being involved in this study. 
+
+Fourth, this research is approved by the Facebook as well as the university and IRB. From the perspective of laws, this study complies with the general rules. But on the other hand, the approval by IRB does not naturally mean the project can be justified. As in the analysis according to the first principle of Respect, violation against one principle cannot negate this project, meanwhile the compliance with some of principles cannot provide sufficient justification for this research as well. This is also the same ethical problem we encountered in the benefit/risk analysis above. 
+
+I suggest we can address this problem by prioritization of the four principles, with considering the specific context of the case studied. Based on the above analysis, we have seen the first principle has a special position compared with other three, because: 1) the principles of Justice or Laws could be interpreted to protect the vulnerable ones in a potentially unequal power relation between the researchers and their human subject. In the case study of T3 research, once the first principle is breached without reasonable explanation, the compliance with any of these two principles cannot provide convince for the ethical righteousness of this project. 2) In the benefit/risk analysis, the difficulty we encounter is a result of the complexity of quantification of benefit and risk created from this research. From the part of risk, especially the privacy risk, since the dichotomy of public/private has been largely blurred2 at present, definition of “information privacy” varies and the severity of its violation could be interpreted differently in different frameworks. For example, if we take the definition of it as the information “identifying a specific person” (7), then T3 researchers had made a carful effort to protect the privacy of the subjects (although not effectively as they thought). However, if we use the stricter definition by Floridi (8), who considers personal information is not external information, but the person himself, then when T3 researchers violate the first principle, their mistake cannot be excused by any benefit generated from their dataset. Since there is no agreement on the definition of the information privacy so far, the benefit/risk analysis will be fruitless without further scrutiny over the fundamental ethical concern in the principle of Respect. 
+
+Back to the principle of Respect and questions raised in that perspective: is it necessary for the T3 researchers collect data by employing in-network RA with consent from the subjects in question? According to recent review papers on the Facebook study, researchers recruit participants in three major approaches: in offline context, via Facebook applications (*e.g.* MyPersonality), or data crawling based on the offline consent (9-10). Although these methods may limit the capacity of researchers to obtain data, the achievement of corresponding research projects reveal the feasibility of these methods in scientific studies. Based on the minimal risk standard, researchers should minimize the potential risks that participants undertaken in daily life. Obviously, T3 researchers did not apply this standard to their data collection, leading to ethical risks to their participants and ethical dilemma for themselves and their RAs. In addition, there is no doubt that this problematic data collection method has been almost abandoned in the recent Facebook study. 
+
+In conclusion, as researchers, we need to take risks to explore the unknown world and try new approaches, but it does not mean we can place the participants of our research projects in a risky situation. This is the reason that I will not use the dataset of T3 project in my own research.     
+
+##References##
+
+[1] Matthew J. Salganik, Bit by bit: social research in the digital age.
+
+[2] Lewis, K., Kaufman, J., Gonzalez, M., Wimmer, A., & Christakis, N. (2008). Tastes, Ties, and time: A new social network dataset using Facebook. com. Social Networks, 30(4), 330–342.
+
+[3] Michael Zimmer. (2010).‘‘But the data is already public’’: on the ethics of research
+in Facebook. Ethics of Information Technology, 12, 313-325.
+
+[4] Wendler, David, Leah Belsky, Kimberly M. Thompson, and Ezekiel J. Emanuel. (2005). Quantifying the Federal Minimal Risk Standard: Implications for Pediatric Research Without a Prospect of Direct Benefit. Journal of the American Medical Association 294 (7), 826–32.
+
+[5] Andreas Wimmer and Kevin Lewis. (2010). Beyond and below racial homophily: ERG models of a friendship network documented on Facebook. American Journal of Sociology. 116(2), 583-642.
+
+[6] Kevin Lewis, Marco Gonzalez, and Jason Kaufman. (2012).
+Social selection and peer influence in an online social network. Proceedings of the National Academy of Sciences. (109)1, 68-72.
+
+[7] Jens-Erik Mai. (2016). Big data privacy: the datafication of personal information. The Information Society, 32 (3), 192-199.
+
+[8] Floridi, Luciano. 2005. The ontological interpretation of informational privacy. Ethics
+and Information Technology 7(4), 185–200.
+
+[9] Robert E. Wilson, Samuel D. Gosling, and Lindsay T. Graham. (2012). A review of Facebook research in the social sciences. Perspectives on Psychological Science. 7(3), 203–220.
+
+[10] Michal Kosinski, Sandra C. Matz, Samuel D. Gosling, Vesselin Popov and David Stillwell. (2015). Facebook as a research tool for the social sciences. American Psychologist. 70(6), 543–556.
 
 
 

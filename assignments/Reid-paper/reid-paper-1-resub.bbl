@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{zimmerblog}
+Michael Zimmer.
+\newblock On the "anonymity" of the facebook dataset (updated), 2008.
+
+\bibitem{t3}
+Kevin Lewis, Jason Kaufman, Marco Gonzalez, Andreas Wimmer, and Nicholas
+  Christakis.
+\newblock Tastes, ties, and time: A new social network dataset using
+  facebook.com.
+\newblock {\em Social Networks}, 30(4):330 -- 342, 2008.
+
+\bibitem{t3site}
+Harvard Dataverse.
+\newblock https://dataverse.harvard.edu/dataverse/t3.
+\newblock website, 2016.
+
+\bibitem{zimethics}
+Michael Zimmer.
+\newblock But the data is already public'': on the ethics of research in
+  facebook.
+\newblock {\em Ethics and Information Technology}, 12(4):313--325, 2010.
+
+\bibitem{t3followup1}
+Kevin~Lewis Andreas~Wimmer.
+\newblock Beyond and below racial homophily: Erg models of a friendship network
+  documented on facebook.
+\newblock {\em American Journal of Sociology}, 116(2):583--642, 2010.
+
+\bibitem{t3followup2}
+K.~Lewis, M.~Gonzalez, and J.~Kaufman.
+\newblock Social selection and peer influence in an online social network.
+\newblock {\em Proceedings of the National Academy of Sciences}, 109(1):68--72,
+  2011.
+
+\bibitem{menlo}
+D.~Dittrich and E.~Kenneally.
+\newblock {The Menlo Report: Ethical Principles Guiding Information and
+  Communication Technology Research}.
+\newblock Technical report, U.S. Department of Homeland Security, Aug 2012.
+
+\bibitem{belmont}
+National~Commission for the Protection of Human Subjects~of Biomedical and
+  Behavioral Research.
+\newblock Belmont report: Ethical principles and guidelines for the protection
+  of human subjects of research, report of the national commission for the
+  protection of human subjects of biomedical and behavioral research.
+\newblock Technical report.
+
+\bibitem{zimmerblogcomment}
+Jason Kaufman.
+\newblock comment: On the "anonymity" of the facebook dataset (updated), 2008.
+
+\bibitem{bitbybit}
+Matthew~J. Salganik.
+\newblock {\em Bit By Bit: Social Research in the Digital Age}.
+\newblock http://www.bitbybitbook.com/, 2016.
+\newblock unpublished.
+
+\bibitem{wos}
+Web of science.
+
+\bibitem{chillingeffects}
+Jon Penney.
+\newblock Chilling effects: Online surveillance and wikipedia use.
+\newblock {\em Berkeley Technology Law Journal}, 31(1):117, 2016.
+
+\end{thebibliography}

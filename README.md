@@ -138,6 +138,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 13. Simulated data (cont.)
 14. Data visualization and description
     * Scott, David W., Chapters 1-4, *Multivariate Density Estimation: Theory, Practice, and Visualization*, 2nd edition, John Wiley & Sons, 2015.
+    * McKinney, Wes, *Python for Data Analysis*, O'Reilly Media, Inc. (2013).
 15. Data visualization and description (cont.)
 16. Data visualization and description (cont.)
 17. Data visualization and description (cont.)

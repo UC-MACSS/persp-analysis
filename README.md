@@ -56,8 +56,8 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Wed, Nov. 16 | Data visualization and description |  |
 | Mon, Nov. 21 | Data visualization and description | Problem Set 2 due |
 | Wed, Nov. 23 | Data visualization and description |  |
-| Mon, Nov. 28 | Collaboration | Problem Set 3 due |
-| Wed, Nov. 30 | Collaboration |  |
+| Mon, Nov. 28 | Collaboration |  |
+| Wed, Nov. 30 | Collaboration | Problem Set 3 due |
 | Fri, Dec. 2 |  | Problem Set 4 due |
 | Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |
 

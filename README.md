@@ -39,35 +39,25 @@ If you need any special accommodations, please provide us with a copy of your Ac
 | Date | Topic | Assignment |
 |--------------|---------------------------------------|-------------------|
 | Mon, Sep. 26 | Intro to Computational Social Science |  |
-| Tue, Sep. 27 |  |  |
 | Wed, Sep. 28 | Scientific method |  |
 | Mon, Oct. 3 | No class (conference) |  |
-| Tue, Oct. 4 |  |  |
 | Wed, Oct. 5 | Ethics |  |
-| Mon, Oct. 10 | Observational data | [Ethics Paper due](assignments/ethics-paper.md) |
-| Tue, Oct. 11 |  |  |
+| Mon, Oct. 10 | Observational data | [Ethics paper due](assignments/ethics-paper.md) |
 | Wed, Oct. 12 | Observational data |  |
 | Mon, Oct. 17 | Observational data |  |
-| Tue, Oct. 18 |  |  |
 | Wed, Oct. 19 | Observational data |  |
-| Mon, Oct. 24 | Collecting your own data | Short Paper 2 due |
-| Tue, Oct. 25 |  |  |
+| Mon, Oct. 24 | Collecting your own data | [Observational data paper due](assignments/observational-data-paper.md) |
 | Wed, Oct. 26 | Collecting your own data |  |
-| Mon, Oct. 31 | Experiments | Short Paper 3 due |
-| Tue, Nov. 1 |  |  |
+| Mon, Oct. 31 | Experiments | [Asking questions paper due](assignments/asking-questions-paper.md) |
 | Wed, Nov. 2 | Simulated data |  |
-| Mon, Nov. 7 | Simulated data | Short Paper 4 due |
-| Tue, Nov. 8 |  |  |
+| Mon, Nov. 7 | Simulated data | [Experiments paper due](assignments/experiments-paper.md) |
 | Wed, Nov. 9 | Data visualization and description | Problem Set 1 due |
 | Mon, Nov. 14 | Data visualization and description |  |
-| Tue, Nov. 15 |  |  |
 | Wed, Nov. 16 | Data visualization and description |  |
 | Mon, Nov. 21 | Data visualization and description | Problem Set 2 due |
-| Tue, Nov. 22 |  |  |
 | Wed, Nov. 23 | Data visualization and description |  |
-| Mon, Nov. 28 | Collaboration | Problem Set 3 due |
-| Tue, Nov. 29 |  |  |
-| Wed, Nov. 30 | Collaboration |  |
+| Mon, Nov. 28 | Collaboration |  |
+| Wed, Nov. 30 | Collaboration | Problem Set 3 due |
 | Fri, Dec. 2 |  | Problem Set 4 due |
 | Wed, Dec. 7 | Final exam [10:30am-12:30pm] |  |
 
@@ -116,15 +106,12 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * Google Flu Trends
         * [Ginsberg, J., Mohebbi, M. H., Patel, R. S., Brammer, L., Smolinski, M. S., & Brilliant, L. (2009). Detecting influenza epidemics using search engine query data. *Nature*, 457(7232), 1012-1014.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v457/n7232/full/nature07634.html)
         * [Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google flu: traps in big data analysis. *Science*, 343(6176), 1203-1205.](http://science.sciencemag.org.proxy.uchicago.edu/content/343/6176/1203.full)
-    * Forecasting terrorism
-        * [Schrodt, P. A., Yonamine, J., & Bagozzi, B. E. (2013). Data-based computational approaches to forecasting political violence. In *Handbook of computational approaches to counterterrorism* (pp. 129-162). Springer New York.](http://link.springer.com.proxy.uchicago.edu/chapter/10.1007/978-1-4614-5311-6_7)
-        * [Brandt, P. T., Freeman, J. R., & Schrodt, P. A. (2011). Real time, time series forecasting of inter-and intra-state political conflict. *Conflict Management and Peace Science*, 28(1), 41-64.](http://cmp.sagepub.com.proxy.uchicago.edu/content/28/1/41.short)
 8. Observational data (approximating experiments)
     * [2.4.3 Approximating experiments. *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/designs/approximating-experiments/).
     * [Phan, T. Q., & Airoldi, E. M. (2015). A natural experiment of social network formation and dynamics. *PNAS*, 112(21), 6595-6600.](http://www.pnas.org/content/112/21/6595.full)
     * [Hersh, E. D. (2013). Long-term effect of September 11 on the political behavior of victims' families and neighbors. *PNAS*, 110(52), 20959-20963.](http://www.pnas.org/content/110/52/20959.full)
     * [Cohen, P., et al. (2016). Using Big Data to Estimate Consumer Surplus: The Case of Uber. Working paper.](https://drive.google.com/file/d/0B3y6Efb4V73TdG9pV1F0VGpsM1E/view)
-9. Collecting data (fundamentals)
+9. Asking questions (fundamentals)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.1-3.4.
     * [Schuldt, J. P., Konrath, S. H., & Schwarz, N. (2011). "Global warming" or "climate change"? Whether the planet is warming depends on question wording. *Public Opinion Quarterly*, 75(1): 115-124.](http://poq.oxfordjournals.org.proxy.uchicago.edu/content/75/1/115)
     * Pew Research Center Survey Methodology
@@ -132,19 +119,17 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [U.S. Survey Research: Sampling](http://www.pewresearch.org/methodology/u-s-survey-research/sampling/)
     * [Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. *International Journal of Forecasting*, 31(3), 980-991.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0169207014000879)
     * [The Upshot: We Gave Four Good Pollsters the Same Raw Data. They Had Four Different Results.](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=1)
-10. Collecting data (digitally-enriched)
+    * [Introducing the YouGov Referendum Model](https://yougov.co.uk/news/2016/06/21/yougov-referendum-model/)
+10. Asking questions (digitally-enriched)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.5-3.7.
     * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
-    * [Ansolabehere, S., & Hersh, E. (2012). Validation: What big data reveal about survey misreporting and the real electorate. *Political Analysis*, 20(4): 437-459.](http://pan.oxfordjournals.org.proxy.uchicago.edu/content/20/4/437.full)
     * [Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. *Science*, 350(6264), 1073-1076.](http://science.sciencemag.org.proxy.uchicago.edu/content/350/6264/1073.full)
-    * [Salganik, M. J., & Levy, K. E. (2015). Wiki surveys: Open and quantifiable social data collection. *PLoS One*, 10(5), e0123483.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0123483)
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
 11. Experiments
     * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
-    * [Adams, T. G., Stewart, P. A., & Blanchar, J. C. (2014). Disgust and the politics of sex: exposure to a disgusting odorant increases politically conservative views on sex and decreases support for gay marriage. *PLoS One*, 9(5), e95572.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0095572)
-    * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
     * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
-    * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.hbs.edu/faculty/Pages/item.aspx?num=50258)
+    * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.benedelman.org/publications/airbnb-guest-discrimination-2016-09-16.pdf)
+    * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
 12. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
     * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
@@ -153,13 +138,15 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 13. Simulated data (cont.)
 14. Data visualization and description
     * Scott, David W., Chapters 1-4, *Multivariate Density Estimation: Theory, Practice, and Visualization*, 2nd edition, John Wiley & Sons, 2015.
+    * McKinney, Wes, *Python for Data Analysis*, O'Reilly Media, Inc. (2013).
 15. Data visualization and description (cont.)
 16. Data visualization and description (cont.)
 17. Data visualization and description (cont.)
 18. Data visualization and description (cont.)
 19. Collaboration: distributed data collection and analysis
-    * ["Chapter 5: Collaborating." *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
+    * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
     * Chacon, Scott and Ben Straub, [*Pro Git: Everything You Need to Know about Git*](https://git-scm.com/book/en/v2), 2nd edition, Apress, 2014.
+    * Evans, Richard W., ["Chapter 3: Git and GitHub.com". *Overlapping Generations Models for Policy Analysis: Theory and Computation*.](https://github.com/UC-MACSS/persp-analysis/blob/master/handouts/git_tutorial.pdf), unpublished draft (2016).
     * OSPC Data Visualizations project
 20. Collaboration: distributed data collection and analysis (cont.)
 

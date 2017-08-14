@@ -5,7 +5,7 @@
 | Email | soltoffbc@uchicago.edu | rchughes@uchicago.edu | jmausolf@uchicago.edu |
 | Office | 249 Saieh Hall | 251 Saieh Hall | 251 Saieh Hall |
 | Office Hours | Th 1-3pm | TBD | TBD |
-| GitHub | [bensoltoff](https://github.com/bensoltoff) | TBD | [jmausolf](https://github.com/jmausolf) |
+| GitHub | [bensoltoff](https://github.com/bensoltoff) | [rchughes](https://github.com/rchughes) | [jmausolf](https://github.com/jmausolf) |
 
 * **Meeting day/time**: MW 11:30-1:20pm, 247 Saieh Hall for Economics
 * **Lab session**: W 4:30-5:20pm, 247 Saieh Hall for Economics

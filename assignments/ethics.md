@@ -1,24 +1,40 @@
-# Short Paper #1: Ethics of "Taste, Ties, and Time"
+# The ethics of the Montana election experiment (10 points)
 
-In this week's readings, you read about a controversial research project which collected data from Facebook profiles of all members of the Class of 2009 at a "diverse private college in the Northeastern U.S." As you are now well aware, there has been a significant ethical debate over the propriety of this project and whether researchers should use this dataset.
+> This assignment is based heavily on exercise 6.14 in Matthew Salganik's [*Bit by Bit*](http://www.bitbybitbook.com/en/ethics/ethics-activities/).
 
-In a short paper (1000-1200 words), assess this project's adherence to Salganik's four principles of ethical research. As a reminder, the four principles are:
+In October 2014, three political scientists sent [mailers](figures/montana_mailer.png) to 102,780 registered voters in Montana as part of an experiment to measure whether voters who are given more information are more likely to vote. The mailers — which were labeled 2014 Montana General Election Voter Information Guide — placed Montana Supreme Court Justice candidates, which is a non-partisan election, on a scale from liberal to conservative, which included Barack Obama and Mitt Romney as comparisons. The mailer also included a reproduction of the Great Seal of the State of Montana.
 
-1. Respect for persons
-2. Beneficence
-3. Justice
-4. Respect for law and public interest
+The mailers generated complaints from Montana voters, and they caused Linda McCulloch, Montana's Secretary of State, to file a formal complaint with the Montana state government. The universities that employed the researchers -- Dartmouth and Stanford -- [sent a letter](figures/montana_apology.png) to everyone that had received the mailer apologizing for any potential confusion and making clear that the mailer "was not affiliated with any political party, candidate or organization, and was not intended to influence any race." The letter also clarified that the ranking "relied upon public information about who had donated to each of the campaigns."
 
-In addition, explain whether or not you would use this data for your own research (if made available) and why.
+In May 2015, the Commissioner of Political Practices of the State of Montana, Jonathan Motl, [determined that the researchers violated Montana law](http://politicalpractices.mt.gov/Portals/144/2recentdecisions/McCullochvStanfordandDartmouthFinalDecision.pdf): "The Commissioner determines that there are sufficient facts to show that Stanford, Dartmouth and/or its researchers violated Montana campaign practice laws requiring registration, reporting and disclosure of independent expenditures." The Commissioner also recommended that the County Attorney investigate whether the use of the unauthorized use of the Great Seal of Montana violates Montana state law.
 
-I am not asking you to summarize the project or its related publications. Rather, I'm asking you to engage the material and conduct your own independent analysis. Cite outside papers and articles as necessary. You are of course free to discuss specific components of the data or aspects of the project that you feel are relevant to your arguments, but the paper should not read as an extended summary of the project.
+Stanford and Dartmouth disagreed with Motl’s ruling. A Stanford spokeswoman named Lisa Lapin said "Stanford...does not believe any election laws were violated" and that the mailing "did not contain any advocacy supporting or opposing any candidate." She pointed out that the mailer explicitly stated that it "is nonpartisan and does not endorse any candidate or party."^[Source: [Richman 2015](http://www.mercurynews.com/2015/05/12/stanford-and-dartmouth-researchers-broke-law-with-election-mailer-montana-official-says/).]
 
-You will probably find it helpful to read some of the original publications based on this dataset, as well as scholarly responses. Here is a selection of relevant papers (this is only a partial list - you may find more if you conduct your own search):
+In a short paper (1200-1500 words):
 
-* [Lewis, K., Kaufman, J., Gonzalez, M., Wimmer, A., & Christakis, N. (2008). Tastes, ties, and time: A new social network dataset using Facebook.com. *Social networks*, 30(4), 330-342.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0378873308000385)
-* [Wimmer, A., & Lewis, K. (2010). Beyond and below racial homophily: Erg models of a friendship network documented on facebook. *American Journal of Sociology*, 116(2), 583-642.](http://www.jstor.org.proxy.uchicago.edu/stable/10.1086/653658)
-* [Lewis, K., Gonzalez, M., & Kaufman, J. (2012). Social selection and peer influence in an online social network. *Proceedings of the National Academy of Sciences*, 109(1), 68-72.](http://www.pnas.org/content/109/1/68)
-* [Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. *Ethics and information technology*, 12(4), 313-325.](http://link.springer.com.proxy.uchicago.edu/article/10.1007%2Fs10676-010-9227-5)
+1. Assess this study using Salganik's four principles of ethical research.
+    1. Respect for persons
+    1. Beneficence
+    1. Justice
+    1. Respect for law and public interest
+1. Assume that the mailers were sent to a random sample of voters: under what conditions might this mailing have altered the outcome of the Supreme Court Justice election?
+1. In fact, the mailers were not sent to a random sample of voters. According to a report by Jeremy Johnson (a political scientists who assisted in the investigation), mailers "were sent to 64,265 voters identified as likely liberal to centrist leaning in Democratic leaning precincts and 39,515 voters identified as conservative to centrist in Republican leaning precincts. The researchers justified the disparity between Democratic and Republican numbers on grounds that they anticipated turnout to be significantly lower among Democratic voters." Does this change your assessment of the research design? If so, how?
+1. In response to the investigation, the researchers said that they picked this election in part because "neither judicial race had been closely contested in the primary. Based on an analysis of the 2014 primary election results in the context of previous Montana judicial elections, the researchers determined that the research study as designed would not change the outcome of either contest." Does this change your assessment of the research? If so, how?
+1. In fact, the election turned out to be not particularly close.
+
+    | Candidates               | Votes received | Percentage |
+    |--------------------------|----------------|------------|
+    | Supreme Court Justice #1 |                |            |
+    | W. David Herbert         | 65,404         | 21.59%     |
+    | Jim Rice                 | 236,963        | 78.22%     |
+    | Supreme Court Justice #2 |                |            |
+    | Lawrence VanDyke         | 134,904        | 40.80%     |
+    | Mike Wheat               | 195,303        | 59.06%     |
+    
+    Does this change your assessment of the research? If so, how?
+
+1. One of the principal investigators for the Montana election study ([Adam Bonica](http://web.stanford.edu/~bonica/)) is also the co-founder of [CrowdPAC](https://www.crowdpac.com/), a for-profit company which "calculates objective scores for political candidates showing their overall political position" using, in part, the same data used to score the judicial candidates in Montana. While a source of objective information for voters to make decisions about candidates, CrowdPAC also provides tools to organize activist communities and fund political campaigns (all for a fee). Does this change your assessment of the research? If so, how?
+1. What, if anything, would you have done differently if you were the principal investigators? How would you have designed the study if you were interested in exploring whether additional information increases voter turnout in nonpartisan races?
 
 ## Submitting your assignment
 
@@ -30,14 +46,4 @@ Submit your paper as a Markdown document (`.md`).
 
 ## Submission deadline
 
-Submit your paper before class on Monday, October 10th (11:30 am).
-
-
-
-
-
-
-
-
-
-
+Submit your pull request before class on Monday, November 20 (11:30 am).

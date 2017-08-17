@@ -1,8 +1,8 @@
-# Short Paper #2: Proposing an Observational Study
+# Proposing an observational study (10 points)
 
 Over the past two weeks, you have read numerous examples of studies using digital data to conduct observational research. You have learned about the strengths and weaknesses of digital data, and assessed examples of observational research for how well they leverage these strengths and weaknesses.
 
-In a short paper (maximum of 3 pages, single-spaced, 12 point font, 1 inch margins, paragraph format [no columns]), propose a research study based on a question you find interesting and explain how you would use observational digital data to answer your question. You should (briefly) explain your topic of interest and the specific question you seek to answer in this research project. Next, identify the basic research design you will undertake (e.g. counting things, measuring something, forecasting, natural experiment, matching) and the source of the data. You do not need to include detailed on information such as the specific statistical method you will use to analyze the data, just identify the basic framework of the project.
+In a short paper (1200-1500 words), propose a research study based on a question you find interesting and explain how you would use observational digital data to answer your question. You should (briefly) explain your topic of interest and the specific question you seek to answer in this research project. Next, identify the basic research design you will undertake (e.g. counting things, measuring something, forecasting, natural experiment, matching) and the source of the data. You do not need to include detailed on information such as the specific statistical method you will use to analyze the data, just identify the basic framework of the project.
 
 The bulk of your proposal should be a critical assessment of why you believe this project will be a good example of digital research. This includes:
 
@@ -12,10 +12,6 @@ The bulk of your proposal should be a critical assessment of why you believe thi
     * How does this project illustrate the good characteristics of big data?
     * How this project illustrate the bad characteristics of big data, and how you plan to overcome these weaknesses?
     * You do not need to address every one of the ten characteristics identified by Salganik. Feel free to focus on the characteristics you think are most salient to your project.
-* A feasibility assessment of the project as your MA thesis - for example,
-    * If you are going to rely on data from Facebook's News Feed, how will you convince Facebook to work with you?
-    * If your proposed study involves the use of potentially identifiable data, how will you address IRB concerns?
-    * I do not expect you to be able to go out and run this study tomorrow, so it is okay to be a bit optimistic at this stage. But also be realistic and address these concerns.
 
 ## Submitting your assignment
 
@@ -27,14 +23,5 @@ Submit your paper as a Markdown document (`.md`).
 
 ## Submission deadline
 
-Submit your paper before class on Monday, October 24th (11:30 am). Also bring a hard copy to class to hand in.
-
-
-
-
-
-
-
-
-
+Submit your pull request before class on Monday, October 16 (11:30 am).
 

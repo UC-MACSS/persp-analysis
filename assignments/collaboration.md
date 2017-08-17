@@ -22,11 +22,11 @@ See [here](../students/) for instructions on submitting course assignments.
 
 ## Submission format
 
-* Submit the Kaggle portion of the assignment as a markdown file (`.md`) for part II and the script/plot/dataset for part III.
-* Submit the journal improvement portion of the assignment as a markdown file (`.md`).
+* Submit the Kaggle portion of the assignment as a Markdown document (`.md`) for part II and the script/plot/dataset for part III.
+* Submit the journal improvement portion of the assignment as a Markdown document (`.md`).
 * Submit your Amazon MTurk portion of the assignment by saving your screenshots in the assignment folder.
 
-### Submission deadline
+## Submission deadline
 
 TBD
 

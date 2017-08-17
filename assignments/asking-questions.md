@@ -16,26 +16,15 @@ The bulk of your proposal should be a critical assessment of why you believe thi
 
 NOTE: Please use the same research topic as in your observational study proposal. An objective of this assignment is to compare the relative strengths and weaknesses of these research design methods. This is best achieved if you can evaluate the same topic using different methodologies.
 
-
 ## Submitting your assignment
 
-All assignments for this course should be submitted via [GitHub pull request](https://help.github.com/articles/about-pull-requests/). The basic workflow for homework should be:
+See [here](../students/) for instructions on submitting course assignments.
 
-1. [Fork](https://guides.github.com/activities/forking/) the [assignment repository](https://github.com/UC-MACSS/persp-analysis-assign)
-1. [Clone](https://help.github.com/articles/cloning-a-repository/) the repository to your computer
-1. Modify the files and [commit changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) to complete your paper/problem set.
-1. [Push](https://help.github.com/articles/pushing-to-a-remote/) the changes up to your forked repository on GitHub.
-1. [Create a pull request](https://help.github.com/articles/creating-a-pull-request) on the original repository to turn in the assignment. *Make sure to include your name in the pull request.*
+## Paper format
 
-Once you have forked the repository the first time, you do not need to make a new fork for each assignment. Rather, [sync your fork with the upstream repository](https://help.github.com/articles/syncing-a-fork/). This will merge updates to the assignment repository with your fork.
+Submit your paper as a Markdown document (`.md`).
 
-Dr. Evans has written a guide to using [GitHub and this specific workflow](../handouts/git_tutorial.pdf) you may find useful.
-
-### Paper format
-
-You may write your paper in whatever format you wish (e.g. Word document, PDF, Markdown). As long as we can read it, we will review and grade it. *Please don't make it difficult for us to do that.*
-
-### Submission deadline
+## Submission deadline
 
 Submit your paper before class on Monday, October 31st (11:30 am).
 

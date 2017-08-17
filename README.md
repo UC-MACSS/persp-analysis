@@ -67,9 +67,8 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Lazer et. al. (2009) Computational Social Science. *Science*, 323, 721-723.](http://science.sciencemag.org.proxy.uchicago.edu/content/323/5915/721.full)
 1. Science in a computational era
     * [Bhattacherjee, A. (2012). Social science research: principles, methods, and practices.](http://scholarcommons.usf.edu/oa_textbooks/3/) Chapters 1-4. Skim/review as needed.
+    * [Shmueli, G. (2010). To explain or to predict?. *Statistical science*, 25(3), 289-310.](https://projecteuclid.org/euclid.ss/1294167961)
     * [Anderson, C. (2008). The End of Theory: The Data Deluge Makes the Scientific Method Obsolete. *Wired*.](http://www.wired.com/2008/06/pb-theory/)
-    * [Einav, L., & Levin, J. (2014). The Data Revolution and Economic Analysis. *Innovation Policy and the Economy*, 14(1), 1-24.](http://www.journals.uchicago.edu/doi/full/10.1086/674019)
-    * [Schrodt, P. A. (2014). Seven deadly sins of contemporary quantitative political analysis. *Journal of Peace Research*, 51(2), 287-300.](http://jpr.sagepub.com.proxy.uchicago.edu/content/51/2/287.full)
 1. Observational data (counting things)
     * ["Chapter 2: Observing Behavior." *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/) Sections 2.1-2.4.1.3.
     * [King, G., Pan, J., & Roberts, M. E. (2013). How censorship in China allows government criticism but silences collective expression. *American Political Science Review*, 107(02), 326-343.](http://journals.cambridge.org.proxy.uchicago.edu/action/displayAbstract?fromPage=online&aid=8919476&fileId=S0003055413000014)

@@ -25,4 +25,4 @@ Submit your paper as a Markdown document (`.md`).
 
 ## Submission deadline
 
-Submit your pull request before class on Monday, October 23 (11:30 am).
+Submit your pull request before class on Monday, October 23 (11:30 am). **Late submissions will receive a 1 point (out of 10 points) deduction.**

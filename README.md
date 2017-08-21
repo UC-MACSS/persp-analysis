@@ -17,7 +17,9 @@ Massive digital traces of human behavior and ubiquitous computation have both ex
 
 ## Required textbooks
 
-* Salganik, Matthew J. [*Bit by Bit: Social Research in the Digital Age*](http://www.bitbybitbook.com/), Princeton University Press, Open review edition.
+> All textbooks are available in electronic editions either directly from the author or via the UChicago library (authentication required). Hardcopies can be purchased at your preferred retailer.
+
+* [Salganik, Matthew J. *Bit by Bit: Social Research in the Digital Age*, Princeton University Press, Open review edition.](http://www.bitbybitbook.com/)
 * [James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An Introduction to Statistical Learning*. New York: Springer.](http://link.springer.com.proxy.uchicago.edu/book/10.1007%2F978-1-4614-7138-7)
 * [VanderPlas, Jake. (2016). *Python Data Science Handbook*. O'Reilly Media, Inc.](http://proquestcombo.safaribooksonline.com.proxy.uchicago.edu/book/programming/python/9781491912126)
 

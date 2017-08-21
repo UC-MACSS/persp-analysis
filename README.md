@@ -57,8 +57,8 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 | Wed, Nov. 8  | Collaboration                                                 |
 | Mon, Nov. 13 | Ethics                                                        |
 | Wed, Nov. 15 | Ethics                                                        |
-| Mon, Nov. 20 | Exploratory data analysis - assessing variance and covariance |
-| Wed, Nov. 22 | Exploratory data analysis - graphical data analysis           |
+| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations         |
+| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations       |
 | Mon, Nov. 27 | Exploratory data analysis - clustering                        |
 | Wed, Nov. 29 | Exploratory data analysis - dimension reduction               |
 
@@ -135,7 +135,8 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [Vertesi, J. (2014). The Real Reason You Should Be Worried About That Facebook Experiment. *Time*.](http://time.com/2950699/facebook-experiment-social-science-funding/)
     * [Parry, M. (2011). Harvard Researchers Accused of Breaching Students' Privacy. *Chronicle of Higher Education*.](http://chronicle.com/article/Harvards-Privacy-Meltdown/128166/)
     * [Zimmer, M. (2016). OkCupid Study Reveals the Perils of Big-Data Science. *Wired*.](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
-1. Exploratory data analysis - assessing variance and covariance
-1. Exploratory data analysis - graphical data analysis
+1. Exploratory data analysis - univariate visualizations
+    * [Exploring Histograms](https://tinlizzie.org/histograms/)
+1. Exploratory data analysis - multivariate visualizations
 1. Exploratory data analysis - clustering
 1. Exploratory data analysis - dimension reduction

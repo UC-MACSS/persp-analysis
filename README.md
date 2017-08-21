@@ -69,12 +69,11 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Bhattacherjee, A. (2012). Social science research: principles, methods, and practices.](http://scholarcommons.usf.edu/oa_textbooks/3/) Chapters 1-4. Skim/review as needed.
     * [Shmueli, G. (2010). To explain or to predict?. *Statistical science*, 25(3), 289-310.](https://projecteuclid.org/euclid.ss/1294167961)
     * [Anderson, C. (2008). The End of Theory: The Data Deluge Makes the Scientific Method Obsolete. *Wired*.](http://www.wired.com/2008/06/pb-theory/)
+    * [Schrodt, P. A. (2014). Seven deadly sins of contemporary quantitative political analysis. *Journal of Peace Research*, 51(2), 287-300.](http://jpr.sagepub.com.proxy.uchicago.edu/content/51/2/287.full)
 1. Observational data (counting things)
     * ["Chapter 2: Observing Behavior." *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/) Sections 2.1-2.4.1.3.
     * [King, G., Pan, J., & Roberts, M. E. (2013). How censorship in China allows government criticism but silences collective expression. *American Political Science Review*, 107(02), 326-343.](http://journals.cambridge.org.proxy.uchicago.edu/action/displayAbstract?fromPage=online&aid=8919476&fileId=S0003055413000014)
     * [Kossinets, G., & Watts, D. J. (2006). Empirical analysis of an evolving social network. *Science*, 311(5757), 88-90.](http://science.sciencemag.org.proxy.uchicago.edu/content/311/5757/88.full)
-    * [Edelman, B. G., & Luca, M. (2014). Digital discrimination: The case of airbnb.com. *Harvard Business School NOM Unit Working Paper*, (14-054).](http://www.hbs.edu/faculty/Pages/item.aspx?num=46073)
-    * [Chetty, R., Hendren, N., Kline, P., Saez, E., & Turner, N. (2014). Is the United States still a land of opportunity? Recent trends in intergenerational mobility. *The American Economic Review*, 104(5), 141-147.](http://pubs.aeaweb.org.proxy.uchicago.edu/doi/pdfplus/10.1257/aer.104.5.141)
 1. Observational data (measurement)
     * [Bonica, A. (2014). Mapping the ideological marketplace. *American Journal of Political Science*, 58(2), 367-386.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/ajps.12062/abstract)
     * [Wojcik, S. P., Hovasapian, A., Graham, J., Motyl, M., & Ditto, P. H. (2015). Conservatives report, but liberals display, greater happiness. *Science*, 347(6227), 1243-1246.](http://science.sciencemag.org.proxy.uchicago.edu/content/347/6227/1243.full)
@@ -85,34 +84,30 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Observational data (forecasting)
     * [2.4.2 Forecasting and nowcasting. *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/designs/forecasting/)
     * [Goel, S., Hofman, J. M., Lahaie, S., Pennock, D. M., & Watts, D. J. (2010). Predicting consumer behavior with Web search. *PNAS*, 107(41), 17486-17490.](http://www.pnas.org/content/107/41/17486.full?sid%3D3c84ffa2-362d-46ba-b735-ea41ef21ace7)
+    * [Schrodt, P. A., Yonamine, J., & Bagozzi, B. E. (2013). Data-based computational approaches to forecasting political violence. In *Handbook of computational approaches to counterterrorism* (pp. 129-162). Springer New York.](http://link.springer.com.proxy.uchicago.edu/chapter/10.1007/978-1-4614-5311-6_7)
     * Google Flu Trends
         * [Ginsberg, J., Mohebbi, M. H., Patel, R. S., Brammer, L., Smolinski, M. S., & Brilliant, L. (2009). Detecting influenza epidemics using search engine query data. *Nature*, 457(7232), 1012-1014.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v457/n7232/full/nature07634.html)
         * [Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google flu: traps in big data analysis. *Science*, 343(6176), 1203-1205.](http://science.sciencemag.org.proxy.uchicago.edu/content/343/6176/1203.full)
 1. Observational data (approximating experiments)
-    * [2.4.3 Approximating experiments. *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/designs/approximating-experiments/).
+    * [2.4.3 Approximating experiments. *Bit by Bit*.](http://www.bitbybitbook.com/en/observing-behavior/designs/approximating-experiments/)
     * [Phan, T. Q., & Airoldi, E. M. (2015). A natural experiment of social network formation and dynamics. *PNAS*, 112(21), 6595-6600.](http://www.pnas.org/content/112/21/6595.full)
     * [Hersh, E. D. (2013). Long-term effect of September 11 on the political behavior of victims' families and neighbors. *PNAS*, 110(52), 20959-20963.](http://www.pnas.org/content/110/52/20959.full)
     * [Cohen, P., et al. (2016). Using Big Data to Estimate Consumer Surplus: The Case of Uber. Working paper.](https://drive.google.com/file/d/0B3y6Efb4V73TdG9pV1F0VGpsM1E/view)
 1. Asking questions (fundamentals)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.1-3.4.
     * [Schuldt, J. P., Konrath, S. H., & Schwarz, N. (2011). "Global warming" or "climate change"? Whether the planet is warming depends on question wording. *Public Opinion Quarterly*, 75(1): 115-124.](http://poq.oxfordjournals.org.proxy.uchicago.edu/content/75/1/115)
-    * Pew Research Center Survey Methodology
-        * [U.S. Survey Research: Our survey methodology in detail](http://www.pewresearch.org/methodology/u-s-survey-research/our-survey-methodology-in-detail/)
-        * [U.S. Survey Research: Sampling](http://www.pewresearch.org/methodology/u-s-survey-research/sampling/)
     * [Wang, W., Rothschild, D., Goel, S., & Gelman, A. (2015). Forecasting elections with non-representative polls. *International Journal of Forecasting*, 31(3), 980-991.](http://www.sciencedirect.com.proxy.uchicago.edu/science/article/pii/S0169207014000879)
     * [The Upshot: We Gave Four Good Pollsters the Same Raw Data. They Had Four Different Results.](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=1)
-    * [Introducing the YouGov Referendum Model](https://yougov.co.uk/news/2016/06/21/yougov-referendum-model/)
 1. Asking questions (digitally-enriched)
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.5-3.7.
-    * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
-    * [Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. *Science*, 350(6264), 1073-1076.](http://science.sciencemag.org.proxy.uchicago.edu/content/350/6264/1073.full)
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
-1. Experiments
-    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
+    * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
+1. Experiments (fundamentals)
+    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.1-4.4.
+1. Experiments (digitally-enriched)
+    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.5-4.7.
     * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
-    * [Edelman, B. G., Luca, M., & Svirsky, D. (2015). Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment. *Harvard Business School NOM Unit Working Paper*, (16-069).](http://www.benedelman.org/publications/airbnb-guest-discrimination-2016-09-16.pdf)
     * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
-1. Experiments (cont.)
 1. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
     * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
@@ -124,6 +119,10 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Collaboration (cont.)
 1. Ethics
     * ["Chapter 6: Ethics." *Bit by Bit*.](http://www.bitbybitbook.com/en/ethics/)
+    * [UChicago Social & Behavioral Sciences Institutional Review Board](https://sbsirb.uchicago.edu/)
+        * Skim site
+        * Specifically read ["Does My Research Need IRB Review?"](https://sbsirb.uchicago.edu/page/does-my-research-need-irb-review-0)
+1. Ethics (cont.)
     * Facebook emotional contagion study
         * [Kramer, A. D., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *PNAS*, 111(24), 8788-8790.](http://www.pnas.org/content/111/24/8788.full)
         * [Editorial Expression of Concern: Experimental evidence of massive-scale emotional contagion through social networks. (2014) *PNAS*, 111(29), 10779.](http://www.pnas.org/content/111/29/10779.1.full)
@@ -132,10 +131,6 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [Vertesi, J. (2014). The Real Reason You Should Be Worried About That Facebook Experiment. *Time*.](http://time.com/2950699/facebook-experiment-social-science-funding/)
     * [Parry, M. (2011). Harvard Researchers Accused of Breaching Students' Privacy. *Chronicle of Higher Education*.](http://chronicle.com/article/Harvards-Privacy-Meltdown/128166/)
     * [Zimmer, M. (2016). OkCupid Study Reveals the Perils of Big-Data Science. *Wired*.](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
-    * [UChicago Social & Behavioral Sciences Institutional Review Board](https://sbsirb.uchicago.edu/)
-        * Skim site
-        * Specifically read ["Does My Research Need IRB Review?"](https://sbsirb.uchicago.edu/page/does-my-research-need-irb-review-0)
-1. Ethics (cont.)
 1. Exploratory data analysis - assessing variance and covariance
 1. Exploratory data analysis - graphical data analysis
 1. Exploratory data analysis - clustering

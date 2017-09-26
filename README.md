@@ -61,7 +61,7 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 | Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
 | Mon, Nov. 27 | Exploratory data analysis - clustering | EDA: Part I |
 | Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
-| Mon, Nov. 4 |  | EDA: Part II |
+| Mon, Dec. 4 |  | EDA: Part II |
 
 ## Course schedule (readings)
 

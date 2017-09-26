@@ -39,28 +39,29 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 
 ## Course schedule (lite)
 
-| Date         | Topic                                                         |
-|--------------|---------------------------------------------------------------|
-| Mon, Sep. 25 | Introduction to Computational Social Science                  |
-| Wed, Sep. 27 | Science in a computational era                                |
-| Mon, Oct. 2  | Observational data - counting things                          |
-| Wed, Oct. 4  | Observational data - measurement                              |
-| Mon, Oct. 9  | Observational data - forecasting                              |
-| Wed, Oct. 11 | Observational data - approximating experiments                |
-| Mon, Oct. 16 | Asking questions - fundamentals                               |
-| Wed, Oct. 18 | Asking questions - digital enrichment                         |
-| Mon, Oct. 23 | Experiments                                                   |
-| Wed, Oct. 25 | Experiments                                                   |
-| Mon, Oct. 30 | Simulated data                                                |
-| Wed, Nov. 1  | Simulated data                                                |
-| Mon, Nov. 6  | Collaboration                                                 |
-| Wed, Nov. 8  | Collaboration                                                 |
-| Mon, Nov. 13 | Ethics                                                        |
-| Wed, Nov. 15 | Ethics                                                        |
-| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations         |
-| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations       |
-| Mon, Nov. 27 | Exploratory data analysis - clustering                        |
-| Wed, Nov. 29 | Exploratory data analysis - dimension reduction               |
+| Date | Topic | Assignment due |
+|--------------|---------------------------------------------------------|-----------------------------------------------|
+| Mon, Sep. 25 | Introduction to Computational Social Science |  |
+| Wed, Sep. 27 | Science in a computational era |  |
+| Mon, Oct. 2 | Observational data - counting things |  |
+| Wed, Oct. 4 | Observational data - measurement |  |
+| Mon, Oct. 9 | Observational data - forecasting |  |
+| Wed, Oct. 11 | Observational data - approximating experiments |  |
+| Mon, Oct. 16 | Asking questions - fundamentals | [Proposing an observational study](assignments/observational-data.md) |
+| Wed, Oct. 18 | Asking questions - digital enrichment |  |
+| Mon, Oct. 23 | Experiments | [Proposing a survey study](assignments/asking-questions.md) |
+| Wed, Oct. 25 | Experiments |  |
+| Mon, Oct. 30 | Simulated data | [Proposing an experiment](assignments/experiments.md) |
+| Wed, Nov. 1 | Simulated data |  |
+| Mon, Nov. 6 | Collaboration | [Simulating your income](assignments/simulation.pdf) |
+| Wed, Nov. 8 | Collaboration |  |
+| Mon, Nov. 13 | Ethics | [Collaboration](collaboration.md) |
+| Wed, Nov. 15 | Ethics |  |
+| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations | [The ethics of the Montana election experiment](assignments/ethics.md) |
+| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
+| Mon, Nov. 27 | Exploratory data analysis - clustering | EDA: Part I |
+| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
+| Mon, Nov. 4 |  | EDA: Part II |
 
 ## Course schedule (readings)
 

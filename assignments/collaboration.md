@@ -28,14 +28,4 @@ See [here](../students/) for instructions on submitting course assignments.
 
 ## Submission deadline
 
-TBD
-
-
-
-
-
-
-
-
-
-
+Submit your pull request before class on Monday, November 13 (11:30 am).

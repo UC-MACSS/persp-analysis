@@ -42,7 +42,7 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 | Date | Topic | Assignment due |
 |--------------|---------------------------------------------------------|-----------------------------------------------|
 | Mon, Sep. 25 | Introduction to Computational Social Science |  |
-| Wed, Sep. 27 | Science in a computational era |  |
+| Wed, Sep. 27 | Social science in a computational era |  |
 | Mon, Oct. 2 | Observational data - counting things |  |
 | Wed, Oct. 4 | Observational data - measurement |  |
 | Mon, Oct. 9 | Observational data - forecasting |  |
@@ -70,7 +70,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Introduction to computational social science
     * [Watts, D. J. (2007). A twenty-first century science. *Nature*, 445(7127), 489-489.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v445/n7127/pdf/445489a.pdf)
     * [Lazer et. al. (2009) Computational Social Science. *Science*, 323, 721-723.](http://science.sciencemag.org.proxy.uchicago.edu/content/323/5915/721.full)
-1. Science in a computational era
+1. Social science in a computational era
     * [Bhattacherjee, A. (2012). Social science research: principles, methods, and practices.](http://scholarcommons.usf.edu/oa_textbooks/3/) Chapters 1-4. Skim/review as needed.
     * [Shmueli, G. (2010). To explain or to predict?. *Statistical science*, 25(3), 289-310.](https://projecteuclid.org/euclid.ss/1294167961)
     * [Anderson, C. (2008). The End of Theory: The Data Deluge Makes the Scientific Method Obsolete. *Wired*.](http://www.wired.com/2008/06/pb-theory/)

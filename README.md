@@ -141,3 +141,5 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Exploratory data analysis - multivariate visualizations
 1. Exploratory data analysis - clustering
 1. Exploratory data analysis - dimension reduction
+
+ 

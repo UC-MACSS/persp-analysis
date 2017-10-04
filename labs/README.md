@@ -9,3 +9,5 @@
 * [Official MACSS 30000  Instructions](https://github.com/UC-MACSS/persp-analysis/tree/master/students)
 * [Intro Git Tutorial](http://jmausolf.github.io/code/intro_git/)
 * [Intermediate Git Tutorial](http://jmausolf.github.io/code/intermediate_git/)
+
+* New resource

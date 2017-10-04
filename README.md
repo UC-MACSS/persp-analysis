@@ -1,4 +1,4 @@
-# MACS 30000 - Perspectives on Computational Analysis
+# MACS 30000 - Perspectives on Computational Analysis 
 
 |  | [Dr. Benjamin Soltoff](http://www.bensoltoff.com/) | [Ryan C. Hughes](http://home.uchicago.edu/~rchughes/) (TA) | [Joshua G. Mausolf](http://jmausolf.github.io/) (TA) |
 |--------------|----------------------------------------------------|-------------------------------------------------------|------------------------------------------------------|

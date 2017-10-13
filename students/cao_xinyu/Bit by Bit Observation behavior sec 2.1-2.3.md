@@ -7,9 +7,9 @@ Category of Big data:
 * Digital traces: 
 these data are the by-product of people's every day actions.
 The expensive data of human behavior becomes cheap. The digital data are created and stored by a business.
-** click on a website
-** make phone call
-** credit Card Payment
+    + click on a website
+    + make phone call
+    + credit Card Payment
 
 * Government Data: 
 about people and business

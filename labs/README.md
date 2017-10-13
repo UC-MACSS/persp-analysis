@@ -10,4 +10,3 @@
 * [Intro Git Tutorial](http://jmausolf.github.io/code/intro_git/)
 * [Intermediate Git Tutorial](http://jmausolf.github.io/code/intermediate_git/)
 
-* New resource

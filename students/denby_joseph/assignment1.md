@@ -1,0 +1,43 @@
+Joseph Denby
+Dr. Benjamin Soltoff
+MACS30000
+Assignment 1
+October 16, 2017
+
+Within the past decade, [Airbnb](airbnb.com) has become an increasingly popular means for travelers to find lodging. Using Airbnb's website as a portal, local residents can open up their homes to guests, providing an alternative to the traditional hotel route. As a user on the site looking for a place to stay, one must create a profile and submit interest to a renter for a particular set of dates. The renter then vets from among the prospective lodgers, picking one who gets to stay.
+
+While Airbnb is a great service for finding a cheap bed or making some easy money off of an empty guest bedroom, its model has run into some issues of discrimination. In 2016, accounts of racially biased renting decisions surfaced, even resulting in a trending social media [hashtag](https://www.theguardian.com/technology/2016/may/05/airbnbwhileblack-hashtag-highlights-potential-racial-bias-rental-app). A corroborating [Harvard study](http://www.benedelman.org/publications/airbnb-guest-discrimination-2016-09-16.pdf) analyzing thousands of applications found that users were 16% less likely to be accepted as a lodger if they possessed a "distinctively African-American name." These results are both stunning and disheartening, and they merit further investigation. 
+
+Because Airbnb markets itself as a user platform and not a business unto itself, it is (supposedly) not subject to the same anti-discrimination laws that hotels and the like uphold. But, because renters can choose their guest, the platform offers a unique way to probe the prevalence of racial biases amongst its users. I propose using Airbnb's user data to assess racial attitudes in the United States by matching racially distinct users and comparing acceptance rates. 
+
+In order to assess bias computationally, I would compare each user's number of successful stays to the total number of persons contacted. This design assumes that if a user contacts an individual but does not stay with them, the discrepancy is due to racial bias. This is a slight extrapolation, but it is not entirely unreasonable, given that there aren't any other reasons for a renter to deny a stay to an otherwise trustworthy user. A user cannot contact a renter to inquire about dates which the renter has labelled as unavailable, so if a user contact a renter inquiring to stay but does not ultimately stay there, it is because the renter has decided not to rent to that user. This method may capture some noise, but it is a good proxy to get a reasonable estimate of racial bias.
+
+My research design would involve using Airbnb's proprietary dataset, which is not currently public. However, Airbnb should be willing to share their information for the purpose of this study for two reasons. First, they should be willing to make every effort possible towards identifying and rooting out users with racist biases on their platform, if only because tolerating racism reflects poorly on their brand and their business. Secondly, if certain users are having negative experiences based on their race, either because they actively recognize biases in other users or because they simply aren't having as much of an opportunity to use the service, they are less likely to use Airbnb! By eliminating discriminationon their platform, Airbnb would thus effectively increase their active user base, growing their company.
+
+The above plan satisfies the framework for an observational study that 'measures' rather than simply 'counts' things. There is no strict value for racial bias in Airbnb's user metadata (obviously), so one has to be approximated using information that *is* available. By using the information described above, I can reliably estimate racial bias in user interactions. 
+
+My plan to track discrimination among Airbnb users would involve matching similar users of different races, so I could attribute differences in acceptance rates to race as much as possible. Airbnb doesn't appear to collect too much demographic information about its users, but I could match users based on self-reported gender, home location, and items in the "Describe Yourself" section. Because there is no self-reported race or ethnicity in a user's profile, I would have to solicit that directly from the users themselves. This would also provide me an opportunity to ask their permission for their information, avoiding any ethical quandaries. 
+
+After collecting these data and assessing racial biases, I might be able to use my findings to forecast user experiences according to their race or prospective location. By measuring the rate at which users of different races are denied stays in different locations, I could predict user experience and take action to prevent racial prejudice (e.g., hiding a user's profile picture, anonymizing interactions between users and renters, etc.).
+
+By employing a large dataset, this research design is prone to certain benefits and pitfalls. First, the sheer size of Airbnb's platform is a huge asset. With [estimates](http://fortune.com/2017/03/07/airbnb-ceo-hosts/) of 150 million users and 3 million hosts, matching users and trawling records of stays and messages should be easy and will yield statistically robust results. Because Airbnb's user base is so large and spans many countries, it would be possible to run this analysis on subpopulations according to race, gender, ethnicity, location, age etc., yielding results that Airbnb can use to address specific issues as they arise. 
+
+Next, since Airbnb's website is always-on, meaning users and hosts are constantly interacting, this study can analyze trends in racial discrimination over time. By using this sort of measure, Airbnb can identify how racial biases might have changed over the course of its existence, potentially linking trends in bias to notable events at a local, national, or international level. Further, Airbnb could use this measure to test different strategies for halting racial discrimination in its user base – by A/B testing efforts in different locations and then comparing results, Airbnb can determine the best solution for the problem at hand. 
+
+This research design takes advantage of Airbnb's user base being non-reactive as well. Because this analysis would track many users over a long period of time using relatively non-sensitive information, Airbnb's users are unlikely to alter their behavior in response to this study. By using this data set to probe racial biases, this design avoids the [Hawthorne effect](https://www.wikiwand.com/en/Hawthorne_effect), whereby participants in a study alter their behavior (sometimes unconsciously) due to their conscious awareness of study participation. The Hawthorne effect is extremely unlikely to occur here, so the measure will be a better judge of racially biased attitudes. 
+
+This research design is also prone to some of the drawbacks of using big data, but thankfully they can be largely avoided. As previously mentioned, this data set is publicly inaccessible, but Airbnb would likely to amenable to sharing their data with me in order to combat racism on their platform. 
+
+As with all online platforms, Airbnb's user base potentially faces the issue of non-representation. If this study aims to use data on Airbnb's users in order to probe racial biases in America, it assumes that Airbnb's user base is a representative sample of the United States population. Thankfully, this is largely true. Airbnb's user base consists of [rougly equal proportions of men and women](https://techcrunch.com/2015/09/07/airbnb-hosted-nearly-17-million-guests-this-summer/?ncid=rss), and is only slightly skewed towards a younger demographic, with an average user age of 35. So while its user base is not a perfect sample of the population of the entire United States, it is workably close.
+
+In sum, this observational research proposal to use Airbnb user data to assess levels of racial discrimination on the platform as well as in the United States as a whole, takes full advantage of the range of opportunities that big data analysis has to offer, while dodging most of the accompanying pitfalls as well. 
+
+
+
+
+
+
+
+- explain how the research design takes advantage of specific aspects of observational study
+    + address some of the pros and cons of using big data
+    

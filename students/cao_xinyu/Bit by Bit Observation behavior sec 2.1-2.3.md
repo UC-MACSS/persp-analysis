@@ -127,9 +127,10 @@ Categorial of Big Data:
        2) user-attribute inference
        3) imputation - use the information they have on some people to infer attributes of other people
           merging or record linkage
-          > Each person in the world creates a Book of Life. This Book starts with birth and ends with death. 
-          > Its page are made up of records of the principle events in life. Record linkage is the name given 
-          > to the process of assembling the pages of this book into a volume.
+          > A metaphor
+          >> Each person in the world creates a Book of Life. This Book starts with birth and ends with death. 
+             Its page are made up of records of the principle events in life. Record linkage is the name given 
+             to the process of assembling the pages of this book into a volume.
 
 
 

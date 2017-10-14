@@ -115,6 +115,27 @@ Categorial of Big Data:
       + *Assess the construct validity* is to take the main claim in the paper 
         + 1) in terms of constructs 
         + 2) re-expres it in terms of data used
+          eg: smart people earn more
+            1) people who score well on the Raven Progressive Matrices Test have higher income on their tax returns
+            2) people on Twitter who used longer words are more likely to mention luxury brands
+          other examples:
+            1) email logs from a univeristy - social relationships
+            2) social media posts - civic engagement
+            3) email logs from a firm - cultural fit in an organization
+    Ways to address the concern of incomplete demographics and behavior on other platforms:
+       1) actually collect the data you need
+       2) user-attribute inference
+       3) imputation - use the information they have on some people to infer attributes of other people
+          merging or record linkage
+          > > Each person in the world creates a Book of Life. This Book starts with birth and ends with death. 
+          > Its page are made up of records of the principle events in life. Record linkage is the name given 
+          > to the process of assembling the pages of this book into a volume.
+
+
+
+
+
+
 
 
 * 

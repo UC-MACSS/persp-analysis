@@ -105,14 +105,14 @@ Categorial of Big Data:
 
 ### Bad
 * Incomplete
-   created other than purpose of research
-   missing three types of infomation: demographics, behavior on other platforms, and operationalize constructs
-   eg: Watts(2006): evolution of the social network:
+    created other than purpose of research
+    missing three types of infomation: demographics, behavior on other platforms, and operationalize constructs
+    eg: Watts(2006): evolution of the social network:
       + email logs do not include data about demographic charateristics - gender and age
       + does not include communication through other media: phone call, text, conversation 
       + no information about relationships
     Construct validity of theoratical concept are hard:
-      + *Assess the construct validity* is to take the main claim in the paper 
+      + *Assess the construct validity* is to take the main claim in the paper: 
         + 1) in terms of constructs 
         + 2) re-expres it in terms of data used
           eg: smart people earn more

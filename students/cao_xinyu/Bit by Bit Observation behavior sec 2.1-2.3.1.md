@@ -1,4 +1,4 @@
-# BiB by Bit Ch2 Observation Behavior 1-2.3
+# BiB by Bit Ch2 Observation Behavior 1-2.3.1
 
 ## 2.1 Introduction 
 

@@ -56,7 +56,7 @@ The roughly 4.8 million core records from Elections Canada, along with additiona
 Using organizations' web presence to complete campaign donation records offers an opportunity to observe (i.e., acquire data about) organizations in an environment in which they are not aware their data is being collected for use in this project. In other words, the organizations which will be studied may have a web presence, but this is intended for their everyday operations, not to justify past political contributions. Therefore, the subject (the organization, through its web presence) will not adapt their behaviour in response to observation and (in theory) the result will be more accurate data on the variables of interest. 
 
 ### Mitigating the Risks of Big Data
-While a big data-informed approach has advantages, this study will take care to mitigate certain risks: (Salganik 2017, 2.3) 
+While a big data-informed approach has advantages, this study will take care to mitigate certain risks (Salganik 2017, 2.3):
 
 ### Incomplete, Inaccessible and Dirty
 As mentioned above, donation records have become progressively more detailed over time. Earlier records offer limited data, which will need to be completed through record linkage with additional datasets. Data on organization attributes is also missing, this will need to be collected using a web scraper. Nonetheless, some information will not be available (e.g., business which have closed, voters who never registered as electors). Other data may be incorrectly assigned to a given record. Due to the size of the dataset and its bias towards the the individual-only contribution regulatory regime (post-2004) neither of these issues is anticipated to have a substantial impact on results. 

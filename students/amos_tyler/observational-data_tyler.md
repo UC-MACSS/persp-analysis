@@ -32,11 +32,11 @@ Irregular donation patterns will be understood as any combination of the followi
 
    * Numerous donations just below various reporting thresholds;
    * Numerous donations by entities with shared features such as surname or postal code;
-   * Donations to candidates in ridings outside of contributors' region;
+   * Donations to candidates in ridings outside of the contributor's region;
    * Frequent cash donations;
    * Donations in the name of individuals not registered to vote.
    
-Additional characteristics may emerge in the course of research, and these heuristics will be adjusted accordingly. By identifying these behaviours in official datasets and web-scraped data, this study will quantify irregular donation patterns in political contribution records, which is understood to represent rule-skirting.
+Additional characteristics may emerge in the course of research, these heuristics will be adjusted accordingly. By identifying these behaviours in official datasets and web-scraped data, this study will quantify irregular donation patterns in political contribution records, which is understood to represent rule-skirting.
 
 ### Data Sources
 The principal data source for this project will be the Elections Canada record of political donations from 2004 to the present. This dataset is freely available from Elections Canada and contains attributes on contributors and recipients such as names and donation amounts. (Elections Canada, _Open Data_) This dataset will be merged with two other datasets which cover the period 1994 - 2003. Altogether, these datasets detail approximately 4.8 million donation records (4.2 million from 2004 - the present; 600,000 from 1993 - 2003)

@@ -27,7 +27,7 @@ In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) wil
 ## Motivation
 As noted above, political financing scandals are a regular feature of the Canadian political landscape. Approaching this issue from the normative position that rule-skirting should be deterred, this study will improve understanding of a legal, ethically questionable practice. Once an initial understanding has been developed, it may be possible to develop techniques to identify irregular donations more quickly and allocate enforcement (or education) resources appropriately. Furthermore, the volume of irregular donation patterns across time may inform some analyses of successive policy reforms. 
 
-##Research Design
+## Research Design
 Irregular donation patterns will be understood as any combination of the following behaviours:
 
    * Numerous donations below maximum allowable amounts in the same election cycle;
@@ -38,40 +38,40 @@ Irregular donation patterns will be understood as any combination of the followi
    
 Additional characteristics may emerge in the course of research, and these heuristics will be adjusted accordingly. By identifying these behaviours in official datasets and web-scraped data, this study will quantify irregular donation patterns in political contribution records, which is understood to represent rule-skirting.
 
-###Data Sources
+### Data Sources
 The principal data source for this project will be the Elections Canada record of political donations from 2004 to the present. This dataset is freely available from Elections Canada and contains attributes on contributors and recipients such as names and donation amounts. (Elections Canada, _Open Data_) This dataset will be merged with two other datasets which cover the period from 1994 to 2003. Altogether, these datasets detail approximately 4.8 million donation records (4.2 million from 2004 - present; 600,000 from 1993 - 2003)
 
 This dataset will be used as a starting point to build more complete donor profiles. This will be achieved using two data acquisition and merging tasks. First, access to the Elections Canada National Register of Electors will be requested, and if permission is granted, these records will be linked to the record of political contributions from 1994 - present. They will also provide a means to identify donations made in the name of individuals not registered to vote. Historical lists from the Register will be used to complete records from before 2004, which do not include the same level of detail as 2004 to the present. Second, supplementary information on organizations will be collected via web scraper, providing data on organizations' activities and staffing. This will be linked to business, corporate, non-profit, and union donations detailed by Elections Canada records.  
 
-###Using Observational Data to Answer the Research Question
+### Using Observational Data to Answer the Research Question
 To the author's knowledge no large-scale, big data-informed investigation of irregular donation patterns has been done. As a first foray into this area, this study will establish a baseline understanding of the extent of rule-skirting, as measured by irregular donation patterns. In order to establish this baseline, it is necessary to identify and count irregular donation patterns. Future analyses would benefit from more advanced approaches such as prediction, but given the lack of existing research in this area, an emphasis will be placed on more foundational analyses. Specifically, observed counts of irregular behaviours will be caculated. Once this baseline has been identified, dissaggregated counts of irregular donation patterns will be computed using individual and organizational attributes. 
 
-###Leveraging the Advantages of Big Data
+### Leveraging the Advantages of Big Data
 This study will leverage the advantages of big data, as defined by Salganik (2017, 2.3) in a number of ways:
 
-#####Big
+### Big
 The roughly 4.8 million core records from Elections Canada, along with additional data gathered from the Register of Electors and scraped from web sites affords an opportunity to study, in a quantitatively rigorous way, what may be a rare event. The size of this dataset also helps to investigate specific behaviours of organizational contributors and may allow some generalizable findings about the role these organizations played in political finance. This in turn may offer some insights as to the effect of federal reforms prohibiting organizationalcontributions.
 
-#####Non-reactive
+### Non-reactive
 Using organizations' web presence to complete campaign donation records offers an opportunity to observe (i.e., acquire data about) organizations in an environment in which they are not aware their data is being collected for use in this project. In other words, the organizations which will be studied may have a web presence, but this is intended for their everyday operations, not to justify past political contributions. Therefore, the subject (the organization, through its web presence) will not adapt their behaviour in response to observation and (in theory) the result will be more accurate data on the variables of interest. 
 
-###Mitigating the Risks of Big Data
+### Mitigating the Risks of Big Data
 While a big data-informed approach has advantages, this study will take care to mitigate certain risks: (Salganik 2017, 2.3) 
 
-##### Incomplete, Inaccessible and Dirty
+### Incomplete, Inaccessible and Dirty
 As mentioned above, donation records have become progressively more detailed over time. Earlier records offer limited data, which will need to be completed through record linkage with additional datasets. Data on organization attributes is also missing, this will need to be collected using a web scraper. Nonetheless, some information will not be available (e.g., business which have closed, voters who never registered as electors). Other data may be incorrectly assigned to a given record. Due to the size of the dataset and its bias towards the the individual-only contribution regulatory regime (post-2004) neither of these issues is anticipated to have a substantial impact on results. 
 
 Another risk is inaccessibility. The clearest case of this is the missing organizational attributes necessary to build profiles of organizational contributors. This data is present in government records, including tax filings. However, this data would be challenging to access due to privacy, confidentiality, and cost concerns (some access pathways are paid services). Comparable information will be collected by web scraping. Similarly, the Register of Electors is inaccessible without permission from Elections Canada. However, the author does not anticipate Elections Canada denying access to the Register (the data is already provided to political parties). Nevertheless, the core investigation of this study does not require access to the Register, and the study is thus insulated from inaccessibility risks.
 
 Data collected via the web scraper will likely be "dirty" - requiring substantial manipulation in order to extract relevant information.  To mitigate this challenge, the web scraper will be targeted at business listings and government records such as YellowPages, and Canada Revenue Agency's public filings for non-profits (CRA 2017). The advantage of targeting the web scraper will be more predictable formatting and more authoritative data. This may sacrifice some completeness, but the time saved through this strategy is judged to outweigh the risk of incompleteness. 
 
-##### System Drift
+### System Drift
 Fundraising behaviour and dynamics have drifted over the course of the study period. The most clear of these is the 2004 ban on organizational contributions. Contribution limits have also shifted as a result of successive regulatory changes. Furthermore, business and other organizations will have closed or merged. To some extent, these changes are anticipated and will be of interest (e.g, regulatory changes). Others present challenges (e.g., business closure), which will have to be addressed on a case-by-case basis. 
       
-##### Sensitive
+### Sensitive
 The contributions records used in this study will contain some personal information such as postal code, name, and amounts donated. While this information is public, it is not readily accessible, thus the act of consolidating it is akin to rigorous investigation of a particular individual or organization. The researcher will exercise discretion in communicating their findings by avoiding mentioning identifying characteristics when citing examples. 
 
-##Conclusion
+## Conclusion
 Starting from Elections Canada political contribution data, this study will build a more complete picture of patterns in political contributions in order to identify rule-skirting behaviours. Quantifying these behaviours will provide a baseline for further study and action on ethically questionable, but legal practices. Building on these findings, future research may include prediction or classification to improve detection of irregular contributions.
 
 ## References

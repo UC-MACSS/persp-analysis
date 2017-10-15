@@ -27,7 +27,7 @@ In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) wil
 Approaching this issue from the normative position that rule-skirting should be deterred, this study will improve understanding of a legal, ethically questionable practice. Once an initial understanding has been developed, it may be possible to develop techniques to identify irregular donations more quickly and allocate enforcement (or education) resources appropriately. Furthermore, the volume of irregular donation patterns across time may inform some analyses of successive policy reforms. 
 
 ## Research Design
-Irregular donation patterns will be understood as any combination of the following behaviours (Globe and Mail 2007; Democracy Watch):
+Irregular donation patterns will be understood as any combination of the following behaviours (Globe and Mail 2007; Democracy Watch; CBC 2006):
 
    * Numerous donations just below various reporting thresholds;
    * Numerous donations by entities with shared features such as surname or postal code;
@@ -77,6 +77,8 @@ Starting from Elections Canada political contribution data, this study will buil
 CBC. 2012. _9 Facts about Pierre Poutine and the robocalls case_ http://www.cbc.ca/news/politics/9-facts-about-pierre-poutine-and-the-robocalls-case-1.1143560
 
 CBC. 2013.  _Elections Canada audit seeks those dodging donation limits_  http://www.cbc.ca/news/politics/elections-canada-audit-seeks-those-dodging-donation-limits-1.1302829
+
+CBC. 2006. _Political Contributions: Money, Money, Money_ http://www.cbc.ca/news2/background/cdngovernment/political-contributions.html
 
 Democracy Watch. Bill C-2 Analysis. http://democracywatch.ca/c2analysis/
 

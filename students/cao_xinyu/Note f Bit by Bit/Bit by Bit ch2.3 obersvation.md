@@ -58,9 +58,14 @@ eg: The magic 20 of Facebok encourage people to make friends.
 >> A metaphor
 > People are in casino
 
-## Dirty
+## 6. Dirty
 Junk and Spam
 Automated Bots in wikipedia
+
+## 7. Senstive
+Information that companies and governments have is senstive
+* emtional harm - embarrassment
+* economic harm - loss of employment
 
 
 

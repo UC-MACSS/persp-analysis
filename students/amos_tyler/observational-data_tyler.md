@@ -80,7 +80,7 @@ CBC. 2012. _9 Facts about Pierre Poutine and the robocalls case_ http://www.cbc.
 
 CBC. 2013.  _Elections Canada audit seeks those dodging donation limits_  http://www.cbc.ca/news/politics/elections-canada-audit-seeks-those-dodging-donation-limits-1.1302829
 
-Canada Revenue Agency.2017.  _Registered Charity Information Return_ https://www.canada.ca/en/revenue-agency/services/charities-giving/charities-listings.html
+Canada Revenue Agency (CRA). 2017.  _Registered Charity Information Return_ https://www.canada.ca/en/revenue-agency/services/charities-giving/charities-listings.html
 
 Elections Canada. _Open Data_ http://www.elections.ca/content.aspx?section=fin&dir=oda&document=index&lang=e 
 

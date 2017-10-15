@@ -31,7 +31,7 @@ First, since the final dataset will have to be merged from three separate data s
 
 Second, there will be missing data. Some can be remedied by making trips to the Center and asking for them. However, upon inspection, only 5000+ out of the 25000+ patients persist through all 8 years. The way I plan on approaching this problem is to partition the dataset by the number of year that the patient has on record. I will make separate dataset for patients that appear on record for 2-8 years respectively, and perform longitudinal data analyses on all such datasets.
 
-Finally, to operationalize compliance I will create a variable calculated as $$$NoShowRate = {number \ of \ missed \ appointments \over number \ of \ total \ appointments}$$$ to reflect how uncompliant the patient is with her doctor's orders. 
+Finally, to operationalize compliance I will create a variable calculated as NoShowRate = number of missed appointments / number of total appointments to reflect how uncompliant the patient is with her doctor's orders. 
 
 The operationalization of outcome can be twofold. One will be the continuous healthcare outcome variables like BMI, a1c and rehospitalization frequencies. The other will be a number of binary variables coding for different types of complications. To do that, I will parse the variable that describes the patient's complications, and create dummy variables for the most economically salient (as in whether the complication costs a lot) complications, like renal complications, which could lead to dialysis for life.  
 

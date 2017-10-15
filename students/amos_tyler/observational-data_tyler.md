@@ -13,7 +13,7 @@ University of Chicago
 
 October 16, 2017
 
-Word count (excluding references and titles): 1,472
+Word count (excluding references and titles): 1,450
 
 ## Summary
 In the past few years alone Canadian Senators, sitting Members of Parliament and a number of campaign operatives at both federal and provincial levels have all faced scrutiny for violating, or appearing to skirt political finance rules. Media investigations regularly highlight criminal wrongdoing and unethical practices which skirt rules without breaking them. (Globe and Mail 2017; Maclean's 2017; Macleans 2016; National Post 2017; CBC 2013; CBC 2012)  While Elections Canada and law enforcement publicize their findings in cases of criminal wrongdoing, it is substantially less clear to what extent political financing rules are being skirted but not broken.  

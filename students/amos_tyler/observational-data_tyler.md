@@ -30,10 +30,10 @@ As noted above, political financing scandals are a regular feature of the Canadi
 ## Research Design
 Irregular donation patterns will be understood as any combination of the following behaviours:
 
-   * Numerous donations below maximum allowable amounts in the same election cycle;
+   * Numerous donations just below various reporting thresholds;
    * Numerous donations by entities with shared features such as surname or postal code;
    * Donations to candidates in ridings outside of contributors' region;
-   * Frequent cash donations below the threshold required for recording contributor information;
+   * Frequent cash donations;
    * Donations in the name of individuals not registered to vote.
    
 Additional characteristics may emerge in the course of research, and these heuristics will be adjusted accordingly. By identifying these behaviours in official datasets and web-scraped data, this study will quantify irregular donation patterns in political contribution records, which is understood to represent rule-skirting.

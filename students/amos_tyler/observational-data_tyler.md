@@ -20,7 +20,6 @@ In the past few years alone Canadian Senators, sitting Members of Parliament and
 
 In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) will be used to investigate the principal research question: How prevalent are irregular political donation patterns? Additional research questions will also be investigated, including:
 
-  * How often do irregular donation patterns occur?
   * To which political entities are irregularly-patterned donations directed?
   * In pre-2004 donations, do certain types of organizations (unions, corporations, small business, etc.) appear more often in connection with irregular donation patterns?
 

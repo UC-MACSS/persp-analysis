@@ -13,21 +13,21 @@ University of Chicago
 
 October 16, 2017
 
-Word count (excluding references and titles): 1,500
+Word count (excluding references and titles): 1,472
 
 ## Summary
-In the past few years alone Canadian Senators, sitting Members of Parliament and a number of campaign operatives at both federal and provincial levels have all faced scrutiny for violating, or appearing to skirt political finance rules. In 2004 the governing Liberals restricted contributions to individuals in response to the Sponsorship Scandal. (Maclean's 2016) Media investigations regularly highlight criminal wrongdoing and unethical practices which skirt rules without breaking them. (Globe and Mail 2017; Maclean's 2017; National Post 2017; CBC 2013; CBC 2012)  While Elections Canada and law enforcement publicize their findings in cases of criminal wrongdoing, it is substantially less clear to what extent political financing rules are being skirted but not broken.  
+In the past few years alone Canadian Senators, sitting Members of Parliament and a number of campaign operatives at both federal and provincial levels have all faced scrutiny for violating, or appearing to skirt political finance rules. (Maclean's 2016) Media investigations regularly highlight criminal wrongdoing and unethical practices which skirt rules without breaking them. (Globe and Mail 2017; Maclean's 2017; National Post 2017; CBC 2013; CBC 2012)  While Elections Canada and law enforcement publicize their findings in cases of criminal wrongdoing, it is substantially less clear to what extent political financing rules are being skirted but not broken.  
 
 In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) will be used to investigate the principal research question: How prevalent are irregular political donation patterns? Additional research questions will also be investigated, including:
 
   * To which political entities are irregularly-patterned donations directed?
-  * In pre-2004 donations, do certain types of organizations (unions, corporations, small business, etc.) appear more often in connection with irregular donation patterns?
+  * Do certain types of organizations (unions, corporations, small business, etc.) appear more often in connection with irregular donation patterns?
 
 ## Motivation
 As noted above, political financing scandals are a regular feature of the Canadian political landscape. Approaching this issue from the normative position that rule-skirting should be deterred, this study will improve understanding of a legal, ethically questionable practice. Once an initial understanding has been developed, it may be possible to develop techniques to identify irregular donations more quickly and allocate enforcement (or education) resources appropriately. Furthermore, the volume of irregular donation patterns across time may inform some analyses of successive policy reforms. 
 
 ## Research Design
-Irregular donation patterns will be understood as any combination of the following behaviours:
+Irregular donation patterns will be understood as any combination of the following behaviours (from Globe and Mail 2007; Democracy Watch):
 
    * Numerous donations just below various reporting thresholds;
    * Numerous donations by entities with shared features such as surname or postal code;
@@ -58,14 +58,14 @@ Using organizations' web presence to complete campaign donation records offers a
 While a big data-informed approach has advantages, this study will take care to mitigate certain risks (Salganik 2017, 2.3):
 
 ### Incomplete, Inaccessible and Dirty
-As mentioned above, donation records have become progressively more detailed over time. Earlier records offer limited data, which will need to be completed through record linkage with additional datasets. Data on organization attributes is also missing, this will need to be collected using a web scraper. Nonetheless, some information will not be available (e.g., business which have closed, voters who never registered as electors). Other data may be incorrectly assigned to a given record. Due to the size of the dataset and its bias towards the the individual-only contribution regulatory regime (post-2004) neither of these issues is anticipated to have a substantial impact on results. 
+As mentioned above, donation records have become progressively more detailed over time. Earlier records offer limited data, which will need to be completed through record linkage with additional datasets. Data on organization attributes is also missing, this will need to be collected using a web scraper. Nonetheless, some information will not be available (e.g., business which have closed, voters who never registered as electors). Other data may be incorrectly assigned to a given record. Due to the size of the dataset and its bias towards the the individual-only contribution regulatory regime (post-2006) neither of these issues is anticipated to have a substantial impact on results. 
 
 Another risk is inaccessibility. The clearest case of this is the missing organizational attributes necessary to build profiles of organizational contributors. This data is present in government records, including tax filings. However, this data would be challenging to access due to privacy, confidentiality, and cost concerns (some access pathways are paid services). Comparable information will be collected by web scraping. Similarly, the Register of Electors is inaccessible without permission from Elections Canada. However, the author does not anticipate Elections Canada denying access to the Register (the data is already provided to political parties). Nevertheless, the core investigation of this study does not require access to the Register, and the study is thus insulated from inaccessibility risks.
 
 Data collected via the web scraper will likely be "dirty" - requiring substantial manipulation in order to extract relevant information.  To mitigate this challenge, the web scraper will be targeted at business listings and government records such as YellowPages, and Canada Revenue Agency's public filings for non-profits (CRA 2017). The advantage of targeting the web scraper will be more predictable formatting and more authoritative data. This may sacrifice some completeness, but the time saved through this strategy is judged to outweigh the risk of incompleteness. 
 
 ### System Drift
-Fundraising behaviour and dynamics have drifted over the course of the study period. The most clear of these is the 2004 ban on organizational contributions. Contribution limits have also shifted as a result of successive regulatory changes. Furthermore, business and other organizations will have closed or merged. To some extent, these changes are anticipated and will be of interest (e.g, regulatory changes). Others present challenges (e.g., business closure), which will have to be addressed on a case-by-case basis. 
+Fundraising behaviour and dynamics have drifted over the course of the study period. The most clear of these is the ban on organizational contributions. Contribution limits have also shifted as a result of successive regulatory changes. Furthermore, business and other organizations will have closed or merged. To some extent, these changes are anticipated and will be of interest (e.g, regulatory changes). Others present challenges (e.g., business closure), which will have to be addressed on a case-by-case basis. 
       
 ### Sensitive
 The contributions records used in this study will contain some personal information such as postal code, name, and amounts donated. While this information is public, it is not readily accessible, thus the act of consolidating it is akin to rigorous investigation of a particular individual or organization. The researcher will exercise discretion in communicating their findings by avoiding mentioning identifying characteristics when citing examples. 
@@ -78,11 +78,15 @@ CBC. 2012. _9 Facts about Pierre Poutine and the robocalls case_ http://www.cbc.
 
 CBC. 2013.  _Elections Canada audit seeks those dodging donation limits_  http://www.cbc.ca/news/politics/elections-canada-audit-seeks-those-dodging-donation-limits-1.1302829
 
+Democracy Watch. Bill C-2 Analysis. http://democracywatch.ca/c2analysis/
+
 Canada Revenue Agency (CRA). 2017.  _Registered Charity Information Return_ https://www.canada.ca/en/revenue-agency/services/charities-giving/charities-listings.html
 
 Elections Canada. _Open Data_ http://www.elections.ca/content.aspx?section=fin&dir=oda&document=index&lang=e 
 
 Globe and Mail. 2017. _With cash-for-access, Justin Trudeau picks up where Kathleen Wynne left off_ https://beta.theglobeandmail.com/opinion/editorials/with-cash-for-access-justin-trudeau-picks-up-where-kathleen-wynne-left-off/article32464117/
+
+Globe and Mail. 2007. _Ottawa refuses to close donation loophole_ https://beta.theglobeandmail.com/news/national/ottawa-refuses-to-close-donation-loophole/article20399805/?ref=http://www.theglobeandmail.com& 
 
 Maclean's. 2017. _How Ottawa banned corporate donations to parties_ http://www.macleans.ca/politics/ottawa/how-ottawa-banned-corporate-donations-to-parties/
 

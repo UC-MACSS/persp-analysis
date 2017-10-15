@@ -16,7 +16,7 @@ October 16, 2017
 Word count (excluding references and titles): 1,472
 
 ## Summary
-In the past few years alone Canadian Senators, sitting Members of Parliament and a number of campaign operatives at both federal and provincial levels have all faced scrutiny for violating, or appearing to skirt political finance rules. (Maclean's 2016) Media investigations regularly highlight criminal wrongdoing and unethical practices which skirt rules without breaking them. (Globe and Mail 2017; Maclean's 2017; National Post 2017; CBC 2013; CBC 2012)  While Elections Canada and law enforcement publicize their findings in cases of criminal wrongdoing, it is substantially less clear to what extent political financing rules are being skirted but not broken.  
+In the past few years alone Canadian Senators, sitting Members of Parliament and a number of campaign operatives at both federal and provincial levels have all faced scrutiny for violating, or appearing to skirt political finance rules. Media investigations regularly highlight criminal wrongdoing and unethical practices which skirt rules without breaking them. (Globe and Mail 2017; Maclean's 2017; Macleans 2016; National Post 2017; CBC 2013; CBC 2012)  While Elections Canada and law enforcement publicize their findings in cases of criminal wrongdoing, it is substantially less clear to what extent political financing rules are being skirted but not broken.  
 
 In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) will be used to investigate the principal research question: How prevalent are irregular political donation patterns? Additional research questions will also be investigated, including:
 
@@ -24,7 +24,7 @@ In this study, a straightforward "counting" technique (Salganik 2017, 2.4.1) wil
   * Do certain types of organizations (unions, corporations, small business, etc.) appear more often in connection with irregular donation patterns?
 
 ## Motivation
-As noted above, political financing scandals are a regular feature of the Canadian political landscape. Approaching this issue from the normative position that rule-skirting should be deterred, this study will improve understanding of a legal, ethically questionable practice. Once an initial understanding has been developed, it may be possible to develop techniques to identify irregular donations more quickly and allocate enforcement (or education) resources appropriately. Furthermore, the volume of irregular donation patterns across time may inform some analyses of successive policy reforms. 
+Approaching this issue from the normative position that rule-skirting should be deterred, this study will improve understanding of a legal, ethically questionable practice. Once an initial understanding has been developed, it may be possible to develop techniques to identify irregular donations more quickly and allocate enforcement (or education) resources appropriately. Furthermore, the volume of irregular donation patterns across time may inform some analyses of successive policy reforms. 
 
 ## Research Design
 Irregular donation patterns will be understood as any combination of the following behaviours (from Globe and Mail 2007; Democracy Watch):

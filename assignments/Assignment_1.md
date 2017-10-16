@@ -12,24 +12,24 @@ Perspectives on Computational Analysis
 While the literature on civil war has focused on ethnic conflict in
 recent years, it is still too broad and focuses almost exclusively on
 authoritarian states. Less attention is paid to secessionist conflicts
-and, in particular, on secessionist demands within democratic states.
-Recently, there has been many movements towards independence in the
-places like Catalonia but the formation of these demands is less
-understood. One possible explanation is that sub-national funding (the
-amount of state subsidies toward minority regions) affects whether
-secessionist demands are made by that minority population. Within the
-seven minority regions of Spain, I use a web scraping approach which
-observes secessionist demands on Spanish social media and whether these
-demands are affected by sub-national funding.
+and, in particular, on secessionist demands within democratic states. In
+recent years, there have been movements for independence in the regions
+like Catalonia but the formation of these demands is less understood.
+One possible explanation is that sub-national funding (the amount of
+state subsidies toward minority regions) affects whether secessionist
+demands are made by that minority population. Within the seven minority
+regions of Spain, I use a web scraping approach which observes
+secessionist demands on Spanish social media and whether these demands
+are affected by sub-national funding.
 
 ### Theory
 
-I propose a novel theory: that sub-national subsidies to minority
+This uses a novel theory: that sub-national subsidies to minority
 regions (especially in comparison to the amount of taxes they pay) are
 what explains these demands. Both the minority population and local
 elites are generally tempted to secede, but can be co-opted with
-adequate funding. In instances when the state does not spend enough
-locally then secessionist demands are increased. This can be tested
+adequate funding. In instances when the state does not spend favorably
+to these regions then secessionist demands increase. This can be tested
 using web scraping of social media. I argue this can help explain the
 recent independence demands in Catalonia and why other minority regions
 do no have comparable demands.
@@ -58,16 +58,17 @@ will measure people in four, six-month intervals, two in which nothing
 politically significant occurred, and two in which something did. This
 would measure three months before and after the 2014 and 2017
 referendums and two six-month period in which nothing significant
-happened. These time-intervals are done to compare the salience of major
-events and to reduce the possibility of algorithmic drift (which will be
-addressed in detail later). Using machine learning techniques, I will
-then code whether a specific post is pro-independence/secession or not.
-With machine learning, it will be able to recognize things like
-ambiguous wording, satire, and bots which can skew normal attempts at
-coding. Finally, based on this coding, I will test whether
-pro-secessionist demands have increased among these users in relation to
-their local funding.This approach has numerous advantages in comparison
-to other non-big data designs.
+happened. These time-intervals are done to compare secessionist demands
+during salient events to account for possible bias because of their news
+prominence. This also reduces the possibility of algorithmic drift
+(which will be addressed in detail later). Using machine learning
+techniques, I will then code whether a specific post is
+pro-independence/secession or not. With machine learning, it will be
+able to recognize things like ambiguous wording, satire, and bots which
+can skew normal attempts at coding. Finally, based on this coding, I
+will test whether pro-secessionist demands have increased among these
+users in relation to their local funding.This approach has numerous
+advantages in comparison to other non-big data designs.
 
 ### Advantages
 
@@ -124,9 +125,14 @@ the data is used. For instance, Facebook in its early years was mostly
 used for academics and sharing personal information, but has since
 become a major source of news and sharing news. Similarly, Twitter
 became much more politically salient as a protest tool in recent years
-when it might not have been early on in its creation. Thus, it could be
-that both tools would not be able to capture changes in political
-activity within Spain during their earlier years.
+when it might not have been early on in its creation. Likewise, changes
+in the algorithms can lead to things that can overpredict certain
+political posts. For instance, changes in the code can promote political
+news stories which might prime people to post more political views then
+they otherwise would. This also happened with Google Flu which became
+less predicative when google gave suggestions for the flu when symptom
+searches came up. Thus, it could be that both social media might be
+skewed by changes in the algorithms.
 
 To account for this, I designed the project into six-month intervals to
 reduce the possibility that major algorithmic changes occurred. Often,
@@ -181,8 +187,8 @@ political issues. While Spain is not a dictatorship that would hunt for
 people who post pro-secessionist views, this might raise privacy
 concerns especially if the data needs to be replicated and is shared
 publicly to do so. This is especially true for people who live in areas
-were most of the population do not agree with them and making the
-information public could inflame tensions.
+were most of the population do not agree with them. All these things
+could inflame political tensions if the information was made public.
 
 To account for this concern, I will anonymize all the posters' names
 even if they go by pseudonyms. Likewise, if the geolocation is from

@@ -11,10 +11,10 @@ Perspectives on Computational Analysis
 
 While the literature on civil war has focused on ethnic conflict in
 recent years, it is still too broad and focuses almost exclusively on
-authoritarian states. Less attention is paid on secessionist conflicts
+authoritarian states. Less attention is paid to secessionist conflicts
 and, in particular, on secessionist demands within democratic states.
-Recently, there has been a dramatic shift towards independence in the
-regions like Catalonia but the formation of these demands is less
+Recently, there has been many movements towards independence in the
+places like Catalonia but the formation of these demands is less
 understood. One possible explanation is that sub-national funding (the
 amount of state subsidies toward minority regions) affects whether
 secessionist demands are made by that minority population. Within the
@@ -25,12 +25,14 @@ demands are affected by sub-national funding.
 ### Theory
 
 I propose a novel theory: that sub-national subsidies to minority
-regions (especially in comparison to taxes paid) are what explains these
-demands. Both the minority population and local elites are generally
-tempted to secede, but can be co-opted with funding. In instances when
-the state can not (or does not want to) spend locally then secessionist
-demands are increased. This can be tested using web scraping of social
-media.
+regions (especially in comparison to the amount of taxes they pay) are
+what explains these demands. Both the minority population and local
+elites are generally tempted to secede, but can be co-opted with
+adequate funding. In instances when the state does not spend enough
+locally then secessionist demands are increased. This can be tested
+using web scraping of social media. I argue this can help explain the
+recent independence demands in Catalonia and why other minority regions
+do no have comparable demands.
 
 ### Research Design
 
@@ -38,21 +40,21 @@ media.
 
 As categorized by [Salganik
 (2017)](http://www.bitbybitbook.com/en/observing-behavior/designs/forecasting/),
-this study would be considered a causal use of big data as opposed to
-predictive models because it seeks to explain why something is occurring
-as opposed to simply trying to predict it. In this case, the independent
+this study would be considered a causal use of big data (as opposed to
+predictive models) because it seeks to explain why something is
+occurring and not just predict it. In this case, the independent
 variable (sub-national tax funding) does not utilize big data but the
 *dependent* variable, secessionist demands, does. To measure
 secessionist demands, I plan on web scraping the users of
 [Twitter](https://twitter.com/) and
-[Facebook](https://www.facebook.com/) to specifically look at posts (or
-in this case tweets and statuses). It will only observe users that are
-geo-located in Spanish regions considered to be their own
-"nationalities" by the constitution (Aragon, Balearic Islands, Basque,
-Catalonia, Galicia, Valencia).
+[Facebook](https://www.facebook.com/) and specifically look at thier
+posts (or in this case tweets and statuses). It will only observe users
+that are geo-located in Spanish regions considered to be their own
+"nationalities" by the constitution (Aragon, the Balearic Islands,
+Basque, Catalonia, Galicia, and Valencia).
 
 Like a longitudinal study, this will follow the same users over time. It
-would measure people in four, six-month intervals, two in which nothing
+will measure people in four, six-month intervals, two in which nothing
 politically significant occurred, and two in which something did. This
 would measure three months before and after the 2014 and 2017
 referendums and two six-month period in which nothing significant
@@ -62,12 +64,10 @@ addressed in detail later). Using machine learning techniques, I will
 then code whether a specific post is pro-independence/secession or not.
 With machine learning, it will be able to recognize things like
 ambiguous wording, satire, and bots which can skew normal attempts at
-coding for phrases. Finally, based on this coding, I will test whether
-pro-secessionist demands has increased among these users. Given the
-nature of this kind of design, this would be considered a "causal"
-project per That is to say, this is based on the individual level of
-specific user posts, not posts of the entire website. This approach has
-numerous advantages in comparison to other non-big data designs.
+coding. Finally, based on this coding, I will test whether
+pro-secessionist demands have increased among these users in relation to
+their local funding.This approach has numerous advantages in comparison
+to other non-big data designs.
 
 ### Advantages
 
@@ -76,15 +76,15 @@ numerous advantages in comparison to other non-big data designs.
 The main advantage of using social media is that, given the theory,
 these users would be very representative of those who make secessionist
 demands. Social media users tend to be wealthier, more educated and can
-articulate political demands. Thus, they are representative of elites,
-whether it is those with direct political power or simply those who have
-more public influence, they are the kind of population who explicitly
-try to change policy. Likewise, given the design of the project in
-democratic states, it allows for much more openness on these social
-media sites, which often exists even in authoritarian states (for
+articulate political demands better. Thus, they are representative of
+elites, whether it is those with direct political power or simply people
+who have more public influence, they are the kind of population who
+explicitly try to change policy. Likewise, given the design of the
+project in democratic states, it allows for much more openness on these
+social media sites, which often exists even in authoritarian states (for
 instance King et al. 2013 found that China is unlikely to censor
-criticism by itself). In sum, it covers the demographics that would
-participate in secessionist demands.
+criticism of the state in-itself). In sum, it covers the demographics
+that would create secessionist demands.
 
 #### Alternative to polling
 
@@ -138,17 +138,18 @@ major changes in algorithms.
 #### Dirtiness
 
 Perhaps one of the biggest problems with doing web scraping in general
-is the dirtiness of the data one receives. That is, the data that is not
+is the dirtiness of the data one receives. That is, the data is not
 created by the researcher and is often done in a way which is difficult
 to organize and can lead to misunderstandings. Given the large volume of
-social media posts coded for pro-secessionist sentiments this too can
+social media posts coded for pro-secessionist sentiments, this too can
 become a problem with the data gathering.
 
 Unfortunately, the only real solution to this is vigilance and
 organization. I will organize the data to track users over time and have
-each post coded as a binary (pro-secessionist, or non-secessionist) and
-keep this well organized as time-series data. In this case, being aware
-of the problem and being careful is the only way to overcome it.
+each post coded as a binary variable (pro-secessionist, or
+non-secessionist) and keep this well organized as time-series data. In
+this case, being aware of the problem and being careful is the only way
+to overcome it.
 
 #### Spurious correlations
 
@@ -158,11 +159,11 @@ secessionist contentions since then, namely the 2014 and 2017 Catalonia
 referendums, it is still unclear how generalizable these events would be
 in the span of less than a decade. For instance, it could be that even
 if funding did determine secessionist demands, there is something
-recently that is endogenously magnifying the conflict in Catalonia. That
-is, something like the Great Recession might have recently polarized
-Spanish politics which makes people in Catalonia and in other regions
-more critical of reductions in funding. Ultimately, the newness of
-social media might be capturing spurious correlations.
+recently which is endogenously magnifying the conflict in Catalonia.
+That is, something like the Great Recession might have recently
+polarized Spanish politics which makes people in Catalonia and in other
+regions more critical of reductions in funding. Ultimately, the newness
+of social media might be capturing spurious correlations.
 
 To help account for this problem, I will choose two time-intervals when
 no referendums occurred that are similar in economic conditions to ones
@@ -187,6 +188,6 @@ To account for this concern, I will anonymize all the posters' names
 even if they go by pseudonyms. Likewise, if the geolocation is from
 towns in which the population is extremely small, the study will drop
 those observations because it could lead to the discovery and
-persecution of whoever made those posts. Finally, I will double get IRB
-approval for this study even though it is not always the case that web
-scraping would require IRB approval.
+persecution of whoever made those posts. Finally, I will make sure to
+get IRB approval for this study even though it is not always required
+that web scraping get IRB approval.

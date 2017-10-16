@@ -6,8 +6,8 @@ Nora Nickels
 Assignment 1
 ------------
 
-Perspectives of Computational Analysis - Fall 2017
---------------------------------------------------
+Perspectives of Computational Analysis - Fall 2017 TEST
+-------------------------------------------------------
 
 ### Research Question: Could a detection and quantification of gendered terminology in Twitter trends associated with STEM vs. non-STEM topics reveal the risk for stereotype threat in a social media domain?
 

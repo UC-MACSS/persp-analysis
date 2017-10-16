@@ -61,6 +61,8 @@ Wikipedia's open source nature situates the repository in constant disputes rega
 - Mitchell, A., Gottfried, J., Barthel, M., Shearer, E. (2016).The Modern News Consumer: News attitudes and practices in the digital era. Pew Research Center. Retrieved from: http://www.journalism.org/2016/07/07/pathways-to-news/
 
 
+
+
 [1]: https://www.researchgate.net/publication/222036119_Convenience_or_credibility_A_study_of_college_student_research_behaviors
 [2]: http://www.nature.com/news/wikipedia-shapes-language-in-science-papers-1.22656
 [3]: http://www.journalism.org/2016/07/07/pathways-to-news/

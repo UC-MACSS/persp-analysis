@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Proposing an observational study (10 points)
 
 Over the past two weeks, you have read numerous examples of studies using digital data to conduct observational research. You have learned about the strengths and weaknesses of digital data, and assessed examples of observational research for how well they leverage these strengths and weaknesses.
@@ -24,3 +29,12 @@ Submit your paper as a Markdown document (`.md`).
 ## Submission deadline
 
 Submit your pull request before class on Monday, October 16 (11:30 am).
+
+
+# Dan Gamarnik Observational study 
+
+
+
+
+
+

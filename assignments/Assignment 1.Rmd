@@ -1,0 +1,38 @@
+---
+title: "Feeding The Mouth That Bites: Subsidies and Secessionist Demands In Catalonia"
+author: "Dan Gamarnik"
+date: "October 16, 2017"
+output: html_document
+---
+
+### Introduction 
+
+While the literature on civil war has focused on ethnic conflict in recent years, it is still too broad and focuses almost exclusively on authoritarian states. Less attention is paid on secessionist conflicts and, in particular, on secessionist demands within democratic states. Recently, there has been a dramatic shift towards independence in the regions like Catalonia but the formation of these demands is less understood. One possible explanation is that sub-national funding (the amount of state subsidies toward minority regions) affects whether secessionist demands are made by that minority population. Within the seven minority regions of Spain, I use a web scraping approach which observes secessionist demands on Spanish social media and whether these demands are affected by sub-national funding.
+
+### Theory 
+
+While there has been significant research on civil wars and secession in the context of authoritarian states, less attention is paid to the formation of secessionist demands, especially within democratic countries and developed countries like Spain which are politically freer, wealthier and do not have demographic displacement as proposed by the other theories of civil war and secession.  
+
+I propose a novel theory: that sub-national subsidies to minority regions (especially in comparison to taxes paid) are what explains these demands. Both the minority population and local elites are generally tempted to secede but can be co-opted with funding. In instances when the state can not (or does not want to) spend locally then secessionist demands are increased. This can be tested using web scraping of social media. 
+
+### Research Design 
+
+#### Methodology
+
+As catagorized by [Salganik (2017)](http://www.bitbybitbook.com/en/observing-behavior/designs/forecasting/), this study would be considered a causal use of big data as opposed to predictive models because it seeks to explain why something is occuring as opposed to simply trying to predict it. In this case,  the independent variable (sub-national tax funding) does not utilize big data but the *dependent* variable, secessionist demands, does. To measure secessionist demands, I plan on web scraping the users of [Twitter](https://twitter.com/) and [Facebook](https://www.facebook.com/) to specifically look at posts (or in this case tweets and statuses). It will only observe users that are geo-located in Spanish regions considered to be their own "nationalities" by the constitution (Aragon, Balearic Islands, Basque, Catalonia, Galicia, Valencia) and then comparing the changes in funding of those minority areas to changes in posting.  
+
+Like a longtitudinal study, this will follow the same users over time. It would measure people based on three, six-month intervals, one in which nothing politically significant occured, and two in which something did. This would measure three months before and after the 2014 and 2017 referendums and one six-month period in which nothing significant happened. These time-intervals are done to compare the salience of major events and to reduce the possibility of algorithimic drift (which will be addressed in detail later). Using machine learning techniques, I will then code whether their posts are pro-independence/secession or not. With machine learning, it will be able to recognize things like ambiguous wording, satire, and bots which can skew normal attempts at coding for phrases. Finally, based on this coding, I will test whether pro-secessionist demands has increased among these users. Given the nature of this kind of design, this would be considered a "causal" project per That is to say, this is based on the individual level of specific user posts, not posts of the entire website. This approach has numerous advantages in comparison to other non-big data designs.  
+  
+### Advantages
+
+#### Representation
+The main advantage of using social media is that, given the theory, these users would be very representative of those who make secessionist demands. Social media users tend to be wealthier, more educated and can articulate political demands. Thus, they are representative of elites, whether it is those with direct political power or simply those who have more public influence, they are the kind of population who explicitly try to change policy. Likewise, given the design of the project in democratic states, it allows for much more openness on these social media sites, which often exists even in authoritarian states (for instance King et al. 2013 found that China is unlikely to censor criticism by itself). In sum, it covers the demographics that would participate in secessionist demands.  
+
+
+#### Alternative to  polling
+
+One possible non-big data alternatives is polling data on things like desire for indepdence. However, polling suffers from numerous issues, cheif among them being inaccuricies because of social desirability bias and time lapses in polling. Polls are sometimes unable to cover certain questions if pollsters do not know if something is going to be a salient issue. Likewise, there is a problem with social desirability bias if people do no accurately say their opinions on a poll if they fear it is socially unacceptable. This projects mitigates both problems by being constantly avialable for analysis and on websites like Twitter, concerns about social desirability can be mitigated by more anonymous posting and shared online communities that might take up unpopular causes. Ultimatly, this design can overcome issues with polling.    
+
+#### Detailed information
+
+Finally, because of geo-locating, this could allow the measurement of microlevel data. While traditional methods can often only reach large sub-national areas, this design's emphasis on geolocation would gather information down to specific landmarks and neighborhoods. Seeing how opinions vary  

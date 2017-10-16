@@ -1,5 +1,5 @@
-## MACS30000 Assignment 1
-## Wikipedia and and its impact on Science Communication
+### MACS30000 Assignment 1
+### Wikipedia and and its impact on Science Communication
 #### Leoson Hoay
 #### October 16, 2017
 
@@ -12,7 +12,6 @@
 * [Conclusion](#conclusion)
 * [References](#references)
 
-============================
 
 
 ## Introduction and Research Question <a name = "introduction"></a>

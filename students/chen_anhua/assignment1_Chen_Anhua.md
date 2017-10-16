@@ -47,12 +47,12 @@ There are mainly two components of this section. First, we will introduce the in
 
 ### Using LAN data to derive an economic activity indicator
 
-*L**i**g**h**t*<sub>*i*, *t*</sub> = *f*<sub>*i*</sub>(*E**A*<sub>*i**t*</sub>)+*ϵ*<sub>*i**t*</sub><sup>*L*</sup>
+*L**i**g**h**t*<sub>*i*, *t*</sub> = *f*<sub>*i*</sub>(*EA*<sub>*i*,*t*</sub>)+*ϵ*<sub>*i*,*t*</sub><sup>*L*</sup>,
 *Y*<sub>*i*, *t*</sub><sup>*j*</sup> = *α*<sup>*j*</sup> + *β*<sub>*i*, *t*</sub><sup>*j*</sup> + *ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>
 subject to:
-*c**o**v*(*E**A*<sub>*i**t*</sub>, *f*<sub>*i*</sub>(*E**A*<sub>*i**t*</sub>)) ≠ 0
-*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>|*E**A*<sub>*i**t*</sub>)=*E*(*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*E**A*<sub>*i**t*</sub>)=0
-*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*E**A*<sub>*i**t*</sub>)=0
+*c**o**v*(*EA*<sub>*i*,*t*</sub>, *f*<sub>*i*</sub>(*EA*<sub>*i*,*t*</sub>)) ≠ 0,
+*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>|*E**A*<sub>*i**t*</sub>)=*E*(*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*EA*<sub>*i*, *t*</sub>)=0
+*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*EA*<sub>*i*, *t*</sub>)=0
 where *L**i**g**h**t*<sub>*i*, *t*</sub> denotes nighttime lights for location *i* at time *t*. And *Y*<sub>*i*, *t*</sub><sup>*j*</sup> is the *j*th economic indicator. *E**A*<sub>*i**t*</sub> is the "true" economic activity. We assume the measurement error of light data is independent of the measurement error in other economic indicators in our identification.Based on this proposed framework, we could use the reduced form framework:
 $$Light\_{i, t} = \\alpha + \\sum\_{J}^{j = 1}b\_{i, t}^{j}Y\_{i, t}^{j}$$
 Based on this regression of night time data on various economic indicators, we could derive an optimal weight assigned to each economic indicators: $\\frac{b\_{i, t}^{j}Y\_{i, t}^{j}}{\\sum\_{J}^{j = 1}b\_{i, t}^{j}Y\_{i, t}^{j}}$ to construct an non-biased linear indicator of economic activities.

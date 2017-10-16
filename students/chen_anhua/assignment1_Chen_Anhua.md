@@ -51,7 +51,7 @@ There are mainly two components of this section. First, we will introduce the in
 *Y*<sub>*i*, *t*</sub><sup>*j*</sup> = *α*<sup>*j*</sup> + *β*<sub>*i*, *t*</sub><sup>*j*</sup> + *ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>
 subject to:
 *c**o**v*(*EA*<sub>*i*,*t*</sub>, *f*<sub>*i*</sub>(*EA*<sub>*i*,*t*</sub>)) ≠ 0,
-*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>|*E**A*<sub>*i**t*</sub>)=*E*(*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*EA*<sub>*i*, *t*</sub>)=0
+*E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>|*EA*<sub>*i*,*t*</sub>)=*E*(*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*EA*<sub>*i*, *t*</sub>)=0
 *E*(*ϵ*<sub>*i*, *t*</sub><sup>*j*</sup>*ϵ*<sub>*i*, *t*</sub><sup>*L*</sup>|*EA*<sub>*i*, *t*</sub>)=0
 where *L**i**g**h**t*<sub>*i*, *t*</sub> denotes nighttime lights for location *i* at time *t*. And *Y*<sub>*i*, *t*</sub><sup>*j*</sup> is the *j*th economic indicator. *E**A*<sub>*i**t*</sub> is the "true" economic activity. We assume the measurement error of light data is independent of the measurement error in other economic indicators in our identification.Based on this proposed framework, we could use the reduced form framework:
 $$Light\_{i, t} = \\alpha + \\sum\_{J}^{j = 1}b\_{i, t}^{j}Y\_{i, t}^{j}$$
@@ -59,7 +59,7 @@ Based on this regression of night time data on various economic indicators, we c
 
 ### Deriving economic clustering
 
-Based on the varaible depicting economic activity in the first stage *E**A*<sub>*i**t*</sub>, we would calculate the Moran's I statistics for each location and using ArcGIS software to derive the clustering based on economic activities in China. A demonstrated work flow of this process is listed below.
+Based on the varaible depicting economic activity in the first stage *EA*<sub>*i*, *t*</sub>, we would calculate the Moran's I statistics for each location and using ArcGIS software to derive the clustering based on economic activities in China. A demonstrated work flow of this process is listed below.
 
 ![Source: ArcGIS Pro, <http://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/cluster-and-outlier-analysis-anselin-local-moran-s.htm>](clustering.png)
 

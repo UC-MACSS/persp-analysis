@@ -50,6 +50,6 @@ Another potential concern is dirty. Some contents in the forum might be unrelate
 In conclusion, the bigness of data improves our abilities to explore the questions. Although we might suffer from some problems brought up by its disadvantages, we can overcome them with appropriate tools.
 
 ### Reference
-[1]Fama, E. F. (1970). Efficient capital markets: a review of theory and empirical work. Journal of Finance, 25(2), 383-417.
+[1]Fama, E. F. (1970). Efficient capital markets: a review of theory and empirical work. Journal of Finance, 25(2), 383-417.  
 [2]Fung, G. P. C., Yu, J. X., & Lam, W. (2002). News Sensitive Stock Trend Prediction. Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining (Vol.174, pp.481-493). Springer-Verlag.  
 [3] World Federation of Exchanges, <https://www.world-exchanges.org/>

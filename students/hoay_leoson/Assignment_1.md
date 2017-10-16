@@ -3,7 +3,7 @@
 #### Leoson Hoay
 #### October 16, 2017
 
-============================
+
 ## Contents
 * [Introduction and Research Question](#introduction)
 * [Data Sources](#data)

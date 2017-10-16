@@ -1,5 +1,10 @@
-
-##Hunting Russian Trolls
+---
+title: "MACSS 30000 - Assignment 1"
+author: Alexander Tyan
+date: 10/16/2017
+output: md_document
+---
+##Hunting for the Russian Trolls
 #####MACSS 30000 - Assignment 1
 #####Alexander Tyan
 #####10/16/2017
@@ -21,6 +26,9 @@ Furthermore, results obtained from the machine learning algorithm may then be us
 
 After this sorting mechanism is applied, we will count the number of posts in each distinct user group and compare which kinds of posts are occurring with higher frequency relative to other groups. Other data on variables associated with each observation may help identify groups further, according to, say, post type and destination (e.g. community page post, retweet, wall post, comment, etc.) This may depend on data made available by Facebook and Tweeter.
 
+To put it more formally, our dependent variable is count of posts. The independent variable would be whether the post spawned from a practice identified in the leaked government data. If the sorting mechanism is successful, the dependent variable could also be proportions of posts, based on the counts in each category. In this case, the independent variables would be each distinct behavior group.  
+
+
 ###Advantages (Salganik 2017)
 
 ####Big
@@ -39,7 +47,11 @@ Another limitation is our uncertainty of how well the platforms keep the record 
 
 ####Drifting/Algorithmic Confounding
 If users who generated posts deleted them because of heightened public scrutiny of the issue and platforms erased this data, it may result in a behavioral drift effects. This would distort our data counts in each post category.
-On the other hand, limiting our search window to about one year allows us to minimize the risk of a system drift. Though we would consult the firms to verify that there has not been a significant shift in the algorithms related to posts.  
+
+On the other hand, limiting our search window to about one year allows us to minimize the risk of a system drift. Though we would consult the firms to verify that there has not been a significant shift in the algorithms related to posts. 
+
+Another potential for behavioral drifting is if the Russian-sponsored posts have changed their practices significantly between the government leak and the time of the US presidential campaign. In this case the data input into the machine learning algorithm may be no longer be representative of how such posts were generated during the presidential campaign. Unfortunately, there is not a systematic way to know this, unless updated data becomes available about Russian government practices on social media. 
+
 
 
 ###Bibliography

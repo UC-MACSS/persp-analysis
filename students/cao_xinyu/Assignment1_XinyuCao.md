@@ -19,7 +19,7 @@ The main part of the data collection process is to collect the job posting in th
 
 ## Potential Problems Rising from Big Data 
 1) Non - representative:
-   The first problem we might face is that the website of linkedin or indeed are not representative of U.S labor market. We might need to merge multiple website's data to construct a representative job market sample. 
+   The first problem we might face is that the website of linkedin or indeed are not representative of U.S labor market. We might need to merge multiple website's data to construct a representative job market sample. Besides, some companies are larger might have more channel to put advertisment, therefore more likely to remian digital trace. The sectors and industries might also be an important factor, since some sector might be more traditioanl thus less internet coverage. Some are more innovative, therfore more internet coverage.
 2) Drift:
    The second problem is that the website of job posting might suffer from drift of population. For example, there might be more and more company that uses online job marketing, therefore the holistic index we expolit might subject to change. But this drift might also turns to a good thing for measure the whole labor market. Because this increasing internetlize of job posting might remedies part of our concerns for the non representative issues.
 3) Dirty:
@@ -29,15 +29,18 @@ The main part of the data collection process is to collect the job posting in th
 1) Large data: 
    For the non-representative problem, we could exploit the fact that the data are large. Therefore we might be able to divided the labor market into sectors or industies and forecast relevant ones with sufficient data. This categorical sampling at worst could help us identifies a siginificant fraction of the those industries and could give a us a good foresee before the publish of the offical survey data. One of the most recent method is the Racine & Li (2004) JOE paper, where they studies the nonparametric method of categorical data. 
 2) Matching:
-   For drift problem, we could exploit the method of time series of drift to estimate the trend of the drift. Thus that when we get new data, we could already spearate out the difference of the trend effects in the drift and the shock in the job posting data.  We could using the method Pimentel et.al (2015) to mathcing those comapny who 
+   For drift problem, we could exploit the method of time series of drift to estimate the trend of the drift. Thus that when we get new data, we could already spearate out the difference of the trend effects in the drift and the shock in the job posting data.  We could using the method Pimentel et.al (2015) to mathcing those comapny who has different ponteial to post their job advertisment on the internet with different propensity scores. 
+3) Casting:
+   After we adjust the potential problem, now we should be able to produce the right casting of the job opening according to the adjusted number of the job post on the job website.
 
 ## Conlusion
-This research could shed light on how to adjust expectation of the labor market at current time, help policy maker and financial industry to price asset more timely. We choose also using a matching method to category different industry and different company might have the different potential to publish their job opening on the internet, so that they could be able to adjust the systemic difference of the sample. Naturally, we might still subject to potential omitted data problem. But at least we could able to get a partial statistics of the job openning.
+This research could shed light on how to adjust expectation of the labor market at current time, help policy maker and financial industry to price asset more timely. We choose also using a matching method to category different industry and different company might have the different potential to publish their job opening on the internet, so that they could be able to adjust the systemic difference of the sample. Naturally, we might still subject to potential omitted data problem. But at least we could able to get a partial statistics of the job opening.
 
 
 ## Reference
 1. Racine, Jeff, Qi Li."Nonparametric Estimation of Regreesion Functions with Both Categorical and Continous Data", *Journal of Econometrics* 119, no. 1(2004) 99-130
 2. Kuhn, Peter, and Kailing Shen. "Gender discrimination in job ads: Evidence from china." *The Quarterly Journal of Economics* 128, no. 1 (2012): 287-336.
-3. Hall, Robert E. "Modern theory of unemployment fluctuations: Empirics and policy applications." *The American Economic Review* 93, no. 2 (2003): 145-150
-4. Pimentel, Samuel D., Rachel R. Kelz, Jeffrey H. Silber, and Paul R. Rosenbaum. "Large, sparse optimal matching with refined covariate balance in an observational study of the health outcomes produced by new surgeons." *Journal of the American Statistical Association* 110, no. 510 (2015): 515-527.
-Harvard	
+3. Tang, Shiliang, Zhang, Xinyi, Cryan, Jenna, Metzger, Miriam J., Zheng, Haitao, and Zhao, Ben Y. "Gender Bias in the Job Market: A Longitudinal Analysis.", *Proc. ACM Hum.-Comput.Interact*, 1,2, Article 99, Nov.(2017)
+4. Hall, Robert E. "Modern theory of unemployment fluctuations: Empirics and policy applications." *The American Economic Review* 93, no. 2 (2003): 145-150
+5. Pimentel, Samuel D., Rachel R. Kelz, Jeffrey H. Silber, and Paul R. Rosenbaum. "Large, sparse optimal matching with refined covariate balance in an observational study of the health outcomes produced by new surgeons." *Journal of the American Statistical Association* 110, no. 510 (2015): 515-527.
+

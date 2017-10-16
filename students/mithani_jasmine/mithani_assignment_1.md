@@ -38,4 +38,4 @@ As Salganik notes in an example, some of the editing and deleting behavior on Wi
 
 [2] [“Wikipedia:Identifying reliable sources.”](https://en.wikipedia.org/wiki/Wikipedia:Identifying_reliable_sources) *Wikipedia: The Free Encyclopedia.* 8 Sep 2017. 16 Oct 2017. Web.
 
-[3] Salganik, Matthew J. *[Bit by bit: social research in the digital age.]*(http://www.bitbybitbook.com/#) Princeton University Press, open review edition. Web.
+[3] Salganik, Matthew J. *[Bit by bit: social research in the digital age.](http://www.bitbybitbook.com/#)* Princeton University Press, open review edition. Web.

@@ -31,13 +31,4 @@ This research design is also prone to some of the drawbacks of using big data, b
 As with all online platforms, Airbnb's user base potentially faces the issue of non-representation. If this study aims to use data on Airbnb's users in order to probe racial biases in America, it assumes that Airbnb's user base is a representative sample of the United States population. Thankfully, this is largely true. Airbnb's user base consists of [rougly equal proportions of men and women](https://techcrunch.com/2015/09/07/airbnb-hosted-nearly-17-million-guests-this-summer/?ncid=rss), and is only slightly skewed towards a younger demographic, with an average user age of 35. So while its user base is not a perfect sample of the population of the entire United States, it is workably close.
 
 In sum, this observational research proposal to use Airbnb user data to assess levels of racial discrimination on the platform as well as in the United States as a whole, takes full advantage of the range of opportunities that big data analysis has to offer, while dodging most of the accompanying pitfalls as well. 
-
-
-
-
-
-
-
-- explain how the research design takes advantage of specific aspects of observational study
-    + address some of the pros and cons of using big data
     

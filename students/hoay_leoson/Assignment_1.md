@@ -37,7 +37,7 @@ The first advantage that big data lends to this study is definitely that the pro
 
 The next advantage is the always-on nature of the dataset - both Wikipedia and science media sites are long-term in their functioning and are constantly being updated. A time period correlation study of this scale will not be possible if the data sources were intermittently online, or if archived content were difficult to access/non-existent.
 
-Lastly, the data and its retrieval is non-reactive. This prevents actions by the researcher to have an effect on the data values. The underlying mechanisms that may link Wikipedia articles to academic study and science news publication may be complex and unknown, and any interaction with the actors involved in the process may have an effect on the measured factors. Fortunately, with this non-reactive dataset, this concern can be eliminated. 
+Lastly, the data and its retrieval is non-reactive. This prevents actions by the researcher from having an effect on the data values. The underlying mechanisms that may link Wikipedia articles to academic study and science news publication may be complex and unknown, and any interaction with the actors involved in the process may have an effect on the measured factors. Fortunately, with this non-reactive dataset, this concern can be eliminated. 
 
 
 ## <a name = "limitations"></a>Limitations (and potential strategies to address them) 
@@ -67,4 +67,5 @@ Wikipedia's open source nature situates the repository in constant disputes rega
 [2]: http://www.nature.com/news/wikipedia-shapes-language-in-science-papers-1.22656
 [3]: http://www.journalism.org/2016/07/07/pathways-to-news/
 [4]: http://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970
+[5]: http://www.ebizmba.com/articles/science-websites
 

@@ -1,12 +1,3 @@
----
-title: "Proposing an observational study"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ##Preconscious Decision Making in a Penalty Shootout
 ###Hyun Ki Kim
 The purpose of this research is to find out whether a professional soccer players have directional bias in a penalty shootout. Although the best strategy in a penalty kick is to randomize direction, it is tempting to kick the ball to more comfortable side when facing stressful situation.

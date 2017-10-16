@@ -37,7 +37,10 @@ This research could shed light on how to adjust expectation of the labor market 
 
 ## Reference
 [1] Racine, Jeff, Qi Li."Nonparametric Estimation of Regreesion Functions with Both Categorical and Continous Data", *Journal of Econometrics* 119, no. 1(2004) 99-130
+
 [2] Kuhn, Peter, and Kailing Shen. "Gender discrimination in job ads: Evidence from china." *The Quarterly Journal of Economics* 128, no. 1 (2012): 287-336.
+
 [3] Hall, Robert E. "Modern theory of unemployment fluctuations: Empirics and policy applications." *The American Economic Review* 93, no. 2 (2003): 145-150
+
 [4] Pimentel, Samuel D., Rachel R. Kelz, Jeffrey H. Silber, and Paul R. Rosenbaum. "Large, sparse optimal matching with refined covariate balance in an observational study of the health outcomes produced by new surgeons." *Journal of the American Statistical Association* 110, no. 510 (2015): 515-527.
 Harvard	

@@ -6,11 +6,11 @@ In a short paper (1200-1500 words), propose a research study based on a question
 
 The bulk of your proposal should be a critical assessment of why you believe this project will be a good example of digital research. This includes:
 
-* A clearly stated research question
-* A clearly stated plan for using observational data to answer your question
-* A justification for how your proposed research design takes advantage of specific methods for observational study versus alternative observational methods
-    * How does this project illustrate the good characteristics of big data?
-    * How this project illustrate the bad characteristics of big data, and how you plan to overcome these weaknesses?
+* ~~A clearly stated research question ~~
+* ~~A clearly stated plan for using observational data to answer your question~~
+* A justification for how your proposed research design takes advantage of specific methods for observational study versus alternative observational methods (700)
+    * ~~How does this project illustrate the good characteristics of big data?~~
+    * ~~How this project illustrate the bad characteristics of big data,~~ and how you plan to overcome these weaknesses?
     * You do not need to address every one of the ten characteristics identified by Salganik. Feel free to focus on the characteristics you think are most salient to your project.
 
 ## Submitting your assignment

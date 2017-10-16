@@ -1,13 +1,13 @@
 ---
+title: "Hw01, Perspectives on Computational Methods"
+author: "HyunkuKwon"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
-Divided Publics, Populist Politicians: Mechanisms of Political Polarization and Populist Claims
 
+Divided Publics, Populist Politicians: Mechanisms of Political Polarization and Populist Claims 
 Hyunku Kwon
-
-MAPSS
 
 Abstract
 
@@ -46,24 +46,46 @@ Paradoxically, political polarization literature is itself “polarized” (Lelk
 Instead of choosing one specific approach to polarization, this article draws on DiMaggio et al (1996), which understands political polarization in four dimensions (DiMaggio et al 1996). Core assumption underlying this approach is that political polarization is a multidimensional phenomenon with various distinctive dimensions—such as dispersion, bimodality, and constraint—, and that we should understand how each dimension of polarization influences presidential candidates. For example, it is unclear whether it is radical political ideologies or coherent belief system (i.e. constraint) in the mass public that influences the patterns of populist claims in the electoral politics. Conceptualizing and measuring political polarization in various aspects, this article demonstrates which aspect of political polarization is related with populist claims. Drawing on DiMaggio et al (1996)’s measurement of four different aspects of political polarization, I would measure the degree of public opinion polarization in the mass level; from these indices, I would investigate the relationship between polarization and populist claims. American National Election Studies’ cumulative data would be useful in this context, because they have been providing information about various political attitudes in the mass public for the last 70 years.
 
  
+References
+
 Abramowitz, Alan I., and Kyle L. Saunders. "Is polarization a myth?." The Journal of Politics 70.2 (2008): 542-555.
+
 Baldassarri, Delia, and Peter Bearman. "Dynamics of political polarization." American sociological review 72.5 (2007): 784-811.
+
 Carmines et al. “Ideological Heterogeneity and the Rise of Donald Trump.” The Forum 2016; 14(4): 385-397
+
 DellaPosta, Daniel, Yongren Shi, and Michael Macy. "Why do liberals drink lattes?." American Journal of Sociology 120.5 (2015): 1473-1511.
+
 DiMaggio, Paul, John Evans, and Bethany Bryson. "Have American's social attitudes become more polarized?." American journal of Sociology 102.3 (1996): 690-755.
+
 Fiorina, Morris P., Samuel A. Abrams, and Jeremy C. Pope. "Polarization in the American public: Misconceptions and misreadings." The Journal of Politics 70.2 (2008): 556-560.
+
 Levendusky, Matthew. The partisan sort: How liberals became Democrats and conservatives became Republicans. University of Chicago Press, 2009.
+
 Bonikowski, Bart, and Noam Gidron. "The populist style in American politics: Presidential campaign discourse, 1952–1996." Social Forces 94.4 (2015): 1593-1621.
+
 Grimmer, Justin, and Brandon M. Stewart. "Text as data: The promise and pitfalls of automatic content analysis methods for political texts." Political analysis 21.3 (2013): 267-297.
+
 Hunter, James Davison. Culture wars: The struggle to control the family, art, education, law, and politics in America. Basic Books, 1992.
+
 Hetherington, Marc J., and Jonathan D. Weiler. Authoritarianism and polarization in American politics. Cambridge University Press, 2009.
+
 Inglehart, Ronald, and Pippa Norris. "Trump, Brexit, and the rise of populism: Economic have-nots and cultural backlash." (2016). 
+
 Jung, Wooseok, Brayden G. King, and Sarah A. Soule. "Issue bricolage: Explaining the configuration of the social movement sector, 1960–1995." American Journal of Sociology 120.1 (2014): 187-225.
+
 Laclau, Ernesto. "Towards a theory of populism." Politics and ideology in Marxist theory (1977): 143-200.
+
 Layman, Geoffrey C., Thomas M. Carsey, and Juliana Menasce Horowitz. "Party polarization in American politics: Characteristics, causes, and consequences." Annu. Rev. Polit. Sci. 9 (2006): 83-110.
+
 MacWilliams, M. C. (2016). Who decides when the party doesn’t? Authoritarian voters and the rise of Donald Trump. PS: Political Science & Politics, 49(4), 716-721.
+
 MacWilliams, Matthew C. "Intolerant and Afraid: Authoritarians Rise to Trump’s Call." Why Irrational Politics Appeals: Understanding the Allure of Trump (2017): 121.
+
 Brewer, Mark D. "Populism in American Politics." The Forum. Vol. 14. No. 3. 2016.
+
 McCarty, Nolan, Keith T. Poole, and Howard Rosenthal. "Political polarization and income inequality." (2003).
+
 Mudde, Cas. Populist radical right parties in Europe. Vol. 22. No. 8. Cambridge: Cambridge University Press, 2007.
+
 Noel, Hans. "Political Parties and Political Ideologies in America." (2013).

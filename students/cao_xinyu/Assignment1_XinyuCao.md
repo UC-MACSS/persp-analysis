@@ -12,8 +12,11 @@ The main part of the data generating process is to collect the job posting in th
   2) qualification: required education background, license or certification requirement, experience requirement
   3) compensaion: seniority level, wage range
   4) demographic information: location, sector/industry.
-2 Pre-processing: Usually the job advertisement on the internet is not a standard text. Thus, we need to develop algorithms to capture those features so that we can ready to exploit them. Natural Language Processing is an eminent field which that is emerging. Few interdisciplinary papers about the Gender Discrimination and online job opportunity postings are published on in the field both in economics, such as Kuhn & Shen (2012), and in applied computer science, such as Tang et.al (2017).
-3 Counting things: By In our definition of job opening in the sense of the job vacancies in Hall (2003), we define it as the specific position that exists and is available within 30 days and is actively recruiting  from outside to fill the position similar. For our own purpose, we try to "now- casting" this these statistics by counting new job posted in the job searching website of the last 30 days.
+
+2 Pre-processing: 
+  Usually the job advertisement on the internet is not a standard text. Thus, we need to develop algorithms to capture those features so that we can ready to exploit them. Natural Language Processing is an eminent field which that is emerging. Few interdisciplinary papers about the Gender Discrimination and online job opportunity postings are published on in the field both in economics, such as Kuhn & Shen (2012), and in applied computer science, such as Tang et.al (2017).
+3 Counting things: 
+  By In our definition of job opening in the sense of the job vacancies in Hall (2003), we define it as the specific position that exists and is available within 30 days and is actively recruiting  from outside to fill the position similar. For our own purpose, we try to "now- casting" this these statistics by counting new job posted in the job searching website of the last 30 days.
   
 
 ## Potential Problems Rising from Big Data 

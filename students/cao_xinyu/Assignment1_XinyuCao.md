@@ -8,16 +8,16 @@ In finance and macroeconomics, job opening data is a very important measure for 
 The main part of the data generating process is to collect the job posting in the job website such as Linkedin and Indeed. By simply counting the new job postings each day, we could understand know how many new jobs are posted on the internet. But this naive counting of job postings on the internet might not able to reflect the whole situation of the economy. There The counting might suffer from at least three problems 1) the internet job posting might be non-representative for the US labor market; 2) the sample using the internet to post their job advertisement might drift from time to time; and 3) the textual data of the internet job postings are not standard, thus requiring a significant amount of time to develop natural language processing techniques to capture the information we need.
 
 1 Data Collection: In order to facilitate our research, the following feature of the job posting will be used:
-  1 name: job title, job type, company name
-  2 qualification: required education background, license or certification requirement, experience requirement
-  3 compensaion: seniority level, wage range
-  4 demographic information: location, sector/industry.
+  1) name: job title, job type, company name
+  2) qualification: required education background, license or certification requirement, experience requirement
+  3) compensaion: seniority level, wage range
+  4) demographic information: location, sector/industry.
 2 Pre-processing: Usually the job advertisement on the internet is not a standard text. Thus, we need to develop algorithms to capture those features so that we can ready to exploit them. Natural Language Processing is an eminent field which that is emerging. Few interdisciplinary papers about the Gender Discrimination and online job opportunity postings are published on in the field both in economics, such as Kuhn & Shen (2012), and in applied computer science, such as Tang et.al (2017).
 3 Counting things: By In our definition of job opening in the sense of the job vacancies in Hall (2003), we define it as the specific position that exists and is available within 30 days and is actively recruiting  from outside to fill the position similar. For our own purpose, we try to "now- casting" this these statistics by counting new job posted in the job searching website of the last 30 days.
   
 
 ## Potential Problems Rising from Big Data 
-1) 1. Non-representative: 
+1) Non-representative: 
    The first problem we might face is that the Linkedin or Indeed website are not representative of the U.S labor market. We might need to merge multiple websites’ data to construct a representative job market sample. Besides, some larger companies might have more channels to put advertisement, therefore more likely to remain digital trace. The sectors and industries might also be an important factor, since some sectors might be more traditional and thus have access to less internet coverage. Some are more innovative and therefore have more internet coverage.
 2) Drift:
    The second problem is that the website of job posting might suffer from drift of population. For example, there might be more and more companies that use online job marketing, therefore the holistic index we expolit might be subject to change. But this drift might also turn to a good thing for measuring the whole labor market. Because this increasing “internetlize” of job posting might remedy part of our concerns for the non-representative issues.

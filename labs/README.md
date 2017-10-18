@@ -19,5 +19,4 @@
 
 * [Git Maintenance](lab_files/git_maintenance.md) 
 * Homework
-* [Modes of Reading](lab_files/Abbott__2014_Modes_of_Reading.pdf)
 

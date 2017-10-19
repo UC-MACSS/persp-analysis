@@ -108,12 +108,13 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
     * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
     * [Kosinski, M., Stillwell, D., & Graepel, T. (2013). Private traits and attributes are predictable from digital records of human behavior. *Proceedings of the National Academy of Sciences*, 110(15), 5802-5805.](http://www.pnas.org/content/110/15/5802.full)
-1. Experiments (fundamentals)
-    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.1-4.4.
-1. Experiments (digitally-enriched)
-    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.5-4.7.
-    * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
+1. Experiments
+    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
     * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
+    * [Milkman, K. L., Akinola, M., & Chugh, D. (2015). What happens before? A field experiment exploring how pay and representation differentially shape bias on the pathway into organizations. *Journal of Applied Psychology*, 100(6), 1678.](http://proxy.uchicago.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2015-15680-001&site=ehost-live&scope=site)
+1. Experiments (more)
+    * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
+    * [Berinsky, Adam J., Gregory A. Huber, and Gabriel S. Lenz. 2012. Evaluating Online Labor Markets for Experimental Research: Amazon.com’s Mechanical Turk. *Political Analysis* 20 (3): 351–68.](https://www.cambridge.org/core/journals/political-analysis/article/evaluating-online-labor-markets-for-experimental-research-amazoncoms-mechanical-turk/348F95C0FBCF21C3B37D66EB432F3BA5)
 1. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
     * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.

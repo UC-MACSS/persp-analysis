@@ -114,7 +114,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Milkman, K. L., Akinola, M., & Chugh, D. (2015). What happens before? A field experiment exploring how pay and representation differentially shape bias on the pathway into organizations. *Journal of Applied Psychology*, 100(6), 1678.](http://proxy.uchicago.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2015-15680-001&site=ehost-live&scope=site)
 1. Experiments (more)
     * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
-    * [Berinsky, Adam J., Gregory A. Huber, and Gabriel S. Lenz. 2012. Evaluating Online Labor Markets for Experimental Research: Amazon.com’s Mechanical Turk. *Political Analysis* 20 (3): 351–68.](https://www.cambridge.org/core/journals/political-analysis/article/evaluating-online-labor-markets-for-experimental-research-amazoncoms-mechanical-turk/348F95C0FBCF21C3B37D66EB432F3BA5)
+    * [Berinsky, A. J., Huber, G. A., & Lenz, G. S. (2012). Evaluating online labor markets for experimental research: Amazon. com's Mechanical Turk. *Political Analysis*, 20(3), 351-368.](https://www.cambridge.org/core/journals/political-analysis/article/evaluating-online-labor-markets-for-experimental-research-amazoncoms-mechanical-turk/348F95C0FBCF21C3B37D66EB432F3BA5)
 1. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
     * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.

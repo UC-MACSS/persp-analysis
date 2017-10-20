@@ -11,7 +11,7 @@ output: md_document
 
 Dan Gamarnik
 
-October 16, 2017 
+October 20, 2017 
 
 Perspectives on Computational Analysis
 

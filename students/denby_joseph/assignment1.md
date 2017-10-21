@@ -1,8 +1,8 @@
-Joseph Denby
-Dr. Benjamin Soltoff
-MACS30000
-Assignment 1
-October 16, 2017
+Joseph Denby  
+Dr. Benjamin Soltoff  
+MACS30000  
+Assignment 1  
+October 16, 2017  
 
 Within the past decade, [Airbnb](airbnb.com) has become an increasingly popular means for travelers to find lodging. Using Airbnb's website as a portal, local residents can open up their homes to guests, providing an alternative to the traditional hotel route. Users looking for a place to stay create a profile and submit interest to renters for a particular set of dates. Renters then vet from among the prospective lodgers, picking one who gets to stay.
 

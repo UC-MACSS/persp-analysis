@@ -1,0 +1,18 @@
+---
+title: "HW2 - Proposing a Survey Study"
+author: "Nora Nickels"
+date: "10/23/2017"
+output: github_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Assignment 2
+## Perspectives of Computational Analysis - Fall 2017
+
+### Research Question: Could a digitally-enhanced survey associated with STEM vs. non-STEM topics reveal the risk for stereotype threat in a digital media domain?
+

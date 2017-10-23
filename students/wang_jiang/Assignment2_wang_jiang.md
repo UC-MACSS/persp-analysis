@@ -28,10 +28,10 @@ measure public opinion in polarized communities.
 Research Question
 =================
 
-1.  i)How to measure gamers' overall opinion about a card in a timely
+i)How to measure gamers' overall opinion about a card in a timely
     manner?
-2.  ii)How to know when a balance (of a card) is necessary?
-3.  iii)If a balance (of a card) is necessary, what changes should be
+ii)How to know when a balance (of a card) is necessary?
+iii)If a balance (of a card) is necessary, what changes should be
     implemented?
 
 Research Design

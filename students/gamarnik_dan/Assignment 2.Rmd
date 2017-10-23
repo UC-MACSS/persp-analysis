@@ -31,7 +31,7 @@ However, social media posts are only an approximation of public opinion. To get 
 
 The app will give various questions, but the most crucial will be on perceptions of Spanish funding for Catalonia and secessionist sentiment. These 700 cell phone users will be distributed among Catalonia's districts to get a more micro-level analysis. Likewise, the app will geocode where everyone was when they answered the question.
 
-Finally, the surveys will be compared to the social media responses in the given time period. Much like how [Blumenstock et al. (2015)](http://science.sciencemag.org/content/350/6264/1073), compared Rwandan cell phone purchases to poverty rates, the survey responses will be compared to the social media sentiment. This will be done both at the aggregate level of Catalonia and within Catalonia's provinces. Measuring both the macro and micro should give extra leverage over the data.
+Finally, the surveys will be compared to the social media responses in the given time period. Much like how [Blumenstock et al. (2015)](http://science.sciencemag.org/content/350/6264/1073), compared Rwandan purchases made on cell phones to poverty rates, the survey responses will be compared to the social media sentiment. This will be done both at the aggregate level of Catalonia and within Catalonia's provinces. Measuring both the macro and micro should give extra leverage over the data.
 
 ### Why Enriched Data?
 

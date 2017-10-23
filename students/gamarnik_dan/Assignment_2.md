@@ -67,10 +67,11 @@ geocode where everyone was when they answered the question.
 Finally, the surveys will be compared to the social media responses in
 the given time period. Much like how [Blumenstock et al.
 (2015)](http://science.sciencemag.org/content/350/6264/1073), compared
-Rwandan cell phone purchases to poverty rates, the survey responses will
-be compared to the social media sentiment. This will be done both at the
-aggregate level of Catalonia and within Catalonia's provinces. Measuring
-both the macro and micro should give extra leverage over the data.
+Rwandan purchases made on cell phones to poverty rates, the survey
+responses will be compared to the social media sentiment. This will be
+done both at the aggregate level of Catalonia and within Catalonia's
+provinces. Measuring both the macro and micro should give extra leverage
+over the data.
 
 ### Why Enriched Data?
 

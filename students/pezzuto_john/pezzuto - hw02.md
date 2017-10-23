@@ -2,11 +2,11 @@
 
 John Pezzuto
 
-##Introduction
+## Introduction
 
 In psychology, there is a well established five factor model that is said to predict a person’s personality. The five factor model, also called the Big Five Personality Traits, measures people on five spectrums. These spectrums are openness, conscientiousness, extraversion, agreeableness, and neuroticism. Previous literature has already associated the Big Five Personality traits with other ideals such as political attitudes and job performance. Similarly, one would expect people at opposite ends of these spectrums to use the Internet in different ways. For example, I would expect someone who ranks in the higher percentiles of extraversion to use social media websites more often than someone at the lower percentiles of extraversion, or that someone who is ranked lower in agreeableness to use a narrower selection of websites. With this is in mind, I propose to use an enriched asking survey model, where participants are surveyed on their Big Five Personality Traits and subsequently this data would be linked with web-use activity in order to see the correlation between personality traits and web usage.
 
-####Research Question
+#### Research Question
 
 How does personality correlate with Internet use? 
 
@@ -24,7 +24,7 @@ With a source for Internet browsing set in place, it would then be very importan
 Understand the relationship between web usage and the Big Five Personality Factors is both revealing about the human psych and feasible to do. The research has implications for Internet advertisers who may be interested in knowing their customers better or perhaps even people interested in knowing themselves better. Corporations and other organizations who seek additional insight into the consumer psyche would be able to use this information to fine tune powerful targeted messages. Participants in the study might discover that their choice of Internet websites are reflective of positive and negative aspects of their personalities that they may want to expand or minimize.  The relationship between Big Five Personality Factors and Internet use also sheds light on the human condition in new ways that have never been done before. The proposed method is relatively inexpensive to run. 
 
 
-##Strengths and Weaknesses
+## Strengths and Weaknesses
 
 There are several reasons why this experiment works best as a digitally enhanced survey. The first one of these reasons is that it is hard for people to answer truthfully about their web usage in hindsight. Personally speaking, I know that I like to browse the web everyday for some amount of time, but it’s hard for me to explicitly state how often I do this and and for what amount of time. Having data tracked by computers is much more accurate than self recollection, and allows for researchers to see a much more nuanced view of how people spend their time online. Similarly, the always-on aspect of big data is helpful for this experiment. If someone wakes up at 4am, and spends an hour online before going back to sleep, this may elude their mind while filling out a paper survey at another time.
 

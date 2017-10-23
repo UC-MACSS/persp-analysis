@@ -130,9 +130,10 @@ these issues I will try to account for them and correct them.
 ##### Privacy and self-censorship
 
 The first possible problem might be issues regarding the app's privacy
-since it is collecting their location data. Even if it is not unethical
-or illegal, this might make them suspicious and not want to be
-forthcoming about their political views.
+since it is collecting participants' location data. Even if it is not
+unethical or illegal, this might make the users suspicious about where
+their data is going and not want to be forthcoming about their political
+views.
 
 To help solve for this, I will have small group discussions (similar to
 Sugie's (2016) approach) where I discuss issues of privacy. I will

@@ -129,9 +129,14 @@ as a point of comparison to those who do interact with the RTA. The
 Frame Population (i.e. where we draw) and the Sample Populations (i.e.
 whom we draw) are the same in our case, because both are American
 Facebook users. Our Respondents are those who will click the
-advertisement banner and consent to and complete our survey study. We
-will address the errors associated with the representation of our target
-population later in the proposal.
+advertisement banner and consent to and complete our survey study. Our
+sample size could aim to be similar to Wang et al. (2015), where the
+researchers collected 750,148 interviews from 345,858 respondents.
+However, we could adjust our aims accordingly to satisfy the minimal
+number of responses required for our MRP adjusment to work (see below),
+subject to funding constraints affecting our ability to advertise on
+Facebook. We will address the errors associated with the representation
+of our target population later in the proposal.
 
 ### Justification
 
@@ -201,7 +206,9 @@ of our data may help with some of that, as scaling up in the digital
 realm would allow us to collect a lot more responses with less cost.
 Additionally, however, MRP would allow us to infer voting behavior
 within each group and weight each respondent type appropriately to get a
-proper estimate for more general voting population.
+proper estimate for more general voting population. We suggest following
+Wang et al. (2015) method of using Current Population Survey in
+combination with the 2012 exit poll data to perform the weighting part.
 
 In conclusion, building on the previous survey and data linkage
 practices would hopefully allow us to execute matching pairs to infer

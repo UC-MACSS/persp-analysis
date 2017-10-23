@@ -61,7 +61,7 @@ Young male bar-goers in Chicago.
 * Frame population
 Population who actively use Facebook
 
-* Sample population
+* Sample 
 Frame population who have recently been tagged at two separate bars with two separate friends.
 
 * Respondents
@@ -76,13 +76,13 @@ The survey mode is the an internet based app and the survey is computer administ
 
 As discussed, people are generally reticent to give survey information on binge drinking. "Beer King" aims to make people *want* to give this information *for free*, due to the following reasons. It specifically targets young men (you might expect a certain type) who are susceptible to its methods of persuasion.
 
-* Competitiveness.
+  * Competitiveness.
 The name "Beer King" draws users in to want to publicly display to their friends their drinking process. They will share it with their friends to make it more likely to go viral.
 
-* Rewards.
+  * Rewards.
 The partnership with a bar encourages people to share with their friends to make it more likely they will become a Beer King, and will increase the number of friends who will win free pints.
 
-* Positivity
+  * Positivity
 In a serious scientific study, there will be social desirability bias to understating binge drinking. Beer King actually encourages people to be proud of their binge drinking.
 
 2. Enriched Asking
@@ -101,7 +101,7 @@ Relatedly, "Beer King" utilizes what Salagnik calls "Ecological Momentary Assess
 
 ### Sources of error
 
-##### Coverage error. Population to Frame Population.
+##### Coverage error: Population to Frame Population.
 
 We lose non-regular Facebook users.
 This is not killer. Amongst young males, Facebook usage is at around 90%.
@@ -109,7 +109,7 @@ This is not killer. Amongst young males, Facebook usage is at around 90%.
 We lose data on bars not able to be tagged on Facebook
 Again - most businesses now have Facebook pages.
 
-##### Sampling error
+##### Sampling error: Frame population to sample
 
 "Beer King" uses non-probability sampling - i.e. it doesn't appear on each user's wall with a specified probability - rather the sample depends on the criteria.
 
@@ -117,7 +117,7 @@ However, this is not a problem for our purposes. We are not trying to estimate s
 
 Obviously there is a bias in that bars which are more likely to be tagged at will be included in the Beer King surveys more often. However, this won't push up its Puke Rank, because what matters is its average ranking against other bars.
 
-##### Non-response error
+##### Non-response error: sample to respondents
 
 Of those users sampled, I imagine only around 1% will actually respond by completing Beer King.
 
@@ -137,4 +137,4 @@ Both are imperfect, due to unobservable data. In the Uber case, start locations 
 
 ### Conclusion
 
-"Beer King"'s main strength is that it is a clever way to encourage certain types of people (young males) to want to reveal information about something they usually wouldn't in a survey. Firstly, by playing to their desires to make them want to complete it. Secondly, by not revealing to them the fact that they are revealing information on specific locations. 
+"Beer King"'s main strength is that it is a clever way to encourage certain types of people (young males) to want to reveal information about something they usually wouldn't in a survey. Firstly, by playing to their desires to make them want to complete it. Secondly, by not revealing to them the fact that they are revealing information on specific locations.

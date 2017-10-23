@@ -1,0 +1,199 @@
+Feeding The Mouth That Bites: Subsidies and Secessionist Demands In Catalonia
+=============================================================================
+
+Dan Gamarnik
+
+October 16, 2017
+
+Perspectives on Computational Analysis
+
+### Introduction
+
+While the literature on civil war has focused on ethnic conflict in
+recent years, it is still too broad and focuses almost exclusively on
+authoritarian states. Less attention is paid to secessionist conflicts
+and, in particular, on secessionist demands within democratic states. In
+recent years, there have been movements for independence in the regions
+like Catalonia but the formation of these demands is less understood.
+One possible explanation is that sub-national funding (the amount of
+state subsidies toward minority regions) affects whether secessionist
+demands are made by that minority population. Within the seven minority
+regions of Spain, I use a web scraping approach which observes
+secessionist demands on Spanish social media and whether these demands
+are affected by sub-national funding.
+
+### Theory
+
+This uses a novel theory: that sub-national subsidies to minority
+regions (especially in comparison to the amount of taxes they pay) are
+what explains these demands. Both the minority population and local
+elites are generally tempted to secede, but can be co-opted with
+adequate funding. In instances when the state does not spend favorably
+to these regions then secessionist demands increase. This can be tested
+using web scraping of social media. I argue this can help explain the
+recent independence demands in Catalonia and why other minority regions
+do no have comparable demands.
+
+### Research Design
+
+#### Methodology
+
+As categorized by [Salganik
+(2017)](http://www.bitbybitbook.com/en/observing-behavior/designs/forecasting/),
+this study would be considered a causal use of big data (as opposed to
+predictive models) because it seeks to explain why something is
+occurring and not just predict it. In this case, the independent
+variable (sub-national tax funding) does not utilize big data but the
+*dependent* variable, secessionist demands, does. To measure
+secessionist demands, I plan on web scraping the users of
+[Twitter](https://twitter.com/) and
+[Facebook](https://www.facebook.com/) and specifically look at thier
+posts (or in this case tweets and statuses). It will only observe users
+that are geo-located in Spanish regions considered to be their own
+"nationalities" by the constitution (Aragon, the Balearic Islands,
+Basque, Catalonia, Galicia, and Valencia).
+
+Like a longitudinal study, this will follow the same users over time. It
+will measure people in four, six-month intervals, two in which nothing
+politically significant occurred, and two in which something did. This
+would measure three months before and after the 2014 and 2017
+referendums and two six-month period in which nothing significant
+happened. These time-intervals are done to compare secessionist demands
+during salient events to account for possible bias because of their news
+prominence. This also reduces the possibility of algorithmic drift
+(which will be addressed in detail later). Using machine learning
+techniques, I will then code whether a specific post is
+pro-independence/secession or not. With machine learning, it will be
+able to recognize things like ambiguous wording, satire, and bots which
+can skew normal attempts at coding. Finally, based on this coding, I
+will test whether pro-secessionist demands have increased among these
+users in relation to their local funding.This approach has numerous
+advantages in comparison to other non-big data designs.
+
+### Advantages
+
+#### Representation
+
+The main advantage of using social media is that, given the theory,
+these users would be very representative of those who make secessionist
+demands. Social media users tend to be wealthier, more educated and can
+articulate political demands better. Thus, they are representative of
+elites, whether it is those with direct political power or simply people
+who have more public influence, they are the kind of population who
+explicitly try to change policy. Likewise, given the design of the
+project in democratic states, it allows for much more openness on these
+social media sites, which often exists even in authoritarian states (for
+instance King et al. 2013 found that China is unlikely to censor
+criticism of the state in-itself). In sum, it covers the demographics
+that would create secessionist demands.
+
+#### Alternative to polling
+
+One possible non-big data alternative is polling data on things like
+desire for independence. However, polling suffers from numerous issues,
+chief among them being inaccuracies because of social desirability bias
+and time lapses in polling. Polls are sometimes unable to cover certain
+questions if pollsters do not know if something is going to be a salient
+issue. Likewise, there is a problem with social desirability bias if
+people do no accurately say their opinions on a poll if they fear it is
+socially unacceptable. This project mitigates both problems by being
+constantly available for analysis (big data is "always on") and on
+websites like Twitter, concerns about social desirability can be
+mitigated by more anonymous posting and shared online communities that
+might take up unpopular causes. Ultimately, this design can overcome
+issues with polling.
+
+#### Fine-grained data
+
+Finally, because of geo-locating, this could allow the measurement of
+micro-level data. While traditional methods can often can only reach
+large, sub-national areas. This design's emphasis on geolocation would
+gather information down to specific landmarks and neighborhoods; it
+would thus provide causal leverage on centralized funding down to the
+most local level. For instance, this could show differences between
+neighborhood attitudes towards secession if there is a drastic
+difference in the level of funding at that level. As such, this would be
+a novel level of data gathering.
+
+### Disadvantages
+
+#### Algorithmic drift
+
+A problem with social media is that it is prone to algorithmic drift, a
+situation where changes in the algorithms lead to major changes in how
+the data is used. For instance, Facebook in its early years was mostly
+used for academics and sharing personal information, but has since
+become a major source of news and sharing news. Similarly, Twitter
+became much more politically salient as a protest tool in recent years
+when it might not have been early on in its creation. Likewise, changes
+in the algorithms can lead to things that can overpredict certain
+political posts. For instance, changes in the code can promote political
+news stories which might prime people to post more political views then
+they otherwise would. This also happened with Google Flu which became
+less predicative when google gave suggestions for the flu when symptom
+searches came up. Thus, it could be that both social media might be
+skewed by changes in the algorithms.
+
+To account for this, I designed the project into six-month intervals to
+reduce the possibility that major algorithmic changes occurred. Often,
+these changes take years to fully feel the effects of and thus there is
+a reasonable comparison among these intervals to account for changes in
+the algorithms. In summary, the six-month intervals should account for
+major changes in algorithms.
+
+#### Dirtiness
+
+Perhaps one of the biggest problems with doing web scraping in general
+is the dirtiness of the data one receives. That is, the data is not
+created by the researcher and is often done in a way which is difficult
+to organize and can lead to misunderstandings. Given the large volume of
+social media posts coded for pro-secessionist sentiments, this too can
+become a problem with the data gathering.
+
+Unfortunately, the only real solution to this is vigilance and
+organization. I will organize the data to track users over time and have
+each post coded as a binary variable (pro-secessionist, or
+non-secessionist) and keep this well organized as time-series data. In
+this case, being aware of the problem and being careful is the only way
+to overcome it.
+
+#### Spurious correlations
+
+One issue with this approach is that social media is a relatively new
+phenomena, becoming very popular only around 2010. While Spain has had
+secessionist contentions since then, namely the 2014 and 2017 Catalonia
+referendums, it is still unclear how generalizable these events would be
+in the span of less than a decade. For instance, it could be that even
+if funding did determine secessionist demands, there is something
+recently which is endogenously magnifying the conflict in Catalonia.
+That is, something like the Great Recession might have recently
+polarized Spanish politics which makes people in Catalonia and in other
+regions more critical of reductions in funding. Ultimately, the newness
+of social media might be capturing spurious correlations.
+
+To help account for this problem, I will choose two time-intervals when
+no referendums occurred that are similar in economic conditions to ones
+in which they did occur. Because of the truncated nature of six-month
+intervals, this leads to a lot of possibilities for very similar
+economic statistics such as unemployment rates. Because the underlying
+conditions should be controlled for, it should be valid to use this
+design.
+
+#### Ethics concerns
+
+Finally, perhaps the biggest problem with this data are ethics concerns
+around being able to geolocate people and how they post on sensitive
+political issues. While Spain is not a dictatorship that would hunt for
+people who post pro-secessionist views, this might raise privacy
+concerns especially if the data needs to be replicated and is shared
+publicly to do so. This is especially true for people who live in areas
+were most of the population do not agree with them. All these things
+could inflame political tensions if the information was made public.
+
+To account for this concern, I will anonymize all the posters' names
+even if they go by pseudonyms. Likewise, if the geolocation is from
+towns in which the population is extremely small, the study will drop
+those observations because it could lead to the discovery and
+persecution of whoever made those posts. Finally, I will make sure to
+get IRB approval for this study even though it is not always required
+that web scraping get IRB approval.

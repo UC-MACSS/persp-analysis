@@ -10,3 +10,13 @@
 * [Intro Git Tutorial](http://jmausolf.github.io/code/intro_git/)
 * [Intermediate Git Tutorial](http://jmausolf.github.io/code/intermediate_git/)
 
+
+## Week - 3 
+
+* Ryan and Regression Tables
+
+## Week - 4
+
+* [Git Maintenance](lab_files/git_maintenance.md) 
+* Homework
+

@@ -1,0 +1,20 @@
+---
+title: "Proposing a Survey Study"
+author: "Kristopher Nichols"
+date: "October 23, 2017"
+output: html_document
+---
+
+
+##Introduction:
+As research continue to reveal that the majority of American citizens support governmental intervention in limiting carbon output and support of climate change policy, social scientists have sought to discover what then creates the discrepancy between these polls’ results and election results (SOURCES). This line of research covers a multitude of disciplines, one of which psychology, has a great amount of potential to provide answers due to its ability to investigate and describe personality traits with scales and measures. However, with the fickle way in which participants answer surveys – whether it be on account of reactance, framing effects, observer-expectancy bias (when a participant may feel pressure to yield a certain result and acts accordingly), and several other biases – these studies should be taken with a measure of doubt. These types of measures are incredibly susceptible to biases and error that can be particularly damaging in the context of climate change research. 
+Adding computational elements- particularly ecological momentary assessment (EMA) elements - can help to control for some of these biases. For example, this method’s ability to work in questions to organic, and salient situations can provide much more accurate representations of attitudes and traits. The EMA approach allows for new light to be shed on not how participants view the problem of climate change as foreign or distant, (the current dominating approach in psychological research on climate change) but how individuals react when they are confronted with the real consequences of climate change. In an applied sense, to measure how participants react to large discrepancies between normal temperatures and temperatures much higher or lower than they should be on a given day may affect their beliefs in climate change. Secondly, these EMA elements allow for great measurement of longitudinal data, compounding the advantage of salient situations over many different observations. This would allow for measurement of multiple instances of large weather discrepancies for comparison across seasons. With these advantages the measurement of participant’s attitudes towards climate change can be tracked as different situations arise, potentially shedding light on what traits inoculate against, or mediate, climate change attitudes.   
+
+##Research Question:
+How do large discrepancies between “normal” temperatures for a given day, and actual temperatures affect participants attitudes towards climate change?
+Design:
+	There are several important aspects involved in employing a successful EMA approach, including: softare used to display the surveys, the surveys actually used during the experiment, will any other software be used to actually measure or keep track of the key situation (i.e., what software will be used to measure these discrepancies in weather), and with what technology will the research be utilized. Firstly, in terms of survey software there are many options, 
+
+
+```
+

@@ -61,9 +61,10 @@ Our survey might suffer from severe representative error. First, there will be c
 Measurement error is another potential problem because risk preference is a state inside one’s head. Perhaps people cannot tell it clearly by themselves. Therefore, we must design our questions very carefully to enhance the measurement accuracy. We refer to a classic test created by Charness and Genicot (2004), to measure people’s risk preference. Another way to reduce measurement error is to add more detailed questions at the cost of losing the acceptability of our survey. 
 
 ### Reference
-[1] Weber E U, Morris M W. Culture and Judgment and Decision Making: The Constructivist Turn.[J]. Perspectives on Psychological Science, 2010, 5(4):410.
-[2] Weber E U, Hsee C K. Models And Mosaics: Investigating Cross-Cultural Differences In Risk Perception And Risk Preference[J]. Psychonomic Bulletin & Review, 1999, 6(4):611-617. 
-[3] Chua R Y J, Morris M W, Ingram P. Guanxi vs Networking: Distinctive Configurations of Affect- and Cognition-Based Trust in the Networks of Chinese vs American Managers[J]. Journal of International Business Studies, 2009, 40(3):490-508. 
-[4] "WeChat's world". The Economist. 2016-08-16. ISSN 0013-0613. Retrieved 2016-08-08.
-[5] Charness, Gary, and G. Genicot. "An Experimental Test of Risk-Sharing Arrangements." Meeting Papers Society for Economic Dynamics, 2004.
-[6] Li, Gan. "Findings from the China Household Finance Survey." (2012).
+[1] Weber E U, Morris M W. Culture and Judgment and Decision Making: The Constructivist Turn.[J]. Perspectives on Psychological Science, 2010, 5(4):410.  
+[2] Weber E U, Hsee C K. Models And Mosaics: Investigating Cross-Cultural Differences In Risk Perception And Risk Preference[J]. Psychonomic Bulletin & Review, 1999, 6(4):611-617.   
+[3] Chua R Y J, Morris M W, Ingram P. Guanxi vs Networking: Distinctive Configurations of Affect- and Cognition-Based Trust in the Networks of Chinese vs American Managers[J]. Journal of International Business Studies, 2009, 40(3):490-508.   
+[4] "WeChat's world". The Economist. 2016-08-16. ISSN 0013-0613. Retrieved 2016-08-08.  
+[5] Charness, Gary, and G. Genicot. "An Experimental Test of Risk-Sharing Arrangements." Meeting Papers Society for Economic Dynamics, 2004.  
+[6] Li, Gan. "Findings from the China Household Finance Survey." (2012).  
+

@@ -1,30 +1,28 @@
----
-title: "Proposing a survey study"
-output: html_document
----
+Using a Gamification of Penalty Shootout to Verify a Directional Biases
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-##Using a Gamification of Penalty Shootout to Verify a Directional Biases
-###Hyun Ki Kim
+Hyun Ki Kim
 
   The purpose of this research is to find out whether people have preferences in a decision making process, even when options are indentical. I will use a simulated penalty shootout game, where users are provided with previous success rates for every direction and see if they have tendency to choose higher success direction as the importance of a decision increases.
 
-###Introduction
+
+Introduction
+
   Humans are good at making finding patterns. This ability made it possible for humans, which have relatively weak physical strength, to survive in the nature. However, humans use the special ability of recognizing patterns even in a situation where there is no pattern at all. Constellations are example of human making up a pattern, when in fact there is no reason to link one star with another. This type of misconception happens a lot in gambling. The Gambler’s Fallacy and the Hot-hand Fallacy are well-known fallacies that many people fall into. When people are faced with high stress such as in betting, they are prone to make decisions based on faulty assumptions.
 
   As I mentioned in my previous observational study proposal, I want to find out whether professional soccer players have directional bias in a highly stressful situation such as in penalty shoot out in a major tournament. If the hypothesis of players having a bias is true, there can be many explanations for the phenomenon. However, one of the most important reasons will be soccer players’ belief of one direction having higher chance than other direction based on their previous experience. Therefore, I would like to verify that humans in general, could have preferences over the choices that are identical.
 
-###Gamification
+
+Gamification
+
   In order to simulate soccer player’s stress in a tournament penalty shootout, I will use a simple betting game. All users will receive $10 of cyber money to start the game with. Then, they can choose to bet any amount from $1 up to all of the money they have in each shot. After choosing an amount, they will select a direction they want to kick the ball to (among left, center, and right). There is 2/3 probability of making a goal and the user will receive 1.5 times of their betting amount. And with 1/3 probability a computerized goalkeeper will save their shot, and the user will lose the betting amount. Since the rule of the game is quite boring, I will implement the game in the Facebook to let users compete their monthly-high balance with their friends and to let users compare ranks among their friends. Also, to raise the worthiness of the cyber money, all users have to wait 24 hours to receive $10 again, when they lost all the money.
 
   What makes this seemingly symmetric, fair game asymmetric is that the game keeps track of success rates of directions for all previous shots. The computerized goalkeepers are set to choose directions with equal probability of 1/3, but the users are somewhat recommended to choose the side that had higher probability in the past. I would like to analyze the behavior of users only for the bettings where if they won, they would have achieved a new career high and will be ranked top 3 among their Facebook friends. Such cases are good approximation of the decision that professional soccer players make in a penalty shootout in a major tournament.
 
   I am expecting that users will choose the option that has highest previous success rate. First of all, users who did not program the shootout game will doubt uniform distribution assumption of the goalkeeper’s behavior. Tendency to not believe goalkeeper moving at random will be reinforced if the users have skewed prior success rates. However, as shown in many of the gambler’s fallacy example, event that seems unlikely must occur as the number of trials increase. Therefore, as the users play the game longer and longer they will have a moment where they start to believe that goalkeepers are moving with a pattern. Also, the fact that game is showing only the success rates and not the number of times for each direction will reinforce the skewed distribution of success rate. If the user predicts the goalkeeper will stay in the center, and right side has higher previous success rate than the left side, it is hard to select left side. Therefore, the side that has low success rate will not be chosen often and the preferred side will be chosen more often, and converges to the probability of 2/3.
 
-###Strengths/weakness of research design
+
+Strengths/weakness of research design
+
   I generally do not believe the result of a survey study. First, the survey is quite different from a real-world situation. Usually, participants of a survey are people, who are forced by their professors, or people who want to earn extra money, or self-selected people who are interested in the topic. Therefore, the result in a survey may not be applicable to a real-world setting. Also, the fact that their response is being watched and recorded by the researcher will affect the participants’ behavior to a certain way. When people are asked how they think or will behave in a certain situation, it is more likely that they will give answers of what they want to reveal to researchers, instead of truly revealing what they think or would behave in a real-world situation.
 
   In my perspective, best survey study is a study where participants are not even aware of that they are participating in a survey. The fact that researchers are not explicitly asking the participant might make those research indistinguishable to an observational study. However, if the survey research is well designed well enough, just looking at the answers will be sufficient to answer questions that researchers might have. Thus, I chose gamification of a survey study, which I think is the best form of asking a question.

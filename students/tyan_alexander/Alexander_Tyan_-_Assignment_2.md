@@ -27,10 +27,11 @@ television and social media, in part to influence the outcome of the
 election (Goldman 2017; Defense Intelligence Agency 2017). And similarly
 to the “troll” case, there is not a systematic evaluation of its effects
 on the voting behavior in the 2016 presidential election. This project
-would fill that gap. Hence this study will attempt to answer the
-following research question: how did the interaction with RT America
-(RTA) content on Facebook affect individual voting behavior in the 2016
-presidential election in the US?
+would fill that gap.
+
+Hence this study will attempt to answer the following research question:
+how did the interaction with RT America (RTA) content on Facebook affect
+individual voting behavior in the 2016 presidential election in the US?
 
 ### Research Design and Plan
 
@@ -103,8 +104,9 @@ Presidential election?” (i.e. previous election).
 
 Second, to collect data on RTA interaction, the informed consent would
 request user’s access to their Facebook behavior. This would allow us to
-match individual’s survey responses to their Facebook activity. Third,
-we would partner with a company specializing in US voting record
+match individual’s survey responses to their Facebook activity.
+
+Third, we would partner with a company specializing in US voting record
 collection. Similar to Ansolabehere and Hersh (2012), this could be a
 company like Catalist, LLC. Like in that study, we would match
 individuals’ Facebook activity and survey responses to their record in
@@ -144,12 +146,16 @@ Digital sources of information are also a natural choice because our
 research question is centered on a certain Facebook behavior. So the
 digital trace is a core measure and the design calls for an Enriched
 Asking model of survey data (Salganik 2017). Going digital is inherently
-necessary for our research question. Another reason is that the digital
-traces of such behavior allow us to avoid using a survey to ask about
-user’s interaction with the RTA content. Subjective survey reporting may
-be subject to memory failure and desirability biases (Salganik 2017).
-Thus, pulling digital traces directly with user’s consent makes for a
-better measurement.
+necessary for our research question.
+
+Another reason is that the digital traces of such behavior allow us to
+avoid using a survey to ask about user’s interaction with the RTA
+content. Subjective survey reporting may be subject to memory failure
+and desirability biases (Salganik 2017). Thus, pulling digital traces
+directly with user’s consent makes for a better measurement. Similarly,
+the objective voting record in the election is better than asking about
+people’s voting, since they may lie about their voting (Ansolabehere and
+Hersh 2012).
 
 The big size characteristic of available data would also allow us to do
 MRP adjustments while satisfying the
@@ -183,14 +189,14 @@ example, they are probably younger. Non-response may be an issue because
 there could be a systematic relationship between propensity to respond
 to our survey and the voting behavior; e.g. supporters of one candidate
 could be less prone to respond to participating in such a research.
-These errors would skew our data and would not be able to generalize to
-our population of interest.
+These errors would skew our data and we would not be able to generalize
+to our population of interest.
 
 To address these issues, we propose using the MRP method, similar to
 Wang et al. (2015). Breaking our respondents into small groups based on
 their demographic dimensions, Facebook and voting behavior, we can
 satisfy the homogeneous-response-propensities-within-groups condition,
-but the number of cases in each group might be to small. The big aspect
+but the number of cases in each group might be too small. The big aspect
 of our data may help with some of that, as scaling up in the digital
 realm would allow us to collect a lot more responses with less cost.
 Additionally, however, MRP would allow us to infer voting behavior

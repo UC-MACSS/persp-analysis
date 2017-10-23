@@ -73,10 +73,11 @@ the RTA content on Facebook, as well as their voting record.
 
 First, to collect demographic data, we would advertise to US individuals
 through Facebook (assuming Facebook ad-space allows such targeting) to
-participate in our survey. The link banner URL would present them with
-the IRB-approved informed consent information and explanation of risks.
-The survey itself would copy the demographic questionnaire used by Wang
-et al. (2015), a study which predicted US electoral behavior by using a
+participate in our survey. The link banner URL leading to a custom-built
+Facebook app would present them with the IRB-approved informed consent
+information and explanation of risks. The survey itself (part of the
+app) would copy the demographic questionnaire used by Wang et al.
+(2015), a study which predicted US electoral behavior by using a
 non-representative sample of Xbox platform players. Some of the
 questions are:
 

@@ -1,6 +1,9 @@
 Tom Curran
-Homework 2: Proposing an Observational Stufy
+
+Homework 2: Proposing an Observational Study
+
 10/23/2017
+
 Perspectives on Computational Analysis
 
 ### Introduction:
@@ -14,7 +17,6 @@ While an observational study can indicate a relationship between funding and ove
 ### Research Question:
 
 Do increases in school revenues, effectively increasing a school district’s “buying power”, result an increase in student achievement and performance on the Oklahoma State Department of Education A – F School Report Card from the previous year?
-Research and Survey Design:
 
 ### Survey Design:
 
@@ -41,10 +43,22 @@ Because there is a rich and detailed financial history for a given school, we ar
 3.	What is your current role at the school where you are employed?
 4.	How many years have you been in that role?
 5.	How many years have you been in education?
+6.	In your opinion, which of the following do you believe most influences the success or lack of success in a school:
+a.	School, Teacher and District Leadership 
+b.	Teacher Professional Development
+c.	Other 
+d.	[Submit Own Answer]
 
+While the first 5 questions can be easily answered by the data collected from the OKSDE, it is still useful information to collect. In question 6, there are 4 choices where the first 2 are opportunities for the survey to test hypothesis on what is believed to be the most important characteristics, while also allowing respondents to opt out of the question or submit their own. Question 6 would then be repeated over many different combinations of different factors believe to contribute to a school’s success. Each time the respondent makes a choice between A, B, C or D it is recorded and tallied to be compiled and ranked. 
 
-How would a survey be better than an observational study using found data?
 ### Survey versus Observational Data:
 
-What are potential sources of error in your survey, and how will you minimize that error?
-### Potential Sources of Error in Your Survey
+One of the most important distinctions between the observational and the survey study that seek to answer this question of school performance is that the observational study method fails to capture the qualitative aspect of the relationship between fiscal incentives and performance. Specifically, we know that more money is going to those schools, but not how it is being. For example, if we take an independent school that is an ‘A’ and a dependent school that is a ‘F’, all else being equal, we can observe that the ‘A’ school received more funding, but cannot tell if that money spent on things that are directly related to school performance because the data does not get that granular nor is it safe to assume the correlation is causation. Using the survey method, we can ask questions that fall into distinct categories; the first being questions that indicate whether money was spent on things like classroom supplies, teacher professional development and books, the second being questions about things like leadership, happiness in the work place. If we ask those two categorical questions across different types of independent and dependent schools it is easier to identify, for example, that something like school leadership may have played a larger role than extra revenue. 
+
+### Potential Sources of Error:
+
+Like with any survey, there are several possible sources of error. One of the most important aspects of this survey is the sampling frame. In this survey, we would target teachers, school administrators and teaching support staff (e.g. classroom aides). Since there are far more teachers than administrators and teaching support staff, we would want to make sure that we did not over sample the teachers, and under sample either the administrators or the teaching support staff. If the teacher were over sampled it could lead to bias because the teacher’s perspective of a successful school can be very different from an administrator’s view.
+
+The frame population could be an issue of access and ethics. Because support staff are often part time or hourly employees their email address are not listed in official directories like the ones published by the State Department of Education, which would again bias the results due to lack of representation. It also raises the ethical issue because many could see the attempt to survey educators via email address obtained online as ‘spamming’ and not serious academic work. To remedy the latter issue, the survey would need the express permission or be done in partnership with the OKSDE and District administration.
+
+The survey also has potential measurement issues. Potentially, since every respondent is given the opportunity to provide their own answer, it could be that each answer is different and the provided ones are not relevant. Furthermore, open ended responses like the ones proposed are subject to colloquialisms, ambiguity and misspelling. Even with sophisticated data and text mining techniques, extracting meaning from these answers can be very difficult. As such, having an abundance of open ended responses could result in missing important qualitative aspects and therefore subject the surveys to measurement error. While giving the respondents two concrete options reduces this possibility, it is still a concern. 

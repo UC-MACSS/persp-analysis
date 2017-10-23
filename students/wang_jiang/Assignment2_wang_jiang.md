@@ -30,7 +30,9 @@ Research Question
 
 i)How to measure gamers' overall opinion about a card in a timely
     manner?
+    
 ii)How to know when a balance (of a card) is necessary?
+
 iii)If a balance (of a card) is necessary, what changes should be
     implemented?
 

@@ -136,8 +136,10 @@ researchers collected 750,148 interviews from 345,858 respondents.
 However, we could adjust our aims accordingly to satisfy the minimal
 number of responses required for our MRP adjusment to work (see below),
 subject to funding constraints affecting our ability to advertise on
-Facebook. We will address the errors associated with the representation
-of our target population later in the proposal.
+Facebook. (Hopefully, current political saliency of the topic would
+allow for greater funding opportunities.) We will address the errors
+associated with the representation of our target population later in the
+proposal.
 
 ### Justification
 

@@ -1,0 +1,81 @@
+---
+title: "Approximating Demographics of U.S. Twitter Users Using Amplified Asking"
+author: "Ling Dai"
+date: "Oct 23, 2017"
+output: pdf_document
+---
+
+**Research Problem Statement:**  
+
+The proposed research uses amplified asking that combines a survey research with the digital trace data at Twitter to predict the demographics of twitter users. Amplified asking is a relatively new approach of survey research that takes advantages of machine learning model to approximate censuses using sample surveys. In the context of studying demographics of major online social platforms, amplified asking should be able to provide a more accurate approximation as compared to the results of traditional sample surveys.   
+
+**Background and Significance:**  
+
+Many social science projects and researches today uses major online social platforms as data sources. In order to put the results of these researches into wider applications, it is thus essential to study the user demographics of these platforms and data sources. Despite people¡¯s best efforts, however, the demographics of these online platforms remains relatively unstudied, mainly due to the fact that many of these platforms do not track the demographic characteristics of their users. Twitter, one of the most widely used online social platforms, for example, does not track users¡¯ core demographic characteristics (only location and birthday are asked in the profile page, and both are optional). Therefore, studying the demographics of Twitter users can be a challenge.  
+
+Previous researches on the demographics of social media platforms involved traditional survey methods that had a relatively limited number of respondents. For example, a widely-cited survey conducted by Pew Research Center in 2016 had a national sample of 1520 adults living in the United States. Of these respondents, 381 were interviewed on a landline telephone, and 1,139 were interviewed on a cellphone, including 636 who had no landline telephone. A combination of landline and cellphone random-digit-dial samples were used in the research. However, because the unweighted sample size of Twitter users in the research was only 166 people, the research result can hardly represent the real population of Twitter users in the United States. [^1] In our proposed research, we hope to combine the frequently used sample survey approach with machine learning predictive models to simulate a census on Twitter users, thus approximating the demographics of the platform.  
+
+**Research Design and Methodology:**  
+
+1. Hypothesis:  
+Our hypothesis for the research is that Twitter users of different identity groups (races/age groups/income levels, etc.) will exhibit different behaviors that are quantifiable. The measurements of their online behaviors include [average post length, original post to retweet ratio?, frequent words, search terms, accounts they follow, and hashtags, average daily online duration, etc.] Using these quantifiable measurements as predictors, we are thus able to predict their survey responses (their identities) using a machine learning model.
+
+2. Data collection and pre-processing:  
+The amplified asking method in the proposed research involves two data sources, a digital trace dataset, namely the Twitter database, and an online survey answered by randomly selected Twitter users.
+
+  (1)	Twitter data:  
+The relatively poorly-structured data from Twitter are first processed into a more well defined data structure. For each Twitter user, we want to record several measurables, for example:  
+o	average daily active time  
+o	average daily tweets sent  
+o	original tweets : retweets ratio  
+o	most researched terms  
+o	most used hashtags  
+o	most frequent words used  
+Note that some of these data fields are likely not directly available in the Twitter database, but need to be computed using the raw Twitter usage data.  
+  (2)	Online survey:  
+The online survey is sent out to a randomly selected sample of U.S. Twitter users (selected based on the location of their IP address), and include some of the most basic and straightforward multiple-choice questions about the identities of the respondents. Considering that conducting online surveys has a relatively low cost, we can send out the survey to 10,000 randomly selected users in hope to receive enough data for our model training purposes. Some sample questions on the survey are listed below:  
+o	Age (divided into groups)  
+o	Biological Gender  
+o	Ethnicity  
+o	Race  
+o	Household Income (divided into groups)  
+o	Sexual orientation  
+o	Religion  
+o	Highest level of education  
+
+
+3.	Data Analysis:
+
+1)	Model selection and testing:  
+Because our survey responses are all categorical variables (numerical data such as age and income are also grouped as categorical variables), we need to use classification instead of linear regression for our predictive models. We can start with several common types of classification methods, such as logistic regression, linear discriminant analysis (LDA), quadratic discriminant analysis, K-nearest neighbors (KNN). Besides least squares, we will also test alternative feature selection methods to help us identify the most relevant predictors in the Twitter digital trace data. These methods include subset selection (forward/backward stepwise selection), shrinkage methods (ridge regression and lasso), and dimension reduction if necessary. Besides the common classification methods mentioned above, other models to test include tree based methods such as bagging, random forests and boosting. An important guideline for our model selection in this project is that we are only concerned with the predictive power and not with the interpretability of the models.  
+To test the predictive accuracy of our models, we split the survey data into a training set and a test set. Once the models are built on the training data, they will be first applied to the training data again and will be assessed on their training error rate. Next, the models will be tested against the test data to assess their predictive ability. An alternative approach is leave one out cross validation (LOOCV), in which a single observation is used as the validation set and n-1 observations are used as the training data every time, and the validation process is repeated n times. Compared to traditional test set approach, LOOCV has less biased and yield more consistent results, but is more computationally expensive. During the testing phase, it is possible that more than one models will be selected and advance to the next stage.
+
+2)	Model application and further testing:  
+After models are selected based on their error rate, they will be applied to a much larger random sample of Twitter users and generate predicted identities for these users. For the purpose of approximating the total U.S. Twitter user group with a relatively good accuracy, a sample size of 50,000 to 100,000 should be sufficient. These generated results can then be further tested in several ways. First, we can compare the simulated demographics generated by each model to the results of past survey research results on demographics of Twitter users. Next, if more than one models are selected in the model selection phase, we can compare the results generated by different models. Last but not least, we can reselect samples with the sample size and compare the simulated demographics generated by the same model when applied to different samples. Theoretically, if the sample size is large enough, the computed demographics should be relatively similar when different random samples are used. In this case, we can consider the computed demographics a relatively good approximation of the actual demographics of Twitter users.
+
+4.	Assessment of methodology:  
+While our approach of approximating the demographics of Twitter using amplified asking efficiently eliminates some of the most common errors in survey researches, it nevertheless has some potential problems that might introduce extra errors and compromise the accuracy of our results:
+
+Advantages:
+
+1)	Reduced presentation error and measurement errors:  
+Both presentation and measurement errors are expected to be smaller in this this research compared to common survey studies. First of all, because the people who answers our survey are randomly selected Twitter users, the coverage bias should be negligible when the sample size is large enough. Moreover, because the survey questions are very straightforward and hardly misleading, we expect the measurement errors to be negligible.
+
+2)	Flexibility of the research:  
+Compared to traditional survey researches, the proposed research has great flexibility in two aspects. First of all, the survey is easy and cheap to conduct, with no geographical restraints. Moreover, once a relatively accurate model is selected, we can also use it to compute the demographics in the future using the always-on data source of Twitter.
+
+Potential problems/disadvantages:  
+
+1)	Representation errors:  
+Although randomly selected Twitter users with a decent sample size should be a good representation of the total Twitter user group. However, there might still be representation errors in cases where the respondents are systematically different from the Twitter users that do not respond to our survey. While the systematic errors are expected to be small, because these errors are introduced in the first step (model training) of our analysis, it is possible that they can still have decent influences on our final results.
+
+2)	Inaccuracy of predictive models:  
+Despite our best efforts to train and select machine learning models with highest predictive abilities, using amplified asking will still inevitability introduce errors into the results due to the imperfect predicting ability of the models. In fact, all of the classification models and cross validating methods have their own limitations, and none of them are perfect by any means. Therefore, depending on the predictive power of our final models, the simulated demographics may vary from the real user makeup to a certain extent.
+
+3)	Cost of computation:  
+Although using online survey is an efficient way to reduce the cost of sample research, our approach of amplified asking can be very costly in terms of computational power. As a matter of fact, some of the cross-validation methods mentioned above are very computation-heavy.
+
+**References Cited:**  
+
+[^1]	*Social Media Update 2016 (Methodology)*, Pew Research Center, November 11, 2016.  
+http://www.pewinternet.org/2016/11/11/social-media-update-2016-methodology/

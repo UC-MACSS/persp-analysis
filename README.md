@@ -118,9 +118,10 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [Munger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. *Political Behavior*, 39(3), 629-649.](https://link-springer-com.proxy.uchicago.edu/article/10.1007%2Fs11109-016-9373-5)
 1. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
-    * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
     * Benoit, Kenneth, "[Simulation Methodologies for Political Scientists](http://www.kenbenoit.net/pdfs/benoit_2001_TPM.pdf)," *The Political Methodologist*, 10:1, pp. 12-16.
-    * Davidson, Russell and James G. MacKinnon, "Section 9.6: The Method of Simulated Moments," *Econometric Theory and Methods*, Oxford University Press, 2004.
+    * Recommended readings on simulation methods (not required for class)
+        * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
+        * Davidson, Russell and James G. MacKinnon, "Section 9.6: The Method of Simulated Moments," *Econometric Theory and Methods*, Oxford University Press, 2004.
 1. Simulated data (cont.)
 1. Collaboration
     * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)

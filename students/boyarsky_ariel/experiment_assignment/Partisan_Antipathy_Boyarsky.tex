@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage[superscript,biblabel]{cite}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist},
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{A Survey of Mass American Political Polarization}
+\author{Ari Boyarsky \\ aboyarsky@uchicago.edu}
+\date{October 23, 2017}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+
+\maketitle
+
+% This command causes the title to be created in the document
+
+\section{Introduction}
+
+In 2016, Pew Research Center released a report documenting rising partisan antipathy between members of the Republican and Democratic party. Indeed, 55\% of Democrats and 49\% of Republicans surveyed by Pew noted that the opposing party made them feel afraid. These totals increased among more politically active participants.  Multiple studies have shown the increase in partisan antipathy may cause increased political polarization and legislative gridlock (Bolce and Maio 1999; Binder 2003). Other studies argue that partisan antipathy is a result of political polarization (Baldassarri and Gelman 2008). Furthermore, the 2016 election seems to have increased negative feelings that party members exhibit towards the opposing party (Pew Research Center 2016). Regardless of origin, Shanto Iynegar and Sean Westwood (2014) show that increased partisan hostility leads to partisan discrimination and a tendency for elite confrontation instead of cooperation. Hence, partisan hostilities may increase potential for legislative gridlock and lead to greater issue partisanship.
+
+
+Party hostility also seems to have increased a phenomenon known as selective exposure. Selective exposure entails that people choose to expose themselves only to information that is in line with their political biases (Arceneaux et al. 2012). This in turn seems to drive greater party drift. Furthermore, this phenomenon entails that there is less opportunity for people to be exposed to moderating views. However, it is not clear that greater exposure to moderating views would combat polarization, as some studies also show that people tend to react with greater hostility towards opposing opinions (Arceneaux et al. 2012). This study intends to test this question. Specifically, we hope to understand if increasing exposure to a moderating view will diminish or increase partisan antipathy.    
+
+
+\subsection{Research Questions}
+\begin{enumerate}
+	\item How does the presentation of moderating data in support/against an issue impact partisan antipathy?
+	\item What issues generate the greatest animosity/agreement between members of differing political parties?
+\end{enumerate}
+
+\section{Methodology}
+
+To conduct this experiment, we turn to Amazon’s Mechanical Turk (MTurk) system. While there are certainly population issues that must be contended with when using MTurk, recent research has shown that MTurk experiments tends to be generally more representative of the general population than other experimental methods (Berinsky et al. 2012). Furthermore, we employ a randomized control study which should help curb some these effects.
+
+Specifically, participants on MTurk will first be asked to provide demographic and political ideology data. They will then be randomly placed into a treatment or control group. If they are in the treatment group they will be shown a video on a controversial issue, such as gun control, abortion, taxation, or foreign affairs. The video will be designed to express a moderating view point. For instance, a participant who marked conservative might receive a video on gun control that may provide data on countries/states that employ stricter gun control regulations and the correlation with fewer gun related fatalities. Note, that a participant who marked liberal would receive a video that may show research that does not indicate a causal link between stronger gun regulation and gun related violence. After watching the video, participants will be asked to answer questions about the content of the video (to ensure they watched it), and their views towards the subject after watching the video. We will also ask participants to answer a question that asks them to rank their views of an individual who supports that issue and one who opposes it. Finally, we ask participants to write a short 3-5 sentence response characterizing their views on the topic before and after watching the video.  At this point participants may think we are looking to understand the efficacy of the video, however we will actually be looking for the participants sentiment towards the opposing party in the open-ended response. We do this based on research that shows that open-ended questions may be strong indicators of latent sentiment (Roberts et al. 2014; ten Kleij 2003). 
+
+Participants who are randomly selected to be in our control group will be asked for their demographics and ideology and then be asked to answer questions about certain policy preferences and their views of the opposing party. An example question may be:
+
+\begin{enumerate}[leftmargin=*]
+	\item[Question:] How do you view a politician who advocated for stricter gun regulations?
+	\item[Responses:] Strongly Support/ Support/ Neutral/ Disagree/Strongly Disagree 
+\end{enumerate}
+
+We will also ask them to write an open-ended question asking about their views towards an issue and its supporters. Since we do not want to outright ask about anger or fear towards a political party this open-ended response gives us the ability to attempt to extract this based on semantical and lexical differences in response. 
+
+Finally, we will group conservatives and liberals and weight each response based on how negative it is towards the opposing party. After we calculate the means of the control and treatment group, we will calculate the effect of our treatment based on the statistical significance of difference in means. We will conduct a targeted sentiment analysis towards Republicans and Democrats based on the open-ended questions in the treatment and control groups. Based on this we will be able to produce a number that shows overall negativity towards each group, and again conduct a difference of means test between the treatment and control. This will act as a type of internal validity test to compare with survey responses and provide data about latent antipathy of participants. 
+
+In addition to this we will group our treatment participants by the issue that was presented to them. We can then compare the difference of response means by issue which will serve to indicate how partisan antipathy may vary amongst topic. We can also conduct a similar test by grouping by political party. These tests will also help establish internal validity as we would generally expect there to be little variation between these means. An abnormally large difference may indicate a flaw in a video, or that there is a varied effect by topic.  
+
+Looking at the significance between these differences in means we can estimate the effect that a moderating view point has on political antipathy and issue partisanship. This may perhaps show that a moderating view moderates the observer’s views, though it may also show that exposure to differing viewpoints elicit a reaction with more animosity towards opposing opinions. 
+
+\section{Assessment of Experimental Design}
+
+This experimental design follows the advice of Salganik (2017) in establishing validity, assessing treatment results and preforming digitally enhanced experiments. Our experiment emphasizes internal validity through a comparison of various randomly applied treatments. This is key, because the phenomena we intend to measure is not uniform and be triggered by a variety of mechanisms. Hence, we randomize the issue areas presented. This allows us to test that issue areas are not having a confounding effect on our study. Additionally, it is possible that a video that is meant to moderate is perceived by the participants as aggressive. Thus, if we see abnormal results for a single video we will know to review it for possible problems. Since this experiment is on MTurk it will be easy for us to correct any errors and rerun the experiment. Additionally, we ask participants to both answer survey questions and an open-ended response. This allows us to compare the results from both types of questions. This is useful as one type of question may not effectively get at partisan animosity. We also employ well-known statistical tests to ensure statistical conclusion validity. For the open-ended responses we follow well-known topic modeling and sentiment analysis methodology as employed by other researchers (Roberts et al. 2014, Pang and Lee 2008). Finally, we also randomize our trial and employ both a treatment and control group to generate external validity. While we cannot be sure that these results would be replicated exactly in a natural environment (outside the scope of MTurk), randomization and statistical tests allow us to know that our results are at least not spurious. 
+
+Finally, our methodology employs a sophisticated randomization and heterogenous treatment process that allows us to build a causal claim. We accomplish this through multiple design decisions in our experiment. First, MTurk allows us to access a large sample size relatively easily, hence we can measure reactions to videos across heterogenous participants. Of course, MTurk presents an issue here as it is possible MTurk users react in a certain way. This is something we must consider; however recent research seems to reject this possibility (Berinsky et al. 2012; Salagnik 2017). Furthermore, we collect demographic data such as internet usage, political ideology, age, race, and gender so that we can assess participant heterogeneity. We also employ heterogeneity of treatment effects by utilizing different videos and issues for members of the treatment group. This is key as it allows us to assess the possibility that one issue may spark more animosity (or less animosity) than other issue areas. In addition to this we also assign random heterogenous participants to a control group. Hence, we run a randomized control trial allowing us to study the causal chain from issue exposure to partisan animosity.  
+
+\newpage
+
+
+\bibliographystyle{unsrt}
+\bibliography{partisan_animosity}
+\nocite{*}
+
+
+
+\end{document}

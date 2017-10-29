@@ -1,6 +1,7 @@
 # Proposing an Experiment
 ```
-Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health and healthcare spendings-- a longitudinal randomized controlled trial
+Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health 
+and healthcare spendings-- a longitudinal randomized controlled trial
 Author: Fiona Fan
 Class: MACS 30000
 Instructor: Benjamin Soltoff

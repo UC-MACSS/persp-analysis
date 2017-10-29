@@ -1,7 +1,12 @@
 # Proposing an Experiment
 ```
+<<<<<<< HEAD
 Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health and healthcare 
 spendings-- a longitudinal randomized controlled trial
+=======
+Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health 
+and healthcare spendings-- a longitudinal randomized controlled trial
+>>>>>>> 32f22529554390cfe77a5e5acc5197ce5df9c24b
 Author: Fiona Fan
 Class: MACS 30000
 Instructor: Benjamin Soltoff
@@ -17,6 +22,7 @@ The overall design of the experiment will follow that of a randomized controlled
 
 
 ![Why is the picture not showing?](design.jpg)
+
 **<a name = "fig1"></a>Figure 1. Overall Design of the Experiment**
 ### 1. Participant Recruitment
 Even though our previous priming observational and survey studies were using clinical data from Joslin Diabetes Center, with the trade-off between running out of budget and having robust results for external validity in mind, we will make it a multi-city study, recruiting patients from several major diabetes clinics across US, including Mayo Clinic, Cleveland Clinic, and UCSF Medical Center. The open recruitment of patients will span over a period of 1 year, from 2017 to 2018. We will advertise about the study over non-digital channels, like in hospital lobbies, considering the fact that we are recruiting non-tech-savvy patients. Another channel of recruitment will be the old-style telephone and email. Patient contact information will be acquired under the protection of HIPAA law and IRB regulations. A screening question of whether the potential participant uses technologically enabled diabetes management tool will be asked to prevent the tech-savvy participants from entering the study, upward-biasing our results. We hope to recruit equal number of patients in each group for maximization of statistical power.
@@ -68,6 +74,7 @@ The follow-up surveys and the breakdown of financial outcomes will give us intui
 This is not a blinded experiment, caused by the recruitment procedure (open recruitment via advertisement). The patients in the control group are fully aware that there is a groups of their counterparts enjoying a preventative care program that they are not allowed to participate in. The could lead to a loss of enthusiasm to participate, and consequently a low response rate in the control group for the follow-up surveys. In remedy we will offer monetary rewards, as disciplined by IRB, to keep their enthusiasm on par with the treatment group.
 
 
+
 ## Conclusion
 The results of the RCT will allow the policy makers to make informed budget proposals and policy decisions. As mentioned in the **Motivation** section of the first proposal, hopefully investing in preventative care programs can prevent further rise in diabetic healthcare spending, which contributes significantly to the overall rising trend of healthcare spending in US.
 
@@ -76,4 +83,10 @@ The results of the RCT will allow the policy makers to make informed budget prop
 Delamater, A. M. "Improving Patient Adherence." Clinical Diabetes 24, no. 2 (2006): 71-77. doi:10.2337/diaclin.24.2.71.
 
 
+<<<<<<< HEAD
  
+=======
+*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
+![Why is the picture not showing?](meme.jpg)
+
+>>>>>>> 32f22529554390cfe77a5e5acc5197ce5df9c24b

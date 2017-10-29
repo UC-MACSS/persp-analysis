@@ -1,12 +1,7 @@
 # Proposing an Experiment
 ```
-<<<<<<< HEAD
-Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health and healthcare 
-spendings-- a longitudinal randomized controlled trial
-=======
 Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health 
 and healthcare spendings-- a longitudinal randomized controlled trial
->>>>>>> 32f22529554390cfe77a5e5acc5197ce5df9c24b
 Author: Fiona Fan
 Class: MACS 30000
 Instructor: Benjamin Soltoff
@@ -82,11 +77,3 @@ The results of the RCT will allow the policy makers to make informed budget prop
 ## Bibliography
 Delamater, A. M. "Improving Patient Adherence." Clinical Diabetes 24, no. 2 (2006): 71-77. doi:10.2337/diaclin.24.2.71.
 
-
-<<<<<<< HEAD
- 
-=======
-*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
-![Why is the picture not showing?](meme.jpg)
-
->>>>>>> 32f22529554390cfe77a5e5acc5197ce5df9c24b

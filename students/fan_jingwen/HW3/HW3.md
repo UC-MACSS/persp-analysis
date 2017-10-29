@@ -1,6 +1,7 @@
 # Proposing an Experiment
 ```
-Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health and healthcare spendings-- a longitudinal randomized controlled trial
+Title: Effect of preventative programs that enhance tech-savviness on Type II Diabetes patient health and healthcare 
+spendings-- a longitudinal randomized controlled trial
 Author: Fiona Fan
 Class: MACS 30000
 Instructor: Benjamin Soltoff
@@ -46,6 +47,8 @@ In line with our previous survey study, we will distribute follow-up surveys to 
 #### Financial Outcome
 The is the key outcome of interest for the policy makers. The latest report in a longitudinal study done by the American Diabetes Association (ADA), which tracks the components of healthcare expenditure on diabetes care across years, reports that out of the $245 billion total costs, hospital inpatient care (43% of the total medical cost), prescription medications to treat the complications of diabetes (18%) and physician office visits (9%) top the chart, and together account for a majority of the costs. We will see part by part if those measures are different in the control group and treatment group, mapping to the difference in clinical outcome results.
 
+### 5. Budget Source
+The money of our study will come from governmental agencies that have aligned aims of cutting healthcare spending. 
 
 ## Assessment of Experiment Design
 ### 1. Validity
@@ -66,12 +69,11 @@ This is not a blinded experiment, caused by the recruitment procedure (open recr
 
 
 ## Conclusion
-The results of the RCT will allow the policy makers to make informed budge proposals and policy decisions. As mentioned in the **Motivation** section of the first proposal, hopefully investing in preventative care programs can prevent further rise in diabetic healthcare spending, which contributes significantly to the overall rising trend of healthcare spending in US.
+The results of the RCT will allow the policy makers to make informed budget proposals and policy decisions. As mentioned in the **Motivation** section of the first proposal, hopefully investing in preventative care programs can prevent further rise in diabetic healthcare spending, which contributes significantly to the overall rising trend of healthcare spending in US.
 
-*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
-![Why is the picture not showing?](meme.jpg)
 
 ## Bibliography
 Delamater, A. M. "Improving Patient Adherence." Clinical Diabetes 24, no. 2 (2006): 71-77. doi:10.2337/diaclin.24.2.71.
+
 
  

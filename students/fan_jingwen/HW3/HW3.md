@@ -71,10 +71,11 @@ This is not a blinded experiment, caused by the recruitment procedure (open recr
 ## Conclusion
 The results of the RCT will allow the policy makers to make informed budget proposals and policy decisions. As mentioned in the **Motivation** section of the first proposal, hopefully investing in preventative care programs can prevent further rise in diabetic healthcare spending, which contributes significantly to the overall rising trend of healthcare spending in US.
 
-*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
-![Why is the picture not showing?](meme.jpg)
 
 ## Bibliography
 Delamater, A. M. "Improving Patient Adherence." Clinical Diabetes 24, no. 2 (2006): 71-77. doi:10.2337/diaclin.24.2.71.
 
- 
+
+*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
+![Why is the picture not showing?](meme.jpg)
+

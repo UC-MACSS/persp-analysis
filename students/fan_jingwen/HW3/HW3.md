@@ -16,6 +16,7 @@ The overall design of the experiment will follow that of a randomized controlled
 
 
 ![Why is the picture not showing?](design.jpg)
+
 **<a name = "fig1"></a>Figure 1. Overall Design of the Experiment**
 ### 1. Participant Recruitment
 Even though our previous priming observational and survey studies were using clinical data from Joslin Diabetes Center, with the trade-off between running out of budget and having robust results for external validity in mind, we will make it a multi-city study, recruiting patients from several major diabetes clinics across US, including Mayo Clinic, Cleveland Clinic, and UCSF Medical Center. The open recruitment of patients will span over a period of 1 year, from 2017 to 2018. We will advertise about the study over non-digital channels, like in hospital lobbies, considering the fact that we are recruiting non-tech-savvy patients. Another channel of recruitment will be the old-style telephone and email. Patient contact information will be acquired under the protection of HIPAA law and IRB regulations. A screening question of whether the potential participant uses technologically enabled diabetes management tool will be asked to prevent the tech-savvy participants from entering the study, upward-biasing our results. We hope to recruit equal number of patients in each group for maximization of statistical power.

@@ -66,6 +66,8 @@ The follow-up surveys and the breakdown of financial outcomes will give us intui
 ### 4. Ethical concerns
 This is not a blinded experiment, caused by the recruitment procedure (open recruitment via advertisement). The patients in the control group are fully aware that there is a groups of their counterparts enjoying a preventative care program that they are not allowed to participate in. The could lead to a loss of enthusiasm to participate, and consequently a low response rate in the control group for the follow-up surveys. In remedy we will offer monetary rewards, as disciplined by IRB, to keep their enthusiasm on par with the treatment group.
 
+*Finally, in spirit of finishing the trilogy -- a overly large meme that I don't know how to shrink:*
+![Why is the picture not showing?](meme.jpg)
 
 ## Conclusion
 The results of the RCT will allow the policy makers to make informed budget proposals and policy decisions. As mentioned in the **Motivation** section of the first proposal, hopefully investing in preventative care programs can prevent further rise in diabetic healthcare spending, which contributes significantly to the overall rising trend of healthcare spending in US.

@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,enumerate,lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage[superscript,biblabel]{cite}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist},
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{A Survey of Mass American Political Polarization}
+\author{Ari Boyarsky \\ aboyarsky@uchicago.edu}
+\date{October 23, 2017}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+
+\maketitle
+
+% This command causes the title to be created in the document
+
+\section{Introduction}
+
+Political polarization in the United States has been documented by many studies. Often these studies focus on elite polarization, that is defined as the increased misalignment of political views between political elites in the Republican and Democratic parties. The implications of elite polarization are extensive. Perhaps most salient is the correlation between polarization and increased legislative gridlock (Binder 2003).
+
+Additionally, elite polarization is often associated with mass polarization as attitudes disperse within the general populace. These studies often identify elite polarization as a major source of public aversion towards an opposing political party (Baldassarri and Gelman 2008). McCarthy et al. (2007) document this phenomenon arguing that elected officials are aligning increasingly with party identity. However, there is little evidence to show that elite polarization drives political polarization among the masses. Indeed, few studies have attempted to even characterize mass polarization. This study attempts to break this trend by conducting an extensive survey to understand the level of polarization in the American populace.
+
+\subsection{Research Questions}
+\begin{enumerate}
+	\item What is the current level of mass political polarization in the United States?
+	\item How does this align with political polarization among elites?
+\end{enumerate}
+
+\section{Methodology}
+
+To study this phenomenon, we will conduct a non-probability survey of American attitudes towards topics. The survey will be administered over Amazon MTurk and weighted based on respondent characteristics. While, there are certainly some concerns to using the MTurk platform in terms of bias. An overwhelming amount of research has found that with proper statistical adjustment, MTurk can be very reliable (Goel et al. 2014, Grimmer et al., 2012). The questions we ask will be designed to measure the policy preferences of respondents.  We will ask survey respondents whether they agree or disagree on 10 varying statements that we consider indicative of a conservative liberal divide. Specifically, we will ask 15 questions from the Pew Research Center’s American Trends Panel (a representative probability survey), so that we can compare response rates across surveys. The questions will take the following form:
+
+\begin{enumerate}[leftmargin=*]
+	\item[Statement:] Abortion should be$\dots$
+	\item[Response:] Restricted in certain situations, Not restricted at all, Never allowed, Allowed in some situations, Neutral/Unsure
+\end{enumerate}
+The questions will ask about specific policy issues including welfare, foreign affairs, immigration, crime, and more. We will assign whatever answer is to be most conservative a value of 2 and most liberal a value of -2. The more neutral answers will receive values 1 and -1. And the neutral/unsure answer will be valued 0.
+
+Additionally, we will begin each survey with a set of questions that we intend to weight on. Specifically, we will ask for demographic information such as age, race, gender, and U.S. State (we will limit our survey to U.S. users only). In addition to this we will also ask for political ideology (conservative or liberal), political party, political interests, political knowledge, and Internet usage. A 2016 Pew Research study found that adjusting a non-probability survey on these characteristics produced by far the best result. Additionally, following the research conducted by Pew Research, we will also adjust for propensity to join the panel. Once the answers are recorded we will weight our results based on the distributions recorded by the U.S. Census Bureau’s American Community Survey (ACS) Data.  We will then calculate the mean score of each respondent by adding up the values of their answers. 
+
+Finally, we then group respondents based on their identified political identity and weight their mean score based on a post-stratification scheme designed to match our sample distribution to the distributions we see in the ACS. Once we have the final mean scores we will run statistical tests to determine the significance of the difference in means. We use the level of significance between our two means as a measure of mass political polarization. 
+
+We will compare this result to standard measures of elite political polarization. Specifically, we compare our survey means to the mean DW-Nominate score for republican and democratic legislators in the 115th congress. From this analysis we will be able to compare polarization of policy attitudes between political elites and non-elites. 
+
+
+\section{Digitally Enhanced}
+
+The primary digitally enhanced survey technique that this study takes advantage of is the increasing viability of non-probability samples. Salganik argues that new techniques in non-probability surveys have led them to be increasingly on par with traditional probability sample surveys. Additionally, a further study compared multiple non-probability election polls to the traditional probability polls showed that some non-probability polls were more accurate than probability sample polls (Pew Research Center, 2016). In addition to this we use “sample matching” to match our survey responses to population features based on ACS data (Salagnik, 2017).
+
+In addition to this we use mechanical turk as a mechanism for our surveys. This is far from traditional and poses potential problems. MTurk users tend to be more and younger.  However, there are also tremendous advantages to using MTurk. First, we can deploy a survey in very little time and receive massive number of responses in only a few days. Also, we know a great deal about the MTurk population which means we have more information in the weighting process. Additionally, MTurk has been shown to be a fairly good tool for political science research. Indeed, Berinsky et al. (2012) find that MTurk respondents tend to be more representative of the general population than other samples. With proper statistical adjustments we can conduct a fairly accurate survey with Amazon mechanical turk.
+
+ Finally, because we are using questions from Pew Research's American Trends Panel, we will be able to link our data to previous surveys conducted by Pew. Additionally, our method for measuring polarization mirrors work that uses DW-Nominate to measure elite political polarization. While this is not exactly the record linking that Salagnik calls “enriched asking” it still allows us to answer important questions about the correlation between elite and mass polarization that would otherwise not be possible. 
+
+\section{An Observational Study?}
+
+ This study looks at the policy preferences of non-elites to measure mass political polarization. Due to the nature of this question it is unlikely that we could do a similar study with observational data alone. Indeed, this would require that we find some measurable behavior that reveals detailed information about specific policy preferences. While this is difficult it is not impossible, we could scrape twitter or Facebook for mentions of specific policies and then run a sentiment analysis on this. We could take a higher-level approach and simply look for mentions of the opposing party. We could also try and chart geographic political polarization through local elections. Finally, we could rely on previous survey results. However, each of these techniques introduce their own issues. A study that scoured social media for revealed policy preferences would mean that we collect sensitive possibly private data. Also, people who post about policy preferences are likely to have more extreme preferences and hence may not be representative of the general populace. It would be more difficult than to weight these results as we would not have as specific demographic data. Additionally, a study of political polarization based on polarization will probably get a different phenomenon – geographic sorting. Also, this data will be less fine grain. It will reveal who wins election and where but not why or what policy preferences motivate these differences. Finally, while we could have used previous survey results we would not be able to ask specific demographic questions which will be necessary to appropriate weight our results. Specifically, it will be difficult to find a survey that asked about political ideology (conservative or liberal), political party, political interests, political knowledge, and Internet usage. These questions were previously found to be very helpful in post-stratification. Also, we would have to rely on this surveys questions which may or may not be comparable to the American Trends Panel or easily converted into scores that allow us to link our data to DW-Nominate based measure of elite political polarization. A survey on the other hand allows us to get at specific policy preferences, and use statistical techniques to ”unbias” are sample. It also allows us to ask questions in such a way that we can compare our results to previous work.
+
+\section{Potential Sources of Error}
+
+There are drawback to this approach. Specifically, the MTurk user base does exhibit some biases. While we can correct for this as best as possible we still need to get enough variance in responses that our weighting techniques will be effective. Additionally, there is the potential for social desirability bias in which respondents will answer based on what they believe is socially acceptable. Since this is a survey of relatively controversial but common policy positions we expect to see less of this. Additionally, while post-stratification has generally been successful it is complex and it is possible our results are non-representative. Hence, we will need to take great care in this step. Finally, it is possible that comparing our results to elite measures using DW-Nominate is not theoretically foolproof. Still, even if there are issues in our comparison it should still be indicative of a general trend and provide interesting comparisons for future work. 
+
+\newpage
+
+
+\bibliographystyle{unsrt}
+\bibliography{mass_polarization}
+\nocite{*}
+
+
+
+\end{document}

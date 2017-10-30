@@ -1,0 +1,73 @@
+---
+title: "The Power of a Nobel Prize"
+author: "Xi Chen"
+date: "October 22, 2017"
+output: pdf_document
+---
+
+##### Course: MACS 30000 Perspectives on Computational Analysis 
+##### Assignment: Proposing a Survey Study 
+##### Instructor: Dr. Benjamin Soltoff
+
+
+## Introduction and Research Question
+In the last assignment, I proposed an observation study on the research question: "What is the power of a Nobel Prize". In this assignment, I am going to propose a study on the same issue, but with a survey-based approach. 
+
+On October 9, the 2017 Nobel Prize in Economics was awarded to Richard H. Thaler, one of the founding fathers of behavioral economics and a professor of the Booth School of Business at the University of Chicago. The other two founding fathers of behavioral economics are Daniel Kahneman and Amos Tversky, who published the paper "Prospect Theory: An Analysis of Decision under Risk" in 1979. Daniel Kahneman was awarded the Nobel Prize in Economics in 2002 for his contribution to behavioral economics. 
+
+Behavioral economics has never been in the mainstream of economics before, because one of the leading goals of behavioral economics is to challenge the cornerstone of traditional economics theory: the assumption of rationality. However, after October 9, enormous attention to behavioral economics has been aroused among the public. The mass media around the world became eager to publish newsletters, interviews, or comment articles about behavioral economics. People are greatly interested in knowing more about behavioral economics. Behavioral economics has never been more popular than it is today, being intensely discussed by people from both industry and academia. 
+
+No one would deny that this is the power of a Nobel Prize. However, does the Nobel Prize just bring fleeting trend to the certain field? Does the Nobel Prize increase awareness of a certain academic subfield among the public in the long-run? How large the impact of a Nobel Prize would have? What are the longitude and magnitude of the impact a Nobel Prize had on the public, academia, and industry in the long run? To sum up, the research question in this proposal is: how do the public's reaction and perception to a Nobel Prize change?
+
+## Survey Design
+The survey's purpose is to examine people's reaction perception to the Nobel Prize. The key questions will include: 
+
+-	Did you read news about the 2017 Nobel Prize in Economics? Who was awarded and what contributions did the recipient(s) make? 
+
+-	Did you hear anything about behavioral economics before this year's Nobel Prize in Economics was announced? 
+
+-	When was the first time that you heard about behavioral economics?
+
+-	How much knowledge do you have about behavioral economics?
+
+-	What do you think behavioral economics is about?
+
+-	Do you become more interested in knowing more about behavioral economics after this Nobel Prize is being announced?
+
+-	What aspects of behavioral economics are you interested in?
+
+-	Do you think the behavioral economists' arguments make sense or not? 
+
+-	Do you think behavioral economics, which challenges the foundation of classical economics, will make a radical difference in traditional economics fields?
+
+
+The survey will consist of both open-ended questions and closed-ended questions. For the opened-ended ones, participants can write down their ideas without constraints from the default choices. After these questions, the survey will also ask participants about their basic demographical and socioeconomic information, such as age, gender, race, current position and career field (business, IT, etc.), and self-perceived income level (high-income class, middle-income class, low-income class, etc.). 
+
+I plan to collect longitudinal data by sending out the survey in three different time points: the second round of survey will be send out in three months after the first round is distributed, and the third round will be send out in six months after the second round is distributed. By doing so, I can have a sense of the development trend and longitudinal changes in people's reactions and knowledge.  
+
+## Data Sources
+### (1) For the reaction from the public and the industry
+There are several methods to distribute the survey. Firstly, I plan to employ ecological momentary assessments (EMA) to collect the public's voices. With digital equipment, such as smart phones or internet-connected devices, EMA survey questions can be event-based, time-based, or randomly prompted to the participants according to research purposes (Salganik, 2017). For example, Salganik (2017) suggests: ". a smart phone could be programmed to trigger a survey question if a respondent goes into a particular neighborhood." Therefore, I plan to corporate with several popular websites or online platforms, such as the Wall Street Journal and Wikipedia, when the participants finish reading a certain webpage, the survey will be prompted to them. 
+
+Another digitally powerful platform that I plan to distribute surveys on is Amazon Mechanical Turk (MTurk). MTurk is a popular computer-administered internet marketplace enabling researchers to have access to large convenience samples. One of the featured benefits of this platform is that researchers can screen and verify the participants' qualifications before letting them to take the survey. By doing so, the quality of data can be somewhat guaranteed. 
+
+### (2) For the reaction from the academia
+I plan to collect a two-level data: the first level will be focused on only one academic institution --- the University of Chicago; the second level will be open to all academic institutions, including other universities and research-oriented institutions like thinktanks. The purpose of this design is that I want to know if a person is more "connected" to the Nobel Prize, will he or she pay more attention to and be more interested in this topic and this academic field? To be specific, for the UChicago participants, I plan to include the survey link into a university affiliated official email list, so people in the university can receive the survey through the official emails. 
+
+## Survey Methodology vs. Observational Study
+### The Good Characteristics of Survey Methodology
+The digitally-enhanced survey enables researchers to get access to a larger example and collect a wide range of data.  More importantly, compared to observational data, surveys do a better job in capturing human's internal states, such as emotions, knowledge, and viewpoints (Salganik, 2017). In this research, I use surveys to ask participants about their knowledge and opinions in behavioral economics, which is limitedly displayed in the observational data.  
+
+In addition, by utilizing a survey methodology, researchers can have a better awareness of their participants' characteristics by asking questions on demographical information, such as age, gender, race, and other socioeconomics data like income. However, observational data, such as posts and texts from Facebook and Twitter, always lack the demographical or socioeconomic information related to the person who makes the post. These missing information stops researchers from ruling out some non-trivial confounding effects in their analysis. 
+
+### The Bad Characteristics of Survey Methodology
+There are two types of errors that often occur in the survey methodology: representation error and measurement error. For example, the data collected from the MTurk is a convenience sample, which is one of the non-probability sampling methods. The MTurk sample may not represent the complete population well, because there are some experienced MTurker who are too familiar with the survey mechanisms or they just do the survey for money. These confounding variables may lead to the representation error and measurement error.  To deal with these issue, I will increase the qualification required for the participants, and hope that this will improve the quality of the data. 
+
+## Conclusion 
+I agree with Salganik's viewpoint that survey methodology and observational study are complements. Surveys can capture human's current internal status, such as emotion and knowledge, while observational study enables researchers to examine the past data and track the longitudinal trend.  The integrated use of these two methods may benefit researchers a lot. 
+
+
+## Reference
+Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. Econometrica: Journal of the econometric society, 263-291.
+
+Salganik, Matthew J. (2017). Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press. Open review edition.

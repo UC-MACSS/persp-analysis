@@ -1,0 +1,63 @@
+---
+title: "Assignment 1"
+author: "Lerong Wang"
+date: "10/16/2017"
+output: pdf_document
+---
+
+## Research questions
+
+Living in the digital age, we are gradually getting used to digital age technologies. For example, our shopping habits are changing because of the emergence of online shopping tools. Among all the online shopping tools, Amazon is definitely one of the most successful and widely-used websites for Americans. Amazon not only has a variety of products but also has plenty of reviews and ratings given by their customers, which can provide future customers with useful insights and advice. I was always thinking if we can use Amazon product reviews and ratings to do some meaningful predictions, so my research question of this observational study is whether Amazon product ratings can be used to predict a company’s stock price. 
+The purpose of this observational study is trying to explore the correlation between Amazon product ratings and companies’ stock price. If there is a certain correlation between these two variables, then the results discovered in this study can provide investors with an additional method to consider before making their investments. If there is no correlation between these two variables, then the combination of many other factors determines the stock price of a company. 
+
+
+## Plan
+
+
+Since there are so many products in different categories on Amazon, for this study, I plan to do a longitudinal study and analyze product data from January 2012 to September 2017 on a month-to-month basis. I will be studying products that have at least 20 reviews at the beginning of 2012 to eliminate some useless and unimportant data. The average ratings will be calculated starting from January 2012 regardless of the accumulated reviews and ratings that the products had already received before 2012. For each month, I will record the number of ratings received by the products, average ratings of the product, and the stock price of the corresponding company. Then I plan to compare the average ratings of the product with those in the previous month to see the possible increase or decrease of the average ratings, and then calculate the increase rate of decrease rate. After that, I compare the stock price of the current month with that of the previous month and calculate the rate of change to see if there is any significant correlation between the changing rate of average ratings and stock price within the five-year period. 
+
+## Source of data
+
+Observational data of Amazon product reviews and ratings will be gathered directly from Amazon, and stock price data will be gathered using Google Finance. 
+
+## Basic Methods
+
+Counting things
+
+I will mainly use the counting method in this observational study. The number of reviews will be counted initially to decrease the sample size. The number of ratings and specific rating correspond to each posted review will be counted to compare with the data of the previous month and will be further used to study the correlation between average ratings and stock price.
+
+Measuring things
+
+I will also heavily rely on measuring things in this observation study. The increasing rate or decreasing rate of the monthly average ratings and the monthly stock price will be measured and calculated to compare changing rate of the average ratings with that of the company’s stock price.
+
+Natural experiment
+
+In August 2017, Amazon announced that they will recall some potentially hazardous solar eclipse glass, saying it was unable to confirm whether the protective ware was made by a recommended manufacturer. This recalling process will affect the product’s customers’ review and ratings on Amazon. This is a natural experiment because the setting was not designed by researchers, but rather some natural events in the world happened to create the experimental settings. 
+
+## How does this study illustrate the good characteristics and bad characteristics of big data?
+
+Big
+
+The Amazon dataset is big because Amazon sells over 480 million products in the US. Though we are only gathering data from products with at least 20 reviews at the beginning of 2012, and analyzing data from 2012 to 2017, the dataset is still big enough to study the correlation. The different categories of products also allow us to study the impacts on companies within a lot of different fields. Also, the 5-year period can give us some overall trends of companies’ stock price so that we can compare the overall trends of the average ratings with the overall trends of the stock price.
+
+Always-on
+
+Amazon reviews and ratings are always-on, so I am able to conduct a longitudinal study to examine the stock price within a five-year period. The always-on nature of Amazon enables me to study some unexpected events. I can take the presence of some natural experiments into account and analyze the customers’ ratings of some particular products during a certain time period, and explore the correlation between customers’ rating and stock price within the time period.
+
+Non-reactive
+
+Amazon users don’t know that they are observing by the researchers, and what they care about is their true opinions and consumer experiences about the products, so users who rate their experiences or post reviews on Amazon are honestly expressing their opinions. 
+
+Incomplete and non-representative
+
+The dataset will be incomplete and non-representative in some ways. First of all, not all customers who purchased from Amazon are willing to write reviews and rate their transactions, so the dataset will be incomplete. Second, extreme situations may happen. For example, people who are extremely unsatisfied with the product will be more willing to rate and express their anger; similarly, people who are pleased with the product will also tend to rate and express their satisfaction. Therefore, some average ratings may not accurately represent the true average ratings of all customers, and thus non-representative. However, our big characteristic can mitigate some of the impact of these two bad characteristics bring.
+
+Drifting
+
+System drift may occur during the process. For example, sellers may suddenly begin to send more frequent notifications to customers to remind them reviewing and rating on the products. More people may start to rate but we don’t know they are rating based on their true experiences or they are simply rating to avoid receiving further notifications, so in response to system drift, there may also be behavioral drift during this process. Drifting is inevitable for this longitudinal study. 
+
+## References
+
+Akpan, Nsikan. “Amazon recalls potentially hazardous solar eclipse glasses.” PBS, Public Broadcasting Service, 18 Aug. 2017, www.pbs.org/newshour/rundown/amazon-recalls-potentially-hazardous-solar-eclipse-glasses/.
+
+

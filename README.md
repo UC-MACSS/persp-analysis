@@ -1,10 +1,10 @@
-# MACS 30000 - Perspectives on Computational Analysis
+# MACS 30000 - Perspectives on Computational Analysis  
 
 |  | [Dr. Benjamin Soltoff](http://www.bensoltoff.com/) | [Ryan C. Hughes](http://home.uchicago.edu/~rchughes/) (TA) | [Joshua G. Mausolf](http://jmausolf.github.io/) (TA) |
 |--------------|----------------------------------------------------|-------------------------------------------------------|------------------------------------------------------|
 | Email | soltoffbc@uchicago.edu | rchughes@uchicago.edu | jmausolf@uchicago.edu |
 | Office | 249 Saieh Hall | 251 Saieh Hall | 251 Saieh Hall |
-| Office Hours | Th 1-3pm | M 8:30-10:30am | F 9:30-11:30am |
+| Office Hours | Th 1-3pm | M 8:00-10:00am | F 9:30-11:30am |
 | GitHub | [bensoltoff](https://github.com/bensoltoff) | [rchughes](https://github.com/rchughes) | [jmausolf](https://github.com/jmausolf) |
 
 * **Meeting day/time**: MW 11:30-1:20pm, 247 Saieh Hall for Economics
@@ -39,29 +39,29 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 
 ## Course schedule (lite)
 
-| Date | Topic | Assignment due |
-|--------------|---------------------------------------------------------|-----------------------------------------------|
-| Mon, Sep. 25 | Introduction to Computational Social Science |  |
-| Wed, Sep. 27 | Social science in a computational era |  |
-| Mon, Oct. 2 | Observational data - counting things |  |
-| Wed, Oct. 4 | Observational data - measurement |  |
-| Mon, Oct. 9 | Observational data - forecasting |  |
-| Wed, Oct. 11 | Observational data - approximating experiments |  |
-| Mon, Oct. 16 | Asking questions - fundamentals | [Proposing an observational study](assignments/observational-data.md) |
-| Wed, Oct. 18 | Asking questions - digital enrichment |  |
-| Mon, Oct. 23 | Experiments | [Proposing a survey study](assignments/asking-questions.md) |
-| Wed, Oct. 25 | Experiments |  |
-| Mon, Oct. 30 | Simulated data | [Proposing an experiment](assignments/experiments.md) |
-| Wed, Nov. 1 | Simulated data |  |
-| Mon, Nov. 6 | Collaboration | [Simulating your income](assignments/simulation.pdf) |
-| Wed, Nov. 8 | Collaboration |  |
-| Mon, Nov. 13 | Ethics | [Collaboration](collaboration.md) |
-| Wed, Nov. 15 | Ethics |  |
-| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations | [The ethics of the Montana election experiment](assignments/ethics.md) |
-| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
-| Mon, Nov. 27 | Exploratory data analysis - clustering | EDA: Part I |
-| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
-| Mon, Dec. 4 |  | EDA: Part II |
+| # | Date | Topic | Assignment due |
+|-----|--------------|---------------------------------------------------------|-----------------------------------------------|
+|1.| Mon, Sep. 25 | Introduction to Computational Social Science |  |
+|2.| Wed, Sep. 27 | Science in a computational era |  |
+|3.| Mon, Oct. 2 | Observational data - counting things |  |
+|4.| Wed, Oct. 4 | Observational data - measurement |  |
+|5.| Mon, Oct. 9 | Observational data - forecasting |  |
+|6.| Wed, Oct. 11 | Observational data - approximating experiments |  |
+|7.| Mon, Oct. 16 | Asking questions - fundamentals | [Proposing an observational study](assignments/observational-data.md) | 
+|8.| Wed, Oct. 18 | Asking questions - digital enrichment |  |
+|9.| Mon, Oct. 23 | Experiments | [Proposing a survey study](assignments/asking-questions.md) |
+|10.| Wed, Oct. 25 | Experiments |  |
+|11.| Mon, Oct. 30 | Simulated data | [Proposing an experiment](assignments/experiments.md) |
+|12.| Wed, Nov. 1 | Simulated data |  |
+|13.| Mon, Nov. 6 | Collaboration | [Simulating your income](assignments/simulation.pdf) |
+|14.| Wed, Nov. 8 | Collaboration |  |
+|15.| Mon, Nov. 13 | Ethics | [Collaboration](collaboration.md) |
+|16.| Wed, Nov. 15 | Ethics |  |
+|17.| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations | [The ethics of the Montana election experiment](assignments/ethics.md) |
+|18.| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
+|19.| Mon, Nov. 27 | Exploratory data analysis - clustering | EDA: Part I |
+|20.| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
+|21.| Mon, Dec. 4 |  | EDA: Part II |
 
 ## Course schedule (readings)
 
@@ -107,17 +107,21 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * ["Chapter 3: Asking Questions." *Bit by Bit*.](http://www.bitbybitbook.com/en/asking-questions/) Sections 3.5-3.7.
     * [Sugie, N. F. (2016). Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups. *Sociological Methods & Research*, 0049124115626176.](http://smr.sagepub.com.proxy.uchicago.edu/content/early/2016/01/18/0049124115626176.full)
     * [Lax, J. R., & Phillips, J. H. (2009). How should we estimate public opinion in the states?. *American Journal of Political Science*, 53(1), 107-121.](http://onlinelibrary.wiley.com.proxy.uchicago.edu/doi/10.1111/j.1540-5907.2008.00360.x/full)
-1. Experiments (fundamentals)
-    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.1-4.4.
-1. Experiments (digitally-enriched)
-    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/) Sections 4.5-4.7.
-    * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
+    * [Kosinski, M., Stillwell, D., & Graepel, T. (2013). Private traits and attributes are predictable from digital records of human behavior. *Proceedings of the National Academy of Sciences*, 110(15), 5802-5805.](http://www.pnas.org/content/110/15/5802.full)
+1. Experiments
+    * ["Chapter 4: Running experiments." *Bit by Bit*.](http://www.bitbybitbook.com/en/running-experiments/)
     * [Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, 489(7415), 295-298.](http://www.nature.com.proxy.uchicago.edu/nature/journal/v489/n7415/full/nature11421.html)
+    * [Milkman, K. L., Akinola, M., & Chugh, D. (2015). What happens before? A field experiment exploring how pay and representation differentially shape bias on the pathway into organizations. *Journal of Applied Psychology*, 100(6), 1678.](http://proxy.uchicago.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2015-15680-001&site=ehost-live&scope=site)
+1. Experiments (more)
+    * [Berinsky, A. J., Huber, G. A., & Lenz, G. S. (2012). Evaluating online labor markets for experimental research: Amazon. com's Mechanical Turk. *Political Analysis*, 20(3), 351-368.](https://www.cambridge.org/core/journals/political-analysis/article/evaluating-online-labor-markets-for-experimental-research-amazoncoms-mechanical-turk/348F95C0FBCF21C3B37D66EB432F3BA5)
+    * [King, G., Pan, J., & Roberts, M. E. (2014). Reverse-engineering censorship in China: Randomized experimentation and participant observation. *Science*, 345(6199), 1251722.](http://science.sciencemag.org.proxy.uchicago.edu/content/345/6199/1251722.full)
+    * [Munger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. *Political Behavior*, 39(3), 629-649.](https://link-springer-com.proxy.uchicago.edu/article/10.1007%2Fs11109-016-9373-5)
 1. Simulated data
     * "[Indirect Inference](http://www.econ.yale.edu/smith/palgrave7.pdf)," New Palgrave Dictionary of Economics
-    * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
     * Benoit, Kenneth, "[Simulation Methodologies for Political Scientists](http://www.kenbenoit.net/pdfs/benoit_2001_TPM.pdf)," *The Political Methodologist*, 10:1, pp. 12-16.
-    * Davidson, Russell and James G. MacKinnon, "Section 9.6: The Method of Simulated Moments," *Econometric Theory and Methods*, Oxford University Press, 2004.
+    * Recommended readings on simulation methods (not required for class)
+        * Wolpin, Kenneth I., *The Limits of Inference without Theory*, MIT Press, 2013.
+        * Davidson, Russell and James G. MacKinnon, "Section 9.6: The Method of Simulated Moments," *Econometric Theory and Methods*, Oxford University Press, 2004.
 1. Simulated data (cont.)
 1. Collaboration
     * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
@@ -127,13 +131,14 @@ All readings are required unless otherwise noted. Adjustments can be made throug
     * [UChicago Social & Behavioral Sciences Institutional Review Board](https://sbsirb.uchicago.edu/)
         * Skim site
         * Specifically read ["Does My Research Need IRB Review?"](https://sbsirb.uchicago.edu/page/does-my-research-need-irb-review-0)
-1. Ethics (cont.)
     * Facebook emotional contagion study
         * [Kramer, A. D., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *PNAS*, 111(24), 8788-8790.](http://www.pnas.org/content/111/24/8788.full)
         * [Editorial Expression of Concern: Experimental evidence of massive-scale emotional contagion through social networks. (2014) *PNAS*, 111(29), 10779.](http://www.pnas.org/content/111/29/10779.1.full)
         * [Watts, D. J. (2014). Stop complaining about the Facebook study. It's a golden age for research. *The Guardian*.](https://www.theguardian.com/commentisfree/2014/jul/07/facebook-study-science-experiment-research)
         * [Rosen, J. (2014). Facebook's controversial study is business as usual for tech companies but corrosive for universities. *The Washington Post*.](https://www.washingtonpost.com/posteverything/wp/2014/07/03/dont-blame-facebook-for-screwing-with-your-mood-blame-academia/?utm_term=.e2bd90d038b1)
         * [Vertesi, J. (2014). The Real Reason You Should Be Worried About That Facebook Experiment. *Time*.](http://time.com/2950699/facebook-experiment-social-science-funding/)
+1. Ethics (cont.)
+    * [Kosinski, M., & Wang, Y. (2017, September 24). Deep neural networks are more accurate than humans at detecting sexual orientation from facial images. *Journal of Personality and Social Psychology.* Retrieved from psyarxiv.com/hv28a](https://psyarxiv.com/hv28a/)
     * [Parry, M. (2011). Harvard Researchers Accused of Breaching Students' Privacy. *Chronicle of Higher Education*.](http://chronicle.com/article/Harvards-Privacy-Meltdown/128166/)
     * [Zimmer, M. (2016). OkCupid Study Reveals the Perils of Big-Data Science. *Wired*.](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
 1. Exploratory data analysis - univariate visualizations
@@ -141,3 +146,5 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Exploratory data analysis - multivariate visualizations
 1. Exploratory data analysis - clustering
 1. Exploratory data analysis - dimension reduction
+
+ 

@@ -5,7 +5,7 @@ date: "October 30, 2017"
 output: pdf_document
 ---
 ##### Course: MACS 30000 Perspectives on Computational Analysis 
-##### Assignment: Proposing a Survey Study 
+##### Assignment: Proposing an Experiment Study 
 ##### Instructor: Dr. Benjamin Soltoff
 
 ## Introduction

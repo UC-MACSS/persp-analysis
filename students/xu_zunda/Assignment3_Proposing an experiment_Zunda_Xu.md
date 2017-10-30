@@ -1,4 +1,4 @@
-## Proposing an survey experiment
+## Proposing an experiment
 
 **Name**: Zunda Xu (zunda@uchicago.edu)
 

@@ -1,15 +1,6 @@
 ###Foreword
 Thanks for Ryan’s comment on my second assignment. I notice that some terms used in my paper are very field-specific, and I will add an appendix explaining these terms following this submission.
 
-# Proposing an Experiment
-```
-Title: Online Game Addiction Reduction from an IBM perspective
-Author: Jiang Wang
-Class: MACS 30000
-Instructor: Benjamin Soltoff
-```
-
-
 ##Introduction
 The game industry is developing fast. From game consoles to smartphones, we can find enjoyable video games almost everywhere. With more enjoyable games, however, people become more addicted. Medias in China and South Korea report that at least 6% of college students are addicted to video games. In China, a significant number of college students spend their nights playing games, distance themselves from their parents and friends, and do poorly at school. The public health institute of China also reports poor health status among addicted students, and obesity has become a major public health concern in China other than smoking. Recently, the central government has been designing a new bill to prevent online game addition. Last month, one of the central spokesperson said that there would be a stricter ID screening process to online game players.
 

@@ -1,0 +1,56 @@
+---
+title: "Propsoing an Experiment"
+author: "Xi Chen"
+date: "October 30, 2017"
+output: pdf_document
+---
+##### Course: MACS 30000 Perspectives on Computational Analysis 
+##### Assignment: Proposing a Survey Study 
+##### Instructor: Dr. Benjamin Soltoff
+
+## Introduction
+Although rationality is an important assumption in modern economic theories, a lot of research in behavioral economics has demonstrated that individuals are not as rational as expected in their decision-making. Kahneman and Tversky (1979) introduced the Prospect Theory, which challenges the traditional expected utility theory, to better address and explain individuals' irrational decision-making under risk in the real world. 
+
+The Prospect Theory proposes that, in the case of positive prospects, i.e., prospects that involve no losses, people have risk-averse preference for a certain gain over a larger but uncertain outcome. For example, people prefer a sure gain of 300 dollars over 400 dollars with 0.8 probability. In the case of negative prospects, i.e., prospects that involve no gains, people have risk-seeking preference for an uncertain loss over a smaller but certain outcome. For example, people prefer a loss of 400 dollars with probability of 0.8 over a sure loss of 300 dollars.  In addition, "losses loom larger than gains", which means people's reaction to a certain amount of losses would be larger than that to the same amount of gains. 
+
+In all economic decision-making behaviors, currency always plays a necessary role in the transaction process. Nowadays, people can easily purchase foreign goods from other countries or sell products to the rest of the world, so people are more familiar with foreign currencies affiliated with different countries and more skillful in transferring the foreign currencies based on the prevailing exchange rates. Past research has demonstrated that currency types can significantly affect individuals' financial decision-making --- Raguhbir and Srivastava (2002) suggest that individuals' valuation of a product in a given foreign currency is biased toward its nominal value, which leads to underspending or overspending according to different exchange rates.  
+
+## Research Question
+Although currency types may make big differences in individuals' decision-making, past research in behavioral economics only involve one currency type in the experiments --- participants' home currency. For example, in the paper of Prospect Theory written by Kahneman and Tversky (1979), they only used Israeli currency as outcomes because their participants were Israeli. Little research has focused on individuals' behaviors when they use foreign currency. Therefore, my research questions are: when using foreign currency, are people rational? If not, can the Prospect Theory still be successfully applied to model and predict people's decision-making behaviors involving foreign currencies? 
+
+## Experimental Design
+I will recruit participants from Amazon Mechanical Turk which can mimic several aspects of traditional lab experiments (Salganik, 2017). I will pay each participant $0.80 for each HIT, i.e., finishing one experiment. With MTurk, such a powerful digital system, I can have a large sample size of participants with wide variety of background. To be specific, I will use Qualtrics to realize the experimental design and then put the Qualtrics link in the MTurk to launch the experiment. In the Qualtrics, researchers can choose to evenly randomize the conditions being presented to participants. In other words, this helpful function enables this experiment to randomize different conditions. Therefore, this experiment will meet requirements of being computationally-enhanced at least in two steps: recruitment of participants and randomization of treatment. 
+
+This online experiment is based on a between-subject design. Participants will be randomly assigned to either the control group, American Dollar condition, or the treatment group, Mexican Peso condition. Participants in both conditions will be directed to read a hypothetical scenario that they are traveling in the border of Juarez, Mexico. In the control group, participants will be told that the cash they have on hand is American Dollar, which is their home currency, while in the treatment group, participants will be told that, in their pocket, the currency is Mexican Peso, the Mexican currency. Both groups of participants will then be directed to answer several choice problems. 
+
+There are two parts involved in the choice problems. In the first part, participants in both conditions will be told that they have just finished dinner at a restaurant, the bill is $27.50, and they could leave a tip with the money in their pocket, either in the American Dollar or the Mexican Peso. Then, all participants will be asked to enter the percentage of the tip they would leave with the currency they have. The purpose of this part is to examine if people are rational when they use foreign currency. If they are rational, they should enter similar tipping percentage in both currencies. However, my hypothesis is that they are irrational, and the tipping percentages would be significantly different in these two currencies. 
+
+In the second part, both groups of participants will be presented with several gambles. The gamble questions will be similar to those reported by Kahneman and Tversky (1979). For example, the participants will be asked to choose one of the two choices:
+
+-	A: gain 400 with probability of 0.80         vs.           B: gain 300 for sure
+
+-	A: lose 400 with probability of 0.80         vs.           B: lose 300 for sure
+
+-	A: gain 400 with probability of 0.20         vs.           B: gain 300 with probability of 0.25
+
+-	A: lose 400 with probability of 0.20         vs.           B. lose 300 with probability of 0.25
+
+The money amount will be presented in different currency types according to their group assignments. The aim of the second part is to see if the Prospect Theory is still powerful in modeling individuals' decision making when using foreign currency.  
+
+## Assessment of the Experimental Design --- Validity
+This experiment may have to make trade-offs: sacrificing external validity for internal validity. 
+
+###Internal Validity
+This experiment will have good Internal validity because it is operationalized in the digital system. In the lab experiments, researchers always worry that confounding variables may undermine the treatment effect. For example, when giving instructions to the participants, different experimenters may have slightly various expression or body languages, which may potentially bring unintended effects to the experiment. In this online experiment without any real experimenter, we don't have such concern. In addition, the randomization will be computationally conducted through Qualtrics function. As Salgnik (2017) suggests, the digital system "makes it easier to ensure that the treatment is delivered as designed to those who are supposed to receive it and to measure outcomes for all participants."
+
+### External Validity
+However, recruiting convenience sample from MTurk is a double-edged sword: it helps to reduce concerns of internal validity, but raise more worries about external validity. The MTurk sample may not be as representative as expected, because some of the participants are experienced MTurker who are so familiar with the MTurk mechanisms that they are easily aware of the purpose of the experiments. When the participants tend to guess or understand the purpose of the experiment, the treatment effects may be greatly undermined. Furthermore, MTurk has been criticized a lot that several participants just do the HITS for money, so they may not take the experiments so serious and careful, or even take the experiments more than once. This may lead to more dirty data. Therefore, all of the above issues may pose more concerns on external validity.
+
+## Reference
+Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. Econometrica: Journal of the econometric society, 263-291.
+
+Salganik, Matthew J. (2017). Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press. Open review edition.
+
+Raghubir, P., & Srivastava, J. (2002). Effect of face value on product valuation in foreign currencies. Journal of Consumer Research
+
+

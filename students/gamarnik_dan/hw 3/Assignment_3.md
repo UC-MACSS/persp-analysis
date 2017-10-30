@@ -88,7 +88,7 @@ because of this digitized design, the costs are drastically reduced. As
 mentioned by [Salganik
 (2017)](http://www.bitbybitbook.com/en/running-experiments/exp-advice/zero-variable-cost/),
 this kind of design should have virtually no variable cost, especially
-compared to an M-Turk experiment.
+compared to paid services like M-Turk experiments.
 
 ### Assessment
 

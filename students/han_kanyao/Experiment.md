@@ -60,3 +60,7 @@ There is a survey in my research design that is used for collecting participants
 The casual mechanisms in this  experiment has been discussed in the section of measurement. In summary, many researches in social sciences only consider the casual inference between abstract concept such as homosexuality and homophobia. In other words, many people just say some people are discriminated because they are gay. However, this research runs experiments with slightly different versions of treatment (three groups with different/no information plus watching slightly different video), and thus it is more easy to find the possible mechanisms, that is, homosexual identity, feminine expression and homosexual behavior.
 
 
+## Reference
+*Birkett, M. and D. L. Espelage (2009). "LGB and Questioning Students in Schools: The Moderating Effects of Homophobic Bullying and School Climate on Negative Outcomes." J Youth Adolescence 38: 989-1000.*
+
+*Doan, L. and A. Loehr, et al. (2014). "Formal Rights and Informal Privileges for Same-Sex Couples: Evidence from a National Survey Experiment." American Sociological Review 76 (6): 1172-1195.*

@@ -57,7 +57,7 @@ However, this is not to say the project is without any problems, there are numer
 
 ##### Privacy and self-censorship
 
-The first possible problem might be issues regarding the app's privacy since it is collecting their location data. Even if it is not unethical or illegal, this might make them suspicious and not want to be forthcoming about their political views.
+The first possible problem might be issues regarding the app's privacy since it is collecting participants' location data. Even if it is not unethical or illegal, this might make the users suspicious about where their data is going and not want to be forthcoming about their political views.
 
 To help solve for this, I will have small group discussions (similar to Sugie's (2016) approach) where I discuss issues of privacy. I will encourage them to ask questions and allow them to turn off the location data. However, I will urge them to not do so since it is problematic with the study. I believe that by being forward with the design of the study and by having them ask questions it will assuage their privacy concerns and make them less likely to self-censor. In sum, being open about the data collection and having them ask questions will solve any suspicions about privacy.
 

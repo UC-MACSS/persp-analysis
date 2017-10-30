@@ -10,20 +10,7 @@ How is liberal sex education related to the consumption of feminine hygiene and 
 
 ## Introduction
 
-In my previous proposal of a survey study, I've looked at what's the current
-landscape of sex education and awareness on related topics among Chinese
-reproductive-age females, and how is it related to their reproductive health and
-consumption of feminine goods, because it's becoming much more acceptable to
-discuss sex in China over the past few years and the market for feminine
-hygiene and sex products has also experienced exponential growth. (36kr.com
-2017) While surveys are particularly useful in understanding our population's
-past sex education and their awareness, they were less conclusive in
-discovering the causal mechanism between sex education and consumption of
-related goods because of the possible confounders such as personal income.
-Therefore, I propose to run an experiment to uncover this link, and more
-specifically, I'd like to look at whether more liberal and feminist sex
-education will cause females to increase their consumption in goods that
-improve their own sexual health and sexual life. 
+In my previous proposal of a survey study, I've looked at what's the current landscape of sex education and awareness on related topics among Chinese reproductive-age females, and how is it related to their reproductive health and consumption of feminine goods, because it's becoming much more acceptable to discuss sex in China over the past few years and the market for feminine hygiene and sex products has also experienced exponential growth. (36kr.com 2017) While surveys are particularly useful in understanding our population's past sex education and their awareness, they were less conclusive in discovering the causal mechanism between sex education and consumption of related goods because of the possible confounders such as personal income. Therefore, I propose to run an experiment to uncover this link, and more specifically, I'd like to look at whether more liberal and feminist sex education will cause females to increase their consumption in goods that improve their own sexual health and sexual life. 
 
 ## Plan for Conducting Digital Experiment
 
@@ -96,11 +83,6 @@ Since sex education makes people become aware of the needs for certain products 
 
 In conclusion, while the specific research I'm focusing on for digital experiment is slightly different from the survey study, they are compliment to each other and both are able to provides insights into the area of sex education and consumption of feminine hygiene and sex products.  
 
-## References
-
-36Kr. 2017. "Dayima Announced That It Has Achieved Profitibality During The First Half Of Year 2017". 36Kr.Com. https://36kr.com/p/5089531.html.
-"Dayima | Crunchbase". 2017. Crunchbase. https://www.crunchbase.com/organization/dayima.
-"Live China Population (2017). Current Population Of China — Countrymeters". 2017. Countrymeters.Info. http://countrymeters.info/en/China.
 
 
 

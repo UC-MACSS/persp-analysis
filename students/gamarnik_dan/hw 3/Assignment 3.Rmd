@@ -2,7 +2,7 @@
 title: "HW 3"
 author: "Dan Gamarnik"
 date: "October 30, 2017"
-output: html_document
+output: md_document
 ---
 
 # Feeding The Mouth That Bites: Subsidies and Secessionist Demands In Catalonia, An Experimental Method

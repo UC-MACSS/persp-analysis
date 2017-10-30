@@ -1,6 +1,6 @@
 # Proposing an Experiment on the Possibility and Potential Cause for One to Update One's False Beliefs
 
-Xiuyuan Zhang update
+Xiuyuan Zhang
 
 ## Research Question
 Human beings have certain beliefs of the world that they live in, ranging from the sun rises from the east, mosquitoes carry malaria, to water is essential to life. These beliefs, on the one hand, provide human beings a stable structure within with they plan their daily activities; on the other hand, if these beliefs do not have sound scientific evidence as support, they may strengthen the propagation of misconceptions. In this proposal, an experiment is proposed to test the resilience of people's prior beliefs on the popular saying of "Eight glasses of water a day" by measuring whether this belief can be updated when people are given more information, directly pointing out the falsehood of such a statement. Furthermore, whether the source of a given information affects the sufficiency for one to change their belief on a certain subject?

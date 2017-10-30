@@ -17,7 +17,7 @@ Here is an example of how to conduct the experiment on Monopoly, which is a popu
 
 To test players’ reactions to discounts in the store, we divide 500 players into four groups (100 players each). Each group contains the same proportions of different kinds of players. That is, the compositions of four groups are controlled to be identical. The following chart illustrates how to give treatments to each group.
 
-![Chart1](./chart/chart.jpeg)
+![Chart1](./chart/pa3_chart1.jpeg)
 
 As the chart shows, we give different information about discount to different groups at the initial day. One week later, we offer discounts to group 1, 2 and 3, but not 4. After the discount day, products will be back to the original prices. Group 4 is the control group. Other groups are treatment groups.
 

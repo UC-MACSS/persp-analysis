@@ -68,8 +68,8 @@ day, one week, one month and four months since the treatment occurred to
 see if it still has significant effect compared to the controls.
 Finally, it will observe whether the users are anonymous.
 
-This will be like the paper by \[Munger (2017)\]
-(<https://link-springer-com.proxy.uchicago.edu/article/10.1007%2Fs11109-016-9373-5>)
+This will be like the paper by [Munger
+(2017)](https://link-springer-com.proxy.uchicago.edu/article/10.1007%2Fs11109-016-9373-5)
 who created a bot to shame those posting racist messages on twitter. In
 this case however, it will push a message of improved funding to see if
 that reduces the secession sentiment. Likewise, this will control for

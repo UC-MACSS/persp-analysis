@@ -31,13 +31,13 @@ Finally participants will be asked their impression on the man in one of the vid
 ## Measurement 
 
 1. Homosexual Identity -> Homophobia 
-We can compare people in three groups who watch the same video. If the people in first group, who are told that the man in the video is gay, have a more negative impression on him than other groups who watch the same video, we can conclude identity can cause homophobia. Here the casual mechanism is homosexual identity.
+We can compare people in three groups who watch the same video. If the people in first group, who are told that the man in the video is gay, have a more negative impression on him than other groups who watch the same video, we can conclude identity can cause homophobia. Here the causal mechanism is homosexual identity.
 
 2. Gender Expression(Femininity) -> Homophobia
-In this measurement we can respectively compare people in the same groups who watch the first video and second video. If the people watching the first video have a more negative impression on the man than the people watching the second video , we can conclude femininity can cause homophobia given that gay are generally more feminine than heterosexual men. Here the casual mechanism is gender expression.
+In this measurement we can respectively compare people in the same groups who watch the first video and second video. If the people watching the first video have a more negative impression on the man than the people watching the second video , we can conclude femininity can cause homophobia given that gay are generally more feminine than heterosexual men. Here the causal mechanism is gender expression.
 
 3. Homosexual Behavior -> Homophobia?
-We can also respectively compare people in the same groups who watch the second video and third video. If the former have a more positive impression on the man than the latter, we can conclude homosexual behavior can cause homophobia. Here the casual mechanism is homosexual behavior,
+We can also respectively compare people in the same groups who watch the second video and third video. If the former have a more positive impression on the man than the latter, we can conclude homosexual behavior can cause homophobia. Here the causal mechanism is homosexual behavior,
 
 ## Vadility    
 
@@ -57,7 +57,7 @@ External validity should be seriously considered in my research design since the
 There is a survey in my research design that is used for collecting participants' demographic information. Therefore, if we hope to understand a certain group of people, we can reconstruct a set of data based on the demographic information to fit the composition of group that we want to study. As I mentioned above, this experiment can obtain a larger sample size with considerably lower cost than traditional experiment, it is possible for us to reconstruct data.
 
 ## Causal Mechanism
-The casual mechanisms in this  experiment has been discussed in the section of measurement. In summary, many researches in social sciences only consider the casual inference between abstract concept such as homosexuality and homophobia. In other words, many people just say some people are discriminated because they are gay. However, this research runs experiments with slightly different versions of treatment (three groups with different/no information plus watching slightly different video), and thus it is more easy to find the possible mechanisms, that is, homosexual identity, feminine expression and homosexual behavior.
+The causal mechanisms in this  experiment has been discussed in the section of measurement. In summary, many researches in social sciences only consider the causal inference between abstract concept such as homosexuality and homophobia. In other words, many people just say some people are discriminated because they are gay. However, this research runs experiments with slightly different versions of treatment (three groups with different/no information plus watching slightly different video), and thus it is more easy to find the possible mechanisms, that is, homosexual identity, feminine expression and homosexual behavior.
 
 
 ## Reference

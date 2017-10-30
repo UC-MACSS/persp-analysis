@@ -1,0 +1,65 @@
+---
+title: 'Does sharing improves reading? A Comparison between Paper-based Reading and
+  Social Reading Apps '
+author: "Yilun Dai"
+date: "10/29/2017"
+output: word_document
+---
+
+# 1.	Introduction
+
+    Reading used to be private and personal, and sharing thoughts on books used to be a behavior that is separated from reading itself, in classroom and reviewing articles. However, in the digital age, as sharing becomes a daily routine, social reading apps become popular. Not only can readers read the once traditional paper-back books on digital reading platforms, but they can also read and social at the same time by making public notes and posting on social media using other accounts associated with the app. The change in reading tools and the way of reading might also change reading habits and social media interactions.\
+    
+# 2.	Research Question
+    
+    This research is going to compare and contrast the speed of reading, the level of comprehension, and online social interactions about the book between traditional, paper-based reading and social reading apps, and examine the underlying mechanism using computationally-enhanced experiment. \
+    
+# 3.	Research Design
+
+## 3.1.1 Participants 
+    
+    I am going to recruit participants from Amazon Mechanical Turk mentioned by Salganik (2017). All the participants will be asked for their age via a link during recruiting, and they will be divided into different age groups: below 18, 18 to 25, 25 to 40, 40 to 55, and above 55. \
+    
+## 3.1.2 Randomization
+
+    I will use computer to randomly assign participants in each age groups to control and treatment groups. To ensure that the two groups originally have similar reading paces, all participants are assigned the same book to read before the treatments, and will be asked for the time used to finish reading the book. \
+    
+## 3.1.3 Delivering Treatments
+
+    There will be 5 phases in this experiment, each will last two weeks. For each phase, participants in both groups will be assigned the same, newly published book to read. The books will be randomly selected by a computer from the pool of newly published books available on the social reading app. For the first phase, participants in the control group will read the paper-back version of the book, while participants in the treatment group will read the digital book on the social-reading app. The annotation feature in the social-reading app will be turned off, and participants will not be able to share their thoughts directly on the app using the account associated. Both, however, can take notes using paper and pen. \
+    For the second phase, participants in the control group will read in paper-back; participants in the treatment group will read on the social-reading app while the annotation feature in the app is enabled. However, the annotation feature will still be set as “private mode”, meaning neither friends nor strangers on the app can view their notes during reading. Participants are still not allowed to share their thoughts and reviews of the book via social media. \
+    For the third phase, the control group will read the paper-back version; the treatment group will read on the social reading app while setting their annotation feature to “enable public review”. \
+    For the fourth phase, the control group will read the paper-back version; the treatment group will read on the social reading app, set their annotation feature to “enable public review”, and will be allowed posting of thoughts and reviews of the book via their social media account associated with the app.\
+    For the final phase, the control group, while still be reading the paper-back, will be allowed to post their thoughts and reviews on the book via their own social media accounts. The treatment group will still read on the social reading app, take notes that are open to the public, and post thoughts and reviews of the book via the account associated. \
+    
+## 3.1.4 Measuring Outcomes\
+
+    There are three aspects that this research is concerned about: the pace of reading, the effectiveness of reading, and social activities relating to reading. \
+    To compare the pace of reading, I will need the number of pages read and the time it takes to finish reading the book. Since paper-back book cannot be connected to database, I will send the participants a link each day to update the pages they are at on that day. It is easier to track the status of participants in the treatment group by extracting data from the app, since the app will automatically show the page a reader is at. \
+    By the end of each phase, an online gamified assessment will be delivered to participants in each group to measure their effectiveness of reading. Participants will be tested on the content of the book through multiple-choice questions, and the computer will collect the number of questions answered correctly. 
+    Social interactions will be assessed for the final phase of the experiment. Numbers of postings on social media will be collected by computer. For the control group, since I will need to do text mining, identify the posts related to the book via keywords related to the book, and count numbers of postings in Python. Since the treatment group will be able to post directly on their social media accounts via the reading app, and these postings will explicitly show “sent from the reading app”, obtaining the numbers of postings will be relatively less work.\
+    
+# 4.	Assessment of design
+
+## 4.1 Validity
+
+    To ensure statistical validity, statistical analysis will be run on R and Python, and the same analysis procedure will be run at least twice to confirm that the results are the same. Measurements are in percentages to correct the difference in numbers in different age groups. Using packages in R and Python, we will be able to test for and visualize heterogeneity. \
+    Because the treatment is received via social reading apps and measurement is delivered online, the data are automatically collected by the computer to enhance internal validity. The recruitment platform provided by Amazon Mechanical Turk make it possible to recruit a large number of participants, and participants’ reading environment and other reading habits will not be interfered, making it easier to generalize, hence eternal validity. \
+    I will assess construct validity from three aspects. “Reading efficiency” in the research means the quantity and the quality of reading during a certain amount of time, i.e., the speed of reading and the level of comprehension. The speed of reading is matched with the numbers of pages read on each day and during a time frame of two weeks. The level of comprehension is matched with the number of correct answers to multiple choice questions. “Social interactions” in the research means the communications with others on social media about the book, and this concept is matched with the number of postings.\ 
+    
+## 4.2 Heterogeneity
+
+    Social reading apps might have different effects on people of different ages. To examine heterogeneity effects caused by age, I divide participants into different age groups. \
+    Because the participants are recruited online, they are presumably proficient internet users. However, another heterogeneity to consider and to implement in future experiments will be the extent to which the participants use the internet and social media. Those who use social media often and those who rarely use social media might change their reading habits differently under the impact of social reading apps. \
+    
+## 4.3 Ability to measure causal effects
+
+    One of the methods offered by Salganik(2017) to better learn the mechanisms is to enable full factorial design. While the method used in this experiment is not fully factorial, it is similar to the “component layering” example describled by Salganik. The treatments, from phase one to four, are: digital book; digital book + digital annotation; digital book + digital annotation + notes open to the public; digital book + digital annotation + notes open to public + posting via account associated. For phase five, comparison is between the usage of social media by paper-back readers and social reading apps reader.\
+    To further implement full factorial design, we can design an experiment with one more phase, and the experiment will include a phase with digital reading + social media posting.\
+    
+<div class="pagebreak"></div>
+
+# References\
+
+Salganik, Matthew J. 2017. Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press. Open review edition.
+

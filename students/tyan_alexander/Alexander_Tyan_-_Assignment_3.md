@@ -28,7 +28,7 @@ climate change. The research question is: is exposure to information
 containing evidence of human-induced climate change effective in
 changing a person’s opinion about the topic?
 
-Computationally-Enhanced Experiment Design
+### Computationally-Enhanced Experiment Design
 
 As per Salganik’s (2017) typology, this is a fully-digital field
 experiment, with all four steps (recruiting participants, randomizing,

@@ -1,0 +1,18 @@
+---
+title: "HW_3 - Proposing an Experiment"
+author: "Nora Nickels"
+date: "10/30/2017"
+output: github_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Assignment 3
+## Perspectives of Computational Analysis - Fall 2017
+
+### Research Question: Could digital social media influence messages associated with male vs. female interest reveal the risk *and/or* create a platform for alleviation of stereotype threat in a digital media domain?

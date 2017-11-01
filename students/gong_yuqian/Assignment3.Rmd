@@ -1,0 +1,82 @@
+---
+title: "Assignment 3"
+output: html_document
+Name: Yuqian Gong
+---
+Measuring the effect of host’s profiles on guests’ choices through an experimental study 
+Yuqian Gong
+
+#Introduction and Question of interest
+In shared economy business models, what factors of a renting post could affect its trustworthiness level and further predict a guest’s choice is an interesting topic that provides considerable insights for social scientists to study social networks and swift trust theory. As most researchers choose to measure factors through observational data, a survey study was designed in last proposal in expectation of collecting the first-hand and updated feedback from Airbnb users to improve the accuracy of our study results. 
+
+Despite the advantages of survey study compared with observational data study, it still has limitations in simulating an environment where honest and true preferences from potential Airbnb users are collected. Sometimes potential guests’ preferences reflected in survey will not be consistent with their choices in real life. Fortunately, a digital randomized experiment creates a more realistic context where the purpose of our study can be concealed from participant, which prevents them from making decisions that bears the inconsistency discussed above. Besides, compared with traditional lab or field experiments, online digital experiments make it possible to engage a large number of participants as participation is more flexible and the format can be designed to be very inviting. 
+
+In this research proposal, we narrow down our research topic to examine whether and how disclosure of a host’s profile influences this host’s level of trustworthiness and how it predicts a potential guest’s choice of this host. Three dimensions of a host’s profile are of particular interest: the race of the host recognized from his or her picture, the quality of the host’s biography (evaluating whether the contents are interesting, whether there are any spelling errors and so on) and the response rate of the host.
+
+#Constructing sample population
+The population of interest includes all potential guest users at Airbnb. Considering the difficulty of gaining Airbnb’s consent to contact a random sample of users, we will recruit our participants from Amazon MTurk, a common platform to conduct social science research. We will not reveal the purpose of our research and we believe the sample of participants will be randomly selected from a pool of all MTurk workers. Every participant will be paid a small amount of money as a reward. Besides, everyone will be put into a lottery of gaining a free staying experience at Airbnb. This lottery will attract those who are passionate about homestay and who share similar features with real Airbnb users (or who are genuine Airbnb users), which makes our sample a good approximate of our population of interest.
+
+
+
+#Experiment design
+As described above, three dimensions including the race of the host, the quality of the host’s biography and the response rate of the host, are involved to test how each part of a host’s profile contributes to a guest’s final choice. The experiment will be a 2^3(8) factorial design where each possible combination of the three elements is tested and other dimensions outside our research range will not change. In fact, eight treatment experiments could be conducted on the same sample of participants and their responses in each round will be compared to measure the effect of each dimension or each combination. To be specific, in one round of small experiment, participants need to rate each of the two Airbnb posts based on their first impression and the score range is from 1 to 10; the only differences of these two posts will lie in one or more of the three dimensions while keeping other factors equivalent. If one post’s score is higher than the other, it indicates that the former post looks more trustworthy than the latter one for a potential guest.
+
+In the first experiment, the information revealed in each post will be all equivalent, which means the hosts are of the same race, their biographies are equally interesting and grammatically correct, their response rates are the same, and also other factors such as picture qualities, decoration styles and overall ratings are generally the same (notice that they are still two different posts). The rating results from this first experiment also make sure participants don’t randomly pick one option if the majority of them give similar scores to the two options. Then next seven rounds will include experiments where only one dimension is different or combinations of any two dimensions or all three of them are different, given other factors equivalent. The order of the following seven experiments will be random in order to prevent the participants from noticing our research purpose and behave in certain ways that are not reflective of their true behaviors. 
+
+Prior to the above experiments, pre-treatment information will be collected from these participants. Information includes: a person’s gender, profession, race, age, the city he or she comes from, how long he or she has been registered on Airbnb, the number of bookings during the past year on Airbnb and etc. We believe that this set of information will be useful when we measure heterogeneity of treatment effects. 
+
+
+#Assessment of the experimental design
+#Internal validity
+One aspect that would undermine the internal validity of this experiment is the difficulty of 
+keeping factors other than the three dimensions equivalent for two comparative posts. How can we make sure that the picture qualities or furnishing styles look equivalent in two different posts? Sometimes even small differences in these factors could lead a participant to prefer one to the other. Fortunately, we are measuring the average preference trends of a group of people and personal tastes may play a negligible role in the overall results. 
+
+Besides, there is a risk that participants are smart enough to guess the purpose of this research and behave in opposite ways from their internal preferences. For instance, a participant might notice that the only major difference of two posts is the race of the host and will reveal his or her racial bias even if he or she is a racist. 
+
+#External validity 
+Will the sample from Mturk be representative of all Airbnb users? The answer is probability not if we argue that participants from Mturk mainly have low income and they might even never use Airbnb before. Or participants mainly come from one racial group. We hope that by collecting pre-treatment information we are able to detect any misrepresentation. 
+
+#Measure heterogeneity of treatment effects 
+Pre-treatment information can be also used to measure heterogeneity of treatment effects. Participants can be divided into various groups based on the pre-treatment information collected from them and any differences of hosts’ profile treatment effects can be measured across the groups. In the book Bit by bit, Doleac and Stein found out that black sellers faced much more discrimination from cities where there are high crime rates and high segregation [1]. In our research question, we also assumed that geographical locations where a participant comes from has certain impacts on his or her formation of any racial bias. Other factors also cause heterogeneity of treatment effects. For instance, active Airbnb users might have higher expectations on hosts’ response rates as they travel more frequently and therefore are not patient enough to wait too long for a host to respond. So we also incorporated questions indicating whether the participant is an active user or not. Although some pre-treatment information is collected to verify our assumptions, there is no guarantee that our intuitive assumptions may be correct or it is very likely that other important factors that cause heterogeneity are missed. 
+ 
+#Causal mechanisms 
+Inspired by the utility saving experiment in the book Bit by bit, the 2^3 factorial design is applied to break down the overall effects of hosts’ profiles on guests’ preferences, which allows us to measure the effects separately from three dimensions or any combination of them [1]. However, there is still limitation in our research design to investigate the subtle processes where participants internal preference changes. For instance, we may find out that longer and more detailed biography can increase a host’s trustworthiness, but currently there is no credible method to figure out how improvement could cause internal preference shifts in participants mind. It could be explained that more self-disclosure contributes to higher social attraction. However, our experiment is not the best way to provide scientific explanations and other study methods such as interviews or open-ended surveys may be better at finding out changes in participants’ feelings of trust. 
+
+References:
+1.	Matthew J. Salganik. Bit by Bit: Social Research in the Digital Age. Princeton University Press. (2017) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

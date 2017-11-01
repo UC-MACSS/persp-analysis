@@ -63,6 +63,8 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 |20.| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
 |21.| Mon, Dec. 4 |  | EDA: Part II |
 
+> The final exam will be distributed on Tuesday December 5 at 12pm and must be submitted by 11:59pm Wednesday December 6.
+
 ## Course schedule (readings)
 
 All readings are required unless otherwise noted. Adjustments can be made throughout the quarter; be sure to check this repository frequently to make sure you know all the assigned readings.

@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+rm(list=ls())
+set.seed(1)
+library(tidyverse)
+```
+
+
+```{r}
+
+income_sim <- function(p, g, SD, years, starting_income){
+  
+  #find error terms
+  Errors <<-  as.data.frame(matrix(nrow=years, ncol= 2))
+  colnames(Errors) <<- c("Year", "Error")
+  Errors[,1] <<- 2019:(2019+years-1)
+  Errors[,2] <<- rnorm(years, mean = 0, sd = SD)
+
+  
+  #empty matrix to save data output
+  income_data <<- as.data.frame(matrix(nrow=years, ncol= 1))
+  
+  
+  #first year
+  log(Errors[1,2])
+  working_income <- log(80000) + Errors[1,2]
+  income_data[1,1] <<- round(exp(working_income))
+  
+  #model
+  for (i in (2:years)){
+  working_income <- NA
+  working_income<- ((1-p)*(log(starting_income)+g*(Errors[i,1]-2019))) + # g * (year-1) + 
+                    p*log(income_data[i-1,1]) + 
+                    Errors[i,2]
+  
+  income_data[i,1] <<- round(exp(working_income))
+
+  #tidy up
+  rownames(income_data) <<- 2019:(2019+years-1)
+  colnames(income_data) <<- "money"
+  
+  }
+  return(income_data)
+}
+
+income_sim(SD=.1, p=.2, g=.03, starting_income = 80000, years = 40)
+
+ggplot(income_data, aes(rownames(income_data), money))+
+  geom_col()
+
+```
+

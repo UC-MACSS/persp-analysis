@@ -1,0 +1,98 @@
+---
+title: "HW_4 - Simulating your income"
+author: "Nora Nickels"
+date: "11/6/2017"
+output: github_document
+---
+
+## Assignment 4
+## Perspectives of Computational Analysis - Fall 2017
+
+# Load necessary libraries
+
+```{r}
+
+library(tidyverse)
+
+set.seed(1234)
+
+# function to calculate growth in annual income
+
+annual_income <- function(base_inc, p, g, sigma, n_years, start_year = 2019){
+  errors <- rnorm(n_years, mean = 0, sd = sigma)
+  
+  annual_income_log <- vector("numeric", n_years)
+  
+  for(year in seq_len(n_years)){
+    if(year == 1){
+      annual_income_log[[year]] <- log(base_inc) + errors[[year]]
+    } else {
+      annual_income_log[[year]] <- (1 - p) * (log(base_inc)) + g * (year - 1) +
+        p * annual_income_log[[year - 1]] + errors[[year]]
+    }
+  }
+  
+  data_frame(inc = exp(annual_income_log),
+             year = 2019 + seq_len(n_years) - 1)
+}
+
+
+# for seq.length if else statement with if part being first income and else being years after that 
+
+# simulate 10000 times
+n_sims <- 10000
+n_years <- 40
+
+# use reun to simulate data, then create a data frame
+sim_income <- n_sims %>%
+  rerun(annual_income(base_inc = 80000, p = .2,
+                      g = 0.03, sigma = .1,
+                      n_years = n_years, start_year = 2019)) %>%
+  bind_rows(.id = "id") %>%
+  select(id, year, inc)
+
+View(sim_income)
+
+# plot the first income path
+sim_income %>%
+  filter(id == 1) %>%
+  ggplot(aes(year, inc)) +
+  geom_line() +
+  labs(title = "Simulated income growth over time (one simulation)",
+       x = "Year", 
+       y = "Annual Income") +
+  scale_y_continuous(labels = scales::dollar)
+
+# part 2 - simulated income in 2019
+sim_income %>%
+  filter(year == 2019) %>%
+  ggplot(aes(inc)) +
+  geom_histogram(bins = 50) +
+  scale_x_continuous(labels = scales::dollar) +
+  labs(title = "dis",
+       x = "Income",
+       y = "frequence of obs")
+
+# Above 1000k
+sim_income %>%
+  filter(year == 2019) %>%
+  mutate(above_100k = inc >100000) %>%
+  summarize(n_above = sum(above_100k),
+            n = n(),
+            n_above_pct = n_above /n)
+
+# Less than 70k
+
+
+  
+  
+  
+  
+  
+
+
+#3 17.5%
+
+```
+
+pd.melt similar to gather in tidyverse

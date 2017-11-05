@@ -70,8 +70,6 @@ inc_function <- function(n_year, st_year, n_sample,
 }
 ```
 
-### Normal Distribution?
-
 This function will generate a tidy data frame with tibble format containing 4 variables: year, ID, log income and income.
 
 First question: Plot one of the lifetime income.
@@ -119,6 +117,8 @@ ggplot(sim_19, aes(inc)) +
 ```
 
 ![](Simulation_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
+
+### Normal Distribution?
 
 **Through Comparing the histogram with normal distribution curve, the distribution of of the histogram is extraordinarily close to normal distribution.**
 

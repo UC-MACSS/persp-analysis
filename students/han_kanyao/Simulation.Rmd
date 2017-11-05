@@ -7,9 +7,10 @@ output: github_document
 
 There are two files for this assignment, one markdown and one R markdown. You can run my codes in R markdown file or review all results in markdown file. 
 
+## Loding sca and tidyverse packages
 ```{r}
-library(tidyverse)
 library(sca)
+library(tidyverse)
 ```
 
 ## Simulation Function with Tidy Data
@@ -97,7 +98,7 @@ ggplot(sim_19, aes(inc)) +
        x = "Income", y = "Density")
 ```
 
-### Normal Distribution?
+### Distribution
 **Through Comparing the histogram with normal distribution curve, the distribution of of the histogram is extraordinarily close to normal distribution.**
 
 

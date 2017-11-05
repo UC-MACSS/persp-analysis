@@ -5,11 +5,15 @@ Nov 3, 2017
 
 There are two files for this assignment, one markdown and one R markdown. You can run my codes in R markdown file or review all results in markdown file.
 
+Loding sca and tidyverse packages
+---------------------------------
+
 ``` r
+library(sca)
 library(tidyverse)
 ```
 
-    ## + ggplot2 2.2.1          Date: 2017-11-04
+    ## + ggplot2 2.2.1          Date: 2017-11-05
     ## + tibble  1.3.3             R: 3.4.2
     ## + tidyr   0.6.3            OS: Windows 10 x64
     ## + readr   1.1.1           GUI: RTerm
@@ -22,10 +26,6 @@ library(tidyverse)
 
     ## * filter(),  from dplyr, masks stats::filter()
     ## * lag(),     from dplyr, masks stats::lag()
-
-``` r
-library(sca)
-```
 
 Simulation Function with Tidy Data
 ----------------------------------
@@ -118,7 +118,7 @@ ggplot(sim_19, aes(inc)) +
 
 ![](Simulation_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
 
-### Normal Distribution?
+### Distribution
 
 **Through Comparing the histogram with normal distribution curve, the distribution of of the histogram is extraordinarily close to normal distribution.**
 

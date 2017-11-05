@@ -1,0 +1,151 @@
+---
+title: "YuLiqiangHw4"
+author: "Liqiang Yu"
+date: "11/1/2017"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Q1
+
+
+```{r }
+library(scales)
+sigma = 0.1
+mean = 0
+inc0 = 80000
+rho = 0.2
+t = 2058
+g = 0.03
+inc = list()
+inc0_ln = log(inc0)
+##Sampling error
+error <- matrix(rnorm(400000, mean, sigma),10000,40)
+##Randomly choose a set of errors from 10,000 sets to plot 
+rdm_num <- sample(1:10000, 1)
+##Initial condition
+inc <- inc0_ln + error[rdm_num,1]
+## Define income function
+income.f = function(inc0_ln,inc,g,rho,t,error,rdm_num){
+
+  result=(1-rho)*(inc0_ln+g*(t-2019))+rho*inc[t-2019]+error[rdm_num,t-2018]
+  return(result)
+}
+#Simulate one example
+for (i in 2020:2058){
+  inc[i-2018] <- income.f(inc0_ln,inc,g,rho,i,error,rdm_num)
+}
+#Simulate 10,000 example
+for (n in 1:10000){
+  
+  inc1 = rep.int(0,10000)
+  inc1 <- inc0_ln + error[n,1]
+  for (i in 2020:2058){
+  inc1[i-2018] <- income.f(inc0_ln,inc1,g,rho,i,error,n)
+
+  }
+  
+}
+#Plot
+inct <- (exp(inc))
+year <- c(2019:2058)
+plot(year,inct, main = "Lifetime Income Path", xlab="Year", ylab="Income in dollars")
+lines(year,inct)
+```
+Refer to the graph above.
+
+## Q2
+
+
+
+```{r echo=FALSE }
+inc_0 = rep(0,10000)
+for (i in 1:10000){
+  inc_0[i] <- inc0_ln+error[i,1]
+}
+
+
+hist(exp(inc_0), breaks=50, main = "Income in 2019", xlab = "Income in dollars")
+inc_0_exp <- exp(inc_0)
+#Percentage of earning more than $100,000
+sum(inc_0_exp>100000)/10000
+#Percentage of earning less than $70,000
+sum(inc_0_exp<70000)/10000
+
+```
+The percent of MACSS class that earn more than \$100,000 is `r percent(sum(inc_0_exp>100000)/10000)`, while less than \$70,000 is `r percent(sum(inc_0_exp<70000)/10000)`. From the graph, we can easily see that the histogram is both bell-curved and symmetric, so it is a nomral distribution.
+
+## Q3
+
+```{r}
+debt = 95000
+rate_payoff = 0.1
+year = rep.int(0,10000)
+            
+for (n in 1:10000){
+  
+  inc3 = rep.int(0,10000)
+  inc3 <- inc0_ln + error[n,1]
+  debt_paying = debt - rate_payoff*exp(inc3[1])
+  year[n] = year[n] + 1
+  for (i in 2020:2058){
+  if (debt_paying <= 0) break
+  inc3[i-2018] <- income.f(inc0_ln,inc3,g,rho,i,error,n)
+  debt_paying = debt_paying - rate_payoff * exp(inc3[i-2018])
+  year[n] = year[n] + 1
+
+  }
+
+
+  
+}
+#Percent of students who can pay off in 10 years
+  sum(year<=10)/10000
+  hist(year, main = "Years needed to pay off loan")
+  
+
+
+```
+See the plot above. The percent of students in MACSS class who is able to pay off the loan in 10 years is `r percent(sum(year<=10)/10000)`.
+
+## Q4
+
+```{r}
+sigma4 = 0.15
+mean4 = 0
+inc_new4 = 85000
+rho = 0.2
+t = 2058
+g = 0.03
+inc4_ln = log(inc_new4)
+##Sampling error with sigma = 0.15
+error1 <- matrix(rnorm(400000, mean4, sigma4),10000,40)
+
+
+debt = 95000
+rate_payoff = 0.1
+year1 = rep.int(0,10000)
+            
+for (n in 1:10000){
+  
+  inc4 = rep.int(0,40)
+  inc4 <- inc4_ln + error1[n,1]
+  debt_paying = debt - rate_payoff*exp(inc4[1])
+  year1[n] = year1[n] + 1
+  for (i in 2020:2058){
+  if (debt_paying <= 0) break
+  inc4[i-2018] <- income.f(inc4_ln,inc4,g,rho,i,error1,n)
+  debt_paying = debt_paying - rate_payoff * exp(inc4[i-2018])
+  year1[n] = year1[n] + 1
+
+  }
+
+}
+#Percentage
+  sum(year1<=10)/10000
+  hist(year1, main = "Years needed to pay off loan", xlab="Year")
+```
+From the plot above, the percent is `r percent(sum(year1<=10)/10000)` under new condition.

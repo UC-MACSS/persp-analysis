@@ -1,22 +1,51 @@
----
-title: "R Notebook"
-output: github_document
----
+R Notebook
+================
 
-## Load Helpful Packages
-```{r Load}
+Load Helpful Packages
+---------------------
+
+``` r
 rm(list=ls())
 set.seed(1)
 library(tidyverse)
+```
+
+    ## Loading tidyverse: ggplot2
+    ## Loading tidyverse: tibble
+    ## Loading tidyverse: tidyr
+    ## Loading tidyverse: readr
+    ## Loading tidyverse: purrr
+    ## Loading tidyverse: dplyr
+
+    ## Conflicts with tidy packages ----------------------------------------------
+
+    ## filter(): dplyr, stats
+    ## lag():    dplyr, stats
+
+``` r
 library(scales)
+```
+
+    ## 
+    ## Attaching package: 'scales'
+
+    ## The following object is masked from 'package:purrr':
+    ## 
+    ##     discard
+
+    ## The following object is masked from 'package:readr':
+    ## 
+    ##     col_factor
+
+``` r
 library(knitr)
 theme_set(theme_minimal())
 ```
 
+Create the Function
+-------------------
 
-## Create the Function
-```{r Function}
-
+``` r
 income_sim <- function(p, g, SD, years, starting_income, simulations){
   
   #empty matrix to save data output
@@ -53,19 +82,19 @@ income_sim <- function(p, g, SD, years, starting_income, simulations){
   }
   return(income_data)
 }
-
-
-
 ```
 
-## 1. Simulate the Data 10,000 Times
-```{r First_Output, results='hide'}
+1. Simulate the Data 10,000 Times
+---------------------------------
+
+``` r
 income_sim(SD=.1, p=.2, g=.03, starting_income = 80000, years = 40, simulations = 10000)
 ```
 
+1. Graph An Example Graduate
+----------------------------
 
-## 1. Graph An Example Graduate
-```{r}
+``` r
 ggplot(income_data, aes(rownames(income_data), Simulation_1))+
   geom_col()+
   scale_x_discrete(breaks=seq(2019,2058,3))+
@@ -73,9 +102,12 @@ ggplot(income_data, aes(rownames(income_data), Simulation_1))+
   labs(x="Year", y="Income", title = "Expected Yearly Income of Single MACSS Graduate")
 ```
 
-## 2. Create a Histogram 
-The Data Appears (approximately) Normally Distributed
-```{r}
+![](Simulation_HW_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
+
+2. Create a Histogram
+---------------------
+
+``` r
 income_data %>%
   slice(1) %>%
   gather() %>% 
@@ -83,11 +115,14 @@ income_data %>%
   geom_histogram(bins=50)+ 
   scale_x_continuous(label=dollar_format())+
   labs(x="Income Distribution", y="Frequency", title = "Distribution of MACSS Graduate Incomes")
-  
 ```
 
-## Percentages of Incomes
-```{r Expected_Incomes}
+![](Simulation_HW_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
+
+Percentages of Incomes
+----------------------
+
+``` r
 income_data %>%
   slice(1) %>%
   gather() %>% 
@@ -97,19 +132,16 @@ income_data %>%
   slice(1) %>%
   kable(col.names= c("Percent of Class Making Under $70,000", 
                      "        Percent of Class Making Greater than $100,000"), align = 'c')
-
-```
-## Histogram of Years to Pay Off Debt
-```{r View_Debt}
-how_many_years %>% 
-ggplot(aes(V1))+
-  geom_histogram()+
-  scale_x_continuous(breaks=seq(10,14,1))+
-  labs(x="Number of Years", y="Frequency", title = "Histogram of Years to Pay Off Debt")
 ```
 
-## Calculate How Many Years to Pay Off Debt
-```{r Debt}
+| Percent of Class Making Under $70,000 | Percent of Class Making Greater than $100,000 |
+|:-------------------------------------:|:---------------------------------------------:|
+|                  8.97                 |                      1.18                     |
+
+Calculate How Many Years to Pay Off Debt
+----------------------------------------
+
+``` r
   #empty data frame
   how_many_years <- as.data.frame(matrix(nrow=ncol(income_data), ncol= 1))
 
@@ -132,18 +164,37 @@ mutate(`Percent of Students Paying Loan Off in 10 Years or Less` = (sum(V1<=10)/
   slice(1) %>% 
   select(`Percent of Students Paying Loan Off in 10 Years or Less`) %>% 
   kable(align = 'c')
-
 ```
 
+| Percent of Students Paying Loan Off in 10 Years or Less |
+|:-------------------------------------------------------:|
+|                            0                            |
 
+Histogram of Years to Pay Off Debt
+----------------------------------
 
-## MACSS Program With New Stats
-```{r Second_output, results='hide'}
+``` r
+how_many_years %>% 
+ggplot(aes(V1))+
+  geom_histogram()+
+  labs(x="Number of Years", y="Frequency", title = "Histogram of Years to Pay Off Debt")
+```
+
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](Simulation_HW_files/figure-markdown_github-ascii_identifiers/View_Debt-1.png)
+
+MACSS Program With New Stats
+----------------------------
+
+``` r
 income_sim(SD=.15, p=.2, g=.03, starting_income = 85000, years = 40, simulations = 10000)
 ```
 
-## Find Results
-```{r find_results}
+Find Results
+------------
+
+``` r
 #empty data frame
   how_many_years <- as.data.frame(matrix(nrow=ncol(income_data), ncol= 1))
 
@@ -168,3 +219,6 @@ mutate(`Percent of Students Paying Loan Off in 10 Years or Less` = (sum(V1<=10)/
   kable(align = 'c')
 ```
 
+| Percent of Students Paying Loan Off in 10 Years or Less |
+|:-------------------------------------------------------:|
+|                           4.67                          |

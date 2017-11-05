@@ -107,6 +107,8 @@ ggplot(income_data, aes(rownames(income_data), Simulation_1))+
 2. Create a Histogram
 ---------------------
 
+The Data Appears (approximately) Normally Distributed
+
 ``` r
 income_data %>%
   slice(1) %>%
@@ -177,6 +179,7 @@ Histogram of Years to Pay Off Debt
 how_many_years %>% 
 ggplot(aes(V1))+
   geom_histogram()+
+  scale_x_continuous(breaks=seq(10,14,1))+
   labs(x="Number of Years", y="Frequency", title = "Histogram of Years to Pay Off Debt")
 ```
 
@@ -191,8 +194,8 @@ MACSS Program With New Stats
 income_sim(SD=.15, p=.2, g=.03, starting_income = 85000, years = 40, simulations = 10000)
 ```
 
-Find Results
-------------
+New Results for Students Paying Off Debt In Ten Years or Less
+-------------------------------------------------------------
 
 ``` r
 #empty data frame

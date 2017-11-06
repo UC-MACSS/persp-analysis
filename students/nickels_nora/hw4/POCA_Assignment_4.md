@@ -133,6 +133,8 @@ simulated_income %>%
 ### Part 3. (3 points) Suppose you graduate from the MACSS program with $95,000 of zero-interest debt. You will use 10% of your annual salary after you graduate to pay off this loan. Plot the histogram of how many years it takes to pay off the loan in each of your 10,000 simulations. This histogram will only have as many bins as you have unique years in which people pay off their debt. In what percent of the simulations are you able to pay off the loan in 10 years (on or before \(t = 2028\))?
 
 ``` r
+set.seed(1234)
+
 # Create a function to calculate increasing annual income, with a variable for debt as it decreases over time.
 income_debt <- function(base_inc, p, g, start_year = 2019, sigma, years, debtPct, debt0){
   errors <- rnorm(years, mean = 0, sd = sigma)
@@ -203,13 +205,15 @@ simulated_debt %>%
     ## # A tibble: 1 × 3
     ##   debt_within     n debt_within_pct
     ##         <int> <int>           <dbl>
-    ## 1        1829 10000          0.1829
+    ## 1        1808 10000          0.1808
 
-18.2% of the simulations are able to pay off the debt in 10 years.
+18.1% of the simulations are able to pay off the debt in 10 years.
 
 ### Part 4. (2 points) Now suppose that the UChicago MACSS program becomes very well known in the next year, and the skills you are learning are demanded more by employers. This increases the average starting salary to $inc\_0 = \(85,000\), but the standard deviation in incomes increases also to \(\sigma = 0.15\). Plot the new histogram of how many years it takes to pay off your loan of $95,000 in your new 10,000 simulations with the new standard deviation and the new average initial salary. In what percent of the simulations are you able to pay off the loan in 10 years (on or before \(t = 2028\))?
 
 ``` r
+set.seed(1234)
+
 # Create a function to calculate increasing annual income, with a variable for debt as it decreases over time.
 income_debt <- function(base_inc, p, g, start_year = 2019, sigma, years, debtPct, debt0){
   errors <- rnorm(years, mean = 0, sd = sigma)
@@ -280,6 +284,6 @@ simulated_debt_85 %>%
     ## # A tibble: 1 × 3
     ##   debt_within     n debt_within_pct
     ##         <int> <int>           <dbl>
-    ## 1        6970 10000           0.697
+    ## 1        6999 10000          0.6999
 
-69.7% of the simulations are able to pay off the debt in 10 years, when the starting income and sigma are increased.
+69.9% of the simulations are able to pay off the debt in 10 years, when the starting income and sigma are increased.

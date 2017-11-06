@@ -5,36 +5,6 @@
 -   [Question 3.](#question-3.)
 -   [Question 4.](#question-4.)
 
-    library(knitr)
-    library(sca)
-    library(dplyr)
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-    library(ggplot2)
-    library(tidyverse)
-
-    ## Loading tidyverse: tibble
-    ## Loading tidyverse: tidyr
-    ## Loading tidyverse: readr
-    ## Loading tidyverse: purrr
-
-    ## Conflicts with tidy packages ----------------------------------------------
-
-    ## filter(): dplyr, stats
-    ## lag():    dplyr, stats
-
-    set.seed(123)
-
 Setting up the simulation for the problems.
 -------------------------------------------
 
@@ -160,7 +130,7 @@ Approximately 17.84% of people could pay off their debts by 2028.
     ggplot(debt_95k, aes(year, ..density..)) +
     geom_histogram(bins = 4, fill = "green", color = "black") +
     scale_y_continuous(label = scales::percent) +
-    labs(title = "Distrobution of When People Pay Their Loans", x = "Year", y = "Density") +
+    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
     theme_minimal()  
 
 ![](simulation_files/figure-markdown_strict/Q3,%20debt-1.png)

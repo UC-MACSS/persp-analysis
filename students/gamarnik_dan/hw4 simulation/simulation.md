@@ -72,7 +72,7 @@ Question 2.
 
 ### Those making &lt;$70,000 and &gt;$100,000
 
-In 2019, around 9.41% of people make less than $70,000 and around 1.25%
+In 2019, around 8.94% of people make less than $70,000 and around 1.24%
 make over $100,000.
 
     set.seed(123)
@@ -116,7 +116,7 @@ In 2019, the data has an almost perfect normal/bell curve distrobution.
 Question 3.
 -----------
 
-Approximately 17.84% of people could pay off their debts by 2028.
+Approximately 18.00% of people could pay off their debts by 2028.
 
     set.seed(123)
 
@@ -149,7 +149,7 @@ Approximately 17.84% of people could pay off their debts by 2028.
 Question 4.
 -----------
 
-Roughly 69.99% of the people were able to pay their debts back by 2028.
+Roughly 70.35% of the people were able to pay their debts back by 2028.
 
     set.seed(123)
 

@@ -88,7 +88,7 @@ inc_sim4 %>%
 
 ### Those making <$70,000 and >$100,000
 
-In 2019, around 9.41% of people make less than $70,000 and around 1.25% make over $100,000. 
+In 2019, around 8.94% of people make less than $70,000 and around 1.24% make over $100,000. 
 
 ```{r Q2, problems}
 
@@ -106,7 +106,6 @@ income_70
 
 income_100 <- percent(nrow(filter(inc2019, inc > 100000)) / nrow(inc2019), d = 2)
 income_100
-
 
 ```
 
@@ -134,7 +133,7 @@ ggplot(inc2019, aes(inc)) +
 
 ## Question 3.
 
-Approximately 17.84% of people could pay off their debts by 2028.
+Approximately 18.00% of people could pay off their debts by 2028.
 
 ```{r Q3, debt}
 
@@ -165,7 +164,7 @@ theme_minimal()
 
 ## Question 4.
 
-Roughly 69.99% of the people were able to pay their debts back by 2028.
+Roughly 70.35% of the people were able to pay their debts back by 2028.
 
 ```{r Q4, debt}
 

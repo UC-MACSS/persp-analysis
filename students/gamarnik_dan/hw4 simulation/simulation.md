@@ -108,7 +108,7 @@ In 2019, the data has an almost perfect normal/bell curve distrobution.
       geom_histogram(aes(y = ..density..), bins = 50, 
                      fill = "purple", color = "black") +
       stat_function(fun = dnorm, args = list(mean = mean(inc2019$inc), sd = sd(inc2019$inc))) +
-      labs(title = "Distribution of Income in 2019", x = "Income", y = "Density") +
+      labs(title = "Distribution of Income in 2019", x = "Income", y = "Percent") +
       theme_minimal()
 
 ![](simulation_files/figure-markdown_strict/Q2,%20distrobution-1.png)
@@ -141,7 +141,7 @@ Approximately 18.00% of people could pay off their debts by 2028.
     ggplot(debt_95k, aes(year, ..density..)) +
     geom_histogram(bins = 3, fill = "green", color = "black") +
     scale_y_continuous(label = scales::percent) +
-    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
+    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying Back") +
     theme_minimal()
 
 ![](simulation_files/figure-markdown_strict/Q3,%20debt-1.png)
@@ -179,7 +179,7 @@ Roughly 70.35% of the people were able to pay their debts back by 2028.
     ggplot(debt_95k_10, aes(year, ..density..)) +
     geom_histogram(bins = 5, fill = "red", color = "black") +
     scale_y_continuous(label = scales::percent) +
-    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
+    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying Back") +
     theme_minimal()  
 
 ![](simulation_files/figure-markdown_strict/Q4,%20debt-1.png)

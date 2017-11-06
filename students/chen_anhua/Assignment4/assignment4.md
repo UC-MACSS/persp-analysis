@@ -50,7 +50,8 @@ We will firstly set up our model to simulate the income.
     seed = 1
     # simulate income trajectories for question 1
     inc_mat1 = inc_sim(inc0, rho, g, sigma, start_time, end_time, ntrials, seed)
-    # pick out a simulated trajectory
+
+    # pick out a simulated trajectory and plot it
     inc_sim1 = as.data.frame(t(inc_mat1[1,]))
     inc_sim1$year = as.numeric(rownames(inc_sim1))
     plot1 = ggplot(inc_sim1, aes(year, sim1)) +
@@ -83,23 +84,16 @@ simulation.
 
 ![](assignment4_files/figure-markdown_strict/q2-1.png)
 
+    # calculate the upper and lower tail of the start income distribution
     uppertail =  100 * length(inc_start[inc_start > 100000])/ntrials
     lowertail =  100 * length(inc_start[inc_start < 70000])/ntrials
-    print("Percentage of class earning more than 100000: ")
+    print(paste0("Percentage of class earning more than 100000: ", uppertail))
 
-    ## [1] "Percentage of class earning more than 100000: "
+    ## [1] "Percentage of class earning more than 100000: 1.27"
 
-    print(uppertail)
+    print(paste0("Percentage of class earning less than 70000: ", lowertail))
 
-    ## [1] 1.27
-
-    print("Percentage of class earning less than 70000: ")
-
-    ## [1] "Percentage of class earning less than 70000: "
-
-    print(lowertail)
-
-    ## [1] 9.47
+    ## [1] "Percentage of class earning less than 70000: 9.47"
 
 ### Question 3
 
@@ -107,10 +101,10 @@ We will define a function to calculate the year when each simulated
 student payoff his/her debt.
 
     payoff_year = function(inc_mat, debt, end_time){
-      payment_mat = t(apply(inc_mat * 0.1, 1, cumsum))
-      payment_mat[payment_mat < debt] = 0
-      payment_mat[payment_mat >= debt] = 1
-      payoff_ind = end_time - as.data.frame(rowSums(payment_mat)) + 1
+      payment_mat = t(apply(inc_mat * 0.1, 1, cumsum))    # calculate cumulative payments
+      payment_mat[payment_mat < debt] = 0    # index year where debt is not paid off
+      payment_mat[payment_mat >= debt] = 1    # index year where debt is paid off
+      payoff_ind = end_time - as.data.frame(rowSums(payment_mat)) + 1    # calculate pay-off year
       colnames(payoff_ind) = "payoff_year"
       return(as.data.frame(payoff_ind))
     }
@@ -132,9 +126,10 @@ We then plot the distribution of simulated students' payoff year. Only
 ![](assignment4_files/figure-markdown_strict/q3_plot-1.png)
 
     percentage_payoff_2028 = length(payoff_year1[payoff_year1 <= 2028])/ntrials * 100
-    print(percentage_payoff_2028)
+    print(paste0("Percentage of students pay off debt on /before 2028: ",
+                 percentage_payoff_2028))
 
-    ## [1] 17.98
+    ## [1] "Percentage of students pay off debt on /before 2028: 17.98"
 
 ### Question 4
 
@@ -157,6 +152,7 @@ can pay off student debt is 69.94%.
 ![](assignment4_files/figure-markdown_strict/q4-1.png)
 
     percentage_payoff_2028 = length(payoff_year2[payoff_year2 <= 2028])/ntrials * 100
-    print(percentage_payoff_2028)
+    print(paste0("Percentage of students pay off debt on /before 2028: ",
+                 percentage_payoff_2028))
 
-    ## [1] 69.94
+    ## [1] "Percentage of students pay off debt on /before 2028: 69.94"

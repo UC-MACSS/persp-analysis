@@ -1,0 +1,178 @@
+---
+title: "Simulating Income"
+author: "Kristopher Nichols"
+date: "November 5, 2017"
+output:
+html_document:
+  theme: readable
+---
+## Load Libraries
+```{r setup, echo =FALSE, message =FALSE, error=FALSE, warning =FALSE}
+library(tidyverse)
+library(knitr)
+library(sca)
+library(dplyr)
+library(ggplot2)
+set.seed(4566)
+```
+
+## Question 1: Estabshling function, creating object (matrix) for data to be saved to, and preparing variables for graphing
+
+```{r}
+
+income1 <- function(p, g, SD, Years, Year_Start, simulations, 
+                 initial_income){ #This line of code establishes the basic variables involved in the function (Given by the assignment).
+  error_log <- t(matrix(rnorm(simulations*Years, sd= SD), #Establish error variable for use later in function (in for loop).
+                       nrow= Years))
+  inc_ln <- matrix(nrow= simulations, ncol= Years) #Create matrix for data to fill out.
+  inc_ln[,1] <- log(initial_income) + error_log[,1] 
+  for(i in 2 : Years){
+    inc_ln[, i] <- (1 - p)*(log(initial_income) + g*(i - 1)) +
+      p*inc_ln[, i - 1] + error_log[, i]
+  } #Establish value of log income.
+    Graph_Year <- c(Year_Start : (Year_Start + Years - 1)) %>% #Reconstitute year variable as Graph_Year to satisfy t-1
+    as_data_frame() %>%
+    rename(Graph_Year= value)
+  Simulated_Income <- inc_ln %>% #Consolidate the established error variable, year, variable, and income variable into Simulated income object
+    t() %>%
+    as.tibble() %>%
+    bind_cols(Graph_Year) %>%
+    gather(ID, inc_ln, 1 : simulations) %>%
+    mutate(income= exp(inc_ln))
+  return(Simulated_Income)
+}
+#After attempting to use strictly for loops as the homework implied was possibly I was unable to get it to work and ultimately just attemted to use function and specify each variable - this was my result. 
+```
+
+
+##Utilizing specified values in Q1, plugging into equation, and graphing.
+```{r Q1, warning =FALSE}
+
+Simulated_Income <- income1(p= 0.2, g= 0.03, SD= 0.1, Years= 40, Year_Start= 2019, simulations= 10000, 
+                 initial_income= 80000)
+
+Simulated_Income %>% 
+  filter(ID== "V4566") %>% #Use established seed as random person
+  ggplot(aes(Graph_Year, income)) +
+  geom_line() +
+  geom_point(color = "red") +
+  labs(x= "Year", y= "Income", title= "Simulated Income from 2019 to 2058", subtitle= "For Randomly Generated Seed") + 
+  theme_classic()
+```
+
+
+## Question 2: Filter out year 2019
+```{r, warning= FALSE}
+
+Simulated_Income_2019 <- Simulated_Income %>%
+  filter(Graph_Year== 2019)
+```
+
+##Question 2: Calculate what percent will earn less than $70,000
+```{r, warning= FALSE}
+
+income_70 <- percent(nrow(filter(Simulated_Income_2019, income < 70000)) / nrow(Simulated_Income_2019), d= 2)
+income_70 %>%
+  kable()
+```
+Will earn an income of less than = 70,000
+
+
+##Question 2: Calculate what percent will earn more than $100,000
+```{r, warning= FALSE}
+
+income_100 <- percent(nrow(filter(Simulated_Income_2019, income > 100000)) / nrow(Simulated_Income_2019), d= 2) 
+income_100 %>%
+  kable()
+```
+Will earn an income of more than = $100,000
+
+
+##Question 2: Graph
+```{r, warning =FALSE}
+
+ggplot(Simulated_Income_2019, aes(income)) +
+  geom_histogram(aes(y = ..density..), bins = 50) +
+  stat_function(fun= dnorm, args= list(mean = mean(Simulated_Income_2019$income), sd= sd(Simulated_Income_2019$income))) +
+  labs(title= "Distribution of Income Amongst MACSS Students", x= "Income", y = "Density", subtitle= "In 2019") +
+  theme_minimal() +
+  scale_y_continuous(label= scales::percent) +
+  scale_x_continuous()
+```
+
+
+
+
+###Graph Explanation:
+The distribution maps onto a normal distrbution very easily, matching lmost indetically with a standard bell-curve.
+
+
+
+##Question 3: Establish codes for calculating debt 
+```{r, warning= FALSE}
+
+Simulated_Debt <- Simulated_Income %>%
+  group_by(ID) %>%
+  mutate(Simulated_Debt= cumsum(0.1 * income)) %>%
+  filter(Simulated_Debt>= 95000) %>%
+  group_by(ID) %>%
+  filter(Simulated_Debt== min(Simulated_Debt))
+```
+
+##Question 3: Calculating percent of people who will pay off loans by 2028 by filtering out 2029+ data.
+```{r, warning= FALSE}
+debt_success <- percent(nrow(filter(Simulated_Debt, Graph_Year < 2029)) / nrow(Simulated_Debt), d= 2)
+debt_success %>%
+  kable()
+```
+Will pay their loans by 2028.
+
+##Question 3: Graph
+```{r}
+
+# Graphing
+ggplot(Simulated_Debt, aes(Graph_Year, ..density..)) +
+  geom_histogram(bins= 3) +
+  scale_y_continuous(label= scales::percent) +
+  labs(title= "Distribution of When People Pay Their Loans", x= "Year", y= "Density") +
+  theme_minimal()
+```
+
+
+###Graph Explanation: 
+The histogram illustrates that while most students do not pay off their loans by 2028, the vast majority are able to pay off their loans by 2029 (with a density value approaching 80%)
+
+
+
+##Question 4: Create new code that raises initial income to $85,000
+```{r, warning= FALSE}
+
+Debt_New_MACSS <- income1(p = 0.2, g = 0.03, SD = 0.15, Years = 40, Year_Start = 2019, simulations = 10000, 
+                 initial_income = 85000)
+
+Debt_95 <- Debt_New_MACSS %>%
+  group_by(ID) %>%
+  mutate(Debt_95 = cumsum(0.1*income)) %>%
+  filter(Debt_95 >= 95000) %>%
+  group_by(ID) %>%
+  filter(Debt_95 == min(Debt_95))
+
+Successful_Debt <- percent(nrow(filter(Debt_95, Graph_Year < 2029)) / nrow(Debt_95), d = 2)
+Successful_Debt %>%
+  kable()
+```
+Will pay their loans by 2029.
+
+##Question 4: Graph
+```{r, warning= FALSE}
+ggplot(Debt_95, aes(Graph_Year, ..density..)) +
+  geom_histogram(bins = 5) +
+  labs(title = "A Distribution of When MACSS Students Pay off their Loans", x = "Year", y = "Density") +
+  theme_minimal() +
+  scale_y_continuous(label = scales::percent)
+```
+
+
+
+###Graph Explanation: 
+The histogram with the adjusted initial income illustrates that by 2028 the majority of students are able to pay off their debt by 2028. 

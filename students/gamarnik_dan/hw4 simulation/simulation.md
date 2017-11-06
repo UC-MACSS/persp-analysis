@@ -8,6 +8,8 @@
 Setting up the simulation for the problems.
 -------------------------------------------
 
+    set.seed(123)
+
     # Using a function to create the simulation parameters. 
 
     inc_ <- function(n_year, s_year, n_sample,
@@ -45,6 +47,9 @@ Setting up the simulation for the problems.
 Question 1.
 -----------
 
+    set.seed(123)
+
+
     # Generating the data. 
 
     inc_sim4 <- inc_(n_year = 40, s_year = 2019, n_sample = 10000, 
@@ -70,6 +75,8 @@ Question 2.
 In 2019, around 9.41% of people make less than $70,000 and around 1.25%
 make over $100,000.
 
+    set.seed(123)
+
     # Filter the year of 2019.
 
     inc2019 <- inc_sim4 %>%
@@ -91,6 +98,8 @@ make over $100,000.
 
 In 2019, the data has an almost perfect normal/bell curve distrobution.
 
+    set.seed(123)
+
     # Generating histrogram 
       
     ggplot(inc2019, aes(inc)) +
@@ -108,6 +117,8 @@ Question 3.
 -----------
 
 Approximately 17.84% of people could pay off their debts by 2028.
+
+    set.seed(123)
 
     # Generating data to later calculate those who pay off the debt.
 
@@ -140,6 +151,8 @@ Question 4.
 
 Roughly 69.99% of the people were able to pay their debts back by 2028.
 
+    set.seed(123)
+
     # Chaning data to account for the changes in distrobution.
 
     debt_10 <- inc_(n_year = 40, s_year = 2019, n_sample = 10000, 
@@ -159,7 +172,7 @@ Roughly 69.99% of the people were able to pay their debts back by 2028.
     debt_success_10 <- percent(nrow(filter(debt_95k_10, year < 2029)) / nrow(debt_95k_10), d = 2)
     debt_success_10
 
-    ## [1] "69.78 %"
+    ## [1] "70.35 %"
 
     # Graphing
 

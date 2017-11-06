@@ -156,12 +156,11 @@ debt_success
 # Graphing
 
 ggplot(debt_95k, aes(year, ..density..)) +
-geom_histogram(bins = 4.7, fill = "green", color = "black") +
+geom_histogram(bins = 3, fill = "green", color = "black") +
 scale_y_continuous(label = scales::percent) +
 labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
 theme_minimal()
 ```
-
 ## Question 4.
 
 Roughly 70.35% of the people were able to pay their debts back by 2028.

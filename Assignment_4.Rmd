@@ -5,7 +5,7 @@ date: "10/31/2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 set.seed(1234)
@@ -13,11 +13,9 @@ set.seed(1234)
 
 
 ##1.
-(3 points) Let the standard deviation of your income process be σ = 0.1, let the persistence be ρ = 0.2, let the long-run growth rate of income be g = 0.03, and let the average initial income be inc0 = $80, 000.
+(3 points) Let the standard deviation of your income process be σ = 0.1, let the persistence be ρ = 0.2, let the long-run growth rate of income be g = 0.03, and let the average initial income be inc0 = $80, 000. Assume you will work for 40 years after you graduate (2019 to 2058). Simulate 10,000 different realizations of your lifetime income. Do this by first drawing 10,000 sets of 40 normally distributed errors with mean 0 and standard deviation σ = 0.1. Then plug those into the income process defined above to simulate your lifetime income. Plot one of the lifetime income paths. Make sure your axes are correctly labeled and your plot has a title.
 
-Assume you will work for 40 years after you graduate (2019 to 2058). Simulate 10,000 different realizations of your lifetime income. Do this by first drawing 10,000 sets of 40 normally distributed errors with mean 0 and standard deviation σ = 0.1. Then plug those into the income process defined above to simulate your lifetime income. Plot one of the lifetime income paths. Make sure your axes are correctly labeled and your plot has a title.
-
-```{r part_1, echo=FALSE}
+```{r part_1}
 
 ##Creating function for income in a given year
 incomeYear <- function(incomeYear0, p, g, year0 = 2019, std, years){
@@ -46,9 +44,15 @@ years <- 40
 
 simulatedIncome <- n_sims %>%
   rerun(
-    incomeYear(incomeYear0 = 80000, p = .2, g = .03, years = years, std = .1)) %>%
+    incomeYear(incomeYear0 = 80000, 
+               p = .2, 
+               g = .03, 
+               years = years, 
+               std = .1)) %>%
     bind_rows(.id = "id") %>%
     select(id, year, income)
+
+#View(simulatedIncome)
 
 #Plotting first Income Trajectory
 simulatedIncome %>%
@@ -64,12 +68,11 @@ simulatedIncome %>%
 
 
 
-
 ##Part 2
 
 2. (2 points) Plot a histogram with 50 bins of year t = 2019 initial income for each of the 10,000 simulations. What percent of your class will earn more than $100,000 in the first year out of the program? What percent of the class will earn less than $70,000? Is the distribution normally distributed (i.e. symmetric and bell-curved)?
 
-```{r part_2, echo=FALSE}
+```{r part_2}
 
 # Histogram of initial income for all simulations 
 simulatedIncome %>%
@@ -94,17 +97,19 @@ simulatedIncome %>%
 simulatedIncome %>%
   filter(year == 2019) %>%
   mutate(below70k = income < 70000) %>%
-  summarize(numBelow = sum(below_70k),
+  summarize(numBelow = sum(below70k),
             num = n(),
             nBelowPct = numBelow / num)
   
 ```
 
+Based on these calculations, 1.37% will earn more than $100,000 in the first year (2019). Additionally, 9.1% of the class will earn less than $70,000 in the same year. The bell curve shape of the distribution demonstrates that this spread is more or less normally distributed.  
 
 
 3. (3 points) Suppose you graduate from the MACSS program with $95,000 of zero-interest debt. You will use 10% of your annual salary after you graduate to pay off this loan. Plot the histogram of how many years it takes to pay off the loan in each of your 10,000 simulations. This histogram will only have as many bins as you have unique years in which people pay off their debt. In what percent of the simulations are you able to pay off the loan in 10 years (on or before t = 2028)?
 
-```{r part_3, echo=FALSE}
+```{r part_3}
+
 #Recreating Function from part 1 but with added debt calculation
 incomeDebt <- function(incomeYear0, p, g, year0 = 2019, std, years, debtPct, debt0){
   
@@ -158,11 +163,13 @@ simulatedDebt <- n_sims %>%
     bind_rows(.id = "id") %>%
     select(id, year, income, debt)
 
+#View(simulatedDebt)
+
 #Histogram of Year debt paid in full
 simulatedDebt %>%
   filter(debt < 0) %>%
   ggplot(aes(year)) +
-  geom_histogram(bins=3) +
+  geom_histogram(bins=4) +
   labs(title = "Year of Debt Paid in Full",
        x = "Year",
        y = "Frequency of Observations")
@@ -170,18 +177,19 @@ simulatedDebt %>%
 #Getting percentage of simulations within ten years
 simulatedDebt %>%
   filter(debt < 0) %>%
-  mutate(within_10 = year==2028) %>%
-  summarize(debt_within = sum(within_10),
+  mutate(within10 = year==2028) %>%
+  summarize(debtWithin = sum(within10),
             n = n(),
-            debt_within_pct = debt_within /n)  
+            debtWithinPct = debtWithin /n)  
 
 
 ```
 
+Based on these calculations, 18.3% of the simulations have the debt being paid off in 10 years.
 
 4. (2 points) Now suppose that the UChicago MACSS program becomes very well known in the next year, and the skills you are learning are demanded more by employers. This increases the average starting salary to inc0 = $85, 000, but the standard deviation in incomes increases also to σ = 0.15.  Plot the new histogram of how many years it takes to pay off your loan of $95,000 in your new 10,000 simulations with the new standard deviation and the new average initial salary. In what percent of the simulations are you able to pay off the loan in 10 years (on or before t = 2028)?
 
-```{r part_4, echo=FALSE}
+```{r part_4}
 
 #Running simulation with new parameters
 simulatedDebtChange <- n_sims %>%
@@ -197,13 +205,16 @@ simulatedDebtChange <- n_sims %>%
     bind_rows(.id = "id") %>%
     select(id, year, income, debt)
 
+#View(simulatedDebtChange)
+
 #Getting percentage of simulations within ten years
 simulatedDebtChange %>%
   filter(debt < 0) %>%
-  mutate(within_10 = year==2028) %>%
-  summarize(debt_within = sum(within_10),
+  mutate(within10 = year==2028) %>%
+  summarize(debtWithin = sum(within10),
             n = n(),
-            debt_within_pct = debt_within /n)  
+            debtWithinPct = debtWithin /n)  
 
 ```
 
+Based on this analysis, 63.0 % of the simulations in this case would allow for debt to be paid off in 10 years. 

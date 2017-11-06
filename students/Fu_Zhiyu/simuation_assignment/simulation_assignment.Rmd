@@ -39,6 +39,7 @@ one_path = simulated_income[sample.int(N, 1),]
 qplot(2019:2058, one_path, geom = "line", xlab = "Year", ylab = "Simulated Income", main = "An instance of simulated income")
 
 ```
+
 ## Q2
 
 1.27% of class will earn more than 100,000 in 2019, while 9.47% of students will earn less than 70,000. 
@@ -55,6 +56,7 @@ print(sum(simulated_income[,1]<70000)/N*100)
 qqnorm(simulated_income[,1])
 qqline(simulated_income[,1])
 ```
+
 ## Q3
 
 The histogram is as follows. Only 17.98% students can pay off the loan on or before 2028.

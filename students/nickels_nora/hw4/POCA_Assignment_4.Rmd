@@ -75,7 +75,7 @@ simulated_income %>%
   ggplot(aes(inc)) +
   geom_histogram(bins = 50) +
   scale_x_continuous(labels = scales::dollar) +
-  labs(title = "dis",
+  labs(title = "Distribution of first year incomes across simulations",
        x = "Income",
        y = "frequence of obs")
 
@@ -154,20 +154,20 @@ simulated_debt %>%
   filter(debt < 0) %>%
   ggplot(aes(year)) +
   geom_histogram(bins = 4) +
-  labs(title = "Year of Debt Paid in Full",
+  labs(title = "Year of debt paid in full",
        x = "Year",
        y = "Frequency of Observations")
 
 simulated_debt %>%
   filter(debt < 0) %>%
-  mutate(within_10 = year == 2028) %>%
+  mutate(within_10 = year <= 2028) %>%
   summarize(debt_within = sum(within_10),
             n = n(),
             debt_within_pct = debt_within /n)  
 
 ```
 
-17.7% of the simulations are able to pay off the debt in 10 years.  
+18.2% of the simulations are able to pay off the debt in 10 years.  
 
 
 ### Part 4. (2 points) Now suppose that the UChicago MACSS program becomes very well known in the next year, and the skills you are learning are demanded more by employers. This increases the average starting salary to $inc_0 = $85,000$, but the standard deviation in incomes increases also to $\sigma = 0.15$. Plot the new histogram of how many years it takes to pay off your loan of $95,000 in your new 10,000 simulations with the new standard deviation and the new average initial salary. In what percent of the simulations are you able to pay off the loan in 10 years (on or before $t = 2028$)?
@@ -225,7 +225,7 @@ simulated_debt_85 %>%
   filter(debt < 0) %>%
   ggplot(aes(year)) +
   geom_histogram(bins = 5) +
-  labs(title = "Year of Debt Paid in Full",
+  labs(title = "Year of debt paid in full - higher starting salary",
        x = "Year",
        y = "Frequency of Observations")
 
@@ -238,6 +238,6 @@ simulated_debt_85 %>%
   
 ```
 
-69.83% of the simulations are able to pay off the debt in 10 years, when the starting income and sigma are increased.
+69.7% of the simulations are able to pay off the debt in 10 years, when the starting income and sigma are increased.
 
 

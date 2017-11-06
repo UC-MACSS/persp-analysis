@@ -3,7 +3,7 @@ title: "Simulating Income"
 author: "Kristopher Nichols"
 date: "November 5, 2017"
 output:
-html_document:
+github_document:
   theme: readable
 ---
 ## Load Libraries

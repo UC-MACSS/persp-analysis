@@ -125,7 +125,7 @@ ggplot(inc2019, aes(inc)) +
   geom_histogram(aes(y = ..density..), bins = 50, 
                  fill = "purple", color = "black") +
   stat_function(fun = dnorm, args = list(mean = mean(inc2019$inc), sd = sd(inc2019$inc))) +
-  labs(title = "Distribution of Income in 2019", x = "Income", y = "Percent") +
+  labs(title = "Distribution of Income in 2019", x = "Income", y = "Percents") +
   theme_minimal()
 
 
@@ -158,7 +158,7 @@ debt_success
 ggplot(debt_95k, aes(year, ..density..)) +
 geom_histogram(bins = 3, fill = "green", color = "black") +
 scale_y_continuous(label = scales::percent) +
-labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying Back") +
+labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying") +
 theme_minimal()
 ```
 
@@ -197,7 +197,7 @@ debt_success_10
 ggplot(debt_95k_10, aes(year, ..density..)) +
 geom_histogram(bins = 5, fill = "red", color = "black") +
 scale_y_continuous(label = scales::percent) +
-labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying Back") +
+labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Percent Paying") +
 theme_minimal()  
 
 

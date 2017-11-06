@@ -82,15 +82,19 @@ print(plot1)
 
 ### Question 2
 
-As we can see in the chart below, the distribution of simulated start income is symmetric and bell-shaped. As we calculated below, 1.27% of the class will earn more than 100000 in the first year while 9.47% of the class will earn less than 70000 in the first year according to our simulation.
+As we can see in the chart below, the distribution of simulated start income is not symmetric (slightly skewed to the right) and bell-shaped. And theoretically it should be log-normally distributed.  
+
+As we calculated below, 1.27% of the class will earn more than 100000 in the first year while 9.47% of the class will earn less than 70000 in the first year according to our simulation.
 
 ```{r q2, echo=T, include=T}
 inc_start = inc_mat1[as.character(start_time)]
+
 plot2 = ggplot(inc_mat1, aes(x = inc_mat1[as.character(start_time)])) +
   geom_histogram(bins = 50) + 
   ylab("Count of simulations") +
   xlab("Simulated start income") +
   ggtitle("Question 2: distribution of simulated start income")
+
 
 print(plot2)
 

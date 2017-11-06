@@ -156,7 +156,7 @@ debt_success
 # Graphing
 
 ggplot(debt_95k, aes(year, ..density..)) +
-geom_histogram(bins = 3, fill = "green", color = "black") +
+geom_histogram(bins = 5, fill = "green", color = "black") +
 scale_y_continuous(label = scales::percent) +
 labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
 theme_minimal()  

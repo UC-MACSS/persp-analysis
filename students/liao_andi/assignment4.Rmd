@@ -154,7 +154,7 @@ ggplot() +
 
 percent_less = length(payoff_year[payoff_year <= 10]) / n
 
-cat(percent_less * 100, "% of the simulations, I am able to pay oﬀ the loan in 10 years \n")
+cat(percent_less * 100, "% of the simulations, I am able to pay off the loan in 10 years \n")
 
 
 ```

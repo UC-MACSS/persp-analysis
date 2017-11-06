@@ -3,6 +3,7 @@
 -   [Question 1.](#question-1.)
 -   [Question 2.](#question-2.)
 -   [Question 3.](#question-3.)
+-   [Question 4.](#question-4.)
 
 Setting up the simulation for the problems.
 -------------------------------------------
@@ -143,8 +144,10 @@ Approximately 18.00% of people could pay off their debts by 2028.
     labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
     theme_minimal()
 
-![](simulation_files/figure-markdown_strict/Q3,%20debt-1.png) \#\#
+![](simulation_files/figure-markdown_strict/Q3,%20debt-1.png)
+
 Question 4.
+-----------
 
 Roughly 70.35% of the people were able to pay their debts back by 2028.
 
@@ -176,7 +179,7 @@ Roughly 70.35% of the people were able to pay their debts back by 2028.
     ggplot(debt_95k_10, aes(year, ..density..)) +
     geom_histogram(bins = 5, fill = "red", color = "black") +
     scale_y_continuous(label = scales::percent) +
-    labs(title = "Distrobution of When People Pay Their Loans", x = "Year", y = "Density") +
+    labs(title = "Distribution of When People Pay Their Loans", x = "Year", y = "Density") +
     theme_minimal()  
 
 ![](simulation_files/figure-markdown_strict/Q4,%20debt-1.png)

@@ -1,0 +1,289 @@
+HW\_4 - Simulating your income
+================
+Nora Nickels
+11/6/2017
+
+Assignment 4
+------------
+
+Perspectives of Computational Analysis - Fall 2017
+--------------------------------------------------
+
+``` r
+# Load necessary libraries and set seed.
+library(tidyverse)
+```
+
+    ## Loading tidyverse: ggplot2
+    ## Loading tidyverse: tibble
+    ## Loading tidyverse: tidyr
+    ## Loading tidyverse: readr
+    ## Loading tidyverse: purrr
+    ## Loading tidyverse: dplyr
+
+    ## Warning: package 'ggplot2' was built under R version 3.3.2
+
+    ## Conflicts with tidy packages ----------------------------------------------
+
+    ## filter(): dplyr, stats
+    ## lag():    dplyr, stats
+
+``` r
+set.seed(1234)
+
+# Create a function to calculate increasing annual income.
+income <- function(base_inc, p, g, sigma, n_years, start_year = 2019){
+  errors <- rnorm(n_years, mean = 0, sd = sigma)
+  
+  income_log <- vector("numeric", n_years)
+  
+  for(year in seq_len(n_years)){
+    if(year == 1){
+      income_log[[year]] <- log(base_inc) + errors[[year]]
+    } else {
+      income_log[[year]] <- (1 - p) * (log(base_inc)) + g * (year - 1) +
+        p * income_log[[year - 1]] + errors[[year]]
+    }
+  }
+  # Output of data frame, with variables of income and year.
+  data_frame(inc = exp(income_log),
+             year = 2019 + seq_len(n_years) - 1)
+}
+```
+
+### Part 1. (3 points) Let the standard deviation of your income process be \(\sigma = 0.1\), let the persistence be \(\rho = 0.2\), let the long-run growth rate of income be \(g = 0.03\), and let the average initial income be $inc\_0 = \(80,000\). Assume you will work for 40 years after you graduate (2019 to 2058). Simulate 10,000 different realizations of your lifetime income. Do this by first drawing 10,000 sets of 40 normally distributed errors with mean \(0\) and standard deviation \(\sigma = 0.1\). Then plug those into the income process defined above to simulate your lifetime income. Plot one of the lifetime income paths. Make sure your axes are correctly labeled and your plot has a title.
+
+``` r
+# Define the simulation; 10000 simulations, each of 40 years length.
+n_sims <- 10000
+n_years <- 40
+
+# Now use rerun function to simulate the data iterations, then create a data frame 
+simulated_income <- n_sims %>%
+  rerun(income(base_inc = 80000, p = .2,
+                      g = 0.03, sigma = .1,
+                      n_years = n_years, start_year = 2019)) %>%
+  bind_rows(.id = "id") %>%
+  select(id, year, inc)
+
+# View the data frame we've created.
+View(simulated_income)
+
+# Plot the first income path. Id is the variable that defines which simulated income path.
+simulated_income %>%
+  filter(id == 1) %>%
+  ggplot(aes(year, inc)) +
+  geom_line() +
+  labs(title = "Simulated income increase over time (one simulation)",
+       x = "Year", 
+       y = "Annual Income") +
+  scale_y_continuous(labels = scales::dollar)
+```
+
+![](POCA_Assignment_4_files/figure-markdown_github/Part%201-1.png)
+
+### Part 2. (2 points) Plot a histogram with 50 bins of year \(t = 2019\) initial income for each of the 10,000 simulations. What percent of your class will earn more than $100,000 in the first year out of the program? What percent of the class will earn less than $70,000? Is the distribution normally distributed (i.e. symmetric and bell-curved)?
+
+``` r
+# Plot histogram of the first year's income.
+simulated_income %>%
+  filter(year == 2019) %>%
+  ggplot(aes(inc)) +
+  geom_histogram(bins = 50) +
+  scale_x_continuous(labels = scales::dollar) +
+  labs(title = "Distribution of first year incomes across simulations",
+       x = "Income",
+       y = "frequence of obs")
+```
+
+![](POCA_Assignment_4_files/figure-markdown_github/Part%202-1.png)
+
+``` r
+# Calculate the percentage of simulations above 100,000k in the first year out of the program.
+simulated_income %>%
+  filter(year == 2019) %>%
+  mutate(above_100k = inc >100000) %>%
+  summarize(n_above = sum(above_100k),
+            n = n(),
+            n_above_pct = n_above /n)
+```
+
+    ## # A tibble: 1 × 3
+    ##   n_above     n n_above_pct
+    ##     <int> <int>       <dbl>
+    ## 1     137 10000      0.0137
+
+``` r
+# Calculate the percentage of incomes less than 70k in the first year out.
+simulated_income %>%
+  filter(year == 2019) %>%
+  mutate(below_70k = inc < 70000) %>%
+  summarize(n_below = sum(below_70k),
+            n = n(),
+            n_below_pct = n_below /n)
+```
+
+    ## # A tibble: 1 × 3
+    ##   n_below     n n_below_pct
+    ##     <int> <int>       <dbl>
+    ## 1     910 10000       0.091
+
+1.37% of the class will earn more than $100,000 in the first year out of the program. 9.1% of the class will earn less than $70,000 in the first year out of the program. Based on the histogram, the distribution is normally distributed.
+
+### Part 3. (3 points) Suppose you graduate from the MACSS program with $95,000 of zero-interest debt. You will use 10% of your annual salary after you graduate to pay off this loan. Plot the histogram of how many years it takes to pay off the loan in each of your 10,000 simulations. This histogram will only have as many bins as you have unique years in which people pay off their debt. In what percent of the simulations are you able to pay off the loan in 10 years (on or before \(t = 2028\))?
+
+``` r
+set.seed(1234)
+
+# Create a function to calculate increasing annual income, with a variable for debt as it decreases over time.
+income_debt <- function(base_inc, p, g, start_year = 2019, sigma, years, debtPct, debt0){
+  errors <- rnorm(years, mean = 0, sd = sigma)
+
+  # Creating vector for annual income with debt.
+  income_log <- vector("numeric", years)
+  debt <- vector("numeric", years)
+  
+  # For loop with equations for income.
+  for(year in seq_len(years)){
+    if (year == 1){
+      income_log[[year]]<- log(base_inc) + errors[[year]]
+    }else {
+      income_log[[year]] <- (1 - p) * (log(base_inc) + g * (year-1)) + p * income_log[[year - 1]] +           errors[[year]]
+    }
+  }
+  # For loop with equations for debt.
+for(year in seq_len(years)){
+    if (year == 1){
+      debt[[year]]<- debt0 - debtPct * exp(income_log[[year]])
+    }else {
+     if(debt[[year - 1]] > 0){
+     debt[[year]]<- debt[[year - 1]] - debtPct*exp(income_log[[year]])
+      }else{
+        debt[[year]] <- 0
+    }
+    }
+}
+  
+  # Turning vector into data frame.
+  data_frame(inc = exp(income_log), year = 2019 + seq_len(years) - 1, debt = debt)
+}
+
+# Define simulations, like in Part 1.
+n_sims <- 10000
+years <- 40
+
+# Define new dataframe, this time with debt.
+simulated_debt <- n_sims %>%
+  rerun(
+    income_debt(base_inc = 80000, p = .2, g = .03, years = years, sigma = .1, debtPct = .1, 
+                debt0 = 95000)) %>%
+    bind_rows(.id = "id") %>%
+    select(id, year, inc, debt)
+
+View(simulated_debt)
+
+simulated_debt %>%
+  filter(debt < 0) %>%
+  ggplot(aes(year)) +
+  geom_histogram(bins = 4) +
+  labs(title = "Year of debt paid in full",
+       x = "Year",
+       y = "Frequency of Observations")
+```
+
+![](POCA_Assignment_4_files/figure-markdown_github/Part%203-1.png)
+
+``` r
+simulated_debt %>%
+  filter(debt < 0) %>%
+  mutate(within_10 = year <= 2028) %>%
+  summarize(debt_within = sum(within_10),
+            n = n(),
+            debt_within_pct = debt_within /n)  
+```
+
+    ## # A tibble: 1 × 3
+    ##   debt_within     n debt_within_pct
+    ##         <int> <int>           <dbl>
+    ## 1        1808 10000          0.1808
+
+18.1% of the simulations are able to pay off the debt in 10 years.
+
+### Part 4. (2 points) Now suppose that the UChicago MACSS program becomes very well known in the next year, and the skills you are learning are demanded more by employers. This increases the average starting salary to $inc\_0 = \(85,000\), but the standard deviation in incomes increases also to \(\sigma = 0.15\). Plot the new histogram of how many years it takes to pay off your loan of $95,000 in your new 10,000 simulations with the new standard deviation and the new average initial salary. In what percent of the simulations are you able to pay off the loan in 10 years (on or before \(t = 2028\))?
+
+``` r
+set.seed(1234)
+
+# Create a function to calculate increasing annual income, with a variable for debt as it decreases over time.
+income_debt <- function(base_inc, p, g, start_year = 2019, sigma, years, debtPct, debt0){
+  errors <- rnorm(years, mean = 0, sd = sigma)
+
+  # Creating vector for annual income with debt.
+  income_log <- vector("numeric", years)
+  debt <- vector("numeric", years)
+  
+  # For loop with equations for income.
+  for(year in seq_len(years)){
+    if (year == 1){
+      income_log[[year]]<- log(base_inc) + errors[[year]]
+    }else {
+      income_log[[year]] <- (1 - p) * (log(base_inc) + g * (year-1)) + p * income_log[[year - 1]] +           errors[[year]]
+    }
+  }
+  # For loop with equations for debt.
+for(year in seq_len(years)){
+    if (year == 1){
+      debt[[year]]<- debt0 - debtPct * exp(income_log[[year]])
+    }else {
+     if(debt[[year - 1]] > 0){
+     debt[[year]]<- debt[[year - 1]] - debtPct*exp(income_log[[year]])
+      }else{
+        debt[[year]] <- 0
+    }
+    }
+}
+  
+  # Turning vector into data frame.
+  data_frame(inc = exp(income_log), year = 2019 + seq_len(years) - 1, debt = debt)
+}
+
+# Define simulations, like in Part 1.
+n_sims <- 10000
+years <- 40
+
+# Define new dataframe, this time with debt.
+simulated_debt_85 <- n_sims %>%
+  rerun(
+    income_debt(base_inc = 85000, p = .2, g = .03, years = years, sigma = .15, debtPct = .1, 
+                debt0 = 95000)) %>%
+    bind_rows(.id = "id") %>%
+    select(id, year, inc, debt)
+
+View(simulated_debt_85)
+
+simulated_debt_85 %>%
+  filter(debt < 0) %>%
+  ggplot(aes(year)) +
+  geom_histogram(bins = 5) +
+  labs(title = "Year of debt paid in full - higher starting salary",
+       x = "Year",
+       y = "Frequency of Observations")
+```
+
+![](POCA_Assignment_4_files/figure-markdown_github/Part%204-1.png)
+
+``` r
+simulated_debt_85 %>%
+  filter(debt < 0) %>%
+  mutate(within_10 = year <= 2028) %>%
+  summarize(debt_within = sum(within_10),
+            n = n(),
+            debt_within_pct = debt_within /n)  
+```
+
+    ## # A tibble: 1 × 3
+    ##   debt_within     n debt_within_pct
+    ##         <int> <int>           <dbl>
+    ## 1        6999 10000          0.6999
+
+69.9% of the simulations are able to pay off the debt in 10 years, when the starting income and sigma are increased.

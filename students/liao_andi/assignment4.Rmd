@@ -1,0 +1,162 @@
+---
+title: "Simulation"
+author: "Andi Liao"
+date: "November 6, 2017"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Q1
+
+```{r income simulation}
+
+set.seed(515)
+
+n = 10000
+sd = 0.1
+t = 40
+c0 = 80000
+p = 0.2
+g = 0.03
+
+#build a matrix
+result = matrix(nrow = n + 1, ncol = t)
+
+#column:time 
+result[1, ] = c(2019 : (2019 + t - 1))
+
+#row1: income of 2019
+result[-1, 1] = exp(log(rep(c0, n)) + rnorm(n, mean = 0, sd = sd))
+
+#row2 to 40: income of 2020-2058
+for (i in c(2 : 40)){
+  result[-1, i] = exp((1 - p) * (log(c0) + g * (result[1, i] - 2019)) + p * log(result[-1, i - 1])+ rnorm(n, mean = 0, sd = sd))
+}
+
+
+library(ggplot2)
+
+#plot lifetime income path
+ggplot() +
+  geom_line(aes(result[1,], result[sample(1:n, size = 1),])) + 
+  labs(title = "Sample lifetime income path simulation for MACSS students", x = "year", y = "income") + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = seq(2019, 2059, by = 5)) + 
+  scale_y_continuous(breaks = seq(70000, 300000, by = 25000))
+
+```
+
+## Q2
+
+```{r histrogram}
+
+#draw histogram
+ggplot() + 
+  geom_histogram(aes(result[-1, 1]), bins = 30, alpha = 0.5, color = "black") +
+  labs(title = "Initial income of simulations for t = 2019", x = "income", y = "num of students") + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = seq(60000, 150000, by = 10000))
+
+#calculate percentage
+inc2019 = result[-1, 1]
+percent_high = length(inc2019[inc2019 > 100000]) / n
+percent_low = length(inc2019[inc2019 < 70000]) / n
+
+cat ( percent_high * 100, "% of my class will earn more than $100,000 in the first year out of the program \n")
+
+cat ( percent_low * 100, "% of my class will earn  less than $70,000 in the first year out of the program \n")
+
+#test normality
+ks.test(inc2019,"pnorm", 80000, sd(inc2019))
+
+cat("The distribution is normally distributed \n")
+```
+
+## Q3
+
+```{r loan pay-off}
+
+#build a loan matrix
+loan = t(apply(0.1 * result / 95000, 1, cumsum))
+loan[1, ] = c(2019 : (2019 + t - 1))
+colnames(loan) = c(2019 : (2019 + t - 1))
+
+payoff_year = matrix(nrow = n + 1)
+
+#calculate the min year need to pay off all loans
+for (i in c(1 : n + 1)) {
+  payoff_year[i] = min(which(loan[i,] > 1))
+}
+
+#draw histogram
+ggplot() + 
+  geom_histogram(aes(payoff_year[-1, 1]), bins = length(unique(payoff_year[-1,], na.rm = TRUE)), alpha = 0.5, color = "black") +
+  labs(title = " The year students need to pay off their debt", x = "total years", y = "num of students") + 
+  theme(plot.title = element_text(hjust = 0.5)) 
+
+
+percent_less = length(payoff_year[payoff_year <= 10]) / n
+
+cat ( percent_less * 100, "% of the simulations, I am able to pay oﬀ the loan in 10 years \n")
+
+```
+
+## Q4
+
+```{r loan pay-off again}
+
+set.seed(515)
+
+n = 10000
+sd = 0.15
+t = 40
+c0 = 85000
+p = 0.2
+g = 0.03
+
+#build a matrix
+result = matrix(nrow = n + 1, ncol = t)
+
+#column:time 
+result[1, ] = c(2019 : (2019 + t - 1))
+
+#row1: income of 2019
+result[-1, 1] = exp(log(rep(c0, n)) + rnorm(n, mean = 0, sd = sd))
+
+#row2 to 40: income of 2020-2058
+for (i in c(2 : 40)){
+  result[-1, i] = exp((1 - p) * (log(c0) + g * (result[1, i] - 2019)) + p * log(result[-1, i - 1])+ rnorm(n, mean = 0, sd = sd))
+}
+
+#build a loan matrix
+loan = t(apply(0.1 * result / 95000, 1, cumsum))
+loan[1, ] = c(2019 : (2019 + t - 1))
+colnames(loan) = c(2019 : (2019 + t - 1))
+
+payoff_year = matrix(nrow = n + 1)
+
+#calculate the min year need to pay off all loans
+for (i in c(1 : n + 1)) {
+  payoff_year[i] = min(which(loan[i,] > 1))
+}
+
+#draw histogram
+ggplot() + 
+  geom_histogram(aes(payoff_year[-1, 1]), bins = length(unique(payoff_year[-1,], na.rm = TRUE)), alpha = 0.5, color = "black") +
+  labs(title = " The year students need to pay off their debt", x = "total years", y = "num of students") + 
+  theme(plot.title = element_text(hjust = 0.5)) 
+
+
+percent_less = length(payoff_year[payoff_year <= 10]) / n
+
+cat(percent_less * 100, "% of the simulations, I am able to pay off the loan in 10 years \n")
+
+
+```
+
+

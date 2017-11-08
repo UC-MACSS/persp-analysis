@@ -127,6 +127,7 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Simulated data (cont.)
 1. Collaboration
     * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
+    * [Pro Git](https://git-scm.com/book/en/v2)
 1. Collaboration (cont.)
 1. Ethics
     * ["Chapter 6: Ethics." *Bit by Bit*.](http://www.bitbybitbook.com/en/ethics/)

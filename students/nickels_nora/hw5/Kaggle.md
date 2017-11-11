@@ -62,7 +62,7 @@ set.seed(1234)
 
 BostonMarathon <- read.csv("marathon_results_2017.csv")
 
-ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) + 
+plot <- ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) + 
   geom_bar(data = subset(BostonMarathon, M.F == "F")) + 
   geom_bar(data = subset(BostonMarathon, M.F == "M"), 
            mapping = aes(y = - ..count..),
@@ -74,8 +74,16 @@ ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) +
        x = "Age",
        y = "Number of Runners") +
   scale_fill_discrete(name = "Gender")
+
+plot
 ```
 
 ![](Kaggle_files/figure-markdown_github/plot-1.png)
+
+``` r
+ggsave("plot.pdf")
+```
+
+    ## Saving 7 x 5 in image
 
 As you can see from the pyramid bar plot, the distributions are generally similar by gender. You can tell that more male runners qualify to run Boston, and there is a slight skew in that it seems like more women in their twenties run the marathon than man in their twenties, and more men in their forties, fifties, and sixties run the marathon than women in these age groups. Based on my personal race running experiences, this does seem to be the case. I probably spent far too much time creating this plot. Thank the lord for those R Studio cheat sheets that we got in CFSS.

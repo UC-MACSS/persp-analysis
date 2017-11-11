@@ -43,7 +43,7 @@ set.seed(1234)
 
 BostonMarathon <- read.csv("marathon_results_2017.csv")
 
-ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) + 
+plot <- ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) + 
   geom_bar(data = subset(BostonMarathon, M.F == "F")) + 
   geom_bar(data = subset(BostonMarathon, M.F == "M"), 
            mapping = aes(y = - ..count..),
@@ -55,6 +55,10 @@ ggplot(data = BostonMarathon, aes(x = Age, fill = M.F)) +
        x = "Age",
        y = "Number of Runners") +
   scale_fill_discrete(name = "Gender")
+
+plot
+
+ggsave("plot.pdf")
 
 ```
 

@@ -1,0 +1,47 @@
+---
+title: "Collaboration"
+author: "Gabriel Velez"
+date: "11/11/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Working with Kaggle
+
+```{r kaggle}
+soccerResults <- read_csv("soccerResults.csv")
+
+
+
+#Plotting first Income Trajectory
+soccerResults %>%
+  mutate(`homeWin` = ifelse(home_ft>away_ft, 1, 0)) %>%
+  group_by(`home_team`) %>%
+  mutate(`totalWins`= sum(`homeWin`), 
+         `totalGames` = length(`home_team`), 
+         `percWin` = `totalWins`/`totalGames`*100) %>%
+  filter(`totalGames`>50, 
+         `percWin`>60) %>%
+  arrange(`percWin`) %>%
+  ggplot(aes(reorder(`home_team`,`percWin`), 
+             `percWin`)) +
+  geom_text(aes(label=`home_team`)) +
+    labs(title = "Countries with Best Home Winning Percentage (With over 50 Games Played)",
+       x = "Country", 
+       y = "Winning Percentage at Home") 
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

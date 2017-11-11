@@ -1,0 +1,18 @@
+HW\_5 Collaboration - Journal Improvement
+================
+Nora Nickels
+11/13/2017
+
+Assignment 5
+============
+
+Perspectives of Computational Analysis - Fall 2017
+--------------------------------------------------
+
+Collaboration
+=============
+
+Improving a journal article
+---------------------------
+
+### Look through a recent issue of a journal in your field. Find a paper that you think could have been reformualted as a human computation project. How would you formulate the data collection as a human computation project? How might this improve the study?

@@ -91,7 +91,9 @@ InfluenzaNet recruit participants from the general population and ask them to ta
 
 In Google Flu Trends Researchers design an automated method to select ILI-related search queries in Google. Then they regard the selected ILI-related query fraction as the explanatory variable and fit a linear model to weekly ILI percentages. The algorithm used in selecting search queries will be calibrated by CDC data.
 
-Traditional influenza tracking system relies on sentinel networks of physicians. This method asks individual physicians or clinics/hospitals to report their patients' influenza-like-illness.
+Traditional influenza tracking system relies on sentinel networks of physicians. This method asks individual physicians or clinics/hospitals to report their patients' influenza-like-illness.       
+
+These three designs aim at three types of data. The first type is digital-enhanced survey data with patients' self-reported information. The second is digital observational data. The final one is traditional reported data with physicians' report. They have their own advantages and disadvantages. Traditional data contains least dirty information, but its sample size and population coverage are usually small. Besides, it takes a lot of time to be collected. Digital observational data in Google Flu Trends is the biggest and always-on, and it can predict current trend without any delay. However, it contains a lot of dirty information that may result in biases. Digital-enhanced data has medium sample size and medium data quality so that it has parts of advantages and disadvantages of other two types of data. Besides, it can also collect some distinct information such as whether people attend physician. Therefore, three designs are complementary rather than supplementary.
 
 **Cost**
 

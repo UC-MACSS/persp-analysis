@@ -4,24 +4,20 @@ Kanyao Han
 
 ### Part 1: Kaggle open call projects
 
-#### Create an account with Kaggle.com and sign in
+#### 1. Create an account with Kaggle.com and sign in
 
 My profile name in Kaggle is Kanyao Han.
 
-#### Describe on open call project that is of interest to you in competition page.
+#### 2. Describe on open call project that is of interest to you in competition page.
 
 1.  **What is the goal of the competition?**
     The name of the project I select is [Web Traffic Time Series Forecasing](https://www.kaggle.com/c/web-traffic-time-series-forecasting#description). This competition focuses on the problem of forecasting the future values of multiple time series. Specifically, its goal is testing state-of-the-art methods designed by the participants and thus forecasting future web traffic for approximately 145,000 Wikipedia articles.
 
 2.  **What would I have to do to make a submission?**
     This competition has two stages. There will be a training stage during which the leaderboard is based on historical data, followed by a stage where participants are scored on real future events. I have complete freedom in how to produce the forecasts: e.g. use of univariate vs multi-variate models, use of metadata, hierarchical time series modeling, different strategies for missing value imputation, and many more types of approaches. Submissions are evaluated on SMAPE (Symmetric mean absolute percentage error) between forecasts and actual values. I must predict the web traffic for each article and day combination. The submission csv file should contain a header and have the following format:
-    Id,Visits
-    bf4edcf969af,0
-    929ed2bf52b9,0
-    ff29d0f51d5c0
-    etc.
+    Id, Visits (such as bf4edcf969af, 0)
 
-#### Explore the available datasets on the Kaggle datasets page. Download one of the datasets and generate a descriptive plot that highlights some instructive characteristic of the data.
+#### 3. Explore the available datasets on the Kaggle datasets page. Download one of the datasets and generate a descriptive plot that highlights some instructive characteristic of the data.
 
 The name of the dataset I select is [SF Salaries](https://www.kaggle.com/kaggle/sf-salaries).
 

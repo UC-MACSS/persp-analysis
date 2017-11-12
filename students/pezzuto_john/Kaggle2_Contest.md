@@ -4,6 +4,7 @@
 
  The winners of the contest were announced November 12th 2017. 
 
+The top 3  winning temas will split $25,000 paid for by Google Inc. and Voleon.
 
 ## What Do You Have to Do to Make a Submission
 

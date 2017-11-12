@@ -28,7 +28,8 @@ First we generate a matrix of simulated income.
 
 ![](simulation_assignment_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
-\#\# Q2
+Q2
+-- 
 
 1.27% of class will earn more than 100,000 in 2019, while 9.47% of
 students will earn less than 70,000.
@@ -64,7 +65,8 @@ support that it is not a normal distribution.
 
 ![](simulation_assignment_files/figure-markdown_strict/unnamed-chunk-3-2.png)
 
-\#\# Q3
+Q3
+--
 
 The histogram is as follows. Only 17.98% students can pay off the loan
 on or before 2028.

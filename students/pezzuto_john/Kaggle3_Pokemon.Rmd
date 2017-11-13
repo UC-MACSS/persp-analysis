@@ -9,7 +9,7 @@ output: github_document
 library(tidyverse)
 library(RColorBrewer)
 library(scales)
-getwd()
+
 Pokemon <- read_csv("Pokemon.csv")
 theme_set(theme_minimal())
 ```

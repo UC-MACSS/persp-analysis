@@ -2,9 +2,9 @@
 
 [The Kaggle Contest I decided to look into](https://www.kaggle.com/c/web-traffic-time-series-forecasting) was a Web Traffic Time Series Forecasting challenge. The challenge specifcally was to forecast the future web traffic of approximately 145,000 Wikipedia articles, based on past observations of Wikipedia page views. 
 
- The winners of the contest were announced November 12th 2017. 
+The winners of the contest were announced November 12th 2017. 
 
-The top 3  winning temas will split $25,000 paid for by Google Inc. and Voleon.
+The top 3  winning teams will split $25,000 paid for by Google Inc. and Voleon.
 
 ## What Do You Have to Do to Make a Submission
 
@@ -14,6 +14,6 @@ The top 3  winning temas will split $25,000 paid for by Google Inc. and Voleon.
 
 * To participate in this challenge teams need to accept the compeition rules by September 1st 2017, and submit their final project by September 12th 2017. 
 
-* The contest has two stages. The first stage involves is a training stage in which teams meausure on historical data (Wikipedia page views from January, 1st, 2017 up until March 1st, 2017), and second stage where participants need to score future data (daily Wikipedia page views between September 13th, 2017 and November 13th, 2017). Teams can use any method to predict the data, though most teams will use some type of state-of-the-art machine learning algorithms. The winner will be decided by who can forecast the page views of each Wikipedia article most accurately. 
+* The contest has two stages. The first stage involves is a training stage in which teams meausure on historical data (Wikipedia page views from January, 1st, 2017 up until March 1st, 2017), and second stage where participants need to score future data (daily Wikipedia page views between September 13th, 2017 and November 13th, 2017). Teams can use any method to predict the data, though most teams will use some type of state-of-the-art machine learning algorithms. The winner will be decided by who can forecast the page views of future Wikipedia article most accurately by the day. 
 
 * To enter the contest, you need to predict web traffic for each article and day combination. Submit this via a .csv file.

@@ -37,12 +37,6 @@ library(scales)
     ##     col_factor
 
 ``` r
-getwd()
-```
-
-    ## [1] "/Users/jhap/Documents/GitHub/persp-analysis/students/pezzuto_john"
-
-``` r
 Pokemon <- read_csv("Pokemon.csv")
 ```
 

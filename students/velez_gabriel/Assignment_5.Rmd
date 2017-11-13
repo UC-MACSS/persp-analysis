@@ -2,7 +2,7 @@
 title: "Collaboration"
 author: "Gabriel Velez"
 date: "11/11/2017"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}

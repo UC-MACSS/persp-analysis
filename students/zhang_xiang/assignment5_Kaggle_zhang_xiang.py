@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Read in Data
 # We have the temperature record for each country for each month
 cols_to_keep = ["dt", "AverageTemperature", "Country"]
-temperature = pd.read_csv("GlobalLandTemperaturesByCountry.csv", \
+temperature = pd.read_csv("Assignment5_data.csv", \
 						  usecols = cols_to_keep)
 
 # Extract data points in each year

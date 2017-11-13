@@ -56,3 +56,32 @@ These changes while good in theory, could be hard to implement practically. The 
 Chen, Z.-H., Chen, S. Y., & Chien, C.-H. (2017). Students’ Reactions to Different Levels of Game Scenarios: A Cognitive
 Style Approach. Educational Technology & Society, 20 (4), 69–77.
 
+# Alternative Assignment:
+
+If you are unable to create a worker account on Amazon MTurk, you can complete this alternative assignment.
+
+In the InfluenzaNet project a volunteer panel of people report the incidence, prevalence, and health seeking behavior related to influenza-like-illness (ILI) (Tilston et al. 2010; Noort et al. 2015).
+
+1. Compare and contrast the design, costs, and likely errors in InfluenzaNet, Google Flu Trends, and traditional influenza tracking systems.
+ 
+2. Consider an unsettled time, such as the swine flu outbreak. Describe the possible errors in each system.
+
+
+
+### Compare and contrast the design, costs, and likely errors in InfluenzaNet, Google Flu Trends, and traditional influenza tracking systems.
+
+When comparing the InfluenzaNet and Google Flu trends there are stark differences in how the data is captured. Primarly, we see in InfluenzaNet that respondents are required to fill out an online application containing questions about medical history, geographic and behavioral questions. Conversely, Google Flu Trends aggregated their findings using a logit model based on google searches for flu. With InfluenzaNet, there is an increased risk of self-selection bias, wherein respondents are only those people that choose to participate which could inherently bias the reporting. Furthermore, even with the questionaire and surveys, InfluenzaNet still has no way of varifying if the respondent is actually telling the truth or verifying tha accuracy of their answers to the screener. InfluenzaNet also runs the risk of dropout and attrition if people stop reporting the flue.
+
+Conversely, Google Flu Trends only aggregates from search engine queries. Aggregating anonymized queries about flue trends cannot distinguish between, for example, someone who has the flue or someone searhcing for information about the flu. The latter of these realities can lead to false-positives in the model. Using these digitally enhanced tracking systems based on human collaboration also presents a cheaper alternative to traditional trackers. Because things like Google Flu Trends and InfluenzaNet utilize volunteers, the projects have sustained costs (e.g. webhosting, domain name, etc.) and the cost becomes even lower when considering Google Flu Trends because it aggregates information from queries and does not require one to explicitly volunteer. 
+
+We can compare these reporting mechanisms to a traditional reporting center such as the CDC which uses medical records reported from doctors across the country. While The data capture may be more accurate and (potentially) more reliable, it comes at the cost of expediency. This is simply beause InfluenzaNet and Google are digital and a vast majority of medical reporting is not done digitally or has to be transcribed manually but medical professionals. Transcribing could be a low priority during flu season and therfore delay delivery of pertinent data, but also leave room for human error in the records. The delay in the data poses a significant drawback for traditional influenza tracking systems because by the time the information is published, flu season could be over. 
+
+To sum, digitally enhanced reporting sites like InfluenzaNet and Google Flu trends emphasize speed and "real-time" data while sacrificing accuracy, while traditional reporting systems sacrifice expediency for accuracy. 
+
+### Consider an unsettled time, such as the swine flu outbreak. Describe the possible errors in each system.
+
+Applying the methodology of InfluenzaNet and Google Flu Trends so something like swine flu can pose several issus. The most innacurate methodologies for tracking swine flu would be Google Flu Trends. First, because swine flu proved to be a major news story, spikes in search terms would correlate with the amount of news coverage and not because people were suffering from the virus itself. Furthermore, aggregation based on symptoms presents another issue in that symptoms are very general and something like "sore throat" does not necessarily mean that the person searching has the swine flu. 
+
+Using InfluenzaNet for something like swine flu also presents problems. InfluenzaNet is slightly more selective than Google Flu Trends in that there is a screener attached to voluntary reporting, however, the threat to validity persists because InfluenzaNet has no way of knowing if the respondent is telling the truth. Furthermore, the respondent to InfluenzaNet may not have been diagnosed by a doctor, rather, be self-diagnosing. Without medical training a respondent could mistake swine flu for the regular flue or another virus all together. The rate of attrition and dropout persist as well because people may not want to participate any longer after a period of time. 
+
+As with Google Flu Trends, traditional reporting systems may not accurately capture or diagnose the swine flue. Because the risk of swine flu primarily pertains to people that work with animals, there is not a large risk for the general population. However, even if the general population had the same risk as those who worked with animals, the covarying sympotoms of swine flu and regular flu are such that swine flu could easily be mis-diagnosed as the flu. Issues of timeliness persist as well in that it may take a few days for a person to see a doctor before being diagnosed as well as getting the records transcribed and delivered to the reporting authority (i.e. CDC). 

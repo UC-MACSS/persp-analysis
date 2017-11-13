@@ -29,7 +29,8 @@ library(ggplot2)
 if (file.exists("GlobalLandTemperaturesByCity.csv"))
   # due to the large size of the dataset, I cannot upload it to the github.
   # Therefore, I extract a subset saved as "plot_data.csv".
-  # The whole data can be found at "GlobalLandTemperaturesByCity.csv"
+  # The whole data can be found at 
+  #https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data/data
 {
 dt = fread("GlobalLandTemperaturesByCity.csv")
 dt = dt[Country == "United States",] # select the U.S. only

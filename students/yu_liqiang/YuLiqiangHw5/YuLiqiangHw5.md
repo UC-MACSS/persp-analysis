@@ -15,7 +15,7 @@ The data set that I used here is [Kaggle ML and Data Science Survey, 2017](https
 Something interesting about this survey is that it shows that overall, people holding a data analysis related job position prefer using Python than R.
 (Click the icon for Github view)
 
-![](YuLiqiangHw5_figures/YuLiqiangHw5Q1(3).pdf)
+![](YuLiqiangHw5Q1(3).pdf)
 --
 
 	require(ggthemes)

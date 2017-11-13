@@ -25,7 +25,7 @@ The goal of the competition is to accurately classify two types of objects (iceb
 
 #### What would you have to do to make a submission?
 
-Solutions must accurately distinguish between icebergs and ships from satellite imagery, taking into account an object's shape, size, and brightness relative to surrounding matter. In order to make a submission, I would need to develop a classification system which accounts for these three principal characteristics. The most commonly used tool for this type of problem is an artificial neural network. I would need to implement the network, most likely in an open-source framework (e.g., R or Python) and train it on the test data provided. In order to submit I would need to upload my predictions for the training dataset. While not required, I would also post my code as a Kaggle kernel in order to contribute to community efforts to solve the problem. 
+Solutions must accurately distinguish between icebergs and ships from satellite imagery, taking into account an object's shape, size, and brightness relative to surrounding matter. In order to make a submission, I would need to develop a classification system which accounts for these three principal characteristics. The most commonly used tool for this type of problem is an artificial neural network. I would need to implement the network, most likely in an open-source framework (e.g., R or Python) and train it on the test data provided. In order to submit I would need to upload my predictions for the training dataset. I would also post my code as a Kaggle kernel in order to contribute to community efforts to solve the problem. 
 
 ### 3. Plotting A Kaggle Dataset
 

@@ -8,9 +8,11 @@ markdown_document:
 ---
 #Part II:
 
-I found the WSDM - KKBox's Music Recommendation Challenge to be very interesting. It asks the competitors to create a new, and better music reccomendation system. A key problem with music prediction algorithms is that they often lack historical data to make accurate predictions with, and this is a problem the competition specifically targets.As stated, the central task is for competitors to predict the likelihood of a listener listening to a song "repetitively after the first observable listening event within a time window was triggered." 
+I found the WSDM - KKBox's Music Recommendation Challenge to be very interesting. It is a competition started by the 11th ACM International Conference on Web Search and Data Mining and utilizes data provided by Asia's leading pop station. Using this provided data it tasks the competitors to create a better music reccomendation system than is currently available with computational music prediction techniques. A key problem with music prediction algorithms as currently constituted is that they often lack historical data to make accurate predictions with, and this is a problem the competition specifically targets. As stated, the central task is for competitors to predict the likelihood of a listener listening to a song "repetitively after the first observable listening event within a time window was triggered." The team with the highest predictive score is awarded $2,500 which will be presented at the conference.
 
-The competition is open to all over the age of 18 and although public sharing is allowed, private sharing of data is not. All that is needed to submit is to register online via kaggle. Competitors are given training data and are encouraged to use outside data to increase their predictive power. 
+Submission for the competition is relatively simple and stripped down. The competition is open to all over the age of 18 and although public sharing is allowed, private sharing of data is not. All that is needed to submit is to register online via kaggle. Competitors are given training data and are encouraged to use outside data to increase their predictive power. 
+
+
 ```{r global_options}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```

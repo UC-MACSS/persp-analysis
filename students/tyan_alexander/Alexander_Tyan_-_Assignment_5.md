@@ -276,3 +276,34 @@ individuals to seek a GP contact in the Netherlands, inflating ILI
 reports in certain population groups (van Noort et al. 2015). Similarly,
 this has led to distorted summer peaks in the UK, as measured by
 traditional systems (Tilston et al. 2010).
+
+### Bibiography
+
+Ginsberg, Jeremy, Matthew H. Mohebbi, Rajan S. Patel, Lynnette Brammer,
+Mark S. Smolinski, and Larry Brilliant. 2008. “Detecting Influenza
+Epidemics Using Search Engine Query Data.” Nature 457
+(7232):nature07634. <https://doi.org/10.1038/nature07634>.
+
+Lazer, David, Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014.
+“The Parable of Google Flu: Traps in Big Data Analysis.” Science 343
+(6176):1203–5. <https://doi.org/10.1126/science.1248506>.
+
+Noort, Sander P. van, Cláudia T. Codeço, Carl E. Koppeschaar, Marc van
+Ranst, Daniela Paolotti, and M. Gabriela M. Gomes. 2015. “Ten-Year
+Performance of Influenzanet: ILI Time Series, Risks, Vaccine Effects,
+and Care-Seeking Behaviour.” Epidemics 13 (Supplement C):28–36.
+<https://doi.org/10.1016/j.epidem.2015.05.001>.
+
+Rosenfeld, Bryn. 2017. “Reevaluating the Middle-Class Protest Paradigm:
+A Case-Control Study of Democratic Protest Coalitions in Russia.”
+American Political Science Review 111 (4):637–52.
+<https://doi.org/10.1017/S000305541700034X>.
+
+Salganik, Matthew J. 2017. Bit by Bit: Social Research in the Digital
+Age. Princeton, NJ: Princeton University Press.
+
+Tilston, Natasha L., Ken TD Eames, Daniela Paolotti, Toby Ealden, and W.
+John Edmunds. 2010. “Internet-Based Surveillance of
+Influenza-like-Illness in the UK during the 2009 H1N1 Influenza
+Pandemic.” BMC Public Health 10 (October):650.
+<https://doi.org/10.1186/1471-2458-10-650>.

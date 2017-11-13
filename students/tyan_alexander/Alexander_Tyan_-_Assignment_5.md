@@ -62,14 +62,14 @@ representative sample.
 As an alternative, Rosefeld uses a variant of the standard case-control
 research design, used in epidemiology to study rare events. To test
 these hypotheses, Rosenfeld collects a random sample of protesters from
-each gathering (there are four of them), and surveys the participants on
-their demographic characteristics as well as, of course, employment
-status to determine whether to classify them as state-employed and
-middle-class or not. He then complements this with a random sample of
-the population (from a national pollster) and runs multivariate modeling
-to estimate a probability of participating in a protest as a function of
-individuals’ characteristics. The results are significant and support
-the two hypotheses.
+each gathering (there are four of protests), and surveys the
+participants on their demographic characteristics as well as, of course,
+employment status to determine whether to classify them as
+state-employed and middle-class or not. She then complements this with a
+random sample of the population (from a national pollster) and runs
+multivariate modeling to estimate a probability of participating in a
+protest as a function of individuals’ characteristics. The results are
+significant and support the two hypotheses.
 
 First, the study’s methodology seems quite solid to begin with and, in
 my opinion, the author resolved the issue of data availability quite
@@ -80,7 +80,7 @@ available previously.
 The main critique of this study may be that the results of the study may
 be not generalizable to all of Russia (or to autocratic settings around
 the world), since the study was limited to a sample in the largest
-Russian city. And the author does attempt to generalize his results to a
+Russian city. And the author does attempt to generalize her results to a
 wider setting. It may be hard to extrapolate the results to all of
 Russia, by virtue of the country’s size, geographic differences, and
 particularities of its capital. Protesters in Moscow may not be
@@ -89,8 +89,8 @@ representative of protesters elsewhere.
 A natural suggestion may be to collect data from more participants
 across more cities. Not only would that make the results more
 generalizable, this would also let the author control for regional
-confounders, much like he did in controlling for demographic variables
-such as gender and age. While the protest which the author studies were
+confounders, much like she did in controlling for demographic variables
+such as gender and age. While the protests which the author studies were
 at their largest in Moscow, other major cities across the country were
 also hubs of significant protest gatherings. Of course, this may pose a
 logistical and financial challenge to do so. Because protests are rare
@@ -126,13 +126,13 @@ survey through a mobile app to the volunteer’s smartphone device. Owing
 such a device would be a prerequisite to being a volunteer. But,
 depending on the recruitment strategy on Russian internet platforms,
 many potential volunteers may already own a device. A volunteer would
-then administer the survey by following random sampling and approaching
-the subject instructions provided beforehand. A survey taker would then
-use the device to enter their survey data. Needless to say, much will
-have to be tested in the way of mobile device compatibility and ease of
-use for survey takers and volunteers before administering the project,
-as many participants may otherwise find it difficult to fill a survey on
-a screen. However, if done right, this may allow the volunteer to focus
+then administer the survey by following random sampling and following
+instructions provided beforehand. A survey taker would then use the
+device to enter their survey data. Needless to say, much will have to be
+tested in the way of mobile device compatibility and ease of use for
+survey takers and volunteers before administering the project, as many
+participants may otherwise find it difficult to fill a survey on a
+screen. However, if done right, this may allow the volunteer to focus
 their attention on approaching the subject well and simplify their task
 (Salganik 2017). Third, one may use Salganik’s (2017) notion of
 leveraging heterogeneity to further cross-validate volunteer’s data
@@ -143,22 +143,31 @@ context, which may hamper the recruitment of volunteers. On the other
 hand, this may not be as big of a problem, as many protest-goers already
 gather online to organize and end up attending the protest. Perhaps
 volunteers could be recruited in such online communities as they may be
-a priori motivated to attend. Framing the task as participating in
-studying the protest movement and contributing to research may further
-motivate such potential volunteers online, as motivation is an important
-part of designing a mass collaboration project (Salganik 2017). Although
-of course it is hard to predict the success of scaling up such a
-recruitment project and it may end up not working out due to volunteers’
-privacy concerns for installing said phone applications on their phones.
+a priori motivated to attend. One may object and find that volunteers
+may be reluctant to have their personal devices used for the study.
+However, framing the task as participating in studying the protest
+movement and contributing to research may motivate such potential
+volunteers online, as motivation is an important part of designing a
+mass collaboration project (Salganik 2017). Although of course it is
+hard to predict the success of scaling up such a recruitment project and
+it may end up not working out due to volunteers’ privacy concerns for
+installing said phone applications on their phones.
 
 Another challenge with this DDC is the ethical component. A study may
 require the volunteers to be properly trained as defined by the IRB
 process. But administering such training to many volunteers across large
 geographic distances may be a challenge and it is not clear whether
 completing such training online would be sufficient to get the IRB
-approval. One must acknowledge that there are many challenges to this
-project and perhaps the path already chosen by the original design
-method is already doing a sufficiently good job.
+approval.
+
+One must acknowledge that there are many challenges to this project,
+including but not limited to: hesitation to use personal devices,
+political sensitivities, volunteer quality and numbers, etc. Perhaps the
+path already chosen by the original design method is already doing a
+sufficiently good job. As Salganic (2017) points out, this may be a
+project that is not suited for the pursuit of scale and the best
+approach is to keep the sampling small because of hurdles mentioned
+above.
 
 ### InfluenzaNet:
 

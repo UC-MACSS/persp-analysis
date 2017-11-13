@@ -10,9 +10,11 @@ I am interested in the open call question: Zillow Prize: Zillow’s Home Value P
 To make a submission, participants have to use the given data as a training sample and predict a log error for each property for each time point between the Zestimate price and sale price, then submit the prediction file.
 
 ###(3)
+
 The data set that I used here is [Kaggle ML and Data Science Survey, 2017](https://www.kaggle.com/kaggle/kaggle-survey-2017). 
 Something interesting about this survey is that it shows that overall, people holding a data analysis related job position prefer using Python than R.
 (Click the icon for Github view)
+
 ![](YuLiqiangHw5_figures/YuLiqiangHw5Q1(3).pdf)
 --
 

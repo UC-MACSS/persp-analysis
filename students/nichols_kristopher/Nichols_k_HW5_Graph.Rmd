@@ -1,11 +1,16 @@
 ---
-title: "Kaggle Open Call Graph"
+title: "Kaggle Open Call"
 author: "Kristopher Nichols"
 date: "November 12, 2017"
 output:
-github_document:
+markdown_document:
   theme: readable
 ---
+#Part II:
+
+I found the WSDM - KKBox's Music Recommendation Challenge to be very interesting. It asks the competitors to create a new, and better music reccomendation system. A key problem with music prediction algorithms is that they often lack historical data to make accurate predictions with, and this is a problem the competition specifically targets.As stated, the central task is for competitors to predict the likelihood of a listener listening to a song "repetitively after the first observable listening event within a time window was triggered." 
+
+The competition is open to all over the age of 18 and although public sharing is allowed, private sharing of data is not. All that is needed to submit is to register online via kaggle. Competitors are given training data and are encouraged to use outside data to increase their predictive power. 
 ```{r global_options}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```

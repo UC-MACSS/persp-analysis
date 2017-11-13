@@ -46,7 +46,7 @@ Since my Amazon Mechanical Turk account is still under review and Benjamin said,
 
 ### Proof
 
-<img src="../Assignment5/Mturk.png" width="500" height="300">
+<img src="../Assignment5/MTurk.png" width="500" height="300">
 
 
 ## References

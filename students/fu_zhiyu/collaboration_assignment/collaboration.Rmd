@@ -71,3 +71,7 @@ Several benefits come with the reformulation. First, it can save the compensatio
 
 # Q3
 
+Since I don't have an SSN, I cannot sign up for MTurk. I worked on Microworker instead.
+
+![screenshot](screenshot_for_microworker.png)
+

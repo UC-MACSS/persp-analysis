@@ -1,0 +1,38 @@
+---
+title: "Kaggle Open Call Graph"
+author: "Kristopher Nichols"
+date: "November 12, 2017"
+output:
+github_document:
+  theme: readable
+---
+```{r global_options}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+## Load Libraries
+```{r}
+library(readr)
+library(ggplot2)
+library(dplyr)
+```
+
+##Load Data
+```{r}
+video_game_sales_with_ratings <-read_csv("~/GitHub/persp-analysis/students/nichols_kristopher/Data for HW5/Video_Games_Sales_as_at_22_Dec_2016.csv")
+View(video_game_sales_with_ratings)
+```
+
+##Clean Data
+```{r}
+video_game_sales_with_ratings <-subset(video_game_sales_with_ratings, !is.na(User_Score))
+video_game_sales_with_ratings1 <-subset(video_game_sales_with_ratings, User_Score != "tbd")
+```
+
+##Make Graph
+```{r}
+video_game_sales_with_ratings1 %>%
+  ggplot(aes(Critic_Score, User_Score, color = Critic_Score)) +
+  geom_point() +
+  theme_bw() +
+  labs(title = "How User Score Relates to Critic Score", x = "Critic Score", y = "User Score", subtitle = "MetaCritic Data", color = "Score")
+```

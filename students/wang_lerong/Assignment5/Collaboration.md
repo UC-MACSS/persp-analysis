@@ -13,12 +13,11 @@ I created an account with Kaggle and my user name is lwang11.
 The Kaggle competition that I am interested in is New York City Taxi Trip Duration. The goal of this competition is to build a model that accurately predicts the duration of taxi trips in New York City. 
 The evaluation metric for the competition is Root Mean Squared Logarithmic Error (RMSLE). For the submission file, I need to have two columns for every row in the dataset, the first is id, which corresponds to the id in the column of id in test.csv file and the second is trip duration that's calculated based on the model I build. The file must also contain a header and have the following format:
 
-id,trip_duration
-id00001,978
-id00002,978
-id00003,978
-id00004,978
-etc.
+| id | trip_duration |
+| ------  | --- |
+| id00001 | 978 |
+| id00002 | 978 |
+| id00003 | 978 |
 
 ### Explore the Kaggle datasets page
 The dataset I explored on Kaggle is Student Alcohol Consumption. There are two csv files in the original file that I downloaded from Kaggle, and I used the student-mat.csv file, which is the data from students in math course. The scripts and plots are shown in the ipynb file.

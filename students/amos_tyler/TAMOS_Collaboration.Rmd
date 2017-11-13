@@ -1,0 +1,99 @@
+---
+title: "Collaboration Assignment"
+author: Tyler Amos
+output: github_document
+---
+_November 13 2017_
+
+## Kaggle Open Call Projects
+
+### 1. Kaggle Account Creation
+
+Please see the screenshot submitted with this document (TAMOS_Collaboration_Task_1.png).
+
+### 2. Kaggle Competition
+
+#### Describe one that is of interest to you
+
+Competition Link: https://www.kaggle.com/c/statoil-iceberg-classifier-challenge#background
+
+I find the Statoil/C-Core iceberg classification challenge to be an interesting opportunity to test out computer vision applications to remotely sensed data. Remotely sensed data is under-utilized in the social sciences, although it has seen some applications to the study of international relations (e.g., Agnew et al, 2008). While this competition does not have direct relevance to the social sciences, it would be an excellent opportunity to develop skills in computer vision techniques which can then be applied to social problems. 
+
+#### What is the goal of the competition? 
+
+The goal of the competition is to accurately classify two types of objects (icebergs and ships) from remotely sensed data. Thus it is a straightforward classification problem. The companies Statoil and C-Core are interested in improving the accuracy of their iceberg recognition algorithms. A more accurate classification system will enable Statoil to reduce costs and improve safety for their operations. C-Core will benefit from an improvement to their product - iceberg detection services.
+
+#### What would you have to do to make a submission?
+
+Solutions must accurately distinguish between icebergs and ships from satellite imagery, taking into account an object's shape, size, and brightness relative to surrounding matter. In order to make a submission, I would need to develop a classification system which accounts for these three principal characteristics. The most commonly used tool for this type of problem is an artificial neural network. I would need to implement the network, most likely in an open-source framework (e.g., R or Python) and train it on the test data provided. In order to submit I would need to upload my predictions for the training dataset. While not required, I would also post my code as a Kaggle kernel in order to contribute to community efforts to solve the problem. 
+
+### 3. Plotting A Kaggle Dataset
+
+Please see the documents attached to this submission. (Amos_T_Collaboration_Plotting.ipynb; TAMOS_Collaboration_plot.png).
+
+## Improving a Journal Article
+
+Hochmuller and Muller's article "Encountering Knowledge Production: the International Crisis Group and the making of Mexico's security crisis" (2014) examines the International Crisis Group's (ICG) reporting on Mexico through a critical lens. The authors examine the impact of the ICG's reporting on perceptions of the security situation in Mexico, as well as the ICG's standing as an institution capable of responding to emerging crises. The authors analyze ICG reports pertaining to Mexico and the illegal narcotics industry both in Mexico and Latin America. They conclude:
+
+> "through its Western-centric ‘Mexican turn’, the ICG has been able to reaffirm its standing as a uniquely influential and internationally recognized crisis expert by showcasing its awareness of newly emerging crisis situations, as well as its possession of the necessary crisis-solving expertise." (Hochmuller and Muller, 2014)
+
+Hochmuller and Muller's analysis hinges on the first phrase of their conclusion - that the ICG's analyses are western-centric. A reformulation of the study should carefully investigate this notion before validating their results. 
+
+This study could be re-formulated as a human computation project by decomposing the reading and analysis of documents into small, discrete pieces to be performed by volunteers. Potential operationalizations include labelling passages on the basis of: their depiction of Mexico's security (e.g., positive, negative, neutral); degrees of western-centric language or norms (e.g., To what extend does this statement assume a liberal-democratic worldview?); or quantifying "othering" of the Mexican people through the type of emotions the passage elicits in readers (shock, fear, etc.). Although the authors do not use a quantitative methodology, a human computation approach would allow for a quantitative follow-up to validate or challenge the authors' conclusions.
+
+#### Improvement Relative to the Original Design
+
+This approach offers a number of improvements over the original research design. First, it would allow for data collection across not only all ICG reports, but could even be expanded to other international affairs think tanks. This would enable stronger external validity. Second, the authors approach this issue from a particular perspective, critical policy analysis and post-colonial security. By re-formulating this project as a human computation project, a more diverse range of perspectives on the corpus' content would be heard, thus leveraging heterogeneity to improve the accuracy of results. Further gains in this regard would come from leveraging hetergeneity within the reformulated study by having multiple volunteers code the same passages. Third, while this approach may be more expensive than the original, purely qualitative approach, it is actually quite low-cost relative to the potential amount of data collected. For example, reports from the ICG and other international affairs think tanks are generally free and publicly available. Risks related to the amount of work to acquire and decompose documents into coding-ready passages can be mitigated by first starting with only ICG documents related to Mexico. If response rates are sufficient to continue, then additional documents can be added to the corpus. This is effectively a "fail fast" strategy.
+
+#### Risk Mitigation
+
+The risk of failure for any human computation project is significant. For this project in particular, the principal risk is non-response. A related risk is insufficiently motivated participants. While coding passages does not offer any tangible reward to participants, previous studies with similar designs (e.g., The Manifesto Project) have been successful when targeted at a receptive audience. The passage coding initiative will therefore be initially targeted at university international and regional studies, human rights, law, international relations, politics, and geography students and faculty.
+
+Through sufficient risk mitigation and a willingness to "fail fast", a human computation approach to the issue explored in Hochmuller and Muller (2014) has potential for robust external validity by leveraging heterogeneity among respondents. It also offers low cost as compared to traditional qualitative content analysis by experts. 
+
+## InfluenzaNet Alternative Assignment
+
+##### Compare and contrast the design, costs, and likely errors in InfluenzaNet, Google Flu Trends, and traditional influenza tracking systems
+
+##### InfluenzaNet vs Traditional Systems vs Google Flu Trends
+
+This section draws extensively from Van Noort et al. (2015), Tilston et al. (2010), and Salganik (2017).
+
+_Design and Costs_
+
+Influenzanet relies on volunteers who self-report flu symptoms. Volunteers are recruited through the website of each national authority participating in the program. Volunteers are then asked to fill out online questionnaires throughout the flu season. Volunteers who respond more than three times are included in the results. Participant retention is encouraged through repeated contact and a presence online and in other media. Information on the flu is also disseminated to participants and the general public in order to improve engagement. Promotional material and other such efforts to engage participants and the public likely incur significant costs. However, many of these programs would likely already be implemented through government health initiatives, and this may help to defray the cost. Google Flu Trends, by comparison is a very low cost monitoring system, as it uses a suite of algorithms to extrapolate the prevalence of influenza-like illness in a given area from internet search queries. It uses a wide range of predictor variables, regardless of their subject matter relevance, to predict influenza rates. 
+
+_Potential Errors_
+
+As noted by Van Noort et al. (2015), Influenzanet respondents tend to skew towards the middle of age distributions. Furthermore, this approach, unlike traditional disease surveillance systems, relies on self-reports of symptoms by untrained individuals, thus there may be concerns about data validity. Traditional surveillance systems, by contrast, use trained medical practitioners who report based on their patients' health. However, such systems rely on only a subset of practitioners in a given country, thus, while they may have high internal validity in their identification and reporting of influenza-like illness, the limited number and distribution of reports may lead to weak generalizability. Furthermore, traditional system lack global definitions for symptoms or illnesses, using country-specific standards instead. Google Flu Trends, by comparison is a As previously discussed in the MACSS 30000 course, this approach is vulnerable to system shift and initial errors in predictor variable selection. For example, Google Flu Trend algorithms may use predictor variables which are in fact, not related to the variable of interest (e.g., basketball, which is actually a proxy variable for the winter season). Furthermore, Google Flu Trends and Influenzanet both rely to a greater or lesser extent on traditional monitoring systems for validation and calibration purposes. 
+
+_Global Comparative Effectiveness_
+
+As discussed by Van Noort et al. (2015), results from the Influenzanet surveillance system broadly align with traditional influenza monitoring systems such as the European Influenza Surveillance Network. As noted previously in the MACSS 30000 seminar discussions and as profiled by Salganik (2017), Google Flu Trends has faced challenges of system drift and predictor variables selected with insufficient domain expertise. While there are costs associated with this approach, specifically as relates to participant engagement, information dissemination, and motivation, it also offers a real-time view of reported symptoms. Furthermore, it offers a standardized set of definitions and thus more generalizability than traditional systems. Granularity is another advantage of internet-delivered systems such as Influenzanet or Google Flu Trends. By contrast, traditional systems are reported more infrequently, such as on a weekly basis. Internet-based systems also offer insights into care-seeking behavior, as it allows for contact with individuals who do not seek care as well as those who do. Traditional surveillance systems, where data is collected through physicians, only include individuals who seek medical attention. Lastly, the flexibility offered by internet-based systems such as Influenzanet allow them to ask additional questions beyond traditional epidemiological screenings.  
+
+In summary, internet-based surveillance systems offer flexibility and affordability, as well as opportunities for high-quality, more generalizable data. However, this comes at the cost of internal validity as compared to traditional surveillance systems. 
+
+##### Consider an unsettled time, such as the swine flu outbreak. Describe the possible errors in each system.
+
+However, a time of uncertainty such as a pandemic is likely to magnify existing weaknesses in any detection system. For example, Tilston et al. notes the difficulty in even defining symptoms due to variation in individual sensitivity to particular conditions. A separate, but related concern is also that individuals are more likely to report or seek medical attention (i.e., non-response bias is less present) when they experience symptoms. This in turn calls into question the generalizability of results, and is related to the issue noted below (a high incidence of one-time respondents). A result of these issues is the persistent challenge of weighting results appropriately given varied response rates. Furthermore, in challenging contexts, standardization is rarely possible, and as Tilston et al. points out, there were different definitions for influenza-like illness during the H1N1 pandemic even within the United Kingdom. 
+
+An additional factor to consider, as discussed by Tilston et al. (2010), is the differential behavior of internet-based systems (as compared to traditional systems) during stress periods. In their analysis, Tilson et al. found that online reporting rates were skewed by one-time respondents who appeared more likely to be ill, which caused higher rates of influenza-like illness reports. However, when the analysis focused only on respondents who reported more than once, this issue appeared to be mitigated, and internet-based systems even outperformed traditional systems. While Tilston does not discuss Google Flu Trends in the context of the 2009 pandemic, it is reasonable to assume a pandemic covered widely in the media, such as H1N1, would likely confound algorithms designed to track routine seasonal flu prevalence. In other words, a "flu-frenzy" would likely provoke a high number of search queries, regardless of searchers' health. 
+
+By contrast, traditional systems, specifically in the case of the 2009 H1N1 pandemic, produced an exaggerated rate of influenza-like illnesses during the initial period, and an under-reported rate of illness during the second peak of the pandemic. This may reflect a natural human tendency to over-emphasize novelty (a new disease) and downplay routine (a months-long pandemic becomes the new "normal"). 
+
+In summary, each surveillance system has a differential vulnerability during a crisis, but mixed-method surveillance systems (i.e., delivered through the internet but with human respondents) outperform purely analog (traditional surveillance) and likely outperform purely digital (Google Flu Trends) methods. 
+
+
+## References
+
+Agnew et al. 2008. "Baghdad Nights: Evaluating the US Military 'Surge' Using Nighttime Light Signatures" _Environment and Planning A_, Vol 40. 2285 - 2295.
+
+Hochmuller and Muller. 2014. "Encountering Knowledge Production: the International Crisis Group and the making of Mexico's security crisis" _Third World Quarterly_ Vol 35 No 4 http://dx.doi.org/10.1080/01436597.2014.924069
+
+Manifesto Project, The. https://manifestoproject.wzb.eu 
+
+Salganik. 2017. _Bit by Bit_ http://www.bitbybitbook.com
+
+Tilston et al. 2010. "Internet-based surveillance of Influenza-like-illness in the UK during the 2009 H1N1 influenza pandemic" _BMC Public Health_ Vol 10. https://doi.org/10.1186/1471-2458-10-650
+
+Van Noort et al. 2015. "Ten-year performance of InfluenzaNet: ILI time series, risks, vaccine effects, and care-seeking behaviour" _Epidemics_ Vol. 13. 28 - 26 http://www.sciencedirect.com/science/article/pii/S1755436515000638?via%3Dihub 

@@ -35,7 +35,7 @@ The top 3 winning teams will split $25,000 paid for by Google Inc. and Voleon.
 Kaggle Data Sets
 ----------------
 
-The dataset I chose to analyze was a complete list from the 90's craze called Pokemon. The dataset is available [here](https://www.kaggle.com/abcsds/pokemon).The dataset includes a full list of every Pokemon created. It's "type", and some specific attributions about their other stats (e.g. Attack, Defense, etc.). Because "type" is especially important in the world of Pokemon training (you wouldn't want to bring a fire type to a swimming pool), I decided to create a visual of the most common Pokemon types.
+The dataset I chose to analyze was a database from the 90's craze Pokemon that included every Pokemon ever created and some key stats. The dataset is available [here](https://www.kaggle.com/abcsds/pokemon). The dataset includes a full list of every Pokemon created -- each Pokemon's "type", and some specific attributions about their other stats (e.g. Attack, Defense, etc.). Because "type" is especially important in the world of Pokemon training (you wouldn't want to bring a fire type to a swimming pool), I decided to create a visual of the most common Pokemon types.
 
 #### Load Packages and Data
 
@@ -133,7 +133,7 @@ Since most users have hundreds of friends new posts can be classified almost ins
 
 This would improve the study by being a more accurate measure of whether a post is positive or negative than looking for single words. The study could then look at the impact of post content more faithfully than just using a broad sweep as it did with single word choices. Facebook is naturally an interactive platform, so this would not require much change. By classifying posts more efficiently, it is more likely that the authors will be able to see the external effect they were looking for.
 
-Single word choices will not be able to pick up sarcasm, the way that human beings will be able to. Though humans may occassional misattribute the correct emojis, if the reliability is not good, the most can be excluded.
+Single word choices will not be able to pick up human traits like sarcasm, or silliness (e.g. "I hate my boyfriend :)"). Though humans may occassional misattribute the correct emojis, the social pressure of social networks (don't accidently use an excited emoji when someone shares that their grandmother passed away), and the reliability of having many users will overcome this. If a post's emojis are ambiguous, it is likely that it can be excluded from the study without much consequence.
 
 Amazon Mechanical Turk
 ======================

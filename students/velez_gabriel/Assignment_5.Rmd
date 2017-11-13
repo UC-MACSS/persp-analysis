@@ -2,7 +2,7 @@
 title: "Collaboration"
 author: "Gabriel Velez"
 date: "11/11/2017"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -14,9 +14,9 @@ library(tidyverse)
 
 *First Step*
 
-The project of interest to me involves creating an algorithm to predict home prices (sponsored by [Zillow](https://www.kaggle.com/c/zillow-prize-1)).  The project looks to improve upon the current “Zenestimate” that Zillow.com provides to prospective home buyers as they explore online different home buying options.  The current approach, according to the competition page, uses “7.5 million statistical and machine learning models that analyze hundreds of data points on each property.”  Over time, Zillow has been able to lower the median margin of error in their estimate to 5%, and now they running this competition to make their predictive ability of future home prices even more precise.  To this end, the goal of the competition is to create a statistical model using available data on a given home that has the lowest residual error. 
+The project of interest to me involves creating an algorithm to predict home prices (sponsored by [Zillow](https://www.kaggle.com/c/zillow-prize-1)).  The project looks to improve upon the current “Zenestimate” that Zillow.com provides to prospective home buyers as they explore online different home buying options.  The current approach, according to the competition page, uses “7.5 million statistical and machine learning models that analyze hundreds of data points on each property.”  Over time, Zillow has been able to lower the median margin of error in their estimate to 5%, and now they running this competition to make their predictive ability of future home prices even more precise.  To this end, the goal of the competition is to create a statistical model using available data on a given home that has the lowest residual error. The competition is set up two rounds (a qualifying one and a final one).  
 
-The contest will be evaluated by applying the algorithm to homes sold in the three months after the competition closes.  The measure used to judge the models will be the difference between the predictions and the actual sale prices.  Specifically, the models will be evaluated by using the mean absolute error, or the difference between the predicted log error (which is the log of the model estimate minus the log of the sale price) and the actual log error (using the current Zenestimate model).
+The qualifying round be evaluated by using the mean absolute error, or the difference between the predicted log error (which is the log of the model estimate minus the log of the sale price) and the actual log error (using the current Zenestimate model).  The final round will be evaluated by applying the algorithm to homes sold in the three months after the competition closes.  The measure used to judge the models will be the difference between the predictions and the actual sale prices. 
 
 In order to make a submission, I would have develop a predictive model for the sale price of a home.  This model would need to consider factors about the home (e.g., number of rooms, floor space, bathrooms), the neighborhood (e.g., crime statistics, median home sale price, number of parks, rural/urbanicity), about the particular home (e.g., how long it has been on the market, recent updates to roof, etc.), and about the trends in home prices in the area.  I would begin the problem by looking at what publically available data on modeling home sale prices exists.  I would also then research what literature exists on factors impacting home sales.  After drawing on this to create various possible models, I would test the effectiveness of each.  To do this, I would take available home sale data over an extended time period (say five to ten years) and split it into training and evaluation sets. A ten-fold cross validation approach could be used. First, the data would be split into ten groups. This process then uses one of the ten as the validation set and then tests the model on the other nine, repeating the process with each set serving as the validation set, and then finally taking the average of the mean squared error (MSE) for each one of these steps. I could do this for the various models I create and compare with are the best by having the lowest MSE.
 
@@ -27,8 +27,7 @@ In order to make a submission, I would have develop a predictive model for the s
 soccerResults <- read_csv("soccerResults.csv")
 
 
-
-#Plotting first Income Trajectory
+#Plotting Top Team's Winning Percentage
 soccerResults %>%
   mutate(`homeWin` = ifelse(home_ft>away_ft, 1, 0)) %>%
   group_by(`home_team`) %>%
@@ -43,7 +42,8 @@ soccerResults %>%
   geom_text(aes(label=`home_team`)) +
     labs(title = "Countries with Best Home Winning Percentage (With over 50 Games Played)",
        x = "Country", 
-       y = "Winning Percentage at Home") 
+       y = "Winning Percentage at Home") +
+       theme(axis.text.x=element_blank())
 
 ```
 
@@ -60,6 +60,9 @@ I envision a couple of substantial obstacles to this human computation project a
 
 My evidence of participating in an hour of work:
 
-[Account page](Velez_account.png)
+Account Page:
+![](Velez_account.png)
 
-[Qualifications Page](Velez_qualifications.png)
+
+Qualifications Page:
+![](Velez_qualifications.png)

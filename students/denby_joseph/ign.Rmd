@@ -1,0 +1,27 @@
+---
+title: "IGN Review Data"
+author: "Joseph Denby"
+---
+
+Kaggle has a dataset for over 18,000 IGN video game reviews [here](https://www.kaggle.com/egrinstein/20-years-of-games). Through this dataset, we can investigate the average game score over time to see how the industry and/or review process have changed.
+```{r}
+library(tidyverse)
+```
+Group the data by the game's year of release to calculate the average score per year. I dropped the year 1970 because those games were reviewed specifically as 'classics' so scores from that year are likely positively skewed.
+```{r}
+ign <- read_csv("ign.csv", col_names = TRUE) 
+ign_avg_yr_review <- ign %>%
+  group_by(release_year) %>%
+  summarise(avg_yr_score = mean(score)) %>%
+  filter(release_year != 1970)
+```
+I fit a smooth curve to the two variables to get a finer look at how average scores have changed over time.
+```{r}
+ggplot(ign_avg_yr_review, aes(release_year, avg_yr_score)) +
+  geom_smooth(method = 'loess') +
+  labs(x = 'Release Year', 
+       y = 'Average Score (out of 10)', 
+       title = 'Average IGN Game Review Scores ',
+       caption = "based on data from Kaggle")
+```
+Based on the plot, it appears that average game scores have generally trended upward since IGN's founding. Except for a portion of the early 2000's, IGN has tended to review more and more positively. 

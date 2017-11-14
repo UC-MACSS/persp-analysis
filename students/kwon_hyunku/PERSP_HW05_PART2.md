@@ -1,87 +1,108 @@
-Improving the Social Movement Research via Human Computation Project
---------------------------------------------------------------------
+    library(tidyverse)
 
-Hyunku Kwon
------------
+    ## -- Attaching packages --------------------------------------------------------------------------------------- tidyverse 1.2.0 --
 
-### Related Articles:
+    ## √ ggplot2 2.2.1     √ purrr   0.2.4
+    ## √ tibble  1.3.4     √ dplyr   0.7.4
+    ## √ tidyr   0.7.2     √ stringr 1.2.0
+    ## √ readr   1.1.1     √ forcats 0.2.0
 
-**Jung, W., King, B. G., & Soule, S. A. (2014). Issue bricolage:
-Explaining the configuration of the social movement sector, 1960–1995.
-American Journal of Sociology, 120(1), 187-225.**
+    ## -- Conflicts ------------------------------------------------------------------------------------------ tidyverse_conflicts() --
+    ## x dplyr::filter() masks stats::filter()
+    ## x dplyr::lag()    masks stats::lag()
 
-**Ghaziani, A., & Baldassarri, D. (2011). Cultural anchors and the
-organization of differences: a multi-method analysis of LGBT marches on
-Washington. American Sociological Review, 76(2), 179-206.**
+    library(knitr)
+    library(broom)
+    library(stringr)
+    library(modelr)
 
-While social movement scholarship has focused on the “structural”
-properties (e.g. social networks, political opportunity structure, and
-organizations) of social movement, recent scholars began to examine its
-“ideational” properties: how social movement groups’ issue agendas are
-related with each other. Such research project requires dataset which
-contains information about the issue agendas of social movement
-organizations and protest events. For example, to understand whether
-Occupy Wallstreet and LGBT movement are ideationally linked with each
-other, we should see whether (1) the two organizations collaborated with
-each other (coalition building), or (2) protesters in each organization
-or protest piggyback each other’s agenda without explicit collaboration
-(frame bridging).
+    ## 
+    ## Attaching package: 'modelr'
 
-To understand such ideational and relational dynamics, scholars have
-turned to newspapers. For example, Jung et al (2014) reads every page of
-all daily issue of New York Times, and search for any mention of protest
-events; Ghaziani and Baldassarri (2011) looks at 11 local and national,
-mainstream and gay presses (e.g. Advocate, Bay Area Reporter, Gay
-Community News) to elicit the issue agendas of LGBT protests and
-organizations.
+    ## The following object is masked from 'package:broom':
+    ## 
+    ##     bootstrap
 
-There is an empirical limit inherent in this line of social movement
-research: there are too many social movement organizations and protest
-events. For example, The Dynamics of Collective Action dataset, which
-examines protest events from 1965 to 1990, has more than 23,000 distinct
-protest events. Considering the fact that this dataset only takes into
-account protest events that featured in New York Times, such research
-project would potentially require substantive amount of work.
+    library(forcats)
+    library(ggmap)
+    library(maps)
 
-Even though the making of such dataset is a very laborious, and thus
-requires a lot of researchers, the job itself is pretty simple: all that
-should be done is to classify each social movement organization or
-protest event into a certain set of issue agendas. It doesn’t require
-sophisticated and trained research’s work; nor is it very subjective:
-explicit issue positions or implicit cultural repertoires of the
-protests or organizations are not hard to identify, for Social movement
-groups and protests try hard to make their message very clear.
+    ## 
+    ## Attaching package: 'maps'
 
-Seen in this light, Human Computation Project would be extremely helpful
-here. Classifying, coding and labeling the issue agenda of social
-movement organizations and protests is an easy-task-big-scale problem;
-such problem might be efficiently solved by employing
-“split-apply-combine strategy which break a big problem into lots of
-simple micro-tasks that can be solved by people without specialized
-skills” (Salganik 2017). To illustrate, we can gather Newspaper articles
-that contain certain key words pertaining to the social movement, such
-as protest or social movement. Then, we split them into pieces, and
-distribute them to volunteers. Volunteers are required to identify and
-classify the ideational properties of the social movements—the issue
-agenda(s) of the protest. Finally, results are combined to produce a
-consensus result.
+    ## The following object is masked from 'package:purrr':
+    ## 
+    ##     map
 
-Drawing on Human Computation Project, we may improve the research
-project in several ways. First, while social movement scholars have
-turned heavily to New York Times dataset to investigate the ideational
-properties of protest, we can have a broader, more general
-representation of social movement dynamics, by making use of
-split-apply-combine strategy. This is made possible by dealing with
-various newspapers, both local and national, and both mainstream and
-niche.
+    library(foreign)
+    library(rgdal)
 
-Second, once we find the systematic discrepancy between the
-classification of professional social scientists and that of mass
-public, we can elicit how mass public perceives social movement
-dynamics. Since protests aim at influencing and interacting with mass
-public, how public understands social movements is a very important
-question. With Human Computation Project, scholars may improve the
-bottom-up process of social movement: how mass public understands social
-movements, and how such understanding systematically differs from
-elites' and scientists' perspective. Such discrepancy itself would be a
-valuable resource for research.
+    ## Loading required package: sp
+
+    ## rgdal: version: 1.2-15, (SVN revision 691)
+    ##  Geospatial Data Abstraction Library extensions to R successfully loaded
+    ##  Loaded GDAL runtime: GDAL 2.2.0, released 2017/04/28
+    ##  Path to GDAL shared files: C:/Users/Hyunku Kwon/Documents/R/win-library/3.4/rgdal/gdal
+    ##  GDAL binary built with GEOS: TRUE 
+    ##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]
+    ##  Path to PROJ.4 shared files: C:/Users/Hyunku Kwon/Documents/R/win-library/3.4/rgdal/proj
+    ##  Linking to sp version: 1.2-5
+
+    library(readr)
+
+
+    # you can directly download the dataset from the following code (read.csv(url("https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv?accessType=DOWNLOAD"))). But, it is a very big dataset, and thus takes too long to knit or directly download directly from the link. So I draw on 2012-2017 dataset from kaggle (https://www.kaggle.com/currie32/crimes-in-chicago). There is a way to download dataset from Kaggle directly (https://stackoverflow.com/questions/35303779/downloading-kaggle-zip-files-in-r), but this code requires my ID and password. So, I'm just uploading the file directly to the repository.  
+
+    # importing the file
+    chicago <- read.csv("Chicago_Crimes_2012_to_2017.csv")%>%
+      select(Primary.Type,Longitude,Latitude, Year) 
+
+    # tidying the file 
+    ch1<-chicago %>%
+      filter(Primary.Type == "WEAPONS VIOLATION") %>%
+      filter(!Year == "2017")
+
+
+    # draw on google maps for background
+
+    qm <- qmap("chicago", darken=.1, zoom=10) + geom_point(data=ch1, aes(x=Longitude, y=Latitude), size=1.5, alpha=.05) +
+        coord_cartesian(xlim=c(-87.96, -87.5), ylim=c(41.62, 42.05))
+
+    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=chicago&zoom=10&size=640x640&scale=2&maptype=terrain&language=en-EN&sensor=false
+
+    ## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false
+
+    ## Warning: `panel.margin` is deprecated. Please use `panel.spacing` property
+    ## instead
+
+    # delineating chicago area
+
+    shapefile <- readOGR("City_20Boundary", "City_Boundary")
+
+    ## OGR data source with driver: ESRI Shapefile 
+    ## Source: "City_20Boundary", layer: "City_Boundary"
+    ## with 1 features
+    ## It has 4 fields
+    ## Integer64 fields read as strings:  OBJECTID
+
+    shapefile.converted <- spTransform(shapefile, CRS("+proj=longlat +datum=WGS84"))
+
+    # 
+
+    chicagocrime <- qm + geom_polygon(aes(x = long, y = lat, group=group), alpha=.2, fill="black", 
+                     data = shapefile.converted) + 
+        coord_cartesian(xlim=c(-87.96, -87.5), ylim=c(41.62, 42.05)) +
+        geom_point(data=ch1, aes(x=Longitude, y=Latitude), size=1.5, alpha=.05)+
+      labs(title = "Crimes Related with Weapons in Chicago")
+
+    ## Regions defined for each Polygons
+
+    chicagocrime
+
+    ## Warning: Removed 74 rows containing missing values (geom_point).
+
+    ## Warning: Removed 74 rows containing missing values (geom_point).
+
+![](PERSP_HW05_PART2_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+Bottomline: Hyde park itself is not very dangerous, but it is surrounded
+by dangerous place rife with gun-related crimes. So, be careful :)

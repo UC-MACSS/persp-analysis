@@ -127,9 +127,12 @@ All readings are required unless otherwise noted. Adjustments can be made throug
 1. Simulated data (cont.)
 1. Collaboration
     * ["Chapter 5: Collaborating". *Bit by Bit*.](http://www.bitbybitbook.com/en/mass-collaboration/)
+    * [Pro Git](https://git-scm.com/book/en/v2)
 1. Collaboration (cont.)
 1. Ethics
     * ["Chapter 6: Ethics." *Bit by Bit*.](http://www.bitbybitbook.com/en/ethics/)
+    * [Zimmer, M. (2016). OkCupid Study Reveals the Perils of Big-Data Science. *Wired*.](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
+1. Ethics (cont.)
     * [UChicago Social & Behavioral Sciences Institutional Review Board](https://sbsirb.uchicago.edu/)
         * Skim site
         * Specifically read ["Does My Research Need IRB Review?"](https://sbsirb.uchicago.edu/page/does-my-research-need-irb-review-0)
@@ -139,10 +142,8 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [Watts, D. J. (2014). Stop complaining about the Facebook study. It's a golden age for research. *The Guardian*.](https://www.theguardian.com/commentisfree/2014/jul/07/facebook-study-science-experiment-research)
         * [Rosen, J. (2014). Facebook's controversial study is business as usual for tech companies but corrosive for universities. *The Washington Post*.](https://www.washingtonpost.com/posteverything/wp/2014/07/03/dont-blame-facebook-for-screwing-with-your-mood-blame-academia/?utm_term=.e2bd90d038b1)
         * [Vertesi, J. (2014). The Real Reason You Should Be Worried About That Facebook Experiment. *Time*.](http://time.com/2950699/facebook-experiment-social-science-funding/)
-1. Ethics (cont.)
     * [Kosinski, M., & Wang, Y. (2017, September 24). Deep neural networks are more accurate than humans at detecting sexual orientation from facial images. *Journal of Personality and Social Psychology.* Retrieved from psyarxiv.com/hv28a](https://psyarxiv.com/hv28a/)
     * [Parry, M. (2011). Harvard Researchers Accused of Breaching Students' Privacy. *Chronicle of Higher Education*.](http://chronicle.com/article/Harvards-Privacy-Meltdown/128166/)
-    * [Zimmer, M. (2016). OkCupid Study Reveals the Perils of Big-Data Science. *Wired*.](https://www.wired.com/2016/05/okcupid-study-reveals-perils-big-data-science/)
 1. Exploratory data analysis - univariate visualizations
     * [Exploring Histograms](https://tinlizzie.org/histograms/)
 1. Exploratory data analysis - multivariate visualizations

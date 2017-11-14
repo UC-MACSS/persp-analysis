@@ -1,0 +1,61 @@
+% Created by Ariel Boyarsky (aboyarsky@uchicago.edu)
+
+\documentclass[dvips,12pt]{article}
+
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage[superscript,biblabel]{cite}
+
+
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+% -----------------------------------------------------------------
+\begin{document}
+% -----------------------------------------------------------------
+
+
+\title{A Network Analysis of Economic Elite Capture}
+\author{Ari Boyarsky \\ aboyarsky@uchicago.edu}
+\date{October 16, 2017}
+
+
+
+
+\maketitle
+
+
+\section{Introduction}
+
+\indent The recent U.S. presidential election has once more thrust the question of economic inequality to the forefront of American political discourse. Most studies of inequality focus on the political and economic processes that lead to such disparate outcomes. However, a further question asks how economic inequality translates into political inequality. That is, does inequality alter the responsiveness of government to the public. The political responsiveness literature calls this phenomenon economic-elite domination.\cite{RefWorks:doc:59e2928ee4b07e3b24389b4d} Martin Gilens famously documented the link between economic inequality and the decline of political responsiveness in his work \textit{Affluence and Influence}.\cite{RefWorks:doc:59e2931fe4b0b4635e033b19} Further work has also attempted to understand the impact of elite capture on welfare programs.\cite{RefWorks:doc:59e29357e4b0b4635e033b1f} Indeed, there is a tremendous body of research in both economics and political science that attempts to document and evaluate the impact of economic elite domination. However, no study has proposed a definitive measure of elite capture. For the most part studies in the United States have attempted to measure elite domination through policy preferences, while studies in developing countries tend to look at cash transfer programs. I propose a new measure of elite capture that utilizes techniques from network theory in combination with “big data” from social media. 
+
+
+
+\section{Methodology}
+
+Recent work in computational social science has underpinned the importance of political networks in the study of government.\cite{RefWorks:doc:59e293d5e4b0ff0c7c11a827}  Indeed, Ward et al. (2011) argue that network analysis is an invaluable asset in studying interdependence and influence in political systems.\cite{RefWorks:doc:59e2942de4b030e7c2c3cf11}  To construct a new measure of elite capture in the United States I turn to social media data collected from Facebook and Twitter. Specifically, I intend to scrape the Facebook and Twitter accounts of politicians from the last three sessions of congress using links from Ballotpedia.  I will then use the Twitter and Facebook API to collect mentions of interest groups. This will require that I compile a list of interest groups with their respective Twitter and Facebook accounts. This will be completed partially by hand with the help of lists created by OpenSecrets.org.  Then I will collect the same data from Twitter and Facebook of these groups, searching for mentions of politicians from our list of the last three sessions of congress. Using this I will construct two directed graphs (Facebook and Twitter) in which each node represents an entity in the politician or interest group list, and each edge will represent a mention of some party (going from the mentioning party to the mentioned party). We will also weight each edge by the total number of identical mentions. Once, this graph is constructed I will be able to conduct analyses to test for major influencers. Perhaps most instructive, I will be able to quantify the number of links between politicians and non-politicians which will allow me to construct an overall measure of elite capture. In other words, I expect that the extent to which politicians are beholden to interest groups can be directly inferred from connectivity of politicians and interest groups on social media. To cross validate these findings I will regress single node centrality on total dollar amount contributed by each group over the past three years.\cite{RefWorks:doc:59e29490e4b0b4635e033b3b}  If the results are robust, this study will show the usefulness of network analysis in studying elite political influence in American politics. 
+
+\section{The Benefits and Drawbacks of Big Data}
+
+This study takes advantage of the increasing salience of social media in political discourse. A 2015 Pew Research study shows that more voters are using social media to engage with political representatives.\cite{RefWorks:doc:59e294d8e4b079ea75246fa4}  Similarly, a more recent report shows that social media may be a strong indicator of public opinion.\cite{RefWorks:doc:59e29579e4b07e3b24389ba8}  Following recent work that emphasizes the importance of social media for political inference, we attempt to extend these finding to examine the extent to which social media may indicate elite political preferences and influence. \cite{RefWorks:doc:59e2a60ce4b0b4635e033cd0} We take advantage of the massive amount of data generated by politicians and interest groups every day on social media. It is estimated that the last election generated one billion posts on Twitter alone.\cite{RefWorks:doc:59e29599e4b0ff0c7c11a860}  While only a fraction of those are from politicians and interest groups, given that the average senator has tweeted over 5,000 times, this represents a massive increase in the data available on political elites.\cite{RefWorks:doc:59e295cbe4b0e12588d9219a}  Additionally, as per Salganik’s \textit{Bit by Bit}, Twitter and Facebook are always on.\cite{RefWorks:doc:59e29742e4b07e3b24389bc5} This means that since each tweet and Facebook post has a time stamp we can create longitudinal network data that shows how politician and interest group mentions change and accumulate over time. We can even, discretize this data by month or year and examine how specific events drive mentions. This may help us account for confounding exogenous events that may drive particular mentions. 
+ 
+
+ Perhaps, the most important positive characteristic of Big Data that this study exploits is its non-reactivity. Politicians and interest groups generally have public Twitter and Facebook accounts which means we can scrape their data without the parties having knowledge of our work. This entails that these entities will not have the ability to “react” to our study and change their behavior. This is key, as it allows us access to elite behavior (which is usually difficult to observe) without allowing elites to conceal their behavior for some reason. Survey-based studies of this phenomena would be impaired by this as it is both difficult to survey elites and they run the risk of survey participants altering their answers due to social desirability bias or other reasons.\cite{RefWorks:doc:59e2931fe4b0b4635e033b19} In previous studies that attempted to measure elite capture surveys are generally used to measure political preferences of the top 10\% and lower 90\% to examine disparate levels of policy responsiveness. However, this is unable to account for the influence of interest groups nor does it capture the preferences of individuals at the very top of the income bracket. This study avoids these problems by using data that is made publicly accessible by elites. Indeed, users are often unaware of exactly how much behavioral data they make publicly available through social media.  Furthermore, this design will allow us to easily measure this over time which is not possible with most survey designs.  Hence, this study harnesses many of the benefits of big data to study an otherwise elusive phenomenon. 
+
+ However, there are downsides to this approach that should also be considered. Specifically, this data will be both incomplete and algorithmically confounded. Since, politicians and interest groups know that their mentions are public they may tend to avoid mentioning groups they do not want to associate with or may want to hide an association with. Additionally, it is not entirely clear that mentions of specific groups indicate an influence relationship. While this study attempts to validate this theory, it is possible that any correlation between indicators of influence and monetary contributions is spurious, or even driven by the size and budget of the organization in question. Hence, these results could easily be confounded by other factors and incomplete due to possible errors in the theoretical framework. That said, we can attempt to correct for these flaws through control variables. Other, common negatives of big data such as inaccessibility, dirtiness, and sensitivity will generally not be a problem for our study. Since we are collecting data from public accounts they will be accessible to our scraper. Additionally, Twitter and Facebook have platforms that would allow us to collect this data more easily if we are willing to pay. However, if we throttle our data collection this will not be necessary. Similarly, since these are public profiles of public figures and groups sensitivity is not such an issue. These individuals and entities published this data online knowing full well it would be in the public domain. Finally, while the data will of course be dirty, cleaning it will not be horribly difficult. This is because the data is collected from fairly well-known sources such as national politicians and interest groups. Additionally, we will be looking for mentions of other accounts. Both Facebook's and Twitter's API separate mentions from the actual text and records the mentioned account’s ID.  So, we need only to query that specific field and filter it for the accounts we are looking for. If we would like, we can even search for politician and interest group names in the actual text in case they were not properly mentioned in the post. Hence, while some negatives of big data will certainly limit this study, the research design avoids many common problems allowing us to make useful inferences. Overall, this study will operationalize elite behavior on social media to construct a new measure of elite capture for future studies of policy responsiveness.  
+
+\newpage
+
+% add bib on next page
+
+\bibliographystyle{unsrt}
+\bibliography{elite_capture_bib}
+
+
+% -----------------------------------------------------------------
+\end{document}
+% -----------------------------------------------------------------

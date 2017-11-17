@@ -1,0 +1,27 @@
+---
+title: "Assignment 5 (Collaboration Part 2) Improving a Journal Article"
+author: "Kevin Sun"
+date: "11/12/2017"
+output: html_document
+---
+#### Source Journal: International Journal of Critical Pedagogy 
+#### Vol. 8, No. 1 (2017)
+## Context, Research Question, and Structure of Data Collection of Original Article
+
+The original article analyzed is titled “Time, Labour, Texts: New English Teachers’ Use of Instructional Documents” published in the most recent volume of the International Journal of Critical Pedagogy. The primary research question was to determine why new ELA teachers choose to reuse curricular material from their colleagues that conflict with their self-professed philosophies of education.  To address the research question and collect data, the researcher conducted a qualitative study of three different new classroom teachers in Saskatchewan, Canada. Despite being educated in critical pedagogical practices, new educators fall habit to implementing just the opposite – routinized and uncritical instructional documents (e.g. worksheets, fill-in-the-blank, true/false, etc.). Thus, the article aims to account for this ironic counter-finding – that “that new teachers who begin their careers using politically-charged, discussion-based pedagogies in the spirit of critical whole language pedagogy begin to deploy worksheet based curricular materials received from their colleagues within months of starting work.”  
+
+Overall, the researcher’s discussion of new teachers’ work is contextualized within Marxian education literature’s concept of “labor intensification” in which the worker, (teachers in this case),  is overworked and has, at their disposal, a lack of relevant resources for implementing a critical pedagogy. This dovetails well into how one can reformulate this particular study into one that incorporates elements of human computation – this will be discussed in the following section.
+
+## Reformulation as Human Computation Project
+
+The main issue is one of time for new teachers. As pressure on teachers’ labor productivity from standardized testing, administrative evaluations, bureaucratic paperwork etc. increase, the time an amateur teacher is able to spend curating resources for fostering critical dialogue and learning within their classroom, decrease. Human computation holds potential here as a resource given that it can break down the larger issue of classifying curricular material and save time for the classroom teacher.
+
+New teachers are compelled to utilize and recycle their colleagues’ curricular materials given the time constraints they operate under. One might envision a comprehensive resource bank that any teacher would be able to utilize to find instructional resources that embody and would facilitate critical pedagogical practices. Such resources exist in significant quantities, but are not organized or compiled in any meaningful way that is easily accessible to educators. Thus, the broader issue of classifying “curriculum” could be broken down into smaller pieces and classified using human computation. 
+Curriculum could first be compiled from any to all major publishers of educational curriculum (e.g. Pearson, Prentice-Hall, McGraw-Hill, etc.) Additional curriculum could be compiled from the variety of online instructional resources that are free to the public (e.g. Stanford Education Group, Cult of Pedagogy, etc.). Prior to crowd coding of the resources, researchers would split the instructional materials in smaller pieces for classification – for example, splitting could be done by individual worksheets, excerpts, texts, documents, assignment, tasks, discussion question, etc. 
+
+Next, a human rating would be applied to each of these smaller pieces of curriculum. Prior to this crowd coding, workers would have to complete a brief training on what constitutes a “routinized” or “traditional”  instructional curriculum versus a more “critical” curriculum. Following this training, rating/coding would commence on each individual piece of curriculum with workers classifying each piece as “critical” or “traditional.” Additional dimensions of coding could be along lines such as subject area, topic, individual vs. group work, etc. The quality of such classifications would then be confirmed by experienced educators or curricular designers in the field of which there are thousands to recruit from. 
+
+In the end, such the ratings would be combined to determine which resources are indeed, reflective and more conducive, to critical pedagogical practices. This could then be compiled into a singular source for teachers to draw upon when crafting their own instructional plans.
+
+#### Strength of Human Computation Approach
+The human computation approach yields several benefits over the original qualitative study. First, a human computation component would help move this study from being simply in a space of observing and understanding an issue towards solving the issue. Secondly, large-scale human computation shifts the burden of collecting instructional resources off a single teacher; alleviating the process of labor intensification that Marx claims is inevitable for workers. Given that time is perhaps the valuable resource for teachers, human computation would preserve this exact resource for teachers and allow them to hone, craft, and develop more meaningful and critical instructional plans. 

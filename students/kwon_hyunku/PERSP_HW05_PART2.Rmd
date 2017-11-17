@@ -1,0 +1,61 @@
+---
+title: "Kaggle"
+author: "hyunku kwon"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(tidyverse)
+library(knitr)
+library(broom)
+library(stringr)
+library(modelr)
+library(forcats)
+library(ggmap)
+library(maps)
+library(foreign)
+library(rgdal)
+library(readr)
+
+
+# you can directly download the dataset from the following code (read.csv(url("https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv?accessType=DOWNLOAD"))). But, it is a very big dataset, and thus takes too long to knit or directly download directly from the link. So I draw on 2012-2017 dataset from kaggle (https://www.kaggle.com/currie32/crimes-in-chicago). There is a way to download dataset from Kaggle directly (https://stackoverflow.com/questions/35303779/downloading-kaggle-zip-files-in-r), but this code requires my ID and password. So, I'm just uploading the file directly to the repository.  
+
+# importing the file
+chicago <- read.csv("Chicago_Crimes_2012_to_2017.csv")%>%
+  select(Primary.Type,Longitude,Latitude, Year) 
+
+# tidying the file 
+ch1<-chicago %>%
+  filter(Primary.Type == "WEAPONS VIOLATION") %>%
+  filter(!Year == "2017")
+
+
+# draw on google maps for background
+
+qm <- qmap("chicago", darken=.1, zoom=10) + geom_point(data=ch1, aes(x=Longitude, y=Latitude), size=1.5, alpha=.05) +
+    coord_cartesian(xlim=c(-87.96, -87.5), ylim=c(41.62, 42.05))
+
+# delineating chicago area
+
+shapefile <- readOGR("City_20Boundary", "City_Boundary")
+shapefile.converted <- spTransform(shapefile, CRS("+proj=longlat +datum=WGS84"))
+
+# 
+
+chicagocrime <- qm + geom_polygon(aes(x = long, y = lat, group=group), alpha=.2, fill="black", 
+                 data = shapefile.converted) + 
+    coord_cartesian(xlim=c(-87.96, -87.5), ylim=c(41.62, 42.05)) +
+    geom_point(data=ch1, aes(x=Longitude, y=Latitude), size=1.5, alpha=.05)+
+  labs(title = "Crimes Related with Weapons in Chicago")
+
+
+
+chicagocrime
+
+```
+Bottomline: Hyde park itself is not very dangerous, but it is surrounded by dangerous place rife with gun-related crimes. So, be careful :)

@@ -12,7 +12,6 @@
 * [Study Design Changes?](#design)
 
 
-----
 
 
 ## <a name = "principles"></a>Four Principles of Ethical Research (Q1) 

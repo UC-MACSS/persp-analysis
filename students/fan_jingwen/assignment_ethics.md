@@ -1,11 +1,11 @@
-#Assignment 6 Ethics
+# Assignment 6 Ethics
 ```
 Author: Fiona Fan
 MACS 30000
 Benjamin Soltoff
 ```
 
-##1. Assessing the study using four principles
+## 1. Assessing the study using four principles
 
 ### Respect for Persons
 As quoted by [Bit by Bit](http://www.bitbybitbook.com/en/ethics/principles/respect-for-persons/) in Belmont Report, the *Respect for Persons Principle* holds that (1) individuals should be treated as autonomous and (2) individuals with diminished autonomy should be entitled to additional protections. Here, the researchers from Dartmouth and Stanford clearly did not adhere to the *Respect for Persons Principle*, in the following ways. 
@@ -59,7 +59,7 @@ No. The design is still flawed ethically and by design. Since turnout rate is th
 A truly ex ante (datable by record) analytic prediction of the research would somehow show researchers' benign intentions, and their efforts in doing the cost-benefit analysis in calculating the risks and benefits of the study. However, that still make the research ethically problematic because the prediction of the research is done in the interest of the researchers and not the Montanan people. IRB should be the gatekeeper of research participants' interest, and be the judge that can rule on the validity of such ex ante prediction, but they were absent in the study. Thus, the ex ante prediction still does not make the research comply with the principles of Respect for Persons, Beneficence, or Respect for Law and Public Interest. 
 
 ## 5. Election Results
-This does not change my assessment of the research because the results are ex-post. All ethical evaluation of the design, which should be conducted by IRB, in addition to the four principles, should happen ex-ante. The results of the election can serve as reference in risk-benefit analysis (as discussed above), but should bear no significance in discussion here. 
+This does not change my assessment of the research because the results are ex-post. All ethical evaluation of the design, which should be conducted by IRB, in addition to the four principles, should happen ex-ante. The results of the election can serve as reference in future risk-benefit analysis (as discussed above), but should bear no significance in discussion here. 
 
 ## 6. CrowdPAC
 Whether the candidates in the Montana election used CrowdPAC as a tool for funding and activism should be actively investigated. If yes, then it clearly biases Bonica adversely, in that he did not declare the conflict of interest to IRB or any other third party. The fact that the information that voters received was done by a for-profit company without the disclosure of such information exacerbates researchers' disrespect for persons, and undermines their beneficence by distorting their calculation of benefits. Were CrowdPAC proven to be partisan, justice and respect for law and public interest would also be undermined further in that the results, both of the study and of the election would be skewed towards that particular party. 
@@ -68,13 +68,30 @@ Whether the candidates in the Montana election used CrowdPAC as a tool for fundi
 
 This study is clearly ethically flawed. The following are a couple of things I would have done differently to make the research more ethically compliant.
 ### 1) Comply with IRB Council
-The most obvious changes I would make to the study would be submitting it to the respective IRB Councils at Dartmouth and Stanford before sending out the mails. IRB probably would have 1) rejected the idea of adding fake Great Seal of the State of Montana, 2) required informed consent to an extent that wouldn't compromise the validity of study, 3) mandated a detailed risk-benefit analysis, 4) assess 
+The most obvious changes I would make to the study would be submitting it to the respective IRB Councils at Dartmouth and Stanford before sending out the mails. IRB probably would have 1) rejected the idea of adding fake Great Seal of the State of Montana, 2) required informed consent to an extent that wouldn't compromise the validity of study, 3) mandated a detailed risk-benefit analysis, 4) assess the potential benefits and harms from Montanans' perspective. IRB would have consulted with the State of Montana to make sure no local election laws were to be broken, 5) push researchers to go the alternative route other than oversampling Democrats, compromising the justice of the study, 6) asked for full disclosure of conflict of interest, like CrowdPAC, and etc.
+
+### 2) Informed Consent
+Here are a couple of ways to at least acquire some informed consent. 
+
+1. Debrief the participants after the election
+2. Sample a portion of the voters for their opinions on the study and their informed consent
+3. Make them aware of the fact that they are participating in a study that could change their voting without revealing exactly what the study is, and enable an opt-out option
+4. Under the supervision of IRB councils, seek permission from the State of Montana
+
+Doing so will not only increase respect for persons, but also extends more beneficence by standing from the participants' angle. 
+
+### 3) Managing Risks and Uncertainty
+Here are a couple of ways to curb the effect of study on the election outcome.
+
+1. Conduct a power analysis to gauge the appropriate size of the study. If the required population is too large, then the effect of the treatment is not significant enough to warrant the risk of altering the outcome of an election.
+2. Perform an ethical-response survey, to monitor Montanans' ethical reaction to the potential risk of altered election outcome beforehand.  
+3. Make sure all populations are equally or proportionally represented in the sample (no oversampling), including using phone calling as a remedy for mail-unreachable households. This would reduce the effect of increased voter turnout on the election outcome.
+4. In the extreme case, conduct the research in a hypothetical setting either in a lab setting or in a human-computationally enhanced way. There will be a control group that receive reduced or no information about the specific election and the treatment group that receives full information. Then their self-reported propensity to vote will be compared.
+
 
 # Oh fuck it....
 
-
-
-
+^ I will remove this at 11:25 am November 20th, if I remember.
 
 
 

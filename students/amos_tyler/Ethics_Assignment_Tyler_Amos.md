@@ -110,7 +110,7 @@ There are a number of items I would have done differently from the principal inv
   * Issue: Non-compliance with Montana election regulations.
     * Solution: Engage with stakeholders such as the Montana Commissioner of Political Practices before the experiment in order to ensure planned interventions do not violate state regulations or laws. 
   * Issue: Failure to obtain IRB approval at both institutions for the __final__ version of the study. 
-    * Solution: Seek IRB approval for the final study design, at all institutions with which the researchers are affiliated. 
+    * Solution: Seek IRB approval for the final study design at all institutions with which the researchers are affiliated. 
   * Issue: Lack of transparency regarding the source and intent of mailers and the research in general. 
     * Solution: Clearly identify the source and intention of the informational material so that no reasonable individual can mistake the information as material promoting a particular candidate. 
     * Additional Solution: Establish relationships with all relevant stakeholders (e.g., Commissioner's office) in order to, at a minimum, ensure participants are all aware of the study being conducted. As noted above, the research design could also be re-worked to collaborate with actors already campaigning in the state, as they are required to transparently campaign for voters' support. 

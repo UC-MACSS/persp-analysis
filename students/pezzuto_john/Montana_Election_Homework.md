@@ -66,7 +66,7 @@ If I was the principal investigators of this study, I would have especially emph
 
 Likewise, I would try and balance *beneficence* as well as possible. The harms were social pressure to conform, but the benefits were not so clear for people who received mailers. In recreating this experiment, I would try and create benefits that would be more clear to participants by including information about the benefits of voter mobilization.
 
-The experiment could have been more *just*, by balancing the fliers between Democrats and Republicans. As explained, the Democrats have lower turnout rates than Republicans, so they needed increased mobilization. However, I believe this falls could become a dangerous argument because “lower turnout” is not well defined, and it is not fair to emphasize helping one party without helping the other.
+The experiment could have been more *just*, by balancing the fliers between Democrats and Republicans. As explained, the Democrats have lower turnout rates than Republicans, so they needed increased mobilization. However, I believe this could become a dangerous argument because “lower turnout” is not well defined, and it is not fair to emphasize helping one party without helping the other.
 
 In regards to *the law*, I would certainly recommend speaking to someone who is very familiar with law in Montana before conducting this experiment. There may have been other laws that the researchers did not get called out on this time. It is important to not break the law, and I would encourage our team to ere on the side caution.
 

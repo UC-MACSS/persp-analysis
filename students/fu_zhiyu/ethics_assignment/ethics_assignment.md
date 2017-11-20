@@ -34,29 +34,29 @@ We will discuss this issue more concretely in the answers to question 4 and 5.
 
 Suppose the treatment of mailers has an interaction with the the recipients' political tendencies. For example, Republican leaning voters are more likely to be encouraged by the mailers. Suppose without the experiment, the Democratic party candidates would have win the vote. However, under the treatment of mailers, more Republican leaning voters went to vote, which may reverse the outcome.
 
-### Question 3
+## Question 3
 
 Whether this kind of sampling is approporiate depends on the assumption of the treatment effect. If the treatment effect is proportional to the turnout, that is, lower turnout among Democratic voters also means they are less likely to be influenced by the mailers, then the larger sample in Democratic leaning precincts can compenasate such effect so that this experiment will add similar numbers of "new voters" for both parties. If, on the contrary, the treatment effect is homogeneous among voters, then higher sampling weight in Democratic leaning precincts will add more "new voters" for Democratic party, which breachs the principle of Justice as well as the respect for law and public interest. The assumption whether Democratic voters are less likely to be encouraged by the mailers is testable on their data.
 
 My guess is that given the Democratic voters are less willing to vote, it is plausible to assume they are more difficult to be encouraged by mailers. Therefore, it is approporiate to set different sample sizes for different precincts.
 
-### Question 4
+## Question 4
 
 Such consideration means the researchers did follow the principle of Respect for law and public benefit. However, there are still chances where the previous Montana judicial elections is not a good predictor for that chosen election. It is still a little risky.
 
 
-### Question 5
+## Question 5
 
 From the outcome, we can confidently argue that the outcome was not altered by the research. The maximum number of the difference of votes the research can possibly affected in theory was close to 64,265 the sample size in Democratic leaning precincts, while the actual gap of votes were 171,559 and 60,399 respectively. Thus, it is impossible for the experiment to alter the outcome.
 
 Given these facts, it is fair to argue that this experiment materially did not violate the principle of respect for law and public interest.
 
 
-### Question 6
+## Question 6
 
 Whether my assessment will be changed depends on the transparency of the "objective scores". If the the algorithm of calculating the objective scores is open-source and reproducible by others, then one of the principal being the co-founder of CrowdPAC is not an issue. However, if the calculation of "objective scores" is not public, then there might be some conflicts of interest. For example, one of the candidates of this election happens to be a client of CrowdPAC, then that principal investigator has the ability to provide biased scores for the experiment for the benefit of the client, which violate the third and fourth principles.
 
 
-### Question 7
+## Question 7
 
 To summarize, according to the information above, this experiment followed four principles well. However, there are still some improvements I would have done if I were the principal investigator. First, as mentioned above, I would add a notification on the header of the mailer informing recipients of the content of this mailer. Second, I would use a smaller sample size. For the purpose of this study, a vaild sample size of 1,000 will be sufficient for statistical methods. A smaller sample size can diminish the intervention to the outcome of the election. Third, I would make sure that the scores we are using in the experiment is open-source and reproducible by other researchers. Otherwise, I may not choose to collaborate with a co-founder of a for-profit comany which provides the scores.

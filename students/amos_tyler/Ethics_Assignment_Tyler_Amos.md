@@ -14,7 +14,7 @@ November 20 2017
 
 _Insufficient Effort to Obtain Informed Consent_
 
-There is an argument to be made that by reading the mailer, voters consented to participate. Voters with no interest in participating could choose to disregard the mailer. However, this is predicated on the assumption that voters could clearly identify the mailer as part of an academic study. In their apology letter, Stanford and Dartmouth Universities concede the mailing was insufficiently clear as to the origin of the material presented. Thus, voters who received the mailer did not have sufficient facts in order to make an informed decision about participation.
+There is an argument to be made that by reading the mailer, voters consented to participate. Voters with no interest in participating could choose to disregard the mailer. However, this is predicated on the assumption that voters could clearly identify the mailer as part of an academic study. In their apology letter, Stanford and Dartmouth Universities concede the mailing was insufficiently clear as to the origin of the material presented. Thus, it is widely agreed that voters who received the mailer did not have sufficient facts in order to make an informed decision about participation.
 
 #### Beneficence: Insufficient
 

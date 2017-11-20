@@ -55,9 +55,11 @@ researchers to avoid the use of the seal because this may have been and
 was interpreted as misinformation. Furthermore, this may have been
 illegal under local laws (see (iv)).
 
-*ii. Beneficence* Beneficence is about maximizing possible benefits and
-minimizing potential harm (Salganik 2017). This includes both the
-participants and the social systems.
+*ii. Beneficence*
+
+Beneficence is about maximizing possible benefits and minimizing
+potential harm (Salganik 2017). This includes both the participants and
+the social systems.
 
 First, let us discuss potential harm. Regarding the participants, I do
 not perceive any grave individual harm done because of the study, as the
@@ -94,16 +96,18 @@ the study balances risks and benefits pretty well, especially
 considering the importance of contributing to the knowledge of
 non-partisan election dynamics.
 
-*iii. Justice* Salganik (2017) talks about the fair distribution of
-risks and benefits. The study did not treat all subjects equally in
-treatment distribution (see \#3). But if we assume, for the moment, that
-the sample was random, this would amount to attempting not to single out
-one part of the population over others in distributing the risks and
-benefits discussed under Beneficence. Under \#3, this assumption is
-relaxed. Also, if there is a significant heterogeneity of treatment
-effects between population groups, one could conceivably argue that the
-distribution of risks/benefits is not fair to different parties. See \#2
-for more discussion on this. iv. Respect for law and public interest
+*iii. Justice*
+
+Salganik (2017) talks about the fair distribution of risks and benefits.
+The study did not treat all subjects equally in treatment distribution
+(see \#3). But if we assume, for the moment, that the sample was random,
+this would amount to attempting not to single out one part of the
+population over others in distributing the risks and benefits discussed
+under Beneficence. Under \#3, this assumption is relaxed. Also, if there
+is a significant heterogeneity of treatment effects between population
+groups, one could conceivably argue that the distribution of
+risks/benefits is not fair to different parties. See \#2 for more
+discussion on this. iv. Respect for law and public interest
 
 Salganik (2017) breaks down respect for law and public interest to
 Compliance and Transparency-based Accountability. In terms of legal
@@ -127,29 +131,31 @@ also common IRB practices.
 
 *2. Assume that the mailers were sent to a random sample of voters:
 under what conditions might this mailing have altered the outcome of the
-Supreme Court Justice election?* One possible condition for such a
-scenario is if there is a substantially large heterogeneity of treatment
-effects between different population groups, with say a group affiliated
-with one party being more prone to mobilize to vote in response to
-treatment than another group. For instance, say that receiving a mailer
-with the ideological information in the study tends to not mobilize
-Republican voters very much, but tends to encourage voting in Democrats
-quite a bit, as compared to the system without the researchers’
-experiment. If the treatment was randomized, the proportion of
-Republican vs Democrat voters would be similar in the sample and the
-general Montana population. But even though the treatment was
-randomized, if this difference in effects between the two groups was
-large enough (and/or that in the non-treatment world the race was
-already close enough), the heterogeneity could potentially alter the
-elections results. In this hypothetical scenario, the treatment would
-favor a Democratic candidate, but one could imagine this mechanism
-working in either direction. Additionally, this would be even more of a
-risk if the sample was quite large, giving this effect an effectively
-larger broadcast over the population. In fact, the sample was indeed
-quite large, at about 15% of registered voters (Salganik 2017). In
-conclusion, conditions that could alter a result would be significant
-heterogeneity of treatment effects, already close-enough race, and a
-large enough sample exposed to treatment.
+Supreme Court Justice election?*
+
+One possible condition for such a scenario is if there is a
+substantially large heterogeneity of treatment effects between different
+population groups, with say a group affiliated with one party being more
+prone to mobilize to vote in response to treatment than another group.
+For instance, say that receiving a mailer with the ideological
+information in the study tends to not mobilize Republican voters very
+much, but tends to encourage voting in Democrats quite a bit, as
+compared to the system without the researchers’ experiment. If the
+treatment was randomized, the proportion of Republican vs Democrat
+voters would be similar in the sample and the general Montana
+population. But even though the treatment was randomized, if this
+difference in effects between the two groups was large enough (and/or
+that in the non-treatment world the race was already close enough), the
+heterogeneity could potentially alter the elections results. In this
+hypothetical scenario, the treatment would favor a Democratic candidate,
+but one could imagine this mechanism working in either direction.
+Additionally, this would be even more of a risk if the sample was quite
+large, giving this effect an effectively larger broadcast over the
+population. In fact, the sample was indeed quite large, at about 15% of
+registered voters (Salganik 2017). In conclusion, conditions that could
+alter a result would be significant heterogeneity of treatment effects,
+already close-enough race, and a large enough sample exposed to
+treatment.
 
 *3. In fact, the mailers were not sent to a random sample of voters.
 According to a report by Jeremy Johnson (a political scientist who
@@ -183,20 +189,24 @@ closely contested in the primary. Based on an analysis of the 2014
 primary election results in the context of previous Montana judicial
 elections, the researchers determined that the research study as
 designed would not change the outcome of either contest." Does this
-change your assessment of the research? If so, how?* Generally, no,
-because the principles that are important to consider in \#1, \#2, and
-\#3 are still crucial to conducting an ethical study regardless of
-anticipated results (forecasts can be wrong, after all). However, such a
-defensive argument is a fallback for potentially controversial scenarios
-in \#2 and \#3, so it gives the researchers a partial justification in
-case these scenarios take place. However, this still does not resolve
-other ethical issues, such as the ones in the legal and individual
-respect realms with using an (misleading) official government seal.
+change your assessment of the research? If so, how?*
+
+Generally, no, because the principles that are important to consider in
+\#1, \#2, and \#3 are still crucial to conducting an ethical study
+regardless of anticipated results (forecasts can be wrong, after all).
+However, such a defensive argument is a fallback for potentially
+controversial scenarios in \#2 and \#3, so it gives the researchers a
+partial justification in case these scenarios take place. However, this
+still does not resolve other ethical issues, such as the ones in the
+legal and individual respect realms with using an (misleading) official
+government seal.
 
 *5. In fact, the election turned out to be not particularly close. Does
-this change your assessment of the research? If so, how?* No, as
-outlined in \#4, this justifies some of the shortcomings of the research
-design in terms of ethics, but does not resolve all of the issues.
+this change your assessment of the research? If so, how?*
+
+No, as outlined in \#4, this justifies some of the shortcomings of the
+research design in terms of ethics, but does not resolve all of the
+issues.
 
 *6. One of the principal investigators for the Montana election study
 (Adam Bonica) is also the co-founder of CrowdPAC, a for-profit company
@@ -206,41 +216,43 @@ score the judicial candidates in Montana. While a source of objective
 information for voters to make decisions about candidates, CrowdPAC also
 provides tools to organize activist communities and fund political
 campaigns (all for a fee). Does this change your assessment of the
-research? If so, how?* No, because my assessment is independent of how
-such “objective” scoring mechanisms may be “weaponized” in other
-contexts. Information or tools can be ethically neutral and their
-ethical evaluation would depend on the context in which they are used.
-In the context of the study, the information was used to advance general
-knowledge about non-partisan elections, with all of the ethical
-assessment above unrelated to how one may use this technology of
-evaluating a candidate’s political ideology in other contexts. (Though
-of course one could include the assessment of this scoring method’s
-potential shortcomings in “objective” evaluation of political stance and
-all of the resulting ethical considerations as well. See \#1, ii). For
-instance, just because nuclear technology can be used to harm millions
-does not have anyone advocating to ban the use of nuclear technology in
-radiology medicine that benefits many patients. Similarly in this case,
-to change my assessment at this point would be rationally and ethically
-inconsistent.
+research? If so, how?*
+
+No, because my assessment is independent of how such “objective” scoring
+mechanisms may be “weaponized” in other contexts. Information or tools
+can be ethically neutral and their ethical evaluation would depend on
+the context in which they are used. In the context of the study, the
+information was used to advance general knowledge about non-partisan
+elections, with all of the ethical assessment above unrelated to how one
+may use this technology of evaluating a candidate’s political ideology
+in other contexts. (Though of course one could include the assessment of
+this scoring method’s potential shortcomings in “objective” evaluation
+of political stance and all of the resulting ethical considerations as
+well. See \#1, ii). For instance, just because nuclear technology can be
+used to harm millions does not have anyone advocating to ban the use of
+nuclear technology in radiology medicine that benefits many patients.
+Similarly in this case, to change my assessment at this point would be
+rationally and ethically inconsistent.
 
 *7. What, if anything, would you have done differently if you were the
 principal investigators? How would you have designed the study if you
 were interested in exploring whether additional information increases
-voter turnout in nonpartisan races?* Based on the previous analysis,
-several suggestions could be implemented. First, to improve the respect
-for persons, on can implement a recruitment stage for this study, where
-the participants are informed more formally and thoroughly of the
-study’s risks and benefits and have a chance to sign an official
-consent. This could be done without disclosing all of the study’s
-intent, as letting participants know that the voter turnout is the
-subject of interest may introduce desirability bias into their behavior.
-Such recruitment procedure can also be used as a screening mechanism to
-more formally identify vulnerable population groups to exclude them from
-the study or apply additional protection measures. Identifying
-vulnerable groups is something that the study did not seem to consider.
-However, one would have to consider potential additional costs to
-implement this proposed research stage, as it may put the total study
-costs out of the budget’s reach.
+voter turnout in nonpartisan races?*
+
+Based on the previous analysis, several suggestions could be
+implemented. First, to improve the respect for persons, on can implement
+a recruitment stage for this study, where the participants are informed
+more formally and thoroughly of the study’s risks and benefits and have
+a chance to sign an official consent. This could be done without
+disclosing all of the study’s intent, as letting participants know that
+the voter turnout is the subject of interest may introduce desirability
+bias into their behavior. Such recruitment procedure can also be used as
+a screening mechanism to more formally identify vulnerable population
+groups to exclude them from the study or apply additional protection
+measures. Identifying vulnerable groups is something that the study did
+not seem to consider. However, one would have to consider potential
+additional costs to implement this proposed research stage, as it may
+put the total study costs out of the budget’s reach.
 
 Second, of course a more rigorous IRB procedure would need to be
 followed. How did this study see the light of day when the mailer, the

@@ -52,8 +52,8 @@ actually be conducive to political autonomy in some aspects.
 
 Though the measurement has vindicated its validity (Bonica 2013, 2014),
 providing candidates’ ideologies alone might be understood in a
-distorted way by voters???it’s a too simplified information. I’ll
-discuss some ways to ameliorate this issue in the last section.
+distorted way by voters—it’s a too simplified information. I’ll discuss
+some ways to ameliorate this issue in the last section.
 
 Beneficence
 -----------
@@ -76,18 +76,18 @@ experiment in various levels. (1) Individual level: the potential harm
 field experiment might cause to individuals is *informational risk*,
 where the disclosure of personal information harms individuals. However,
 no such harm is found in this experiment. Another potential harm
-concerns manipulation???providing the ideologies of candidates might
-alter individuals’ behaviors. However, information is, if not biased, a
-public good; providing information to individuals would help them reason
-their way out to a more informed decision. Thus, the research does not
+concerns manipulation—providing the ideologies of candidates might alter
+individuals’ behaviors. However, information is, if not biased, a public
+good; providing information to individuals would help them reason their
+way out to a more informed decision. Thus, the research does not
 engender severe harm to individuals.
 
 1.  Community level: we should consider *both participants and
     non-participants*, for the provided information might be circulated
     across the public via political communication: consequences of the
-    experiment would not be limited to the subjects???the experiment
-    might influence the entire local political landscape, leading to
-    more partisan and heated election, yet with more turnout. This issue
+    experiment would not be limited to the subjects—the experiment might
+    influence the entire local political landscape, leading to more
+    partisan and heated election, yet with more turnout. This issue
     touches on a more fundamental issue: are partisan elections bad?
     Partisan elections are more polarized; but, they also garner more
     public attention; they make more people participate in the political
@@ -105,7 +105,7 @@ engender severe harm to individuals.
     and partisanship give voters shortcuts to navigate the political
     world. Overlooking the ideological properties of elections, and
     thereby having an election without such information, wouldn’t make
-    an ideal election???it would be less conflictual, but also less
+    an ideal election—it would be less conflictual, but also less
     meaningful.
 
 Thus, the fact that this experiment influences individuals, community,
@@ -155,14 +155,14 @@ was the case, Democrats would benefit from the election, whereas
 Republicans would suffer a loss. This would violate *the “Justice”
 principle*, for the benefits and the drawbacks of the experiment are not
 fairly distributed. It might also undermine the *Beneficence principle*,
-for the research does a severe harm???it explicitly encourages one side
-of the party to vote, leading to overrepresentation in the election. I
+for the research does a severe harm—it explicitly encourages one side of
+the party to vote, leading to overrepresentation in the election. I
 mentioned above that *altering the election results itself does not
 amount to transgression: however, manipulating the election to one
 party’s benefit does.*
 
-closely Contested Election or not (Q4, Q5)
-------------------------------------------
+Close contested election or not (Q4, Q5)
+----------------------------------------
 
 Since the experiment is conducted on a not closely contested election,
 the impact of the research could have been minimized. While I argued

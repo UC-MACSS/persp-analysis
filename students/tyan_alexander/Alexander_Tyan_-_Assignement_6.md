@@ -109,7 +109,9 @@ under Beneficence. Under \#3, this assumption is relaxed. Also, if there
 is a significant heterogeneity of treatment effects between population
 groups, one could conceivably argue that the distribution of
 risks/benefits is not fair to different parties. See \#2 for more
-discussion on this. iv. Respect for law and public interest
+discussion on this.
+
+*iv. Respect for law and public interest*
 
 Salganik (2017) breaks down respect for law and public interest to
 Compliance and Transparency-based Accountability. In terms of legal
@@ -272,9 +274,19 @@ intricacies may be across many jurisdictions, but this study seems
 localized enough that the researchers could have given this greater
 consideration. It is no wonder that Dartmouth intended to add a legal
 adviser to their IRB board after this incident (Richman 2015). This
-practice should become common place, along with PR advising in studies
-that merit such preparation and this such prior consultation would be
-one change I would implement.
+practice should become commonplace, along with PR advising in studies
+that merit such preparation and such prior consultation would be one
+change I would implement. Additionally, as noted before one could have a
+better established communication line with the appropriate electoral
+watchdog institutions prior to conducting the study to minimize the risk
+getting into trouble with the public.
+
+Fourth, it is unclear why the sample size was so large. What is more
+clear is that, if possible methodologically, the study could have used a
+smaller sample to minimize any publish backlash that has occurred.
+Indeed, covering 15% of the electorate with the treatment is quite large
+(and resource-intensive). Therefore, in my design I would consider
+investigating whether one could do with a smaller sample size.
 
 Bibliography
 

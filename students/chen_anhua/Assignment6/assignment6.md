@@ -302,6 +302,25 @@ the expenditure incurred by this project should be classified as a
 campaign fund or an independent expenditure should be discussed by all
 parties involved.
 
+### Alternative research methodology
+
+Even though, the (quasi) controlled experiment is the most ideal set-up
+for causality study in social science, concern that the research process
+itself could factor into the research objects' well being makes this
+project an especially confounding one. One of the most direct
+damage-control style approaches would be to reduce the number of
+participants in the experiment so that the size of treatment group
+wouldn't be large enough to alter the election result in meaningful way.
+Also, the option of using a "natural experiment" design is not off the
+table --- if we could clearly identify one or several events that
+provenly changed public's access to election-related information only
+for a subset of the electoral district (e.g., through web-scraping over
+social media on the cascading pattern of certain election-related
+information) or some year-specific events related to more/less election
+information disclosure, we could use these (cross-sectional or
+time-varying) events to study the impact of more information provision
+on election turnout rate econometrically.
+
 Reference
 ---------
 

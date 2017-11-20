@@ -1,0 +1,63 @@
+The ethics of the Montana election experiment
+
+Hyun Ki Kim
+11/20/2017
+
+1. Assess this study using Salganik’s four principles of ethical research.
+
+i. Respect for persons
+
+Researchers did not show full respect to persons in this research. They did not get informed consent from participants, even though the experiment could have big impact on their decision. Any information given to voters in an election can possibly change the election result, which can affect society as a whole. Therefore, researchers should have been paid extra attention to the impact the experiment could have had, before providing information to the voters. Even if researchers believed that providing information about candidates could not harm the participants and could only be beneficial, it is still problematic because it is diminishing individual’s autonomy and the result could turn out to harm some participants.
+
+ii. Beneficence
+
+Researchers should have done risk, benefit analysis more carefully. Deciding whether the experiment will be beneficial or dangerous to participants is difficult because it can have different impact to different people, and because it is hard to predict the result of the impact beforehand. While researchers have argued that providing public information about the candidates would not harm any participants, but I strongly disagree with the statement. Although, the data they used were publicly available, the output they produced could have been biased by the method they used, regardless of they intension.
+
+iii. Justice
+
+I think researchers could also improve in terms of justice. It feels like they did not pick Montana randomly, but because the state was more isolated with less population, which makes it better for the subject of the experiment. If this is true, underlying assumption is that politics in Montana is less important than states with large population. However, people and politics in Montana should not be underestimated by its size or by its economic power. Also, the provided information will have different effect for individuals. While the information could be useful to many people, but it can manipulate people's decision especially to people with less education.
+
+iv. Respect for law and public interest
+
+It is clear that the researchers should have concerned more about legal issues. The commissioner of political practices of the state of Montana determined that there were sufficient evidence that this experiment have violated Montana campaign practice laws. Election period is when not only politicians but everyone needs to pay high attention to the legal issues. Since having a fair election is such an important task for a society, there are several laws that we must be aware of. Also, researchers must be aware of having influence on election could have a huge impact on public interest. Although, their intention of better informing voters itself might seem a good idea, the method and consequence could always be different to what they have intended. Putting election in risk for their experiment is not a risk that is worth taking for the public interest.
+
+
+2. Assume that the mailers were sent to a random sample of voters: under what conditions might this mailing have altered the outcome of the Supreme Court Justice election?
+
+In theory, informing even a single voter can change the election result. Even if samples were drawn randomly from the population, the participants could respond differently. For example, if we assume that we can divide participants into liberal and conservative, it is likely that that reaction to the information will be different between two groups. Therefore the experiment can encourage certain type of voters to participate more or less, even after a random sampling from the population. 
+
+
+3. In fact, the mailers were not sent to a random sample of voters. According to a report by Jeremy Johnson (a political scientists who assisted in the investigation), mailers “were sent to 64,265 voters identified as likely liberal to centrist leaning in Democratic leaning precincts and 39,515 voters identified as conservative to centrist in Republican leaning precincts. The researchers justified the disparity between Democratic and Republican numbers on grounds that they anticipated turnout to be significantly lower among Democratic voters.” Does this change your assessment of the research design? If so, how?
+
+I think researchers justification is unjustifiable, and intentionally sampling different number of participants makes the experiment more unethical. The statement implies that researchers were aware of liberal and conservative voters would react differently to the information. This is equivalent to admitting the possibility of changing the result of the election. If the samples were not drawn randomly, one could argue that researchers had intention to encourage certain type of voters to manipulate the election outcome.
+
+
+4. In response to the investigation, the researchers said that they picked this election in part because “neither judicial race had been closely contested in the primary. Based on an analysis of the 2014 primary election results in the context of previous Montana judicial elections the researchers determined that the research study as designed would not change the outcome of either contest.” Does this change your assessment of the research? If so, how?
+
+The fact that the judicial race had not been closely contested does not solve any ethical issues of the experiment. Even if judicial race were never closely contested before, the election can be closely contested anytime. Previous election does not determine the upcoming election. The ethical issue should be evaluated under careful consideration, and every possible scenario should be taken into account regardless of how unlikely the researchers might think the probabilies are.
+
+
+5. In fact, the election turned out to be not particularly close.
+
+Candidates	Votes received	Percentage
+Supreme Court Justice #1		
+W. David Herbert	65,404	21.59%
+Jim Rice	236,963	78.22%
+
+Supreme Court Justice #2		
+Lawrence VanDyke	134,904	40.80%
+Mike Wheat	195,303	59.06%
+
+Does this change your assessment of the research? If so, how?
+
+The result does not justify any ethical issues of the experiment. This election result is the result after several voters were influenced by the information researchers have provided. We can never rule out the possibility that the result of the election has been changed due to the experiment, though it may seem unlikely. Any misbehavior should be punished by its potential danger, not by its result.
+
+
+6. One of the principal investigators for the Montana election study (Adam Bonica) is also the co-founder of CrowdPAC, a for-profit company which “calculates objective scores for political candidates showing their overall political position” using, in part, the same data used to score the judicial candidates in Montana. While a source of objective information for voters to make decisions about candidates, CrowdPAC also provides tools to organize activist communities and fund political campaigns (all for a fee). Does this change your assessment of the research? If so, how?
+
+Since one of the principal investigators was part of a for-profit company using the method, one can argue that the researcher had financial incentive to ignore ethical issue and conduct an experiment. Because the company is one of few companies that assess political position, the researcher might have had uncontious motivation to promote political positioning as a new trend in political science research. Then, it will be harder for research team to assess fair risk benefit analysis. However, the researcher should be blamed for any unethical aspect of the experiment, but not by the fact that he founded a company. Using the technology he is familiar with should never be blamed for.
+
+
+7. What, if anything, would you have done differently if you were the principal investigators? How would you have designed the study if you were interested in exploring whether additional information increases voter turnout in nonpartisan races?
+
+I would have double-checked with IRBs and other independent researchers to analze risk, benefit of the study. As a principal investigator, it is likely that I will be eager to answer the research question. Therefore, it is prone to overestimate the benefit and underestimate the risk. However, IRBs or other researchers will have more experience of dealing with ethical issues and are likely to have fair view. Also, I would have consulted with legal expert and with election officials. Elections are control under many laws due to its importance for the society and therefore is likely to be controlled under many lawas that I am not aware of. If I wanted to explore effect of additional information on voter turnout, I would have used less direct method other than direct method of experiment. Since conducting experiment with people and society could potentially  be dangerous, it would have been safer to use other method such as survey, simulation or observational study. Although well-designed experiment could be great at finding the casual relationship of a treatment, researcher should consider potential risks into account when trying to answer a research question.

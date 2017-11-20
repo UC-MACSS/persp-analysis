@@ -63,7 +63,7 @@ As noted above, the experiment selectively targeting swing voters is an ethicall
 
 However, it is worth noting that "leaners" were targeted in precincts which corresponded with their tendency, e.g., liberal leaners in liberal precincts. (McCullogh v. Stanford and Dartmouth) This information is an important mitigating factor - based on past elections, the precincts selected for treatment were unlikely to go to the other ideology/party with or without treatment. Thus, while liberals may be targeted more frequently than conservatives, the fact that leaners were already in safe precincts suggests the actual impact of any mailers on the election outcome would have been negligible. 
 
-##4. 
+## 4. 
 
 > In response to the investigation, the researchers said that they picked this election in part because "neither judicial race had been closely contested in the primary. Based on an analysis of the 2014 primary election results in the context of previous Montana judicial elections, the researchers determined that the research study as designed would not change the outcome of either contest." Does this change your assessment of the research? If so, how?
 

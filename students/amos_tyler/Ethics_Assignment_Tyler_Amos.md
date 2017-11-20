@@ -41,7 +41,7 @@ While the researchers initially sought permission for the study from the Dartmou
 
 _Lack of Transparency-based Accountability_
 
-As John Patty (2014) notes, it is the researchers' status as academics and supposedly disinterested parties which made their intervention controversial and/or illegal. The researchers were not clear about their stake in the contest and could therefore be wrongly identified by voters as interested parties advocating for a particular candidate. An issues-based group could very well have intervened in a similar way and not violated any campaigning regulations, so long as they disclosed their activities as required by law. The researchers, while disinterested, did not take steps to ensure their intentions were clearly understood by stakeholders.  As established in McCullogh v. Stanford and Dartmouth, their mailer was considered a form of campaign material. The researchers could have avoided such issues by coordinating and sharing openly their research plans with the relevant authorities in Montana before launching their research project. 
+As John Patty (2014) notes, it is the researchers' status as academics and supposedly disinterested parties which made their intervention controversial and/or illegal. The researchers were not clear about their stake in the contest and could therefore be wrongly identified by voters as interested parties advocating for a particular candidate. An issues-based group could very well have intervened in a similar way and not violated any campaigning regulations, so long as they disclosed their activities as required by law. The researchers, while disinterested, did not take steps to ensure their intentions were clearly understood by stakeholders.  As established in McCullogh v. Stanford and Dartmouth, their mailer was considered a form of campaign material.
 
 ## 2. 
 
@@ -116,6 +116,7 @@ There are a number of items I would have done differently from the principal inv
     * Additional Solution: Establish relationships with all relevant stakeholders (e.g., Commissioner's office) in order to, at a minimum, ensure participants are all aware of the study being conducted. As noted above, the research design could also be re-worked to collaborate with actors already campaigning in the state, as they are required to transparently campaign for voters' support. 
   * Issue: Involvement of one of the investigators with a for-profit offering a similar service to the method used in the study. 
     * Solution: Register the study with a third party before implementation to guard against (even the appearance of) a conflict of interest. 
+    
 ## References
 
 McCulloch v. Stanford and Dartmouth. _Decision Finding Sufficient Facts to Demonstrate a Violation of Montana's Campaign Practice Laws_ http://politicalpractices.mt.gov/Portals/144/2recentdecisions/McCullochvStanfordandDartmouthFinalDecision.pdf

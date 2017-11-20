@@ -1,0 +1,48 @@
+---
+title: "ethics"
+author: "Yangyang Dai"
+date: "November 19, 2017"
+output: pdf_document
+---
+
+Ethics:
+
+1.	Assess this study using Salganik's four principles of ethical research:
+
+a.	Respect for persons
+From my point of view, this study did not really respect those voters. The researchers sent out the mailers without giving any information about their intent. They didn???t explicitly announce that this mailer ???was not affiliated with any political party, candidate or organization, and was not intended to influence any race??? until the complaint was filed. The fact that many voters complained the mailer reflected that the researchers??? behavior affected the voters??? life and caused significant inconvenience.  This is not at all ethical or respectful for the voters. 
+
+b.	Beneficence
+The goal of this experiment is to measure how giving more information would change the likelihood of people to vote.  From this aspect, the benefit of this study would be that if the result shows that more information encourages more voting, then the legislators could provide more public information to the voters in wish of more voters take part in the future election voting process. 
+From another angle, the risk of this experiment is that the researchers??? behavior potentially changed the voting behavior of the voters in this election. The change of voters??? behavior may be in conflicts with the voters??? original intention.  If they realize later that they voted for the wrong candidate, it might cause some emotional turbulence or anxiety if they care very much about politics, election and their voting decisions.  
+
+Also, this study may potentially distort the result of election and even cause unfair result.  If the results of elected candidates are chosen based on where they are labeled on the scale, the candidate who won the election may not be the candidate with the greatest ability or highest competence.  Consequently, this result would not be rational or responsible enough, and surely not fair enough to the candidates who was not elected. In the meanwhile, the election would be irresponsible for the people in Montana either, because the candidates chosen might not be ideal and best for the court. The last but not least is the concerns I mentioned earlier that the study caused inconvenience to people???s normal life, they are annoyed by the existence of the mailers. 
+
+c.	Justice
+Concerning the distribution of the burdens and benefits of research, this study is also not very just. The voters in this election carry a lot of burdens, such as being annoyed by the mailers, potentially distorted their election decisions, and might suffer from the consequences of their election choices. Those who are vulnerable or sensitive to the politics may get anxiety or harmed by the election results. But to those who didn???t vote, they seem carry less burdens and potentially will benefit from the study if there are benefits or valuable discoveries. 
+
+d.	Respect for law and public interest
+With related to compliance, the study fail to achieve respect for law and public interests. The researchers did not attempt to identify and obey relevant laws, contracts, and terms of service. For example, they neither disclose the intention of their research nor discuss with the local law departments to conduct this study and use the Montana seal. In my view, this study is not very thoughtfully planned out and the fact that it caused public discontent and finally resulted in a formal complaint with the Montana state government showed great failure of this experiment. 
+Further, with related to transparency-based accountability, this study is also not successful. The researchers were not clear about the goals, methods, and results at all stages of their research process and did not take responsibility for their actions. They sent out the apology letters too late and they should have made clear their intentions very clear and very early in their experiment. They also should have mentioned that the ranking "relied upon public information about who had donated to each of the campaigns??? before sending out the mailers or within the mailers.
+
+2.	Assume that the mailers were sent to a random sample of voters: under what conditions might this mailing have altered the outcome of the Supreme Court Justice election?
+
+If the random sample of voters are very sensitive to the degree of liberality or conservativeness of the candidates, they may change their voting choices based on the scale. Also, if the sample of voters care a lot about the race of the candidates, for example, if on the scale, one candidate is closer to Romney and this voter dislikes Romney, this may distort the voter???s decision.
+
+3.This would make my assessment in the justice and respect for persons add a few more arguments. From my perspective, the researchers??? justification for their choice of samples are unconvincing and ungrounded. They did not provide any evidence or official proof to show that ???anticipated turnout to be significantly lower among Democratic voters???. Almost twice the number of liberal voters compared to conservative voters make me suspicious of their intentions. Besides, it???s not just to those liberal voters as they carry more potential burdens than others. By not disclosing this information, the study did not respect the public and those chosen subjects who participated in this experiment.
+
+4.Even though the analysis of the 2014 primary election results in the context of previous Montana judicial elections showed the outcome of either contest would not be compromised, I still could not agree entirely that their study would not distort the original results. There is no way to prove it either way because the study was already done. The assumed result is entirely based on scenario analysis but cannot be tested in real situation. Therefore, their assertion could not convince me that this study did not distort the original results.
+
+5.From the result, we can see that clearly, each candidate who got the most votes is lean more to the liberal side. This makes me more suspicious about the claims earlier made by the researchers that they anticipate the turnout to be significantly lower among liberal voters to justify their choices of twice more liberal voters. The big disparity between the votes of Herbert and Rice makes me suspect if there is distortion of the results due to the deliberate design of this study. 
+
+6.This disclosure of information about the principal investigator surely challenges the just and credibility of this study fundamentally. How can we know CrowdPAC provides 100 percent objective information if their profits are partly based on the information they provided in the public. What if they involve with one or more specific candidates secretly and did not disclose their relation with those candidates. Or if the sample voters they choose are related closely to the activist communities they have relation with. These are all vital information and consideration they need to further investigate. 
+
+7.If I were the principal investigator, I would resort to a third party to fully investigate the legal terms and ethical aspects of this study. I would disclose any information that pertain to the intention of this study explicitly. Also, I would comply with the Montana law enforcements to make sure my study is fully credible and well-grounded. In choosing the experimented subjects, I would officially explain my choice of samples and disclose the details of the choice of the voters. 
+
+If I were to design this experiment, I would implement a different information-distribution method. Instead of sending out controversial contents such as the mailer in our case, I would contact local paper or news office to ask them publish some articles which introduce objective information about the candidates or truth-proven evaluations about them. This way, potential conflicts with monetary interests and inconvenience for the voters could be avoided or reduced.  
+
+
+
+
+
+

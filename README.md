@@ -144,10 +144,12 @@ All readings are required unless otherwise noted. Adjustments can be made throug
         * [Vertesi, J. (2014). The Real Reason You Should Be Worried About That Facebook Experiment. *Time*.](http://time.com/2950699/facebook-experiment-social-science-funding/)
     * [Kosinski, M., & Wang, Y. (2017, September 24). Deep neural networks are more accurate than humans at detecting sexual orientation from facial images. *Journal of Personality and Social Psychology.* Retrieved from psyarxiv.com/hv28a](https://psyarxiv.com/hv28a/)
     * [Parry, M. (2011). Harvard Researchers Accused of Breaching Students' Privacy. *Chronicle of Higher Education*.](http://chronicle.com/article/Harvards-Privacy-Meltdown/128166/)
-1. Exploratory data analysis - univariate visualizations
+1. Exploratory data analysis
     * [Exploring Histograms](https://tinlizzie.org/histograms/)
-1. Exploratory data analysis - multivariate visualizations
-1. Exploratory data analysis - clustering
+    * [Unwin, A. (2015). *Graphical data analysis with R* (Vol. 27). CRC Press.](http://proquestcombo.safaribooksonline.com.proxy.uchicago.edu/9781498786775) - lots of good material here on graphical methods for EDA and how to implement them using different packages in R (e.g. `graphics`, `ggplot2`, `lattice`)
+    * [VanderPlas, Jake. (2016). *Python Data Science Handbook*. O'Reilly Media, Inc.](http://proquestcombo.safaribooksonline.com.proxy.uchicago.edu/book/programming/python/9781491912126) - see chapter 4 for implementing visualization methods in Python with `matplotlib` and `seaborn`
+1. Exploratory data analysis (cont.)
 1. Exploratory data analysis - dimension reduction
-
- 
+    * Chapter 10.1-10.2 in [*An Introduction to Statistical Learning*](http://link.springer.com.proxy.uchicago.edu/book/10.1007%2F978-1-4614-7138-7)
+1. Exploratory data analysis - clustering
+    * Chapter 10.1-10.3 in [*An Introduction to Statistical Learning*](http://link.springer.com.proxy.uchicago.edu/book/10.1007%2F978-1-4614-7138-7)

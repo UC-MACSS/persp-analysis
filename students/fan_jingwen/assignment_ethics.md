@@ -66,9 +66,17 @@ Whether the candidates in the Montana election used CrowdPAC as a tool for fundi
 
 ## 7. What I could do differently
 
-This study is clearly ethically flawed. The following are a couple of things I would have done differently to make the research more ethically compliant.
+This study is clearly ethically flawed. The following are a couple of things I would have done differently, or designed alternatively to make the research more ethically compliant.
+
 ### 1) Comply with IRB Council
-The most obvious changes I would make to the study would be submitting it to the respective IRB Councils at Dartmouth and Stanford before sending out the mails. IRB probably would have 1) rejected the idea of adding fake Great Seal of the State of Montana, 2) required informed consent to an extent that wouldn't compromise the validity of study, 3) mandated a detailed risk-benefit analysis, 4) assess the potential benefits and harms from Montanans' perspective. IRB would have consulted with the State of Montana to make sure no local election laws were to be broken, 5) push researchers to go the alternative route other than oversampling Democrats, compromising the justice of the study, 6) asked for full disclosure of conflict of interest, like CrowdPAC, and etc.
+The most obvious changes I would make to the study would be submitting it to the respective IRB Councils at Dartmouth and Stanford before sending out the mails. IRB probably would have: 
+
+1. rejected the idea of adding fake Great Seal of the State of Montana; 
+2. required informed consent to an extent that wouldn't compromise the validity of study; 3
+3. mandated a detailed risk-benefit analysis;
+4. assessed the potential benefits and harms from Montanans' perspective. IRB would have consulted with the State of Montana to make sure no local election laws were to be broken; 
+5. push researchers to go the alternative route other than oversampling Democrats, compromising the justice of the study; 
+6. asked for full disclosure of conflict of interest, like CrowdPAC, and etc.
 
 ### 2) Informed Consent
 Here are a couple of ways to at least acquire some informed consent. 
@@ -86,7 +94,7 @@ Here are a couple of ways to curb the effect of study on the election outcome.
 1. Conduct a power analysis to gauge the appropriate size of the study. If the required population is too large, then the effect of the treatment is not significant enough to warrant the risk of altering the outcome of an election.
 2. Perform an ethical-response survey, to monitor Montanans' ethical reaction to the potential risk of altered election outcome beforehand.  
 3. Make sure all populations are equally or proportionally represented in the sample (no oversampling), including using phone calling as a remedy for mail-unreachable households. This would reduce the effect of increased voter turnout on the election outcome.
-4. In the extreme case, conduct the research in a hypothetical setting either in a lab setting or in a human-computationally enhanced way. There will be a control group that receive reduced or no information about the specific election and the treatment group that receives full information. Then their self-reported propensity to vote will be compared.
+4. In the extreme case, conduct the research in a hypothetical election held either in a lab setting and in a human-computationally enhanced way (like recruitment via MTurk). The population can be stratified-sampled in any way the researchers desire, without worrying about potential real-world alteration of election result. There will be a control group that receive reduced or no information about the specific election and the treatment group that receives full information. Then their self-reported propensity to vote will be compared. The internal validity can be achieved in a lab setting where the researchers have total control over the participants, while the external validity will be preserved in the MTurk experiment where the sample is large enough. Thus, the ethical concerns discussed above will be successfully eschewed. 
 
 
 # Oh fuck it....

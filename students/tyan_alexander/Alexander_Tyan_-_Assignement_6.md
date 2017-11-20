@@ -45,6 +45,7 @@ experiment, since everyone in the mailing list received the “treatment”
 (i.e. the information mailer) regardless of their wishes. However, this
 may have not been any different from what a person may be exposed to
 under usual living conditions, as unwanted mail is quite commonplace.
+See \#4 for potential improvements on this.
 
 However, one major omission in respecting the persons is the intentional
 use of the great seal of the state, which may have confused some
@@ -62,8 +63,8 @@ potential harm (Salganik 2017). This includes both the participants and
 the social systems.
 
 First, let us discuss potential harm. Regarding the participants, I do
-not perceive any grave individual harm done because of the study, as the
-subject matter did not involve any physical/bodily intervention or a
+not perceive any *grave* individual harm done because of the study, as
+the subject matter did not involve any physical/bodily intervention or a
 risk of significant emotional trauma. The worst-case scenario for a
 participant was a higher chance of voting and, perhaps, voting for a
 different candidate based on perceived ideological alignment. But that
@@ -91,10 +92,11 @@ benefit is an overall higher turnout and, thus, better civic engagement
 by the citizens. Another general benefit is a better scientific
 understanding of how information may/should impact non-partisan races,
 something that political scientists have not studied as closely as in
-the case of partisan elections (Willis 2014). So, overall, it seems that
-the study balances risks and benefits pretty well, especially
-considering the importance of contributing to the knowledge of
-non-partisan election dynamics.
+the case of partisan elections (Willis 2014).
+
+So, overall, it seems that the study attempts to balance risks and
+benefits, but has some potential shortcomings, though it makes some
+contribution to the overall knowledge of non-partisan campaigns.
 
 *iii. Justice*
 

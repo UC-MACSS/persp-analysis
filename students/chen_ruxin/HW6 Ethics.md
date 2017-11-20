@@ -3,7 +3,7 @@
 
 ###Respect for Persons  
 
-According to the Belmont Report, the principle of Respect for Persons requires researchers to treat people as automonous or provide additional protections to people with diminished autonomy. To comply with the principle, researchers generally ask for consent from experiment participants before executing the experiment. However, in the Montanan Flyer project, the mailers were sent without informed consent to 102,780 voters, which accounts for 15% of the entire registered voters. Moreover, no explanation or statement regarding the mailers were provided until the formal compliant made by the Linda McCulloch, Montana's Secretary of State. In conclusion, the project does not present enough respect for persons. 
+According to the Belmont Report, the principle of Respect for Persons requires researchers to treat people as automonous or provide additional protections to people with diminished autonomy. To comply with the principle, researchers generally ask for consent from experiment participants before executing the experiment. However, in the Montanan Flyer project, the mailers were sent without informed consent to 102,780 voters, which accounts for 15% of the entire registered voters. The level of autonomy is greatly damaged since these voters were unvoluntarily enrolled into the experiment and have no choice to opt out. Moreover, no explanation or statement regarding the mailers were provided until the formal compliant made by the Linda McCulloch, Montana's Secretary of State. In conclusion, the project does not present enough respect for persons. 
 
 ###Beneficence 
 

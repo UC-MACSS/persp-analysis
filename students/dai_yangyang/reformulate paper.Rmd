@@ -1,0 +1,19 @@
+---
+title: "reformulate paper"
+output: html_document
+---
+
+2. Reformulation:
+The paper I chose is the ???Carol, R. N. and Compo, N. S. (2017), Other People: A child's age predicts a source's effect on memory. Leg Crim Psychol, 22: 74???87. doi:10.1111/lcrp.12078??? obtained from http://onlinelibrary.wiley.com/doi/10.1111/lcrp.12078/full#lcrp12078-bib-0033. 
+
+This study's central objective was to investigate how OP source (i.e., an adult vs. a child) may moderate its suggestive effect on witnesses??? reports and subsequent source monitoring abilities. 
+
+I found that although this study is relatively very thorough, there are still processes that can be improved. Firstly, the questions asked in the witness interview are very suggestive, which could potentially skewed the fact remembered by the kids. And the questions asked are also very vague, words such as ???one of the adults??? or ???one of the peer??? do not have very meaningful impression on the children since they are not familiar what kind of person that adult or peer is. Also, I think it would also be helpful if the response time between answering each question could be recorded, because it may reflect whether the children have a solid memory or they are very hesitant about the fact they remembered. Besides, although the interview process is very similar to the real world witness interview, the incident (which is the video in our case) is not. The watching of video is very deliberate, which does not seem to be the case that happened in real world. So I would suggest to create a environment which is more authentic to the real world, more random and more relaxed. 
+
+Corresponding to the above concerns, if I were to reformulate study, I would come up with a study process with more digitally enhanced experiment and survey techniques. In specific, since the targets are young children and teenagers, I would suggest a gamification method. 
+
+For experiment, I would create an animation, which plays the regular life in a school first, and then suddenly some incidence happened to better mimic the real world situation of an accident. In the animation, there must contain characters that represent adults, students(to represent peer). Later in the interview process, I can remind the children first who those people are. More or less, they will have some impression, so that they have the idea about specific figures of adults and peer. And later the results we get would not be depend on a vague definition of ???adults??? and ???peer???. 
+
+In the interview process, I will also implement an online interview. In this interview, I would use less suggestive words and sentences, and I will ask the children first to remind me what really happened in that video. In the meantime, I will record the time he or she respond that question. Then I will provide some specific multiple choice questions, let the children choose answers and record their response time in the meantime. After a few questions, in the same way, I will then mention, some specific person (adult or peer in that video) says he or she remembers what happened, what do you think? This point I will give them many choices (maybe 5-8). At the same time, I will also record the response time. Some of the questions I asked will be the same or similar, but with or without mentioning some people remembered it. In this case, I can compare the response time to examine children???s response to different groups of people. 
+
+In this way, data will all be collected by digital means, and the subtle difference among each group of children can be archived and analyzed. Also, I think the results I get would potentially reduce the concerns I mentioned earlier. 

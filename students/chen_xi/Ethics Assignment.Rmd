@@ -1,0 +1,73 @@
+---
+title: "Ethics Assginment"
+author: "Xi Chen"
+date: "November 20, 2017"
+output: pdf_document
+---
+
+## Q1. Assess this study using Salganik's four principles of ethical research
+
+### i. Respect for Persons
+The Belmont Report argues that "individuals should be treated as autonomous". In practice, researchers should not do stuff to participants without their consent (Salgnik, 2017). Even though the researchers think that the experimental effects are harmless or even beneficial, obtaining informed consent from participants should not be ignored. Therefore, participants should be informed of enough information about the study, and then make the decision to participant or not on their own.
+
+However, in the Montana election experiment, there was no consent forms being provided to the voters before the mailers were sent to them. The voters who received the mailers did not have any opportunity to decide if they voluntarily agree to participant. Hence, the researchers violated the principal of "Respect for Persons". In addition, the mailers included a reproduction of the Great Seal of the State of Montana, which may mislead the participants to believe that this mailer was from the State of Montana (Motl, 2015). This misconception may influence their decision of participation, and bring negative effects to the Montana government. In the open letter, the researchers admitted their misconduct on this issue: "The mailer was in no way affiliated with or approved by the State of Montana." Therefore, the researchers did not comply with the rule of "Respect for Persons" well. 
+
+### ii. Beneficence
+The Belmont Report requires that researchers shouldn't do harm, but should maximize potential benefits and minimize possible harms to participants. As Salgnik (2017) suggests, researches should carry out a risk/benefit analysis, and see if the risks and benefits strike an appropriate ethical balance. 
+
+In the Montana election experiment, the mailers placed Montana Supreme Court Justice candidates on a scale from liberal to conservative. As stated in the open letter, many participants thought that the ranking scale appealed to create a partisan alignment of the candidates. Participants may feel confused about the purpose of the mailers, and the mailers may change participants' perception towards partisan alignment of the candidates. These risks may somewhat disrupt the election, and the result of the election may make big difference to the future development of democratic system in the State of Montana. Therefore, I have concern about the principal of "Beneficence" in this study. 
+
+### iii. Justice
+The Belmont Report suggests that the distribution of risks and benefits from the research should be fair. Salgnik (2017) argues that "it should not be the case that one group in society bears the costs of research while another group reaps its benefits." In other words, all the groups in society should bear the same amount of costs or benefits from the research. 
+
+However, in the Montana election experiment, the researchers only reported that they sent mailers to 102, 780 voters, but did not provide further information about how they choose the sample. Possible sampling errors may lead to unfair distribution of costs and benefits. For example, some people, such as the  voters in this experiment, may bear the risks, while the others may reap the benefits, if the study benefits and improves the judicial system in the future. Therefore, it is hard to conclude if the Montana election experiment meet the requirement of "Justice". 
+
+### iv. Respect for law and public interest
+The principal of "Respect for law and public interest" suggests that researchers take all relevant stakeholders' interest into consideration, and comply with relevant laws (Salgnik, 2017). The Menlo Report specifies two components in this principal: Compliance and Transparency-based Accountability. Compliance means researchers should comply with the laws and regulations. Transparency-based Accountability means researchers should not do things in secret. 
+
+In the Montana election experiment, the mailers included a reproduction of the Great Seal of the State of Montana, which was an unauthorized use of government's power. Without receiving permission from the Montana government, the researchers may violate the Montana state laws. In addition, as stated in the open letter, ".the research proposal was not submitted to Stanford's Institutional Review Board for approval, which is a clear violation of university policy."  Therefore, these misconducts lead to the violations of the two components of the principal: Compliance and Transparency-based Accountability. 
+
+## Q2. Assume that the mailers were sent to a random sample of voters: under what conditions might this mailing have altered the outcome of the Supreme Court Justice election?
+Random sampling enables researches to eliminate sampling bias, and achieve a relatively representative sample. However, the mailing may still have altered the outcome of the Supreme Court Justice election due to the information presented in the mailers. The mailers showed a graph that ranked judicial candidates in a nonpartisan race on a scale from liberal to conservative, which also included Barack Obama and Mitt Romney as comparisons. Participants may tend to choose the candidates who were standing closer to Barack Obama, who was the winner, instead of Mitt Romney, who lost the election. Under this condition, the graph and the comparison on the mailers may somewhat alter the voters' choice, leading to the outcome in Democrats' favor. 
+
+## Q3. In fact, the mails were not sent to a random sample of voters... 
+When the researchers included much more voters identified as likely liberal to centrist leaning in Democratic leaning precincts, the sample would be considered as biased and not representative of the general population. Since the researchers tend to measure whether voters who are given more information are more likely to vote, the only difference between the treatment group and control group should be the amount of information. However, with this biased sample, voters' political alignment may become a confounding variable that would undermine the treatment effect in the study. The biased sample may increase the Democrat turnout rate and lead to the outcome in Democrats' favor. Therefore, I still believe that the research design is ethically flawed. 
+
+## Q4. In response to the investigation, the researchers said that they picked this election in part because... 
+My assessment has been slightly changed due to the researchers' effort on picking judicial race which had not been closely contested. Based on the analysis of previous elections' results, the researches' justification sounds reasonable to me. It showed that they respected the principals of "Respect for law and public interest" and "Beneficence" by conducting risk/benefits analysis. They did consider the risk of changing the outcome of the elections, and tried to eliminate the risk. Therefore, the researchers' work on analyzing previous elections should be appreciated. 
+
+## Q5. In fact, the election turned out to be not particularly close... 
+From the table, the difference in election outcome between W. David Herbert and Jim Rice was huge; the difference between Lawrence VanDyke and Mike Wheat was smaller, but still noticeable. The researchers' justification in Q4 was supportive in this table. Therefore, the research may not alter the election outcome. However, we should also notice that, in both Supreme Court Justice #1 and #2, the candidate who were more liberal received more voters. This may indicate the concern/question that I discussed above: the experiment may increase the Democrat turnout rate and lead to the outcome in Democrats' favor. Therefore, I still think the table cannot completely rule out the possible ethnical issues in the Montana election study.  
+
+## Q6. Importance of CrowdPAC
+The fact that one of the researchers is the co-founder of CrowdPAC exacerbates my concern about the ethical issues in the Montana election study. It is very likely that there is conflict of interest between the academic research and the for-profit business. When CrowdPAC makes profits by providing tools and funds to organizing political campaigns, we should be questionable about its "objective scores for political candidates" and "objective information for voters to make decisions". The "objectiveness" is very important. Therefore, my assessment is not changed: the research is ethnically questionable. 
+
+## Q7. 
+### What would you have done differently?
+- Submit research proposal to the IRB review
+
+I would submit the research proposal to the Institutional Review Board for approval before going to the next steps, such as collecting data. I will revise the proposal according to IRB's comments, in order to make sure the research complies with the required regulations.
+
+- Provide enough information and obtain consent forms
+
+Before sending out any experimental materials, such as mailers, I would send consent forms along with the required information about the study to the participants. Participants would learn some information about the researchers, the research purpose, and the possible risks it may cause. Participants would have a good understanding of the study from the information. Only responsive participants who agree to volunteer in the study would receive the mailers in the future. By doing so, individuals would be treated as autonomous and make decisions of participation on their own.   
+
+- Reduce the sample size and obtain a representative sample
+
+As discussed before, the possible sampling errors may undermine the principal of "Justice", so I will try to minimize the number of participants by using efficient statistical methods. In addition, I would attempt to monitor participants and offer assistant to anyone that appeared to have been harmed, as suggested by Salgnik (2017). Furthermore, I would use a scientific random sampling method to obtain a representative sample.  
+
+- Remove the Seal of the Great Seal of the State of Montana
+
+I will not include the reproduction of the Great Seal of the State of Montana in the mailers. Instead, I will include statements mentioned in the open letter, such as "The mailer was not affiliated with any political party, candidate or organization, and was not intended to influence any race." I want to make sure, the participants are aware that the study is non-partisan and not a political activity.  In addition, I will also communicate with government officials in the State of Montana, and try to address their concerns. 
+
+### How would you have designed the study?
+Providing additional information to a certain group of voters in an election would lead to bias and ethical issues. Therefore, I plan to provide additional information to all voters in a nonpartisan race in the future, which would be the treatment group. For the control group, I would choose a similar non-partisan race which did not provide additional information to the voters in the past. The process of choosing such a control group would be complicated and needs to meet several strict requirements, so I can focus on examining the treatment effect of additional information on voter turnout. 
+
+## Reference
+Salganik, M. J. (2017). Bit by Bit: Social Research in the Digital Age. Princeton University Press.
+
+Motl, Jonathan. (2015). Before the Commissioner of Political Practices of the State of Montana. Retrieved from 
+
+National Commission for the Proptection of Human Subjects of Biomedicaland Behavioral Research, Bethesda, Md. (1978). The Belmont report: Ethical principles and guidelines for the protection of human subjects of research. Superintendent of Documents.
+
+

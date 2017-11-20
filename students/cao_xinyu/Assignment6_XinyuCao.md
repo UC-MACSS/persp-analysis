@@ -47,3 +47,6 @@ Fourth, improve our respect for people. Although the full inform consent might o
 
 Fifth, maybe considering a natural experiment could also help. Because some states require non-partisan election and some states allows partisan election. We might use the states of not using partisan election as an instrument of partisan information, thus we could see a difference of turnout rate if we have partisan information with proper matching methods.
 
+
+# Reference
+Salganik, Matthew J. 2017. Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press. Open review edition.

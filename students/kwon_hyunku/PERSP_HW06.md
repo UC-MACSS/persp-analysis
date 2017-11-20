@@ -72,17 +72,19 @@ influenced or not; but whether how, to what end, the research influenced
 the election.*
 
 Against this background, we can assess the benefit and harm of the
-experiment in various levels. (1) Individual level: the potential harm
-field experiment might cause to individuals is *informational risk*,
-where the disclosure of personal information harms individuals. However,
-no such harm is found in this experiment. Another potential harm
-concerns manipulation—providing the ideologies of candidates might alter
-individuals’ behaviors. However, information is, if not biased, a public
-good; providing information to individuals would help them reason their
-way out to a more informed decision. Thus, the research does not
-engender severe harm to individuals.
+experiment in various levels.
 
-1.  Community level: we should consider *both participants and
+1.  Individual level: the potential harm field experiment might cause to
+    individuals is *informational risk*, where the disclosure of
+    personal information harms individuals. However, no such harm is
+    found in this experiment. Another potential harm concerns
+    manipulation—providing the ideologies of candidates might alter
+    individuals’ behaviors. However, information is, if not biased, a
+    public good; providing information to individuals would help them
+    reason their way out to a more informed decision. Thus, the research
+    does not engender severe harm to individuals.
+
+2.  Community level: we should consider *both participants and
     non-participants*, for the provided information might be circulated
     across the public via political communication: consequences of the
     experiment would not be limited to the subjects—the experiment might
@@ -94,7 +96,7 @@ engender severe harm to individuals.
     process and interested in politics. Seen this way, it is hard to
     conclude that the harm outweighs the benefit.
 
-2.  Social level: one may argue that injection of partisanship into
+3.  Social level: one may argue that injection of partisanship into
     nonpartisan elections, the guardian of separation of powers, is
     itself a problem. However, we should consider the definition of
     nonpartisan elections: they are the elections *where political

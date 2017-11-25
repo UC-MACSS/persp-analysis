@@ -59,7 +59,7 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 |16.| Wed, Nov. 15 | Ethics |  |
 |17.| Mon, Nov. 20 | Exploratory data analysis - univariate visualizations | [The ethics of the Montana election experiment](assignments/ethics.md) |
 |18.| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
-|19.| Mon, Nov. 27 | Exploratory data analysis - clustering | EDA: Part I |
+|19.| Mon, Nov. 27 | Exploratory data analysis - clustering | [Exploring the General Social Survey](assignments/exploratory-data-analysis/README.md) |
 |20.| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
 |21.| Mon, Dec. 4 |  | EDA: Part II |
 

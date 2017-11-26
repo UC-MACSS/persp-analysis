@@ -33,7 +33,12 @@ One finding I was off guard to find was that self employment is more or less het
 
 
 ```{r, echo=FALSE}
-gss %>% 
+gss %>%
+  select(wrkslf, income06) %>% 
+  mutate(wrkslf = as.character(wrkslf)) %>% 
+  replace_na(list(wrkslf = "NOT REPORTED OR UNEMPLOYED")) %>% 
+  mutate(wrkslf = as_factor(wrkslf),
+         wrkslf = lvls_reorder(wrkslf, c(3,1,2))) %>% 
   ggplot(aes(as.factor(income06), fill=wrkslf))+
   geom_bar(position = "fill")+
   labs(title = "Relationship Between Family Income and Self-Employment Status",
@@ -56,18 +61,20 @@ It did look like people who voted for Obama tended to think the Bible was less i
 
 
 ```{r, echo=FALSE}
-
-
 gss %>% 
-  mutate(bible = as_factor(bible),
-         bible = addNA(bible)) %>% 
-  select(pres08, bible) %>% 
+  select(pres08, bible) %>%
+  mutate(pres08 = as.character(pres08)) %>% 
+  replace_na(list(pres08 = "Not Reported")) %>%
+  mutate(pres08 = as.factor(pres08),
+         pres08 = lvls_reorder(pres08, 3:1)) %>%
+  na.omit() %>% 
   ggplot(aes(as.factor(pres08), fill=bible))+
   geom_bar(position = "fill")+
   scale_fill_brewer(palette = "Set1")+
   labs(x = "Presidential 2008 Vote",
        y = "Percent of Group",
-       title = "Relationship Between Opinion of Bible and Presidential Vote (2008)")
+       title = "Relationship Between Opinion of Bible and Presidential Vote (2008)",
+       fill = "Opinion of Bible")
 
 ```
 

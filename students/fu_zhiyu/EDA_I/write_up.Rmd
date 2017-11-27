@@ -1,7 +1,0 @@
----
-title: "write_up"
-author: "Zhiyu Fu"
-date: "11/27/2017"
-output: github_document
----
-

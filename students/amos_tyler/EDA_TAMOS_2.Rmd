@@ -73,14 +73,14 @@ Through exploratory analysis, it became apparent that there was an association b
 This heuristic resulted in the following association being identified: Individuals with strong feelings against abortion (unconditional opposition) often display less tolerance for the speech of individuals with whom they disagree. The plot below highlights one such case.
   
 ```{r echo=FALSE}
-plot(df$abany ~ df$spkrac, main = "Unconditional Support (%) for Abortion (abany) and \n Tolerance for White Supremacist Speech (spkrac)", ylab = "Unconditional Support for Abortion", xlab = "Tolerance for White Supremacist Speech")
+plot(df$abany ~ df$spkath, main = "Unconditional Support (%) for Abortion (abany) and \n Tolerance for Atheist Speech (spkath)", ylab = "Unconditional Support for Abortion", xlab = "Tolerance for Atheist Speech")
 
-ggplot(df, aes(x = abany, fill = spkrac)) +
+ggplot(df, aes(x = abany, fill = spkath)) +
   geom_bar()+
-  ggtitle("Unconditional Support for Abortion (abany) and \n Tolerance for White Supremacist Speech (spkrac)") +
+  ggtitle("Unconditional Support (%) for Abortion (abany) and \n Tolerance for Atheist Speech (spkath)") +
   xlab("Unconditional Support for Abortion")+
   ylab("Count") +
-  scale_fill_discrete(name="Tolerance for White \n Supremacist Speech")
+  scale_fill_discrete(name="Tolerance for Atheist Speech")
 
 ```
   
@@ -125,7 +125,7 @@ plot(df$abany ~ df$spkrac, main = "Unconditional Support (%) for Abortion (abany
 
 ### Surprising Findings
 
-The most unexpected finding was the level of opposition to unconditional abortion in the sampled population. In fact, opposition (55%) to unconditional access to abortion substantially outweighs support (44%). In light of abortions' legal status in the United States, this is somewhat surprising. Another such finding is the lack of impact certain variables have on support for access to abortion. For example, support for abortion appeared not to vary greatly by respondents' sex, or religion (see below). Another surprising, and disconcerting, finding was the high number of respondents reporting that they felt homosexual sex (homosex) was morally wrong in some way ("Sometimes wrong": 6%, Almost always wrong": 2%, or "Always wrong": 45%). 
+The most unexpected finding was the level of opposition to unconditional abortion in the sampled population. In fact, opposition (55%) to unconditional access to abortion outweighs support (44%). In light of abortions' legal status in the United States, this is somewhat surprising. Another such finding is the lack of impact certain variables have on support for access to abortion. For example, support for abortion appeared not to vary greatly by respondents' sex, or religion (see below). Another surprising, and disconcerting, finding was the high number of respondents reporting that they felt homosexual sex (homosex) was morally wrong in some way ("Sometimes wrong": 6%, Almost always wrong": 2%, or "Always wrong": 45%). 
 
 ```{r echo=FALSE}
 ggplot(df, aes(x = abany))+
@@ -136,8 +136,7 @@ ggplot(df, aes(x = abany))+
   scale_fill_discrete(name="Sex")
 
  ggplot(df, aes(abany, relig)) + 
-  geom_point() +
-   geom_jitter()+
+  geom_count() +
   ggtitle("Unconditional Support for Abortion (abany) \n by Religion (relig)") +
   xlab("Unconditional Support for Abortion")+
   ylab("Religion")

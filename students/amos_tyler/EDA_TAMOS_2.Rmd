@@ -130,7 +130,7 @@ The most unexpected finding was the level of opposition to unconditional abortio
 ```{r echo=FALSE}
 ggplot(df, aes(x = abany))+
   geom_bar(aes(fill = sex)) +
-  ggtitle("Unconditional Support for Abortion (abany) by \n Sex") +
+  ggtitle("Unconditional Support for Abortion (abany) by Sex") +
   xlab("Unconditional Support for Abortion")+
   ylab("Count") +
   scale_fill_discrete(name="Sex")
@@ -138,7 +138,7 @@ ggplot(df, aes(x = abany))+
  ggplot(df, aes(abany, relig)) + 
   geom_point() +
    geom_jitter()+
-  ggtitle("Unconditional Support for Abortion (abany) by Religion (relig)") +
+  ggtitle("Unconditional Support for Abortion (abany) \n by Religion (relig)") +
   xlab("Unconditional Support for Abortion")+
   ylab("Religion")
 

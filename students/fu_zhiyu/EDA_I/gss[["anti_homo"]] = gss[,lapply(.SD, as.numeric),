@@ -1,0 +1,4 @@
+gss[["anti_homo"]] = gss[,lapply(.SD, as.numeric),.SDcols = c("libhomo", "colhomo", "spkhomo")] %>%
+  mutate(spkhomo = 3 - spkhomo) %>% rowSums(na.rm = F) 
+  gss[anti_relig == 0,anti_relig:=NA]
+gss[,anti_relig:= 6 - anti_relig]

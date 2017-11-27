@@ -141,7 +141,7 @@ gss %>%
   count(conlegis) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = conlegis, clockwise = TRUE, main = "Confidence in the Federal Government"))
+  with(pie(pct, labels = conlegis, clockwise = TRUE, main = "Confidence in the Congress"))
 ```
 
 ![](HW7_write-up_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)
@@ -190,8 +190,8 @@ gss %>%
   geom_histogram(stat="count", position = "fill", binwidth = 30)+
   scale_fill_brewer(palette = "Set4")+
   labs(x = "Education",
-       y = "Confidence in the Federal Government",
-       title = "Relationship Between Education and Confidence in the Federal Government")+
+       y = "Confidence in the Congress",
+       title = "Relationship Between Education and Confidence in the Congress")+
    theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 

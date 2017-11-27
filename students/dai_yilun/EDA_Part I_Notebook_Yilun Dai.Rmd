@@ -1,0 +1,424 @@
+---
+title: "EDA Notebook"
+author: "Yilun Dai"
+date: "11/25/2017"
+output: github_document
+---
+
+```{r}
+#setwd("~/Documents/Fall2017/MACS30000")
+#install.packages("poliscidata")
+data(gss, package = "poliscidata")
+library(tidyverse)
+library(ggthemes)
+library(knitr)
+library(broom)
+library(stringr)
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+gss1 <- read.csv('gss2012.csv', header = TRUE)
+str(gss)
+```
+
+```{r}
+library(ggplot2)
+library(forcats)
+
+```
+
+# 1. 
+```{r}
+#histogram of number of children
+ggplot(gss, aes(childs)) + geom_histogram(binwidth = 1) +
+labs(title = "Histogram of number of Childs",
+       x = "Number of Childs",
+       y = "Frequency")
+```
+
+    The data is right skewed and is bimodal. \
+# 2. 
+```{r}
+#barplot of income
+income<- filter(gss, rincom06 != 'NA')
+ggplot(income, aes(rincom06)) + geom_bar() + 
+labs(title = "Barplot of Income",
+       x = "Income",
+       y = "Frequency")
+```
+
+    The data of individual income is right skewed. \
+    
+# 3. 
+```{r}
+#dot graph for individual income and age
+income_summary <- gss %>%
+  group_by(rincom06) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    closewht= mean(closewht, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(income_summary, aes(age, fct_relevel(rincom06, "NA"))) +
+  geom_point()
+```
+
+    Level of income and age are positively associated.\ 
+    
+# 4. 
+```{r}
+#dot graph for income and closewht
+income_summary <- gss %>%
+  group_by(rincom06) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    closewht= mean(closewht, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(income_summary, aes(closewht, fct_relevel(rincom06, "NA"))) +
+  geom_point()
+
+```
+
+    Mostly concentrated between 6.5 and 7.0 \
+# 5. 
+```{r}
+#dot graph for family income and closeblk
+income_summary <- gss %>%
+  group_by(rincom06) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    closeblk= mean(closeblk, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(income_summary, aes(closeblk, fct_relevel(rincom06, 'NA'))) +
+  geom_point()
+
+```
+
+    Mostly between 5.5 and 6.5. \
+# 6. 
+```{r}
+#dot graph for income and eqwlth
+income_summary <- gss %>%
+  group_by(rincom06) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    eqwlth= mean(eqwlth, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(income_summary, aes(eqwlth, fct_relevel(rincom06, "NA"))) +
+  geom_point()
+```
+
+    Eqwlth is likely to be positively associated with income. \ 
+    
+    
+# 7. 
+```{r}
+#dot graph for family income and number of child
+familyincome_summary <- gss %>%
+  group_by(income06) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    childs= mean(childs, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(familyincome_summary, aes(childs, fct_relevel(income06, "NA"))) +
+  geom_point()
+```
+
+    Families with higher income tend to have fewer child.\
+# 8.
+```{r}
+#happy bar plot
+ggplot(gss, aes(happy)) +
+  geom_bar()
+
+```
+
+# 9. 
+```{r}
+# happy and income
+gss %>%
+  count(happy, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+```
+
+# 10. 
+```{r}
+# gunlaw and income
+gss %>%
+  count(gunlaw, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = gunlaw)) +
+  geom_bar(stat = 'identity')
+```
+
+# 11. 
+```{r}
+# degree and income
+gss %>%
+  count(degree, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = degree)) +
+  geom_bar(stat = 'identity')
+```
+
+# 12.
+```{r}
+# getahead and income
+gss %>%
+  count(getahead, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = getahead)) +
+  geom_bar(stat = 'identity')
+```
+
+# 13.
+```{r}
+# grass and income
+gss %>%
+  count(grass, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = grass)) +
+  geom_bar(stat = 'identity')
+```
+
+# 14. 
+```{r}
+#polviews and guns
+gss %>%
+  count(polviews, gunlaw) %>%
+  na.omit() %>%
+  mutate(polviews = factor(polviews)) %>%
+  ggplot(aes(polviews, n, fill = gunlaw)) +
+  geom_bar(stat = 'identity')
+```
+
+# 15.
+```{r}
+# no more child and income
+gss %>%
+  count(abnomore, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = abnomore)) +
+  geom_bar(stat = 'identity')
+```
+
+# 16. 
+```{r}
+# help others and income
+gss %>%
+  count(helpoth, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = helpoth)) +
+  geom_bar(stat = 'identity')
+```
+
+# 17.
+```{r}
+# cappun and gunlaws
+gss %>%
+  count(cappun, gunlaw) %>%
+  na.omit() %>%
+  mutate(cappun = factor(cappun)) %>%
+  ggplot(aes(cappun, n, fill = gunlaw)) +
+  geom_bar(stat = 'identity')
+```
+
+# 18. 
+```{r}
+# happy and family income
+gss %>%
+  count(happy, income06) %>%
+  na.omit() %>%
+  mutate(income = factor(income06)) %>%
+  ggplot(aes(income, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 28. 
+```{r}
+# happy and income excluding students
+gss_no_student <- filter(gss, wrkstat != 'SCHOOL')
+gss_no_student %>%
+  count(happy, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 29. 
+```{r}
+# happy and marital
+gss %>%
+  count(happy, marital) %>%
+  na.omit() %>%
+  mutate(marital = factor(marital)) %>%
+  ggplot(aes(marital, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 30. 
+```{r}
+# happy and wrkgvt
+gss %>%
+  count(happy, wrkgvt) %>%
+  na.omit() %>%
+  mutate(wrkgvt = factor(wrkgvt)) %>%
+  ggplot(aes(wrkgvt, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 31. 
+```{r}
+# happy and wrkslf
+gss %>%
+  count(happy, wrkslf) %>%
+  na.omit() %>%
+  mutate(wrkslf = factor(wrkslf)) %>%
+  ggplot(aes(wrkslf, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 32. 
+```{r}
+# happy and wrkstat
+gss %>%
+  count(happy, wrkstat) %>%
+  na.omit() %>%
+  mutate(wrkstat = factor(wrkstat)) %>%
+  ggplot(aes(wrkstat, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 33. 
+```{r}
+# happy and family income
+gss %>%
+  count(happy, childs) %>%
+  na.omit() %>%
+  mutate(childs = factor(childs)) %>%
+  ggplot(aes(childs, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 34. 
+```{r}
+# happy and siblings
+gss %>%
+  count(happy, sibs) %>%
+  na.omit() %>%
+  mutate(income = factor(sibs)) %>%
+  ggplot(aes(sibs, n, fill = happy)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 28. 
+```{r}
+# premarriage sex
+gss1 <- read.csv('gss2012.csv', header = TRUE)
+ggplot(gss, aes(premarsx)) + geom_bar() + 
+labs(title = "Barplot of Opinions on Premarriage Sex",
+       x = "Premarsex",
+       y = "Frequency")
+```
+
+# 29.
+```{r}
+# premarsex and relig
+gss %>%
+  count(premarsx, relig) %>%
+  na.omit() %>%
+  mutate(relig = factor(relig)) %>%
+  ggplot(aes(relig, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+summary(gss$relig)
+``` 
+
+# 30. 
+```{r}
+# premarsex and marital status
+gss %>%
+  count(premarsx, marital) %>%
+  na.omit() %>%
+  mutate(marital = factor(marital)) %>%
+  ggplot(aes(marital, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 31. 
+```{r}
+# premarsex and age
+gss %>%
+  count(premarsx, age) %>%
+  na.omit() %>%
+  mutate(age = factor(age)) %>%
+  ggplot(aes(age, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 32.
+```{r}
+# premarsex and pornlaw
+gss %>%
+  count(premarsx, pornlaw) %>%
+  na.omit() %>%
+  mutate(pornlaw = factor(pornlaw)) %>%
+  ggplot(aes(pornlaw, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+``` 
+
+# 33. 
+```{r}
+# premarsex and opinions on homosexual
+gss %>%
+  count(premarsx, spkhomo) %>%
+  na.omit() %>%
+  mutate(spkhomo = factor(spkhomo)) %>%
+  ggplot(aes(spkhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+
+gss %>%
+  count(premarsx, colhomo) %>%
+  na.omit() %>%
+  mutate(colhomo = factor(colhomo)) %>%
+  ggplot(aes(colhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+
+gss %>%
+  count(premarsx, libhomo) %>%
+  na.omit() %>%
+  mutate(libhomo = factor(libhomo)) %>%
+  ggplot(aes(libhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+
+``` 
+
+# 34. 
+```{r}
+# premarsex and political view
+gss %>%
+  count(premarsx, polviews) %>%
+  na.omit() %>%
+  mutate(polviews= factor(polviews)) %>%
+  ggplot(aes(polviews, n, fill = premarsx)) +
+  geom_bar(stat = 'identity')
+``` 
+

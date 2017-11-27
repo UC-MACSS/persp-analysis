@@ -39,7 +39,7 @@ In order to focus my exploratory analysis, I chose to concentrate on one issue a
 
 Through exploratory analysis, it became apparent that there was an association between attitudes towards authority, tolerance for opposing viewpoints, and support for access to abortion. This developed into a heuristic which implied individuals who hold strong beliefs opposing access to abortion are also likely to hold strong beliefs regarding moral dualities (right/wrong, permissible/not permissible).
 
-This heuristic resulted in the following association being identified: Individuals with strong feelings against abortion (unconditional opposition) often display less tolerance for the speech of individuals with whom they disagree. The plot below highlights two such cases.
+This heuristic resulted in the following association being identified: Individuals with strong feelings against abortion (unconditional opposition) often display less tolerance for the speech of individuals with whom they disagree. The plot below highlights one such case.
 
 ![](EDA_TAMOS_2_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)![](EDA_TAMOS_2_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-2.png)
 

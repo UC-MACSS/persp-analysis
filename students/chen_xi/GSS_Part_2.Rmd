@@ -2,7 +2,7 @@
 title: "EDA For the GSS Data - Exploration Write-up"
 author: "Xi Chen"
 date: "November 26, 2017"
-output: pdf_document
+output: github_document
 editor_options: 
   chunk_output_type: console
 ---

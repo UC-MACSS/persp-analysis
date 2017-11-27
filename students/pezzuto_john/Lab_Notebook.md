@@ -19,7 +19,8 @@ Exploring Income
 ``` r
 gss %>% 
   ggplot(aes(income06))+
-  geom_bar()
+  geom_bar()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
@@ -29,7 +30,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(educ, income06))+
-  geom_count()
+  geom_count()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
@@ -38,7 +40,8 @@ gss %>%
 gss %>% 
   ggplot(aes(income06))+
   geom_bar()+
-  facet_wrap(~happy)
+  facet_wrap(~happy)+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
@@ -48,7 +51,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(as.factor(income06), fill=wrkstat))+
-  geom_bar(position = "fill")
+  geom_bar(position = "fill")+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-5-1.png)
@@ -58,7 +62,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(as.factor(income06), fill=wrkslf))+
-  geom_bar(position = "fill")
+  geom_bar(position = "fill")+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-6-1.png)
@@ -68,7 +73,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(income06, age))+
-  geom_jitter()
+  geom_jitter()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
     ## Warning: Removed 5 rows containing missing values (geom_point).
@@ -80,7 +86,8 @@ gss %>%
   ggplot(aes(income06))+
   geom_bar()+
   facet_wrap(~workhard)+
-  labs(title = "Importance of Hard Work")
+  labs(title = "Importance of Hard Work")+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)
@@ -90,7 +97,8 @@ gss %>%
   ggplot(aes(income06))+
   geom_bar()+
   facet_wrap(~getahead)+
-  labs(title = "How to Get Ahead")
+  labs(title = "How to Get Ahead")+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-9-1.png)
@@ -102,7 +110,8 @@ gss %>%
   ggplot(aes(income06))+
   geom_bar()+
   facet_wrap(~popular)+
-  labs(title = "How Important is Being Popular")
+  labs(title = "How Important is Being Popular")+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png)
@@ -116,7 +125,8 @@ gss %>%
   ggplot(aes(income06))+
   geom_bar()+
   facet_wrap(~reliten)+
-  labs(title = "Religion")
+  labs(title = "Religion")+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-11-1.png)
@@ -127,7 +137,8 @@ gss %>%
 gss %>% 
   ggplot(aes(income06))+
   geom_bar()+
-  facet_wrap(~pres08)
+  facet_wrap(~pres08)+
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
@@ -233,7 +244,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(educ))+
-  geom_bar()
+  geom_bar()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-22-1.png)
@@ -362,7 +374,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(reliten))+
-  geom_bar()
+  geom_bar()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-33-1.png)
@@ -383,7 +396,8 @@ gss %>%
 ``` r
 gss %>% 
   ggplot(aes(affrmact))+
-  geom_bar()
+  geom_bar()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-35-1.png)
@@ -394,7 +408,8 @@ gss %>%
 gss %>% 
   filter(closeblk <2.5) %>% 
   ggplot(aes(affrmact))+
-  geom_bar()
+  geom_bar()+
+   theme(axis.text.x = element_text(angle = 50, hjust = 1))
 ```
 
 ![](Lab_Notebook_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-36-1.png)

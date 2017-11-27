@@ -37,7 +37,7 @@ gss %>%
   count(confed) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = confed, clockwise = TRUE))
+  with(pie(pct, labels = confed, clockwise = TRUE, main = "Confidence in the Federal Government"))
 ```
 
 ![](HW7_write-up_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
@@ -108,7 +108,7 @@ gss %>%
   count(conjudge) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = conjudge, clockwise = TRUE))
+  with(pie(pct, labels = conjudge, clockwise = TRUE, main = "Confidence in the U.S. Supreme Court"))
 ```
 
 ![](HW7_write-up_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-6-1.png)
@@ -141,7 +141,7 @@ gss %>%
   count(conlegis) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = conlegis, clockwise = TRUE))
+  with(pie(pct, labels = conlegis, clockwise = TRUE, main = "Confidence in the Federal Government"))
 ```
 
 ![](HW7_write-up_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)

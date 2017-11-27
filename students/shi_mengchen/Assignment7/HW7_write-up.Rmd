@@ -20,7 +20,7 @@ gss %>%
   count(confed) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = confed, clockwise = TRUE))
+  with(pie(pct, labels = confed, clockwise = TRUE, main = "Confidence in the Federal Government"))
 ```
 
 ```{r}
@@ -75,7 +75,7 @@ gss %>%
   count(conjudge) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = conjudge, clockwise = TRUE))
+  with(pie(pct, labels = conjudge, clockwise = TRUE, main = "Confidence in the U.S. Supreme Court"))
 ```
 
 
@@ -100,7 +100,7 @@ gss %>%
   count(conlegis) %>%
   na.omit() %>%
   mutate(pct = n / sum(n)) %>%
-  with(pie(pct, labels = conlegis, clockwise = TRUE))
+  with(pie(pct, labels = conlegis, clockwise = TRUE, main = "Confidence in the Federal Government"))
 ```
 
 ```{r}

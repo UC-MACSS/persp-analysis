@@ -3,15 +3,13 @@ title: "Assignment #7 Write-Up - Sumer Vaid "
 output: github_document
 ---
 ```{r, echo=FALSE}
-install.packages("poliscidata")
-install.packages("tidyverse")
-install.packages("ggplot2")
+library(tidyverse)
+library(ggplot2)
+library(poliscidata)
 
 data(gss, package = "poliscidata")
 
 # convert to tibble
-library(tidyverse)
-library(ggplot2)
 gss <- as_tibble(gss)
 ```
 

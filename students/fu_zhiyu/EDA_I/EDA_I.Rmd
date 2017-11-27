@@ -43,6 +43,7 @@ The distribution of marital status:
 ```{r}
 ggplot(gss, aes(marital)) + geom_bar(aes(y = (..count..)/sum(..count..))) + scale_y_continuous(labels = scales::percent) + ylab("Percentage")
 ```
+
 The distribution of number of children:
 
 ```{r}

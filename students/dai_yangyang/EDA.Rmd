@@ -16,14 +16,14 @@ library(tidyverse)
 gss <- as_tibble(gss)
 theme_set(theme_minimal())
 
-#1. explore happiness
+# 1. explore happiness
 
 gss %>% 
   ggplot(aes(happy))+
   geom_bar()
 
 
-#2. explore the relation between happiness and other variables
+# 2. explore the relation between happiness and other variables
 
 #explore happiness and income
 
@@ -119,7 +119,7 @@ gss %>%
   geom_bar(position = "fill")
 
 
-# explore zodiac signs
+#explore zodiac signs
 
 gss %>% 
   ggplot(aes(zodiac))+
@@ -131,39 +131,39 @@ gss %>%
   ggplot(aes(as.factor(zodiac), fill=income06))+
   geom_bar(position = "fill")
 
-# explore zodiac signs and education
+#explore zodiac signs and education
 
 gss %>% 
   ggplot(aes(as.factor(zodiac), fill=educ))+
   geom_bar(position = "fill")
 
-# explore zodiac signs and degree
+#explore zodiac signs and degree
 
 gss %>% 
   ggplot(aes(as.factor(zodiac), fill=degree))+
   geom_bar(position = "fill")
 
 
-# explore zodiac signs and workstatus
+#explore zodiac signs and workstatus
 
 gss %>% 
   ggplot(aes(as.factor(zodiac), fill=wrkstat))+
   geom_bar(position = "fill")
 
-# explore zodiac signs and sex
+#explore zodiac signs and sex
 
 gss %>% 
   ggplot(aes(as.factor(wrkstat), fill=sex))+
   geom_bar(position = "fill")
 
-# explore zodiac signs and marital status
+#explore zodiac signs and marital status
 
 gss %>% 
   ggplot(aes(as.factor(zodiac), fill=marital))+
   geom_bar(position = "fill")
 
 
-# explore zodiac signs and religion
+#explore zodiac signs and religion
 
 gss %>% 
   ggplot(aes(as.factor(zodiac), fill=relig))+
@@ -176,52 +176,52 @@ gss %>%
   ggplot(aes(as.factor(relig), fill=sex))+
   geom_bar(position = "fill")
 
-# explore degree and sex
+#explore degree and sex
 
 gss %>% 
   ggplot(aes(as.factor(degree), fill=sex))+
   geom_bar(position = "fill")
 
-# explore income and sex
+#explore income and sex
 
 gss %>% 
   ggplot(aes(as.factor(income06), fill=sex))+
   geom_bar(position = "fill")
 
-# explore marital status and sex
+#explore marital status and sex
 
 gss %>% 
   ggplot(aes(as.factor(marital), fill=sex))+
   geom_bar(position = "fill")
 
-# explore political views and sex
+#explore political views and sex
 
 gss %>% 
   ggplot(aes(as.factor(polviews), fill=sex))+
   geom_bar(position = "fill")
 
 
-# explore marital status and age
+#explore marital status and age
 
 ggplot(gss, aes(x=marital, y=age)) +
   geom_boxplot()
 
-# explore happy and age (box plot)
+#explore happy and age (box plot)
 
 ggplot(gss, aes(x=happy, y=age)) +
   geom_boxplot()
 
-#  explore age and happy(box plot)
+#explore age and happy(box plot)
 
 ggplot(gss, aes(x=age, y=happy)) +
   geom_jitter()
 
-# explore zodiac and happiness(jitter plot)
+#explore zodiac and happiness(jitter plot)
 
 ggplot(gss, aes(x=zodiac, y=happy)) +
   geom_jitter()
 
-# explore degree and political views(jitter plot)
+#explore degree and political views(jitter plot)
 
 ggplot(gss, aes(x=degree, y=polviews)) +
   geom_jitter()

@@ -442,8 +442,8 @@ gssSimp %>%
 Exploration write-up (4 points)
 -------------------------------
 
-Graphs
-======
+Graphs and Code
+===============
 
 ``` r
 # Sibling and Children Distribution Graphs 
@@ -454,14 +454,6 @@ siblingsDist <- gssSimp %>%
          x = "Number of Siblings",
          y = "Frequency of Response")
 
-print(siblingsDist)
-```
-
-    ## Warning: Removed 3 rows containing non-finite values (stat_count).
-
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-1.png)
-
-``` r
 childDist <- gssSimp %>%
   ggplot(aes(childs)) +
     geom_bar() +
@@ -474,7 +466,7 @@ print(childDist)
 
     ## Warning: Removed 3 rows containing non-finite values (stat_count).
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-2.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-1.png)
 
 ``` r
 # Opinion about Government Support for Children Graphs
@@ -490,7 +482,7 @@ suppChild  <- gssSimp %>%
 print(suppChild)
 ```
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-3.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-2.png)
 
 ``` r
 suppChildSimp <- gssSimp%>%
@@ -508,7 +500,7 @@ suppChildSimp <- gssSimp%>%
 print(suppChildSimp)
 ```
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-4.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-3.png)
 
 ``` r
 # Example of Missing Data Issues Graphs
@@ -529,7 +521,7 @@ print(gunLawMiss)
 
     ## Warning: Removed 5 rows containing non-finite values (stat_boxplot).
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-5.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-4.png)
 
 ``` r
 # Confidence in Education Graph  
@@ -550,7 +542,7 @@ confEduc <- gssSimp %>%
 print(confEduc)
 ```
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-6.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-5.png)
 
 ``` r
 # Confidence in Army by Political Views and by Children Graphs
@@ -571,7 +563,7 @@ armyPol <- gssSimp %>%
 print(armyPol)
 ```
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-7.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-6.png)
 
 ``` r
 armyChildren  <- gssSimp %>%
@@ -589,7 +581,7 @@ armyChildren  <- gssSimp %>%
 print(armyChildren)  
 ```
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-8.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-7.png)
 
 ``` r
 # Support for Gun Laws by Age Graphs
@@ -607,7 +599,7 @@ print(armyChildren)
 
     ## Warning: Removed 5 rows containing non-finite values (stat_density).
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-9.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-8.png)
 
 ``` r
 # Support for Gun Laws by Age, Facet Wrapped by Number of Children
@@ -628,7 +620,10 @@ print(gunAgeChild)
 
     ## Warning: Removed 5 rows containing non-finite values (stat_density).
 
-![](Assignment_7_Velez_files/figure-markdown_github/writeUp-10.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp-9.png)
+
+Final Write Up
+==============
 
 My exploration into the GSS data set involved focusing mainly on questions around children and military or weapons. I was curious as I began the analysis to explore what relationships or differences there might be between having children or multiple siblings, supporting education or child-focused issues, and support for the military or gun laws. My overall research question focuses on whether Americans with greater exposure to other’s they would want to protect (operationalized through siblings and children) will show greater or less support for armament (both personal and collective, as in through support for the army). Using this dataset, I believe that I could begin to ask the following research questions:
 
@@ -640,26 +635,26 @@ Within these research questions, I also want to explore what other factors (like
 
 As I began to explore these questions using the data, I found a couple of noteworthy issues and made a few choices. First of all, in relation to the number of siblings and children that respondents had, it seemed like the first had a few outliers, while the second most likely did not. As seen in the two graphs below, there are a few observations for number of siblings that are 20 or above, which seems like quite a stretch for a family. On the other hand, the most number of children reported was 8, which seems quite plausible.
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-1.png) [](Assignment_7_Velez_files/figure-markdown_github/writeUp-2.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp1-1.png)![](Assignment_7_Velez_files/figure-markdown_github/writeUp1-2.png)
 
 Next, I made a few decisions in regards to rethinking some of the variables because of what I noticed when I began to explore their distributions and relationships. The most frequent responses to number of children was 0 and 2, with a smattering of responses above two. For this reason I grouped the number of children response into three categories - no children, 1 to 2 children, and 3 and above. Similarly, I noticed that it was difficult to assess possible differences by political views with all of the different gradations that the data offers, so I grouped those into three categories (simply liberal, moderate, and conservative). Below, the benefit of this approach to looking at the data can be seen by trying to compare the distributions of response to what people think about the government’s support for children. The simplified approach loses some of the variance of the data, but also shows that there is not much difference in the distributions by the three levels of number of children (except for number of responses
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-3.png) [](Assignment_7_Velez_files/figure-markdown_github/writeUp-4.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp2-1.png)![](Assignment_7_Velez_files/figure-markdown_github/writeUp2-2.png)
 
 Something else that is interesting to note is that there seem to be in a number of variables an uneven distribution of missing values. This would take a bit more exploration, but one example is in the gun permit question. From the following graph, it is noticeable in the two boxplots for NA as the political view that the 25% for those who oppose is quite low, indicating that there are a number of young respondents who oppose gun permits and are missing political view, and that there are at least a couple of much older ones (pulling the mean higher).
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-5.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp3-1.png)
 
 Of the findings, I only began to explore the actual relationship between variables, but there are some interesting observations to note. First, while having no children or 1 or 2 children did not change the distribution in confidence in the education system, those who had more than 3 children displayed less prevalence of saying that they had hardly any confidence.
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-6.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp4-1.png)
 
 Also, I explored the distribution of confidence in the army by political views and by number of children. These bar charts demonstrate that moderates seem to be more split between “A Great Deal” and “Only Some”, whereas Liberals are a bit more even spread (though with minimal “Hardly Any” responses) and Conservatives weighted more toward “A Great Deal.” Though it is not quite as striking, there seems to be a similar difference between those with 1 to 2 children versus the other two groups in that proportionally, the number of responses of “Only Some” are a bit higher.
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-7.png) [](Assignment_7_Velez_files/figure-markdown_github/writeUp-8.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp5-1.png)![](Assignment_7_Velez_files/figure-markdown_github/writeUp5-2.png)
 
 Next, looking at those who oppose gun permits versus those who do not, we can see that the age of those who oppose them is actually a bit lower. When we then break down these results by the three categories of number of children, we can see that of those who have no children, younger respondents tend slightly more to oppose gun permits. There also, however, tends to be a bit more missingness also among younger respondents with no children (that is, whereas the distribution of missingness is about the same as the distribution of those who oppose and those who are in favor in the other children groups, it is higher for younger respondents and lower for middle aged in the no children group).
 
-[](Assignment_7_Velez_files/figure-markdown_github/writeUp-9.png) [](Assignment_7_Velez_files/figure-markdown_github/writeUp-10.png)
+![](Assignment_7_Velez_files/figure-markdown_github/writeUp6-1.png)![](Assignment_7_Velez_files/figure-markdown_github/writeUp6-2.png)
 
 All in all, I have not yet made any definitive connections between having children and support for education or armament, but there are some interesting associations that would be worth exploring more, such as through a regression model. It seems like age and number of children might be worth considering as an interaction term, while political views would also be important to consider in the model. The age exploratory findings are particularly striking because it seems in general like younger people tended to oppose gun permit laws more (which is counter to a popular narrative of younger people being more "progressive"), but would definitely take more exploration.

@@ -1,0 +1,353 @@
+---
+title: "EDA"
+author: "hyunku kwon"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(foreign)
+library(ggplot2)
+
+gs <- read_csv("gss2012.csv")%>%
+  select(partyid_3, educ_4,sex,race,polviews,wrkstat,age, happy, natspac,natenvir,natheal,natcity,natcrime,natdrug, nateduc,natrace,natarms,nataid,natfare,natarms,nataid, natfare,natroad,natsoc,natmass,natpark,natchld,natsci,natenrgy, social_trust, tolerance, authoritarianism, confinan, conbus,conclerg,coneduc,confed,conlabor,conpress,conmedic,contv,conjudge,consci, conlegis, conarmy,social_connect, premarsx, teensex, xmarsex, homosex)%>%
+  filter(!partyid_3 == "NA")
+```
+
+## Who divides?
+
+```{r}
+gs %>%
+  ggplot(mapping = aes(sex))+
+  geom_bar()+
+  facet_wrap(~partyid_3)
+  
+gs %>%
+  ggplot(mapping = aes(educ_4))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  ggplot(mapping = aes(polviews))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  ggplot(mapping = aes(wrkstat))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+ggplot(aes(partyid_3,age))+
+  geom_bar(stat = "summary", fun.y = "mean")
+
+gs %>%
+  ggplot(aes(happy))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  ggplot(aes(authoritarianism))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+```
+
+## divided over what?
+
+```{r}
+gs %>%
+  filter(!natspac == "NA")%>%
+  ggplot(aes(natspac))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natenvir == "NA")%>%
+  ggplot(aes(natenvir))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natheal == "NA")%>%
+  ggplot(aes(natheal))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natcity == "NA")%>%
+  ggplot(aes(natcity))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natcrime == "NA")%>%
+  ggplot(aes(natcrime))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natdrug == "NA")%>%
+  ggplot(aes(natdrug))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!nateduc == "NA")%>%
+  ggplot(aes(nateduc))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natrace == "NA")%>%
+  ggplot(aes(natrace))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natarms == "NA")%>%
+  ggplot(aes(natarms))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!nataid == "NA")%>%
+  ggplot(aes(nataid))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natfare == "NA")%>%
+  ggplot(aes(natfare))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natarms == "NA")%>%
+  ggplot(aes(natarms))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natroad == "NA")%>%
+  ggplot(aes(natroad))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natsoc == "NA")%>%
+  ggplot(aes(natsoc))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natmass == "NA")%>%
+  ggplot(aes(natmass))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natpark == "NA")%>%
+  ggplot(aes(natpark))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natchld == "NA")%>%
+  ggplot(aes(natchld))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natsci == "NA")%>%
+  ggplot(aes(natsci))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!natenrgy == "NA")%>%
+  ggplot(aes(natenrgy))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+```
+
+## trust, tolerance, and confidence
+```{r}
+gs %>%
+  filter(!social_trust == "NA")%>%
+  ggplot(aes(social_trust))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!social_connect == "NA")%>%
+  ggplot(aes(social_connect))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!tolerance == "NA")%>%
+  ggplot(aes(tolerance))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!confinan == "NA")%>%
+  ggplot(aes(confinan))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conbus == "NA")%>%
+  ggplot(aes(conbus))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conclerg == "NA")%>%
+  ggplot(aes(conclerg))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!coneduc == "NA")%>%
+  ggplot(aes(coneduc))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!confed == "NA")%>%
+  ggplot(aes(confed))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conlabor == "NA")%>%
+  ggplot(aes(conlabor))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conpress == "NA")%>%
+  ggplot(aes(conpress))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conmedic == "NA")%>%
+  ggplot(aes(conmedic))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!contv == "NA")%>%
+  ggplot(aes(contv))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conjudge == "NA")%>%
+  ggplot(aes(conjudge))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!coneduc == "NA")%>%
+  ggplot(aes(coneduc))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!consci == "NA")%>%
+  ggplot(aes(consci))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conlegis == "NA")%>%
+  ggplot(aes(conlegis))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!conarmy == "NA")%>%
+  ggplot(aes(conarmy))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+```
+
+## Sex and partisanship
+
+```{r}
+gs %>%
+  filter(!premarsx == "NA")%>%
+  ggplot(aes(premarsx))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!teensex == "NA")%>%
+  ggplot(aes(teensex))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!xmarsex == "NA")%>%
+  ggplot(aes(xmarsex))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+
+gs %>%
+  filter(!homosex == "NA")%>%
+  ggplot(aes(homosex))+
+  geom_bar()+
+  facet_wrap(~partyid_3)+
+  coord_flip()
+```

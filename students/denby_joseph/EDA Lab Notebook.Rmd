@@ -1,9 +1,8 @@
 ---
-title: "eda"
+title: "EDA Lab Notebook"
 author: "Jo Denby"
 date: '`r Sys.Date()`'
-output: pdf_document
-
+output: github_document
 ---
 ```{r, message=FALSE}
 library(tidyverse)
@@ -88,6 +87,7 @@ ggplot(data = hs_bach_gss, aes(income06)) +
 
 bach_gss <- gss_no_income_na[gss_no_income_na$degree=='Bachelor deg',]
 hs_gss <- gss_no_income_na[gss_no_income_na$degree=='HS',]
+inc_levels <- levels(gss_no_income_na$income06)
 
 ###This is a good one!
 ggplot() + 
@@ -130,7 +130,143 @@ ggplot(income_age_summary, aes(age, fct_reorder(income06, age))) +
 The first plot is better - reordering by income makes the plot harder to read. 
 For most income levels, the mean age is between 45 and 50 years. 
 
-MODE OF INCOME BY DEGREE
+
+On a different note, I'm interested in the BIBLE variable, which describes how respondents feel about the bible.
 
 
-LOOK AT BIBLE BELIEFS BY RACE / DEGREE
+Here's the distribution of beliefs about the bible.
+```{r}
+ggplot(data = gss, aes(x = gss$bible)) + 
+  geom_bar()
+```
+Now let's look at how this distribution compares across the DEGREE variable.
+```{r}
+
+gss %>%
+  count(bible, degree) %>%
+  ggplot(aes(bible, n, fill = degree)) +
+  geom_col(position = "fill")
+
+bible_stats <- gss %>%
+  filter(!is.na(gss$bible)) %>%
+  count(bible, degree, region)
+
+ggplot(bible_stats, aes(bible, n, fill = degree)) +
+  geom_col()
+
+ggplot(bible_stats, aes(degree, n, fill = bible)) +
+  geom_col()
+
+#good graph
+ggplot(bible_stats, aes(degree, n, fill = bible)) +
+  geom_col(position= "fill")
+```
+Education clearly seems to have an effect on one's beliefs about the bible - over 50% of respondents without a HS degree believe the bible to be "Word of God", while nearly 12.5% of graduate degree holders endorse the same belief.  
+
+How does this variable vary across geographical region?
+```{r}
+ggplot(gss, aes(gss$region)) + 
+  geom_bar()
+
+gss %>%
+  count(region, bible) %>%
+  ggplot(aes(region, n, fill = bible)) +
+  geom_col()
+
+ggplot(bible_stats, aes(region, n, fill = bible)) +
+  geom_col(position = "fill")
+
+```
+There appear to be stark regional differences in the distribution of beliefs about the bible. Most notably, around 33% of New Englanders consider the bible to be a book of fables, while over 50% of respondents from the West South Central US take it as the "Word of God".
+
+Are these regional differences correlative with degree?
+```{r}
+gss %>%
+  count(region, degree) %>%
+  ggplot(aes(region, n, fill = degree)) + 
+  geom_col(position = "fill")
+```
+It looks there are regional differences in degree attainment. What about just those with at most a HS degree?
+
+```{r}
+hs_stats <- gss %>%
+  group_by(region) %>%
+  summarise(hs_prop = length(degree[(degree=='HS' | degree=='<HS')]) / length(degree))
+
+ggplot(hs_stats, aes(region, hs_prop)) + 
+  geom_col()
+
+ggplot(hs_stats, aes(region, hs_prop)) + 
+  geom_col() + 
+  coord_flip() 
+
+#interesting plot
+ggplot(hs_stats, aes(fct_reorder(region, hs_prop), hs_prop)) + 
+  geom_col() + 
+  coord_flip()
+```
+Let's compare this plot with the proportion of people in each region who believe that the bible is the "Word of God."
+```{r}
+god_stats <- gss %>%
+  group_by(region) %>%
+  summarise(god_prop = length(bible[bible=='WORD OF GOD']) / length(bible))
+
+#another interesting plot
+ggplot(god_stats, aes(fct_reorder(region, god_prop), god_prop)) + 
+  geom_col() + 
+  coord_flip()
+```
+So the South Central regions have the both the highest proportions of people with at most a HS degree, as well as the highest proportions of people who believe that the bible is the "Word of God." Most regions are not significantly different when it comes to the proportion of HS degree holders, yet beliefs about the bible are highly affected by region.
+
+
+How about the relationship between age and number of children, mediated by region?
+
+```{r}
+ggplot(gss, aes(age, childs)) + 
+  geom_point()
+
+ggplot(gss, aes(age, childs)) + 
+  geom_jitter()
+
+child_stats <- gss %>%
+  filter(!is.na(childs)) %>%
+  group_by(childs) %>%
+  summarise(mean_age = mean(age, na.rm = TRUE))
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() 
+
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() +
+  coord_flip()
+```
+As one might expect, the average age tends to increase as the number of children increases. How might the relationship between these variables differ by region?
+
+```{r}
+child_stats <- gss %>%
+  filter(!is.na(childs)) %>%
+  group_by(childs, region) %>%
+  summarise(mean_age = mean(age, na.rm = TRUE))
+
+ggplot(child_stats, aes(mean_age, childs, color = region)) + 
+  geom_point()
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() +
+  facet_wrap(~region)
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() +
+  geom_smooth() + 
+  facet_wrap(~region)
+
+#good one
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() +
+  geom_smooth(method = 'lm') + 
+  facet_wrap(~region)
+
+  
+```
+The relationship between age and number of children does not appear to differ radically between regions. In all regions the relationship is captured relatively well by a linear model. There are slight differences in the slope / intercept for these models, but not enough that noise cannot serve as an explanation. 

@@ -10,25 +10,35 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Introduction:
+
 Using this general survey dataset and Exploratory Data Analysis techniques, I have the following goals. The first is to explore the relation between happiness and other factors. I intend to determine what are the personal characteristics or personal values that are closely related to people's happiness status. This might give us some insight about how is happiness formed and whether it is more dependent on inborn or environmentally-induced in a person's life. The second question is based on my curiosity about whether zodiac is nonsense or is it somewhat relevant to this person's other traits. I intend to explore the relation between an individual's zodiac sign and other personal characteristics. What is more, I will use the exploratory data analysis tools in R to discover potential interesting correlations in my data, and with these tools, I will also compare between different analytical tools(diagrams).
 
 A.	Relation among happiness and other variables
-From the EDA, I discovered the following variables are correlated with a person???s happiness status.  
+
+From the EDA, I discovered the following variables are correlated with a person's happiness status.  
 The people who are not very happy tend to come from lower Individual income, at the same time, there are fewer people who claim to be very happy and pretty happy from the same income levels as well.  After a certain level of income, there are not obvious difference among those people who claim to be pretty happy.  This is understandable, with more income and more wealth, people are less worried about their living and they can use their wealth to create meaningful things in life to make themselves satisfied. Also, they can just enjoy different things with their money.
-People with higher education tend to be more ???pretty happy???, and they tend to be less ???not too happy???. This makes sense in the way that people with higher education tend to know what they want and may become more successful in their career. They also may be less anxious and worried than those who have lower education status. After a certain level of education, the happiness status become more stable. 
-Interestingly, working status is not very related to happiness except for those who are laid off. People who get laid off tend to be much less likely to be very happy and they tend to be more ???not too happy???. This is understandable as they are worried about their living. While others who keep house and retired and temporary not working tend to be almost the same in responding to happiness status. This is a little different what I expect, I was thinking maybe retired and people who keep house may not be as happy as the others. 
-Unsurprisingly, separated people tend to be more ???not too happy??? compared to others. And married people to be more ???very happy??? than other people. 
+
+People with higher education tend to be more 'pretty happy', and they tend to be less 'not too happy'. This makes sense in the way that people with higher education tend to know what they want and may become more successful in their career. They also may be less anxious and worried than those who have lower education status. After a certain level of education, the happiness status become more stable. 
+
+Interestingly, working status is not very related to happiness except for those who are laid off. People who get laid off tend to be much less likely to be very happy and they tend to be more 'not too happy'. This is understandable as they are worried about their living. While others who keep house and retired and temporary not working tend to be almost the same in responding to happiness status. This is a little different what I expect, I was thinking maybe retired and people who keep house may not be as happy as the others. 
+Unsurprisingly, separated people tend to be more 'not too happy' compared to others. And married people to be more 'very happy' than other people. 
+
 Another interesting discover from the data is that both extreme liberal and extreme conservative tend to be more not too happy compared to others. This could be because they care too much about the politics so that they feel worried and unsatisfied most of the time. Among other groups, there are not many variety. 
-Surprisingly, Buddhist and islamist are two group of religions tend to have more people not too happy. This is interesting to explore why. People who believe in Hinduism tend to be more ???very happy???.  
+
+Surprisingly, Buddhist and islamist are two group of religions tend to have more people not too happy. This is interesting to explore why. People who believe in Hinduism tend to be more 'very happy'.  
+
 Sex, race, whether think themselves are very important, number of siblings, number of children tend not to correlate very much with happiness status. 
-In the aspect of multivariate exploration, from the violin plot, when grouping sex and age, we can see that men tend to be more ???pretty happy??? in their teenage time. Men and women both tend to be generally happy when they get after 30. This makes sense as people tend to be more mature and satisfied and successful in their life after this period.
+
+In the aspect of multivariate exploration, from the violin plot, when grouping sex and age, we can see that men tend to be more 'pretty happy' in their teenage time. Men and women both tend to be generally happy when they get after 30. This makes sense as people tend to be more mature and satisfied and successful in their life after this period.
 
 ggplot(gss, aes(x = happy, y = age, color = sex, fill = sex)) + 
     facet_wrap(~ sex) +
     geom_violin(fill="white", position = position_dodge(width=1)) +
     theme(axis.text.x = element_text(angle = 50, hjust = 1))
 
+
 Putting variables happiness, degree, religions together, we can see that people with high school degree are the most, and people who claim to be pretty happy are the most. Given the number base, people who have no religion tend to have higher degree (bachelors and graduate school degrees) compared to other groups. 
+
 
 gss %>% 
   ggplot(aes(happy, age, color = sex))+
@@ -40,11 +50,17 @@ gss %>%
        y = "age",
        color = "sex")
 
+
 B.	Explore the zodiac signs
-Interestingly, given the fact that Leo, Libra, and Aquarius have the most number in the survey, the fact that Taurus make the most percentage of those who earn over $150000 is very significant. This seems to be a further research possibility to determine whether there is another factor that???s involved. 
-Also, Sagittarius tend to have relatively high number of divorce number compared to other signs. And cancer tend to have more number of married people than other groups. This could bring further questions about whether zodiac signs really say about people???s personalities or is this more of a confirmation bias.
+
+Interestingly, given the fact that Leo, Libra, and Aquarius have the most number in the survey, the fact that Taurus make the most percentage of those who earn over $150000 is very significant. This seems to be a further research possibility to determine whether there is another factor that's involved. 
+
+Also, Sagittarius tend to have relatively high number of divorce number compared to other signs. And cancer tend to have more number of married people than other groups. This could bring further questions about whether zodiac signs really say about people's personalities or is this more of a confirmation bias.
+
 Among all the groups, Capricorn tend to have more no religions people compared to others. This is interesting given the number of people being researched on is not that many compared to some of the other group. 
-Happiness, education, working status seem to be non-relevant to people???s zodiac signs. 
+
+Happiness, education, working status seem to be non-relevant to people's zodiac signs. 
+
 When grouping together sex, age and zodiac signs, interestingly, there are fewer aquarius people aged over 70 compared to other groups. 
 
 ggplot(gss, aes(x = zodiac, y = age, color = sex, fill = sex)) + 

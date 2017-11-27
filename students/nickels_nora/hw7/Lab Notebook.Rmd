@@ -1,0 +1,49 @@
+---
+title: "Lab_Notebook"
+author: "Nora Nickels"
+date: "11/27/2017"
+output: github_document
+---
+
+
+```{r}
+
+# Install pacakges and import data. 
+# install.packages("poliscidata")
+data(gss, package = "poliscidata")
+
+# Convert data to tibble
+library(tidyverse)
+gss <- as_tibble(gss)
+
+```
+
+
+```{r EDA}
+
+# looking at age distribution
+gss %>% 
+  ggplot(aes(age)) +
+  geom_histogram()
+
+# adjusting binwidth
+gss %>% 
+  ggplot(aes(age)) +
+  geom_histogram(binwidth = 1)
+
+# playing around with density plot. doesn't tell me much.
+gss %>% 
+  ggplot(aes(age)) +
+  geom_density()
+
+# looking at age and race distribution
+gss %>%
+  ggplot(aes(age)) +
+    geom_histogram() +
+    facet_wrap(~ race)
+
+
+```
+
+
+

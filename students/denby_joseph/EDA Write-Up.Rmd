@@ -18,6 +18,7 @@ gss <- as_tibble(gss)
 
 In exploring this dataset, I discovered insights into the effect of education on income, the relationships between beliefs about the bible and both education and region, and the regional relationships between age and number of children. 
 
+#### Education and Income
 To start, I was initially interested in what this dataset might reveal about the effects of education on income. I expected to find that holders of higher degrees (i.e., more education) would populate a greater income distribution; specifically, I was interested in comparing the income distributions for holders of Bachelor's degrees and for holders of High School diplomas. To explore this hypothesis, I created two bar plots that allow for side-by-side comparison of the two distributions.
 
 ```{r}
@@ -41,7 +42,9 @@ ggplot() +
 With this plot, a few insights become instantly noticeable. For one, both distributions are left-skewed, suggesting that income is not normally distributed, with a big tail of respondents earning relatively little. However, this finding may be a function of the survey itself - the income categories top out at "$150,000 +", so it is not clear how the distribution looks above that level at a finer grain.  
 Most notable are the differences in the individual distributions. For one, over 20% of respondents with a Bachelor's degree earn at least \$150,000, whereas less than 5% of respondents with only a high school diploma are placed within that category. Moreover, the HS distribution appears much more spread, with the highest peak being nearly 10% of respondents earning between \$40,000 and \$50,000. The Bachelor's degree distribution on the other hand is heavily concentrated at the \$40,000 and up categories, indicating that respondents with a college degree generally earn more.  
 
+#### Bible Beliefs, Education, and Region
 Next, I was interested in exploring the distribution of beliefs about the bible; specifically, I was curious to investigate how the distribution might change according to education and region. I expected to find that respondents with higher levels of education would be less likely to believe that the bible is literally true ("WORD OF GOD") and instead take it to be allegory ("BOOK OF FABLES"). To investigate this hypothesis, I created a stacked column plot to illustrate the conditional distributions.  
+
 ```{r}
 bible_stats <- gss %>%
   filter(!is.na(gss$bible)) %>%
@@ -75,6 +78,7 @@ ggplot(god_stats, aes(fct_reorder(region, god_prop), god_prop)) +
 
 The data suggest that my hypothesis is correct; Southern states are at least 15 to 20 points higher in terms of the percentage of respondents with the belief that the bible is the "Word of God."
 
+#### Age and Children
 Finally, I was interested to explore the relationship between age and number of children, aggregated across and within regions. Using the dataset, I computed the mean age for each number of children that appeared in the data and plotted the results using a scatterplot. I expected to find that people with no children tend to be younger, while those with more children tend to be older, with an asymptote around 55 years or so.
 ```{r}
 child_stats <- gss %>%

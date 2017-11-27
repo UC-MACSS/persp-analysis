@@ -16,6 +16,7 @@ gss <- as_tibble(gss)
 ```
 
 I'm first interested in the distribution of education. 
+
 ```{r}
 ggplot(gss, aes(x = gss$educ)) +
   geom_bar()
@@ -23,9 +24,11 @@ ggplot(gss, aes(x = gss$educ)) +
 ggplot(gss, aes(x=gss$degree)) + 
   geom_bar()
 ```
+
 There are three peaks - a large portion of people completed high school (and no more), 2 years of college (i.e,. an associates degree), and 4 years of college (i.e., a bachelor's degree).  
 
 Does degree correlate with income in any way?
+
 ```{r}
 ggplot(data = gss, aes(x=gss$degree, y = gss$income06)) + 
   geom_jitter()
@@ -35,6 +38,7 @@ ggplot(data = gss, aes(income06)) +
   facet_wrap(~ degree)
 
 ```
+
 A greater number of respondents have solely HS degrees, so it is hard to compare across degrees. However, it appears that highest degree has a relationship with income.
 
 ```{r}
@@ -43,6 +47,7 @@ ggplot(data = gss, aes(income06)) +
   facet_wrap(~ degree)
 
 ```
+
 Let's investigate people with just HS degrees.
 
 ```{r}
@@ -54,7 +59,9 @@ ggplot(data = gss[gss$degree=='HS',], aes(income06)) +
   geom_bar(aes(y=(..count..)/sum(..count..)))
 
 ```
+
 These two plots include NA values - let's try to drop them.
+
 ```{r}
 gss_no_income_na <- gss[!is.na(gss$income06),]
 
@@ -73,6 +80,7 @@ ggplot(data = gss_no_income_na[gss_no_income_na$degree=='HS',], aes(income06)) +
   ggtitle('Income Distribution of People with Solely HS Degree')
 
 ```
+
 The income distribution of HS degree holders is left skewed, with a center around the \$35,000 to \$50,000 range.
 
 Let's compare distributions of HS degree holders and Bachelor's degree holders.
@@ -102,6 +110,7 @@ ggplot() +
                    labels= c('<1','1','3','4','5','6','7','8','10','12.5','15','17.5','20','22.5','25','30','35','40','50','60','75','90','110','130','150+')) 
 
 ```
+
 By comparing the two distributions, a few insights are gleaned:
 - Both distributions are left-skewed.
 - The proportion of Bachelor's degree holders that make >= $150,000 is much greater than that of HS degree holders.
@@ -109,12 +118,15 @@ By comparing the two distributions, a few insights are gleaned:
 
 
 Now let's look at income distribution across ages. This is the age distribution of respondents.
+
 ```{r}
 ggplot(data = gss_no_income_na,
        aes(age)) + 
   geom_histogram()
 ```
+
 Need to eliminate the NA values and investigate relationship between age and income.
+
 ```{r}
 income_age_summary <- gss_no_income_na %>%
   group_by(income06) %>%
@@ -127,6 +139,7 @@ ggplot(income_age_summary, aes(age, fct_reorder(income06, age))) +
   geom_point()
 
 ```
+
 The first plot is better - reordering by income makes the plot harder to read. 
 For most income levels, the mean age is between 45 and 50 years. 
 
@@ -135,11 +148,14 @@ On a different note, I'm interested in the BIBLE variable, which describes how r
 
 
 Here's the distribution of beliefs about the bible.
+
 ```{r}
 ggplot(data = gss, aes(x = gss$bible)) + 
   geom_bar()
 ```
+
 Now let's look at how this distribution compares across the DEGREE variable.
+
 ```{r}
 
 gss %>%
@@ -161,9 +177,11 @@ ggplot(bible_stats, aes(degree, n, fill = bible)) +
 ggplot(bible_stats, aes(degree, n, fill = bible)) +
   geom_col(position= "fill")
 ```
+
 Education clearly seems to have an effect on one's beliefs about the bible - over 50% of respondents without a HS degree believe the bible to be "Word of God", while nearly 12.5% of graduate degree holders endorse the same belief.  
 
 How does this variable vary across geographical region?
+
 ```{r}
 ggplot(gss, aes(gss$region)) + 
   geom_bar()
@@ -177,15 +195,18 @@ ggplot(bible_stats, aes(region, n, fill = bible)) +
   geom_col(position = "fill")
 
 ```
+
 There appear to be stark regional differences in the distribution of beliefs about the bible. Most notably, around 33% of New Englanders consider the bible to be a book of fables, while over 50% of respondents from the West South Central US take it as the "Word of God".
 
 Are these regional differences correlative with degree?
+
 ```{r}
 gss %>%
   count(region, degree) %>%
   ggplot(aes(region, n, fill = degree)) + 
   geom_col(position = "fill")
 ```
+
 It looks there are regional differences in degree attainment. What about just those with at most a HS degree?
 
 ```{r}
@@ -205,7 +226,9 @@ ggplot(hs_stats, aes(fct_reorder(region, hs_prop), hs_prop)) +
   geom_col() + 
   coord_flip()
 ```
+
 Let's compare this plot with the proportion of people in each region who believe that the bible is the "Word of God."
+
 ```{r}
 god_stats <- gss %>%
   group_by(region) %>%
@@ -216,6 +239,7 @@ ggplot(god_stats, aes(fct_reorder(region, god_prop), god_prop)) +
   geom_col() + 
   coord_flip()
 ```
+
 So the South Central regions have the both the highest proportions of people with at most a HS degree, as well as the highest proportions of people who believe that the bible is the "Word of God." Most regions are not significantly different when it comes to the proportion of HS degree holders, yet beliefs about the bible are highly affected by region.
 
 
@@ -241,6 +265,7 @@ ggplot(child_stats, aes(mean_age, childs)) +
   geom_point() +
   coord_flip()
 ```
+
 As one might expect, the average age tends to increase as the number of children increases. How might the relationship between these variables differ by region?
 
 ```{r}
@@ -269,4 +294,5 @@ ggplot(child_stats, aes(mean_age, childs)) +
 
   
 ```
+
 The relationship between age and number of children does not appear to differ radically between regions. In all regions the relationship is captured relatively well by a linear model. There are slight differences in the slope / intercept for these models, but not enough that noise cannot serve as an explanation. 

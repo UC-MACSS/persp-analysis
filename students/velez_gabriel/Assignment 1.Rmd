@@ -1,0 +1,58 @@
+---
+title: "Assignment 1"
+author: "Gabriel Velez"
+date: "October 16, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+*General research question:* Can social media trends predict voting outcomes (especially when the results seem to go counter to expectations ahead of the vote)?
+
+*Specific research question (application to research project):* Could tweeting trends have predicted the surprising “no” vote in the Colombian plebiscite on the peace accords with the Revolutionary Armed Forces of Colombia in October, 2016?
+
+
+In 2016, after four years of negotiations, the Colombian government agreed to comprehensive peace accords with the Revolutionary Armed Forces of Colombia to end over five decades of internal warfare.  The government announced that it would put the accords to a popular vote, and in the lead up to the October date, many pollsters and pundits predicted that the “yes” side would win handily.  When the votes were counted, however, the Colombian people rejected the accords by a slim 50.02% to 49.98% margin.  Colombian media and the general populace have struggled since the plebiscite to understand both why the vote turned out as it did and why the predictions were so different than the result.  For this project, I propose to ask: could differences in quantity and affective trends in tweets about either side during the three months before the plebiscite have predicted the final vote? 
+
+
+The research design that I would use to explore this question would be measuring. While I would first count by day the number of tweets related to the peace accords and/or plebiscite and the percentage of positive to negative affect in these tweets, I would then explore trends in these numbers. The first step would be to scrape tweets coming out of Colombia in the three months prior to the plebiscite.   Then I would select tweets with keywords that were related to the peace accords or the October vote. I would also include retweets or responses, though I would place those in a separate category in order to explore changes and sentiment of them separately.  A first level of analysis would simply be to measure the number of these tweets per day by users tweeting from Colombia.  I would expect these numbers to have significant variance by day (e.g., in response to a public apology by the FARC in the town of Bojaya, one could expect a spike in tweets that day related to the peace process), and so my measurement approach would be to explore trends over time.  I would also explore if numbers of retweets changed over this time frame.
+
+
+Next, I would use sentiment analysis to divide tweets for each day into those with positive and negative valence.  Similar to the first part of the analysis, I would then explore trends in each of these categories by day and by week across the 12-13 weeks.  I conduct this analysis by day and by week in order to see if the variations in day (as linked to current events--see above) would obscure more general trends.  I would also use ANOVA tests to see if the ratio of positive to negative tweets related to the peace accords/plebiscite significantly varied by week. Finally, I would also run these analysis on retweets and responses to see if there were significant trends or associations in these as well.
+My analysis plan involves measurement instead of forecasting, counting, or simulated experimentation.  By adding the element of change over time, I am better able to answer the question of whether the surprising plebiscite results could have been predicted by social media trends.  Specifically, counting tweets would provide raw numbers, but change over time may reveal trends.  Significant differences in the ratio by week may demonstrate significant changes in activity or involvement by one side at varying timepoints (e.g. perhaps the “yes” side had greater activity in comparison to the “no” side farther from the vote).  I take advantage of the three main benefits of big data for this analysis: 
+
+
+1. there is significant twitter activity in Colombia (and this was especially true in relation to the plebiscite ) and so the number of observations allow for this detailed analysis to detect differences and compare; 
+
+
+2. as one of the benefits of social media, Twitter was constantly active during the three months (though as mentioned above, there would be ebbs and flows related to day of the week, particular events, etc.); 
+
+
+3. the social media activity related to the plebiscite would have been predominantly focused on expressing opinions about the vote, rather than with an understanding that these tweets would retroactively be measured and studied.
+
+
+At the same time as this approach harnesses some of the benefits of big data related to social media, there are also significant concerns related to using twitter, particularly in this case.  The primary issues faced are that the data is dirty, that it is incomplete, and that it is non-representative.
+
+
+Using social media data and conducting sentiment analysis can face considerable obstacles due to the dirty nature of the data and the assumptions that must take place to parse through it.  For example, though my plan would be to use keywords to identify tweets that would be pertinent to this analysis.  Nevertheless, such an approach has two significant challenges.  First, some of these keywords may be used in a context unrelated to the accords or plebiscite.  The broad applicability and ambiguity of a term like “peace” means that while in the sociopolitical context of the moment it would most likely refer to the peace process or accords, it could also be referring to a wide range of unrelated situations.  Similarly, there could be tweets that would be pertinent to the analysis that might be missed, either due to the user employing abbreviations or not directly invoking these keywords.  Second, though sentiment analysis allows me to examine trends in positive and negative affect in the tweets, it is difficult to be sure about the underlying meaning of these tweets.  For instance, a tweet using a word like “against” could be referring either to “against” the accords, or could also be a tweet that mentions the accords and then also says that they are “against” Alvaro Uribe (the most prominent leader of the “no” campaign).  This issue seems to me to be the most problematic concern, and I would consider addressing this by flagging tweets that have elements that are connected to both the accords and the “no” campaign (i.e., through identifying those that also name key figures, moments, or terms related to the “no” side like Alvaro Uribe’s name).  These tweets could then be looked over more closely to make sure they fit the appropriate category.
+
+
+Additionally, the data that I would be using also exemplifies the issues of incompleteness with big data.  In this case, it would be problematic that I would be unable to clearly link data with certain demographics, specifically those related to voting, political participation, or origin (i.e., organization, individual, or repeat individual).  Since I am interested in exploring how social media usage may have predicted the result of the plebiscite, it would be useful to know if the accounts are linked to organizations, individuals,  potential voters, discrete individuals (i.e., if a single individual has just one account and does not have multiple twitter handles or also manages multiple ones for organizations). Furthermore, I am not linking across social media, so I do not know what these tweeters behaviors or social media usage is like on other platforms.
+
+
+Finally, another substantial concern would be the non-representative nature of the data.  Social media data does not represent the entire populace or even the voting electorate.  Therefore, in analyzing tweets, one cannot assess the general opinion of the Colombian people or the voting electorate.  This would preclude addressing certain research questions with this method. For instance, during the actual three-month stretch, it would not have been appropriate to use real-time analysis of tweets in this way to predict the election results.  Nevertheless, I am using more of an explanatory approach after, and I believe that my research question fits the approach despite the non-representative obstacle.  I am asking if trends in social media (in this case tweets) could have revealed trends in opinion that may have related to surprising results.  That is, if trends in the positive and negative emotion connected to tweets demonstrated (or perhaps caused, though my approach would identify a correlation and not causal relationship) some sort of shift or change closer to the actual vote.
+
+
+As a final note, I do not think drifting would be as prominent of a concern for my research design.  I will note that while the short three-month time span may make behavioral drift  and system drift unlikely, it is possible that there was some population drift (especially related to campaign strategies by the “no” and “yes” campaigns).  I could try to address this by also exploring how many of the tweets closer to the vote were related to new users and if those tweets had a significantly different positive to negative ratio than the others.
+
+
+## Notes
+1. I chose three months because this was the time between the signing of the accords and the vote.
+
+2. See the following articles for social media use in relation to the plebiscite: [The Guardian](https://www.theguardian.com/world/2016/oct/07/peace-deal-rejection-returns-alvaro-uribe-to-political-limelight); [The New Yorker](https://www.newyorker.com/news/daily-comment/how-colombias-voters-rejected-peace); [Christian Science Monitor](https://www.csmonitor.com/World/Americas/2016/0623/Colombia-on-the-brink-of-peace-Why-is-it-such-a-hard-sell-to-citizens)
+
+3. Though twitter account data may include whether a twitter handle is associated with n individual or organization, the authenticity and the accuracy of this information may not be as clear.
+
+4. It is possible that as the election became closer, there was a shift in how people used twitter in relation to the vote, but again, I think the brief timespan probably precludes this from being a concern.

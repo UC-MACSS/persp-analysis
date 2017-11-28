@@ -1,0 +1,47 @@
+---
+title: ""
+author: "Ling Dai"
+date: "October 16, 2017"
+output: pdf_document
+geometry: margin=1in
+fontsize: 12pt
+spacing: double
+---
+
+###**Adjusts in Corporate Investment in Intellectual Property (IP) Assets as a Response to Changes in Financial Markets**###
+#####Author: Ling Dai#####  
+
+**Research Problem Statement**  
+The proposed project examines how corporations adjust their investment on intellectual property (IP) assets as a response to changes in financial markets. It is a well established fact that intellectual property assets can generate ¡°excess profits¡± to their owners, causing relatively high levels of returns compared to other assets classes. [^1] Besides its ability to generate profit for businesses, IP assets also share some other characteristics of investments. For example, generating new intellectual properties require substantial investment in research and development, and IP assets, just like stocks and bonds, can be purchased or sold among companies. As a result, more people are treating IP assets as an alternative investment for corporations. While there are extensive researches on the economic behavior of corporations when it comes to other types of investment types, their investment on IP assets are relatively less studied. Our hypothesis is that, if corporations treat IP assets as an investment, the are highly likely to adjust their investment on IP assets when there is a change in financial markets. Therefore, in this research we hope to explain changes in IP assets investments of corporations in terms of fluctuations in financial markets. 
+
+**Background**  
+2016 was a record year for International Patent Applications. While the United States maintained its leading position with 56,595 filed PCT applications, China recorded extraordinary growth (+44.7 %) and achieved a total number of 43,168 filed PCT applications. [^2] As a matter of fact, intellectual properties have become increasingly important in the corporate world: In 1975, only 17 percent of the market value of the S&P 500 companies was represented by intangible assets. In contrast, in 2015, intangible assets represented 87 percent of the market value of the S&P 500. We believe that much of this value represents legally protected IP assets, including patents, trademarks, copyright, and trade secrets, among others. Financially significant IP-based transactions also become very common as a result of the high value of IP today. [^1]
+
+**Research Design and Methodology**  
+
+1.	**Hypothesis:**  
+Because corporations treat IP as an alternative to traditional investments, such as stocks and bonds, fluctuation in the financial market may thus influence their investment in IP assets. Specifically, corporate investment in IP assets can be influenced by financial markets in at least two ways. First, the performance of financial markets can influence the cash flow of corporations, thus limiting their overall ability to invest and reducing their investment in IP assets. Second, because values of certain types of intellectual properties are less subject to changes in the financial market, some corporations may increase their investment in IP assets in hope of minimizing risks and preventing potential losses when the financial markets show worrying signs.  
+2.	**Data collection:**  
+For the purpose of this research, we need to collect two types of data: data on the performance of financial markets, and data on IP assets investments and transactions.  
+    i)	Financial data:  
+The data of financial markets are easily accessible on online platforms such as Google Finance. Moreover, there are many financial indices that are readily usable in our research, such as Dow Jones Industrial Average and S&P 500.
+    ii)	IP data:  
+There are several IP databases that can provide crucial information to our research. These databases are maintained by both international and governmental organizations, such as World Intellectual Property Organization (WIPO) and the United States Patent and Trademark Office (USPTO)  
+3.	**Data Analysis:**  
+    i)  Data preparation: While financial data on public platforms are usually recorded on a daily basis, a meaningful context for assessing the influence of financial markets on IP asset investment would require a longer time period. Therefore, we want to average the financial performance indices on a monthly/yearly period during data preparation. During this step, we should focus more on the relatively rare events when there were major fluctuations in the financial market, (For example, the 2007-08 global financial crisis) and try to observe if there was also a major change in IP assets applications/transactions.
+    ii)  Data visualization: Next, we will perform a longitudinal analysis that compares intellectual property applications/transactions with the financial indices through visualization. Visualizing the data does not only help identify obvious trends and patterns, but also help us select potential statistical models to test in the next step.
+    iii)  Model selection and testing:
+To test our hypothesis using a rigorous statistical approach, we will select multiple models and assess their relative accuracies. For example, one intuitive model is a multiple linear regression model with the annual number of IP applications by corporations as the response, and numerous financial indices (Dow Jones Industrial Average and S&P 500) as predictors. Besides least squares methods, we will also test ridge regression models, forward/backward stepwise selection models, multiple logistic regression models, polynomial regression models, and smoothing spline models. Once we identify a model with relatively high accuracy, we can further test the model with a subcateogry of the IP data (For example, IP assets related to a specific industry) or with a specific region (For example, IP assets applications and transactions based in California).
+
+The proposed project takes advantages of several aspects of big data: First, both financial markets and intellectual properties have an extraordinary amount of data available over an extended period of time. The fact that these data are collected over decades greatly facilitates our research, as large fluctuations in financial markets are relatively rare events.  
+
+However, there are also some problems associated with the data. First, the fact that these data were gathered over a long period of time raises concerns on the systematic changes of financial markets and corporate IP investments. For example, both the number and the value of IP assets have increased dramatically over the past decades, making it relatively hard to draw effective conclusions from longitudinal comparisons or to assess the change in IP investment that can be explained by fluctuations in financial markets. In fact, systematic drifts also occurred in financial markets. While traditional investments such as stocks and bonds have been on the market for a very long time, investment strategies of corporations had some major changes in the past decades due to the increasing popularity of private equities and hedge funds. Taking these facts into consideration, instead of using all the available data, we may select data over a certain period of time, where the growth of the entire IP asset market is relatively stable, and add a penalty term to account for the changes in IP assets over time.
+
+Another potential problem of our data sources is that while most IP databases record the transactions of IP assets, these transaction records often do not include the monetary amount of the transaction. As a matter of fact, IP databases also do not have information on the amount of value invested to generate a new IP asset or the length of research and development period, which are all crucial information to our research. Although we can assume that the average value of IP assets stay relatively consistent over time and use the number of IP assets as a substitution for the total value of IP assets, it may inevitably cause some inaccuracies in our models.
+
+**Significances**  
+By examining how corporations adjust their investment in intellectual properties in response to changing financial markets, we can not only gain insights into the properties of IP assets as an investment, but also develop potential investment strategies on IP assets that help equities and corporations maximize their profits. 
+
+**References Cited**  
+[^1]:	*Record Year for International Patent Applications in 2016; Strong Demand Also for Trademark and Industrial Design Protection*, World Intellectual Property Organization (WIPO). <http://www.wipo.int/pressroom/en/articles/2017/article_0002.html>  
+[^2]:	*Why Private Equity and Venture Capital Firms Should Care About Intellectual Property Assets*, STOUT advisory, September 01, 2012. <https://www.stoutadvisory.com/insights/article/why-private-equity-and-venture-capital-firms-should-care-about-intellectual-property-assets>

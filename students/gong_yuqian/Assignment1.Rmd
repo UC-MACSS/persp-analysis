@@ -1,0 +1,71 @@
+---
+title: "Assignment 1"
+output: html_document
+---
+
+The effect of racial bias on housing demand in Chicago’ s Airbnb and how positive ratings can mitigate it
+Yuqian Gong
+Introduction and question of interest
+The business models of “shared economy” are becoming increasingly popular during recent years. From Uber’s shared transportation services to Airbnb’s shared housing services, these nascent platforms have made it possible for everyone to make revenues by taking great use of their idle room or resources without much investment as traditional business models. In a shared economy, trust between the supply side and demand side is crucial. Intended to get hosts and guests familiar with each other, Airbnb developed the functions to encourage hosts and guests to post their pictures and update their profiles. Interests have arisen among social media researchers regarding how disclosure of more personal information affects the booking demands or acceptance decisions by the guests or hosts, especially when they can tell the race of the other side through pictures. 
+
+An early research published by Harvard Business School studied the racial bias effects on hosts’ earnings in New York. The results showed that non-black hosts earn approximately 12% more than black hosts for the equivalent renting qualities (Edelman and Luca (2014))
+. This paper concludes that seeing a host’s picture actually contributes to the racial discrimination on Airbnb and therefore there is no need for a guest to see a host’s picture before their offline interactions. 
+
+Like New York, Chicago is also a racially segregated city. The research interest in this proposal is to investigate whether racial bias causes lower demand for black hosts’ accommodations in Chicago Airbnb given other factors being the same, and how it is compared with the discrimination in New York. Besides, this research is also interested in finding out if guests’ positive online ratings or reviews, could help mitigate the effects of racial bias. In other words, for high-rated Airbnb accommodations, the demand and valuation gaps for non-black(white in this case) and black hosts due to racial bias is smaller than those of low-rated accommodations. 
+
+Research Plan
+Our research plan is to measure the causal relations between being a black host or not and the demand for one’s house given other factors fixed. While it is hard to measure how much the demand is for a specific accommodation, we can use the variable renting price to measure this construct because price and demand are highly related and high demand usually drive up prices. To construct a complete model, we need to further decide what other factors contribute to demand or valuation for one accommodation. From a potential guest’s perspective, what is shown on the listing page will become his or her evaluating measures, including variables such as location rating, check-in rating, communication rating, accuracy rating, picture qualities, room size, how many people will share the apartment with you, picture qualities, amenity qualities and also the race of the host. Picture qualities and amenity qualities will be quantified based on a prior research standard. The race of the host (being black or white) can be set as a dummy variable in our model.
+
+All the variables necessary to build a model can be obtained from Inside Airbnb, where they provide recent and detailed data for over 5000 Airbnb listings in Chicago. For each listing, different ratings, number of accommodates and other information can be easily accessed. They also provide links to room and host pictures. During the research, each host will be evaluated through their pictures as black or non-black person and those that couldn’t be determined will not be an observation in our model. After finishing filtering the data and quantifying certain variables, a model will be built to find causality between the dependent variable price and all independent variables including the hosts’ race, which is of interest for further analysis and interpretation by controlling other independent variables such as ratings. 
+
+Besides, to study whether previous guests’ positive ratings or reviews could help counteract the negative racial bias effects, which means to lower the earning gaps between black and non-black hosts, one way is to build models under different rating categories and compare the racial bias effect in these models. The first step is to bundle various kinds of ratings including accuracy rating, communication rating and so on into one variable called average guest rating. Then categorize our observational data into different groups based on their guest rating. We find causal relations between being a black a host and renting prices under these various guest rating groups and compare their difference. If there is a trend that for lower guest rating groups, the negative effects of race bias are higher, then we can possibly conclude that maybe improving guests’ staying experiences helps reduce their race bias and improve the earning levels for black hosts.
+
+Advantages of big data in this case
+
+Bigness
+The bigness of data from Inside Airbnb made it possible to study a subset of all the listings in Chicago ——those listings whose hosts can be determined as black or white. 
+Besides, the negative effect of race bias can be very small that research results from small data sets don’t deliver any useful insights. Big data sets allow us to detect even very small revenue differences between non-black and black hosts.
+
+Non-reactiveness
+The subjects in this research who are either potential guests or hosts are unaware that we study the data they generate, so we can observe their natural online behaviors without worrying that they will change their behaviors. Therefore, we can maintain the validity of the data sets.
+
+Weaknesses of big data in this case and plans to overcome them
+Incompleteness:
+The data set in our research also suffers from the problem that the demographics of guests who booked each accommodation is unknown and we cannot measure how the degree of each subgroup’s race bias affect their housing demand. It could be possible that black guests hold much less race bias towards black hosts than white people, but in this case, we are not able to test these hypothesis without information on guests’ demographics. Instead, we measure the average effect of guests’ racial bias on housing demand.
+
+Drifting:
+The specific composition of hosts may change over time, making it hard to track the changing effects on the same group of subjects over time. One way to overcome this problem is to select a group of hosts as our subjects who have been on Airbnb for a longer time than our research period. Then we will study how the effects racial bias change on the same group over time without worrying that different groups of subjects will bring in other unmeasurable influential factors on renting prices.
+
+Algorithmically confounded 
+It is reasonable to suspect that the algorithms adopted by Airbnb to display listings in a certain order will also affect the demand for each accommodation, which in this case is the renting price. For instance, Airbnb tries to prioritize and promote some listings over others to raise their renting prices in their algorithm for reasons we cannot measure. It could be the case that the longer the host has been on Airbnb, the more likely that his or her listings will be shown in front others. This influence is not incorporated in our model. Besides, the changing algorithms exert more unpredictable influence on renting prices. We can only assume that algorithms have very limited effect on demand or prices unless we are able to find the ranking principles of listings. We will try to contact Airbnb for their permission to learn their ranking algorithms.
+
+To restate, assumption is made that renting prices could be a good construct to measure demand for each accommodation. Besides, all factors that determine the renting prices are captured in our model and we can accurately separate the effects of racial bias. In later research, assumptions will be tested and modified as we improve our research model. 
+
+References
+Edelman, B. G. and M. Luca (2014). Digital discrimination: The case of airbnb. com.
+Harvard Business School NOM Unit Working Paper (14-054).
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

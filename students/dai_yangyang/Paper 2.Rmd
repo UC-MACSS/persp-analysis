@@ -1,0 +1,40 @@
+---
+title: "Paper 2"
+output: html_document
+---
+
+Proposing a survey study
+Name: Yangyang Dai
+
+Introduction:
+The psychological state of students is of great importance to the society and have become the attention of many researches today. In specific, many ongoing researches focus on the positive effects and negative effects of the cartoons and anime on students’ mental state. Sharing the similar research interest, this paper intends to discover how does watching cartoon and anime influence the psychological state of college students.  A digitally enhanced survey method will be used combining big data sources such as text messages and Facebook posts with carefully-designed traditional survey method.  
+Method and Design:
+The goal of this research method is to create a system to measure the correlation between watching cartoons and the colleges’ students’ psychological state that combined the completeness of a census with the flexibility and frequency of a survey.
+To start, I aim to partner with big messages apps such as Facebook’s ‘Messengers’ and the text app ‘Messages’, which would provide me with millions of anonymized text data from 2011 to 2017 (2011 is the year Facebook Messengers was created). 
+To conduct a good research, we need to design the asking survey to be tailored to this particular situation about college students and their cartoon watching behaviors. The two prerequisites are: a digital trace dataset that is wide but thin (that is, it has many people but not the information that you need about each persons), and a survey that is narrow but thick (that is, it has only a few people, but it has the information that you need about those people). Then, there are two steps. First, for the people in both data sources, build a machine learning model that uses digital trace data to predict survey answers. Next, use that machine learning model to impute the survey answers of everyone in the digital trace data. Thus, in this project, we will extract the data of all the college students as a whole and look for digital trace data from them that might be used to predict their answer.
+
+Therefore, the next step is to gather a sample of about a thousand mobile phone and Facebook users. The researchers will explain the goals of the project to the participants, ask for their consent to link the survey responses to the text records, and then ask them a series of questions to measure their psychological state. The sample survey questions will be, for example, “Do you like the weather today?”, “Do you feel satisfied today?” and “Did you enjoy the company with your friends today?” All participants in the survey will be compensated financially. 
+The following would be the two steps that we learned from Blumenstock’s research in class. First, in the feature engineering step, for everyone that is interviewed, my researchers will convert the text record into a set of characteristics about this student.  These characteristics are the “features” and also as “variables.” For example, for each person, I will record his or her total number of days with activity, the number of distinct people a person has been in contact with, the amount of money spent on games or watching cartoons, and so on. 
+Next, in the supervised learning step, my researchers will build a statistical model to predict the survey response for each person based on their features. Specifically, a variety of statistical or machine learning approaches will be used. 
+The result will be different psychological state under different groups of people, or alternatively speaking, different ‘variables’ or different ‘features’.  
+Discussion:
+Digitally enhanced asking vs. standard survey 
+This research design is to combine the survey data with digital trace data. Compared to only using standard survey data, the amplified asking estimates are more timely, substantially cheaper, and more granular. But, on the other hand, there is not a strong theoretical basis for this kind of amplified asking. That is, this one example does not show when it will work and when it won’t. Further, the amplified asking approach does not yet have good ways to quantify uncertainty around its estimates. 
+Digitally enhanced asking vs. Observational study
+Observational study solely depends on big data researches, therefore it brings real problems such as the accuracy, completeness, and accessibility of many big data sources. Although they are also part of the same design problems composed within amplified asking method, the digitally-enhanced method can avoid potential problems such as missing data, misrepresented data or incomplete data with the help of digital or face-to-face survey. In real world, some of the most important social outcomes and predictors are internal states, such as emotions, knowledge, expectations, and opinions. Internal states exist only inside people’s heads, and sometimes the best way to learn about internal states is to ask. In our case, it is better to directly ask people about their mood than just collecting text messages and analyze simple words related to emotions. 
+Also, the other common problem about lying seems very trivial in this project, because it makes little sense for college students to lie about their mood to unknown researchers. Besides, this method tends to provide other aspects to the research. For example, if we want to learn more about the difference between mere digital communication and face-to-face communication, we can collect data and separate the impact of communication through digital platform to communication through face-to-face surveys. And we can use this as a dummy variable to predict our model later. 
+Potential Difficulties:
+Firstly, most digital trace data is inaccessible to researchers. Besides, many companies such as Facebooks and Messages might be reluctant to share their data because it is private. And more importantly, their customers would not be willing to share their private data with researchers. Therefore, in this research, the researchers should take careful steps to anonymize the data and avoid being seen by other third parties.
+In the feature engineering step, it requires a lot of knowledge of the research setting. For example, if it is important to distinguish between people who are inherited cartoon watcher or not. To be specific, for instance, if they talk a lot about cartoons with their parents or their parents like cartoons a lot might indicate an early cartoon influence in his family, this should be categorized differently from those who do not have this early influence. And also, people with different nationalities might also be categorized in different ‘features’. A researcher with little understanding of background of different people might not include this feature, and then the predictive performance of the model will suffer.
+Reference:
+Blumenstock, Joshua E. 2014. “Calling for Better Measurement: Estimating an Individuals Wealth and Well-Being from Mobile Phone Transaction Records.” Proceedings of Knowledge Discovery in Data.
+Facebook for developer’s blog, https://developers.facebook.com/docs/graph-api/using-graph-api
+The Effects of Anime in Our Society, Linggo, Abril 6, salongcaykyrt.blogspot.com/
+The Free 'Big Data' Sources Everyone Should Know, Bernard Marr on January 26, 2015 http://www.datasciencecentral.com/profiles/blogs/the-free-big-data-sources-everyone-should-know
+The Emotional Timeline of September 11, 2001, Mitja D. Back, Albrecht C.P. Küfner, Boris Egloff, http://journals.sagepub.com.proxy.uchicago.edu/doi/abs/10.1177/0956797610382124
+Mehl M.R. (2006). Quantitative text analysis. In Eid M., Diener E. (Eds.), Handbook of multimethod measurement in psychology (pp. 141–156). Washington, DC: American Psychological Association.
+ 
+ 
+ 
+
+

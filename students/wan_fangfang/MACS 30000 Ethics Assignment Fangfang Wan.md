@@ -1,0 +1,48 @@
+#### MACS 30000 Ethics Assignment
+
+#### Fangfang Wan
+
+​	In Salganik (2017), the author brought out four principles to consider when conducting digital research involving humans - respect for persons, beneficence, justice and respect for law and public interest. In this assignment, I will analyze the Montana election experiment based on those four principles.
+
+##### Question 1
+
+​	As for "respect for persons" principle, the researchers did not exhibit enough respect for individuals involved. To begin with, they did not receive informed consent from participants, and they did not even try to conduct the informed consent process. Voters involved had not choice but to receive provided information, and they could not even opt out of the research beforehand. They were affected by this program before they became awared that they are involved. If a participant felt uncomfortable with this experiment and thought that he or she would have opted out of the experiment if had the choice, the person has already seen and been affected by provided information, which has posed participant to a completely non-voluntary stand, and such operations are non-compliant with the "respect for persons" principle.
+
+​	In terms of "beneficence" principle, it might bring potential psychological harm to participants who feel uncomfortable participating, and some of them did feel offended, furious, etc., all those negative emotions. Moreover, some angry participants took time that they could have spent doing other obligations to report their uncomfortable feelings, which has incurred unnecessary opportunity costs for those people. In terms of benefits, the experiment might have brought benefit to voters in terms of that they are provided with more information, but such benefit is hard to measure, and whether more information is beneficial is worth debating. Not only for participants, this experiment might also have disrupted election order in the precinct. Distributing mailers to Montana residents might have incurred partisan conflicts in this election, while this election should have been a non-partisan one. Some voters might have changed their choice after receiving the mailers, since if they had not received those mailers, they might focus more on candidates' working capabilities, personalities, moral standard, etc., while receiving mailers could have altered their choice to choosing the candidates who are to their own political affiliations, which could have potentially changed election result, and such operations are strongly opposed by deontologist in social science researchers (Salganik, 2017).
+
+​	The principle of justice is largely obeyed, if the mailers are distributed evenly among Democrats and Republicans. However, if voters affiliated with one party have a higher probability of receiving mailers, the distribution of mailers may potentially increase the turnout, and thus number of votes, for that particular party, which means jeopardizing the benefits of the other party, and benefits and risks are not evenly distributed, hence violating the principle of justice.
+
+​	The researchers did not obey the Montana law in various aspects, and according to Motl (2015), in short, it violates Montana law in 3 aspects. First, the researchers used the Great Seal of Montana without authorization. Second, the Institutional Review Board (IRB) process was not properly conducted in Dartmouth, and was totally absent in Stanford, which seriouly violated Montana Law. Thrid, this experiment is an express advocacy, but researchers did not properly register, report and disclose the expenditure of the experiment. While law is only the baseline, this research has jeopardized public interests in terms of that it has disturbed normal order of Montana Supreme Court Justice election by providing voters with candidate' partisan information, while the election should be non-partisan, and might have brought potential harm to Montanans. 
+
+##### Question 2
+
+​	Since as Motl (2015) pointed out, one single vote can alter election result, election outcome might have been altered under any disturbance. Technically, if the mailers were distributed evenly among Democrats and Republicans, the election results would have been altered for two reasons. First, if voters had not received those mailers, due to the non-partisan nature of this election, they might focus more on candidates' working capabilities, personalities, moral standard, etc., while receiving mailers could have altered their choice to the candidates who are closer to their political affiliations. Moreover, if receiving information about candidates' politial inclination indeed can increase turnout, it is possible that the portion of voters included in the increased turnout amount changed the election result. For example, if there are significantly more Democrats than Republicans in the precinct, Republicans might be less motivated to vote. However, after receiving information that there is a Republican-prone candidate, some Republicans who would not have voted before might end up voting, thus bringing more votes to the Republican-affiliated candidate. 
+
+##### Question 3
+
+​	Such uneven distribution of mailers among Montanans can greatly alter my judgement for this experiment. The "respect for person", "beneficence" and "respect for law and public interests" principles are already violated, so my judgement in these two aspects remains the original. However, since Democrats receives far more mailers than Republicans, taken the Democrats-Republican division ratio in the precinct into account, this experiment brings more harm to Republicans and more benefits to Democrats, since it has potentially encouraged more Democrats to vote, thus increasing votes for Democratic candidates. Such situation is not desired in a non-partisan election.
+
+##### Question 4
+
+​	It does not change my judgment towards this experiment, since even though it is highly possible that this experiment has not altered the ultimate outcome, the operations did not obey principles and laws properly, based on deontologistic view in Salganik (2017) - when conducting social science experiments involving human beings, researchers should obey existing laws, rules, principles, procedures, etc., even if the violation might not have changed the ultimate result, otherwise it could have been triggered future similar experiments that might change the outcome and bring negative effects to individuals and society, but claim that they follow previous examples, which shows the importance of sticking to laws, rules, etc.
+
+##### Question 5
+
+​	Such information has reinforced my negative judgement towards this experiment in the four aspects in Question 1. Based on Motl (2015), the experiment affected 15% of voters in Montana. While the race for Supreme Court Justice 1 might not have been altered since the election result is highly biased towards Jim Rice, the outcome for Supreme Court Justice 2 might be different if the experiment were not conducted. Moreover, we cannot measure how the information of candidates' potilical inclination is transmitted to non-participants, so the disruption to election order of this experiment might even be much greater than expected. 
+
+##### Question 6
+
+​	The pure fact that Professor Bonica is a co-founder of this organization does not fundamentally change my previous assessment towards this experiment, but this fact does raise my doubt - was this organization and its business involved in this election in any form? If so, then we may detect more violations of related laws, rules, etc. 
+
+##### Question 7
+
+​	I would conduct this experiment obeying the principles proposed by Salganik (2017), if possible. First, by obeying "respect for persons" principle, I would let all stakeholders sign an informed consent, including potential participants, race candidates, and other relavant individuals. They can refuse to participate at any point during the experiment. If at least one of the candidates refuse to be involved in the experiment, and I would terminate the experiment and try to conduct the experiment in another precinct. Then I would use the sample-matching method, as suggested in Salgnik (2017), to create a sample which matches the distribution of political affiliations in the precinct. The beneficence principle is harder to obey, since this experiment cannot bring immediate benefit to all people involved. We cannot provide economic incentives to participants, which could bring bias to participants that are selected and bring larger disturbance to the election result. The only thing that we can do in terms of this principle is to minimize potential risks to all stakeholders by minimizing potential shock to the election process, by obey all four principles. Third, I would create a sample which matches the distribution of political affiliations in the precinct using the sample-matching method in Salganik (2017) to ensure the justice principle. Finally, as for laws and social interests, I would not reproduce the Great Seal of Montana State without permission. I would actively let IRB in my institution to properly conduct the review process, and I would register, report and disclose all the expenditures involved in this experiment. 
+
+##### References:
+
+Motl, Jonathan. (2015). *Before the Commissioner of Political Practices of the State of Montana*. Retrieved from http://politicalpractices.mt.gov/Portals/144/2recentdecisions/McCullochvStanfordandDartmouthFinalDecision.pdf
+
+Salganik, M. J. (2017). *Bit by Bit: Social Research in the Digital Age*. Princeton University Press. Retrieved from http://www.bitbybitbook.com/
+
+
+

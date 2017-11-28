@@ -1,0 +1,146 @@
+---
+title: "Perspectives Simulation"
+author: "Ling Dai"
+date: "11/06/2017"
+output: 
+    github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Problem 1
+```{r Problem 1}
+
+#setting parameters/constants
+rho <- 0.2
+g <- 0.03
+inc_0 <- 80000
+delta <- 0.1
+
+#generating error terms
+log_error_terms <- matrix(nrow = 40, ncol = 10000)
+for (i in 1:10000){
+  log_error_terms[,i] <- as.vector(rnorm(40, 0, delta))
+}
+
+#generating log(annual_income) simulation results
+log_simulated_inc <- matrix(nrow=40, ncol=10000)
+rownames(log_simulated_inc) <- c(2019:2058)
+
+for (i in 1:10000){
+  log_simulated_inc[1, i] <- log(inc_0) + log_error_terms[1,i]
+  for (y in 2:40){
+    log_simulated_inc[y, i] <- (1-rho)*(log(inc_0)+g*(y-1))+rho*log_simulated_inc[y-1,i]+ log_error_terms[y,i]
+    }
+}
+
+#generating annual_income simulation results
+simulated_inc <- matrix(nrow=40, ncol=10000)
+rownames(simulated_inc) <- c(2019:2058)
+
+for (i in 1:10000){
+  simulated_inc[,i] <- exp(as.vector(log_simulated_inc[,i]))
+}
+
+#plot simulation #1 result
+plot(c(2019:2058),as.vector(simulated_inc[,1]),
+     main = "Simulation #1 Lifetime Income Path",
+     xlab="Year", ylab="Simulated Annual Income ($)",
+     xlim=c(2019,2058), ylim=c(0,300000))
+lines(c(2019:2058),as.vector(simulated_inc[,1]))
+
+```
+
+
+##Problem 2
+```{r Probelm 2}
+#histogram
+hist(simulated_inc[1,], breaks = 50,
+     xlab = "Annual Income ($)",
+     main = "Simulated Distribution of First-Year Income")
+
+#calculate % of the class with first-year income > $100000
+perc_greatthan100k <- mean(ifelse(as.vector(simulated_inc[1,]) > 100000, 1, 0))
+
+#calculate % of the class with first-year income > $70000
+perc_lowerthan70k <- mean(ifelse(as.vector(simulated_inc[1,]) < 70000, 1, 0))
+```
+According to the simulation result, 1.22% of the class will earn more than $\ 100,000 in the first year, and 9.16% will earn less than $\ 70,000.
+The distribution is normally distributed.
+
+##Problem 3
+```{r Problem 3}
+#calculate years needed to pay off debt
+loan_yrs <- vector()
+
+for (i in 1:10000){
+  for (y in 1:40){
+    if (sum(simulated_inc[1:y,i])*0.1 > 95000){
+      loan_yrs[i] <- y
+      break
+    }
+  }
+}
+
+#plot histogram
+hist(loan_yrs, breaks = seq(min(loan_yrs)-0.5,max(loan_yrs)+0.5,1.0) ,
+     xlim = c(min(loan_yrs)-0.5,max(loan_yrs)+0.5),
+     xlab = "Years", main="Years Needed to Pay Off Debt")
+
+#calculate % of the class can play off loan in 10 years
+perc_in10yrs <- mean(ifelse(loan_yrs <= 10, 1, 0))
+```
+I am able to pay off the debt in 10 years in 17.88% of the simulations.
+
+##Problem 4
+```{r Problem 4}
+#update parameters
+inc_0_new <- 85000
+delta_new <- 0.15
+
+#update error terms
+log_error_terms_new <- matrix(nrow = 40, ncol = 10000)
+for (i in 1:10000){
+  log_error_terms_new[,i] <- as.vector(rnorm(40, 0, delta_new))
+}
+
+#update log(annual_income) simulation results
+log_simulated_inc_new <- matrix(nrow=40, ncol=10000)
+rownames(log_simulated_inc) <- c(2019:2058)
+
+for (i in 1:10000){
+  log_simulated_inc_new[1, i] <- log(inc_0_new) + log_error_terms[1,i]
+  for (y in 2:40){
+    log_simulated_inc_new[y, i] <- (1-rho)*(log(inc_0_new)+g*(y-1))+rho*log_simulated_inc_new[y-1,i]+ log_error_terms_new[y,i]
+  }
+}
+
+#update annual_income simulation results:
+simulated_inc_new <- matrix(nrow=40, ncol=10000)
+rownames(simulated_inc_new) <- c(2019:2058)
+
+for (i in 1:10000){
+  simulated_inc_new[,i] <- exp(as.vector(log_simulated_inc_new[,i]))
+}
+
+#repeat problem 3 based on new simulation results
+loan_yrs_new <- vector()
+
+for (i in 1:10000){
+  for (y in 1:40){
+    if (sum(simulated_inc_new[1:y,i])*0.1 > 95000){
+      loan_yrs_new[i] <- y
+      break
+    }
+  }
+}
+
+hist(loan_yrs_new, breaks = seq(min(loan_yrs_new)-0.5,max(loan_yrs_new)+0.5,1.0),
+     xlim = c(min(loan_yrs_new)-0.5,max(loan_yrs_new)+0.5),
+     xlab = "Years", main="Years Needed to Pay Off Debt (New)")
+
+perc_in10yrs_new <- mean(ifelse(loan_yrs_new <= 10, 1, 0))
+```
+After changing the parameters, I am able to pay off the debt in 10 years in 69.74% of the simulations.

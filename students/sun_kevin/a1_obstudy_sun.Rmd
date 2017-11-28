@@ -1,0 +1,72 @@
+---
+title: "Measuring Racism, Racial Prejudice, and Racial Bias in Gay Dating Apps"
+author: "Kevin Sun"
+date: "October 16, 2017"
+output: html_document
+---
+
+## Background & Motivation
+
+In 2009, Grindr was founded as one of the first geo-social mobile networking applications or "apps." As of [2016](http://fortune.com/2014/08/12/10 -questions-joel-simkhai-founder-and-ceo-grindr/), Grindr has been downloaded more than 10 million times and averages more than 5 million users each month. Grindr and the various mobile dating apps that serve the gay-male community, operate as a platform for which connections, relationships, and allyship can be built. For a historically marginalized community, the ability to openly build these connections and realize one's identity is the foundation for strengthening intracommunity solidarity and the broader LGBT community's position in regards to advocating for equity and justice. Yet, for gay people of color, race and ethnicity continue to heavily shape power dynamics, access to resources, and visibility within the gay community. 
+
+Harnessing the potential of big data available on dating apps provides the chance to quantify the extent to which racism and racial prejudice permeates the gay community. Gaining understanding around how inequities and injustices impact the LGBT community is key to building social movements that are inclusive of all members and address the needs of all LGBT people, not simply those at the forefront of the social movement. 
+
+## Research Questions
+
+Primary research questions for this type of observational study include:
+
+- How pervasive is explicit or overt racism/prejudice on gay dating apps/sites?
+- How do expressions of overt racism/prejudice compare between racial and ethnic groups on gay dating apps/sites? 
+
+## Plan for Utilizing Data from Gay Dating Apps
+
+The objective of this observational study is to conduct a large-scale analysis on the presence of explicitly-expressed racism, racial prejudice, and racial bias on gay-male user dating app platforms. As the most downloaded gay dating app in the United States, Grindr profiles contain information on millions of users' specific location, self-reported age, self-reported height, self-reported weight, and self-reported race and ethnicity. Importantly, users have the option of providing a profile description of the their interests, hobbies, personality traits, and often times, what they seek in potential partners. 
+
+Of interest would be users' reported race and the contents of their profile description. Accompanying the rise of online-dating apps is the subsequent decline of accountability and sense of social pressure for how users' can acceptably express their desires when searching for partners. Within profile descriptions, statements such as "no Asians", "not into blacks", "latinos need not apply", or "whites only" are not only common, but are further normalized when not censored by the app company and when complemented by app settings allowing users' to filter out others through predesignated racial categories.
+
+Carrying out this observational study first requires collecting a large sample of user profiles in order to analyze their demographics and profile description. Secondly, identification, categorization, and counting of explicit statements of racism and prejudice, such as examples provided above, are necessary to quantifying racism and racial prejudice. Thirdly, counting users' rates of applying filters to filter out specific races would allow researchers to compare expressions of racial prejudice across racial groups. 
+
+## Addressing Data Accessibility in Gay Dating Apps
+
+Some gay dating app companies recognize the need to address the reality that virtual and cyber platforms lend themselves to overt expressions of racism. Gaining a clearer understanding of how racism pervades gay dating apps and working towards its reduction is in the best interest of companies in the industry. Obtaining data for this observational study, would achieve goals that align with current actions some gay-dating companies are taking to more actively engage in resolving racism and racial prejudice on their platforms.
+
+Some confidence can be placed in these companies granting access to user profile information when considering the steps some companies have already undertaken to combat this issue. Grindr has recently begun a media-based campaign called "What The Flip?" to raise awareness and build empathy within the gay community on this exact issue of racism within its platform. Another dating app called Jack'd, has actively and prominently featured men of color in its advertising. 
+
+For companies founded on the concept of building connections and relationships within the gay population, the functioning of racism within their system and network acts a tear on the fabric of the gay community. Further, protecting any type of "racial preference" expression would run contrary to companies' purported "committment" to equity for all LGBT people. Moreover, perpetuating exclusion within a historically excluded group would effectively harm corporate public image and drive away, not attract, more customers. As companies begin to recognize the implications of failing to address racism on their platforms, their incentive to provide researchers the data which could potentially assist in mitigatng this problem, grows.
+
+## Big Data Illuminates Issues Surrounding Race
+
+### Size
+
+As previously mentioned, the size of the user-base of just a single gay dating app like Grindr presents unprecedented opportunities to examine dynamics within the gay population. Until the past decade, the integration of gay people, gay symbols, and the gay movement into the mainstream has been limited. Incidently, the federal government has yet to include the simple counting of LGBT people on the census. With millions of monthly users, an app like Grindr provides great potential for observational research unavailable elsewhere.
+
+With such a large size of data, meaningful trends within subgroups of gay users can be measured. Specifically, in relation to the second research question, analyzing and comparing the profile descriptions of users of different races and ethnicities would hold greater validity. Seeking answers to questions of whether levels of expressed racism or racial prejudice differ between whites, blacks, latinx, asians, indigenous, etc. become more realistic. Further, more exact identifcation of which people racist, racially prejudiced, or racially exclusionary language originate from and whom it gets directed towards is possible with a larger data set. 
+
+### Subject Reactivity 
+
+The digitization of dating plus researchers' subsequent ability to utilize dating profile data contrasts significantly with widely used survey data of gay populations. Behind the veil and relative anonymity of digital apps, people across all demographics assume a level of comfort different than that of a research subject speaking directly to a researcher. While people typically acclimated to socially acceptable and sensitive behaviors in society today tend to avoid overt displays and expressions of racism or racial prejudice, this propensity decreases when moving to the digital space. Assuming a lower degree of social taboo and repercussions for expressing unpopular views, users are likely more inclined to express their true preferences for partners. 
+
+One might be able to compare this propensity for honest expression to peoples' searches on Google when they believe they are not being watched by others. Thus, a minimal level of subject reactivity to researcher observation is a plus in the sense that researchers can gain more accurate view into users true beliefs regarding their preferred partners. 
+
+## Overcoming the Potential Weaknesses of Utilizing Big Data
+
+### Incomplete and Non-Representative Data
+
+While gay dating apps engage millions of gay users, not every user identifies all demographic information on their dating profile. Users can choose not to report their race or ethnicity; alternatively users of color may be incentivized to mis-report their race or ethnicity. Black, Latinx, or Asian users may attempt to avoid being "filtered out" via their race by omitting or purposely mid-identifying themselves; this in itself indicates the force racism plays in enabling not only white discriminatory power but directing gay people of color to exert prejudice amongst themselves. Moreover, some users may elect not to describe their desired (or undesired) race of potential parterns; nonetheless, observing their behavior or settings on dating apps may indicate discriminatory behavior.
+
+If researchers are able to access data from dating apps that indicate users' racial filtering settings, this would shed light on broad trends of racial discrimination within the gay online dating community regardless of incomplete data on users' race or profile description. 
+
+Additionally, the user base for gay dating apps is not fully representative of the target population - the gay male population as a whole. Aside from these apps, gay men may participate in non-app-based avenues to meet potential partners. Supplementing observational data from dating apps with survey data on gay men's preferences for their potential partner's race may seem logical. While it may be worthwhile to collect supplementary survey data, subject reactivity is likely to come into play; thus, formulating questions to minimize this reactivity is necessary - such sample survey questions might include:
+
++ How many partners (both short-term and long-term) have you had in the past 5 years? 
++ Of those partners, how many were of the same race as you?
++ In the past year, how many dates have you gone on? 
++ Of those dates, how many were with people of the same race as you?
+
+Given that most people are unlikely to truthfully reveal their racial biases to a researcher, questions would be formulated to avoid directly asking about one's desired race in a partner. 
+
+Creating a sample of fake dating profiles with identical traits (age, height, weight, and profile description of profession, interests, etc.) that varies only in the race of the fake-user and counting the number of responses to messages sent under the fake profile or number of solicitations is another viable option for measuring behavior based solely on perceived race. 
+
+### Sensitive
+
+For some, their sexual orientation and sexuality remain highly private and personal matters. For others, their safety and security may depend on the maintnence of this privacy. Great caution would have to be taken to ensure that identifiable pictures, real names, emails, and phone numbers associated with dating profiles remain confidential. 

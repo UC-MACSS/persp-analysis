@@ -1,0 +1,115 @@
+---
+title: "EDA Write-Up"
+author: "Jo Denby"
+date: '`r Sys.Date()`'
+output: github_document
+---
+
+```{r, message=FALSE}
+library(tidyverse)
+library(poliscidata)
+library(forcats)
+```
+
+```{r}
+data(gss, package = 'poliscidata')
+gss <- as_tibble(gss)
+```
+
+In exploring this dataset, I discovered insights into the effect of education on income, the relationships between beliefs about the bible and both education and region, and the regional relationships between age and number of children. 
+
+#### Education and Income
+To start, I was initially interested in what this dataset might reveal about the effects of education on income. I expected to find that holders of higher degrees (i.e., more education) would populate a greater income distribution; specifically, I was interested in comparing the income distributions for holders of Bachelor's degrees and for holders of High School diplomas. To explore this hypothesis, I created two bar plots that allow for side-by-side comparison of the two distributions.
+
+```{r}
+gss_no_income_na <- gss[!is.na(gss$income06),]
+bach_gss <- gss_no_income_na[gss_no_income_na$degree=='Bachelor deg',]
+hs_gss <- gss_no_income_na[gss_no_income_na$degree=='HS',]
+inc_levels <- levels(gss_no_income_na$income06)
+
+ggplot() + 
+  geom_bar(data = hs_gss, aes(x=income06, y=(..count..)/sum(..count..))) + 
+  geom_bar(data = bach_gss, aes(x=income06, y=(..count..)/sum(..count..))) + 
+  facet_wrap(~ degree) +
+  theme(axis.text.x = element_text(size= 5)) + 
+  labs(x="Income ($1k)",
+       y="Density",
+       title = "Income Distribution by Highest Degree") +
+  scale_x_discrete(breaks = inc_levels,
+                   labels= c('<1','1','3','4','5','6','7','8','10','12.5','15','17.5','20','22.5','25','30','35','40','50','60','75','90','110','130','150+')) 
+```  
+
+With this plot, a few insights become instantly noticeable. For one, both distributions are left-skewed, suggesting that income is not normally distributed, with a big tail of respondents earning relatively little. However, this finding may be a function of the survey itself - the income categories top out at "$150,000 +", so it is not clear how the distribution looks above that level at a finer grain.  
+Most notable are the differences in the individual distributions. For one, over 20% of respondents with a Bachelor's degree earn at least \$150,000, whereas less than 5% of respondents with only a high school diploma are placed within that category. Moreover, the HS distribution appears much more spread, with the highest peak being nearly 10% of respondents earning between \$40,000 and \$50,000. The Bachelor's degree distribution on the other hand is heavily concentrated at the \$40,000 and up categories, indicating that respondents with a college degree generally earn more.  
+
+#### Bible Beliefs, Education, and Region
+Next, I was interested in exploring the distribution of beliefs about the bible; specifically, I was curious to investigate how the distribution might change according to education and region. I expected to find that respondents with higher levels of education would be less likely to believe that the bible is literally true ("WORD OF GOD") and instead take it to be allegory ("BOOK OF FABLES"). To investigate this hypothesis, I created a stacked column plot to illustrate the conditional distributions.  
+
+```{r}
+bible_stats <- gss %>%
+  filter(!is.na(gss$bible)) %>%
+  count(bible, degree, region)
+
+ggplot(bible_stats, aes(degree, n, fill = bible)) +
+  geom_col(position= "fill") + 
+  labs(x="Degree",
+       y="",
+       fill = "Belief",
+       title = "Distribution of Bible Beliefs by Highest Degree") + 
+  theme(axis.text.x = element_text(size = 8 ))
+```  
+
+This plot revels some striking information. For respondents with less than a full high school education, over 50% believe the bible to be the "Word of God," whereas for respondents with a Bachelor's degree, less than 25% hold the same belief. In general, participants with higher levels of education are more likely to regard the bible as a "Book of Fables" and are much less likely to consider the bible as the "Word of God." Overall, this plot suggests a relationship between education and beliefs about the bible.  
+
+To follow-up on this, I was curious to investigate any regional differences in the distribution of bible beliefs. Given my intuitive understanding of the cultural idiosyncracies of particular regions of the United States, I expected to see a greater proportion of respondents from the Southern US (i.e., the "Bible Belt") as holding more faithful beliefs about the bible as compared to their Northern counterparts. To investigate this idea, I created a flipped column plot ordered by the proportion of respondents with the belief that the bible is the "Word of God."
+```{r}
+god_stats <- gss %>%
+  group_by(region) %>%
+  summarise(god_prop = length(bible[bible=='WORD OF GOD']) / length(bible))
+
+ggplot(god_stats, aes(fct_reorder(region, god_prop), god_prop)) + 
+  geom_col() + 
+  coord_flip() +
+  labs(x="Region",
+       y="",
+       title = "Proportion of Literal Believers by US Region",
+       caption = "belief that bible is \'Word of God\'")
+```  
+
+The data suggest that my hypothesis is correct; Southern states are at least 15 to 20 points higher in terms of the percentage of respondents with the belief that the bible is the "Word of God."
+
+#### Age and Children
+Finally, I was interested to explore the relationship between age and number of children, aggregated across and within regions. Using the dataset, I computed the mean age for each number of children that appeared in the data and plotted the results using a scatterplot. I expected to find that people with no children tend to be younger, while those with more children tend to be older, with an asymptote around 55 years or so.
+```{r}
+child_stats <- gss %>%
+  filter(!is.na(childs)) %>%
+  group_by(childs) %>%
+  summarise(mean_age = mean(age, na.rm = TRUE))
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() + 
+  labs(x = "Age",
+       y = "# of Children",
+       title = "Mean Age per Number of Children") + 
+  theme_bw() + 
+  coord_flip()
+```  
+
+The plot reveals the interesting fact that people with more children tend to older across the board. I would have expected the relationship to hit an asymptote around 55 or so (when people stop having children), but instead the trend continues. This suggests some kind of generational shift in child-bearing habits, where those with 6+ children tend to be much older. As a last area of investigation, I was curious to see whether this trend varied by US region. Given the cultural differences between regions of the United States, I expected to find that more conservative regions (e.g., Southern regions) would have lower mean ages overall. 
+```{r}
+child_stats <- gss %>%
+  filter(!is.na(childs)) %>%
+  group_by(childs, region) %>%
+  summarise(mean_age = mean(age, na.rm = TRUE))
+
+ggplot(child_stats, aes(mean_age, childs)) + 
+  geom_point() +
+  facet_wrap(~region) + 
+  coord_flip(ylim = c(0,8)) + 
+  labs(x="Age",
+       y="# of Children",
+       title = "Mean Age per Number of Children by Region") +
+  theme_bw()
+```
+
+The plot hints that my hypothesis may be correct, although further investigation is certainly necessary. All regions tend to have some sort of general upward trend - as the number of children increases, the mean age generally tends to increase as well. Some regions have a much more shallow slope than others, suggesting that people there tend to have children at a relatively young age; regions with a sharper slope may be areas where only older people have relatively large numbers of children, with younger parents stopping after only a few.  

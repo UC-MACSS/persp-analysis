@@ -1,0 +1,90 @@
+---
+title: "Proposing a Survey Study: Surveying Perceptiosn of Racism, Racial Prejudice, and Racial Bias in Gay Dating Platforms"
+author: "Kevin Sun"
+date: "10/22/2017"
+output: html_document
+---
+## Context & Background
+
+As previously mentioned in Assignment 1: Proposing an Observational Study, Grindr was founded in 2009 as one of the first geo-social mobile networking applications or "apps." As of 2016, Grindr averages some 2.4 million daily users [1]. Grindr and the various mobile dating apps that serve the gay-male community, operate as a platform for which connections, relationships, and allyship can be built. For a historically marginalized community, the ability to openly build these connections and realize one's identity is the foundation for strengthening intracommunity solidarity and the broader LGBT community's position in regards to advocating for equity and justice. Yet, for gay people of color, race and ethnicity continue to shape power dynamics, access to resources, and visibility within the gay community. Thus, as researchers, we are interested in the answering the following questions:
+
+#### Research Questions
+
+Primary research questions for this type of survey study include:
+
+- How pervasive is explicit or overt racism/prejudice on gay dating apps?
+- How do expressions of racism/prejudice compare between racial and ethnic groups on gay dating apps? 
+
+Harnessing the potential of big data available on a dating app like Grindr provides the chance to quantify the extent to which racism and racial prejudice permeates the gay community. Gaining understanding around how inequities and injustices impact the LGBT community is key to building social movements that are inclusive of all members and address the needs of all LGBT people, not simply those at the forefront of the social movement. 
+
+## Structure of a Digitally-Enhanced Survey
+
+To answer these research questions, surveys will be administered to users through the Grindr platform. The method will reflect the survey strategy carried out by Wang, Rothschild, Goel, Gelman in their study to forecast the 2016 Presidential election [2]. Given that the research questions center around measuring racism, racial prejudice, and racial bias on a digitally-based dating platform, it is logical to administer the survey in conjunction with users' use of the Grindr app. The survey will take place over the course of 30 days.
+
+#### Survey Launch & Opt-In
+
+Upon the launch of the survey on the Grindr platform, users will receive a pop-up on their Grindr interface during log-in to the app. The pop-up will briefly describe the research goals, research questions, arc, and time commitment required by the study. Users will then have the option to opt-in to the study. Users who choose not to opt-in to participating in the survey the first time, will be prompted several additional times with the same opt-in pop-up during the 30 day window to provide for added chances to join the study. 
+
+#### Arc of Survey
+
+In order to differentiate one-time instances of racism, racial prejudice, and racial bias from sustained instances of expressed racism, racial prejudice, racial bias - of which, the latter signifies a more systemic racial problem plaguing dating platforms - the survey will be administered each day over the course of 30 days; this is in contrast to a one-time administration of the survey. 
+
+Users who opt-in to participating will be limited to completing the survey, at most, once per day. Users who opt-in will be prompted to complete a brief set of questions (which we will elaborate on in subsequent sub-sections) designed to evaluate their perception of racism, racial prejudice, and racial bias on the Grindr platform as well as some of their behaviors on the Grindr platform. 
+
+#### Types of Survey Questions
+
+The survey will include both open and closed-type questions. Inclusion of closed-survey questions establishes a standard measurement for comparing users' perception and experience of racism, prejudice, and bias, while inclusion of open-survey questions take into consideration the complexity of quantifying "racism" as a concept by allowing users to provided more nuanced and detailed responses.
+
+Sample closed-survey questions might include: 
+
+- Do you believe that people of different races and ethnicities are treated fairly on Grindr? (Yes, No, Unsure)
+- Have you personally faced racism, racial prejudice, or racial bias on Grindr? (Yes, No, Unsure)
+- While using Grindr today, did you come across any racist, racially prejudiced, or racially biased user profiles or messages from other users? (Yes, No, Unsure)
+- Do find the Grindr environment to be racist, racially prejudiced, or racially biased? (Yes, No, Unsure)
+- Have you ever decided to block, stop messaging, or filter out someone/people due to their race on Grindr? (Yes, No, Unsure)
+
+Sample open-survey questions might include:
+
+- Have you personally faced racism, racial prejudice, or racial bias on Grindr? If yes, could you provide an example of when that happened?
+- While using Grindr today, did you come across any racist, racially prejudiced, or racially biased user profiles or messages from other users? Could you briefly describe what was said?
+- Have you ever decided to block, stop messaging, or filter out someone/people due to their race on Grindr? If yes, why? If no, why not?
+
+#### Digitally Enhanced
+
+Through incorporating this survey into the interface experience of Grindr users and administering it during Grindr users' active usage of the app represents the digital enhancing of traditional survey techniques. This survey data would be collected closer, both in terms of timeliness and proximity, to the environment (online dating platform) of interest. Administering the survey through smartphones allows for us to measure users' experiences and perceptions not just at a single time-point, but across a time period. 
+
+## Survey vs. Observational Study 
+
+A survey study yields added benefits over an observational study in a couple of manners. In contrast to the previously proposed observational study, evaluating people's internal feelings, emotions, sentiment on an issue as complex and contentious as race might be better served through asking questions. Questions could serve as a complement to observational research data that only counts instances of explicitly expressed racism while missing implicit expressed racism, prejudice, and bias.
+
+In administering a survey, obtaining nuanced responses from people who are able to expound on their profile descriptions and behaviors is possible. Instead of categorizing written statements in profile descriptions, we can contextualize user behaviors through the survey. Moreover, a survey will better capture the varying experiences of white, black, latinx (note: this is a gender neutral term for people of Latin-American descent), Asian, etc. users on Grindr. This will allow us to more accurately compare experiences between different racial and ethnic groups to answer the second research question. 
+
+Furthermore, a survey would capture data in a more dynamic manner than an observational study. For example, user-reported expressions of racism, prejudice, and bias directed at users' from other users through private messaging is something an observational study would not capture, but a survey would likely capture.  
+
+Through a survey study, we increase the number of "angles" through which the research questions can be answered. However, this does not mean that a survey study is without potential errors and this is something discussed in the following section.
+
+## Addressing Potential Survey Error
+
+#### Measurement Error
+
+Given the historical context and inherent complexity surrounding terms like "racism" or "racial prejudice", operationalizing these concepts will prove challenging. Users taking the survey have diverse lived experiences which will lead them to have varying interpretations of what "racism" encapsulates. In a Pew Research study conducted in 2016 reported a significant division of views between white and black Americans in regards to race relations, racism, and inequity [3]. This signals an already wide-ranging disagreement over the severity of racism in America and in turn complicates our ability to survey and compare such issues of race across different racial groups in the gay community. 
+
+To minimize this potential error, it will be necessary to pre-test the questions of the survey prior to launching the survey. This will assist in revealing issues with question wording and interpretation. Yet, realistically, a simple pre-testing of question wording will do little to erase or modify people's preconceived notions of race given that one's race and racially-based experiences comprises an major part of one's identity.
+
+Moreover, as discussed during lecture, survey respondents may be affected by social desirability bias [4]. Though users may opt-in to the survey, respondents are likely not inclined to report potentially racist, prejudiced, or biased viewpoints they hold or behaviors they engage in. Unfortunately, this type of error may be unavoidable in a survey measuring such viewpoints and may be an area in which an observational study might be preferable to obtaining true and "uncensored", so to speak, information on this topic. 
+
+#### Representation Error
+
+Given the platform, this survey study will use a non-probability sample. There is not an equally likely chance of surveying the target population - all gay men. This is the case when considering the predominant users of dating apps like Grindr are likely younger, clustered in urban areas; this sample also excludes gay men who do not use dating apps, but choose to date through alternate avenues and gay men who do not possess the technology or economic means to participate in such dating platforms. 
+
+As such, it will be necessary to weight different groups of demographics within the sample. Weighting for likely over-represented groups - including younger men, urban users, middle to higher income users - will need to be lowered to account for their over-representation in the sample. 
+
+## References
+
+[1] Mobile app analytics: How Grindr monetizes 6 million active users (webinar). (2016, April 11). Retrieved October 19, 2017, from https://venturebeat.com/2016/04/05/mobile-app-analytics-how-grindr-monetizes-6-million-active-users-webinar/
+
+[2] Wang, W., Rothschild, D., Goal, S., & A. G. (2015). Forecasting elections with non-representative polls. International Journal of Forecasting, 31(3), 980-991. Retrieved October 18, 2017.
+
+[3] On Views of Race & Inequality, Blacks and Whites are Worlds Apart (Rep.). (2016, June 27). Retrieved October 18, 2017, from Pew Research Center website: http://assets.pewresearch.org/wp-content/uploads/sites/3/2016/06/ST_2016.06.27_Race-Inequality-Final.pdf
+
+[4] Soltoff, B. (2017, October 18). Class Lecture. Lecture presented at MACS30000 (Perspectives on Computational Analysis) in Saieh Hall 247, Chicago.

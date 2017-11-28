@@ -61,7 +61,7 @@ If you need any special accommodations, please provide me (Dr. Soltoff) with a c
 |18.| Wed, Nov. 22 | Exploratory data analysis - multivariate visualizations |  |
 |19.| Mon, Nov. 27 | Exploratory data analysis - clustering | [Exploring the General Social Survey](assignments/exploratory-data-analysis/README.md) |
 |20.| Wed, Nov. 29 | Exploratory data analysis - dimension reduction |  |
-|21.| Mon, Dec. 4 |  | EDA: Part II |
+|21.| Mon, Dec. 4 |  | [Unsupervised learning](assignments/unsupervised-learning/README.md) |
 
 > The final exam will be distributed on Tuesday December 5 at 12pm and must be submitted by 11:59pm Wednesday December 6.
 

@@ -24,7 +24,11 @@ See [here](../students/) for instructions on submitting course assignments.
 
 ## Assignment format
 
-Submit your assignment as either a Jupyter Notebook (`.ipynb`) or R Markdown document (`.Rmd` knitted with `output: md_document` in the [front matter](http://rmarkdown.rstudio.com/markdown_document_format.html)).
+Submit your assignment in a **reproducible format**. For example, any of the following formats are reproducible:
+
+* R Markdown document (`.Rmd` knitted with `output: md_document` or `output: github_document` in the [front matter](http://rmarkdown.rstudio.com/markdown_document_format.html))
+* Jupyter Notebook (`.ipynb`)
+* Python (`.py`) or R (`.R`) script which saves the graphs to the local directory AND a Markdown document `.md` which embeds the graphs and your written responses to questions
 
 ## Submission deadline
 

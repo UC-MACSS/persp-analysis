@@ -1,0 +1,224 @@
+---
+title: "EDA_Write_Up_Yilun_Dai"
+author: "Yilun Dai"
+date: "11/26/2017"
+output: github_document
+---
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+setwd("~/Documents/Fall2017/MACS30000")
+#install.packages("poliscidata")
+data(gss, package = "poliscidata")
+library(tidyverse)
+library(ggthemes)
+library(knitr)
+library(broom)
+library(stringr)
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+gss1 <- read.csv('gss2012.csv', header = TRUE)
+str(gss)
+```
+
+# 1. Question on happiness: 
+## Is level of happiness associated with income? What are some of the other factors affecting level of happiness? 
+
+        We could see that the level of happiness is not significantly associated with level of individual income. While the proportion of people who feel “not too happy” is the greatest for the income level “less than $1000” (about 1/3), this proportion is also 1/3 for the second highest income level. It is possible that those with little income are students, and therefore they might have other financial resources to maintain a certain level of quality of life (Figure 1). Nevertheless, when I excluded those who are students from the data, the bar plot showed a similar proportion (Figure 2). While the association of happiness and individual income is not significant, it is noticeable that there are few people who feel “not too happy” in the highest level of individual income and the third highest. However, the relationship between the level of happiness and family income tells a different story. We can see that there is a greater proportion of people who feel “very happy” with higher level of family income and a smaller proportion of people who feel “not too happy” with higher level of family income (Figure 3). \
+        
+```{r, echo = FALSE, message = FALSE}
+# happy and income
+gss %>%
+  count(happy, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 1: Happiness with respect to income",
+       x = "Income",
+       y = "Frequency")
+```
+
+```{r, echo = FALSE, message=FALSE}
+# happy and income excluding students
+gss_no_student <- filter(gss, wrkstat != 'SCHOOL')
+gss_no_student %>%
+  count(happy, rincom06) %>%
+  na.omit() %>%
+  mutate(rincome = factor(rincom06)) %>%
+  ggplot(aes(rincome, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 2: Happiness with respect to income, excluding students",
+       x = "Income",
+       y = "Frequency")
+``` 
+
+```{r, echo = FALSE, message = FALSE}
+# happy and family income
+gss %>%
+  count(happy, income06) %>%
+  na.omit() %>%
+  mutate(income = factor(income06)) %>%
+  ggplot(aes(income, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 3: Happiness with respect to family income",
+       x = "Income",
+       y = "Frequency")
+``` 
+
+        Working status and occupation do not have a significant impact on the level of happiness. Different working status show similar proportion of levels of happiness (Figure 4). Working for public sectors or private sectors does not have a significant impact on the level of happiness either (Figure 5). In addition, the proportions of different levels of happiness are similar for those who work for someone else and those who are self-employed (Figure 6). \
+
+```{r, echo=FALSE, message=FALSE}
+# happy and wrkstat
+gss %>%
+  count(happy, wrkstat) %>%
+  na.omit() %>%
+  mutate(wrkstat = factor(wrkstat)) %>%
+  ggplot(aes(wrkstat, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 4: Happiness with respect to working status",
+       x = "Working Status",
+       y = "Frequency")
+
+``` 
+
+    
+```{r}
+# happy and wrkgvt
+gss %>%
+  count(happy, wrkgvt) %>%
+  na.omit() %>%
+  mutate(wrkgvt = factor(wrkgvt)) %>%
+  ggplot(aes(wrkgvt, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 5: Happiness with respect to sector",
+       x = "Sector",
+       y = "Frequency")
+``` 
+
+```{r, echo = FALSE, message = FALSE}
+# happy and wrkslf
+gss %>%
+  count(happy, wrkslf) %>%
+  na.omit() %>%
+  mutate(wrkslf = factor(wrkslf)) %>%
+  ggplot(aes(wrkslf, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 6: Happiness with respect to employers",
+       x = "Employer",
+       y = "Frequency")
+``` 
+
+        However, family life is likely to affect the level of happiness. I plotted a box graph visualizing the relationship between marital status and happiness, and observed that the proportion of “Very happy” is the highest for respondents who are married, and that their proportion of “Not too happy” is the lowest (Figure 7). However, I did not observe a significant association between number of children and happiness or between number of siblings and happiness. 
+        
+```{r, echo = FALSE, message = FALSE}
+# happy and marital
+gss %>%
+  count(happy, marital) %>%
+  na.omit() %>%
+  mutate(marital = factor(marital)) %>%
+  ggplot(aes(marital, n, fill = happy)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 7: Happiness with respect to marital status",
+       x = "Marital Status",
+       y = "Frequency")
+``` 
+
+# 2. Quesion on pre-marraige sex:
+## What factors affect people’s opinions on pre-marriage sex?
+
+        We can see from Figure 8 that although the majority of respondents think that pre-marriage sex is not wrong at all, there is still a considerable portion of respondents consider pre-marriage sex always wrong. From my exploration, I found that age, religious beliefs, political views, and opinions on other issues such as homosexual and porn laws affect people’s opinions on pre-marriage sex. 
+
+```{r, echo = FALSE, message = FALSE}
+# premarriage sex
+gss1 <- read.csv('gss2012.csv', header = TRUE)
+ggplot(gss, aes(premarsx)) + geom_bar() + 
+labs(title = "Figure 8: Barplot of Opinions on Premarriage Sex",
+       x = "Premarsex",
+       y = "Frequency")
+```
+
+        Figure 9 shows opinions on pre-marriage sex by age. We can see that people with younger age tend to have a more positive opinion on pre-marriage sex. It is noticeable that for the 21 years old age group, the proportion of respondents who think it always wrong to have pre-marriage sex is close to zero. Although people with older age tend to have a more conservative attitude towards pre-marriage sex, the proportion of respondents who oppose pre-marriage sex is significantly lower for age groups 48, 61, 69 and 83. It is better to look into possible historical events and movements when considering these specific age groups. New-left in the 1960s might have made these generations less conservative on certain issues. 
+
+```{r, echo = FALSE, message = FALSE}
+# premarsex and age
+gss %>%
+  count(premarsx, age) %>%
+  na.omit() %>%
+  mutate(age = factor(age)) %>%
+  ggplot(aes(age, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 9: Opinions on premarriage sex with respect to age",
+       x = "age",
+       y = "Frequency")
+``` 
+
+        Figure 10 shows opinions on pre-marriage sex by religious beliefs. We can see that there are more respondents with no religious beliefs than those with religious beliefs thinking that pre-marriage sex is not wrong at all. Protestants and Christians are the most conservative, with the greatest proportion that consider pre-marriage sex always wrong. There is a lower proportion of respondents who think pre-marriage sex is always wrong for catholic respondents than for protestant respondents. 
+
+```{r, echo = FALSE, message = FALSE}
+# premarsex and relig
+gss %>%
+  count(premarsx, relig) %>%
+  na.omit() %>%
+  mutate(relig = factor(relig)) %>%
+  ggplot(aes(relig, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 10: Opinions on premarriage sex with respect to religion",
+       x = "Religion",
+       y = "Frequency")
+```
+
+        Pre-marriage sex is also associated with political views and opinions on other contemporary issues. Those who are more liberal are less likely to consider pre-marriage sex always wrong (Figure 12). The majority of those who are extremely conservative consider pre-marriage sex wrong to various degrees (Figure 12). The opinion on the homosexuals is associated with that on pre-marriage sex. Those who are more tolerate on allowing homosexual to speak and to teach and on homosexual contents in libraries are more likely to consider pre-marriage sex not wrong at all (Figure 13, 14, and 15). Another interesting issue to notice is the association between attitude towards porn laws and that towards pre-marriage sex (Figure 16). Those who think porn should be illegal to all is more likely to have a negative attitude toward pre-marriage sex. 
+
+```{r, echo = FALSE, message = FALSE}
+# premarsex and political view
+gss %>%
+  count(premarsx, polviews) %>%
+  na.omit() %>%
+  mutate(polviews= factor(polviews)) %>%
+  ggplot(aes(polviews, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 12: Opinions on premarriage sex with respect to political views",
+       x = "Political Views",
+       y = "Frequency")
+# premarsex and opinions on homosexual
+gss %>%
+  count(premarsx, spkhomo) %>%
+  na.omit() %>%
+  mutate(spkhomo = factor(spkhomo)) %>%
+  ggplot(aes(spkhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') +
+  labs(title = "Figure 13: Opinions on premarriage sex with respect to Opinions on speaks of homosexual",
+       x = "Speak Homosexual",
+       y = "Frequency")
+
+gss %>%
+  count(premarsx, colhomo) %>%
+  na.omit() %>%
+  mutate(colhomo = factor(colhomo)) %>%
+  ggplot(aes(colhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 14: Opinions on premarriage sex with respect to opinions on homosexual teachers",
+       x = "allow homosexual to teach",
+       y = "Frequency")
+gss %>%
+  count(premarsx, libhomo) %>%
+  na.omit() %>%
+  mutate(libhomo = factor(libhomo)) %>%
+  ggplot(aes(libhomo, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 15: Opinions on premarriage sex with respect to opinions on homosexual contents in library",
+       x = "Allow homosexual contents in library",
+       y = "Frequency")
+# premarsex and pornlaw
+gss %>%
+  count(premarsx, pornlaw) %>%
+  na.omit() %>%
+  mutate(pornlaw = factor(pornlaw)) %>%
+  ggplot(aes(pornlaw, n, fill = premarsx)) +
+  geom_bar(stat = 'identity') + 
+  labs(title = "Figure 16: Opinions on premarriage sex with respect to opinions on porn laws",
+       x = "Opinions on porn laws",
+       y = "Frequency")
+```
+

@@ -25,3 +25,6 @@
 * [Python API's, Twitter and Other Examples](http://jmausolf.github.io/code/Querying_APIs_with_Python/)
 * Repo to Fork: [https://github.com/jmausolf/Twitter_Tweet_Counter](https://github.com/jmausolf/Twitter_Tweet_Counter)
 
+## Week - 10
+
+* [PCA in Python](https://github.com/UC-MACSS/persp-analysis/blob/master/labs/PCA_Lab_Perspectives.ipynb)

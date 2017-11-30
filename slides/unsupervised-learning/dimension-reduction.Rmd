@@ -1,0 +1,606 @@
+---
+title: "Dimension reduction"
+output:
+  html_document:
+    highlight: pygments
+    theme: readable
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(cache = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+```{r packages, cache = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+library(ISLR)
+library(titanic)
+library(rcfss)
+library(grid)
+library(gridExtra)
+library(ggdendro)
+library(tidytext)
+library(tm)
+library(topicmodels)
+
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+```
+
+# Unsupervised learning
+
+**Supervised learning** methods are used in situations where you have a set of $p$ predictors $X_1, X_2, \dots, X_p$ measured on $n$ observations and you want to explain or predict a response $Y$ also measured on those $n$ observations. **Unsupervised learning** methods differ in that you have a set of $p$ predictors $X_1, X_2, \dots, X_p$ measured on $n$ observations, *but you do not have an associated response variable $Y$*. Instead you want to explore the structure and grouping of the observations. Typically unsupervised learning is a more **exploratory process** because you have no end result you are specifically looking for, and you have no measuring stick to decide if you have the "right" results. At least with supervised learning, you can assess the accuracy or fit of the model and decide how well it performs or compare it to other models. Techinques such as cross-validation and resampling methods can be used to ensure we are not overfitting the training data. But with unsupervised learning this is impossible, because you don't know the "true" answer.
+
+There are a wide range of unsupervised learning methods, and their use is governed by the type of research question you have. Today we will examine dimension reduction and its potential applications.
+
+# Dimension reduction
+
+One possible application of unsupervised learning is to reduce the number of dimensions in a dataset. There are a couple reasons you might do this:
+
+1. You want to visualize the data but you have a lot of variables. You could generate something like a scatterplot matrix, but once you have more than a handful of variables even these become difficult to interpret.
+1. You want to use the variables in a supervised learning framework, but reduce the total number of predictors to make the estimation more efficient.
+
+We've seen a prior example of this: Adam Bonica's CFScores. Rather than use every contribution from every donor in an electoral campaign in models involving ideology, Bonica reduces the dimensionality of the data into a single dimension which approximates a left-right ideological dimension. This is far more efficient to use in statistical learning models while taking far fewer degrees of freedom.
+
+In either case, the goal is to reduce the dimensionality of the data by identifying a smaller number of representative variables that collectively explain most of the variability in the original dataset. There are several methods available for performing such a task. First we will examine an example of applying dimension reduction techniques to summarize roll-call voting in the United States.
+
+# Application: DW-NOMINATE
+
+In the 1990s, dimension reduction techniques revolutionized the study of U.S. legislative politics. Measuring the ideology of legislators prior to this point was difficult because there was no method for locating legislators along an ideological spectrum (liberal-conservative) in a manner that allowed comparisons over time. That is, how liberal was a Democrat in 1870 compared to a Democrat in 1995? Additionally, supposed you wanted to predict how a legislator would vote on a given bill. Roll-call votes record individual legislator behavior, so you could use past votes to predict future ones. But there have been tens of thousands of recorded votes over the course of the U.S. Congress. Even in a given term of Congress, the Senate may cast hundreds of recorded votes. But there are only 100 senators (at present), and you cannot estimate a regression model when your number of predictors $p$ is larger than your number of observations $n$. We need some method for reducing the dimensionality of this data to a handful of variables which explain as much of the variation in roll-call voting as possible.
+
+**Multidimensional scaling techniques** can be used to perform this feat. The technical details of this specific application are beyond the scope of this class, but Keith Poole and Howard Rosenthal developed a specific procedure called [NOMINATE](http://voteview.org/) to reduce the dimensionality of the data. Rather than using $p$ predictors to explain or predict individual legislator's roll-call votes, where $p$ is the total number of roll-call votes in the recorded history of the U.S. Congress, Poole and Rosenthal examined the similarity of legislators' votes in a given session of Congress and over time to identify two major dimensions to roll-call voting in the U.S. Congress. That is, roll-call votes in Congress can generally be explained by two variables that can be estimated for every past and present member of Congress. The two dimensions do not have any inherent substantive interpretation, but by graphically examining the two dimensions, it becomes clear that they represent two specific factors in legislative voting:
+
+1. First dimension - political ideology. This dimension appears to represent political ideology on the liberal-conservative spectrum. Positive values on this dimension refer to increasingly conservative voting patterns, and negative values refer to increasingly liberal voting patterns.
+1. Second dimension - "issue of the day". This dimension appears to pick up on attitudes that are salient at different points in the nation's history. They could be regional differences (Southern vs. non-Southern states), or attitudes towards specific policy issues (i.e. slavery).
+
+This data can be used for a wide range of research questions. For example, we could use it to assess the degree of polarization in the U.S. Congress over time:
+
+![[Voteview.org](http://voteview.org/political_polarization_2015.htm)](http://voteview.org/images/png/house_party_means_1879-2015.png)
+
+![[Voteview.org](http://voteview.org/political_polarization_2015.htm)](http://voteview.org/images/png/house_party_means_1879-2015_2nd.png)
+
+![[Voteview.org](http://voteview.org/political_polarization_2015.htm)](http://voteview.org/images/png/senate_party_means_1879-2015.png)
+
+![[Voteview.org](http://voteview.org/political_polarization_2015.htm)](http://voteview.org/images/png/senate_party_means_1879-2015_2nd.png)
+
+# Principal components analysis
+
+**Principal components analysis** (PCA) is a basic technique for dimension reduction. The goal is to find a low-dimensional representation of the data that contains as much as possible of the variation. Each dimension is a linear combination of the $p$ variables.
+
+The **first principal component** of a set of variables $X_1, X_2, \dots, X_p$ is the normalized linear combination of the features
+
+$$Z_1 = \phi_{11}X_1 + \phi_{21}X_2 + \dots + \phi_{p1}X_p$$
+
+that has the largest variance. By normalizing the features, we mean
+
+$$\sum_{j=1}^p \phi_{j1}^2 = 1$$
+
+The elements of $\phi_{11}, \dots, \phi_{p1}$ are known as the **loadings** of the first principal component, and combined together they form the principal component loading vector $\phi_1 = (\phi_{11}, \dots, \phi_{p1})^T$. The number of individual loadings on the first principal component is $p$.
+
+Estimating the first principal component follows the following procedure. Since we are only interested in variance, we assume each column in the $n\times p$ data set $\mathbf{X}$ has mean zero and look for the linear combination of the sample column values of the form
+
+$$z_{i1} = \phi_{11}x_{i1} + \phi_{21}x_{i2} + \dots + \phi_{p1} x_{ip}$$
+
+that has the largest sample variance, subject to the constraint $\sum_{j=1}^p \phi_{j1}^2 = 1$.
+
+The result of this optimization problem is a loading vector $\phi_1$ with elements $\phi_{11}, \phi_{21}, \dots, \phi_{p1}$ that defines a direction in feature space along which the data vary the most. We can estimate the second, third, and $n$th principal components using a similar process. The second principal component is the linear combination of $X_1, X_2, \dots, X_p$ that has the maximum variance out of all linear combinations that are uncorrelated with $Z_1$. Another way of thinking about this is that the second principal component is **orthogonal** (perpendicular) to the first principal component. If the data is two-dimensional ($p=2$) then there is only one possible value for $\phi_2$.
+
+The total number of principal components for a given $n \times p$ data set is $\min(n,p)$, either the number of observations in the data or the number of variables in the data (whichever is smaller). Once we estimate the principal components, we can plot them against each other in order to produce a low-dimensional visualization of the data. Let's look at the use of PCA on the `USArrests` dataset, reproduced from **An Introduction to Statistical Learning**.
+
+```{r pca-usarrests}
+pr.out <- prcomp(USArrests, scale = TRUE)
+
+head(pr.out$x)
+pr.out$rotation
+biplot(pr.out, scale = 0, cex = .6)
+```
+
+The principal component score vectors have length $n=50$ and the principal component loading vectors have length $p=4$ (in this data set, $p < n$). The biplot visualizes the relationship between the first two principal components for the dataset, including both the scores and the loading vectors. The first principal component places approximately equal weight on murder, assault, and rape. We can tell this because these vectors' length on the first principal component dimension are roughly the same, whereas the length for urban population is smaller. Conversely, the second principal component (the vertical axis) places more emphasis on urban population. Intuitively this makes sense because murder, assault, and rape are all measures of violent crime, and it makes sense that they should be correlated with one another (i.e. states with high murder rates are likely to have high rates of rape as well).
+
+We can also interpret the plot for individual states based on their positions along the two dimensions. States with large positive values on the first principal component have high crime rates while states with large negative values have low crime rates; states with large positive values on the second principal component have high levels of urbanization while states with large negative values have low levels of urbanization.
+
+# Latent semantic analysis
+
+Text documents can be utilized in computational text analysis under the **bag of words** approach.^[This section drawn from [18.3 in "Principal Component Analysis".](https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch18.pdf).] Documents are represented as vectors, and each variable counts the frequency a word appears in a given document. While we throw away information such as word order, we can represent the information in a mathematical fashion using a matrix. Each row represents a single document, and each column is a different word:
+
+```
+ a abandoned abc ability able about above abroad absorbed absorbing abstract
+43         0   0       0    0    10     0      0        0         0        1
+```
+
+These vectors can be very large depending on the **dictionary**, or the number of unique words in the dataset. These bag-of-words vectors have three important properties:
+
+1. They are **sparse**. Most entries in the matrix are zero.
+1. A small number of words appear frequently across all documents. These are typically uninformative words called **stop words** that inform us nothing about the document (e.g. "a", "an", "at", "of", "or").
+1. Other than these words, the other words in the dataset are correlated with some words but not others. Words typically come together in related bunches.
+
+Considering these three properties, we probably don't need to keep all of the words. Instead, we could reduce the dimensionality of the data by projecting the larger dataset into a smaller feature space with fewer dimensions that summarize most of the variation in the data. Each dimension would represent a set of correlated words. Principal component analysis can be used for precisely this task.
+
+In a textual context, this process is known as **latent semantic analysis**. By identifying words that are closely related to one another, when searching for just one of the terms we can find documents that use not only that specific term but other similar ones. Think about how you search for information online. You normally identify one or more **keywords**, and search for pages that are related to those words. But search engines use techniques such as LSA to retrieve results not only for pages that use your exact word(s), but also pages that use similar or related words.
+
+### Interpretation: `NYTimes`
+
+```{r nytimes}
+# get NYTimes data
+load("data/pca-examples.Rdata")
+```
+
+Let's look at an application of LSA. `nyt.frame` contains a document-term matrix of a random sample of stories from the New York Times: 57 stories are about art, and 45 are about music. The first column identifies the topic of the article, and each remaining cell contains a frequency count of the number of times each word appeared in that article.^[Actually it contains the [term frequency-inverse document frequency](http://cfss.uchicago.edu/text001_tidytext.html#assessing_word_and_document_frequency) which downweights words that appear frequently across many documents. This is one method for guarding against any biases caused by stop words.] The resulting data frame contains `r nrow(nyt.frame)` rows and `r ncol(nyt.frame)` columns.
+
+Some examples of words appearing in these articles:
+
+```{r nytimes-words}
+colnames(nyt.frame)[sample(ncol(nyt.frame),30)]
+```
+
+We can estimate the LSA using the standard PCA procedure:
+
+```{r nytimes-pca}
+# Omit the first column of class labels
+nyt.pca <- prcomp(nyt.frame[,-1])
+
+# Extract the actual component directions/weights for ease of reference
+nyt.latent.sem <- nyt.pca$rotation
+
+# convert to data frame
+nyt.latent.sem <- nyt.latent.sem %>%
+  as_tibble %>%
+  mutate(word = names(nyt.latent.sem[,1])) %>%
+  select(word, everything())
+```
+
+Let's extract the biggest components for the first principal component:
+
+```{r nytimes-PC1}
+nyt.latent.sem %>%
+  select(word, PC1) %>%
+  arrange(PC1) %>%
+  slice(c(1:10, (n() - 10):n())) %>%
+  mutate(pos = ifelse(PC1 > 0, TRUE, FALSE),
+         word = fct_reorder(word, PC1)) %>%
+  ggplot(aes(word, PC1, fill = pos)) +
+  geom_col() +
+  labs(title = "LSA analysis of NYTimes articles",
+       x = NULL,
+       y = "PC1 scores") +
+  coord_flip() +
+  theme(legend.position = "none")
+```
+
+These are the 10 words with the largest positive and negative loadings on the first principal component. The words on the positive loading seem associated with music, whereas the words on the negative loading are more strongly associated with art.
+
+```{r nytimes-PC2}
+nyt.latent.sem %>%
+  select(word, PC2) %>%
+  arrange(PC2) %>%
+  slice(c(1:10, (n() - 10):n())) %>%
+  mutate(pos = ifelse(PC2 > 0, TRUE, FALSE),
+         word = fct_reorder(word, PC2)) %>%
+  ggplot(aes(word, PC2, fill = pos)) +
+  geom_col() +
+  labs(title = "LSA analysis of NYTimes articles",
+       x = NULL,
+       y = "PC2 scores") +
+  coord_flip() +
+  theme(legend.position = "none")
+```
+
+Here the positive words are about art, but more focused on acquiring and trading ("donations", "tax"). We could perform similar analysis on each of the `r ncol(nyt.latent.sem)` principal components, but if the point of LSA/PCA is to reduce the dimensionality of the data, let's just focus on the first two for now.
+
+```{r nytimes-biplot}
+biplot(nyt.pca, scale = 0, cex = .6)
+```
+
+```{r nytimes-plot-dim}
+cbind(type = nyt.frame$class.labels, as_tibble(nyt.pca$x[,1:2])) %>%
+  mutate(type = factor(type, levels = c("art", "music"),
+                       labels = c("A", "M"))) %>%
+  ggplot(aes(PC1, PC2, label = type, color = type)) +
+  geom_text() +
+  labs(title = "") +
+  theme(legend.position = "none")
+```
+
+The biplot looks a bit ridiculous because there are `r ncol(nyt.frame)` variables to map onto the principal components. Only a few are interpretable. If we instead just consider the articles themselves, even after throwing away the vast majority of information in the original data set the first two principal components still strongly distinguish the two types of articles. If we wanted to use PCA to reduce the dimensionality of the data and predict an article's topic using a method such as SVM, we could probably generate a pretty good model using just the first two dimensions of the PCA rather than all the individual variables (words).
+
+# Topic modeling
+
+Text documents can also be modeled and explored **thematically**. For instance, [David Blei](http://delivery.acm.org/10.1145/2140000/2133826/p77-blei.pdf) proposes searching through the complete history of the New York Times. Broad themes may relate to the individual sections in the paper (foreign policy, national affairs, sports) but there might be specific themes within or across these sections (Chinese foreign policy, the conflict in the Middle East, the U.S.'s relationship with Russia). If the documents are grouped by these themes, we could track the evolution of the NYT's reporting on these issues over time, or examine how discussion of different themes intersects.
+
+In order to do this, we would need detailed information on the theme of every article. Hand-coding this corpus would be exceedingly time-consuming, not to mention would requiring knowing the thematic structure of the documents before one even begins coding. For the vast majority of corpa, this is not a feasible approach.
+
+Instead, we can use **probabilistic topic models**, statistical algorithms that analyze words in original text documents to uncover the thematic structure of the both the corpus and individual documents themselves. They do not require any hand coding or labeling of the documents prior to analysis - instead, the algorithms emerge from the analysis of the text.
+
+# Latent Dirichlet allocation
+
+LDA assumes that each document in a corpus contains a mix of topics that are found throughout the entire corpus. The topic structure is hidden - we can only observe the documents and words, not the topics themselves. Because the structure is hidden (also known as **latent**), this method seeks to infer the topic structure given the known words and documents.
+
+## Food and animals
+
+Suppose you have the following set of sentences:
+
+1. I ate a banana and spinach smoothie for breakfast.
+1. I like to eat broccoli and bananas.
+1. Chinchillas and kittens are cute.
+1. My sister adopted a kitten yesterday.
+1. Look at this cute hamster munching on a piece of broccoli.
+
+Latent Dirichlet allocation is a way of automatically discovering **topics** that these sentences contain. For example, given these sentences and asked for 2 topics, LDA might produce something like
+
+* Sentences 1 and 2: 100% Topic A
+* Sentences 3 and 4: 100% Topic B
+* Sentence 5: 60% Topic A, 40% Topic B
+
+* Topic A: 30% broccoli, 15% bananas, 10% breakfast, 10% munching, ...
+* Topic B: 20% chinchillas, 20% kittens, 20% cute, 15% hamster, ...
+
+You could infer that topic A is a topic about **food**, and topic B is a topic about **cute animals**. But LDA does not explicitly identify topics in this manner. All it can do is tell you the probability that specific words are associated with the topic.
+
+## An LDA document structure
+
+LDA represents documents as mixtures of topics that spit out words with certain probabilities. It assumes that documents are produced in the following fashion: when writing each document, you
+
+* Decide on the number of words $N$ the document will have
+* Choose a topic mixture for the document (according to a [Dirichlet probability distribution](https://en.wikipedia.org/wiki/Dirichlet_distribution) over a fixed set of $K$ topics). For example, assuming that we have the two food and cute animal topics above, you might choose the document to consist of 1/3 food and 2/3 cute animals.
+* Generate each word in the document by:
+    * First picking a topic (according to the distribution that you sampled above; for example, you might pick the food topic with 1/3 probability and the cute animals topic with 2/3 probability).
+    * Then using the topic to generate the word itself (according to the topic's multinomial distribution). For instance, the food topic might output the word "broccoli" with 30% probability, "bananas" with 15% probability, and so on.
+
+Assuming this generative model for a collection of documents, LDA then tries to backtrack from the documents to find a set of topics that are likely to have generated the collection.
+
+### Food and animals
+
+How could we have generated the sentences in the previous example? When generating a document $D$:
+
+* Decide that $D$ will be 1/2 about food and 1/2 about cute animals.
+* Pick 5 to be the number of words in $D$.
+* Pick the first word to come from the food topic, which then gives you the word "broccoli".
+* Pick the second word to come from the cute animals topic, which gives you "panda".
+* Pick the third word to come from the cute animals topic, giving you "adorable".
+* Pick the fourth word to come from the food topic, giving you "cherries".
+* Pick the fifth word to come from the food topic, giving you "eating".
+
+So the document generated under the LDA model will be "broccoli panda adorable cherries eating" (remember that LDA uses a bag-of-words model).
+
+## Learning topic structure through LDA
+
+Now suppose you have a set of documents. You've chosen some fixed number of $K$ topics to discover, and want to use LDA to learn the topic representation of each document and the words associated to each topic. How do you do this? One way (known as collapsed [Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling)) is the following:
+
+* Go through each document, and randomly assign each word in the document to one of the $K$ topics
+* Notice that this random assignment already gives you both topic representations of all the documents and word distributions of all the topics. But because it's random, this is not a very accurate structure.
+* To improve on them, for each document $d$:
+    * Go through each word $w$ in $d$
+        * And for each topic $t$, compute two things:
+            1. The proportion of words in document $d$ that are currently assigned to topic $t$ - $p(t | d)$
+            1. The proportion of assignments to topic $t$ over all documents that come from this word $w$ - $p(w | t)$
+        * Reassign $w$ a new topic, where you choose topic $t$ with probability $p(t|d) \times p(w|t)$ - this is the probability that topic $t$ generated word $w$
+        * In other words, in this step, we're assuming that all topic assignments except for the current word in question are correct, and then updating the assignment of the current word using our model of how documents are generated.
+* After repeating the previous step a large number of times (really large number of times, like a minimum of 10,000), you'll eventually reach a roughly steady state where your assignments are pretty good
+* You can use these assignments to estimate two things:
+    1. The topic mixtures of each document (by counting the proportion of words assigned to each topic within that document)
+    1. The words associated to each topic (by counting the proportion of words assigned to each topic overall)
+    
+Frequently when using LDA, you don't actually know the underlying topic structure of the documents. **Generally that is why you are using LDA to analyze the text in the first place**. LDA is still useful in these instances, but we have to perform additional tests and analysis to confirm that the topic structure uncovered by LDA is a good structure.
+
+## `USCongress`
+
+### Get documents
+
+```{r get-docs}
+# get USCongress data
+data(USCongress, package = "RTextTools")
+
+(congress <- as_tibble(USCongress) %>%
+    mutate(text = as.character(text)))
+```
+
+### Convert to tidy text data frame
+
+```{r convert-tidytext}
+(congress_tokens <- congress %>%
+   unnest_tokens(output = word, input = text) %>%
+   # remove numbers
+   filter(!str_detect(word, "^[0-9]*$")) %>%
+   # remove stop words
+   anti_join(stop_words) %>%
+   # stem the words
+   mutate(word = SnowballC::wordStem(word)))
+```
+
+### Convert to document-term matrix
+
+```{r dtm}
+(congress_dtm <- congress_tokens %>%
+   # get count of each token in each document
+   count(ID, word) %>%
+   # create a document-term matrix with all features and tf weighting
+   cast_dtm(document = ID, term = word, value = n) %>%
+   # remove sparse features
+   removeSparseTerms(sparse = .999))
+
+# remove terms with low tf-idf for future LDA model
+congress_dtm <- congress_tokens %>%
+  count(major, word) %>%
+  bind_tf_idf(term_col = word, document_col = major, n_col = n) %>%
+  group_by(major) %>%
+  top_n(40, wt = tf_idf) %>%
+  ungroup %>%
+  count(word) %>%
+  select(-nn) %>%
+  left_join(congress_tokens) %>%
+  # get count of each token in each document
+  count(ID, word) %>%
+  # create a document-term matrix with all features and tf weighting
+  cast_dtm(document = ID, term = word, value = n)
+```
+
+### See overall structure
+
+```{r bind-tf-idf}
+(congress_tfidf <- congress_tokens %>%
+   count(major, word) %>%
+   bind_tf_idf(term_col = word, document_col = major, n_col = n))
+```
+
+```{r plot-tf-idf}
+# sort the data frame and convert word to a factor column
+plot_congress <- congress_tfidf %>%
+  arrange(desc(tf_idf)) %>%
+  mutate(word = factor(word, levels = rev(unique(word))))
+
+# graph the top 10 tokens for 4 categories
+plot_congress %>%
+  filter(major %in% c(1:3, 6)) %>%
+  mutate(major = factor(major, levels = c(1:3, 6),
+                        labels = c("Macroeconomics", "Civil Rights",
+                                   "Health", "Education"))) %>%
+  group_by(major) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  ggplot(aes(word, tf_idf)) +
+  geom_col() +
+  labs(x = NULL, y = "tf-idf") +
+  facet_wrap(~major, scales = "free") +
+  coord_flip()
+```
+
+### Build a 20 topic LDA model
+
+```{r congress-20-topic}
+congress_lda <- LDA(congress_dtm, k = 20, control = list(seed = 1234))
+congress_lda
+```
+
+### Compare LDA to supervised structure
+
+```{r congress-20-topn, fig.asp = 2}
+congress_lda_td <- tidy(congress_lda)
+
+top_terms <- congress_lda_td %>%
+  group_by(topic) %>%
+  top_n(5, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta)
+top_terms
+
+top_terms %>%
+  mutate(term = reorder(term, beta)) %>%
+  ggplot(aes(term, beta, fill = factor(topic))) +
+  geom_bar(alpha = 0.8, stat = "identity", show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free", ncol = 2) +
+  coord_flip()
+```
+
+Do we see unsupervised topics that match the supervised classification scheme?
+
+### Document classification
+
+```{r uscongress-gamma}
+congress_gamma <- tidy(congress_lda, matrix = "gamma")
+congress_gamma
+```
+
+```{r congress-model-compare}
+congress_tokens %>%
+  count(major, word) %>%
+  bind_tf_idf(term_col = word, document_col = major, n_col = n) %>%
+  group_by(major) %>%
+  top_n(40, wt = tf_idf) %>%
+  ungroup %>%
+  count(word) %>%
+  select(-nn) %>%
+  left_join(congress_tokens) %>%
+  distinct(ID) %>%
+  left_join(congress) %>%
+  mutate(document = as.character(row_number())) %>%
+  filter(major %in% c(1:3, 6)) %>%
+  mutate(major = factor(major, levels = c(1:3, 6),
+                        labels = c("Macroeconomics", "Civil Rights",
+                                   "Health", "Education"))) %>%
+  left_join(congress_gamma) %>%
+  na.omit %>%
+  ggplot(aes(factor(topic), gamma)) +
+  geom_boxplot() +
+  facet_wrap(~ major)
+```
+
+Do the policy agendas topic codes map onto the 20-topic LDA model? Not well. No clear and distinct topics for this subset at least. Substantive implications?
+
+## Associated Press articles
+
+The `topicmodels` package includes a document-term matrix of a sample of articles published by the Associated Press in 1992. Let's load them into R and estimate a series of LDA models.
+
+```{r associated_press}
+data("AssociatedPress", package = "topicmodels")
+
+# tidy and remove stop words
+ap_td <- tidy(AssociatedPress)
+```
+
+```{r ap_stopwords, dependson = "associated_press"}
+ap_dtm <- ap_td %>%
+  anti_join(stop_words, by = c(term = "word")) %>%
+  cast_dtm(document, term, count)
+ap_dtm
+```
+
+## Selecting $k$
+
+Remember that for LDA, you need to specify in advance the number of topics in the underlying topic structure.
+
+### $k=4$
+
+Let's estimate an LDA model for the Associated Press articles, setting $k=4$.
+
+```{r ap_topic_4, dependson = "associated_press"}
+ap_lda <- LDA(ap_dtm, k = 4, control = list(seed = 1234))
+ap_lda
+```
+
+What do the top terms for each of these topics look like?
+
+```{r ap_4_topn}
+ap_lda_td <- tidy(ap_lda)
+
+top_terms <- ap_lda_td %>%
+  group_by(topic) %>%
+  top_n(5, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta)
+top_terms
+
+top_terms %>%
+  mutate(term = reorder(term, beta)) %>%
+  ggplot(aes(term, beta, fill = factor(topic))) +
+  geom_bar(alpha = 0.8, stat = "identity", show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free", ncol = 2) +
+  coord_flip()
+```
+
+Fair enough. The four topics generally look to describe:
+
+1. American-Soviet relations
+1. Crime and education
+1. American (domestic) government
+1. [It's the economy, stupid](https://en.wikipedia.org/wiki/It%27s_the_economy,_stupid)
+
+### $k=12$
+
+What happens if we set $k=12$? How do our results change?
+
+```{r ap_topic_12, dependson = "associated_press"}
+ap_lda <- LDA(ap_dtm, k = 12, control = list(seed = 1234))
+ap_lda
+```
+
+```{r ap_12_topn, dependson="ap_topic_12"}
+ap_lda_td <- tidy(ap_lda)
+
+top_terms <- ap_lda_td %>%
+  group_by(topic) %>%
+  top_n(5, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta)
+top_terms
+
+top_terms %>%
+  mutate(term = reorder(term, beta)) %>%
+  ggplot(aes(term, beta, fill = factor(topic))) +
+  geom_bar(alpha = 0.8, stat = "identity", show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free", ncol = 3) +
+  coord_flip()
+```
+
+Hmm. Well, these topics appear to be more specific, yet not as easily decodeable.
+
+1. Iraq War (I)
+1. Bush's reelection campaign
+1. Federal courts
+1. Apartheid and South Africa
+1. Crime
+1. Economy
+1. ???
+1. Soviet Union
+1. Environment
+1. Stock market
+1. Wildfires?
+1. Bush-Congress relations (maybe domestic policy?)
+
+Alas, this is the problem with LDA. Several different values for $k$ may be plausible, but by increasing $k$ we sacrifice clarity. Is there any statistical measure which will help us determine the optimal number of topics?
+
+## Perplexity
+
+Well, sort of. Some aspects of LDA are driven by gut-thinking (or perhaps [truthiness](http://www.cc.com/video-clips/63ite2/the-colbert-report-the-word---truthiness)). However we can have some help. [**Perplexity**](https://en.wikipedia.org/wiki/Perplexity) is a statistical measure of how well a probability model predicts a sample. As applied to LDA, for a given value of $k$, you estimate the LDA model. Then given the theoretical word distributions represented by the topics, compare that to the actual topic mixtures, or distribution of words in your documents.
+
+`topicmodels` includes the function `perplexity()` which calculates this value for a given model.
+
+```{r ap_12_perplex, dependson="ap_topic_12"}
+perplexity(ap_lda)
+```
+
+However, the statistic is somewhat meaningless on its own. The benefit of this statistic comes in comparing perplexity across different models with varying $k$s. The model with the lowest perplexity is generally considered the "best".
+
+Let's estimate a series of LDA models on the Associated Press dataset. Here I make use of `purrr` and the `map()` functions to iteratively generate a series of LDA models for the AP corpus, using a different number of topics in each model.^[Note that LDA can quickly become CPU and memory intensive as you scale up the size of the corpus and number of topics. Replicating this analysis on your computer may take a long time (i.e. minutes or even hours). It is very possible you may not be able to replicate this analysis on your machine. If so, you need to reduce the amount of text, the number of models, or offload the analysis to the [Research Computing Center](https://rcc.uchicago.edu/).]
+
+```{r ap_lda_compare, dependson="associated_press"}
+n_topics <- c(2, 4, 10, 20, 50, 100)
+
+if(file.exists("extras/ap_lda_compare.Rdata")){
+  load(file = "extras/ap_lda_compare.Rdata")
+} else{
+  ap_lda_compare <- n_topics %>%
+    map(LDA, x = ap_dtm, control = list(seed = 1234))
+  save(ap_lda_compare, file = "extras/ap_lda_compare.Rdata")
+}
+```
+
+```{r ap_lda_compare_viz, dependson="ap_lda_compare"} 
+data_frame(k = n_topics,
+           perplex = map_dbl(ap_lda_compare, perplexity)) %>%
+  ggplot(aes(k, perplex)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Evaluating LDA topic models",
+       subtitle = "Optimal number of topics (smaller is better)",
+       x = "Number of topics",
+       y = "Perplexity")
+```
+
+It looks like the 100-topic model has the lowest perplexity score. What kind of topics does this generate? Let's look just at the first 12 topics produced by the model (`ggplot2` has difficulty rendering a graph for 100 separate facets):
+
+```{r ap_100_topn, dependson="ap_lda_compare"}
+ap_lda_td <- tidy(ap_lda_compare[[6]])
+
+top_terms <- ap_lda_td %>%
+  group_by(topic) %>%
+  top_n(5, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta)
+top_terms
+
+top_terms %>%
+  filter(topic <= 12) %>%
+  mutate(term = reorder(term, beta)) %>%
+  ggplot(aes(term, beta, fill = factor(topic))) +
+  geom_bar(alpha = 0.8, stat = "identity", show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free", ncol = 3) +
+  coord_flip()
+```
+
+We are getting even more specific topics now. The question becomes how would we present these results and use them in an informative way? Not to mention perplexity was still dropping at $k=100$ - would $k=200$ generate an even lower perplexity score?^[I tried to estimate this model, but my computer was taking too long.]
+
+Again, this is where your intuition and domain knowledge as a researcher is important. You can use perplexity as one data point in your decision process, but a lot of the time it helps to simply look at the topics themselves and the highest probability words associated with each one to determine if the structure makes sense. If you have a known topic structure you can compare it to (such as the books example above), this can also be useful.
+
+# Session info {.toc-ignore}
+
+```{r session-info}
+devtools::session_info()
+```

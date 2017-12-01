@@ -1,0 +1,123 @@
+---
+title: "Unsupervised_Learning"
+output: github_document
+---
+
+# Load Packages and Data
+```{r, message=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(FactoMineR)
+library(stats)
+
+usarrests <- read_csv("USArrests.csv")
+college <- read_csv("College.csv")
+```
+
+# Colleges
+
+### 1. Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
+
+The first component seems associated with 'Top25perc', 'PhD', 'Terminal, and 'Top10Perc'. This may be perhaps describing successful students. The second component seems associated with 'F. Undergrad', 'Enroll', 'Accept', and 'Apps'. This might be more associated with college admissions.
+```{r}
+
+college.numeric <- college %>% 
+  select(-Private)
+  
+pca <- PCA(college.numeric, scale.unit=TRUE, graph = TRUE )
+
+```
+
+
+
+### 2. Calculate the cumulative proportion of variance explained by all the principal components (see 10.2.3 in ISLR). Approximately how much of the variance in College is explained by the first two principal components?
+
+The first two PCs describe  58.361% of variation.
+```{r}
+summary.PCA(pca)
+```
+
+# Clustering States
+
+### 1. Perform PCA on the dataset and plot the observations on the first and second principal components.
+```{r, warning=FALSE}
+usarrests.numeric <- usarrests %>% 
+  select(-State)
+
+
+row.names(usarrests.numeric) <- usarrests$State
+
+pca <- PCA(usarrests.numeric, scale.unit=TRUE, graph = TRUE )
+
+```
+
+### 2. Perform K-means clustering with K=2. Plot the observations on the first and second principal components and color-code each state based on their cluster membership.
+
+The first component seems associate with states like "Florida", "Nevada", and "California". This component is associated with rape, assault, and murder. From now on when I mention "crime" I am talking about association with rape, assault and murder. Cluster two is more associated with this component. The second component is associate with states like "Hawaii", "Rhode Island", and "Massachusetts". This component is more associated most with Urban Population. Cluster 1 may be a little more associated with this component, but not by much.
+```{r}
+res.hcpc <-  HCPC(pca, nb.clust = 2, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+```
+
+
+### 3. Perform K-means clustering with K=4. Plot the observations on the first and second principal components and color-code each state based on their cluster membership.
+
+Cluster 1 is likely states with lower crime, and lower urban population. Cluster 2 is higher urban population and less crime. Cluster 3 is lower urban population and more crime. Cluster 4 is higher urban population and higher crime.
+```{r}
+res.hcpc <-  HCPC(pca, nb.clust = 4, graph=FALSE)
+plot.HCPC(res.hcpc, choice = "map")
+```
+
+
+### 4. Perform K-means clustering with K=3. Plot the observations on the first and second principal components and color-code each state based on their cluster membership.
+
+Cluster 1 looks like the lower crime states. Cluster 2 looks like the medium crime states. Cluster 3 looks like it is associated with crime.
+```{r}
+res.hcpc <-  HCPC(pca, nb.clust = 3, graph=FALSE)
+plot.HCPC(res.hcpc, choice = "map")
+
+km.out <- kmeans(usarrests.numeric, 3)
+table(km.out$cluster)
+
+```
+
+
+### 5. Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.
+
+All observations are clustered the same way again in a new order.
+```{r}
+
+
+pr.out <- prcomp(usarrests.numeric)
+km.out <- kmeans(pr.out$x[, 1:2], 3)
+
+table(km.out$cluster)
+```
+
+### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+
+```{r}
+hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
+plot(hc.complete)
+```
+
+
+### 7. Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
+
+
+The cluster each state belongs to is shown below.
+
+```{r}
+hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
+cutree(hc.complete, 3)
+```
+
+### 8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation. What effect does scaling the variables have on the hierarchical clustering obtained?
+
+Scaling the variables slightly affect the clusters, but the trees stil lokk fairly similar. Scaling the variables is helpful because the data measures have different units, which are hard to compare otherwise.
+```{r}
+sd.data <- scale(usarrests.numeric)
+hc.complete.sd <- hclust(dist(sd.data), method = "complete")
+plot(hc.complete.sd)
+```

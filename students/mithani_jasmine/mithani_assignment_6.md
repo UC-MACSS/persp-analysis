@@ -1,4 +1,4 @@
-##Ethics
+## Ethics
 
 ### Assess this study using Salganik's four principles of ethical research.
 #### Respect for persons

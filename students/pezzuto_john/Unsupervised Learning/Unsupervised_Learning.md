@@ -9,6 +9,8 @@ rm(list=ls())
 library(tidyverse)
 library(FactoMineR)
 library(stats)
+library(ggdendro)
+library(forcats)
 
 usarrests <- read_csv("USArrests.csv")
 college <- read_csv("College.csv")
@@ -163,7 +165,7 @@ table(km.out$cluster)
 
     ## 
     ##  1  2  3 
-    ## 16 20 14
+    ## 16 14 20
 
 ### 5. Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.
 
@@ -178,7 +180,7 @@ table(km.out$cluster)
 
     ## 
     ##  1  2  3 
-    ## 20 14 16
+    ## 16 20 14
 
 ### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
 
@@ -195,6 +197,7 @@ The cluster each state belongs to is shown below.
 
 ``` r
 hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
+
 cutree(hc.complete, 3)
 ```
 
@@ -221,7 +224,7 @@ cutree(hc.complete, 3)
 
 ### 8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation. What effect does scaling the variables have on the hierarchical clustering obtained?
 
-Scaling the variables slightly affect the clusters, but the trees stil lokk fairly similar. Scaling the variables is helpful because the data measures have different units, which are hard to compare otherwise.
+Scaling the variables slightly affect the clusters, but the trees stil look fairly similar. Scaling the variables is helpful because the data measures have different units, which are hard to compare otherwise.
 
 ``` r
 sd.data <- scale(usarrests.numeric)

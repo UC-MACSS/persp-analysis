@@ -20,25 +20,26 @@ biplot(pccollege, scale = 0)
 
 ![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
 
-Based on this biplot, the first principal component indicates that the variables with the strongest correlation are `Top 10Percent`, `Top 25Percent`, `Expend`, `Terminal`, `PhD`, and `Outstate`. For the second component, the `perc.alumni` and `Outstate` variables are those most strongly correlated with the principal component, with `F.Undergrad`, `Apps`, `Accept`, and `Enroll` having the comparably strong negative correlations.
+Based on this biplot, the first principal component indicates that the variables with the strongest correlation are `Top 10Percent`, `Top 25Percent`, `Expend`, `Terminal`, `PhD`, and `Outstate`. For the second component, the `perc.alumni` and `Outstate` variables are those most strongly correlated with the principal component, with `F.Undergrad`, `Apps`, `Accept`, and `Enroll` having even stronger negative correlations.
 
 ##### 2.
 
 ``` r
 pccollege_var <- pccollege$sdev^2
 pccollege_pve <- pccollege_var/sum(pccollege_var)
-pccollege_pve
+pccollege_pve <- pccollege_pve %>%
+  as.data.frame() %>%
+  mutate("sum" = cumsum(pccollege_pve))
+ggplot(pccollege_pve, aes(x=seq(1:length(pccollege_pve$sum)), y=sum)) +
+  geom_line()
 ```
 
-    ##  [1] 0.320206282 0.263402144 0.069009166 0.059229892 0.054884051
-    ##  [6] 0.049847010 0.035588715 0.034536213 0.031172337 0.023751915
-    ## [11] 0.018414263 0.012960414 0.009857541 0.008458423 0.005171256
-    ## [16] 0.002157540 0.001352837
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
 
-This vector describes the proportion of the dataset's variance explained by each of the 17 principal components.
+This plot describes the cumulative proportion of the dataset's variance explained by the 17 principal components.
 
 ``` r
-pccollege_pve[1] + pccollege_pve[2]
+pccollege_pve$sum[2]
 ```
 
     ## [1] 0.5836084
@@ -51,8 +52,6 @@ By adding the first two values together, we can compute the proportion of the da
 arrests <- read_csv("USArrests.csv") %>%
   tibble::column_to_rownames("State")
 ```
-
-    ## Warning: Setting row names on a tibble is deprecated.
 
 ##### 1.
 
@@ -67,21 +66,83 @@ biplot(pcarrests, scale = 0)
 
 ``` r
 arrestsk2 <- kmeans(arrests, 2, nstart=20)
-#pcarrestsk2 <- prcomp(arrestsk2, scale = TRUE)
 
-#biplot(pcarrests, col = c(1,2), scale = TRUE)
+k2df <- pcarrests$x %>%
+  as.data.frame() %>%
+  select(c("PC1", "PC2")) %>%
+  tibble::rownames_to_column(var="state") %>%
+  mutate("cluster"= arrestsk2$cluster)
+  
+
+ggplot(k2df, aes(PC1, PC2, color = factor(cluster), label = state)) + 
+  geom_text()
 ```
+
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-7-1.png)
+
+The clusters seem delineated primarily along the first principal component's dimension; states within each cluster generally span PC2, with the main split occurring around a PC1 score near 0. There isn't an immediately obvious story to tell about the allocation of states to each cluster; perhaps one could say (very roughly) that northern states are assigned to one cluster and southern states assigned to the other.
+
+##### 3.
+
+``` r
+arrestsk4 <- kmeans(arrests, 4, nstart=20)
+
+k4df <- pcarrests$x %>%
+  as.data.frame() %>%
+  select(c("PC1", "PC2")) %>%
+  tibble::rownames_to_column(var="state") %>%
+  mutate("cluster"= arrestsk4$cluster)
+  
+
+ggplot(k4df, aes(PC1, PC2, color = factor(cluster), label = state)) + 
+  geom_text()
+```
+
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)
+
+Most of the further division occurs in what was Cluster 2 in the above clustering method, suggesting that that cluster (the states on the positive end of PC1) contained the most within-cluster variability. Again, the clustering boundaries occur mostly along the PC1 dimension, with most clusters staying relatively intact along PC2.
+
+##### 4.
+
+``` r
+arrestsk3 <- kmeans(arrests, 3, nstart=20)
+
+k3df <- pcarrests$x %>%
+  as.data.frame() %>%
+  select(c("PC1", "PC2")) %>%
+  tibble::rownames_to_column(var="state") %>%
+  mutate("cluster"= arrestsk3$cluster)
+  
+
+ggplot(k3df, aes(PC1, PC2, color = factor(cluster), label = state)) + 
+  geom_text()
+```
+
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-9-1.png)
+
+This clustering method demonstrates an intermediate division between the *K* = 2 and *K* = 4 clustering methods. Most of the new cluster is broken off from the cluster on the positive end of PC1. Again, very roughly, one might argue that the new cluster is composed of states that are intermediate between quintessentially northern and southern states.
 
 ##### 5.
 
 ``` r
-pcarrests12 <- pcarrests$rotation %>%
+pcarrests12 <- pcarrests$x %>%
   as.data.frame() %>%
   select(c("PC1", "PC2"))
 
-# pcarrestsk2 <- kmeans(pcarrests12,3,nstart = 20)
-# biplot(pcarrestsk2)
+pcarrestsk3 <- kmeans(pcarrests12,3,nstart = 20)
+
+pcak3df <- pcarrests12 %>%
+  tibble::rownames_to_column(var="state") %>%
+  mutate("cluster"= pcarrestsk3$cluster)
+  
+
+ggplot(pcak3df, aes(PC1, PC2, color = factor(cluster), label = state)) + 
+  geom_text()
 ```
+
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png)
+
+The states still have approximately the same distribution, but the clustering algorithm results in much more discrete boundaries. Compared to the previous *K* = 3 cluster plot, the clusters have much less overlap. This is perhaps because all states are judged on an even scale when clustered using the PCA scores directly; this method allows for more faithful comparison of different states, making clustering simpler.
 
 ##### 6.
 
@@ -90,7 +151,7 @@ arrestshier <- hclust(dist(arrests), method = 'complete')
 plot(arrestshier)
 ```
 
-![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-9-1.png)
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-11-1.png)
 
 ##### 7.
 
@@ -99,7 +160,9 @@ plot(arrestshier)
 abline(h=125, col = 'red')
 ```
 
-![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png) By cutting at approximately 125, we group the states into three distinct clusters.
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
+
+By cutting at approximately 125, we group the states into three distinct clusters.
 
 Here, R outputs which state belongs to which cluster.
 
@@ -138,4 +201,6 @@ standarrestshier <- hclust(dist(standarrests), method = 'complete')
 plot(standarrestshier)
 ```
 
-![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
+![](Unsupervised_Learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-14-1.png)
+
+The height axis gets much smaller, indicating that, in an absolute sense, the states are more similar. Also, some of the states moved into different clusters. For example, Alaska stands out in this standardized dendrogram as an outlier compared to seemingly all other states, whereas in the previous dendrogram Alaska is grouped together with Mississippi and South Carolina without an exceptional degree.

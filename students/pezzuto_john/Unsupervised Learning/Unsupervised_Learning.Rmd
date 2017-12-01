@@ -9,6 +9,8 @@ rm(list=ls())
 library(tidyverse)
 library(FactoMineR)
 library(stats)
+library(ggdendro)
+library(forcats)
 
 usarrests <- read_csv("USArrests.csv")
 college <- read_csv("College.csv")
@@ -87,8 +89,6 @@ table(km.out$cluster)
 
 All observations are clustered the same way again in a new order.
 ```{r}
-
-
 pr.out <- prcomp(usarrests.numeric)
 km.out <- kmeans(pr.out$x[, 1:2], 3)
 
@@ -110,8 +110,13 @@ The cluster each state belongs to is shown below.
 
 ```{r}
 hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
+
 cutree(hc.complete, 3)
+
+
+
 ```
+
 
 ### 8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation. What effect does scaling the variables have on the hierarchical clustering obtained?
 

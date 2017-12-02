@@ -36,7 +36,7 @@ library(ggfortify)
     ## Loading required package: ggplot2
 
 ``` r
-college = read.csv("/Users/Rex/Desktop/yu_liqiang_hw8/College.csv")
+college = read.csv("/Users/Rex/Desktop/Perspective/HW/persp-analysis/students/yu_liqiang/yu_liqiang_hw8/College.csv")
 head(college)
 ```
 
@@ -66,7 +66,7 @@ head(college)
 college_tidy <- college 
 #Remove non-numeric data
 college_tidy$Private <- NULL
-college.PCA <- prcomp(college_tidy,center = TRUE,scale. = TRUE)
+college.PCA <- prcomp(college_tidy,scale. = TRUE, center = TRUE)
 autoplot(college.PCA, data = college, 
          loadings = TRUE, loadings.colour = 'violet',
          loadings.label = TRUE, loadings.label.size = 3)+labs(title="First two principal components of college data")
@@ -124,7 +124,7 @@ Clustering states
 Perform PCA on the dataset and plot the observations on the first and second principal components.
 
 ``` r
-crime = read.csv("/Users/Rex/Desktop/yu_liqiang_hw8/USArrests.csv")
+crime = read.csv("/Users/Rex/Desktop/Perspective/HW/persp-analysis/students/yu_liqiang/yu_liqiang_hw8/USArrests.csv")
 head(crime)
 ```
 

@@ -17,12 +17,12 @@ Variable highly correlated are, according to PC2: P.Undergrad, F.Undergrad, Enro
 ```{r}
 library(dplyr)
 library(ggfortify)
-college = read.csv("/Users/Rex/Desktop/yu_liqiang_hw8/College.csv")
+college = read.csv("/Users/Rex/Desktop/Perspective/HW/persp-analysis/students/yu_liqiang/yu_liqiang_hw8/College.csv")
 head(college)
 college_tidy <- college 
 #Remove non-numeric data
 college_tidy$Private <- NULL
-college.PCA <- prcomp(college_tidy,center = TRUE,scale. = TRUE)
+college.PCA <- prcomp(college_tidy,scale. = TRUE, center = TRUE)
 autoplot(college.PCA, data = college, 
          loadings = TRUE, loadings.colour = 'violet',
          loadings.label = TRUE, loadings.label.size = 3)+labs(title="First two principal components of college data")
@@ -45,7 +45,7 @@ plot(cumsum(props),main="Cumulative proportion of variance",xlab = "PCA Index", 
 
 Perform PCA on the dataset and plot the observations on the first and second principal components.
 ```{r}
-crime = read.csv("/Users/Rex/Desktop/yu_liqiang_hw8/USArrests.csv")
+crime = read.csv("/Users/Rex/Desktop/Perspective/HW/persp-analysis/students/yu_liqiang/yu_liqiang_hw8/USArrests.csv")
 head(crime)
 crime_tidy <-crime
 crime_tidy$State <- NULL

@@ -1,0 +1,63 @@
+---
+title: "Perspectives Collaboration"
+author: "Ling Dai"
+date: "11/12/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Kaggle Open Call Project
+####Competition
+"House Prices: Advanced Regression Techniques" is an open competition in which competitors uses the Ames Housing dataset to perform regressions, build predictive models, and predict the final price of each residential homes in Ames, Iowa. The Ames Housing dataset contains 79 explanatory variables describing almost every aspect of the residential homes. The goal of the competition is to expand the skill sets of the competitors who look forward to hone their machine learning skills and programming skills with R/Python, as well as to improve our understanding of pricing in real estitates.
+
+To make a submission, I would have to complete the following two steps: (1) perform regressions based on the data (on a training set); and (2) test and select a machine learning model to predict the final results.Among the 79 explanatory variables included in the dataset, there are 20 continuous variables related to various area dimensions for each observation (e.g. total dwelling square footage), 14 discrete variables that typically quantify the number of items occuring within the house, and 46 categorical variables (23 nominal, 23 ordinal). Due to the large number of explanatory variables, feature selection will be crucial to the success of finding the best predictive model. Some potentially good models include bagging, random forests, and gradient boosting.
+
+####Dataset  
+
+The data set I choose is "Where it pays to Attend college" (link:https://www.kaggle.com/wsj/college-salaries), a trending dataset on Kaggle posted by Wall Street Journal. The dataset contains three data files, which have graduate students median starting income and mid-career income grouped by types of college, regions were colleges are based, and by majors, respectively. I looked speficially into the correlation between median income and region, and made the following graph that exhibits the cross-regional differences between the median starting salaries of college students:  
+
+
+```{r Dataset}
+#Download the dataset and copy the "salaries-by-region.csv" file to the desktop,
+#replace "Ling.D" in the path file with your username and run the code.
+
+col_salaries <- read.csv(file="C:/Users/Ling.D/Desktop/salaries-by-region.csv")
+col_salaries$Starting.Median.Salary <- as.numeric(gsub('[^a-zA-Z0-9.]','',
+                                                       col_salaries$Starting.Median.Salary))
+
+boxplot(col_salaries$Starting.Median.Salary ~ col_salaries$Region,
+        main = "Starting.Mean.Salary by Region",
+        xlab = "Region", ylab = "Starting.Median.Salary by School ($)")
+```
+
+According to the boxplot, graduates from colleges based in California have the highest starting median salary among all regions, closely followed by graduates from colleges in the Northeast, while graduates from colleges in the Midwest has the lowest. This trend has two possible implications: (1) California and the Northeastern U.S. has better Colleges (which fits our general impressions, with UC colleges and Stanford in California and Ivy League colleges and MIT in the Northeast); (2) There are better-paid job opportunities in California and the Northeast, leading to a higher median starting salary level of college graduates.
+
+##Improving a journal article using human computation
+
+The study I choose is *Positive association between vocal and facial attractiveness in women but not in men: A cross-cultural study*^1^ by Valentova et al. (2016). The original research was aimed to investigate the association between perceived vocal and facial attractiveness. In the original research, the audio and visual samples were both collected in a lab setting: a number of participants were required to read a setence with standardized names. After the videos was prepared, the samples are graded by two groups of college students from Czech and Brazil. The results were then used to perform analysis on the correlation between perceived vocal and facial attractiveness. 
+
+There were certain limitations within the original research. First of all, the samples used in the experiment were relatively limited and lacked variety. Despite the fact that the experiment was conducted across two countries, a limited number of samples from only two places can hardly produce a result that can be generalized to a more universal setting. Moreover, the lack of variety in graders may further compromise the generalizability of the experimental results. In fact, all graders from this experiment were colleges students from two Universities, the University of Sao Paulo in Brazil and the Charles University in Prague. Furthermore, due to the limited number of student graders recruited, all graders who identified themselves with bisexual or homosexual were excluded, as there were not enough participants for these two groups, and the researchers believed that being bisexual/homosexual can have significant influence on the results of grading.
+
+Taking into consideration all these factors, I believe human computation can be used to improve and extend the original research. First of all, as opposed to only making recordings in a lab setting, the researchers can post their requirements and instructions for recordings, and seek more diversified samples from the Internet. Furthermore, because grading attractiveness requires virtually no training, the graders can also be recruited globally through the Internet. In fact, recruiting participants from the Internet also allow us to record their basic background information, which can help us compare cross-group differences of the results. Most importantly, online participant recruitment allows the researchers to have a large enough sample to investigate whether homosexual/bisexual people perceive vocal and facial attractiveness differently from other groups, an assumption that the researchers had but were unable to test.
+
+##Influenzanet
+
+Influenzanet is a Europe-wide network to monitor the activity of influenza-like-illness (ILI) with the aid of volunteers via the internet. And Google Flu Trends was a now-casting project initiated by Google to predict the trend of ILI in the United States. While Influenzanet and Google Flu Trends and traditional flu monitoring projects all serve similar purposes, they differ vastly in their design.
+
+First of all, the way these projects collect data differ. Influenzanet collects data through distributed data collection. Participants of Influenzanet are required to complete an online application form that contains various medical, geographic and behavioural questions, and then are reminded weekly to report any symptoms they have experienced since their last visit. On the other hand, Google Flu Trends directly uses observational data from Google Search to build its predictive model. Traditional disease control organizations, such as Centers for Desease Control and Prevention (CDC) uses an approach that is somewhat similar to the distributed data collection method used by Influenzanet. Instead of collecting data directly from individual participants, CDC has regional officies that are responsible for collecting data from collaborating laboratories, hospitals and clinics. 
+
+Moreover, the ways these projects estimates incidences of ILI are also drastically different. Influenzanet uses a definition of ILI that is derived from the ECDC definition, and it uses the day on which the symptoms started (as reported by the participant) to determine the incidence of ILI. ^2^ The weekly incidence is defined as the number of participants who reported the onset of ILI in that week, divided by the person-time of active participation during the same week. Using the weekly incidences reported by its participants, Influenzanet then predicts the incidence of ILI in each region/country. The way Google Flu Trends estimates incidences of ILI is more indirect: it uses the search data to build a predictive model, thus predicting the estimated number of incideces in each region. The Google Flu Trends project computes a time series of a large amount of queries, as well as the geological location associated with their IP addresses. After that, Google Flu Trends uses a linear model to compute the log-odds of ILI physican visit and the log-odds of ILI-related search query. ^3, 4^ Traditional ILI monitoring projects, on the other hand, usually employes linear models to predict the current incidences of ILI based on the reported data from previous weeks.
+
+Due to the differences in their design, the costs of these projects are also likely to vary. For example, Influenzanet will likely to have relatively high costs on recruitment of its participants, because the project does not only require a relatively large number of participants from different European countries, each participants must be motivated to engage in the project for a relatively long term to ensure the quality of the data. The costs of Google Flu Trends, on the other hand, should be much lower than Influenzanet, because the project has almost no cost on data collection. However, the machine-learning approach adopted by Google Flu Trends will likely to induce more costs on its computational resources. Traditional flu monitoring approaches will have an incredibly high cost on data collection, as the organizations must have a large number of local offices, and must maintain long-term relationships with local hospitals and clinics. 
+These projects also tend to have different types of likely errors because of their different now-casting approaches. For example. Influenzanet tend to have systematic errors due to their participants sampling method: participants with ILI symtons are more likely to sign up for the project. Google Flu Trends are more subject to the systematic errors caused by the changign Google Search algorithm. Moreover, the difference in media coverage of different flus might cause a drastically different amount in search queries, leading to an inaccurate prediction of flu incidences. As for traditional linear methods, because many flu can develop in an exponential manner during mass outbreak, linear methods are subject to errors during such periods.
+
+Inmagine an unsettled time, such as the swine flu outbreak. In this case, more people will likely to sign up for Influenzanet, causing a slight overestimation of incidences of ILI. (Because Influenzanet will only include data from participants who completed more than three weekly surveys, it will not likely to overestimate the incidences by a large amount.) Google Flu Trends, on the other hand, will likely to suffer from a huge overestimation of the actual incidences. While the incidences of swine flu will go up during an outbreak, the media coverage and search queries will likely to grow in an even more drastic manner. Therefore, using the number of search queries as the predictor, the machine learning model of Google Flu Trends will likely to overestimate the actual incidences by a huge margin. In contrast, traditional linear estimation methods will likely to underestimate the actual incidences of flu, because the increase in incidences of flu during an outbreak will be much faster than what the linear model suggests.
+
+##Reference:
+1. J. V. Valentina et al. *Positive association between vocal and facial attractiveness in women but not in men: A cross-cultural study* December, 2016. ScienceDirect.
+2. InfluenzaNet: *Method*. https://www.influenzanet.eu/method/
+3. Ginsberg, Jeremy. *Detecting influenza epidemics using search engine query data*. November 2012. Google.
+4. Ginsberg, Jeremy; Mohebbi, Matthew H.; Patel, Rajan S.; Brammer, Lynnette; Smolinski, Mark S.; Brilliant, Larry (19 February 2009). *Detecting influenza epidemics using search engine query data*. Nature. 457 (7232): 1012¨C1014. PMID 19020500. doi:10.1038/nature07634.

@@ -1,0 +1,70 @@
+---
+title: "Proposal 2"
+output: html_document
+Name: Yuqian Gong
+---
+Measuring and ranking the factors’ effects on Airbnb guests’ perceived trust on a host through a survey approach 
+Nancy Gong
+
+Introduction and Question of interest
+The rising popularity of shared economy business models and the giant data generated from these platforms have enabled social scientists to examine questions relating to how strangers build interpersonal trust among each other as well as what factors are most valued to form a temporary rental relationship. Last proposal tried to investigate whether racial bias affects demand for certain hosts’ listings in Chicago Airbnb by analyzing the observational data. Although considerable insights can be drawn upon the effects of racial effects from the regression results of observational data, we hold reserved views on the scale of economic significance it delivers because of the limitations of observational data in accurately representing potential guests’ preferences. On the other hand, we believe that using first-hand survey data can help us better understand the users’ preferences and find the most influential factors in building trust among strangers. 
+
+Earlier research has studied questions such as how self-disclosure of Airbnb hosts through their profiles could increase the level of trustworthiness and whether profile-based perceptions of trustworthiness predict choice of host [1]. However, few researches have relied on first hand survey data from the guests’ side and most choose observational data of hosts’ listings because of its low cost and easy accessibility. In this proposal, by designing a survey to be distributed to our sampled Airbnb guests, we are interested in examining the most influential factors that a potential guest would think increase the trustworthiness level of a host and whether the race of a host affects guests’ perceived trust towards him or her. 
+
+Constructing sample population
+Our target population is all Airbnb registered guests in U.S. Ideally, we hope to get a list of all Airbnb registered guests’ email addresses by gaining Airbnb’s consent and then randomly draw a sample of guests from them. In this way, we assume that the random sample which would be representative of the target population. Surveys will be sent to their email addresses. Every participant will be put in a lottery of winning Starbucks gift cards, a common type of gift which we believe helps encourage participation and will not induce representation bias as it is irrelevant to the question we are interested in. 
+
+Survey design and questions 
+The first part of the survey is basic information about the participant, which will be used as categories to divide participants into subgroups with different features. Questions we think as relevant include the following ones: a person’s gender, profession, race, age, how long he or she has been registered on Airbnb, the number of bookings during the past year on Airbnb and etc.
+
+The second part will apply the Wiki survey method [2]. As we want to estimate the most valued factors of a host’s post from guests’ perspective to establish trust, we avoid annoying our participants by requiring them to rank all the factors according to their perceived significance. Besides, we also want to investigate what other factors would be considered by guests which are not included in our listing. Wiki survey serve as good method to solve these problems. 
+
+Factors of interest include the race of a host, location rating, check-in rating, communication rating, accuracy rating, picture qualities (better interior decoration), amenity qualities, the overall rating, the number of reviewers, the length of the host’s biography, the contents of the host’s biography and so on. Similar to the project by Salganik and Levy where they collect ideas from citizens about making New York a greener city, a randomly selected pair of factors from our list will be presented to our participants each time. Formatted examples of the question could be “Compare higher location rating to better interior decoration, given other things equal, which factor will strengthen your belief that this staying experience will be great?” or “Which factor increases your sense of trust on the host, the fact that the host is in the same ethnic group as you, or the overall rating of the house?”. An option of “I cannot decide or I don’t have any preference” will be provided for each question. At each question, participants can contribute their own factor of consideration, which will be added to the factor list. Each time the pool draws two factors and ask the participant to compare until they choose to stop.
+
+A ranking of all factors being selected might reflect average participant’s most considered factors to decide how much they trust the host. If the race of the host is not a factor with high ranking, we would assume that it has little significance in trust building between guests and hosts
+
+
+Further analysis and evaluation
+Survey data vs. observational data
+As discussed in the introduction, survey data provide more direct and accurate information critical to our research question, which cannot be drawn through observational data. With observation data from Inside Airbnb, we can only run regression on the limited factors of interest to infer their significance in potential guests’ decision making processes. Also, price, as the dependent variable in our model using observational data, is certainly not a credible construct variable to measure users’ sense of trust in this case. On the other hand, through first-hand surveys, more factors are added by users to complement our prior incomplete model. Most importantly, the significance of each factor can be measured in a straight-forward way and it is redundant to incorporate the approximate construct variable as sense of trust is directly asked in the survey.
+
+Representation Error 
+Even if the incentives to participate (Starbucks gift cards) are irrelevant to our question of interest and thus will not induce certain types of users to participate, our sample population will still suffer from the problem of representation error for reasons we are not aware of. It could be the case that young people would check their emails often and thus have a higher response rate; or old Airbnb guests are more willing to share their opinions as they have formed consistent preferences to choose a host. To best estimate the general ranking of factors, the method of post-stratification will be applied to adjust weights for each subgroup, which are groups divided based on the basic information we collect for each participant. For instance, female white students, whose age are between 20 and 25 and whose experiences of using Airbnb are under one year, would become a group. The portion of participants from each subgroup in the sample population will be compared with its portion in the target population. Those underrepresented will be given higher weights in ranking average user’s consideration of each factor. And vice versa. This is believed to greatly reduce representation error. 
+
+Why it is digitally enhanced? 
+The Wiki survey method makes it possible for each participant to add their own options and it also combines closed questions and open questions, which couldn’t be implemented through non-digital methods
+
+In addition, we can match other Airbnb guests to a corresponding subgroup if they share the same basic features with this subgroup, and then predict their most valued factors of enhancing interpersonal trust with the host. Notably, the basic information we collect for our participants can also be obtained for our target population if Airbnb is willing to provide for us. This method of amplified asking expands the use of our survey results and help predict implications on those who don’t participate in the survey. 
+
+Conclusion
+In conclusion, first-hand surveys serve as an ideal tool to learn about Airbnb guest users’ internal preferences and differences in feelings of trust when looking at housing sources characterized by various dimensions of factors. This research question will not be clearly addressed through analysis of observational data due to its inadequate information in revealing individual preferences. The Wiki survey style and post-stratification are valid data collecting and analysis methods respectively to enhance participation experiences and reduce any possible representation errors. They create less biased results on subgroup as well as on overall level, which provide predictive power for a larger population of interest. However, there are some drawbacks in this survey. For instance, sense of trust towards a host, or how guests regard a host as trustworthy, is a rather abstract concept in this survey. Further work needs to be done to measure this concept to make our research design more rigorous.
+
+
+References:
+1.	Xiao Ma, Jeffrey T. Hancock, Kenneth Lim Mingjie. 2017. Mor Naaman Self-Disclosure and Perceived Trustworthiness of Airbnb Host Profiles. CSCW’17 Proceedings.（2017）
+2.	Matthew J. Salganik. Bit by Bit: Social Research in the Digital Age. Princeton University Press. (2017) 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

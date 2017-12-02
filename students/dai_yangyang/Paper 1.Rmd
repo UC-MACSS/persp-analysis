@@ -1,0 +1,47 @@
+---
+title: "Paper1"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Proposing an observational study 
+##Name: Yangyang Dai
+
+##Introduction:
+The psychological state of students is of great importance to the society and have become the attention of many researches today. In specific, many ongoing researches focus on the positive effects and negative effects of the cartoons and anime on students’ mental state. Sharing the similar research interest, this paper intends to discover how does watching cartoon and anime influence the psychological state of college students.  A quantitative method will be used based on big data research results on social medias such as text message and Facebook.  
+
+##Significance:
+The research will provide parents with the insights that how to educate or inspire their kids when they are young. They need to focus on their children’s mental state, not only their physical state.
+Students’ mental state is also of great importance to the education itself. Teachers and professors hold great responsibility to watch over and care about the students’ psychological state too. With fully understanding the power of cartoons and anime, education system may have a refreshing angle to develop the students’ studying abilities. 
+To cartoon watchers and non-cartoon watchers, this may give them a new perspective on what they are and what their interests mean to themselves.
+To future Researchers, this study could help them develop longitudinal landscape on the related researches, and help them fully understand the role of cartoons that play in the college students’ life in today’s social media. 
+
+##Method:
+This study will analyze the use of emotional words by college students in the United States used in social media. The social media that will be analyzed including messages sent to text pagers and Facebook posts. The record will be kept whenever the student mentions that they “like” certain cartoons or anime in their Facebook “like pages” or under their “like” tags. And the records of this student will be recorded whenever he or she post any emotional words on Facebook posts or in messages he sent to others. The dummy variable will be the students who don’t have any records indicating they like cartoons on social media. And correspondently, the records of the emotional words from them will be kept. 
+To analyze the data of posts on Facebook, the Graph API is the primary way to get data in and out of Facebook's social graph. It's a low-level HTTP-based API that is used to query data, post new stories, upload photos and a variety of other tasks that an app might need to do. This guide explains how to accomplish all these things in the Graph API. We could also refer to the buzzsumo website to analyze specific categories of posts. (http://buzzsumo.com/knowledge/analyze-facebook-posts-and-pages). From the The Emotional Timeline of September 11, 2001 paper, we learned that the pager transcripts, published anonymously and freely available on the Internet (WikiLeaks, 2009), total more than 573,000 lines and 6.4 million words from more than 85,000 distinguishable pagers. And this paper will use the data blocks over the last decade, 2007 – 2017. For each of these data blocks, we computed the percentage of words related to (a) sadness (e.g., crying, grief), (b) anxiety (e.g., worried, fearful), and (c) anger (e.g., hate, annoyed) using the Linguistic Inquiry and Word Count (LIWC; Pennebaker, Francis, & Booth, 2001). To obtain a pure measure of the percentage of emotional content, we computed all measures as the percentage of words in relation to the total number of words included in the dictionary. 
+
+##Discussions and Positiveness:
+The reason this paper focuses on a particular group, college students, is to minimize the correlation between the age of people and the likelihood they will watch cartoons or anime. Because in common sense, the younger the people are, the more likely they tend to watch cartoons. People attending college are in relatively a mature stage, and their world view and perspectives towards the surroundings have largely formed. At this stage, the influence of outer force such as watching cartoons may have direct impact on their mental state. Also, it could suggest people who innately like to watch cartoons tend to have certain mental state, which again confirms the correlation between cartoons and mental state. This might shed a light to the research on how to change students mental state using the power of cartoons further. 
+The counting measurement method is used in this research. The qualitative aspect of the data will be transformed into quantitative data, which is the counts of the occurrence of specific words mentioned in the methods session above. The countable nature of the social media data makes the research easier to analyze the potential patterns.  
+The data collected over the last decade on active social media are very “big” and worth analyzing. It is relevant in the sense that the period used is the period that Facebook is popular and widely used by college students without constraints. 
+The data is always on because college students tend to update their Facebook status very often and in every second, there are data being collected. 
+The ten-year time frame is a longitudinally reliable period, since it keeps recording the changes and constancies over time.  The behavior of college students may reflect a reliable trend and the correlation may turn out meaningful.
+Compared to the alternative observational methods such as self-reporting, the big data method on social medias is more sincere and direct quantitatively. Since the self-reporting method cannot ensure the true presenting of information if the reporters are consciously or subconsciously deceiving others or themselves. 
+
+##Potential problems:
+The data may not be very representative or inclusive since it might not be the case that every student who likes cartoons or anime indicate it publicly on Facebook or “liked” it in certain related posts. Or there might be that not every student who likes cartoons or anime even has a Facebook account. And there is also seasonal effect underneath the data behavior, since in final week’s period, the students tend to become more stressed and may send more negative words. 
+The text analysis on social medias could be tricky and challenging. Firstly, the different usage of words would be hard to collect inclusively. Cartoon or anime fans may use specific words in the shows to represent their emotions. Secondly, the people who watch those cartoons and anime are from different countries, there exits regional effect on the mental state of different people. We might need other dummy variables to eliminate the regional effect in different regions, for example, natural disasters, political events which could trigger emotional turbulence. 
+Some technical challenges involve the accessibility of data scrapping. Although social media data is accessible through APIs, due to the commercial value of the data, most of the major sources such as Facebook and Google are making it increasingly difficult for academics to obtain comprehensive access to their ‘raw’ data; very few social data sources provide affordable data offerings to academia and researchers.
+
+##References:
+Facebook for developer’s blog, https://developers.facebook.com/docs/graph-api/using-graph-api
+The Effects of Anime in Our Society, Linggo, Abril 6, salongcaykyrt.blogspot.com/
+The Free 'Big Data' Sources Everyone Should Know, Bernard Marr on January 26, 2015 http://www.datasciencecentral.com/profiles/blogs/the-free-big-data-sources-everyone-should-know
+The Emotional Timeline of September 11, 2001, Mitja D. Back, Albrecht C.P. Küfner, Boris Egloff, http://journals.sagepub.com.proxy.uchicago.edu/doi/abs/10.1177/0956797610382124
+Mehl M.R. (2006). Quantitative text analysis. In Eid M., Diener E. (Eds.), Handbook of multimethod measurement in psychology (pp. 141–156). Washington, DC: American Psychological Association.
+
+
+

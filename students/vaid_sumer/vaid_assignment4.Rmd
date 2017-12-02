@@ -1,0 +1,194 @@
+---
+title: "Assignment 4: Simulating Your Income"
+output: html_document
+---
+Name: Sumer Vaid 
+
+Question 1
+```{Question 1}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+
+standard_dev<-0.1
+p<-0.2
+g<-0.03
+inc0<-80000
+years<-40
+draws<-10000
+
+year_vector<-rep(2019:2058)
+
+#Question 1
+#creating a matrix of requisite size
+mat<-matrix(nrow = draws, ncol=years)
+mat_df<-data.frame(mat)
+colnames(mat_df)<-year_vector
+####Drawing 10,000 sets of 40 normally distributed errors with mean 0 and standard_dev 0.1
+set.seed(3)
+#creates matrix for error terms:
+errors<-matrix(nrow=draws, ncol=years) 
+#fills error matrix:
+for (a in 1:years) {
+errors[,a]<-rlnorm(draws, mean=0, sd=0.1)
+}
+#fill First Column of matrix
+mat_df[,1]<-log(inc0)+ log(errors[,1])
+#Plug those income process defined above to simulate your life income
+#mat_df[,2]<-((1-p)*(log(inc0)+(g*2)))+(p*log(mat_df[,1]))+log(errors[,2])
+for (y in 2:years) {
+  mat_df[,y]<-((1-p)*(log(inc0)+(g*y)))+p*mat_df[,(y-1)]+log(errors[,y])
+}
+#Plot One of Your Life Income Paths
+wealth<-matrix(nrow=draws, ncol=years)
+colnames(wealth)<-year_vector
+for (c in 1:years) {
+  wealth[,c]<-exp(mat_df[,c])
+}
+
+wealth_melted<-melt(wealth)
+colnames(wealth_melted)<-c("Path index", "Year", "Income")
+
+#Plot one income path
+plot(wealth[2,], type="l", ylab = "Income", xlab="Year", main="Income Path Plot (Question 1)", xaxt='n')
+axis(1, at=1:40, labels=rep(2019:2058))
+
+```
+
+Question 2
+```{Question 2}
+chunk<-subset(wealth_melted, Year==2019)
+#Plot a histogram with 50 bins..
+Q2Plot<-ggplot(chunk, aes(Income))+geom_histogram(bins=50)+labs(title="Question 2",x="Income ($)")
+percent_greater<-((sum(chunk$Income>100000))/(length(chunk$Income)))*100
+percent_lesser<-((sum(chunk$Income<70000))/(length(chunk$Income)))*100
+print(Q2Plot)
+```
+Approximately 1.33% of the graduating class will earn more than $100,000. Approximately 9.38% of the graduating class will earn less than $70,000. Eye-balling the histogram indicates that the histogram is symmmetric and bell-curved, indicating that the distribution is normally distributed. 
+
+
+
+Question 3
+```{Question 3}
+debt<-95000
+remaining<-debt
+payment<-matrix(nrow=draws, ncol=years)
+current_debt<-data.frame(matrix(nrow=draws, ncol=years))
+total_payment<-data.frame(matrix(nrow=draws, ncol=years))
+total_payment[,1]<-0.10*wealth[,1]
+colnames(total_payment)<-c(year_vector)
+payoff_year<-data.frame(matrix(nrow=draws, ncol=years))
+  
+for (c in 1:years){
+  payment[, c]<-0.10*wealth[,c]
+}
+
+for (c in 2:years-1){
+  total_payment[,c+1]<-as.numeric(total_payment[,c]+payment[,c+1])
+}
+
+for (c in 1:10000) {
+payoff_year[c,]<-(total_payment[c,]>=95000)
+}
+colnames(payoff_year)<-year_vector
+
+freeyears<-data.frame(matrix(nrow=draws))
+for (e in 1:draws){
+freeyears[e,]<-year_vector[min(which(payoff_year[e,]==TRUE))]
+}
+
+colnames(freeyears)<-"Year"
+Q3Plot<-ggplot(freeyears, aes(Year))+geom_histogram()+labs(title="Question 3",x="Year When Debt-Free")
+percent_lesser_years<-((sum(freeyears$Year<=2028))/(length(freeyears$Year)))*100
+```
+Approximately 41.7% will be able to pay off the loan in 10 years. 
+
+
+
+
+```{Question 4}
+standard_dev<-0.15
+p<-0.2
+g<-0.03
+inc0<-85000
+years<-40
+draws<-10000
+
+year_vector<-rep(2019:2058)
+
+
+
+mat<-matrix(nrow = draws, ncol=years)
+mat_df<-data.frame(mat)
+colnames(mat_df)<-year_vector
+
+
+
+errors<-matrix(nrow=draws, ncol=years) 
+
+set.seed(5)
+for (a in 1:years) {
+  errors[,a]<-rlnorm(draws, mean=0, sd=0.1)
+}
+
+mat_df[,1]<-log(inc0)+ log(errors[,1])
+
+for (y in 2:years) {
+  mat_df[,y]<-((1-p)*(log(inc0)+(g*y)))+p*mat_df[,(y-1)]+log(errors[,y])
+}
+
+wealth<-matrix(nrow=draws, ncol=years)
+colnames(wealth)<-year_vector
+for (c in 1:years) {
+  wealth[,c]<-exp(mat_df[,c])
+}
+
+wealth_melted<-melt(wealth)
+colnames(wealth_melted)<-c("Path index", "Year", "Income")
+
+
+plot(wealth[2,], type="l", ylab = "Income", xlab="Year", main="Income Path Plot (Question 4)", xaxt='n')
+axis(1, at=1:40, labels=rep(2019:2058))
+
+
+chunk<-subset(wealth_melted, Year==2019)
+Q4Plot2<-ggplot(chunk, aes(Income))+geom_histogram(bins=50)+labs(title="Question 4",x="Income")
+percent_greater<-((sum(chunk$Income>100000))/(length(chunk$Income)))*100
+percent_lesser<-((sum(chunk$Income<70000))/(length(chunk$Income)))*100
+
+
+debt<-95000
+remaining<-debt
+payment<-matrix(nrow=draws, ncol=years)
+current_debt<-data.frame(matrix(nrow=draws, ncol=years))
+total_payment<-data.frame(matrix(nrow=draws, ncol=years))
+total_payment[,1]<-0.10*wealth[,1]
+colnames(total_payment)<-c(year_vector)
+payoff_year<-data.frame(matrix(nrow=draws, ncol=years))
+
+for (c in 1:years){
+  payment[, c]<-0.10*wealth[,c]
+}
+
+for (c in 2:years-1){
+  total_payment[,c+1]<-as.numeric(total_payment[,c]+payment[,c+1])
+}
+
+for (c in 1:10000) {
+  payoff_year[c,]<-(total_payment[c,]>=95000)
+}
+colnames(payoff_year)<-year_vector
+
+freeyears<-data.frame(matrix(nrow=draws))
+for (e in 1:draws){
+  freeyears[e,]<-year_vector[min(which(payoff_year[e,]==TRUE))]
+}
+
+colnames(freeyears)<-"Year"
+Q4Plot<-ggplot(freeyears, aes(Year))+geom_histogram()+labs(title="Question 4",x="Year When Debt-Free")
+percent_lesser_years<-((sum(freeyears$Year<=2028))/(length(freeyears$Year)))*100
+```
+Approximately 90.51% will be able to pay off the loan in 10 years. 
+
+

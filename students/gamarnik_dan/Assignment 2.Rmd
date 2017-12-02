@@ -1,0 +1,74 @@
+---
+title: "Assignment 2"
+author: "Dan Gamarnik"
+date: "October 20, 2017"
+output: md_document
+---
+
+# Feeding The Mouth That Bites: Subsidies and Secessionist Demands In Catalonia, A Survey Method
+
+Dan Gamarnik
+
+October 23, 2017
+
+Perspectives on Computational Analysis
+
+### Introduction
+
+Less attention has been paid to secessionist movements in the civil conflict literature, especially on what causes secessionist demands. This is especially pertinent in the case of Catalonia which had a contested referendum for independence in 2017. Specifically, I want to ask: do changes in subsidies create secessionist demands? Within Spanish Catalonia, I will use an ecological momentary assessment for 700 cell phone users who do not use Twitter (asking about secession) and compare the survey results to text analysis of social media posts.
+
+### Research Design
+
+#### Text analysis of social media
+
+As categorized by [Salganik (2017)](http://www.bitbybitbook.com/en/observing-behavior/designs/forecasting/), this study would be considered a causal use of big data (as opposed to predictive models) because it seeks to explain why something is occurring and not just predict it. In this case, the independent variable (sub-national tax funding) does not utilize big data but the *dependent* variable, secessionist demands, does. To measure secessionist demands in a non-survey method, I plan on web scraping the users of [Twitter](https://twitter.com/) and specifically look at their posts (or in this case tweets and statuses). It will only observe users that are geo-located in Catalonia.
+
+Like a longitudinal study, this will follow the same users over time. It will measure people over four months and compare their posts to changes in funding of Catalonia. Using machine learning techniques, I will then code whether a specific post is pro-independence/secession or not. With machine learning, it will be able to recognize things like ambiguous wording, satire, and bots which can skew normal attempts at coding. Finally, based on this coding, I will test whether pro-secessionist demands have increased among these users in relation to their local funding. This approach has numerous advantages in comparison to other non-big data designs.
+
+#### Survey design
+
+However, social media posts are only an approximation of public opinion. To get a more direct measurement of secessionist sentiment, I will use an ecological momentary assessment (EMA) for 700, Catalan cell phone users who do not use Twitter. I will get people in the UChicago computer sciences department to create an app that asks questions throughout the day for the four-month period. This is similar to [Sugie (2016)](http://journals.sagepub.com.proxy.uchicago.edu/doi/full/10.1177/0049124115626176) except that the population will try to be similar to typical people with twitter accounts. Everyone in the survey will be asked demographic questions to get a clear picture of the respondents.
+
+The app will give various questions, but the most crucial will be on perceptions of Spanish funding for Catalonia and secessionist sentiment. These 700 cell phone users will be distributed among Catalonia's districts to get a more micro-level analysis. Likewise, the app will geocode where everyone was when they answered the question.
+
+Finally, the surveys will be compared to the social media responses in the given time period. Much like how [Blumenstock et al. (2015)](http://science.sciencemag.org/content/350/6264/1073), compared Rwandan purchases made on cell phones to poverty rates, the survey responses will be compared to the social media sentiment. This will be done both at the aggregate level of Catalonia and within Catalonia's provinces. Measuring both the macro and micro should give extra leverage over the data.
+
+### Why Enriched Data?
+
+#### How the method enhances
+
+This data is significantly more enhanced than typical survey data in a number of ways. First, in addition to using traditional surveys, this compares people's responses to social media posts. That is, it creates a baseline to compare the survey data to. Because of this extra data source, the external validity of the data is vastly improved.
+
+Secondly, because this is an EMA, it improves on the underlying survey methodology in various ways. For traditional surveys, people are typically called or incentivized to come in to answer many questions. This can cause problems if many people are unwilling to answer their phones for unknown numbers or become too tired during lengthy questioning secessions and fail to give good responses.
+
+With EMAs, people are asked numerous questions over several months. Instead of an exhaustive secession, people have the breathing room to take many questions at their own time. Likewise, given the longer time period, this will actually increase the amount of questions people will answer and thus the results will be more robust than traditional surveys. In summary, this project digitally enhances the data by using non-survey data in conjunction with survey data and by using an EMA.
+
+#### Advantage to observational data
+
+One of the benefits of using survey data for this project-in addition to just using observational data-is that this research design is fundamentally based on the idea of public opinion. Secessionist sentiment is, at base, a question of how people feel about wanting to become an independent country. Indeed, with public opinion the best way to measure it is to directly ask people what they think via a survey.
+
+The other advantage is the methodological concern over using social media. While this project seeks to solve those problems using machine learning to filter out things like bots and satire, there are all sorts of problems with using social media alone. Social media might have algorithmic drift which prioritizes certain posts over others, and there is the issue of self-censorship over contested political views which users might not want to be publicly known. With survey methods, these problems are taken care of.
+
+Ultimately, this project relies on public opinion which conceptually and methodologically is better suited using survey methods. It is both the most direct way of getting an answer and avoids many of the methodologically pitfalls that come with web scraping social media.
+
+#### Possibility for error
+
+However, this is not to say the project is without any problems, there are numerous issues that can threaten the inference of the study. For these issues I will try to account for them and correct them.
+
+##### Privacy and self-censorship
+
+The first possible problem might be issues regarding the app's privacy since it is collecting participants' location data. Even if it is not unethical or illegal, this might make the users suspicious about where their data is going and not want to be forthcoming about their political views.
+
+To help solve for this, I will have small group discussions (similar to Sugie's (2016) approach) where I discuss issues of privacy. I will encourage them to ask questions and allow them to turn off the location data. However, I will urge them to not do so since it is problematic with the study. I believe that by being forward with the design of the study and by having them ask questions it will assuage their privacy concerns and make them less likely to self-censor. In sum, being open about the data collection and having them ask questions will solve any suspicions about privacy.
+
+##### Unrepresentativeness
+
+Another major source of error is if the cell phone group is not representative of the kind of influential population that uses social media, and as such, is not representative of the kind of people I want to measure. This is not an unwarranted fear since, if these people do not have a twitter, there is a decent chance they are not the kind of population that the study is trying to measure.
+
+To account for this, I will collect the cell phone users' demographic information and use a Multi-level Regression and Poststratification (MRP) analysis to adjust for their demographics. Using the techniques of MRP, this will look for those who are most similar to social media users and use them as a closer point of comparison. In sum, by using an MRP analysis, I will overcome problems of unrepresentativeness.
+
+##### Social media contagion
+
+Finally, one source of error could be contagion from social media into the EMA group. Tweets and opinions derived from friends who are online could heavily influence the cell phone users. This is especially true if things go "viral" via social media. That is, even if the respondents are representative and do not go on Twitter, they may still be overly influenced by it, if only indirectly.
+
+To minimize this error, I will ask the respondents how many friends and/or family they have who have a Twitter. Then in the MRP analysis, I will control for this number to try to get less of a bias. That is, by controlling for the number of relationships to people who use social media it will reduce this bias. Ultimately, like the problem of unrepresentativeness, using an MRP analysis to control for acquaintances who have social media should help reduce this possibility for error.

@@ -1,0 +1,44 @@
+###Identifying the psychological effect of conformity on purchasing intention of different age groups: empirical evidence from a Chinese online retailer 
+
+##Introduction  
+
+Conformity, as described by Cialdini and Goldstein (2004), refers to the act of changing one’s behavior to match the responses of others. Individuals are motivated to mimic the behavior of others due to desire to form an accurate interpretation of reality and behave correctly (informational conformity) or to obtain the social approval (normative conformity). Though theoretically, the two motivations are interrelated and hard to distinguish, they jointly form the third underlying motive to maintain one’s self-concept, both via self-esteem protection as well as self-categorization processes. Previous literature has identified age differences in resistance to peer pressure (Steinberg and Monahan 2007). The results suggest that the resistance of peer pressure increases linearly between 14 - 18 while the changes in this capacity are not significant from 18 to 30. According to these results, it might be hypothesized that there are still some variations in tendency to conform across differing age groups.
+
+Meanwhile, many consumer researchers claim that people construct their self-concepts and express their self-image through assorted consumption behavior. Based on this assertion, my proposed study focuses on examining the psychological effect of conformity on the purchasing intention across different age groups. To be explicit, the paper intends to examine if, in the specific context of purchasing behavior regarding trending items, the effect of age is stronger and more pronounced in terms of conformity.
+
+The study will be conducted in the form of an online survey from the biggest Chinese online shopping website, Taobao. The findings of this paper can help online retailers improve the efficiency of transactions. For example, modifying their item-sorting algorithm in accordance with customers in different groups: for groups that have high score of conformity, which indicates higher propensity to purchase trending items, increases the weights of trending items so that they can be observed at first; whereas for the consumer groups that are not affected by conformity, rank the trending items lower. 
+
+## Survey Design 
+
+The survey will be conducted in seeking a partnership with Taobao, a mega online retailer in China. By the end of August 2017, Taobao has more than 500 million of registered members as well as 369 million of monthly active users. The intended duration of the survey is one month. The population of interest is the online consumers of Taobao. Since the vast majority of these consumers age between 10-60, we define five age groups to be studied are 10-20, 20-30, 30-40, 40-50 and 50-60. 
+
+The survey is designed to pop-up after the users log in and enter the apparel department. Before the survey starts, the consumers are informed that: "the survey is designed to study the purchasing behavior of Taobao's consumers. Your completion of the survey will contribute to the optimization of Taobao's sorting algorithm in order to facilitate your purchase. During this survey, you will be presented some images of apparel, a brief product description, and associated price, and you will need to choose from a scale that can best represent your purchasing intention." The consumers can choose whether to participate this survey. For the survey participants, the first question is to choose their age group from the five and gender. One possible way is that, we can compare the spending of the trending items to the spending of some comparable items across different age groups, after controlling the characteristics including product category, price, appearance, texture and brand. The difference can approximate  the effect of conformity. The trending items presented are redefined daily according to the 10 most popular items on the list of the previous day, for the associated gender and age group. The survey participants are asked to scale from one to five to represent their willingness to buy the product, with five stands for "definitely buy" and one stands for "never buy". The survey will continue running until the specified number of results is reached. We calculated the mean of the scale for each group. 
+
+The hypothesis to be tested is whether the means are different across different age groups. We want to test this hypothesis on a daily basis so that the result from presenting different trending items are not mixed together. After collecting the data, we can plot the mean difference of different age groups. If the conformity does have a heterogeneous effect on the purchasing intention of different age groups, the negative/positive difference of age groups should be persistent across the survey period. 
+
+##Advantages over traditional survey method 
+
+The traditional survey method, no matter the face-to-face interviews or random digit dialing (RDD) are both restricted by the research budget. The researchers can only approach a limited number of survey participants but anticipate a precise estimation from the data. To achieve this, the researchers are required to have a solid research design and flawless implementation. The transition to the digital survey has several prominent merits. Firstly, due to the inherited cost efficiency of an online survey, the survey can be scattered to a larger amount of people compared to face-to-face survey at the first place. Hence, the concern of representation error is greatly alleviated. Secondly, the response rate is expected to be higher according to the survey design. The customers are informed that completing the survey will help the system better understand their preference so that the presentation of items can be customized. By doing so, we believe that customers are motivated to conduct the survey to some extent. In addition to this, the survey is designed to pop up when people intend to browse for items, which, in general people will do during their leisure time. 
+
+The traditional way of measuring conformity is to use a psychological scale (Santor, Messervey and Kusumakar 2000) Though validated to be internally consistent, the scales involves answering numerosus questions with specified situations. Completing the survey requires the patience of participants. However, the online survey can be readily conducted. As the measurement is straightforward, it is reasonable to assume that this survey incurs less measurement error compare to measuring with psychological scales. 
+
+##Advantages over using observational data 
+
+As the nature of this research question, the measurement of conformity and purchasing intention is difficult using observational data. However, the actual purchase behavior is not a good reflection of purchasing intention. Purchasing intention plays an important role to formulate the marketing starategy for retailers. To be specific, the retailer do not need to put much emphasize on the consumers who will definitely buy the product as well as who will never buy the product. Instead, with the full knowledge of their purchasing intention, the marketing strategy should target on the people with certain propensity to buy, for instance, the participants answer 4 in our survey. This is obviously unachievable using observational data. The survey method is generally more appropriate for measuring the internal state of human-being. 
+
+##Potential sources of error
+
+The potential sources of error of this survey design are the representation error. Although the digital-enriched survey has enabled us to collect a large amount of data, as the disproportionate distribution of Taobao's active users in different age groups, a naive scattering of the survey may lead to inadequate data in the elder group, say 50-60, and excessive data in the young/middle-aged group. To overcome this drawback, we weight the non-probability samples. By August 2017, 60% of Taobao's users consist of people under 30, and more than 70% Taobao monthly active users that are in their 20s or 30s. The proportion of female and male users are 51% and 49% respectively. Therefore, we assign lower weights to survey participants between 20-30 and increase the weights to the elder group based on its proportion in the total registered user of Taobao. 
+
+
+##References
+
+Steinberg, Laurence, and Kathryn C. Monahan. "Age differences in resistance to peer influence." Developmental psychology 43, no. 6 (2007): 1531.
+
+Santor, Darcy A., Deanna Messervey, and Vivek Kusumakar. "Measuring peer pressure, popularity, and conformity in adolescent boys and girls: Predicting school performance, sexual attitudes, and substance abuse." Journal of youth and adolescence 29, no. 2 (2000): 163-182.  
+
+Cialdini, Robert B., and Noah J. Goldstein. "Social influence: Compliance and conformity." Annu. Rev. Psychol. 55 (2004): 591-621.
+
+
+ 
+ 

@@ -1,4 +1,4 @@
-Untitled
+Unsupervised Learning
 ================
 Kanyao Han
 
@@ -155,7 +155,7 @@ ggplot(k2.out, aes(PC1, PC2)) +
              size = 3, fill = "red", color = "red", alpha = 0.5) +
   geom_text(aes(center1, center2, label = "CENTER"), data = k2.center, size = 2.5) +
   theme(legend.position = "none") +
-  labs(title = "Clustering for First Two Principal Component (2K)",
+  labs(title = "Observation on the First Two Principal Components (2K)",
        x = "First Component",
        y = "Second Component")
 ```
@@ -186,7 +186,7 @@ ggplot(k4.out, aes(PC1, PC2)) +
              size = 3, fill = "red", color = "red", alpha = 0.5) +
   geom_text(aes(center1, center2, label = "CENTER"), data = k4.center, size = 2.5) +
   theme(legend.position = "none") +
-  labs(title = "Clustering for First Two Principal Component (4K)",
+  labs(title = "Observation on the First Two Principal Components (4K)",
        x = "First Component",
        y = "Second Component")
 ```
@@ -218,7 +218,7 @@ ggplot(k3.out, aes(PC1, PC2)) +
   geom_text(aes(center1, center2, label = "CENTER"), data = k3.center, size = 2.5) +
   scale_color_manual(values = c("dark green", "#036564", "#EB6841")) +
   theme(legend.position = "none") +
-  labs(title = "Cluster for First Two Principal Component (3K)",
+  labs(title = "Observation on the First Two Principal Components (3K)",
        x = "First Component",
        y = "Second Component")
 ```
@@ -259,7 +259,7 @@ ggplot(k3.out2, aes(PC1, PC2)) +
   geom_text(aes(center1, center2, label = "CENTER"), data = k3.center2, size = 2.5) +
   scale_color_manual(values = c("#EB6841", "dark green", "#036564")) +
   theme(legend.position = "none") +
-  labs(title = "Cluster for First Two Principal Component (3K - 2PC)",
+  labs(title = "Observation on the First Two Principal Components (3K - 2PC)",
        x = "First Component",
        y = "Second Component")
 ```

@@ -2,7 +2,7 @@
 title: "Homework 08"
 author: "Kristopher Nichols"
 date: "December 3, 2017"
-output: html_document
+output: github_document
 ---
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE)
@@ -16,5 +16,4 @@ library(stats)
 library(forcats)
 library(tidyverse)
 ```
-
 

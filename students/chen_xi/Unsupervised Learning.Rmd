@@ -1,0 +1,225 @@
+---
+title: "Unsupervised Learning"
+author: "Xi Chen"
+date: "December 1, 2017"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Colleges
+
+```{r}
+setwd("C:/Users/Xi Chen/Desktop/Perspective - Analysis/My persp-analysis/Assignment/Assignment 8")
+college = read.csv("College.csv", header = TRUE)
+
+```
+
+### Q1. Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
+```{r}
+# Drop the non-numericial variable: Private
+pc = prcomp(college[,-1], scale=TRUE)
+head(pc$x[,1:2])
+biplot(pc, scale=0, cex = .6, 
+       xlab="First Principal Component",
+       xlabs=rep(".",nrow(college)),
+       ylab="Second Principal Component", 
+       xlim=c(-5,10),
+       ylim=c(-10,5),
+       expand = 1.3,
+       main="First Two Principal Components")
+
+library(FactoMineR)
+result = PCA(college[,-1])
+
+sort(pc$rotation[,1], decreasing=TRUE)
+sort(pc$rotation[,2], decreasing=FALSE)
+
+```
+
+Comments:
+
+The variables that appear strongly correlated with the first component: Top10perc, Top25perc, Expend, PhD, Terminal. 
+
+The variables that appear strongly correlated with the second component: F.Undergrad, Enroll, Accept, Apps, P.Undergrad.  
+
+
+### Q2. Calculate the cumulative proportion of variance explained by all the principal components (see 10.2.3 in ISLR). Approximately how much of the variance in College is explained by the first two principal components?
+```{r}
+result$eig
+
+plot(summary(pc)$importance[3,], type="o", col ="brown3",  
+     ylab ="Cumulative PVE", xlab="Principal Component",
+     main="Cumulative Proportion of Variance Explained")
+
+```
+
+Comments: 
+
+Approximately 58.36% of the variance in College is explained by the first two principal components.
+
+
+# Clustering States
+
+```{r}
+library(ISLR)
+data("USArrests")
+
+```
+
+### Q1. Perform PCA on the dataset and plot the observations on the first and second principal components.
+
+```{r}
+pc = prcomp(USArrests, scale=TRUE)
+summary(pc)
+head(pc$x)
+pc$rotation
+
+biplot(pc, scale=0, cex = .6, 
+       xlab="First Principal Component",
+       ylab="Second Principal Component",
+       xlim=c(-4, 4), 
+       ylim=c(-3, 3), 
+       expand = 2,
+       main="First Two Principal Components")
+
+result = PCA(USArrests)
+
+library(ggplot2)
+d = as.data.frame(pc$x[,1:2])
+ggplot(d, aes(d$PC1, d$PC2)) + 
+  geom_text(aes(label=rownames(d)), size=3) +
+  xlab("First Principal Component") + 
+  ylab("Second Principal Component") + 
+  ggtitle("Plot the Observations on the First Two Principal Components")
+
+```
+
+### Q2. Perform K-means clustering with K = 2. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r}
+k2 = kmeans(USArrests, 2, nstart = 20)
+
+d = as.data.frame(pc$x[,1:2])
+d$cluster = as.factor(k2$cluster)
+ggplot(d, aes(d$PC1, d$PC2,color=cluster)) +
+  geom_text(aes(label=rownames(d)), size=3) +
+  xlab("First Principal Component") + 
+  ylab("Second Principal Component") + 
+  ggtitle("K-Means Clustering Results with K = 2")
+
+```
+
+Comments:
+
+The K-means clustering (K=2) sperates the states into two clusters by around score 0 along the dimension of the first principal component. It seems that perhaps the states are roughly split into northern and sourthern groups.
+
+
+### Q3. Perform K-means clustering with K = 4. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+```{r}
+k4 = kmeans(USArrests, 4, nstart = 20)
+
+d = as.data.frame(pc$x[,1:2])
+d$cluster = as.factor(k4$cluster)
+ggplot(d, aes(d$PC1, d$PC2, color=cluster)) +
+  geom_text(aes(label=rownames(d)), size=3) +
+  xlab("First Principal Component") + 
+  ylab("Second Principal Component") + 
+  ggtitle("K-Means Clustering Results with K = 4")
+
+```
+
+Comments:
+
+At the K-means clustering (K=4), the first principal component still greatly influences the clustering results. Socre -1 roughly splits the states into cluster 1 and 4; score 0.5 roughly splits the states into cluster 1 and 2; score 1.5 roughly splits the states into cluster 2 and 3. There are several overlaps between the clusters. 
+
+
+### Q4. Perform K-means clustering with K = 3. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+```{r}
+k3 = kmeans(USArrests, 3, nstart = 20)
+
+d = as.data.frame(pc$x[,1:2])
+d$cluster = as.factor(k3$cluster)
+ggplot(d, aes(d$PC1, d$PC2, color=cluster)) +
+  geom_text(aes(label=rownames(d)),size=3) +
+  xlab("First Principal Component") + 
+  ylab("Second Principal Component") + 
+  ggtitle("K-Means Clustering Results with K = 3 (Raw Data)")
+
+```
+
+Comments:
+
+The K-means clustering with K=3 has intermediate results between K=2 and K=4. The first principal component still have main effects on the clustering boundaries. There are some overlaps between the clustering boundaries. 
+
+
+### Q5. Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.
+
+```{r}
+k3 = kmeans(pc$x[,1:2], 3, nstart = 20)
+
+d = as.data.frame(pc$x[,1:2])
+d$cluster = as.factor(k3$cluster)
+ggplot(d, aes(d$PC1, d$PC2, color=cluster)) +
+  geom_text(aes(label=rownames(d)), size=3) +
+  xlab("First Principal Component") + 
+  ylab("Second Principal Component") + 
+  ggtitle("K-Means Clustering Results with K = 3 (Score Vectors)")
+
+```
+
+Comments:
+
+Compared to the previous plot based on the raw data, most of the clustering results in this plot are the same, but a few states are changed to different clusters, such as Georgia, Tennessee, Texas, Colorado, and Hawaii. In addition, the clustering boundaries here have less overlaps. Therefore, it seems that clustering on the first two principal components score vectors may increase the accuracy of classification.
+
+
+### Q6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+```{r}
+hc.complete=hclust(dist(USArrests),method="complete")
+plot(hc.complete,main="Hierarchical Clustering with Complete Linkage", 
+     xlab="", sub="", cex=.9)
+```
+
+### Q7. Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
+```{r}
+plot(hc.complete,main="Hierarchical Clustering with Complete Linkage", 
+     xlab="", sub="", cex=.9)
+abline(h=150,col="red")
+
+cutree(hc.complete,3)
+table(cutree(hc.complete,3))
+
+```
+
+Comments:
+
+Cluster 1: Alaska, Alabama, Arizona, California, Delaware, Florida, Illionis, Louisiana, Michigan, Mississippi, Maryland, Nevada, New Mexico, New York, North Carolina, South Carolina.
+
+Cluster 2: Arkansas, Colorado, Georgia, Massachusetts, Missuouri, New Jersey, Oklahoma, Oregon, Rhode Island, Tennessee, Texas, Virgini, washington, Wyoming. 
+
+Cluster 3: Conecticut, Hawali, Idaho, Indiana, Lowa, Kansas, Kentucky, Maine, Minnesota, Montana, Nebraska, New Hampshire, North Dakota, Ohio, Pennsylavania, South Dakota, Utah, Vermont, West Virginia, Wisconsin. 
+
+### Q8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation 1. What effect does scaling the variables have on the hierarchical clustering obtained?
+```{r}
+USArrests_Scaled=scale(USArrests)
+
+hc.complete_scaled=hclust(dist(USArrests_Scaled),method="complete")
+
+plot(hc.complete_scaled, xlab="",sub="",cex=.9, 
+     main="Hierarchical Clustering with Scaled Features")
+
+cutree(hc.complete_scaled,3)
+table(cutree(hc.complete_scaled,3))
+
+```
+
+Comments:
+
+Cluster 1: Alabama, Alaska, Georgia, Louisiana, Mississippi, North Carolina, South Carolina, Tennessee.
+
+Cluster 2: Arizona, Colorado,C alifornia, Florida, Illinois, Maryland, Michigan, Montana, Nevada, New Mexico, New York, Texas.
+
+Cluster 3: Arkansas, Connecticut, Delaware, Hawaii, Idaho, Indiana, Iowa, Kansas, Kentucky, Maine, Massachusetts, Minnesota, Missouri, Montana, Nebraska, New Hampshire, New Jersey, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Dakota, Utah, Vermont, Virginia, Washington, West Virginia Wisconsin, Wyoming. 
+
+We see that the three clusters obtained using original variables and scaled variables are somewhat different. Note that the variables "Murder", "Assault" and "Rape" are the number of corresponding arrests per 100,000 while the variable "UrbanPop" is the percentage of urban population. Therefore, the variables should be scaled beforehand because the original measures have different units.
+

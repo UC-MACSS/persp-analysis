@@ -1,0 +1,352 @@
+---
+title: "asssignment8"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### I. Colleges
+
+
+#### Q1
+
+
+I presented the PCA results without and with normalization in the code. But I will only use the PCA without normalization in the write-up for this part.
+
+For the first principal component, there are four varibales whose loadings are greater than 0.2 - F.Undergrad(0.671), Apps(0.557), Accept(0.348) and Expend(0.292). The high loading values indicate that number of fulltime undergraduates, number of applications received, number of applications accepted and instructional expenditure per student are strongly correlated with the first principal component. Besides, Enroll(0.130) and P.Undergrad(0.111) also contribute to the first princial component as their loadings are greater than 0.1.
+
+For the second principal component, things are different. F.Undergrad is still strongly correlated with the second principal component, however, the loading value drop from 0.671 for the first principal component to 0.284 for the second principal component. There also five other variables that contribute to the second principal component, including P.Undergrad(0.080), Accept(0.077), Enroll(0.045), Apps(0.039) and Personal(0.030).
+
+
+```{r}
+
+library(ggplot2)
+library(ggfortify)
+library(ggdendro)
+library(dendextend)
+
+
+college = read.csv("E:/Chicago/persp-analysis/students/liao_andi/assignment8/College.csv", header = TRUE)
+
+
+#without normalizing
+prcomp(college[, -1])
+college_pca = prcomp(college[, -1])
+
+print("PC1 without normalizing")
+sort(college_pca$rotation[, 1], decreasing = T)
+
+print("PC2 without normalizing")
+sort(college_pca$rotation[, 2], decreasing = T)
+
+
+autoplot(prcomp(college[, -1]), data = college, colour = 'Private', loadings = TRUE, loadings.colour = "#999999", loadings.label = TRUE, loadings.label.size = 3, loadings.label.colour = "#91cf60") + 
+  labs(title = "PCA for College dataset without normalizing") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+#with normalizing
+prcomp(college[, -1], scale = T)
+college_pca = prcomp(college[, -1], scale = T)
+
+print("PC1 with normalizing")
+sort(college_pca$rotation[, 1], decreasing = T)
+
+print("PC2 with normalizing")
+sort(college_pca$rotation[, 2],decreasing = T)
+
+
+autoplot(prcomp(college[, -1], scale = T), data = college, colour = 'Private', loadings = TRUE, loadings.colour = "#999999", loadings.label = TRUE, loadings.label.size = 3, loadings.label.colour = "#91cf60") + 
+  labs(title = "PCA for College dataset with normalizing") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q2
+
+
+The cumulative proportion of variance explained by all the principal components is listed and plotted as below. In particular, the first two principal components explain about 87.1% of total variance.
+
+
+```{r}
+college_pca = prcomp(college[, -1])
+
+variance_explained = as.data.frame(cumsum(college_pca$sdev ^ 2 / sum(college_pca$sdev ^ 2)))
+
+rownames(variance_explained) = colnames(college_pca$x)
+colnames(variance_explained) = "cumulative proportion of variance explained"
+variance_explained
+
+ggplot(variance_explained, 
+       aes(x = rownames(variance_explained), y = variance_explained, group=1)) +
+  geom_point(color = "#00BFC4") + 
+  geom_line(color = "#00BFC4") +
+  scale_x_discrete(limits = c("PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10", "PC11", "PC12", "PC13", "PC14", "PC15", "PC16", "PC17")) +
+  labs(title = "Total variance explained by each component", x = "component", y = "variance") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+
+### II.USArrests
+
+
+#### Q1
+
+
+As can be seen from the plot below, Assault are strongly related with the first principal component, and UrbanPop are strongly related with the second principal component.
+
+
+```{r}
+
+USArrests = read.csv("E:/Chicago/persp-analysis/students/liao_andi/assignment8/USArrests.csv", header = TRUE)
+
+
+#without normalizing
+prcomp(USArrests[, -1])
+USArrests_pca = prcomp(USArrests[, -1])
+
+print("PC1 without normalizing")
+sort(USArrests_pca$rotation[, 1], decreasing = T)
+
+print("PC2 without normalizing")
+sort(USArrests_pca$rotation[, 2], decreasing = T)
+
+
+autoplot(prcomp(USArrests[, -1]), data = USArrests, colour = "#00BFC4", loadings = TRUE, loadings.colour = "#999999", loadings.label = TRUE, loadings.label.size = 3, loadings.label.colour = "#F8766D") +
+  labs(title = "PCA for USArrestse dataset without normalizing") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q2
+
+
+Using the K-means clustering with K = 2, the following plot can be generated. It is easy to observe from the plot that states with positive PC1 value are grouped into cluster1, while states with negative PC1 value are grouped into cluster2. As PC1 is strongly related with Assault, these two groups might be really different on their Assault value.
+
+
+```{r}
+
+USArrests_Cluster = kmeans(USArrests[, -1], 2)
+USArrests_Cluster
+
+rownames(USArrests) = USArrests[, 1]
+autoplot(kmeans(USArrests[, -1], 2), data = USArrests[, -1], label = TRUE, label.size = 2.5) +
+  labs(title = "K-means clustering with K = 2") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q3
+
+
+Using the K-means clustering with K = 4, the following plot can be generated. Similar to the case when K = 2, states are divided into four groups according to their PC1 value. States with highest and positive PC1 value are grouped into cluster1, ranging from 0.2 to 0.3, while states with lowest and negative PC1 value are grouped into cluster4, ranging from -0.225 to -0.05. Cluster 2 and cluster 3 are also different on their PC1 value, separated by PC1 = 0.1. It seems that these four groups are clustered based on their different levels of PC1.
+
+
+```{r}
+
+USArrests_Cluster = kmeans(USArrests[, -1], 4)
+USArrests_Cluster
+
+autoplot(kmeans(USArrests[, -1], 4), data = USArrests[, -1], label = TRUE, label.size = 2.5) +
+  labs(title = "K-means clustering with K = 4") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q4
+
+
+Using the K-means clustering with K = 3, the following plot can be generated. Similar to the case when K = 2 and K = 4, states are divided into three groups based on their PC1 value. States with PC1 value ranging from 0.1 to 0.3 are grouped into cluster1, while states with PC1 value ranging from -0.225 to -0.05 are grouped into cluster3. Cluster 2 lies in the middle, ranging from - 0.05 to 0.1. Clearly, these three groups are clustered according to their different levels of PC1 values.
+
+
+```{r}
+
+USArrests_Cluster = kmeans(USArrests[, -1], 3)
+USArrests_Cluster
+
+autoplot(kmeans(USArrests[, -1], 3), data = USArrests[, -1], label = TRUE, label.size = 2.5) +
+  labs(title = "K-means clustering with K = 3") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q5
+
+
+Using the first two principal components score vectors to conduct K-means clustering, the result is exactly the same with the clustering results using raw data.
+
+States are divided into three differnet groups as their PC1 values vary. The first group is from 0.1 to 0.3, the second group is from - 0.05 to 0.1, and the last group is from -0.225 to -0.05. Therefore, these three groups are clustered according to their various levels of PC1 values.
+
+
+```{r}
+
+USArrests_Cluster = kmeans(USArrests_pca$x, 3)
+USArrests_Cluster
+
+data = as.data.frame(USArrests_pca$x)
+rownames(data) = USArrests[, 1]
+autoplot(kmeans(data, 3), data = data, label = TRUE, label.size = 2.5) +
+  labs(title = "K-means clustering with K = 3 using PCA") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q6
+
+Using hierarchical clustering with complete linkage and Euclidean distance, the result is plotted as follows.
+
+
+```{r}
+
+hc = hclust(dist(USArrests[, -1]), "complete")
+
+ggdendrogram(hc, rotate = T,theme_dendro = F) + 
+  labs(title = "Hierarchical clustering with complete linkage and Euclidean distance") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+#### Q7
+
+
+As shown below, the dendrogram can be cut at a height of 150 to get three different clusters.
+
+* Cluster 1 includes:
+
+  Alabama              
+  Alaska               
+  Arizona              
+  California           
+  Delaware             
+  Florida              
+  Illinois             
+  Louisiana            
+  Maryland             
+  Michigan             
+  Mississippi          
+  Nevada               
+  New Mexico           
+  New York             
+  North Carolina       
+  South Carolina       
+
+* Cluster 2 includes:
+
+  Arkansas             
+  Colorado             
+  Georgia              
+  Massachusetts        
+  Missouri             
+  New Jersey           
+  Oklahoma             
+  Oregon               
+  Rhode Island         
+  Tennessee            
+  Texas                
+  Virginia             
+  Washington           
+  Wyoming              
+
+* Cluster 3 includes:
+
+  Connecticut          
+  Hawaii               
+  Idaho                
+  Indiana              
+  Iowa                 
+  Kansas               
+  Kentucky             
+  Maine                
+  Minnesota            
+  Montana              
+  Nebraska             
+  New Hampshire        
+  North Dakota         
+  Ohio                 
+  Pennsylvania         
+  South Dakota         
+  Utah                 
+  Vermont              
+  West Virginia        
+  Wisconsin            
+
+
+```{r}
+
+hc = hclust(dist(USArrests[, -1]), "complete")
+
+ggdendrogram(hc, rotate = T, theme_dendro = F) + 
+  geom_hline(yintercept = 150,linetype="dashed", color = "#00BFC4") +
+  labs(title = "Hierarchical clustering without scaling") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+dend = color_labels(hc, k = 3)
+labels_cex(dend) = 0.6
+plot(dend, horiz = T, main = "Colored dendrogram without scaling but with K = 3")
+
+cut_tree = as.data.frame(cutree(hc, k = 3))
+colnames(cut_tree) = "Cluster"
+table(cut_tree)
+
+tree1 = cut_tree
+cut_tree[order(cut_tree$Cluster), , drop = F]
+
+
+```
+
+
+#### Q8
+
+
+Although trees obtained in Q7 and Q8 look similar, results of clustering are different. In Q7, states are divided relatively equally into three clusters(size = 16, 14, 20), but in Q8, cluster1(size = 8) and cluster 2(size = 11) are too small and cluster 3(size = 31) is too large. What's more, there are 10 states which used to belong to cluster 2 now belong to cluster 3, and there are also 9 states which used to belong to cluster 1 now belong to cluster 2. 
+
+It seems that after scaling, K = 3 is not yet an ideal parameter for this dataset, and K = 4 is better as it can help us to divide a subgroup from the larger cluster3. So why does K = 3 work for hierarchical clustering without scaling, but not with scaling? 
+
+I think that after standardizing, values of variables used for clustering become closer to each other, which make it harder to detect subtle differences between different states. For instance, state A with Assualt = 100 might enter into a different cluster when comparing with state B with Assualt = 80, but after scaling, they could end up with the same cluster as their Assualt value change into 1 and 0.8. The 0.2 difference is no longer powerful enough to seperate them into two different clusters.
+
+Here are some tables comparing the outcome of clustering without scaling and with scaling.
+
+
+```{r}
+
+hc = hclust(dist(scale(USArrests[, -1])), "complete")
+
+ggdendrogram(hc, rotate = T, theme_dendro = F) + 
+  geom_hline(yintercept = 5,linetype="dashed", color = "#00BFC4") +
+  labs(title = "Hierarchical clustering with scaling") +  
+  theme(plot.title = element_text(hjust = 0.5))
+
+dend = color_labels(hc, k = 3)
+labels_cex(dend) = 0.6
+plot(dend, horiz = T, main = "Colored dendrogram with scaling but with K = 3")
+
+
+cut_tree = as.data.frame(cutree(hc, k = 3))
+colnames(cut_tree) = "Cluster_Scale"
+table(cut_tree)
+
+tree2 = cut_tree
+cut_tree[order(cut_tree$Cluster_Scale), , drop = F]
+
+tree_diff = cbind(tree1, tree2)
+tree_diff
+
+hc.complete = hclust(dist(USArrests[, -1]), method = "complete")
+hc.complete.sd = hclust(dist(scale(USArrests[, -1])), method = "complete")
+table(cutree(hc.complete, 3), cutree(hc.complete.sd, 3))
+
+```
+
+

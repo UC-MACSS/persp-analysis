@@ -1,0 +1,20 @@
+---
+title: "Homework 08"
+author: "Kristopher Nichols"
+date: "December 3, 2017"
+output: github_document
+---
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+```{r setup}
+library(knitr)
+library(ggplot2)
+library(tidyverse)
+library(stats)
+library(forcats)
+library(tidyverse)
+```
+
+

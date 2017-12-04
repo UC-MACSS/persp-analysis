@@ -1,0 +1,73 @@
+---
+title: "HW6"
+output: html_document
+Name: Yuqian Gong
+---
+1.	
+i.	Respect for persons:
+According to the principle of Respect for Persons, “researchers should not do stuff to people without their consent” (1). In this study, researchers send mailers which contain information about candidates’ scales from liberal to conservative, to a portion of voters in Montana and involve them as subjects of the experiment without their consent. The action of sending mailers to voters without their consent is not a big issue as it is common for many entities to send ads or flyers to residents without their consent. However, engaging the voters in the experiment without their consent is not “treating individual as autonomous” (1). From the researchers’ perspective, asking for voters’ consent in advance may largely comprise research goals. Therefore, researchers should debrief their participants after the races, assuming that debriefing won’t cause any harm to participants. Based on available information, researchers failed to debrief participants in this case. 
+ii.	Beneficence:
+Researchers have the obligation to “understand and improve the risk/benefit profile of your study, and then decide if it strikes the right balance” (1). The harm to the participants might include uncomfortable feelings caused to those voters’ who are averse to receiving any election-related flyers. Providing additional information on candidates for individual voters could be a benefit for them but it is very debatable. Compared with the potential harm to voters, the potential risk of altering the election outcomes is of greater significance. Researchers need to well balance the risk of altering the election outcomes and potential value of this research result, which is to improve voters’ turnout in the future.  Unfortunately, this risk was not paid enough attention and was not assessed in depth enough by researchers. The sample population of voters in this study is about 15% of all registered voters （2）in Montana, which is by one means a negligible size and bring up many possibilities of altering the election outcomes.
+iii.	Justice:
+Risks and benefits of this research are not distributed fairly. The current voters and candidates in this experiment take on all the risks that complex uncertainties are casted on the results of this round of elections, while potential benefits of this research result will be shared by future voters and candidates if the voting turnout rates are improved in the future. 
+iv.	Respect for law and public interest 
+The researchers had some major problems with “identifying and obeying relevant laws”. First, they improperly or completely ignored the IRB process. (2) Evidence shows that prototype of the flyer submitted to Dartmouth IRB “differed substantially from the Montana Flyer”. (2) Also, researchers in Standard didn’t submit the Montana Flyer to its IRB. Secondly, based on the investigation and judgement of the Commissioner, the Montana Flyer project is “candidate related”, which required the project costs to be “attributed, disclosed and reported as an election expense”. (2) Unfortunately, this legal process was bypassed or identified by the researchers “due to oversight or mistaken assumption of law”(2). Lastly, the Great Seal of the State of Montana was used illegally to “enhance the appearance of authority of the Flyer”. (2)
+
+
+2.	
+2.
+If based on recent voter opinion polls, the number of supporters for each candidate in one race is almost equivalent, and evidence shows that voters with a particular political affiliation (either conservative or liberal) tend to be more likely to vote, then this project could become a fairly disturbing factor in influencing the result of the races given that the candidates hold different political standpoint. Besides, in this case, the larger the sample population, the more disturbing effects this project would bring. 
+
+ In another case, if based on recent opinion polls, the number of supporters for candidates has a huge gap and it estimates that one candidate will almost win out, it is still possible that the outcomes would be altered due to the flyer project. Suppose that the treatment effect on one group of voters with one political affiliation is so considerable, which changes their behaviors dramatically. Also, the sample population is also large enough to make the unusual voting behaviors in the sample population override the usual voting behaviors outside the sample, which is predicted by the poll, then the outcomes of elections are prone to be altered. 
+
+3.
+Without any evidence to validate their assumptions, I would argue that the researchers failed to make appropriate decisions in the face of uncertainty. When facing uncertainties, researchers should conduct power analysis to “calculate an appropriate size for the study” (1). For instance, they can estimate the accurate turnout differences between Conservative and Democratic voters through small trail experiments instead of through vague anticipation without providing any evidence. Besides, even if they make more accurate assumptions and adjust their choice of samples accordingly, there is still risk that the treatment on the sample will alter the election outcomes. 
+
+4.
+The argument held by the researchers showed that they did take the risk of altering the election outcomes into consideration and tried minimizing the risks, which follows the principles of beneficence and justice. However, even if they predicted the results based on previous Montana judicial elections, it was still hasty to conclude that their project will not alter the election outcomes with 100% probability as “elections can be won by a single vote” given their large and non-random sample (2).
+
+5.
+The table of election results legitimize the researchers’ choice of these two races and justify their intentions to minimize the risks of altering the results to some extent. Especially for the first race, the gap of the votes received for two candidates is huge and make people inclined to believe that the results are not altered due to the project. However, it is worth noticing that these election outcomes are the outcomes after the mailers were sent and treatment came to effect. We are unable to compare it with the outcomes if the experiment were not conducted. In extreme cases, let’s assume that the 15% population of voters, roughly 10, 000 people, all voted and flipped their standpoints around after receiving the flyers, the outcomes could still be quite different in the two races before the experiment. Researchers should always put themselves in the shoes of others and take into serious consideration the worst case. 
+
+6.
+The information here doesn’t change my assessment on the research; however, it sheds some doubt on the impartiality and credibility of the investigation committee because Adam Bonica might have some conflicting interest with the researchers in the project given the fact that CrowdPAC not only provided objective information for voters but also provided tools to fund political campaigns and got involved in political activities. It is likely that CrowdPAC’s clients were candidates from one party and they believed that the project was in favor of or biased to candidates from another party, this fact would undermine or bias Adam Bonica’s judgement on the project. Therefore the investigation committee had to make sure that Adam Bonica didn't involve any personal interest in this investigation. 
+
+7. Changes I would make to the project:
+(1) To follow the principles of Respect for Law and Public Interest, I would definitely suggest that the researchers go through the IRB processes at their colleges and ask for IRB’s advice if any ambiguity comes up. This will serve as a threshold for their project and IRB will be able to stand behind them if anything controversial comes up later, just like the case there.
+(2) I will also suggest that they should consult with the Montana Compaign Practice Act or experts to familiarize themselves with the potential impact of the project and judicial procedures they need to go through before implementing the experiment. They have to revise the project to make sure it is not an election advocacy and avoid stepping in the gray area for judicial assessment. 
+(3) I will debrief the experiments to participants after the elections. 
+(4) I will make rigorous analysis on the potential outcome changes that could happen if the experiment is implemented and provide enough evidence showing that my research will have negligible effects on the outcomes. Also, I will randomize the sample of the participants without selecting them based on their political affiliations. Furthermore, I will choose a much smaller sample size against 15%.
+(5) I would choose the scaling of candidates’ political positions from a more authorized and objective source instead of developing the scaling by myself. If that still raised issues after consulting with the Compaign Practice Act or lawyer, I would recommend replace the information or format sent to the participants with non-sensitive information which are not related with candidates.
+(6) Don’t reproduce the Great Seal of the State of Montana. 
+
+
+Reference:
+1.	Matthew J. Salganik. Bit by Bit: Social Research in the Digital Age. Princeton University Press. (2017)
+2.	Motl, Jonathan. (2015). Before the Commissioner of Political Practices of the State of Montana. From http://politicalpractices.mt.gov/Portals/144/2recentdecisions/McCullochvStanfordandDartmouthFinalDecision.pdf
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

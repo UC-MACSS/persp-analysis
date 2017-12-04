@@ -1,0 +1,137 @@
+---
+title: "yu_liqiang_EDA_write-up"
+author: "Liqiang Yu"
+date: "11/27/2017"
+output: github_document
+---
+#Evaluate four family income factors --- age, sex, education level and work status
+
+##Introduction
+
+From previous exploratory data analysis, we have noticed that family income can be affected by one's age, sex, education level or his work status. However, how much does each variable influence family income and how significant is each factor are still unclear. So our goal is to build a linear regression model to examine each factor in terms of their significance and their influence in interpreting family income.
+
+##Data Description
+
+The General Social Survey (GSS) gathers data on American society in order to monitor and explain trends and constants in attitudes, behaviors, and attributes. It is conducted biannually through in-person interviews using a probability sampling approach. It is one of the most commonly studied datasets in the social science disciplines.
+
+Here is an example of GSS data:
+####Load Data
+```{r echo=FALSE}
+library(poliscidata)
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+library(dplyr)
+library(GGally)
+data(gss, package = "poliscidata")
+gss <- as_tibble(gss)
+gssr <- gss[, c("age", "sex", "marital", "educ", "income06", "happy","wrkstat")]
+gssr <- within(gssr,{
+    age1 <- as.numeric(age) 
+    educ1 <- as.numeric(educ) 
+    sex1 <- as.numeric(sex)
+    wrkstat1 <-as.numeric(wrkstat)
+    #code income into categories
+    cincome <- as.numeric(income06) })
+gss #An example
+```
+
+##Experimental Setup
+
+###Linear Regression 
+In linear regression (also called multiple regression), we hope to find the equation of $y = B_0 + B_1X_1 + B_2 X_2 + ... + B_k X_k + e$. By using our training data from a limited number of k predictors, we obtain our regression relation $y = b_0 + b_1 x_1 + b_2 x_2 + ... + b_k x_k$. We will aslo want to make sure that we reward simpler models over more complex models. Another question that we will need to consider is whether any of our predictors will have an interaction with each other.
+
+###A simple model 
+
+First we want to start with a simple model:
+####A simple model
+```{r echo=FALSE}
+
+model1 <- lm(cincome ~ educ1, data = gssr)
+summary(model1)
+```
+
+We can see that p-value is significant here for our education level categorical variable, but R-square shows that education only accounts for 18.82% of total variance of family income. Then we examine its residuals and normality:
+
+```{r}
+par(mfrow = c(2, 2))
+plot(model1)
+```
+
+We can conclude that the model fits our data well and residuals are nearly normally distributed (Q-Q Plot), although we can observe that there are some outliers from the last graph. 
+
+### Add education level
+
+From the education level distribution, we can also categorize education level into three categories: 
+1. without a high school degree (<= 11th grade) 
+2. a high school degree but not a college degree (12th grade to 3yr college)
+3. a college degree (4yr college and above)
+
+####Categorize education level into 3 levels
+```{r echo= FALSE}
+gss %>%
+
+  ggplot(aes(educ))+
+  geom_bar()+
+  theme(
+    axis.text.x = element_text(angle = 330, hjust = 0),
+    axis.title.x = element_text(margin = margin(t = 12))
+  )+
+  labs(x = "Education level distribution", y = "Frequency") 
+gssr$educ2<-cut(gssr$educ1, c(0,13,17,22),labels=c(0:2))
+
+```
+
+####Add new education level into previous model
+```{r}
+model1_3 <-update(model1, . ~ . * educ2)
+summary(model1_3)
+
+```
+
+Although R-square increases by doing so, p-values are not significant. We then try a model using new categorized education variable:
+
+####Only use education level with 3 catrgories
+```{r}
+model1_1 <- lm(cincome ~ educ2, data = gssr)
+summary(model1_1)
+par(mfrow = c(2, 2))
+plot(model1_1)
+```
+
+The result gives a better estimate, with R-square 20.8% (compare to 18.8%) and all p-values are significant. Our model is pretty good in terms of residual distribution, outliers and normality from four graphs above. We will use this model for estimating the relation between family income and education level.
+
+### Add age variable
+
+We now want to evaluate age variable, by adding age variable into our model:
+```{r}
+model2 <- update(model1_1, . ~ . * age1)
+summary(model2)
+```
+
+In the summary, with a p-value of 0.8 of age variable, we conclude that age is not a significant factor of family income. Also, R-square increased by only 0.01%, so age is neither a influtial variable.
+
+### Add sex variable
+
+Add sex variable to our previous model:
+```{r}
+model3 <- update(model1_1, . ~ . * sex1)
+summary(model3)
+```
+
+The p-value (0.08) of sex indicates that sex is neither a good estimator, which makes sense since a family usually consists of both males and females. Our R-square increased by 1.1% because we also added interaction varible into our model.
+
+###Add work status
+
+```{r}
+model4 <- update(model1_1, . ~ . * wrkstat1)
+summary(model4)
+par(mfrow = c(2, 2))
+plot(model1_1)
+```
+
+R-squre increased by almost 5% and the p-value of work status is significant. Our final model is pretty good in terms of residual distribution, outliers and normality from model examination above. We conclude that work status is another significant factor of family income.
+
+#Summary
+
+We use linear regression model to evaluate four factors: age, sex, education level and work status that could have a significant influence on family income. We find out that education level and work status are significant variables, which accounts for 25.58% variance of family income. 

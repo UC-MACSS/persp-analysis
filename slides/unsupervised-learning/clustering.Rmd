@@ -1,0 +1,214 @@
+---
+title: "Clustering"
+output:
+  html_document:
+    highlight: pygments
+    theme: readable
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(cache = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+```{r packages, cache = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+library(ISLR)
+library(titanic)
+library(rcfss)
+library(grid)
+library(gridExtra)
+library(ggdendro)
+library(tidytext)
+library(tm)
+library(topicmodels)
+
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+```
+
+**Clustering** refers to a set of techniques for finding subgroups within a dataset, called **clusters**. The goal is to partition the dataset into similar and distinct groups so that observations in each group are similar to one another, while each group is distinctive and dissimilar to the other groups.
+
+# $K$-means clustering
+
+$K$-means clustering is one approach to identifying distinct clusters within data. First we specify the number of $K$ clusters we want to estimate in the data, then assign each observation to precisely one of those $K$ clusters.
+
+```{r kmeans}
+# generate data
+x <- data_frame(x1 = rnorm(150) + 3,
+                x2 = rnorm(150) - 4)
+
+# estimate k clusters
+x.out <- x %>%
+  mutate(k2 = kmeans(x, 2, nstart = 20)$cluster,
+         k3 = kmeans(x, 3, nstart = 20)$cluster,
+         k4 = kmeans(x, 4, nstart = 20)$cluster)
+
+# plot clusters
+x.out %>%
+  gather(K, pred, k2:k4) %>%
+  mutate(K = parse_number(K),
+         pred = factor(pred)) %>%
+  ggplot(aes(x1, x2, color = pred)) +
+  facet_grid(. ~ K, labeller = label_both) +
+  geom_point() +
+  theme(legend.position = "none")
+```
+
+Let $C_1, C_2, \dots, C_K$ denote sets containing the indicies of the observations in each cluster. $K$-means clustering defines a good cluster as one for which within-cluster variation is as small as possible. So we want to minimize the within-cluster variation defined by some function $W(C_K)$ that identifies variation:
+
+$$\min_{C_1, C_2, \dots, C_K} \left\{ \sum_{k = 1}^K W(C_k) \right\}$$
+
+so that the overall amount of within-cluster variation across all the clusters is as small as possible. We can define within-cluster variation in several different ways, but a standard approach uses **squared Euclidean distance**:
+
+$$W(C_k) = \frac{1}{|C_k|} \sum_{i,i' \in C_k} \sum_{j = 1}^p (x_{ij} - x_{i'j})^2$$
+
+where the within-cluster variation is the sum of all of the pairwise squared Euclidean distances between the observations in the $k$th cluster, divided by the number of observations in the $k$th cluster. Unfortunately we cannot evaluate every possible cluster combination because there are almost $K^n$ ways to partition $n$ observations into $K$ clusters. Instead, we will settle for a **good enough** approach; that is, rather than finding the global optimum for the optimization problem we will instead estimate the local optimum.
+
+To do this we employ an iterative process. First we randomly assign each observation to one of the $K$ clusters. This will be the initial cluster assignment for each observation. Then we iterate over the cluster assignments:
+
+1. For each of the $K$ clusters, compute the cluster **centroid**, or the vector of $p$ feature means for the observations in the $k$th cluster.
+1. Assign each observation to the cluster whose centroid is closest as defined by Euclidean distance.
+
+Each time we do this observations will move around and join different clusters because the initial assignments were made entirely at random. As we iterate over this process, the cluster assignments will become more stable and eventually stop entirely. This is when we reach the local optimum. Since the local optimum is based on the initial (random) assignments, we run this algorithm multiple times from different random starting configurations and select the best solution (the one with the lowest total within-cluster variation).
+
+```{r kmeans-sim-start}
+kmean.out <- rerun(6, kmeans(x, 3, nstart = 1))
+
+kmean.out %>%
+  map_df(~ as_tibble(.$cluster), .id = "id") %>%
+  bind_cols(bind_rows(x,x,x,x,x,x)) %>%
+  mutate(withinss = rep(map_chr(kmean.out, ~ .$tot.withinss), each = nrow(x)),
+         value = factor(value)) %>%
+  ggplot(aes(x1, x2, color = value)) +
+  facet_wrap(~ id + withinss, ncol = 3, labeller = label_wrap_gen(multi_line = FALSE)) +
+  geom_point() +
+  theme(legend.position = "none")
+```
+
+This is basically like starting the algorithm with a different random seed each time. In the above example I ran $K$-mean clustering with $K=4$ six times with different starting seed values. In four of the iterations, the algorithm converged on the same local optimum solution, while the other two times the algorithm converged on a local optimum with a larger sum of within-cluster variation.
+
+# Hierarchical clustering
+
+A drawback to $K$-means clustering is that it requires you to specify in advance the number of clusters in the data. Since this is unsupervised learning, you don't really know the actual number of clusters. Depending on the major features of the data, different values of $K$ could produce equally meaningful results. Imagine if your data contains observations on individuals, split between males and females as well as split between Americans, Canadians, and South Africans. $K=2$ would potentially cluster the observations based on gender, whereas $K=3$ could cluster based on nationality. Which is "right"? Well, both of them. It depends on the features of the data in which you are most interested.
+
+**Hierarchical clustering** is an alternative approach that does not require us to fix the number of clusters *a priori*. It also produces a visual interpretation of the clusters using tree-based representations called **dendrograms**. Here let's review how to interpret dendrograms generated from **bottom-up** clustering.
+
+# Interpreting dendrograms
+
+Here we plot a dendrogram using simulated data, consisting of `r nrow(x)` observations in two-dimensional space. We simulate three natural classes in the data, but in the real-world you would not know that.
+
+```{r dendro-sim}
+# generate data
+x <- data_frame(x1 = rnorm(50) + 3,
+                x2 = rnorm(50) - 4,
+                y = ifelse(x1 < 3, "1",
+                           ifelse(x2 > -4, "2", "3")))
+
+ggplot(x, aes(x1, x2, color = y)) +
+  geom_point() +
+  labs(title = "Simulated data",
+       x = expression(X[1]),
+       y = expression(X[2])) +
+  theme(legend.position = "none")
+```
+
+Suppose that we observe the data without class labels and want to perform hierarchical clustering on the data. The result is plotted below.
+
+```{r dendro-cluster, dependson="dendro-sim"}
+# estimate hierarchical cluster
+hc.complete <- hclust(dist(x), method = "complete")
+
+# plot
+ggdendrogram(hc.complete)
+```
+
+Like with decision trees, we have **leafs** and **branches**. Each leaf is labeled with the observation id number. Rather than reading the dendrogram from the top-down, we read it from the bottom-up. Each observation is represented by a leaf. As we move up the tree, leafs **fuse** into branches. These are observations that are similar to one another, similarity generally being defined by Euclidean distance. Observations that fuse together near the bottom of the tree are generally similar to one another, whereas observations that fuse near the top of the tree are dissimilar. The height on the graph where the fusion occurs defines how similar or dissimilar any two observations are. The larger the value, the more dissimilar they are. Rather than paying attention to the proximity of observations along the horizontal axis, we should instead focus on the location of observations relative to the vertical axis.
+
+From this dendrogram we can assign observations to clusters. To generate clusters, we make a horizontal cut somewhere on the dendrogram, severing the tree into multiple subtrees. The height of the cut will dictate how many clusters are formed. For instance, cutting the tree at a height of 4 splits the dendrogram into two subtrees, and therefore two clusters:
+
+```{r dendro-cut-4}
+h <- 4
+# extract dendro data
+hcdata <- dendro_data(hc.complete)
+hclabs <- label(hcdata) %>%
+  left_join(data_frame(label = as.factor(seq.int(nrow(x))),
+                       cl = as.factor(cutree(hc.complete, h = h))))
+
+# plot dendrogram
+ggdendrogram(hc.complete, labels = FALSE) +
+  geom_text(data = hclabs,
+            aes(label = label, x = x, y = 0, color = cl),
+            vjust = .5, angle = 90) +
+  geom_hline(yintercept = h, linetype = 2) +
+  theme(axis.text.x = element_blank(),
+        legend.position = "none")
+```
+
+Alternatively we could split it lower, for instance at 3:
+
+```{r dendro-cut-3}
+h <- 3
+# extract dendro data
+hcdata <- dendro_data(hc.complete)
+hclabs <- label(hcdata) %>%
+  left_join(data_frame(label = as.factor(seq.int(nrow(x))),
+                       cl = as.factor(cutree(hc.complete, h = h))))
+
+# plot dendrogram
+ggdendrogram(hc.complete, labels = FALSE) +
+  geom_text(data = hclabs,
+            aes(label = label, x = x, y = 0, color = cl),
+            vjust = .5, angle = 90) +
+  geom_hline(yintercept = h, linetype = 2) +
+  theme(axis.text.x = element_blank(),
+        legend.position = "none")
+```
+
+Generating a larger number of clusters. Determining the optimal number of clusters is generally left to the discretion of the researcher based on the height of the fusions and desired number of clusters. Again, this is unsupervised learning **so there is no single correct number of clusters**.
+
+# Estimating hierarchical clusters
+
+The general procedure for estimating hierarchical clusters is relatively straightforward:
+
+1. Assume each $n$ observation is its own cluster. Calculate the $\binom{n}{2} = \frac{n(n-1)}{2}$ pairwise dissimilarities between each observation.^[Again, using Euclidean distance.]
+1. For $i=n, n-1, \dots, 2$:
+    1. Compare all pairwise inter-cluster dissimilarities among the $i$ clusters and identify the pair of clusters that are least dissimilar (i.e. most dissimilar). Fuse these two clusters. The dissimilarity between these two clusters determines the height in the dendrogram where the fusion should be placed.
+    1. Compute the new pairwise inter-cluster dissimilarities among the $i-1$ clusters
+
+This process is continued until there is only a single cluster remaining. The only complication is how to measure dissimilarities between clusters once they contain more than one observation. Previously we used pairwise dissimilarities of the observations, but how do we proceed with multiple observations? There are four major approaches to defining dissimilarity between clusters, also called **linkage**:
+
+1. **Complete** - compute all pairwise dissimilarities between observations in cluster A and cluster B and record the largest of these dissimilarities.
+1. **Single** - compute all pairwise dissimilarities between observations in cluster A and cluster B and record the smallest of these dissimilarities.
+1. **Average** - compute all pairwise dissimilarities between observations in cluster A and cluster B and record the average of these dissimilarities.
+1. **Centroid** - compute the dissimilarity between the centroid (a mean vector of length $p$) for cluster A and cluster B.
+
+Each linkage approach leads to different hierarchical clusters:
+
+```{r dendro-compare-linkage}
+hc.complete <- hclust(dist(x), method = "complete")
+hc.single <- hclust(dist(x), method = "single")
+hc.average <- hclust(dist(x), method = "average")
+
+# plot
+ggdendrogram(hc.complete) +
+  labs(title = "Complete linkage")
+ggdendrogram(hc.single) +
+  labs(title = "Single linkage")
+ggdendrogram(hc.average) +
+  labs(title = "Average linkage")
+```
+
+# Session info {.toc-ignore}
+
+```{r session-info}
+devtools::session_info()
+```

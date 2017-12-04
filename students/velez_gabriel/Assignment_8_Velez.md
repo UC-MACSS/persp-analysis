@@ -195,7 +195,7 @@ head(collegeDataPCA$x)
 
 ``` r
 # Plotting
-plot(collegeDataPCA, type = "l")
+collegeDataPCAGraph1 <- plot(collegeDataPCA, type = "l")
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/colleges_1-1.png)
@@ -262,10 +262,24 @@ collegeDataPCA$rotation
 
 ``` r
 # Plotting components
-biplot(collegeDataPCA, scale = 0, cex = .6)
+collegeDataPCAGraph2 <- biplot(collegeDataPCA, scale = 0, cex = .6)
 ```
 
-![](Assignment_8_Velez_files/figure-markdown_github/colleges_1-2.png) This data seems to show that the first two principal components explain a significant amount of the variance in colleges, and that from there each of the additional components does not explain much (and each one is about equal, with a slight downward trend). In terms of what aspects are most correlated with these two components:
+![](Assignment_8_Velez_files/figure-markdown_github/colleges_1-2.png)
+
+``` r
+print(collegeDataPCAGraph1)
+```
+
+    ## NULL
+
+``` r
+print(collegeDataPCAGraph2)
+```
+
+    ## NULL
+
+This data seems to show that the first two principal components explain a significant amount of the variance in colleges, and that from there each of the additional components does not explain much (and each one is about equal, with a slight downward trend). In terms of what aspects are most correlated with these two components:
 
 *1A)* Based on this analysis, on the first principal component, it seems like Top 10 perc, Top 25 perc, PHD, Terminal, and Expend are all strongly correlated (i.e., I have chosen over .30) with this component. In other words, this component seems to be most strongly correlated with the percentage of students from the top 10% of their high school class, the percentage of students from the top 25% of their high school class (which would make sense that both these would be associated), the percentage of faculty with PhDs, the percentage of faculty with terminal degrees, and the instructional expenditure per student. Out of state tuition is also close to the threshold I choose at .29.
 
@@ -275,10 +289,16 @@ biplot(collegeDataPCA, scale = 0, cex = .6)
 
 ``` r
 # Looking at it graphically
-plot(collegeDataPCA, type = "l")
+collegeDataPCAGraph3 <- plot(collegeDataPCA, type = "l")
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/colleges_2-1.png)
+
+``` r
+print(collegeDataPCAGraph3)
+```
+
+    ## NULL
 
 ``` r
 # Getting more specific amount of variance
@@ -323,10 +343,16 @@ USArrestsPCA$rotation
 
 ``` r
 # Plotting components
-biplot(USArrestsPCA, scale = 0, cex = .6)
+USAArrestsPCAGraph1 <- biplot(USArrestsPCA, scale = 0, cex = .6)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_1-1.png)
+
+``` r
+print(USAArrestsPCAGraph1)
+```
+
+    ## NULL
 
 *2)* Perform *K*-means clustering with *K* = 2. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
 
@@ -340,11 +366,13 @@ USArrestsK2 <- USArrests %>%
 USArrestsRow <- cbind(rownames(USArrests), data.frame(USArrests, row.names=NULL))
 
 # Plotting 2 Principal Components, Color Coded by Cluster
-ggbiplot(USArrestsPCA, groups=factor(USArrestsK2$k2), labels = USArrestsRow[,1]) +
+USAArrestsPCAGraph2 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK2$k2), labels = USArrestsRow[,1]) +
    labs(title = "First Two Principal Components, Color Coded by Cluster (K=2)",
         x = "PC1",
         y = "PC2") +
       guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph2)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_2-1.png)
@@ -359,10 +387,16 @@ USArrestsPCA2FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
 ``` r
 HCPCUSA2 <-  HCPC(USArrestsPCA2FM, nb.clust = 2, graph = FALSE)
 
-plot.HCPC(HCPCUSA2, choice = "map")
+USAArrestsPCAGraph3 <- plot.HCPC(HCPCUSA2, choice = "map")
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_2-4.png)
+
+``` r
+print(USAArrestsPCAGraph3)
+```
+
+    ## NULL
 
 These results show that when we are using just two principal components and two clusters, the clusters look like they are pretty much divided by whether they load positively or negatively onto the first principal component. Delaware and Arkansas seem to be the only states that are part of cluster 2 that are around 0 for PC1,
 
@@ -376,11 +410,13 @@ USArrestsK4 <- USArrests %>%
          k4 = kmeans(USArrests, 4, nstart = 20)$cluster)
 
 # Plotting
-ggbiplot(USArrestsPCA, groups=factor(USArrestsK4$k4), labels = USArrestsRow[,1]) +
+USAArrestsPCAGraph4 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK4$k4), labels = USArrestsRow[,1]) +
    labs(title = "First Two Principal Components, Color Coded by Cluster (K=4)",
         x = "PC1",
         y = "PC2") +
       guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph4)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_3-1.png)
@@ -395,10 +431,16 @@ USArrestsPCA4FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
 ``` r
 HCPCUSA4 <-  HCPC(USArrestsPCA4FM, nb.clust = 4, graph = FALSE)
 
-plot.HCPC(HCPCUSA4, choice = "map")
+USAArrestsPCAGraph5 <- plot.HCPC(HCPCUSA4, choice = "map")
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_3-4.png)
+
+``` r
+print(USAArrestsPCAGraph5)
+```
+
+    ## NULL
 
 Now, it looks like when we have four clusters, that they are grouped more or less also by splitting the loading onto PC1 into four groups. This is a little less stark of a split then when we had 2 cluster, however. For example, Colorado is close to New York, Arizona, and Illinois on this grid, but is in cluster 2, even though the other three states are in cluster 3. There are some other similar examples as well, but as with the 2 cluster graph, this seems to show that the loadings for PC1 are associated more with the clusters than the loadings for PC2.
 
@@ -411,11 +453,13 @@ USArrestsK3 <- USArrests %>%
          k3 = kmeans(USArrests, 3, nstart = 20)$cluster)
 
 # Plotting
-ggbiplot(USArrestsPCA, groups=factor(USArrestsK3$k3), labels = USArrestsRow[,1]) +
+USAArrestsPCAGraph6 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK3$k3), labels = USArrestsRow[,1]) +
    labs(title = "First Two Principal Components, Color Coded by Cluster (K=3)",
         x = "PC1",
         y = "PC2") +
       guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph6)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_4-1.png)
@@ -430,10 +474,16 @@ USArrestsPCA3FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
 ``` r
 HCPCUSA3 <-  HCPC(USArrestsPCA3FM, nb.clust = 3, graph = FALSE)
 
-plot.HCPC(HCPCUSA3, choice = "map")
+USAArrestsPCAGraph7 <- plot.HCPC(HCPCUSA3, choice = "map")
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_4-4.png)
+
+``` r
+print(USAArrestsPCAGraph7)
+```
+
+    ## NULL
 
 Now, we see similar results to when their are four cluster, but that 2 and 4 from the previous analysis are merged as cluster 3 in this one. Colorado and Texas are still in a different cluster from Illinois, Arizona, and New York (even though they are close on the plot), Delaware is still a bit of an outlier in that it's loading onto PC1 is about 0, but it is not in the same cluster as many of the others that have a similar loading onto PC1.
 
@@ -543,7 +593,9 @@ It looks like now the states are clustered a bit differently, including having a
 USArrestsHcComplete <- hclust(dist(USArrests), method = "complete")
 
 # Graphing the dendrogram
-ggdendrogram(USArrestsHcComplete)
+USAArrestsPCAGraph8 <- ggdendrogram(USArrestsHcComplete)
+
+print(USAArrestsPCAGraph8)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_6-1.png)
@@ -566,20 +618,24 @@ USArrestsHcLabs <- label(USArrestsHcData) %>%
 
 ``` r
 # plot dendrogram
-ggdendrogram(USArrestsHcComplete, labels = FALSE) +
+USAArrestsPCAGraph9 <- ggdendrogram(USArrestsHcComplete, labels = FALSE) +
   geom_text(data = USArrestsHcLabs,
             aes(label = label, x = x, y = 0),
             vjust = .5, angle = 90) +
   geom_hline(yintercept = h, linetype = 2) +
   theme(axis.text.x = element_blank(),
         legend.position = "none")
+
+print(USAArrestsPCAGraph9)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_7-1.png)
 
 ``` r
 # Another way to look at which states would be grouped
-cutree(USArrestsHcComplete, 3)
+USAArrestsPCAGraph10 <- cutree(USArrestsHcComplete, 3)
+
+print(USAArrestsPCAGraph10)
 ```
 
     ##        Alabama         Alaska        Arizona       Arkansas     California 
@@ -615,7 +671,9 @@ USArrestsSTD <- scale(USArrests, center = FALSE, scale= TRUE)
 USArrestsHcCompSTD <- hclust(dist(USArrestsSTD), method = "complete")
 
 # Plotting
-ggdendrogram(USArrestsHcCompSTD)
+USAArrestsPCAGraph11 <- ggdendrogram(USArrestsHcCompSTD)
+
+print(USAArrestsPCAGraph11)
 ```
 
 ![](Assignment_8_Velez_files/figure-markdown_github/clustering_8-1.png)

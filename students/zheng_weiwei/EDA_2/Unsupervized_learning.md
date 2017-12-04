@@ -75,7 +75,7 @@ autoplot(pr.college, data = College.data, label = FALSE, loadings = TRUE, loadin
          loadings.label = TRUE, loadings.label.size = 3)
 ```
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
 
 ``` r
 theta <- seq(0,2*pi,length.out = 100)
@@ -89,7 +89,7 @@ p + geom_text(data=loadings,
   labs(x = "PC1", y = "PC2")
 ```
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
 
 (The data needs scale = TRUE otherwise the result would be very hard to read and become meaningless. I did what is suggested by the textbook, which I think is more credible.) The first principal component is associated with variables including "Grad.rate", "Top20perc", "Top25perc", "Phd", "per.alumini", "Expend" and "Terminal", which stores the ahievement and prestige of colleges. The second principal component is associated with "F.undergrad", "P.undergrad", "Accept" and "Enroll", which stores information of current performance of schools.
 
@@ -132,7 +132,7 @@ autoplot(pr.arrest, data = USArrests.data, label = TRUE, loadings = TRUE, loadin
          loadings.label = TRUE, loadings.label.size = 3)
 ```
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-5-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-5-1.png)
 
 ``` r
 theta <- seq(0,2*pi,length.out = 100)
@@ -146,7 +146,7 @@ p + geom_text(data=loadings,
   labs(x = "PC1", y = "PC2")
 ```
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-6-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-6-1.png)
 
 **2.Perform *K*-means clustering with *K* = 2. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.**
 
@@ -163,7 +163,7 @@ autoplot(pr.arrest, data = USArrests.data, label = TRUE, col = km2.clusters, loa
     ## Warning in if (value %in% columns) {: the condition has length > 1 and only
     ## the first element will be used
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-7-1.png) (Order from left to right) The first component mostly stores information about murder, assault and rape, with California, Nevada, Florida highly positively associated with it and Vermont, North Dakota, Maine, Iowa, New Hampshire negatively. The second component mostly stores information about urban population, with New Jersey, Massachusetts, Hawaii, and Rhode Island highly positively associated, and West Virginia, South Carolina, North Carolina and Mississippi negatively associated with it. The first cluster mostly includes states with high crime rate while the second low crime rate.
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-7-1.png) (Order from left to right) The first component mostly stores information about murder, assault and rape, with California, Nevada, Florida highly positively associated with it and Vermont, North Dakota, Maine, Iowa, New Hampshire negatively. The second component mostly stores information about urban population, with New Jersey, Massachusetts, Hawaii, and Rhode Island highly positively associated, and West Virginia, South Carolina, North Carolina and Mississippi negatively associated with it. The first cluster mostly includes states with high crime rate while the second low crime rate.
 
 **3.Perform *K*-means clustering with *K* = 4. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.**
 
@@ -179,7 +179,7 @@ autoplot(pr.arrest, data = USArrests.data, label = TRUE, col = km4.clusters, loa
     ## Warning in if (value %in% columns) {: the condition has length > 1 and only
     ## the first element will be used
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-8-1.png)
 
 The firs cluster includes states of high crime rate. The second cluster includes states of medium high crime rate and medium population size. The third cluster includes states of low crime rate and medium population size. The fourth group includes states of low crime rate and medium low population size.
 
@@ -197,7 +197,7 @@ autoplot(pr.arrest, data = USArrests.data, label = TRUE, col = km3.clusters, loa
     ## Warning in if (value %in% columns) {: the condition has length > 1 and only
     ## the first element will be used
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-9-1.png) The first clustering includes states with high crime rate. The second clustering inlcudes states with medium crime rate and medium population size. The third inclues states with low crime rate and medium population size.
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-9-1.png) The first clustering includes states with high crime rate. The second clustering inlcudes states with medium crime rate and medium population size. The third inclues states with low crime rate and medium population size.
 
 **5.Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.**
 
@@ -213,7 +213,7 @@ autoplot(pr.arrest, data = USArrests.data, label = TRUE, col = km3new.clusters, 
     ## Warning in if (value %in% columns) {: the condition has length > 1 and only
     ## the first element will be used
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png)
 
 ``` r
 table(km3.clusters,km3new.clusters)
@@ -239,7 +239,7 @@ arrest.dist <- dist(USArrests.data)
 plot(hclust(arrest.dist), labels = USArrests.data$State , main =" Complete Linkage ", xlab ="", sub ="", ylab ="")
 ```
 
-![](Unsuperized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
+![](Unsupervized_learning_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
 
 **7.Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?**
 

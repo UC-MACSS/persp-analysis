@@ -1,5 +1,5 @@
 ---
-title: "Unsuperized Learning Assignment"
+title: "Unsupervized Learning Assignment"
 author: "Weiwei Zheng"
 date: "December 3, 2017"
 output: github_document

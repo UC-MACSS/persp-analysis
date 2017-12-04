@@ -1,4 +1,4 @@
-Unsuperized Learning Assignment
+Unsupervized Learning Assignment
 ================
 Weiwei Zheng
 December 3, 2017

@@ -1,0 +1,145 @@
+---
+title: "assignment_8"
+output: rmarkdown::github_document
+---
+
+###Colleges 
+
+#### Question 1 
+
+Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
+
+```{r chunk1, include=FALSE}
+library("dplyr")
+library("ggplot2")
+library("ggfortify")
+library("dendextend")
+data<-read.csv("College.csv")
+data.numeric<-select_if(data, is.numeric) #selects only numeric columns from the data
+data.pca<-prcomp(data.numeric, center = TRUE, scale.=TRUE)
+plot<-autoplot(data.pca, loadings=TRUE, loadings.label=TRUE)
+```
+
+
+```{r print plot chunk}
+print (plot)
+```
+
+Describe the results:
+If a signifiance level is choosen (I.e -0.3<r<0.3), then it becmes clear that PC1 is strongly correlated with increases in Top10perc, Top25Perc, PhD, Terminal, Outstate(close to 0.3). Similarly, using this signifiance level of (-0.3<r<0.3), PC2 is strongly correlated with Apps, Accept, Enroll, F. Undergrad, P. Undergrad. Note that these correlations are negative.  There also appear to be some outliers in the data, as evident from the plot. The plot also indicates that the S.F ratio variable is orthogonal to the F.undergrad variable, whereas the personal variabele is orthogonal to the books variable. 
+
+
+
+####Question 2 
+
+The following table displayes the cumulative proportion of variance explained by all the principal components.
+
+```{r colleges-Q2}
+print(summary(data.pca))
+```
+
+The cumulative portion of variance in College explained by the first two principal components is 0.5836, as evidenced by the table above. In other words, 58.36% variance in College is explained by the first two principal components. 
+
+##USA Arrests
+
+###Question 1
+
+```{r USA-1, include=FALSE}
+data_usa<-read.csv("USArrests.csv")
+data_usa.numeric<-select_if(data_usa, is.numeric)
+pca.data_usa<-prcomp(data_usa.numeric, center=TRUE, scale.=TRUE)
+plot_usa<-autoplot(pca.data_usa, loadings=TRUE, loadings.label=TRUE)+ggtitle("Part 2: Question 1")
+```
+
+Plot:
+```{r USA-1 print}
+print(plot_usa)
+```
+
+###Question 2
+
+```{r USA-2, include=FALSE}
+km2<-kmeans(data_usa.numeric, 2,nstart = 20)
+km2_clusters<-km2$cluster
+plot_kmeans<-autoplot(pca.data_usa, data = USArrests, label=TRUE, col=km2_clusters, loadings=TRUE, loadings.colour='red', loadings.label=TRUE, loadings.label.size=4)+ggtitle("Part 2: Question 2")
+```
+
+Plot:
+```{r USA-2 print}
+print(plot_kmeans)
+```
+Describe your results:
+We can see that the first component captures information about rape, assault and murder. We can see that most of the classication is based on the second PC, as indicated by the directionality of the arrows towards the y-axis. States in the first cluster typically have higher rates of crime as compared to states in the second cluster.The second cluster chiefly captures information about urban population, with states like Washington, Ohio and Pennsylvanaia all contanining similar urban populations.  
+
+###Question 3 
+```{r USA-3, include=FALSE}
+km4<-kmeans(data_usa.numeric, 4,nstart = 20)
+km4_clusters<-km4$cluster
+plot_k4means<-autoplot(pca.data_usa, data = USArrests, label=TRUE, col=km4_clusters, loadings=TRUE, loadings.colour='black', loadings.label=TRUE, loadings.label.size=4)+ggtitle("Part 2: Question 3")
+```
+
+Plot:
+```{r USA-3 print}
+print(plot_k4means)
+```
+
+Describe your results:
+We can see that states in the first cluster are closely assosciated to crimes like murder, assault and rape. As we move towards the right, the other clusters appear to be less closely assosciated to these crimes, as they are further away from the arrows. Hence, we can conclude that states in the blue-color appear to have the highest rates of murder, assault and rape, states in the red-color cluster have medium rates of murder, assault and rape and states in the green and black clusters have the lowest rates of these crimes. Compared to the previous graph (kmeans=2), we can note that there are slightly greater number of outlier states in this instance too. 
+
+###Question 4
+```{r USA-4, include=FALSE}
+km3<-kmeans(data_usa.numeric, 3,nstart = 20)
+km3_clusters<-km3$cluster
+plot_k3means<-autoplot(pca.data_usa, data = USArrests, label=TRUE, col=km3_clusters, loadings=TRUE, loadings.colour='red', loadings.label=TRUE, loadings.label.size=4)+ggtitle("Part 2: Question 3")
+```
+
+Plot:
+```{r USA-4 print}
+print(plot_k3means)
+```
+
+Describe your results:
+
+
+###Question 5
+```{r USA-5, include=FALSE}
+km3_pca<-kmeans(pca.data_usa$x[,1:2], 3,nstart = 20)
+km3pca_clusters<-km3_pca$cluster
+plot_k3pcameans<-autoplot(pca.data_usa, data = USArrests, label=TRUE, col=km3pca_clusters, loadings=TRUE, loadings.colour='red', loadings.label=TRUE, loadings.label.size=4)+ggtitle("Part 2: Question 3")
+```
+
+Plot:
+```{r USA-5 print}
+print(plot_k3pcameans)
+```
+
+Describe your results and compare them to the clustering results with $K=3$ based on the raw data.
+
+###Question 6 
+```{r USA-6, include=FALSE}
+cluster<-hclust(dist(USArrests))
+```
+
+Clusters: 
+```{r USA-5 print}
+print(cluster)
+```
+
+###Question 7
+```{r USA-7, include=FALSE}
+chop_cluster<-data.frame(cutree(cluster, 3))
+```
+
+Which states belong to which clusters?
+```{r chop print}
+print(chop_cluster)
+```
+
+###Question 8
+```{r USA-8, include=FALSE}
+chop_scaled<-scale(USArrests)
+cluster_scaled<-hclust(dist(chop_scaled))
+cluster_scaled_chop<-data.frame(cutree(cluster_scaled,3))
+print(cluster_scaled_chop)
+```
+What effect does scaling the variables have on the hierarchical clustering obtained?

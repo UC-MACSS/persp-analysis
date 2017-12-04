@@ -160,27 +160,94 @@ plot.HCPC(res.hcpc, choice = "map")
 
 ``` r
 km.out <- kmeans(usarrests.numeric, 3)
+km.out$centers
+```
+
+    ##      Murder  Assault UrbanPop     Rape
+    ## 1  8.214286 173.2857 70.64286 22.84286
+    ## 2  4.270000  87.5500 59.75000 14.39000
+    ## 3 11.812500 272.5625 68.31250 28.37500
+
+``` r
+km.out$cluster
+```
+
+    ##        Alabama         Alaska        Arizona       Arkansas     California 
+    ##              3              3              3              1              3 
+    ##       Colorado    Connecticut       Delaware        Florida        Georgia 
+    ##              1              2              3              3              1 
+    ##         Hawaii          Idaho       Illinois        Indiana           Iowa 
+    ##              2              2              3              2              2 
+    ##         Kansas       Kentucky      Louisiana          Maine       Maryland 
+    ##              2              2              3              2              3 
+    ##  Massachusetts       Michigan      Minnesota    Mississippi       Missouri 
+    ##              1              3              2              3              1 
+    ##        Montana       Nebraska         Nevada  New Hampshire     New Jersey 
+    ##              2              2              3              2              1 
+    ##     New Mexico       New York North Carolina   North Dakota           Ohio 
+    ##              3              3              3              2              2 
+    ##       Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina 
+    ##              1              1              2              1              3 
+    ##   South Dakota      Tennessee          Texas           Utah        Vermont 
+    ##              2              1              1              2              2 
+    ##       Virginia     Washington  West Virginia      Wisconsin        Wyoming 
+    ##              1              1              2              2              1
+
+``` r
 table(km.out$cluster)
 ```
 
     ## 
     ##  1  2  3 
-    ## 16 14 20
+    ## 14 20 16
 
 ### 5. Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.
 
-All observations are clustered the same way again in a new order.
+Compared to the inital k=3 cluster, these results are similar. The centers are different. The clusters seems to be mostly the same (though they are ordered differently)
 
 ``` r
 pr.out <- prcomp(usarrests.numeric)
 km.out <- kmeans(pr.out$x[, 1:2], 3)
+km.out$centers
+```
 
+    ##          PC1       PC2
+    ## 1   2.888932  5.140574
+    ## 2 102.149155 -2.020236
+    ## 3 -83.741577 -1.982213
+
+``` r
+km.out$cluster
+```
+
+    ##        Alabama         Alaska        Arizona       Arkansas     California 
+    ##              2              2              2              1              2 
+    ##       Colorado    Connecticut       Delaware        Florida        Georgia 
+    ##              1              3              2              2              1 
+    ##         Hawaii          Idaho       Illinois        Indiana           Iowa 
+    ##              3              3              2              3              3 
+    ##         Kansas       Kentucky      Louisiana          Maine       Maryland 
+    ##              3              3              2              3              2 
+    ##  Massachusetts       Michigan      Minnesota    Mississippi       Missouri 
+    ##              1              2              3              2              1 
+    ##        Montana       Nebraska         Nevada  New Hampshire     New Jersey 
+    ##              3              3              2              3              1 
+    ##     New Mexico       New York North Carolina   North Dakota           Ohio 
+    ##              2              2              2              3              3 
+    ##       Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina 
+    ##              1              1              3              1              2 
+    ##   South Dakota      Tennessee          Texas           Utah        Vermont 
+    ##              3              1              1              3              3 
+    ##       Virginia     Washington  West Virginia      Wisconsin        Wyoming 
+    ##              1              1              3              3              1
+
+``` r
 table(km.out$cluster)
 ```
 
     ## 
     ##  1  2  3 
-    ## 16 20 14
+    ## 14 16 20
 
 ### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
 
@@ -197,7 +264,6 @@ The cluster each state belongs to is shown below.
 
 ``` r
 hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
-
 cutree(hc.complete, 3)
 ```
 

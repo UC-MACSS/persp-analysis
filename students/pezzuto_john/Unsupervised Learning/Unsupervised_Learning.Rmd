@@ -80,6 +80,8 @@ res.hcpc <-  HCPC(pca, nb.clust = 3, graph=FALSE)
 plot.HCPC(res.hcpc, choice = "map")
 
 km.out <- kmeans(usarrests.numeric, 3)
+km.out$centers
+km.out$cluster
 table(km.out$cluster)
 
 ```
@@ -87,11 +89,12 @@ table(km.out$cluster)
 
 ### 5. Perform K-means clustering with K=3 on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with K=3 based on the raw data.
 
-All observations are clustered the same way again in a new order.
+Compared to the inital k=3 cluster, these results are similar. The centers are different. The clusters seems to be mostly the same (though they are ordered differently)
 ```{r}
 pr.out <- prcomp(usarrests.numeric)
 km.out <- kmeans(pr.out$x[, 1:2], 3)
-
+km.out$centers
+km.out$cluster
 table(km.out$cluster)
 ```
 
@@ -110,11 +113,7 @@ The cluster each state belongs to is shown below.
 
 ```{r}
 hc.complete <- hclust(dist(usarrests.numeric), method = "complete")
-
 cutree(hc.complete, 3)
-
-
-
 ```
 
 

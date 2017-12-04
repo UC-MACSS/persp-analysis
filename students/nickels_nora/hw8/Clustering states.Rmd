@@ -1,0 +1,38 @@
+---
+title: "Clustering states"
+author: "Nora Nickels"
+date: "12/4/2017"
+output: github_document
+---
+
+# Assignment 8 - Unsupervised data
+## Perspectives of Computational Analysis - Fall 2017
+
+# Clustering states
+
+## Introduction
+
+```{r clustering}
+
+library(tidyverse)
+set.seed(1234)
+
+USArrests <- read.csv("USArrests.csv")
+
+```
+
+### 1. Perform PCA on the dataset and plot the observations on the first and second principal components.
+
+### 2. Perform $K$-means clustering with $K=2$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+### 3. Perform $K$-means clustering with $K=4$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+### 4. Perform $K$-means clustering with $K=3$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+### 5. Perform $K$-means clustering with $K=3$ on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with $K=3$ based on the raw data.
+
+### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+
+### 7. Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
+
+### 8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation $1$. What effect does scaling the variables have on the hierarchical clustering obtained?

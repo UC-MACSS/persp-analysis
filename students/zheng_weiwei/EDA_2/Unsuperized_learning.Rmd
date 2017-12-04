@@ -15,9 +15,9 @@ rm(list=ls())
 library(readr)
 library(ggplot2)
 library(ggfortify)
-College <- read_csv("~/persp-analysis/assignments/unsupervised-learning/data/College.csv")
+College <- read_csv("~/Desktop/persp-analysis/assignments/unsupervised-learning/data/College.csv")
 College.data <- College[,-1,drop=FALSE] 
-USArrests.data <- read_csv("~/persp-analysis/assignments/unsupervised-learning/data/USArrests.csv")
+USArrests.data <- read_csv("~/Desktop/persp-analysis/assignments/unsupervised-learning/data/USArrests.csv")
 ```
 
 ## PART A
@@ -26,12 +26,10 @@ USArrests.data <- read_csv("~/persp-analysis/assignments/unsupervised-learning/d
 
 ```{r}
 pr.college<-prcomp(College.data, scale = TRUE) 
-biplot(pr.college, scale = 0, pch = 0.2)
+autoplot(pr.college, data = College.data, label = FALSE, loadings = TRUE, loadings.colour = 'blue',
+         loadings.label = TRUE, loadings.label.size = 3)
 ```
 
-```{r}
-autoplot(pr.college)
-```
 
 ```{r}
 theta <- seq(0,2*pi,length.out = 100)
@@ -124,6 +122,7 @@ The boundaries of each clustering by the two methods are more or less the same, 
 arrest.dist <- dist(USArrests.data)
 plot(hclust(arrest.dist), labels = USArrests.data$State , main =" Complete Linkage ", xlab ="", sub ="", ylab ="")
 ```
+
 **7.Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?**
 
 ```{r}

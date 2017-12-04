@@ -31,6 +31,7 @@ autoplot(college.PCA, data = college,
 
 ### Problem 2
 Calculate the cumulative proportion of variance explained by all the principal components (see 10.2.3 in ISLR). Approximately how much of the variance in College is explained by the first two principal components?\
+
 From the PCA model, we conclude that the first two principal components comprise 58.36% variance of College data.
 ```{r}
 summary(college.PCA)
@@ -43,7 +44,10 @@ plot(cumsum(props),main="Cumulative proportion of variance",xlab = "PCA Index", 
 #Clustering states
 ###Problem 1
 
-Perform PCA on the dataset and plot the observations on the first and second principal components.
+Perform PCA on the dataset and plot the observations on the first and second principal components. 
+
+**Notice that for part 2, we all use normalized data to eliminate the distortion resulted by different units, except the last two questions. See [Still about standardization #481](https://github.com/UC-MACSS/persp-analysis/issues/481).**
+
 ```{r}
 crime = read.csv("/Users/Rex/Desktop/Perspective/HW/persp-analysis/students/yu_liqiang/yu_liqiang_hw8/USArrests.csv")
 head(crime)
@@ -56,15 +60,19 @@ autoplot(prcomp(crime_tidy), data = crime, colour = 'State',label.size = 3,loadi
 ###Problem 2
 
 Perform $K$-means clustering with $K=2$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.\
-With K-means clustering (K=2), we clusters data for 50 states into 2 clusters. Each cluster contains approximately the same number of observations. Cluster 1, labeled by blue points, represents the cluster of states with low crime rate while Cluster 2 (organe points) represents states with high crime rate.
+
+With K-means clustering (K=2), we clusters data (normalized) for 50 states into 2 clusters. Each cluster contains approximately the same number of observations. Cluster 1, labeled by blue points, represents the cluster of states with low crime rate while Cluster 2 (organe points) represents states with high crime rate.
 ```{r}
+
 autoplot(kmeans(crime_tidy, 2), data = USArrests, label = TRUE, label.size = 3)+labs(title="K-means clustering on USArrests (K=2)")
+
 ```
 
 ###Problem 3
 
 Perform $K$-means clustering with $K=4$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.\
-With K-means clustering (K=4), we clusters data for 50 states into 4 clusters. Each cluster contains a different number of observations. From the left to the right, Cluster 1, labeled by blue points, contains about 9 observations and represents the cluster of states with the lowest crime rate among all 4 clusters. Cluster 2, labeled by green points, contains about 17 observations and represents the cluster of states with low-to-medium crime rate among all 4 clusters. Cluster 3, labeled by organe points, contains about 9 observations and represents the cluster of states with medium-to-high crime rate among all 4 clusters. Cluster 4, labeled by organe points, contains about 14 observations and represents the cluster of states with the highest crime rate among all 4 clusters. 
+
+With K-means clustering (K=4), we clusters data (normalized) for 50 states into 4 clusters. Each cluster contains a different number of observations. From the left to the right, Cluster 1, labeled by blue points, contains about 9 observations and represents the cluster of states with the lowest crime rate among all 4 clusters. Cluster 2, labeled by green points, contains about 17 observations and represents the cluster of states with low-to-medium crime rate among all 4 clusters. Cluster 3, labeled by organe points, contains about 9 observations and represents the cluster of states with medium-to-high crime rate among all 4 clusters. Cluster 4, labeled by organe points, contains about 14 observations and represents the cluster of states with the highest crime rate among all 4 clusters. 
 ```{r}
 autoplot(kmeans(crime_tidy, 4), data = USArrests, label = TRUE, label.size = 3)+labs(title="K-means clustering on USArrests (K=4)")
 ```
@@ -72,7 +80,8 @@ autoplot(kmeans(crime_tidy, 4), data = USArrests, label = TRUE, label.size = 3)+
 ###Problem 4
 
 Perform $K$-means clustering with $K=3$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.\
-With K-means clustering (K=3), we clusters data for 50 states into 3 clusters. Each cluster contains a different number of observations. Cluster 1, labeled by blue points, contains about 21 observations and indicates the cluster of states with the lowest crime rate among all 3 clusters. Cluster 2, labeled by orange points, contains about 14 observations and represents the cluster of states with medium crime rate in United States. Cluster 3, labeled by organe points, contains about 16 observations and represents the cluster of states with the highest crime rate among all states in US.
+
+With K-means clustering (K=3), we clusters data (normalized) for 50 states into 3 clusters. Each cluster contains a different number of observations. Cluster 1, labeled by blue points, contains about 21 observations and indicates the cluster of states with the lowest crime rate among all 3 clusters. Cluster 2, labeled by orange points, contains about 14 observations and represents the cluster of states with medium crime rate in United States. Cluster 3, labeled by organe points, contains about 16 observations and represents the cluster of states with the highest crime rate among all states in US.
 ```{r}
 autoplot(kmeans(crime_tidy, 3), data = USArrests, label = TRUE, label.size = 3)+labs(title="K-means clustering on USArrests (K=3)")
 ```
@@ -80,14 +89,18 @@ autoplot(kmeans(crime_tidy, 3), data = USArrests, label = TRUE, label.size = 3)+
 ###Problem 5
 
 Perform $K$-means clustering with $K=3$ on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with $K=3$ based on the raw data.\
-Using the score vectors instead of raw data, we get the same clustering result as in Problem 4, except the scale on x-y axis, which is reasonable since the score vector is linear dependent with principal components.\
+
+Using the score vectors instead of raw data (normalized), we get the same clustering result as in Problem 4, except the scale on x-y axis, which is reasonable, since after normalization, the score vector is linear dependent with principal components. Things would be different if we did not normalize our data.\
+
 Ref:[What are principal component scores?](https://stats.stackexchange.com/questions/222/what-are-principal-component-scores)
 
 ```{r}
 crime_pca <- prcomp(crime_tidy)
 scores<-crime_pca$x #Score vectors stored in crime_pca$x
 centers=as.data.frame(kmeans(crime_tidy, 3)$centers)
-autoplot(kmeans(crime_tidy, 3), data = USArrests, label = TRUE, label.size = 3,scale = FALSE)+labs(title="K-means clustering on USArrests (K=3) on score vector")
+pca_score=as.data.frame(scores)
+rownames(pca_score) = crime[,1]
+autoplot(kmeans(as.data.frame(pca_score), 3), data = pca_score, label = TRUE, label.size = 3,scale = FALSE)+labs(title="K-means clustering on USArrests (K=3) on score vector")
 ```
 
 ###Problem 6

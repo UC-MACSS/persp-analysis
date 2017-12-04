@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("ggfortify")
 #install.packages("ISLR")
 #install.packages("ggdendro")
+#install.packages("FactoMineR")
 
 # Load packages
 library(tidyverse)
@@ -36,27 +37,126 @@ library(ggdendro)
 library(tidytext)
 library(tm)
 library(topicmodels)
+library(FactoMineR)
 
 options(digits = 3)
 set.seed(1234)
 theme_set(theme_minimal())
 
-USArrests <- read.csv("USArrests.csv")
+# Load data and change state column so no errors. 
+USArrests <- read.csv("USArrests.csv") %>%
+            tibble::column_to_rownames("State")
+  
 
 ```
 
 ### 1. Perform PCA on the dataset and plot the observations on the first and second principal components.
 
+```{r clustering_1}
+
+# Perform PCA
+USArrestsPCA <- prcomp(USArrests, 
+                       scale=TRUE)
+
+head(USArrestsPCA$x)
+
+# Plot the first two principle components.
+USArrestsPCA$rotation
+biplot(USArrestsPCA, scale = 0, cex = .6)
+
+```
+
 ### 2. Perform $K$-means clustering with $K=2$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r clustering_2}
+
+# Use FactoMineR to do clustering with K = 2 clusters.
+
+USArrestsPCA_2 <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
+
+res.hcpc <-  HCPC(USArrestsPCA_2, nb.clust = 2, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+
+```
+
+Clustering with K = 2, and looking at the variables map and the factor map, it appears that the first component seems associate with states like Florida, Arizona, Nevada, and California. This first component is correlated more strongly with with rape, assault, and murder, according to the variable factor map.The second component is associate with states like New Jersey, Hawaii, Rhode Island, and Massachusetts. This component is more strongly associated with the Urban Population variable. In terms of clustering, cluster two is more associated with the first component, whereas cluster one may be a little more associated with the second dimension component.
 
 ### 3. Perform $K$-means clustering with $K=4$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
 
+```{r clustering_3}
+
+res.hcpc <-  HCPC(USArrestsPCA_2, nb.clust = 4, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+
+```
+
+Cluster 2 may be most associated with urban populations, and clusters 3 and 4 may be more associate with rape, assault, and murder.
+
 ### 4. Perform $K$-means clustering with $K=3$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r clustering_4}
+
+res.hcpc <-  HCPC(USArrestsPCA_2, nb.clust = 3, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+
+```
+
+With three clusters, cluster 2 may be more correlated with urban pop, whereas cluster 3 maye be more associated with rape, assault, and murder. 
 
 ### 5. Perform $K$-means clustering with $K=3$ on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with $K=3$ based on the raw data.
 
+```{r clustering_5}
+
+km.out <- kmeans(USArrests, 3)
+km.out$centers
+km.out$cluster
+table(km.out$cluster)
+          
+pr.out <- prcomp(USArrests)
+km.out <- kmeans(pr.out$x[, 1:2], 3)
+km.out$centers
+km.out$cluster
+table(km.out$cluster)
+
+```
+
+If I did this correctly, the clusters are the same according to the tables, but the tables regarding the centers of the clusters are different. 
+
 ### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+
+```{r clustering_6}
+
+hc.complete <- hclust(dist(USArrests), method = "complete")
+
+plot(hc.complete)
+
+```
 
 ### 7. Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
 
+```{r clustering_7}
+
+hc.complete <- hclust(dist(USArrests), method = "complete")
+
+cutree(hc.complete, 3)
+
+```
+
+Cutree function designates which states belong to which clusters. 
+
 ### 8. Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation $1$. What effect does scaling the variables have on the hierarchical clustering obtained?
+
+```{r clustering_8}
+
+sd.data <- scale(USArrests)
+
+hc.complete.sd <- hclust(dist(sd.data), method = "complete")
+
+plot(hc.complete.sd)
+
+```
+
+The clustering of the trees seems different after scaling. With the heights on the y axis so much more spread out, it seems that it's more clear where you would cut if you were asked to cut the dendogram visually. 

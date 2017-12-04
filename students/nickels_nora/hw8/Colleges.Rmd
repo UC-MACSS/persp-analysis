@@ -5,26 +5,84 @@ date: "12/4/2017"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
+# Assignment 8 - Unsupervised data
+## Perspectives of Computational Analysis - Fall 2017
+
+# Colleges
+
+```{r colleges, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Install packages
+#install.packages("ggfortify")
+#install.packages("ISLR")
+#install.packages("ggdendro")
+
+# Load packages
+library(tidyverse)
+library(knitr)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+library(ISLR)
+library(titanic)
+library(rcfss)
+library(grid)
+library(gridExtra)
+library(ggdendro)
+library(tidytext)
+library(tm)
+library(topicmodels)
+
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+
+# Load data
+Colleges <- read.csv("College.csv")
+
+# Get rid of private variable (non numeric)
+Colleges$Private <- NULL
+
 ```
 
-## R Markdown
+### 1. Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+**What variables appear strongly correlated on the first principal component?**
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+**What about the second principal component?**
 
-```{r cars}
-summary(cars)
+```{r colleges_PCA_1}
+
+# Perform PCA on Colleges data set.
+CollegesPCA <- prcomp(Colleges,
+                 scale = TRUE) 
+
+head(CollegesPCA$x)
+
+# Plot the first two principle components.
+CollegesPCA$rotation
+biplot(CollegesPCA, scale = 0, cex = .6)
+
 ```
 
-## Including Plots
+The first principal component seems to be most strongly correlated with 'PhD', 'Terminal', 'Top10perc', 'Top25perc', and 'Expend'. The second principal component seems to be most strongly correlated, negatively, with 'Apps', 'Accept', 'P.Undergrad', 'F.undergrad', and 'Enroll', and fairly strongly positive correlated with 'perc.Alumni' and 'Outstate'.
 
-You can also embed plots, for example:
+### 2. Calculate the cumulative proportion of variance explained by all the principal components (see 10.2.3 in ISLR). 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r Colleges_PCA_2}
+
+# Summarizing importance of PCs.
+summary(CollegesPCA)
+
+# Plot of variances associated with PCs.
+plot(CollegesPCA, type = "l")
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+**Approximately how much of the variance in College is explained by the first two principal components?**
+
+Approximately 58.3% of the variance is explained by the first two principal components. This is a fairly large amount of importance, especially when compared to the components beyond the first two, as seen by the variances graph.
+
+

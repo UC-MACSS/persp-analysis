@@ -12,10 +12,34 @@ output: github_document
 
 ## Introduction
 
-```{r clustering}
+```{r clustering, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
+# Install packages
+#install.packages("ggfortify")
+#install.packages("ISLR")
+#install.packages("ggdendro")
+
+# Load packages
 library(tidyverse)
+library(knitr)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+library(ISLR)
+library(titanic)
+library(rcfss)
+library(grid)
+library(gridExtra)
+library(ggdendro)
+library(tidytext)
+library(tm)
+library(topicmodels)
+
+options(digits = 3)
 set.seed(1234)
+theme_set(theme_minimal())
 
 USArrests <- read.csv("USArrests.csv")
 

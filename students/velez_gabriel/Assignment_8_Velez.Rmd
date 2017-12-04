@@ -1,0 +1,280 @@
+---
+title: "Assignment 8"
+author: "Gabriel Velez"
+date: "11/30/2017"
+output: github_document
+---
+
+```{r setup, warn = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Libraries needed
+library(tidyverse)
+library(knitr)
+#install.packages("ggfortify")
+library(ggfortify)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+#install.packages("ISLR")
+library(ISLR)
+library(rcfss)
+library(grid)
+library(gridExtra)
+library(ggbiplot)
+#install.packages("ggdendro")
+library(ggdendro)
+library(tidytext)
+library(tm)
+#library(topicmodels)
+#install.packages("FactoMineR")
+library(FactoMineR)
+
+options(digits = 3)
+set.seed(1234)
+theme_set(theme_minimal())
+
+
+# Importing data 
+collegeData <- read.csv("College.csv")
+
+# Dropping First Variable
+collegeData$Private <- NULL
+collegeData$X <- NULL
+
+```
+
+## Colleges
+
+1) Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
+A) What variables appear strongly correlated on the first principal component?
+B) What about the second principal component?
+
+
+```{r colleges_1}
+# Doing PCA 
+collegeDataPCA <- prcomp(collegeData,
+                 scale = TRUE) 
+
+head(collegeDataPCA$x)
+
+# Plotting
+collegeDataPCAGraph1 <- plot(collegeDataPCA, type = "l")
+
+# Looking at components
+collegeDataPCA$rotation
+
+# Plotting components
+collegeDataPCAGraph2 <- biplot(collegeDataPCA, scale = 0, cex = .6)
+
+print(collegeDataPCAGraph1)
+print(collegeDataPCAGraph2)
+```
+
+
+
+This data seems to show that the first two principal components explain a significant amount of the variance in colleges, and that from there each of the additional components does not explain much (and each one is about equal, with a slight downward trend).  In terms of what aspects are most correlated with these two components:
+
+*1A)* Based on this analysis, on the first principal component, it seems like Top 10 perc, Top 25 perc, PHD, Terminal, and Expend are all strongly correlated (i.e., I have chosen over .30) with this component.  In other words, this component seems to be most strongly correlated with the percentage of students from the top 10% of their high school class, the percentage of students from the top 25% of their high school class (which would make sense that both these would be associated), the percentage of faculty with PhDs, the percentage of faculty with terminal degrees, and the instructional expenditure per student. Out of state tuition is also close to the threshold I choose at .29.
+
+*1B)* For the second, it seems like Apps, Accept, Enroll, F. undergrad, are P.undergrad are all strong correlated (negatively).  These are the number of applications received, the number of applications accepted, the number of new students enrolled, the number of full time undergraduates and the number of part time undergraduates. It also seems to be somewhat positively correlated with out of state tuition and proportion of alumni who donate.
+
+*2)* Calculate the cumulative proportion of variance explained by all the principal components (see 10.2.3 in ISLR). Approximately how much of the variance in College is explained by the first two principal components?
+
+```{r colleges_2}
+# Looking at it graphically
+collegeDataPCAGraph3 <- plot(collegeDataPCA, type = "l")
+
+print(collegeDataPCAGraph3)
+
+# Getting more specific amount of variance
+summary(collegeDataPCA)
+
+```
+About 58 % of the variance is explained by the first two principal components.  As noted above, the third component doesn't add much more explanation (only about 7 percent), and then each additional component adds a similar (though decreasing with each additional component) amount.
+
+
+## Clustering States
+
+*1)* Perform PCA on the dataset and plot the observations on the first and second principal components.
+
+```{r clustering_1}
+# Doing PCA 
+USArrestsPCA <- prcomp(USArrests,
+                 scale = TRUE) 
+
+# Looking at components
+USArrestsPCA$rotation
+
+# Plotting components
+USAArrestsPCAGraph1 <- biplot(USArrestsPCA, scale = 0, cex = .6)
+
+print(USAArrestsPCAGraph1)
+```
+
+*2)* Perform $K$-means clustering with $K=2$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r clustering_2}
+# Doing clustering with  K = 2
+USArrestsK2 <- USArrests %>%
+  mutate(k2 = kmeans(USArrests, 2, nstart = 20)$cluster)
+
+
+# Creating Column of State Names for Graph
+USArrestsRow <- cbind(rownames(USArrests), data.frame(USArrests, row.names=NULL))
+
+# Plotting 2 Principal Components, Color Coded by Cluster
+USAArrestsPCAGraph2 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK2$k2), labels = USArrestsRow[,1]) +
+   labs(title = "First Two Principal Components, Color Coded by Cluster (K=2)",
+        x = "PC1",
+        y = "PC2") +
+      guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph2)
+
+# A second way to look at it using a different package (Factor Miner)
+USArrestsPCA2FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
+
+HCPCUSA2 <-  HCPC(USArrestsPCA2FM, nb.clust = 2, graph = FALSE)
+
+USAArrestsPCAGraph3 <- plot.HCPC(HCPCUSA2, choice = "map")
+
+print(USAArrestsPCAGraph3)
+```
+
+These results show that when we are using just two principal components and two clusters, the clusters look like they are pretty much divided by whether they load positively or negatively onto the first principal component.  Delaware and Arkansas seem to be the only states that are part of cluster 2 that are around 0 for PC1, 
+
+*3)* Perform $K$-means clustering with $K=4$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r clustering_3}
+# Doing clustering for K =4
+USArrestsK4 <- USArrests %>%
+  mutate(k2 = kmeans(USArrests, 2, nstart = 20)$cluster,
+         k3 = kmeans(USArrests, 3, nstart = 20)$cluster,
+         k4 = kmeans(USArrests, 4, nstart = 20)$cluster)
+
+# Plotting
+USAArrestsPCAGraph4 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK4$k4), labels = USArrestsRow[,1]) +
+   labs(title = "First Two Principal Components, Color Coded by Cluster (K=4)",
+        x = "PC1",
+        y = "PC2") +
+      guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph4)
+
+# A second way to look at it using a different package (Factor Miner)
+USArrestsPCA4FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
+
+HCPCUSA4 <-  HCPC(USArrestsPCA4FM, nb.clust = 4, graph = FALSE)
+
+USAArrestsPCAGraph5 <- plot.HCPC(HCPCUSA4, choice = "map")
+
+print(USAArrestsPCAGraph5)
+```
+
+Now, it looks like when we have four clusters, that they are grouped more or less also by splitting the loading onto PC1 into four groups.  This is a little less stark of a split then when we had 2 cluster, however.  For example, Colorado is close to New York, Arizona, and Illinois on this grid, but is in cluster 2, even though the other three states are in cluster 3.  There are some other similar examples as well, but as with the 2 cluster graph, this seems to show that the loadings for PC1 are associated more with the clusters than the loadings for PC2.
+
+*4)* Perform $K$-means clustering with $K=3$. Plot the observations on the first and second principal components and color-code each state based on their cluster membership. Describe your results.
+
+```{r clustering_4}
+# Doing clustering for K=3
+USArrestsK3 <- USArrests %>%
+  mutate(k2 = kmeans(USArrests, 2, nstart = 20)$cluster,
+         k3 = kmeans(USArrests, 3, nstart = 20)$cluster)
+
+# Plotting
+USAArrestsPCAGraph6 <- ggbiplot(USArrestsPCA, groups=factor(USArrestsK3$k3), labels = USArrestsRow[,1]) +
+   labs(title = "First Two Principal Components, Color Coded by Cluster (K=3)",
+        x = "PC1",
+        y = "PC2") +
+      guides(color=guide_legend(title="Cluster"))
+
+print(USAArrestsPCAGraph6)
+
+# A second way to look at it using a different package (Factor Miner)
+USArrestsPCA3FM <- PCA(USArrests, scale.unit=TRUE, graph = TRUE )
+
+HCPCUSA3 <-  HCPC(USArrestsPCA3FM, nb.clust = 3, graph = FALSE)
+
+USAArrestsPCAGraph7 <- plot.HCPC(HCPCUSA3, choice = "map")
+
+print(USAArrestsPCAGraph7)
+```
+
+Now, we see similar results to when their are four cluster, but that 2 and 4 from the previous analysis are merged as cluster 3 in this one.  Colorado and Texas are still in a different cluster from Illinois, Arizona, and New York (even though they are close on the plot), Delaware is still a bit of an outlier in that it's loading onto PC1 is about 0, but it is not in the same cluster as many of the others that have a similar loading onto PC1.
+
+*5)* Perform $K$-means clustering with $K=3$ on the first two principal components score vectors, rather than the raw data. Describe your results and compare them to the clustering results with $K=3$ based on the raw data.
+
+```{r clustering_5}
+# Clustering on raw data
+KM3 <- kmeans(USArrests, 3)
+
+# On score vectors
+KMPred3 <- kmeans(USArrestsPCA$x[, 1:2], 3)
+
+# Printing
+print(KM3)
+print(KMPred3)
+```
+
+It looks like now the states are clustered a bit differently, including having a different number of states in each cluster.  The cluster means can be negative and are centered mor eor less around 0 for the using the score vectors instead of the raw data.  Also, we are only clustering on two variables (the first two principal components instead of the four variables in the original).  Additionally, the cluster sum of squares is also lower (68.85% instead of 86.5%)
+
+*6)* Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+
+```{r clustering_6}
+# Doing hierarchical cluster
+USArrestsHcComplete <- hclust(dist(USArrests), method = "complete")
+
+# Graphing the dendrogram
+USAArrestsPCAGraph8 <- ggdendrogram(USArrestsHcComplete)
+
+print(USAArrestsPCAGraph8)
+```
+
+*7)* Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
+
+```{r clustering_7}
+# Looking at graph about, a height of 150 would seem to do this.
+h <- 150
+USArrestsHcData <- dendro_data(USArrestsHcComplete)
+USArrestsHcLabs <- label(USArrestsHcData) %>%
+  left_join(data_frame(label = as.factor(seq.int(nrow(USArrests))),
+                       cl = as.factor(cutree(USArrestsHcComplete, h = h))))
+
+# plot dendrogram
+USAArrestsPCAGraph9 <- ggdendrogram(USArrestsHcComplete, labels = FALSE) +
+  geom_text(data = USArrestsHcLabs,
+            aes(label = label, x = x, y = 0),
+            vjust = .5, angle = 90) +
+  geom_hline(yintercept = h, linetype = 2) +
+  theme(axis.text.x = element_blank(),
+        legend.position = "none")
+
+print(USAArrestsPCAGraph9)
+
+# Another way to look at which states would be grouped
+USAArrestsPCAGraph10 <- cutree(USArrestsHcComplete, 3)
+
+print(USAArrestsPCAGraph10)
+```
+
+Based on this analysis, the first cluster has the states from Florida to Nevada on the dendogram, the second has Missouri to New Jersey, and the third has Ohio to Vermont.
+
+
+*8)* Hierarchically cluster the states using complete linkage and Euclidean distance, after scaling the variables to have standard deviation $1$. What effect does scaling the variables have on the hierarchical clustering obtained?
+
+```{r clustering_8}
+# Rescaling
+USArrestsSTD <- scale(USArrests, center = FALSE, scale= TRUE)
+
+# Doing hierarchical clustering
+USArrestsHcCompSTD <- hclust(dist(USArrestsSTD), method = "complete")
+
+# Plotting
+USAArrestsPCAGraph11 <- ggdendrogram(USArrestsHcCompSTD)
+
+print(USAArrestsPCAGraph11)
+```
+
+It changes both the grouping of the states, the scale, and where you would have to cut to dendogram to have a certain number of clusters.  For axample, Vermont is now closest to Maine and North Dakota, whereas before it was closest to North Dakota with Maine and South Dakota next as a pair. Furthermore, the next closest in the original was West Virginia, which is now several branches away in the middle. To this end, it seems to change the analyses.
+

@@ -1,0 +1,89 @@
+---
+title: "assignment_8"
+output: github_document
+---
+
+###Colleges 
+
+#### Question 1 
+
+Perform PCA analysis on the college dataset and plot the first two principal components. Describe the results.
+
+```{r chunk 1, include=FALSE}
+library("dplyr")
+library("ggfortify")
+library("dendextend")
+data<-read.csv("College.csv")
+data.numeric<-select_if(data, is.numeric)
+data.pca<-prcomp(data.numeric, center = TRUE, scale.=TRUE)
+plot<-autoplot(data.pca, loadings=TRUE, loadings.label=TRUE)
+```
+
+Describe the results:
+
+####Question 2 
+
+```{r colleges-Q2, include=FALSE}
+summary(data.pca)
+```
+
+##USA Arrests
+
+###Question 1
+
+```{r USA-1, include=FALSE}
+data_usa<-read.csv("USArrests.csv")
+data_usa.numeric<-select_if(data_usa, is.numeric)
+pca.data_usa<-prcomp(data_usa.numeric, center=TRUE, scale.=TRUE)
+plot_usa<-autoplot(pca.data_usa, loadings=TRUE, loadings.label=TRUE)
+```
+Describe your results.
+
+###Question 2
+
+```{r USA-2, include=FALSE}
+plot_kmeans<-autoplot(kmeans(USArrests, 2), data = USArrests)
+```
+Describe your results.
+
+###Question 3 
+```{r USA-3, include=FALSE}
+plot_kmeans_Q3<-autoplot(kmeans(USArrests, 4), data = USArrests)
+```
+
+###Question 4
+```{r USA-4, include=FALSE}
+plot_kmeans_Q4<-autoplot(kmeans(USArrests, 3), data = USArrests)
+```
+
+###Question 5
+```{r USA-5, include=FALSE}
+pca_scores<-data.frame(pca.data_usa$x)
+pca_scores_plot<-data.frame(subset(pca_scores, select=c("PC1", "PC2")))
+plot_kmeans_Q5<-autoplot(kmeans(pca_scores_plot, 3), data =pca_scores_plot)
+```
+Describe your results and compare them to the clustering results with $K=3$ based on the raw data.
+
+###Question 6 
+```{r USA-6, include=FALSE}
+cluster<-hclust(dist(USArrests))
+```
+
+###Question 7
+```{r USA-7, include=FALSE}
+chop_cluster<-data.frame(cutree(cluster, 3))
+```
+
+Which states belong to which clusters?
+```{r chop print}
+print(chop_cluster)
+```
+
+###Question 8
+```{r USA-8, include=FALSE}
+chop_scaled<-scale(USArrests)
+cluster_scaled<-hclust(dist(chop_scaled))
+cluster_scaled_chop<-data.frame(cutree(cluster_scaled,3))
+print(cluster_scaled_chop)
+```
+What effect does scaling the variables have on the hierarchical clustering obtained? 

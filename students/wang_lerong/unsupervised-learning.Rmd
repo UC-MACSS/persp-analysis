@@ -1,0 +1,111 @@
+---
+title: "Unsupervised-learning"
+author: "Lerong Wang"
+date: "12/3/2017"
+output: github_document
+---
+
+## Colleges
+### 1. Perform PCA analysis on the college dataset and plot the first two principal components.
+```{r}
+library(tidyverse)
+library(cluster) 
+```
+
+```{r}
+college <- read_csv("College.csv")
+pr.out <- prcomp(college, scale = TRUE)
+biplot(pr.out, scale = 0, cex = .6)
+```
+
+```{r}
+pr.out
+```
+
+
+Top10perc, Top23perc, PhD, Terminal, and expend appear strongly correlated on the first principal component. Apps, Accept, F.Undergrad, and P.Undergrad appear strongly correlated on the second principal component.
+
+### 2. Calculate the cumulative proportion of variance explained by all the principal components.
+```{r}
+summary(pr.out)
+```
+
+Approximately 58.36% of the variance is explained by the first two principal components.
+
+## Clustering states
+
+### 1. Perform PCA on the dataset and plot the observations on the first and second principal components.
+```{r}
+usarrests <- read_csv("USArrests.csv") 
+pcarrests<-prcomp(USArrests,scale=TRUE)
+biplot(pcarrests,scale = 0, cex= .5)
+```
+
+### 2. k-means clustering with k=2
+```{r}
+fit <- kmeans(USArrests, 2)
+clusplot(USArrests, fit$cluster, color=TRUE, labels=2, lines=0, cex.txt = 0.5)
+```
+
+By setting k=2, we get 2 clusters that are splited around 0 of principal component 1. The two clusters appear to have a roughly distinct boundary.
+
+### 3. k-means clustering with k=4
+```{r}
+fit <- kmeans(USArrests, 4)
+clusplot(USArrests, fit$cluster, color=TRUE, labels=2, lines=0, cex.txt = 0.5)
+```
+
+Cluster boundaries also appear along principal component 1. However, cluster boundaries are not as distinct as the boundary we obtained in question 2. 
+
+### 4. k-means clustering with k=3
+```{r}
+fit <- kmeans(USArrests, 3)
+clusplot(USArrests, fit$cluster, color=TRUE, labels=2, lines=0, cex.txt = 0.5)
+```
+
+Cluster boundaries also appear along principal component 1. The cluster boundaries of k-means clustering with k=3 seems to be an intermediate stage between k=2 and k=4.
+
+### 5. k-means clustering with k=3 on first two principal components score vectors
+```{r}
+fit <- kmeans(pcarrests$x[,1:2], 3)
+clusplot(USArrests, fit$cluster, color=TRUE, labels=2, lines=0, cex.txt = 0.5)
+```
+
+The members of each cluster become slightly different than those in last question, but most states in each cluster still remain. The cluster boundaries become more distinct.
+
+### 6. Using hierarchical clustering with complete linkage and Euclidean distance, cluster the states.
+```{r}
+df <- USArrests
+df <- na.omit(df)
+d <- dist(df, method = "euclidean")
+hc1 <- hclust(d, method = "complete" )
+plot(hc1, cex = 0.6, hang = -1)
+```
+
+### 7.Cut the dendrogram at a height that results in three distinct clusters. Which states belong to which clusters?
+```{r}
+plot(hc1)
+abline(h=150, col = 'red')
+cutree(hc1,3)
+table(cutree(hc1,3))
+```
+
+### 8
+```{r}
+df <- USArrests %>%
+  scale()
+df <- na.omit(df)
+d <- dist(df, method = "euclidean")
+hc1 <- hclust(d, method = "complete" )
+plot(hc1, cex = 0.6, hang = -1)
+cutree(hc1, 4)
+table(cutree(hc1,4))
+cutree(hc1, 3)
+table(cutree(hc1,3))
+```
+
+The cluster dendrogram breaks into different smaller clusters more earlier. In the above results, I first divide them into 4 clusters, which is the more obvious case. Then I divide them into 3 clusters, as what we did in question 7. The members of each cluster appear different than what we obtained in the last question.
+
+## References
+https://stat.ethz.ch/R-manual/R-devel/library/cluster/html/clusplot.default.html
+

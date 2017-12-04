@@ -37,7 +37,7 @@ College1 <-College %>%
 pca_college <-PCA(College1, scale.unit=TRUE, graph=TRUE )
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20College%201-1.png)![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20College%201-2.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20College%201-1.png)![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20College%201-2.png)
 
 ``` r
 pc <-prcomp(College1[,-1], scale=TRUE)
@@ -180,7 +180,7 @@ row.names(USArrests1) <- USArrests$State
 pca <- PCA(USArrests1, scale.unit=TRUE, graph = TRUE )
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%201-1.png)![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%201-2.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%201-1.png)![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%201-2.png)
 
 2 Perform *K*-means clustering with *K* = 2. Plot the observations on the first and second principal components and color-code each state based on their cluster membership.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -191,7 +191,7 @@ arrestHC2 <-HCPC(pca, nb.clust = 2, graph = FALSE)
 plot.HCPC(arrestHC2, choice = "map", title = "K- Means Clustering: K = 2")
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%202-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%202-1.png)
 
 Component one, as seen in the graphs for question one, is associated with general crime: rape, assault, and murder. Thus it is not coincidence that cluster 2 associates higher with this component. As seen later in the assignment states in this cluster report some of the higher crime rates namely: Alaska, Texas, and Florida. Cluster one associates more strongly with component two, which is more associated with UrbanPop. This variable just seems to be a red herring, this cluster more than likely just represents lower crime rate states.
 
@@ -204,7 +204,7 @@ arrestHC4 <-HCPC(pca, nb.clust = 4, graph = FALSE)
 plot.HCPC(arrestHC4, choice = "map", title = "K- Means Clustering: K = 4")
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%203-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%203-1.png)
 
 This clustering adds more specifity to the previous graph. As we can now see that cluster one represents the states with the lowest crime rates, while clusters three and four represent states with higher crime rates, with cluster four representing states such as Florida and Alaska with the highest rates. However this clustering also allows for easier representation of the population component. As incorrectly hypothesized in the previous question, this component may help differetiate high crime rate states with high populations such as Florida, California, and Texas, from states like Alaska (also in cluster four) with high crime and lower population. This is evident in Alaska being lower on the y-axis.
 
@@ -217,7 +217,7 @@ arrestHC3 <-HCPC(pca, nb.clust = 3, graph = FALSE)
 plot.HCPC(arrestHC3, choice = "map", title = "K- Means Clustering: K = 3")
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%204-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/PCA%20Arrests%204-1.png)
 
 ``` r
 km.out <- kmeans(USArrests1, 3)
@@ -226,7 +226,7 @@ table(km.out$cluster)
 
     ## 
     ##  1  2  3 
-    ## 20 14 16
+    ## 16 20 14
 
 This clustering technique appears to differentiate between those states with very low crime and those states with medium crime. However, states with high crime are all clustered together (cluster three).
 
@@ -252,7 +252,7 @@ ggplot(data_principle_comp, aes(data_principle_comp$PC1, data_principle_comp$PC2
   theme_bw()
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/Arrests%205-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/Arrests%205-1.png)
 
 ``` r
 prarrest <- prcomp(USArrests1)
@@ -280,7 +280,7 @@ plot(HierarchArrest1, main = "Hierarchical Cluster Plot",
      xlab = "States")
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
 
 In this cluster plot it can be seen that most states with higher crime rates are centered to the left.
 
@@ -333,6 +333,6 @@ plot(HierarchArrestSD,
      xlab = "States")
 ```
 
-![](Nichols_k_hw8_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
+![](Nichols_k_hw8_Final_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
 
 Scaling the variables allows for better viszualization of the different clusters of both crime rate and population. For example, amongst the righ-most cluster Alaska stands out prominently. When referenced with our four cluster graph these states are the states with very high crime rates and lower populations - Alaska was categorized as acluster four state in that graph despite having such a low population due its apparently high crime rate and this is reflected here. However, a state like Florida, which may have stood out as the most prominent state in terms of crime using alternative clustering techniques, here it is given the context of higher population states within its hierarchical cluster (e.g., New York, Texas, Illinois), and its prominence is a bit diminished, and perhaps more accurately shown.

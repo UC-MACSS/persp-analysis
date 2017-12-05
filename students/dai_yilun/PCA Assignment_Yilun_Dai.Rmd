@@ -1,0 +1,214 @@
+---
+title: "PCA_Assignment"
+author: "Yilun Dai"
+date: "12/1/2017"
+output: github_document
+---
+
+```{r, message = FALSE, warning = FALSE}
+setwd("~/Documents/Fall2017/MACS30000")
+library(tidyverse)
+library(forcats)
+library(broom)
+library(modelr)
+library(stringr)
+library(ISLR)
+library(titanic)
+library(reshape2)
+library(gridExtra)
+
+library(ggdendro)
+
+library(tidytext)
+
+library(tm)
+
+library(topicmodels)
+library(ggfortify)
+library(stats)
+
+options(digits = 3)
+set.seed(2)
+theme_set(theme_minimal())
+Collegedata <- read.csv("College.csv", header = TRUE)
+College <- subset(Collegedata, select = -c(Private))
+```
+
+# 1. 
+
+## 1.
+```{r, message = FALSE}
+college.pca <- prcomp(College)
+# Extract the actual component directions/weights for ease of reference
+collegepca <- college.pca$rotation
+dim(college.pca$x)
+
+college.pca$rotation
+
+biplot(college.pca, scale = 0, main = 'College data PC1 and PC2')
+
+```
+
+    F.undergrad, apps and accept appear strongly correlated on the first principle component. \
+    Expend and outstate appear strongly correlated on the second principle component. \
+
+## 2.
+```{r, message = FALSE}
+college.var = college.pca$sdev^2
+college.var
+pve <- college.var/sum(college.var)
+plot(cumsum(pve), xlab="Principal Component ", ylab=" Cumulative Proportion of Variance Explained ", main ="Cumulative proportion of variance explained", ylim=c(0,1), type= 'b')
+```
+
+    Approximately 85% of the variace in college is explained by first two principle components. \
+    
+# 2. 
+
+## 1.
+```{r, message = FALSE}
+USArrests <- read.csv('USArrests.csv', header = TRUE, row.names = 1)
+arrests.pca <- prcomp(USArrests, scale = TRUE)
+arrests.pca$rotation
+biplot(arrests.pca,scale = 0, cex = 0.6, main = 'US arrest data PC1 and PC2')
+
+```
+
+Murder, Assault and Rape appear strongly correlated on the first principle component.
+
+## 2. 
+```{r, message = FALSE}
+set.seed(2)
+k2 <- kmeans(USArrests, 2, nstart=20)
+k2
+plot(USArrests, col=(k2$cluster +1), main="K-Means Clustering Results with K=2", pch=20, cex=2)
+
+```
+
+Murder and assault appear to classify two distinct groups, as we can see that the green and red data points barely overlap. If We use urbanpop and/or rape to classify, then we can see that the two groups overlap, meaning that Murder and Assault are better.
+
+betweenSS / totalSS =  72.9 % 
+
+    
+## 3. 
+```{r, message = FALSE, warning = FALSE}
+k4 <- kmeans(USArrests, 4, nstart=20)
+k4.clusters=k4$cluster
+k4
+plot(USArrests, col=(k4$cluster +1), main="K-Means Clustering Results with K=4", pch=20, cex=2)
+
+```
+
+Murder and assault appear to classify four distinct groups, as we can see that clusters with differnt colors barely overlap. If We use urbanpop and/or rape to classify, then we can see that the four groups overlap, meaning that Murder and Assault are better.
+
+betweenSS / totalSS =  90.2 %, which is greater than k = 2.
+
+    
+## 4. 
+```{r}
+k3 <- kmeans(USArrests, 3, nstart=20)
+k3
+k3.clusters=k3$cluster
+plot(USArrests, col=(k3$cluster +1), main="K-Means Clustering Results with K=3", pch=20, cex=2)
+
+```
+
+Murder and assault appear to classify three distinct groups, as we can see that clusters with different barely overlap. If We use urbanpop and/or rape to classify, then we can see that the three groups overlap, meaning that Murder and Assault are better.
+
+betweenSS / totalSS =  86.5 % . Although k = 4 has a greater betweenSS / totalSS, 90.2% is not too much of an improvement. 
+
+
+## 5.
+```{r}
+arrests.pca <- prcomp(USArrests)
+pcak3 <- kmeans(arrests.pca$rotation, 3, nstart = 20)
+pcak3
+plot(arrests.pca$rotation, col=(pcak3$cluster +1), main="K-Means Clustering Results with K=3", pch=20, cex=2)
+text(PC2~PC1, labels = row.names(arrests.pca$rotation), data = arrests.pca$rotation)
+pcak3 <- kmeans(arrests.pca$x[, 1:2], 3, nstart = 20)
+pcak3
+plot(arrests.pca$x[, 1:2], col=(pcak3$cluster +1), main="K-Means Clustering Results with K=3", pch=20, cex=2)
+text(PC2~PC1, labels = row.names(arrests.pca$x[, 1:2]), data = arrests.pca$x)
+
+```
+
+The clustering results are the the same as in part 4 (i.e. the states that are grouped in one cluster are still the same) , but the value of Within cluster sum of squares by cluster is different. between_SS/total_SS is 87.1% here vs 86.5% on the raw data, which means it is a larger percentage of total_SS, and hence the data cluster is better when plotting on the first two principle components than on the raw data. 
+
+
+## 6.     
+```{r}
+# Hierarchical clustering - complete linkage
+arrests.hc.comp <- hclust(dist(USArrests), method = "complete")
+
+# Plot dendrogram
+plot(arrests.hc.comp, 
+     main = "Hierarchical Clustering - Complete Linkages",
+     xlab = "", sub = "", cex = 0.9)
+```
+
+
+## 7.    
+```{r}
+# Cut dendrogram to three distinct clusters
+arrests.hc.cut <- data.frame(cutree(arrests.hc.comp, 3))
+
+# Set rownames as column, set rownames as index
+arrests.hc.cut$States <- rownames(arrests.hc.cut)
+rownames(arrests.hc.cut) <- seq(1, nrow(arrests.hc.cut))
+
+# Rename column
+names(arrests.hc.cut)[1] <- "Clusters"
+
+# Convert variable
+arrests.hc.cut$Clusters <- factor(arrests.hc.cut$Clusters)
+
+# Table
+arrests.hc.cut <- dcast(arrests.hc.cut, States ~ Clusters)
+
+# Replace NA values with blanks
+arrests.hc.cut[is.na(arrests.hc.cut)] <- ""
+
+# Rename columns
+
+names(arrests.hc.cut)[2] <- "Cluster 1"
+names(arrests.hc.cut)[3] <- "Cluster 2"
+names(arrests.hc.cut)[4] <- "Cluster 3"
+
+# Print output
+arrests.hc.cut[ , c('Cluster 1', 'Cluster 2', 'Cluster 3')]
+```
+
+
+The printed table shows which cluster a state belongs to. 
+
+
+## 8. 
+```{r}
+sd.arrests <- scale(USArrests)
+h <- 3
+sd.hc.comp <- hclust(dist(sd.arrests), method = "complete")
+
+# extract dendro data
+hcdata <- dendro_data(sd.hc.comp)
+hclabs <- label(hcdata) %>%
+  left_join(data_frame(label =
+                         as.factor(seq.int(nrow(sd.arrests))),
+                       cl = as.factor(cutree(sd.hc.comp, h =
+                                               h))))
+
+# plot dendrogram
+ggdendrogram(sd.hc.comp, labels = TRUE) +
+  geom_text(data = hcdata$labels,
+            aes(label = label, x = x, y = 0),
+            vjust = .5, angle = 90) +
+  geom_hline(yintercept = h, linetype = 2) +
+  theme(axis.text.x = element_blank(),
+        legend.position = "none")
+#compare
+cutree(sd.hc.comp, 3)
+table(cutree(sd.hc.comp, 3), cutree(sd.hc.comp, 3))
+```
+
+
+The results are the same(the states that were previous clustered to a specific cluster were still clustered to that same cluster)
+
+

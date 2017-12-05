@@ -73,7 +73,7 @@ relig_summary %>%
 
 Another variable from GSS I found interest in was subjective happiness. There were multiple variable that looked at subjective confidence in various national agencies. I explored the variance of subjective happines groups with these confidence levels. Overall, there does not seem to be much of a pattern looking at how subjective happiness fluctuates with confidence in financial institutions, religious institutions, medicine - even tv programming. Below is a graph that looks at the makeup of subjective happiness groups over the groups who have different compentence in major business companies. This was the only variable in which individuals who had a great deal of confidence in these institutions had a slightly different makeup of happy individuals. Specifically, it does seem that individuals with the most confidence contain a higher proportion of very happy people. However, I take all these analyses that look at subjective happiness with a grain of salt; these different institutions mean different things to different people, and an exploratory data analysis looking at varying patterns in happiness and confidence in these institutions by no means confirms correlation. Overall, I found these subjective ratings interesting to observe.  
 
-```{r Write-Up 2, echo=FALSE}
+```{r Write-Up 2, , echo=FALSE}
 
 gss %>%
   count(conbus, happy) %>%

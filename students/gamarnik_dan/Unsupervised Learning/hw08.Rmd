@@ -1,0 +1,129 @@
+---
+title: "Homework 08"
+author: "Dan Gamarnik"
+date: "December 3, 2017"
+output: github_document
+---
+```{r setup}
+library(knitr)
+library(ggplot2)
+library(tidyverse)
+library(stats)
+library(forcats)
+library(tidyverse)
+library(readr)
+library(FactoMineR)
+```
+
+```{r  Data}
+College <- read_csv("College.csv")
+USArrests <- read_csv("USArrests.csv")
+```
+
+## College Questions
+
+### Question 1.
+
+The first component seems to be associated with 'Top25perc', 'PhD', 'Terminal, and 'Top10Perc'. The second  seems to be associated with 'F. Undergrad', 'Enroll', 'Apps' and 'Accept'. 
+```{r PCA College 1}
+College1 <-College %>% 
+  select(-Private)
+  
+pca_college <-PCA(College1, scale.unit=TRUE, graph = TRUE )
+
+pc <- prcomp(College1[,-1], scale=TRUE)
+
+head(pc$x[,1:2])
+```
+
+### Question 2.
+
+They explain about 58.361% of the variance. 
+
+```{r PCA College 2}
+summary.PCA(pca_college)
+
+pca_college$eig
+```
+
+## Arrest Questions
+
+### Question 1.
+
+
+```{r PCA Arrests 1}
+USArrests1 <- USArrests %>% 
+  select(-State)
+
+PCArrests <- prcomp(USArrests1, scale=TRUE)
+summary(PCArrests)
+
+
+row.names(USArrests1) <- USArrests$State
+
+pca <- PCA(USArrests1, scale.unit=TRUE, graph = TRUE )
+
+```
+
+### Question 2.
+
+The first component seems associate with states like Colorado, Texas and California and is associated with rape, assault, and murder. The second component is associate with states like Conneticut, New Hampshire and Virginia and is somewhat associated with the urban population variable. 
+
+```{r PCA Arrests 2}
+res.hcpc <-  HCPC(pca, nb.clust = 2, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+```
+
+### Question 3.
+Cluster 1 seems to be associated with states that have lower crime and lower urban population. Cluster 2 are states with higher urban population and less crime; while, cluster 3 seems to be states that have lower urban population and higher crime. Finally, cluster 4 are states with higher urban population and higher crime.
+
+```{r PCA Arrests 3}
+res.hcpc <-  HCPC(pca, nb.clust = 4, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+```
+
+### Question 4.
+```{r PCA Arrests 4}
+res.hcpc <-  HCPC(pca, nb.clust = 3, graph = FALSE)
+
+plot.HCPC(res.hcpc, choice = "map")
+```
+
+
+### Question 5. 
+Compared to the inital k=3 cluster, these results are mostly similar. The only clear differences (outside of how many clusters there are) are the centers of each cluster.  
+
+```{r PCA Arrests 5}
+pr.out <- prcomp(USArrests1)
+km.out <- kmeans(pr.out$x[, 1:2], 3)
+km.out$centers
+km.out$cluster
+table(km.out$cluster)
+```
+
+### Question 6. 
+```{r PCA Arrests 6}
+hc.complete <- hclust(dist(USArrests1), method = "complete")
+plot(hc.complete)
+```
+
+
+### Question 7. 
+States like Michigan, Alabama and Alaska are in cluster 1. Likewise, states like Georgia and Arkansas are in cluster 2. Finally, states like Pennsylvania and Minnesota are in cluster 3. 
+
+```{r PCA Arrests 7}
+hc.complete <- hclust(dist(USArrests1), method = "complete")
+cutree(hc.complete, 3)
+```
+
+### Question 8.
+
+Scaling makes it easier to see how the different states are clustered. Compared to the trees in question 6, it is easier to make out where the states belong. Likewise, it changes the composition of the trees somewhat. 
+
+```{r PCA Arrests 8}
+sd.data <- scale(USArrests1)
+hc.complete.sd <- hclust(dist(sd.data), method = "complete")
+plot(hc.complete.sd)
+```

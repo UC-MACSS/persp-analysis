@@ -76,7 +76,7 @@ Generally, experiments tend to have more internal validity than observational st
 
 ### Conducting a Survey
 
-*I initially thought about conducting a survey on Airbnb users who made reviews on the website, but it is not possible. I then though about surveying hosts, but was concerned that some hosts would not answer honestly due to social desirability bias. *
+*I initially thought about conducting a survey on Airbnb users who made reviews on the website, but it is not possible. I then though about surveying hosts, but was concerned that some hosts would not answer honestly due to social desirability bias.*
 
 With this is in mind I decide to conduct my digital survey-based research on Amazon mTurk workers who have used Airbnb in the past. The survey would deem to attempt to ask people about their whether they have ever felt discriminated against on Airbnb and if so, pinpoint why they felt this way (e.g. their name, photo, or other factors). It would also ask users about if they felt discriminated against in other aspects of their life (e.g. at the online marketplaces, by Uber or Lyft drivers) see if people feel like Airbnb is different than other online platforms. 
 

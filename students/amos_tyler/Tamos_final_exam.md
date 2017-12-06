@@ -11,7 +11,6 @@ _December 6 2017_
 
 ### Summary of Research Design
 
-Summarize the research design and explain how the research design leverages computational methods to ask and answer a question. (yellow)
 
 _How does the paper use computational methods to ask and answer a question?_
 
@@ -34,7 +33,7 @@ Applying an observational research design (Salganik, "Observing Behavior") Edelm
 
 ### Evaluation of Research Design Effectiveness
 
-#### What do we learn from the paper?
+#### What do we learn from the paper? What are the limitations of the paper?
 
 Using Salganik's characteristics of big data as an analytical framework, we can assess this study on its' ability to leverage advantages and mitigate disadvantages of social research with big data. A breakdown of the research design by characteristic follows.
 
@@ -93,42 +92,96 @@ In order to clean and sort data into analytically convenient formats, the resear
 
 _Sensitive: Unclear_
 
-The only privacy risks that clearly emerge from the use of this data are those related to the profile pictures and accomodation details of hosts. Namely, these hosts have posted their information for use on Airbnb, and did not consent to its distribution elsewhere (e.g., in the researchers' dataset, on Mechanical Turk). In fact, some of this data can be quite personal (an image, an address). The researchers did not describe at any point the steps they took to ensure anonymity of their subjects, nor did they confirm if their IRB had reviewed their research. While it is of course possible the researchers did take robust steps in this regard, we cannot pass judgement on this criteria with the limited information provided. 
+The only sensitivity risks that clearly emerge from the use of this data are those related to the profile pictures and accomodation details of hosts. These hosts have posted their information for use on Airbnb, and did not consent to its distribution elsewhere (e.g., in the researchers' dataset, on Mechanical Turk). In fact, some of this data can be quite personal (e.g., a photo, an address). The researchers did not describe at any point the steps they took to ensure anonymity of their subjects, nor did they confirm if their Institutional Review Board had reviewed their research. While it is of course possible the researchers did take robust steps in this regard, we cannot pass judgement on this criteria with the limited information provided. 
 
+### Summary of Assessment, Edelman and Luca 2014.
 
-#### What are the limitations of the paper?
+| Characteristic              | Conclusion                |
+|-----------------------------|---------------------------|
+| Big                         | Poorly-leveraged          |
+| Always-on                   | Poorly-leveraged          |
+| Non-reactive                | Well-leveraged            |
+| Incomplete                  | Moderately Well-mitigated |
+| Inaccessible                | Poorly-mitigated          |
+| Non-representative          | Moderately Well-mitigated |
+| Drifting                    | Non-issue                 |
+| Algorithmically Confounding | Poorly-mitigated          |
+| Dirty                       | Well-mitigated            |
+| Sensitive                   | Unclear                   |
 
-_Validity_
+In conclusion, we can say the 2014 paper from Edelman and Luca, given its limitations and strengths, allows an ecologically valid, largely complete insight into an online accomodation marketplace. Within the population, time, and place the study is framed (online marketplaces, in July 2012, in New York) it is highly representative. It successfully manages to distill noisy data into clear results. However: it is limited in scale; does not offer longitudinal insights; is to some extent driven by data availability; and a number of aspects, such as sensititivity, are not addressed. 
 
-_Heterogeneity of Treatment Effects_
-
-_Causal Mechanisms_
-Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
-
-
-
-
+Furthermore, the study only tells us that there is significant difference between the economic benefits (earnings) black and non-black hosts expect to receive from Airbnb rentals. It does not tell us about the causal mechanisms at play. That is best explored through an experiment, as is detailed below. 
 
 
 ## Independent Evaluation: Paper 2
 
 #### Edelman et al, 2017. _Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment_
 
-
 ### Summary of Research Design
-
-(3 pts each) Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.
 
 _How does the paper use computational methods to ask and answer a question?_
 
+
+
 ### Evaluation of Research Design Effectiveness
 
-_What do we learn from the paper?_
+#### What do we learn from the paper? What are the limitations of the paper?
+
+Using Salganik's characteristics of big data as an analytical framework, we can assess this study on its' ability to leverage advantages and mitigate disadvantages of social research with big data. A breakdown of the research design by characteristic follows.
+
+__Salganik's Characteristics - Generally Good for Research__
+
+_Big: Poorly-leveraged_
+
+  
+
+_Always On: Poorly-leveraged_
+ 
+
+_Non-reactive: Well-leveraged_
 
 
-_What are the limitations of the paper?_
+__Salganik's Characteristics - Generally Bad for Research__
 
-Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
+_Incomplete: Moderately Well-mitigated_
+
+
+
+_Inaccessible: Poorly-mitigated_
+
+
+
+_Non-representative: Moderately Well-mitigated_
+
+
+_Drifting: Non-issue_
+
+ 
+
+_Algorithmically Confounding: Poorly-mitigated_
+
+
+
+_Dirty: Well-mitigated_
+
+
+
+_Sensitive_
+
+
+
+### Summary of Assessment, Edelman and Luca 2014.
+
+| Characteristic              | Conclusion                |
+|-----------------------------|---------------------------|
+
+
+_Validity_
+
+_Heterogeneity of Treatment Effects_
+
+_Causal Mechanisms_
 
 
 ## Joint Evaluation

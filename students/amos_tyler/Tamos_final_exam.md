@@ -85,13 +85,16 @@ The researchers do not account for system, population, or usage drift within Air
 
 _Algorithmically Confounding: Poorly-mitigated_
 
-The researchers do not encounter substantial issues of algorithmic confoundment in their study. They merely observe listings and do not interact with users, creating few opportunities for Airbnb's design choices to influence their results. However, given that the researchers did not collaborate with Airbnb on this study, it is not possible to know if algorithms affecting search results did in fact shape data collection. As such, because we cannot be sure if there is algorithmic confoundment at play, and given the researchers did not lay out the measures they took to mitigate this risk, it is at best a minor oversight, at worst a source of systematic bias in the data. 
+The researchers do not encounter substantial issues of algorithmic confoundment in their study. They merely observe listings and do not interact with users, creating few opportunities for Airbnb's design choices to influence their results. However, because the researchers did not collaborate with Airbnb on this study, it is not possible to know if algorithms affecting search results did in fact shape data collection. As such, because we cannot be sure if there is algorithmic confoundment at play, and given the researchers did not lay out the measures they took to mitigate this risk, it is at best a minor oversight, at worst a source of systematic bias in the data. 
 
-_Dirty_
+_Dirty: Well-mitigated_
 
+In order to clean and sort data into analytically convenient formats, the researchers used human computation techniques to outsource coding to Amazon Mechanical Turk Workers. By doing this, they turned an inconvenient data format, (e.g., profile pictures) into a more convenient format (race codes). Using a large number of human coders leveraged heterogeneity to ensure more accurate results as regards the racial identity of hosts. This approach allowed the researchers to clean a dataset that would have been intractably dirty for themselves or their team, but was in fact quite manageable for a distributed network of "Turkers". Overall, we can say the researchers mitigated risks of dirty data quite well. 
 
+_Sensitive: Unclear_
 
-_Sensitive_
+The only privacy risks that clearly emerge from the use of this data are those related to the profile pictures and accomodation details of hosts. Namely, these hosts have posted their information for use on Airbnb, and did not consent to its distribution elsewhere (e.g., in the researchers' dataset, on Mechanical Turk). In fact, some of this data can be quite personal (an image, an address). The researchers did not describe at any point the steps they took to ensure anonymity of their subjects, nor did they confirm if their IRB had reviewed their research. While it is of course possible the researchers did take robust steps in this regard, we cannot pass judgement on this criteria with the limited information provided. 
+
 
 #### What are the limitations of the paper?
 

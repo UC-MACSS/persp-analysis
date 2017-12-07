@@ -37,12 +37,12 @@ understand the impact of host’s race on economic behaviors of consumers,
 this article investigates the differences in prices between hosts of
 different races.
 
-For the research, the author constructs a data set which includes
+For the research, the author constructed a data set which includes
 pictures of all hosts in New York City, their rental prices, and
 information about characteristics and quality of their properties.
 Drawing on regression modeling, this article statistically examines the
 determinants of prices on Airbnb, and finds out that African American
-hosts are charging 12 $ less, controlling for the effects of guest
+hosts are charging 12% less, controlling for the effects of guest
 perceptions of location, quality, and other factors.
 
 This research heavily benefits from computational methods, in both data
@@ -60,7 +60,7 @@ researchers—it was originally created and collected by businesses for
 their own purposes, which means that researchers should deploy special
 ways to gather and tidy the data. This paper doesn’t explain such data
 gathering process in detail, but they would have used web scraping
-methods. Such computational methods drastically lower the cost of the
+methods. Such computational methods drastically lower the cost of
 research.
 
 Second, this article used computational methods for data processing. In
@@ -93,14 +93,14 @@ casual, prior experience with African American guests, price of listing,
 number and size of the rooms, cancellation policy, cleaning fee,
 ratings, and location.
 
-From the data collected above, researchers conduct a *field experiment*,
-which combines randomized control experiments in natural settings. They
-created Airbnb accounts, identical in every aspect except for names.
-Then, the researchers applied treatments to hosts, by sending emails to
-hosts to reserve a room. The treatments are varied in names, in two
-parameters: race and gender. The treatment was randomized: “Each host
-was randomly assigned one of our 20 guest accounts.”(2017: 6) And, such
-random treatments are applied to all hosts in big cities. Via field
+From the data collected above, researchers conducted a *field
+experiment*, which combines randomized control experiments in natural
+settings. They created Airbnb accounts, identical in every aspect except
+for names. Then, the researchers applied treatments to hosts, by sending
+emails to hosts to reserve a room. The treatments are varied in names,
+in two parameters: race and gender. The treatment was randomized: “Each
+host was randomly assigned one of our 20 guest accounts.”(2017: 6) And,
+such random treatments are applied to all hosts in big cities. Via field
 experiment, researchers examine the impact of potential guests’ race on
 hosts’ acceptance.
 
@@ -111,13 +111,14 @@ treatments. Thus, they look at the impact of treatment across various
 groups. They find robust discriminatory attitudes across various host
 characteristics.
 
-After experiment, researchers match their results with observational
-research. In particular, this article categorized hosts into two groups
-of ones who previously accepted African Americans and ones who didn’t,
-and shows how hosts in each category react differently to the treatment.
-The results show that the hosts who had at least one recent review from
-an African American guest do not show such discriminatory tendency. Such
-finding reinforces and complements field experiment.
+After experiment, researchers matched the results with those of
+observational research. In particular, this article categorized hosts
+into two groups of ones who previously accepted African Americans and
+ones who didn’t, and shows how hosts in each category react differently
+to the treatment. The results show that the hosts who had at least one
+recent review from an African American guest do not show such
+discriminatory tendency. Such finding reinforces and complements field
+experiment.
 
 Computational methods are extremely helpful in this article: it is a “
 fully digital experiments” which “make use of digital infrastructure to

@@ -12,7 +12,7 @@ _December 6 2017_
 ### Summary of Research Design
 _How does the paper use computational methods to ask and answer a question?_
 
-The 2014 paper from Edelman and Luca apply an observational approach to data on accommodation listing data collected from Airbnb.com for New York on July 17, 2012. (Edelman and Luca 2014, "About Airbnb") To this 3,752 observation corpus, the researchers apply human computation techniques to process the data. (Salganik, "Mass Collaboration") Edelman and Luca hired Amazon Mechanical Turk workers to code Airbnb data in different mediums (image, text) to build a dataset with the following features: 
+The 2014 paper from Edelman and Luca applies an observational approach to data on accommodation listing data collected from Airbnb.com for New York on July 17, 2012. (Edelman and Luca 2014, "About Airbnb") To this 3,752 observation corpus, the researchers apply human computation techniques to process the data. (Salganik, "Mass Collaboration") Edelman and Luca hired Amazon Mechanical Turk workers to code Airbnb data in different mediums (image, text) to build a dataset with the following features: 
 
   * The price the host is asking;
   * Characteristics of the host;

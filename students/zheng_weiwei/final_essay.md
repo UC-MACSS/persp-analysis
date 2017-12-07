@@ -1,4 +1,4 @@
-# **Fianl Essay**
+# **Final Essay**
 ## **Weiwei Zheng**
 
 ### **Individual Analysis** 

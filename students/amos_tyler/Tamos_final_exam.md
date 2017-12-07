@@ -39,7 +39,7 @@ __Salganik's Characteristics - Generally Good for Research__
 
 _Big: Poor_
 
-The total size of the corpus collected by the researchers is 3,752 observations. Depending on the characteristic, data is complete for between 99.8% (Number Accommodated) and 100% of total observations.(Edelman and Luca 2014, "Tables")
+The total size of the corpus collected by the researchers is 3,752 observations. Depending on the characteristic, data is complete for between 99.8% (Number Accommodated) and 100% of total observations. (Edelman and Luca 2014, "Tables")
 
 While larger than many traditional social science datasets, this is not an especially large dataset. Furthermore, it only applies to one city at one given point in time. Nevertheless, it was a large enough dataset to need human computation for coding observations. Thus, we can conclude the study leverages the "big" in big data to some minor extent.   
 
@@ -49,7 +49,7 @@ The researchers select a cross-section of data from July 17, 2012, effectively p
 
 _Non-reactive: Strong_
 
-In this study, the subjects are already aware they are being observed by potential renters on Airbnb. In fact, it is this behavior the researchers are trying to observe. In other words, it is not the underlying internal state of the individuals the researchers are trying to measure, but their public performance in the marketplace that is Airbnb. Thus, the addition of researchers into the ecosystem of Airbnb and their subsequent observation of subjects in that marketplace would have no impact on hosts' behavior. The researchers were able to identify an existing marketplace which they could observe without changing the dynamics of the system itself. This is a textbook example of Salganik's notion of non-reactivity (Salganik, "Non-reactivity"). 
+In this study, the subjects are already aware they are being viewed by potential renters on Airbnb. In fact, it is this behavior the researchers are trying to observe. In other words, it is not the underlying internal state of the individuals the researchers are trying to measure, but their public performance in the marketplace that is Airbnb. Thus, the addition of researchers into the ecosystem of Airbnb and their subsequent observation of subjects in that marketplace would have no impact on hosts' behavior. The researchers were able to identify an existing marketplace which they could observe without changing the dynamics of the system itself. This is a textbook example of Salganik's notion of non-reactivity (Salganik, "Non-reactivity"). 
 
 __Salganik's Characteristics - Generally Bad for Research__
 
@@ -64,21 +64,21 @@ As regards specific types of incompleteness (Salganik, "Incompleteness"):
   * Construct Validity:
     * Researchers make a number of assumptions in order to map their constructs (race, price, discrimination) onto the available data. Specifically:
       * They assume profile pictures are in fact images of hosts;
-      * A difference in asking price is a reflection of a rational, self-aware agent's accurate assessment of their good's market value.
+      * They assume a difference in asking price is a reflection of a rational, self-aware agent's accurate assessment of their good's market value.
 
 Overall, these assumptions and mitigating measures are reasonable, given the point in time (2012) at which the study was conducted. If it were conducted today, there would likely be an expectation for significantly more advanced methods and mitigation measures. Therefore, we can conclude the researchers mitigated incompleteness concerns moderately well, keeping in mind the standards of the time. 
 
 _Inaccessible: Poor_
 
-Airbnb declined to provide access to their internal data for this paper, and as such the researchers were limited to examining only price data on hosts' listings. As a result, the researchers were not able to analyze demand. (Edelman and Luca, "About Airbnb") While this helps to ensure high amounts of completeness in the data (see "Big"), it risks placing researchers in a position of designing studies to fit available data, rather than finding data to answer their own questions.  In other words, the researchers jettisoned their original research question in favor of a more convenient line of inquiry. Thus we can say this study poorly mitigated inaccessibility risks. 
+Airbnb declined to provide access to their internal data for this paper. As such the researchers were limited to examining only price data on hosts' listings - the researchers were not able to analyze demand. (Edelman and Luca, "About Airbnb") While this helps to ensure high amounts of completeness in the data (see "Big"), it risks placing researchers in a position of designing studies to fit available data, rather than finding data to answer their own questions.  In other words, the researchers jettisoned their original research question in favor of a more convenient line of inquiry. Thus we can say this study poorly mitigated inaccessibility risks. 
 
 _Non-representative: Moderate_
 
-This study uses cross-sectional data from one day in one city, as has already been noted. This means, effectively that the data can only be said to represent users of Airbnb at that particular time and in that particular place. Given that the number of Airbnb listings has grown rapidly (over 2,000,000 by November 2015 according to Edelman et al. 2017), the dataset has a strong temporal as well as geographic bias. This research design choice means the individual hosts in the dataset are likely poorly representative of black and non-black individuals in the wider vacation accommodation economy. However, given that the researchers explicitly limit their scope to the digital economy, with a case study of vacation accommodation rentals, they anticipate some of these limitations. Thus, we can conclude the research design moderately mitigates issues of non-representativeness. 
+This study uses cross-sectional data from one day in one city, as has already been noted. This means, effectively, that the data can only be said to represent users of Airbnb at that particular time and in that particular place. Given how the number of Airbnb listings has grown rapidly (over 2,000,000 by November 2015 according to Edelman et al. 2017), the dataset has a strong temporal as well as geographic bias. This research design choice means the individual hosts in the dataset are likely poorly representative of black and non-black individuals in the wider vacation accommodation economy. However, given that the researchers explicitly limit their scope to the digital economy, with a case study of vacation accommodation rentals, they anticipate some of these limitations. Thus, we can conclude the research design moderately mitigates issues of non-representativeness. 
 
 _Drifting: Non-issue_
 
-The researchers do not account for system, population, or usage drift within Airbnb, although they do propose reforms based on their findings (namely, reduce the prominence of hosts' profile pictures). However, given the fact their design is cross-sectional, not longitudinal, it is unlikely that drift of any type would be an issue for their findings. Rather, concerns about drift would only arise when trying to generalize the findings to future research. 
+The researchers do not account for system, population, or usage drift within Airbnb, although they do propose reforms to the platform based on their findings (namely, reduce the prominence of hosts' profile pictures). Given their design is cross-sectional, not longitudinal, it is unlikely that drift of any type would be an issue for their findings. Rather, concerns about drift would only arise when trying to generalize the findings to future research. 
 
 _Algorithmically Confounding: Poor_
 
@@ -90,7 +90,7 @@ In order to clean and sort data into analytically convenient formats, the resear
 
 _Sensitive: Unclear_
 
-The only sensitivity risks that clearly emerge from the use of this data are those related to the profile pictures and accommodation details of hosts. These hosts have posted their information for use on Airbnb, and did not consent to its distribution elsewhere (e.g., in the researchers' dataset, on Mechanical Turk). In fact, some of this data can be quite personal (e.g., a photo, an address). The researchers did not describe at any point the steps they took to ensure anonymity of their subjects, nor did they confirm if their Institutional Review Board had reviewed their research. While it is of course possible the researchers did take robust steps in this regard, we cannot pass judgement on this criteria with the limited information provided. 
+The only sensitivity risks that clearly emerge from the use of this data are those related to the profile pictures and accommodation details of hosts. These hosts have posted their information for use on Airbnb and did not consent to its distribution elsewhere (e.g., in the researchers' dataset, on Mechanical Turk). Some of this data can be quite personal (e.g., a photo, an address). The researchers did not describe at any point the steps they took to ensure anonymity of their subjects, nor did they confirm if their Institutional Review Board had reviewed their research. While it is of course possible the researchers did take robust steps in this regard, we cannot pass judgement on this criteria with the limited information provided. 
 
 ### Summary of Assessment, Edelman and Luca 2014.
 
@@ -120,11 +120,11 @@ Furthermore, the study only tells us that there is significant difference betwee
 
 _How does the paper use computational methods to ask and answer a question?_
 
-This study explores racial discrimination in online marketplaces for accommodation, specifically, Airbnb. In contrast to previous work by some of the authors, this study uses an experimental approach to uncover causal mechanisms at play in rentals to black and white renters and black and white hosts. 
+This study explores racial discrimination in online marketplaces for accommodation, specifically, Airbnb. In contrast to previous work by some of the authors, this study uses an experimental approach to uncover causal mechanisms at play in rentals to black and white renters by black and white hosts. 
 
 Using manufactured guest accounts, researchers inquired about the availability of 6,400 listings across five US cities. Guest accounts were identical, except for names, which were either "black" or "white" names, per work by Bertrand and Mullainathan. (in Edelman et al 2017, 2)
 
-Subjects (hosts) were contacted by guest accounts with a combination of 2 out of four treatment variables (male/female, black/white), as expressed through their names. From subjects' reaction, combined with observational data, researchers sought to identify causal mechanism at play in hosts' receptiveness to potential guests. 
+Subjects (hosts) were contacted by guest accounts with a combination of two features out of two sets of treatment variables (male/female, black/white), as expressed through their names. For example, one of the black, male names used was Rasheed. From subjects' reaction, combined with observational data, researchers sought to identify causal mechanism at play in hosts' receptiveness to potential guests. 
 
 
 ### Evaluation of Research Design Effectiveness
@@ -158,16 +158,16 @@ __Salganik's Characteristics - Generally Bad for Research__
 
 _Incomplete and Dirty: Strong_
 
-In order to complete and clean data collected by the researchers, they employed a human computation approach. (Salganik, "Mass Collaboration") Put simply, Amazon Mechanical Turk workers coded host profile pictures for race, gender, and age. Leveraging heterogeneity, the multiple workers were assigned to the same image in to guard against and resolve cases of coding conflicts. This ensured high-quality, clean data from a relatively sparse (it is unlikely hosts mention their race in the text of their posting), dirty (some images were not even human) dataset. This approach allowed them to identify and catalogue a great deal more demographic and ancillary information than in their previous observational work. Researchers also used face detection tools to categorize past guests by race, gender, and age. (Edelman et al. 2017, 4) The weakest part of the study design with respect to incompleteness and data cleansing comes with the use of a single research assistant to code responses to requests. (Edelman et al. 2017, 7) This task would have been better performed with a human computation approach, or with automated methods. This would have mitigated any risks of systematic bias on the part of the research assistant. An additional concern which is common to this design and the observational design, is the potentially ill-fitting variables for the constructs the researchers are studying. Please see the relevant section above (Paper 1, Incomplete) for details on this point. 
+In order to complete and clean data collected by the researchers, they employed a human computation approach. (Salganik, "Mass Collaboration") Amazon Mechanical Turk workers coded host profile pictures for race, gender, and age. Leveraging heterogeneity, multiple workers were assigned to the same image to guard against and resolve cases of coding conflicts. This ensured high-quality, clean data from a relatively sparse (it is unlikely hosts mention their race in the text of their posting), dirty (some images were not even human) dataset. This approach allowed them to identify and catalogue a great deal of demographic and ancillary information. Researchers also used face detection tools to categorize past guests by race, gender, and age. (Edelman et al. 2017, 4) The weakest part of the study design with respect to incompleteness and data cleansing is the use of a research assistant to code responses to requests. (Edelman et al. 2017, 7) This task would have been better performed with a human computation approach, or with automated methods. This would have mitigated any risks of systematic bias on the part of the research assistant. An additional concern which is common to this design and the observational design, is the potentially ill-fitting variables for the constructs the researchers are studying. Please see the relevant section above (Paper 1, Incomplete) for details on this point. 
 
 _Inaccessible: Poor_
 
-The researchers faced accessibility challenges, and in fact this hampered their data collection significantly. Initially, the researchers wanted to collect data from a far larger sample of cities, but found that Airbnb identified and blocked their data collection tools. (Edelman et al. 2017, 4)
+The researchers faced accessibility challenges, and in fact this hampered their data collection significantly. Initially, the researchers wanted to collect data from a far larger sample of cities, but found that Airbnb identified and blocked their data collection tools.  They elected not to address these challenges, chosing instead to move forward with a smaller sample. (Edelman et al. 2017, 4)
 
 
 _Non-representative: Strong_
 
-This study used data from Airbnb listings in five major US cities, with varied levels of Airbnb markets and in diverse geographic regions. (Edelman et al. 2017, 4) In the case of hosts holding more than one property, properties were selected at random. Regardless of some accessibility concerns, the researchers took reasonable measures to ensure their sample was representative of the population of interest (black and white renters on Airbnb). Keeping in mind that the researchers explicitly limit their frame to African Americans and Caucasians, we can say that the sample is most likely strongly representative of the Airbnb ecosystem in the cities sampled. 
+This study used data from Airbnb listings in five US cities, with varied sizes of Airbnb markets and in diverse geographic regions. (Edelman et al. 2017, 4) The researchers set out to collect all Airbnb listings, thus trying to sample the entire population in each location. In the case of hosts holding more than one property, properties were selected at random. Despite some accessibility concerns, the researchers took reasonable measures to ensure their sample was representative of the population of interest (black and white renters on Airbnb). Keeping in mind that the researchers explicitly limit their frame to African Americans and Caucasians, we can say that the sample is most likely strongly representative of the Airbnb ecosystem for black and white individuals in the cities sampled. 
  
 _Drifting and Algorithmically Confounding: Unclear_
 
@@ -179,7 +179,7 @@ The study design raises a number of issues regarding sensitivity of data, namely
 
 _Validity: Moderate_
 
-The robust experimental design and numerous validation of methods (e.g., the pre-experiment survey to confirm the "white"/"black" character of names) allow us to conclude this study has strong internal validity. (Edelman et al. 2017, 5) Participants were contacted only once, and no subjects had a listing in multiple cities, thus ensuring no subject received multiple treatments. (Ibid, 6) In terms of construct validity, the study design clearly maps the variables of interest (race, discrimination) onto treatments (receipt of inquiry from black or white individual). Thus, we can say that the study also has strong construct validity. However, where the study's validity is weakest is its external validity. Due to Airbnb shutting down the researchers' scrapers, the sample was not of the size originally intended, and only in a smaller subset of cities than originally planned. Moreover, it is difficult to say if the researchers' results would generalize to other accommodation markets, given Airbnb's unique character relative to its competitors.
+The robust experimental design and numerous validation of methods (e.g., the pre-experiment survey to confirm the "white"/"black" character of names) allow us to conclude this study has strong internal validity. (Edelman et al. 2017, 5) Participants were contacted only once, and no subjects had a listing in multiple cities, thus ensuring no subject received multiple treatments. (Ibid, 6) In terms of construct validity, the study design clearly maps the variables of interest (race, discrimination) onto treatments (receipt of inquiry from black or white individual). The only potential issues in this respect are with regards to the intersection of race and class, which the authors explicity mention and account for in their discussion. (Edelman et al. 2017, 2) Thus, we can say that the study also has strong construct validity. However, where the study's validity is weakest is its external validity. Due to Airbnb shutting down the researchers' scrapers, the sample was not of the size originally intended, and only in a smaller subset of cities than originally planned. Moreover, it is difficult to say if the researchers' results would generalize to other accommodation markets, given Airbnb's unique character relative to its competitors.
 
 _Heterogeneity of Treatment Effects: Strong_
 

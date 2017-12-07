@@ -1,0 +1,47 @@
+Evaluating research designs
+
+Hyun Ki Kim
+
+Summarize (2014)
+
+  This paper found that black host charges significantly lower price than non-black host on the airbnb.com other things being equal. Authors collected 3,700 listings as of July 2012, in New York City. In order to facilitate online transaction, Airbnb share profiles and reviews of every hosts and guests. However, the authors analyzed that the abundance of information are actually used to discriminate against certain racial group of hosts.
+
+  Although Airbnb did not provide any of racial information about the host, the researchers used computational methods to abstract racial information from the profile pictures. They used Amazon Mechanial Turk to hire workers to determine which racial groups does each hosts belong to. By using the mass collaboration method, it was possible for authors to gain additional information that were initially not provided explicit in the market.
+
+Evaluate (2014)
+
+  This paper is a great example of computational social scientific research. It used digitally enhanced observational data with massive collaboration, to abstract implicit information from publicly available data source. These days, not only enormous amount of explicit information can be gathered from online, but also implicit and detailed information about individuals can be collected, although the users providing the information may not be aware of. I believe the machine-learning algorithm will replace human massive collaboration in the near future, which will make collecting implicit information easier. I think most of unsolved research questions are unsolved because of unavailability of the data. However, in the Big Data era combined with computational methods allows researchers to have access to seemingly unobservable data, to answer many questions.
+
+  Although this paper did great job in gathering hidden information and analyzing it, there are some limitations of the paper just like any observational study in the digital era have. Observational study is an inductive study, which implies the finding can be used generally only until the point when it does not work. The finding may not be applicable in different settings. For example, the lower listing prices of black hosts compared to non-black hosts might be true in New York City in July 2012, but it could also be the case where New York City in July 2012 was extremely rare case where the discrimination happened. Also, just like any other observational data in a digit era, the observed data could be biased due to many reasons. For example, Airbnb could have internal algorithm for recommending different listings to each users, which will likely to cause bias for the collected data. Also, researchers could have drove data into certain direction while processing the data, regardless of their intention.
+
+Summarize (2017)
+
+  In this paper, the authors conducted a field experiment and found that racial discrimination exists in Airbnb. The researchers created 20 fake accounts and sent out emails to 6,400 hosts in five cities in the United States. The result shows distinctively black names received significantly less positive response than distinctively white names. By using scrapers and web browser automation tools, researchers collected data, kept track of the listings, and conducted experiment at a minimum cost. Although Airbnb blocked the researchers after some point when they sent out too many emails, they could easily collect thousands of data. The research team also used Amazon Mechanical Turk and Face++ to detect race, gender, and age from the public profile images. Also, they used longitude and latitude information to control for the neighborhood demographics data.
+
+  Researchers found 20 names, 5 from each white/black, male/female, and verified that the names represent how people correlate those names with racial, gender characteristics. Then, they randomly assigned each listing to one of 20 names and sent inquiry email about availability of rooms 8 weeks in advance. The results were robust even after controlling for host characteristics, and listing characteristics. Only case where there was no discrimination was for the hosts that had recent review from black guests.
+
+Evaluate (2017)
+
+  This paper did great job in using computational method to conduct online experiment. The emails were sent from different accounts using random assignment and the only different between accounts were the names. Therefore, it is easy to find causal relationship between names and the proportion of positive responses. The research benefited from the advantage of experiments to find significantly difference effect between black names and white names.
+
+  While conducting an experiment to a human subject can potentially cause an ethical issue, researchers minimized the potential harm. The research team got approval from the Institutional Review Board before conducting an experiment, which is a minimum requirement for a research that could possibly cause an ethical issue. Also, researchers asked for availability for rooms 8 weeks in advance as well as instant reply to step back from the reservations to minimize harm to hosts. One might think creating a fake account and inquiring a hypothetical booking can disturb the online market. However, I believe fake account and fake availability check is an unavoidable risk that Airbnb and hosts have to bear while benefiting from online market that promotes easy access to anyone.
+
+  However, there are some drawbacks of the study. I believe the researchers reinforced racial discrimination by using a fake account. Unlike traditional hotel booking sites, Airbnb is a sharing economy that can be dangerous not only for the guests but also for the hosts. Therefore, it is likely that hosts will be more careful to guests that have no reviews or no profile pictures. The absence of reviews or profile image was good method for capturing the treatment effect, but it could also have caused abnormal feedbacks. I think discrimination would have been reduced if the guest accounts looked more natural.
+
+  The researchers used random assignment, which is an essential aspect in experiment and ruled out confounding effects. However, they sent out 6,400 emails in different time, date of the month, which might have caused the difference in positive response rate, if they were correlated with the accounts.
+
+Both research projects
+
+  The research team validated the existence of racial discrimination in Airbnb on both host and guest side of the environment. The 2014 article found there exist racial discrimination for black hosts, and the 2017 article proved guests with distinctively black names are discriminated. Researchers can have stronger argument about the existences of racial discrimination, because they proved the discrimination on both sides.
+
+  Also by using different research designs in two articles, the finding is more reliable. An observational study is great because it doesn’t require any intervention to the subject. While the purity is the advantage of the research design, it has weakness in explaining the casual relationship. The correlation between different variables could be one causing another, but it could always be unobserved variable that cause both variables to change. On the other hand, experiment makes it easier to find the treatment effect, but the intervention by the researchers can affect subject to react differently. Thus by using both research designs, two articles can complement each other to have stronger empirical evidence.
+
+Survey approach
+
+  If I can ask Airbnb guest user, who is searching for a room to bid the price for the room, it would be a great survey study. It will be then easier to detect existence of an online discrimination, by simply asking how much they are willing to pay for different racial or gender host profiles. However just like any other survey, the users could give unreasonable response that can hide the true effect. Therefore, I must use strategies to make users to take the bid seriously. I can charge small amount of money, which can be refunded if the user eventually happens to book a room from the platform for the day. The amount should be selected carefully to maintain the seriousness of a bidding, but not to offend user’s experience in the same time. There must be a maximum amount the website can charge for any individual for a given period. Although the fee can be refunded, charging fee while surveying willingness to pay might seem problematic. An alternative option is giving users limited number of opportunities to bid. This might not have as strong effect in making the bid seriously, but it can provide more user-friendly experience by not charging fees. In conclusion, it will be easier to capture the existence of discrimination in an online market if it is possible to implement a price bidding system in Airbnb.
+
+References
+
+Edelman, B. G., & Luca, M. (2014). Digital discrimination: The case of airbnb.com. Harvard Business School NOM Unit Working Paper, (14-054).
+
+Edelman, B., Luca, M., & Svirsky, D. (2017). Racial discrimination in the sharing economy: Evidence from a field experiment. American Economic Journal: Applied Economics, 9(2), 1-22.

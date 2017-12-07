@@ -33,7 +33,7 @@ Applying an observational research design (Salganik, "Observing Behavior"), Edel
 
 #### What do we learn from the paper? What are the limitations of the paper?
 
-Using Salganik's characteristics of big data as an analytical framework, we can assess this study on its' ability to leverage advantages and mitigate disadvantages of social research with big data. A breakdown of the research design by characteristic follows.
+Using Salganik's characteristics of big data as an analytical framework, we can assess this study on its ability to leverage advantages and mitigate disadvantages of social research with big data. A breakdown of the research design by characteristic follows.
 
 __Salganik's Characteristics - Generally Good for Research__
 

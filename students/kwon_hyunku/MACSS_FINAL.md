@@ -10,7 +10,7 @@ are discriminated against, be they host or guest. Such analysis leads to
 the conclusion that Airbnb’s current design choices facilitate racial
 discrimination. Similarity in the guiding research question and
 computational methods notwithstanding, each paper deals with different
-object (the former focuses on guests’ perceptions, while the latter on
+objects (the former focuses on guests’ perceptions, while the latter on
 hosts’), and employs different research methods (the former makes use of
 observational data, the other combines field experiment and
 observational data).
@@ -158,13 +158,14 @@ As stated above, this article heavily benefits from the big data that
 they gathered via online. The dataset is big: it includes many people
 (3752 observations) and lots of information about the characteristics of
 them (including number of review, ratings…). Also, the non-reactiveness
-the dataset helps the researchers better answer the question at hand:
-discrimination. Since discriminatory behaviors are regarded as negative,
-people might change their behavior when they know that they’re being
-studied. Non-reactive character of this research prevents such problems.
+of the dataset helps the researchers better answer the question at
+issue: racial discrimination. Since discriminatory behaviors are
+regarded as negative, people might change their behavior when they know
+that they’re being studied. Non-reactive character of this research
+prevents such problems.
 
 Such computational advantages notwithstanding, this research still
-suffer from some issues concerning causal explanations. While the main
+suffers from some issues concerning causal explanations. While the main
 argument of this article is the mechanisms of racial discrimination in
 online markets, what they found is not the mechanisms, but the
 relationship between race and rental price. Even though they employ
@@ -242,12 +243,12 @@ mechanism behind racial discrimination in online marketplace: whether
 the discrimination is taste-based, i.e, based on pure preference, or
 statistical, i.e., grounded in inference that a property has inferior
 quality because of the hosts’ race. In other words, though field
-experiment effectively unpacks the mechanisms of discrimination, by
+experiment effectively unpacks the mechanisms of discrimination by
 showing exact pathways of treatment leading to the effect, it cannot
 explain the internal states, which “exist only inside people’s heads.”
-Thus, whether someone’s discriminatory behavior stems from preferences
-or inference can be better examined via survey methods. This point will
-be discussed in detail in the final section.
+(Salganik 2017) Thus, whether someone’s discriminatory behavior stems
+from preference or inference can be better examined via survey methods.
+This point will be discussed in detail in the final section.
 
 ### Advantage of running both observational research and field experiment
 
@@ -264,18 +265,18 @@ sides—supply side and demand side.
 Fundamentally, observational and experimental study have different
 purposes and characteristics. Observational study shows what happened in
 the real world. On the other hand, experiment shows the mechanism behind
-the social reality. Such difference might be related more fundamental
-theoretical issues in social sciences: whether observing the social
-reality in itself, or finding the causal mechanism behind the social
-reality, is the purpose of social science; whether history or physics is
-the ideal of social sciences. While observational study is a better
-reflection of the society as it is, such method cannot capture the
-“social laws”; while experimental study better captures the mechanisms
-by controlling for various factors and isolating the mechanism from the
-complex social contexts, and thus shows higher internal validity (e.g.
-randomization and delivery of treatment) it sometimes lacks external
-validity—it is a social petri-dish, which cannot be applied to real
-contexts.
+the social reality. Such difference might be related with more
+fundamental theoretical issues in social sciences: whether observing the
+social reality in itself, or finding the causal mechanism behind the
+social reality, is the purpose of social science; whether history or
+physics is the ideal of social sciences. While observational study is a
+better reflection of the society as it is, such method cannot capture
+the “social laws”; while experimental study better captures the
+mechanisms by controlling for various factors and isolating the
+mechanism from the complex social contexts, and thus shows higher
+internal validity (e.g. randomization and delivery of treatment) it
+sometimes lacks external validity—it is a social petri-dish, which
+cannot be applied to real contexts.
 
 Seen in this light, combining observational study and experimental study
 helps us grasp the full picture of racial discrimination. The first
@@ -290,8 +291,8 @@ Also, observational research helps designing experiment. Observational
 study helps researchers see the overall picture of racial discrimination
 in online marketplace, though not the exact mechanisms. The
 observational work might have worked as an exploratory data analysis,
-which might help them elicit intuitions, build theories and construct
-better experiment designs.
+which might help researchers elicit intuitions, build theories and
+construct better experiment designs.
 
 ### Application of digital survey-based research design
 
@@ -379,7 +380,7 @@ words, those two dimensions (preferences and stereotypes) might be
 reduced to one, latent dimension.
 
 To ameliorate such problems, I will do two things. First, I will add
-another index that measures stereotypes and preferences. Second, I will
+another indices that measure stereotypes and preferences. Second, I will
 see whether the indices of stereotype and preferences are related with
 each other.
 

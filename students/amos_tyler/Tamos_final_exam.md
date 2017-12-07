@@ -24,10 +24,10 @@ The 2014 paper from Edelman and Luca apply an observational approach to data on 
     * Communication; 
     * Cleanliness;
     * Accuracy.
-  * Quality of apartment based on host-provided photos;
+  * Quality of the apartment based on host-provided photos;
   * Race of the host as determined by profile photos.
       
-Applying an observational research design (Salganik, "Observing Behavior") Edelman and Luca seek to estimate differences in rents paid to black and non-black Airbnb hosts. This relatively straightforward design involves a series of statistical procedures (e.g., T-statistic tests) to determine if gaps between mean rents paid to hosts of different races are significant. (See Edelman and Luca 2014, "Tables") For this study, "non-black" is inclusive of all other races. Robustness of this design choice is supported by validating the results of the analysis (non-black and black) against the same analysis with just "white" and "black" racial categories. (Edelman and Luca 2014, "Robustness check")
+Applying an observational research design (Salganik, "Observing Behavior"), Edelman and Luca seek to estimate differences in rents paid to black and non-black Airbnb hosts. This relatively straightforward design involves a series of statistical procedures (e.g., T-statistic tests) to determine if gaps between mean rents paid to hosts of different races are significant. (See Edelman and Luca 2014, "Tables") For this study, "non-black" is inclusive of all other races. Robustness of this design choice is supported by validating the results of the analysis (non-black and black) against the same analysis with just "white" and "black" racial categories. (Edelman and Luca 2014, "Robustness check")
 
 ### Evaluation of Research Design Effectiveness
 
@@ -49,7 +49,7 @@ The researchers select a cross-section of data from July 17, 2012, effectively p
 
 _Non-reactive: Strong_
 
-In this study, the subjects are already aware they are being observed by potential renters on Airbnb. In fact, it is this behavior the researchers are trying to observe. In other words, it is not the underlying internal state of the individuals the researchers are trying to measure, but their public performance in the marketplace that is Airbnb. Thus, the addition of researchers into the ecosystem of Airbnb and their subsequent observation of subjects in that marketplace would have no impact on hosts' behavior. The researchers were able to identify an existing marketplace which they could observe without changing the dynamics of the system itself. This is a textbook example of Salganik's non-reactivity. 
+In this study, the subjects are already aware they are being observed by potential renters on Airbnb. In fact, it is this behavior the researchers are trying to observe. In other words, it is not the underlying internal state of the individuals the researchers are trying to measure, but their public performance in the marketplace that is Airbnb. Thus, the addition of researchers into the ecosystem of Airbnb and their subsequent observation of subjects in that marketplace would have no impact on hosts' behavior. The researchers were able to identify an existing marketplace which they could observe without changing the dynamics of the system itself. This is a textbook example of Salganik's notion of non-reactivity (Salganik, "Non-reactivity"). 
 
 __Salganik's Characteristics - Generally Bad for Research__
 
@@ -158,7 +158,7 @@ __Salganik's Characteristics - Generally Bad for Research__
 
 _Incomplete and Dirty: Strong_
 
-In order to complete and clean data collected by the researchers, they employed a human computation approach. (Salganik, "Mass Collaboration") Put simply, Amazon Mechanical Turk workers coded host profile pictures for race, gender, and age. Leveraging heterogeneity, the multiple workers were assigned to the same image in to guard against and resolve cases of coding conflicts. This ensured high-quality, clean data from a relatively sparse (it is unlikely hosts mention their race in the text of their posting), dirty (some images were not even human) dataset. Researchers also used face detection tools to categorize past guests by race, gender, and age. (Edelman et al. 2017, 4) The weakest part of the study design with respect to incompleteness and data cleansing comes with the use of a single research assistant to code responses to requests. (Edelman et al. 2017, 7) This task would have been better performed with a human computation approach, or with automated methods. This would have mitigated any risks of systematic bias on the part of the research assistant.
+In order to complete and clean data collected by the researchers, they employed a human computation approach. (Salganik, "Mass Collaboration") Put simply, Amazon Mechanical Turk workers coded host profile pictures for race, gender, and age. Leveraging heterogeneity, the multiple workers were assigned to the same image in to guard against and resolve cases of coding conflicts. This ensured high-quality, clean data from a relatively sparse (it is unlikely hosts mention their race in the text of their posting), dirty (some images were not even human) dataset. This approach allowed them to identify and catalogue a great deal more demographic and ancillary information than in their previous observational work. Researchers also used face detection tools to categorize past guests by race, gender, and age. (Edelman et al. 2017, 4) The weakest part of the study design with respect to incompleteness and data cleansing comes with the use of a single research assistant to code responses to requests. (Edelman et al. 2017, 7) This task would have been better performed with a human computation approach, or with automated methods. This would have mitigated any risks of systematic bias on the part of the research assistant. An additional concern which is common to this design and the observational design, is the potentially ill-fitting variables for the constructs the researchers are studying. Please see the relevant section above (Paper 1, Incomplete) for details on this point. 
 
 _Inaccessible: Poor_
 

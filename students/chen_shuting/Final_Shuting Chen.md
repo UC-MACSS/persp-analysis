@@ -68,7 +68,7 @@ In the survey, people would be asked several types of questions. The first type 
 
 After gathering the data, we intend to identify the racial discrimination conditions by gender, age and race.  Additionally, we would like to further separate differences within each group. For instance, we could identify the most common view about racial discrimination for each age group among all females. 
  
-####2.2.2 Potential drawbacks and how to overcome them 
+#### 2.2.2 Potential drawbacks and how to overcome them 
 
 The most intractable drawback is that we need to reach an agreement with Airbnb to implement a pop-up survey. It is conceivable that this request is very likely to be rejected since this survey cannot create explicit benefits for the company and the company is exposed to the risk of accidentally leaking confidential stuff. However, since most companies have their own surveys about users’ experience we could probably ask them to add extra questions about racial discrimination which would be important to increase users’ satisfaction. After explaining the increasing concern of racial discrimination on Airbnb and how the company can benefit from our research, we might have the chance to obtain the data. 
 

@@ -11,7 +11,6 @@
 * [Digital Survey-Based Research](#digisurvey)
 * [References](#references)
 
-----
 
 ## <a name = "summarize"></a>Summarize Research Designs  
 

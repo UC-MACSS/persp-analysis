@@ -225,20 +225,21 @@ Research Question, Paper 1<sup>1</sup>: _The extent of racial discrimination aga
 
 Research Question, Paper 2<sup>1</sup>: _The existence and extent of racial discrimination on Airbnb_
 
-Both of these research questions (essentially the same research question, with some variation) could be investigated using a digital survey methodology. This would be implemented through a series of questions on individuals' (hosts') attitudes towards renting to specific races or other categories of guests. This would provide a certain measure of the extent of discrimination on this platform. However, this approach has a number of major drawbacks, as detailed below. 
+Both of these research questions (essentially the same research question, with some variation) could be investigated using a digital survey methodology. This would be implemented through a series of questions on individuals' (hosts' and renters') attitudes towards renting to or from specific races or other categories of guests. This would provide a certain measure of the extent of discrimination on this platform. However, this approach has a number of drawbacks, as detailed below. 
 
 _What are the potential drawbacks?_
 
 __Representation Error__
 
-There are a number of risks apparent with respect to representation error. Coverage error may result from only surveying Airbnb hosts for particular types of properties, or in a particular date range. If the researchers only engage with individuals from a subset of cities (as they did with the above papers) then they risk sampling error. Lastly, if there is insufficient incentive for individuals to participate, then they risk non-response error.
+There are a number of risks apparent with respect to representation error. Coverage error may result from only surveying Airbnb hosts and renters for particular types of properties, or in a particular date range. If the researchers only engage with individuals from a subset of cities (as they did with the above papers) then they risk sampling error. Lastly, if there is insufficient incentive for individuals to participate, then they risk non-response error.
 
 __Measurement Error__
+
 As a charged subject, it would be very difficult to collect viable response data from hosts without substantial risk of social desirability bias. While it may not be a challenge to draw out honest responses from guests (who may or may not have experienced discrimination), there are strong social norms which would prevent hosts from admitting to prejudiced feelings. In fact, this effect is likely to be so strong that it is unlikely the results would have any meaningful external validity. 
 
 Another potential drawback is that this approach would require permission from Airbnb to engage with their members in a systematic way. The researchers are unlikely to evade detection if they use guest accounts to contact hosts asking them to respond to a survey. This likely violates Airbnb's terms of service. Thus, the only way to conduct this survey would be in collaboration with Airbnb itself. The introduction of a new stakeholder, Airbnb, would be a limiting factor in terms of what can be asked, and how the survey can be conducted. 
 
-One additional risk/drawbacks is the potentially prohibitive cost for running a survey on a valid sample for a diverse population such as Airbnb hosts. This could easily run into hundreds of thousands of individuals to be surveyed, if researchers are seeking a high amount of generalizability. 
+One additional risk/drawbacks is the potentially prohibitive cost for running a survey on a valid sample for a diverse population such as Airbnb hosts and renters. This could easily run into hundreds of thousands of individuals to be surveyed, if researchers are seeking a high amount of generalizability. 
 
 __What can mitigate these drawbacks?__
 
@@ -248,9 +249,9 @@ Representation error could be mitigated by a clearly defined target population, 
 
 __Measurement Error__
 
-Measurement error risks could be mitigated through a number of strategies. For example, the researchers could anonymize responses and make it clear to respondents that their responses are anonymized. Alternatively, researchers could present a modified game as the survey - having respondents pick individuals out of a group, providing backstories to each individual. Through varying these backstories, the researchers could leverage heterogeneity in order to identify the effect of race on booking acceptance. These methods might ease some of the charged nature of the topic in question, allowing for more accurate responses. Researchers could also leverage observational data to amplify their findings. (see Salganik, "Amplified Asking") This would enable them to ask questions that serve as useful proxies for attitudes towards individuals of other races (e.g., Current Population Survey question, SPKRAC), and then link that data with past hosting behavior. 
+Measurement error risks could be mitigated through a number of strategies. For example, the researchers could anonymize responses and make it clear to respondents that their responses are anonymized. Alternatively, researchers could present a modified game as the survey - having respondents pick individuals out of a group, providing backstories to each individual. Through varying these backstories, the researchers could tease out the effect of race on booking acceptance. These methods might ease some of the charged nature of the topic in question, allowing for more accurate responses. Researchers could also leverage observational data to amplify their findings. (See Salganik, "Amplified Asking") This would enable them to ask questions that serve as useful proxies for attitudes towards individuals of other races (e.g., The General Social Survey question SPKRAC, see NORC 2017 for details), and then link that data with past hosting behavior. 
 
-Lastly, the researchers could strategically use deception in their survey. They could inform participants the study is about a plausible, but entirely different topic - host preferences for renter occupations, for example. This deception would not harm the subject, and would offer a way to remove the social desirability bias concerns discussed above. 
+Lastly, the researchers could use strategic deception in their survey. They could inform participants the study is about a plausible, but entirely different topic - host preferences for renter occupations, for example. This deception would not harm the subject, and would offer a way to remove the social desirability bias concerns discussed above. 
 
 One way to defray the potentially prohibitive cost of such a survey would be to partner with Airbnb. Although this has drawbacks (as described above) it could keep costs down and provide access to Airbnb hosts through a reputable interlocutor - Airbnb itself. 
 
@@ -260,7 +261,9 @@ Edelman, B. G., & Luca, M. 2014. "Digital discrimination: The case of airbnb.com
 
 Edelman, B., Luca, M., & Svirsky, D. 2017. "Racial discrimination in the sharing economy: Evidence from a field experiment." _American Economic Journal: Applied Economics_, 9(2), 1-22.
 
-Salganik. 2017. _Bit by Bit_ http://www.bitbybitbook.com/en/ethics 
+Salganik. 2017. _Bit by Bit_ http://www.bitbybitbook.com
+
+NORC. 2017. General Social Survey Codebook. http://gss.norc.org/documents/codebook/GSS_Codebook.pdf
 
 --- 
 

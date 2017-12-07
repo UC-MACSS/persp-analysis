@@ -189,7 +189,7 @@ _Causal Mechanisms: Moderate_
 
 This study usefully uncovers a number of causal mechanisms at play. For example, by verifying if a particular unit was rented for the weekend in question after the researchers' guest accounts inquired, the researchers are able to make a link to lost revenue for hosts who discriminate. (Edelman et al. 2017, 3) However, the study is only able to infer host motivations for behavior, as the researchers do not engage directly with the hosts outside of the treatment. The researchers must assume similarities between hosts on the basis of observed characteristics and attribute any difference in response to the treatment (the race/gender of the prospective guest). 
 
-### Summary of Assessment, Edelman and Luca 2014.
+### Summary of Assessment, Edelman et al. 2017.
 
 | Characteristic                           | Conclusion |
 |------------------------------------------|------------|

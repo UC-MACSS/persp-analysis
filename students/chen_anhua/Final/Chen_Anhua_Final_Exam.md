@@ -1,0 +1,491 @@
+Part I Independent evaluation of two papers
+-------------------------------------------
+
+### "Digital discrimination: The case of airbnb.com" (2014)
+
+#### Summary of research deisgn
+
+The research question of this study centers on whether there exists
+racial discrimination (especially black vs non-black) against landlords
+in online rental market places, like Airbnb. The research design could
+be partitioned into two major parts: First, (through human
+computation/mass collaboration, which we will discuss in more detail
+later) the paper constructs a new dataset, quantifying and combining
+information on (i) landlords' racial information based on thier profile
+pictures, (ii) rental prices of their listings and (iii) their
+property's characteristics and quality. Second, leveraging on this
+dataset, the paper conducts an empirical study measuring the extent of
+racial discrimination by testing the rental price gap between
+black/non-black landloards, when controlling characteristics/quality of
+the properties. Illustrated in a formula form as below, the focus of the
+paper lies in whether the coefficient *β*<sub>*r**a**c**e*</sub> is
+significant or not, and if so, what's the magnitude of this coefficient.
+*p**r**i**c**e* = *β*<sub>*r**a**c**e*</sub> × race + *β*<sub>*o**t**h**e**r*</sub> × other property information
+ To be a little more specific, based on the dataset the paper created,
+the authors firstly look into cross-racial distribution of properties'
+characteristics (the interaction between "race" and "other property
+information" in our summary formula), and then determinnants of rental
+prices before finally examine the impact of race on rental prices by
+putting everything together in a regression study.
+
+#### How the study factors computational methods into its research design
+
+First of all, the research question proposed in the study itself is
+digitally motivated --- how information in digital market place,
+designed for trust-building, will also unintentionally serves as a
+mechanism for discrimination. The digital traces of users (both
+customers and landlords) in online marketplaces like Airbnb make it
+possible to ask this type of question in the first place. Besides, as we
+mentioned in the last subsection, the first part of the study on
+building an Airbnb databases is heavly relying on human computation/mass
+collaboration through Amazon Mechanical Turk, which is the highlight in
+terms of how this study is utilizing computational methods in its
+research design. This method is especially useful in identifying the
+racial category of the landlords based on profile pictures and in
+generating viewers' perception on overal impresson on the listings, both
+of which are qualitative information hard to capture algorithmically but
+easy via human cognition intelligence organized by mass collaboration
+design.
+
+#### An evalutation on the effectiveness of research design
+
+In general, I think this paper has proposed a quiet interesting question
+on racial discrimination in digital market place and tried to
+(partially) answer it through examining the systematic differnce in
+rental prices across Black and non-black landlords when controlling the
+other (perceived) properties' characteristics. I will first discuss this
+study's dataset construction under the framework of pros/cons of
+utilizing big data in research and benefits/concerns of human
+computation/mass collaboration, then I will alter to the discussion on
+the empirical analysis of the paper, where I think the majority of
+caveats may come from.
+
+##### Constructing an Airbnb listings dataset through mass collaboration
+
+Utilizing the observed data on Airbnb's listing could take advantage of
+all the three "good" characteristics of big data---Big, always-on, and
+non-reactive. Although the number of observations in this study, roughly
+3750, is still small compared to some other big-data study, the
+relatively rich dimensions of each listing (e.g., number accomodated,
+location rating, check-in rating, communication rating, access to
+landlord's social media, profile pictures etc) will still provide
+researchers with the potential to try out a large amount of interactions
+between variables of interest, and authors do test out some of them in
+the regression study later on. The fact the Airbnb.com is still a very
+active online short-term renting marketplace guarantee the always-on
+feature of this study's dataset, enabling some real time update on the
+listing prices distribution across race. Especially, if some unexpected
+event associated with race or short-term rental markets happened, this
+always-on feature of Airbnb listing data would enable researchers to
+track the dynamic of measured racial discrimination in real time and
+potentially develops a natural experiment study. Another feature of this
+dataset is that it's generated based on mostly observational data, which
+reveals customers' real preference during decision-making process
+without any unintended external interference. Besides, through hiring
+workers on Amazon Mechnical Turk to qunatifying qualitative information
+of landlords' racial category and generating "pseudo user impression" by
+assigning one of the seven impressions to each listing, mass
+collaboration has provided some extremely important extra dimension to
+the dataset, which would have been difficult to collect via other menas.
+The "pseudo user impression" would also provide extra perspectives on
+how people will transform observable object information into subjective
+perception, shedding light into the formation process of discrimination
+against landlords.
+
+However, this does not necessarily free the dataset from other potential
+caveats associated with big digital-trace data. As the paper itself has
+already pointed out, given Airbnb.com refusing collaborating over the
+study through sharing data on consumers' demand, which could have been a
+much more direct measure of discrimination, the inaccessibility to
+certain part of the data greatly hinder the effectiveness in answering
+the research question. Besides, non-representativeness might also play a
+part in potentially biasing the research. This study doesn't (or
+couldn't) look into the customers' profiles, the distribution of which
+could have a large impact on racial discrimination against landlords.
+For example (a very hypothetical example, for illustration purpose
+only), if we assume the racial discrimination over African American
+landlords is more severe among White population and if the majority of
+users in Airbnb happen to be white people, this could overestimate the
+extent of discrimination if we are talkiong about a customer population
+with more racial diversity.
+
+##### Reduced-form regression study on constructed dataset
+
+I think the biggest caveat existed in the study that might taint the
+unbiasedness of its estimates is the multi-colinearity in their reduced
+form regression design. As shown in the Table 1, whether the host is
+black creates statistically significant difference amoung not only
+listing price, but also among four other variables: access to the whole
+apartment, number of bedrooms, location rating, and picture quality.
+This means that black-host dummy variable is highly correlated with
+these four variables, making the regression prune to multi-colinearity
+problem. The study itself does mention that the coefficient of
+black-host will shrink as more control variables are added into the
+regression model, serving as a potential evidence of multi-colinearity.
+However, with that being said, after comparing the estimates on other
+variables in Table 2 and Table 3, it seems adding the variable
+"black-host" doesn't substantially impact the coefficient estimates of
+other variables, sligthly alleviating our concern over the extent of
+multi-colinearity. However, this does indicate the lack of effective
+control in causality identification of an observational study like this.
+
+### "Racial discrimination in the sharing economy: Evidence from a field experiment" (2017)
+
+#### Summary of research deisgn
+
+This study aims at testing whether there exists racial discrimination
+against guests among hosts on Airbnb.com via a field-experiment
+approach. The research design mainly consists of two parts: a field
+experiment and a comprehensive external validation of field experiment
+results.
+
+In the field experiment, authors generated 20 test guest accouts on
+Airbnb.com, 10 male and 10 female. Among each gender category, the guest
+accounts are divided into 5 with distinctively White names and the other
+half with distinctively Black names. Names are the only difference
+between these test accounts, providing hosts with only the racial and
+gender information of the test accounts while all other characteristics
+of these 20 accounts are held constant. Then researchers send out
+booking requests to roughly 6400 listings on Airbnb (in 5 major cities),
+each through a randomly selected account from the pool of 20 test
+accounts. Then researchers recorded and categorized the responses from
+the 6400 hosts to test whether there exists systematic discrimination
+towards African American guests through calculating the difference
+between acceptance rate of accounts with Black and White names.
+
+In order to test the external validity of the main results from field
+experiment, the study conducts a pretty comprehensive robustness check
+on whether the main results will persist across different hosts'
+profiles (gender, racial etc.), or across various property locations and
+characteristics. In the robustness check, the paper also allows
+interaction between whether the guest is African American with other
+variables like the race of the hosts or hosts' history of accepting
+African American guests. Through these systematic robustness check
+(external validation), researchers could test whether racial
+discrimination against guests are relatively robust in different
+subgroups.
+
+#### How the study factors computational methods into its design
+
+This study heavily relies on various computational techniques in both
+conducting the field experiment and external-validating its main results
+from the experiment. We will discuss them respectively.
+
+After creating 20 test guest accounts (treatment and control groups),
+researchers sent inquiries to Airbnb hosts using web browser automation
+tools they built specifically for this purpose, this method will greatly
+enhance the randomization process of assigning each listing randomly to
+one of the 20 test accounts to ensure the treatment and control groups
+are randomly selected. Also variable human labor costs will be replaced
+by a fixed cost of automation code design, which could be much more
+efficient if the scale/scope of the study is to be enlarged in the
+future. Beside, the authors also built scrapers to collect the answers
+received by test accounts from hosts, which will be later categorized
+into one of the 6 answering groups.(e.g., "Yes", "No", "Yes with
+questions" etc). In general, this utilization of web automation and
+scrapers will greatly enhance the efficiency of data
+generating/collecting process and provide researchers with potentials to
+enlarge the scale and scope the study in the future. (For example, this
+algorithms could be easily applied to more cities to test a geographical
+distribution of racial discrimination on digital marketplace)
+
+During the external validity robustness check, this study is using the
+same computational method they used in the first paper, mass
+collaboration (human computation), mainly focusing on extracting the
+information of hosts' racial/gender/age identity through their profile
+pictures and quantifying the existence of past African American guests
+in each hosts' customers' review via reviewers' profile pictures. In
+order to increase the efficiency of racial/gender/age identification,
+the researchers also utilizes a face-detection API called Face++ to
+conduct the first round of identification, the unresolved cases of which
+will be referred to hired Amazon Mechnical Turkers.
+
+In summary, utilization of computation methods like web-automation and
+scraping algorithm, face identification API and mass collaboration
+(human computation) has substantially increasese the efficiency and
+accuracy of data collecting and cleaning process in the study.
+
+#### An evalutation on the effectiveness of research design
+
+This study provides some very interesting insights into the existence of
+racial discriminaton in online marketplace like Airbnb. Through an
+innovative field experiment of designing simulated accounts with
+different racially-distinctive names to send inquiries to hosts on
+Airbnb and analyze the hosts' response, the study finds that
+applications from guests with distinctively African American names are
+16 percent less likely to be accepted relative to identical guests with
+distinctively white names. Through different robustness checks, this
+discrimination persists across different categorization of landlords or
+property characteristics. However, the study does find that this
+discrimination mostly concentrate in the subsets of hosts who have never
+had an African American guest. According to the framework proposed by
+Salganik on assessing an experimental study, we will discuss this
+study's design efficiency from three aspects: (1) Validity, (2)
+Heterogeneity of treatment effects and (3) Causal Mechanism
+
+##### 1. Validity
+
+According to Salganik, validity of an experimental study refers to how
+much the results of an experiment support a more general conclusion.
+Among the four type of validity: statistical conclusion validity,
+internal validity, construct validity and external validity, I will
+focus on the latter two. In terms of cosntruct validity, one biggest
+concern, also explicitly mentioned by authors, is whether Black and
+White names will provide hosts with correct interepretation of guests'
+racial information. This is very important to the experiment design in
+that the treatement effect is racial difference. Hosts' correct
+interpreation of name as a signal of race will directly impact the
+effectiveness of the experiment. In order to ensure this construct
+validity, the study provides a separate tests on people's
+interepretation of these names by testing whether they could correctly
+identify whether each name is a Black or White one. (See Appendix table
+A1 of the paper).
+
+The paper also dedicates a whole section to robustness-test the external
+validity of the main resutls from the field experiment. It first tests
+whether the racial gap in hosts' acceptance rate will differ across
+hosts with different racial/gender identity or hosts with different
+number of listings. It then looks into whether this discrimination in
+acceptance rate will vary across listing with different property
+characteristics (e,g., rental price, whether hosts and guests will share
+the proprty etc). In all the validity tests above, the racial
+discrimination still persists. Authors then test whether there is a
+difference in discrimination between hosts who has hosted African
+American guests before and those who hasn't, and they find that the
+discrimination disappears among subset of hosts who has hosted African
+American guests before. The study then also completes the validation by
+examinig the difference in discrimination within a naming group (e.g.,
+Black malenames).
+
+In general, this study is providing a very organized and comprehensive
+step-by-step validity test of its main experiment results.
+
+##### 2.Heterogeneity of treatment effects
+
+Since hosts who receive the request from a same test account (meaning
+receiving the same treatment effect) could be very different (in a lot
+of dimensions) while the experiment is just capturing the average
+responses of very different hosts, this will make the generalization of
+experiment results harder. The robustness check in the study (section
+III) is designed to address this issue. It turns out that for
+heterogeneous experiment objects (Airbnb hosts), the existence of racial
+discrimination still persists. (I will omit the bulk of discussion since
+it's aleady been covered in the Validity part)
+
+##### 3. Causality Mechanism
+
+This could be the biggest limitation of this specific study, as author
+themselves also mention that they cannot identify the mechanism causing
+worse outcomes for guests with distinctively African American names.
+There are two aspects of why it's difficult for this field experiment to
+identify causality mechanism. First, there could be other variables
+(like social economic status) highly correlated with race, and whether
+it's the race or it't the attributes that are highly correlated with
+race that determines a host's decision of whether to approve an
+application is very confounding. Second, as the paper also mentioned in
+its discussion section, the results from the field experiment could
+hardly help to differentiate and test the performance of two distinctive
+discrimination models: taste-based discrimination (discrimination based
+on pure hosts' preference) or statistical discrimination (discrimination
+based on inferring the racial information, similar to our concern in the
+first aspect). For instance, the validation part of the study finds that
+discrimination persists across hosts with different races with homophily
+only in African American females, which could be used as an evidence
+against taste-based discrimination while the finding that discrimination
+shrinks for hosts with a history of hosting African Americans also
+speaks against statistical discrimination model. Therefore, to further
+understand the causality mechanism behind, we need to have some
+alternative research design (I will discuss this in more detail in the
+second part of this exam where we are asked to design a survey-based
+research).
+
+Value added of when combining both studies
+------------------------------------------
+
+It's very interesting to see how two studies from same set of authors on
+a similar topic have been evolving, not only in their research questions
+but also in their research designs.
+
+### Both sides of the market, existence of asymmetric adn interactive discrimination
+
+Two studies are focusing on different sides of the online market place,
+the first one on racial discrimination against landlords while the
+second one is on discrimination facing the guests. Though with different
+research designs, both studies found evidence of existence of racial
+discrimination against both sides of the market. This could mean that
+racial discrimination persists ubiquitouslly on both ends of the
+supply-demand spectrum. Besides, through examining further the unique
+behavior pattern of discrimination in each side, we would have
+flexibility in studying the deeper causese of the discrimination. For
+example, the field experiment study finds that discrimination against
+African American guests are persistent across hosts from different
+racial groups, even for African American hosts. What if we found a
+different pattern in discrimination against landlord? This could be an
+evidence against purely taste-based discrimination model where homophily
+explains everything. Tackling the problem on both sides will also
+provide a potential to explore further whether there exists an
+interaction between discrimination against the two sides.
+
+### Observational vs. Experimental, a trade off between control and non-reactive
+
+The first study fully utilizes the non-reactive nature of observational
+study, trying to extract information without any potential interference
+with the research objects, ensuring we are capturing objects' revealed
+preference. However, what we sacrifice when conducting observational
+study like the first paper is a more direct and controlled design to
+unveil the underlying causality mechanism. As authors mentioned
+themselves in the first study, one of their biggest challenges is how to
+control for other attributes of a listing other than landlord's race.
+While the research design adopted by the second field experiment focuses
+a lot on how to control other variables to ensure the results from the
+experiment are purely due to treatment effect. Although these two
+strategies are applied on different research objects (landlords and
+guests). If we could conduct an observational study on racial
+discrimination against guests through a better access to Airbnb internal
+data, it would be very interesting to see whether we will observe the
+same extent and dynamics of discrimination in real life as we observed
+in the field experiment. Moreover, if certain discrepancies between
+observational study and experimental study do emerge during the process,
+it might signal some other causality mechanism underlying discrimination
+which is not captured by the simplified experiment design.
+
+### An evolution of interaction between research questions and design
+
+One thing worths mentioning is that the first observation study, to
+certain extent, both inspires the research questions and provide certain
+technique foundation of the second field experiment study. It's the
+challenge of how to effectively control for variables other than race
+facing the first study that partially inspires the second one of
+adopting a field-experiment approach to generate a much "cleaner"
+results on discrimination in online marketplace. Moreoever, the external
+validity robustness check in the second study also heavily relies on the
+information/dataset constructed by the mass collaboration/human
+computation techniques in the first observational study. Also, the
+second study answers questions regarding guests which first study
+couldn't answer due to limited access to consumer demand data.
+
+Research design for a survey study
+----------------------------------
+
+Similar to the two aforementioned studies, the main query of my proposed
+survey-based study will focus on testing the racial discrimination in
+online digital market place. However, given the progress in the previous
+observational/experimaental studies, this survey study will concentrate
+more on uncovering the casuality mechanism underlying this racial
+discrimination in Airbnb. More specifically, the survey study will focus
+on identifying whether the racial discrimination is primarily
+taste-based or statistical-inference-based.
+
+### Survey design
+
+We will test existence of racial discrimination against hosts among
+guests. To test the discrimination against landlords among guests, we
+would design four hypothetical hosts profiles with difference in (1)
+hosts race (Black vs non-black), (2) location rating (high vs low) while
+holding all other information constant and show them to participants in
+the online questionaires with the following set of questions. However,
+we will show participants the profiles in a progressive fashion, meaning
+we will incrementally reveal one more piece of information of hosts in
+each question:
+
+##### Q1 Choice of hosts of difference races
+
+In this question, we only show participants with TWO profiles with
+difference in hosts race.
+
+Question: "Among the two profiles, which one you will pick to submit an
+application to rent? Please give brief reasons for your choice."
+
+##### Q2 Choice of hosts of difference races with more information on location ratings
+
+In this question, beyond the two profiles we presented in Q1, we will
+assign a LOW location rating to white host's profile and a HIGH location
+rating to black host's profile and then ask whether the participants
+will change their choice in Q1.
+
+Question: "With more information on location rating of each listing,
+which one you will pick to submit an application to rent? Please give
+brief reasons for your choice."
+
+##### Q3 Choice of hosts of different races and different location ratings
+
+In this question we will present 4 profiles with each of them represents
+a combination of Black/Whie and High/low location ratings. And we will
+ask participant again about their choice among the four profiles.
+
+Question: "Among the four landlord profiles, which one you will pick to
+submit an application to rent? Please give brief reasons for your
+choice."
+
+### Design summary
+
+The reason we have this survey design is that we would like to
+differentiate the taste-based discrimination from statistical-oriented
+discrimination. By comparing people's responses to Q2 and those of Q1,
+we would be able to get an idea of whether their discrimination (if
+exists) is more statistically inference based (If they change their
+preference in Q2 relative to Q1, it might be an evidence that
+discrimination against hosts are more statistical-inference oriented,
+otherwise, the case of taste-based discrimination is more likely since
+participants' perceived biase towards race is not altered when given
+more information). And Q3 will serve as a consistency check of
+participants responses.
+
+There are two plans in terms of whom we would send these digital
+questionaires to. One is that we could collaborate with Airbnb to
+distribution these questionaire to their users. The other is we could
+hire people on Amazon Mechanical Turkers to finish these surverys. In
+both cases, we will collect participants' basic demographic information.
+
+### Potential drawbacks of survey research design and remedies
+
+#### 1. Providing Airbnb with incentive to collaborate
+
+If we go with the plan A of inviting Airbnb to collaborate with our
+survey study, we may face the challenge of insufficient incentive from
+Airbnb to cooperative. However, as the "Invited Postscript" in the
+second message mentioned, the potential discrimination complaints and
+relevant studies have induced Airbnb to put together a Task FOrce to
+propose a set of market design changes to reduce discrimination on the
+platform. We could propose this study as an initiative in this task
+force to provide Airbnb with incentive to cooperate on the study.
+
+#### 2. Cost, non-representativeness of the participants and amplified asking
+
+If we choose the second plan of conducting th study on MTurks, we may
+run the risks that the participants we recruited are not representative
+of Airbnb guests. For example, regular users of Airbnb might have a
+certain distribution in income levels, age and some other demographical
+or social-economical attributes. Besides, if we would like to have a
+large sample, this approach might be quite costly. One way to remedy
+these two drawbacks might be using amplified asking. We will first,
+through web-scraping extract the distribution of Airbnb users over
+several demographical attributes like race, age and then select a
+relatively small sample of participants accordingly and conduct the
+survey study on them. Then we will amplify the survey results towards a
+larger population of Airbnb users obtained through our web-scraper.
+
+#### 3. Statistical racial discrimination may be associated with variables
+
+In our simplified survey design, we only considet the interaction
+between hosts' race and the location rating of his/her listed property.
+However, in reality, people might infer other information other than the
+location rating from hosts' race. For example, people might relate the
+quality of property, income level of hosts etc with the racial
+information of the hosts. In this case, we might want to include
+variation in more variables in our hypothetical profiles of hosts.
+However, we do need to maintain a balance between teh comprehensiveness
+of the survey and the length of the survey, which could directly impact
+the response quality from participants.
+
+Reference
+---------
+
+Edelman, B. G., & Luca, M. 2014. "Digital discrimination: The case of
+airbnb.com." Harvard Business School NOM Unit Working Paper, 14-54.
+
+Edelman, B., Luca, M., & Svirsky, D. 2017. "Racial discrimination in the
+sharing economy: Evidence from a field experiment." American Economic
+Journal: Applied Economics, 9(2), 1-22.
+
+Salganik. 2017. Bit by Bit <http://www.bitbybitbook.com>

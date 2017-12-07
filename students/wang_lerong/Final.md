@@ -50,7 +50,7 @@ The two papers that I discussed above each have their advantages and disadvantag
 
 ## Consider how you could apply a digital survey-based research design to the primary question of interest from these two papers. What are the potential drawbacks to a survey approach? How might you overcome these drawbacks?
 
-Both the two papers attempted to investigate the extent of racial discrimination on Airbnb. To add to the experimental study, I will create a survey targeted at choosing hosts. Participants will be recruited using Amazon Mechanical Turk. Since I don’t want the participants to know the true intent of the survey, I will create a few irrelevant questions to minimize the potential bias of the survey. To begin with, there will be some demographic questions:
+Both the two papers attempted to investigate the extent of racial discrimination on Airbnb. For the observational study that measures the price gap of black and non-black hosts, I think it's hard to directly come up with a survey study also measuring the price gap of different hosts, since participants may have different economic status, and their perception of how expensive the apartment should be will vary largely. To add to the experimental study, I will create a survey targeted at choosing hosts. Participants will be recruited using Amazon Mechanical Turk. Since I don’t want the participants to know the true intent of the survey, I will create a few irrelevant questions to minimize the potential bias of the survey. To begin with, there will be some demographic questions:
 
 1. What’s your age?
 2. What’s your gender?
@@ -60,7 +60,9 @@ To make the survey more ethical, participants may choose the option “I don’t
 1. On a scale from 1 to 5, how likely will you choose this apartment? 
 
 Survey study is good at controlling potential confounding variables, but it also has some obvious drawbacks. Participants may not fill out the survey conscientiously, or they may not provide honest answers. The data may also be incomplete. For ethical reasons, the way I designed my survey gives participants choices over whether they want to answer this question or not. This kind of research design can avoid some ethical issues, but it also leads to an incomplete data set, which may produce data errors. The dataset will be dirty, and researchers need to delete useless data from the dataset manually. Moreover, participants may have a sense of the goal of the survey, so in this case, they intend to avoid their real attitude.
-To overcome these drawbacks, I first need to guarantee that my sample size is large enough so that if I deleted some useless data, I would still have a large enough sample size. Next, I will make my questions simple enough so that participants will not feel time-consuming. Moreover, I will also make some questions asking participants to choose certain answer to filter out the unconscientious response. Finally, I can also ask some indirect or irrelevant questions to avoid the bias resulting from participants knowing the possible goal of the study.
+
+
+To overcome these drawbacks, I first need to guarantee that my sample size is large enough so that if I delete some useless data, I would still have a large enough sample size. Next, I will make my questions simple enough so that participants will not feel time-consuming. Moreover, I will also make some questions asking participants to choose certain answer to filter out the unconscientious response. Finally, I can also ask some indirect or irrelevant questions to avoid the bias resulting from participants knowing the possible goal of the study.
 
 
 ## References

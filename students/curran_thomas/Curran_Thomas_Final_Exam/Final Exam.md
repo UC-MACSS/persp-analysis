@@ -32,9 +32,9 @@ Salganik identifies four kids of validity for experiments in computational socia
 
 ***
 
-##Racial Discrimination in the Sharing Economy: Evidence from a field experiment
+## Racial Discrimination in the Sharing Economy: Evidence from a field experiment
 
-###(3 pts) Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.
+### (3 pts) Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.
 
 In Edelman, Luca and Svirsky’s paper Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment explores the influence of racial bias in the sharing economy model. Specifically, the researchers conduct a field experiment with Airbnb.com to test if a guest’s race influences the rate of acceptance to use a host’s rental property. As a result of their experiment, Edelman, Luca and Svirksy saw that African American profiles were 16% less likely to be accepted for a rental unit compared to their white counter parts.
 
@@ -52,7 +52,7 @@ Being a fully-digital experiments means that the researchers leverage the benefi
 
 There are drawbacks to big data that the experiment is potentially subject to, using again Salganik’s framework of big data, are drift, being algorithmically confounded, containing sensitive data, incomplete and inaccessible. First, the risk of drift is present because the audience of the Airbnb platform could change. Changing audiences could influence the landlord side of the market, and if the experiment’s accounts are distinct from the typical user it could give inaccurate results. Second, like most e-commerce sites, Airbnb most likely uses algorithms to determine like and dislikes as well as potential matches. Given this, it could be that some aspect of the data collection was confounded by a algorithm used by Airbnb. Third, the data set contains sensitive data in that it has detailed personal information of landlords and that if information was to be released about landlords that were biased it could breach ethical protocol. Fourth, the profiels that were scraped may not be complete. While it would benefit landlords to have a complete profile, it does not guarantee that they will. Missing information can often lead to inaccurate samples and analysis. Finally, as seen during the data collection phase, Airbnb can make the data inaccessible to digital data collection by using different security measures.
 
-###4.Evaluate the effectiveness of each paper's research design independently. That is to say, what do we learn from each paper on its own? What are the limitations of each paper on its own? Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
+### 4.Evaluate the effectiveness of each paper's research design independently. That is to say, what do we learn from each paper on its own? What are the limitations of each paper on its own? Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
 
 Ultimately, the paper concluded, based on their model, that African Americans were 16% more likely to not be accepted by a landlord to rent a property. The researchers successfully combine the uses of big data and experimental design to investigate their research question.
 
@@ -74,7 +74,7 @@ Another imporvement or change I would make to the experiment is increase the num
 
 ***
 
-###(3 pts) Identify the value-added of conducting both research projects. That is, what do we learn from running both an observational study and a field experiment that we could not learn from just one of these methods?
+### (3 pts) Identify the value-added of conducting both research projects. That is, what do we learn from running both an observational study and a field experiment that we could not learn from just one of these methods?
 Independently, the observational study and the experiment provide insights but also have several drawbacks to the validity of their findings. However, when combined as a series, the observational study informs the experiment and vice versa. 
 
 Observational studies can at as a gateway to a more targeted experiment and research question. Alone, the observational study faces many threats to external validity (i.e. generalizability) because they typically only look at one sample an observe a phenomenon within that sample. However, when combined with an experiment, the observation is extrapolated and its generalizability is improved. Essentially, an observational study only allows us to claim the potential presence of something or an association, but not causation. When combined with an experiment, the observational study is able to get closer to causation.

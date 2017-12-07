@@ -1,0 +1,149 @@
+
+Final Exam: Discrimination in Airbnb
+
+Name: Yangyang Dai
+
+
+
+Part 1:
+
+Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.
+
+
+Paper 1:
+
+For the Digital Discrimination: The Case of Airbnb.com by Edelman and Luca (2014), the researchers use an observational study design. The study estimates the gap in rents received by non-black and black hosts, and shows that this gap persists even when controlling for factors such as location, reviews, and photos.  
+
+The researchers firstly collect a data set which consists of a snapshot of listings contained on Airbnb for the city of New York, NY as of July 17, 2012. The dataset contains price that the host is asking, the characteristics of the host, and the characteristics of the apartment, how many guests have left reviews, and the average rating for each host characteristic in Airbnb’s structured rating system (location rating, check-in rating, communication rating, cleanliness rating, and accuracy rating). 
+
+Then, in determining the determinants of Airbnb price, the study points out that the price increases with number accommodated, location rating, and social network presence. Secondly, in order to only examine the relation between price and the race difference, the study controls for all of those previously-mentioned factors. And in conclusion, they find out that non-black hosts earn roughly 12% more for a similar apartment with similar ratings and photos relative to black hosts.     
+
+With related to using computational methods, first of all, since Airbnb is an online platform, all the relevant information can be collected digitally, such as the price, characteristics of the apartment, the ratings and etc.  It is relatively easy to collect the data in big scale and also in an organized way using digital tools. Secondly, in order to examine each listing’s photos posted on Airbnb, the Amazon Mechanical Turk ared hired to rate the quality of each listing on a seven-point scale. Thirdly, to identify the race of the hosts on Airbnb, all public profile pictures of New York City hosts are downloaded electronically, other workers on Amazon Mechanical Turk are hired to code the race of the hosts into one of the following categories: White, Black, Hispanic, Asian, Unclear but Non-white, Multiple Races, Not Applicable (no people in picture), or Unclear/Uncertain. In this sense, mass collaboration of online workers is used to assist in the study. Furthermore, the regression method is an example of computational method used in the study to answer the potential research question. 
+
+Paper 2:
+
+For the Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment by Benjamin Edelman, Michael Luca, and Dan Svirsky (2017), the researchers use a field experiment design. 
+
+The data are collected on all properties offered on Airbnb in Baltimore, Dallas, Los Angeles, St. Louis, and Washington, DC as of July 2015, which have roughly 6,400 listings. Information about each listing is also collected, which include the price of the listing, the number of bedrooms and bathrooms, the cancellation policy, any cleaning fee, and the listing’s ratings from past guests. 
+
+Then, the researchers create 20 guest accounts that differ by name, in which one set distinctively African American and the other set distinctively white, but are otherwise identical, and they sent requests and questions of those 20 accounts randomly to the hosts. They track host responses over the 30 days that followed each request. A research assistant then coded each response into categories. The majority of responses were in 1 of 6 groups but here the study only select to analyze those with “Yes”. Further, the analysis uses four main treatment groups based on the perceived race and gender of the test guest accounts. Hosts are contacted by guests with names that signaled African American males, African American females, white males, and white females. 
+
+With related to using computational methods, first of all, since Airbnb is an online platform, all the relevant information can be collected digitally, such as the price, characteristics of the apartment, the ratings and etc. Secondly, the researchers collected all data using scrapers they built. And they sent inquiries to Airbnb hosts using web browser automation tools. (Unfortunately, as the authors mentioned in the paper that this stops after 5 cities, because Airbnb became increasingly rapid in blocking our automated tools which logged into guest accounts and communicated with hosts). 
+
+Also, using online work market platforms, they hire two Mechanical Turk workers to assess each image, and if the workers disagree on race or gender, they hire a third to settle the dispute. If all three workers disagreed (as happened, for example, for a host whose profile picture was an image of a sea turtle), they manually coded the picture. They code race as “unknown” when the picture did not show a person. Through this procedure, they roughly categorize hosts by race, gender, and age. Further, when checking the guests who had previously reviewed each host., they use Face++, a face-detection API, to categorize past guests by race, gender, and age. These computational methods allow them to examine relationships between a host’s prior experience with African American guests and the host’s rejection of new African American requests.
+
+
+
+Part 2:
+
+Evaluate the effectiveness of each paper's research design independently. That is to say, what do we learn from each paper on its own? What are the limitations of each paper on its own? Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
+
+Paper 1:
+
+Values:
+
+This paper is well intentioned, as it’s designed to examine the potential racial discrimination in Airbnb market with related to the price offered by Black versus non-black hosts. Trying to ask this question and potentially answering the question could potentially draw people’s attention to the problem of the price discrimination in the Airbnb market, made meaningful impact on changing this unhealthy biased dynamic, and bring some social gains for different races of people. 
+
+Also, it takes advantage of the data online and modern online work market tools such as Amazon Mechanical Turk. Utilizing mass collaboration and digital tools allow the study to increase its efficiency and potentially reduce costs which would otherwise incur when conducting on-site researches. 
+
+Furthermore, evaluating other determinants of the Airbnb price and reducing the effect of these variables on price when running regression analysis significantly reduces the potential experimental result errors and noise. 
+
+Limitations:
+
+There are several concerns I have for this study.
+
+Firstly, with related to the data design, it only collects data on a specific day, which is July 17,2012, and only in New York. This choice seems very random, unrepresentative and lack of explanation. By choosing only the data on one day, the study seems not fully take advantage of the characteristics of big data. It does not utilize the advantage of big scale of big data and the always-on characteristic to track the continual trend of the Airbnb price. 
+
+Secondly, with related to the validity of the design of the study, by choosing a random day in July, the reason is unclear. Why to choose this day needs to be explained. (is it because of the traveling season, the weather or others). And by only choosing one city New York, the information collected might not be representative enough for the whole Airbnb market. For example, the demographic and socioeconomic characteristics of both the hosts and the guests in New York might be very different from other cities. 
+
+Furthermore, the authors also mentioned in the paper that they originally intend to analyze the demand of the Airbnb, but due to lack of data, they chose to explore the relation behind the Airbnb price instead. From my perspective, theoretically, demand-side analysis is a much better and more valid approach than the supply-side analysis in the Airbnb market. In other words, the analysis is more meaningful and valid when we examine whether the guests choose (and pay) hosts based on the race of hosts rather than how much the price is offered by the hosts (further categorized by their races). To be specific, the price difference offered by different hosts could be explained by the fact that, for example, black people tend to offer less price than white people because they are self-conscious and they want to increase their home’s competitiveness in the market. In this way, the results of the findings of this study may not be relevant to our questions and intentions then.
+
+Thirdly, with related to the analysis of the results of study, there are not many consideration for the heterogeneity of treatment effects. In specific, the paper only discusses about how prices differ between black and non-black hosts. It does not take into account other possible heterogeneity cases. For example, if within black hosts, different gender shows different price offering behavior. This could be further discussed and analyzed. 
+
+Lastly, this paper does not discuss about the potential casual mechanisms behind this study. What would be the reasons that drive the discrimination in the Airbnb prices, are there any suggestions or methods that could use to potentially reduce this discriminated dynamics. These are all questions that could be further studied to form a more clear and complete picture for us to fully understand the price discrimination by race in Airbnb market.
+
+
+Paper 2:
+
+Values:
+
+This study is well intentioned, as it’s designed to examine the potential racial discrimination in Airbnb market with related to the acceptance rate of guests based on their race and gender.
+
+The study takes great advantage of digital tools, such as online workers on Amazon Mechanical Turk. Utilizing mass collaboration allows the study to increase its efficiency and potentially reduce costs which would otherwise incur when conducting on-site experiments.  
+
+Also, it utilizes the big data well. The dataset is large, which contains roughly 6,400 listings from five different cities within a month, allowing researchers to process a lot of information at the same time. The fact that the big data is always-on allows the researchers to track the data and record accordingly everyday within the month. 
+
+Furthermore, with related to the validity of the study, both the external and internal validity seem reasonably high. In specific, because the hosts are not aware of the fakeness of the guests’ identities, they seem to give their real-life responses, so the information collected in the study seems to be very accurate and true to the real case. In the meantime, since it is an analog experiment, the samples are carefully chosen and the randomization are deliberately conducted. This reduces the potential experimental errors significantly and also potentially reduces the problem of unrepresentativeness in pure observational designs.  
+
+The analysis of the study also takes into account the heterogeneity within its treatment groups. To be specific, it not only divides the explanatory group to be black and non-black, it also further divides the group into black-male, black-female, non-black-male, and non-black-female. Within these new four groups, differences in acceptance rates could be further analyzed and discussed.
+
+Limitations:
+
+Although the study is generally very complete and thoughtfully and well conducted, there are several limitations.
+Firstly, when the researchers look into the past reviews, they choose to look at past 10 reviews and to see if those hosts have received black guests recently. And the further study depends on this finding to examine whether the recent black guests’ experience affect the hosts’ decisions to accept guests. This part of the design seems confusing and a little ungrounded. If the result is that the hosts who received black guests recently tend to have no discrimination, then this makes me wonder how about going back to the time they haven’t received any black guests, what would that make any difference? We might need better and more explanation for this choice of design here. 
+
+Secondly, although the results and findings are very thorough, detailed into different treatment groups, there are not many causal mechanisms explained during the study. What would the reasons behind the hosts’ decision to accept and not accept the guests, based on the guests’ races. This could lead to further studies. 
+
+Thirdly, this study chose the month July, within the whole year, this might not be a long enough length of time to conduct this kind of study. Because July is a month of good weather and traveling, it could be that the acceptance rate is lower for some hosts because the demand is so high at the time. This needs to be included into the analysis in order to reduce the noise effects.
+
+Lastly, since this study is a real-life experiment, it brings about the problem of ethics. Although not obvious laws and codes are violated if permitted by Airbnb company, still, it deceives the hosts and cause extra trouble for the hosts. The hosts need to spend time responding the fake guests and may be explain or discuss things with them. But overall, it is intended for the common good, though causes a little inconvenience for selected hosts rather than unselected ones. 
+
+
+Part 3:
+
+Identify the value-added of conducting both research projects. That is, what do we learn from running both an observational study and a field experiment that we could not learn from just one of these methods?
+
+An observational study like the first project enables us to conduct observations that we can observe what people actually do or say, rather than what they say they do. In our case, we directly observe the real offered prices by different races of people, rather than letting them tell us what they offered. Because if it is a survey or experiment, people might not always willing to write their true views on a questionnaire or tell a stranger what they really think at interview. Observations are made in real life situations, allowing the researcher access to the context and meaning surrounding what people react in the Aribnb market. If using other methods in which approaching people for interview or questionnaire completion, there might be unlikely to yield a positive response, but observations could yield valuable insights on this issue. 
+
+Furthermore, an observational study like the first one fully take advantage of the big data. They can access any data, any size of data, any time using digital tools. This is an undefeatable advantage for the real-life data in a modern world. We could fully utilize the large-scale, always-on and the non-reactiveness of the data and conduct further analysis.
+
+On the other hand, a field experiment like the second project creates may different possibilities. In essence, the field experiment is good at combining control and realism at scale. 
+
+Digital field experiments can offer tight control and process data to understand possible mechanisms (like lab experiments). Also, it allows more diverse participants to make real decisions in a natural environment (like field experiments). Especially when our field experiment in this project is a digitally-enhanced one, it significantly increases the experiment scales, which could have thousands or even millions of participants. This change in scale is because some digital experiments can produce data at zero variable cost. That is, once researchers have created an experimental infrastructure, increasing the number of participants typically does not increase the cost. Increasing the number of participants by a factor of 100 or more is not just a quantitative change, it is a qualitative change, because it enables researchers to learn different things from experiments (e.g., heterogeneity of treatment effects) and run entirely different experimental designs (e.g., large group experiments). 
+
+What is more, the digital field experiments in the second project involve treatments that can be delivered over time and the effects can also be measured over time. For example, here, the experiment is conducted for one month period. These opportunities—size, pre-treatment information, and longitudinal treatment and outcome data—are most common when experiments are run on top of always-on measurements systems, which is the advantage of the big data world. 
+
+Actually, in the second project, apart from using field experiment, the researchers also used observational research. in specific, because hosts’ profile pages contain reviews (and pictures) from recent guests, the researchers can cross-validate their experimental findings using observational data on whether the host has recently had an African American guest. Only though combining the experimental results with observational data from Airbnb’s site, they are able to investigate whether different types of hosts discriminate more, and whether discrimination is more common at certain types of properties based on price or local demographics. These are the aspects that each study complements on the other one, and helps to improve the efficiency and completeness of the overall discrimination study.
+
+
+Part 4:
+
+Consider how you could apply a digital survey-based research design to the primary question of interest from these two papers. What are the potential drawbacks to a survey approach? How might you overcome these drawbacks?
+
+Primary question of interest:
+The first study is designed to examine the potential racial discrimination in Airbnb market with related to the price offered by Black versus non-black hosts. The second one is to examine the potential racial discrimination in Airbnb market with related to the acceptance rate of guests based on their race and gender. 
+
+General Idea:
+With similar ideas and interest, if to conduct a digital survey-based research design, I would want to design a survey that can discover both the relation between the price of Airbnb and the hosts’ race, and the relation between the acceptance rate and the race of the guests. 
+
+Design:
+In order to achieve what I want to get in the section above, I could utilize the idea of a traditional survey on a digitally-distributed platform. 
+
+The first step is to categorize my samples of potential hosts and guests. In specific, for example, I could put them into four groups: black-male, black-female, non-black-male, non-black-female. And I could use facial or advanced drawing apps to make fake profile and pictures of both hosts and guests for those four categories. ( I could make more detailed categories if needed to analyze more different treatment effects. Here I just gave an example.) Then I need to put all the profiles of different people into complete files of a single host or guest, making sure the characteristics of different people are all included. 
+
+Secondly, I will make a digital survey which composes two type of questions, one is targeted on the ‘hosts’, one is targeted on the ‘guests’. When asking the participants to do the survey, I will let them know they are doing a selling/buying role play, and they need to make rational choice to offer price or accept a host, and provide reasons after each choice or make a decision. 
+
+For example, I could ask: 
+1.	Given the information above, (which is the fake profile and information about a host and his home), what price will you pay? (I will provide a minimum and maximum to give a general idea)
+2.	Given the information above, (which is the fake profile and information about a guest), will you accept him or her to stay at your house? 
+I could use the platform Amazon Mechanical Turk to distribute my survey and collect results.
+
+
+Evaluation:
+
+I think my design of the digital survey could reduce many potential problems of traditional survey and experiments or observational studies.  For example, avoiding the real contact with real Airbnb hosts and guests, there will be no ethical conflicts and potential harm to real people. 
+
+Also, since the survey is anonymous and no human contact, participants may make honest decisions compared to those experiments conducted in lab or field. 
+
+However, there are potential drawbacks to this design.
+Firstly, since everything depends highly on the digital tools, the technology part could be very challenging and time-consuming, and possibly, expensive. For example, to generate different profiles of different people with different races and home places and information could be difficult. In addition, since Amazon MTurk is used, I should probably provide some degree of financial reward to encourage more people to participate, in order to collect large sample of data. The cost could be high. 
+
+Secondly, within the survey process, we don’t know who those participants are and they might not be representative to be experimented in our study. To be specific, people who tend to use Amazon MTurk might be more liberal and less discriminated, so it could tamper our results. Also, if those participants are not familiar with the Airbnb settings, their decisions could be irrelevant to what the real-life situation would be. 
+
+To overcome those drawbacks, instead of using platforms like Amazon MTurk, I could distribute my survey to chosen sample of Airbnb hosts and guests and ask them about similar questions. But in that case, I also need to be careful with my questions. Because I don’t want to let the participants realize I am asking their decisions about race of a particular group, and I want to make sure they respond as honest as possible so my results would be very close to the real-life situations.
+
+
+
+
+
+

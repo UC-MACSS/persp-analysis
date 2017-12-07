@@ -1,3 +1,8 @@
+Tom Curran
+Final Exam
+December 5, 2017
+Perspectives on Computational Analysis
+
 ## Digital Discrimination: The case of airbnb.com
 
 ### (3 pts) Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.

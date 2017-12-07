@@ -1,0 +1,176 @@
+---
+title: "Final Exam: Evaluating Research Designs"
+author: "Kevin Sun"
+date: "12/6/2017"
+output: html_document
+---
+
+## Part 1A (Digital Discrimination: The Case of Airbnb.com)
+
+### Summary of Research Design & Computational Methods Used
+
+In “Digital Discrimination: The Case of Airbnb.com,” Edelman and Luca conduct an observational study in the online marketplace of rentals [1]. The primary research question the researchers were empirically investigating was whether a difference exists in prices charged between hosts of different races on Airbnb.com. To assemble the dataset, the researchers accessed the Airbnb website and compiled the following information on all Airbnb landlords in New York City: (1) Their profile picture, (2) rental price, and (3) information regarding characteristics and quality of their properties. The data was a snapshot of information captured on a single date – July 17, 2012. In addition, through collecting data directly from the Airbnb website in this manner, the researchers also gathered information on guest reviews and average ratings for each host characteristic such as communication rating, cleanliness rating, etc.
+
+Assessing the occurrence and impact of digital discrimination also required the researchers to harness computational methods like human computation.  In order to classify the race of Airbnb hosts and quality of each corresponding Airbnb listing, different Amazon Mechanical Turk workers were employed. In utilizing a mass human computation method, the researchers were more easily able to control for variables, like quality of listing, and ultimately come to more rigorous conclusions from their observations. 
+
+An overarching, and perhaps quite obvious, characteristic of this observational study is its reliance on digital traces for asking and answering this question of digital discrimination in the Airbnb marketplace. Of course, Airbnb listing information is not created for the purpose of research; yet, this is the nature of many digital age sources. The relative public availability of such information on Airbnb allows great potential for harnessing computational methods to discern discriminatory or inequitable treatment and impacts in a marketplace not yet as tightly regulated as traditional rental markets.
+
+### Evaluation of Design and Limitations
+
+The findings reported from this observational study are striking. While the researchers point out that traditional determinants of price follow intuition (e.g. price increases with number accommodated, better location, etc.), the data shows that non-black versus black hosts on Airbnb receive significantly different rents. After controlling for a variety of other factors such as whether the property will be shared or guest perception of location and quality of listing, the observational data finds that black hosts earn 12% less, relative to non-black hosts for similar apartments with similar ratings and photos. 
+
+#### Harnessing Big Data
+To further assess the effectiveness of this study, we consider some of the key characteristics of big data covered by Salganik [2]. Utilizing the digital marketplace allows for this observational study to harness big data, although definitely not the biggest dataset we have seen. While it appears that the total number of observations lie in the thousands, this is sample size remains large enough to make sub-group estimates; the ability to make these sub-group estimates between black and white hosts is what underpins the entire study. These sub-group estimates along with the capacity to control for other factors such as listing quality, permits the researchers to observe correlations between race and price. However, this dovetails into a limitation of the observational study – causality cannot conclusively be determined given this was not a randomized controlled experiment. 
+
+#### Always-on
+
+The fact that big data is always-on allowed the researchers to go back in time to study phenomena they did not necessarily predict beforehand. While researchers chose only to capture a snapshot of information on a single day, they could have potentially gathered data from multiple time periods given the longitudinal nature of big data. On one hand, one could argue that collect such “data snapshots” mitigates potential population drift, which can be problematic in rapidly growing online platforms. On the other hand, gathering data over multiple time periods and over multiple locales might have further buttressed any findings and allowed for researchers to draw conclusions beyond NYC. 
+
+#### (Non) Representativeness
+
+This, then, points to another limitation of this observational study and weakness of big data in general – the non-representativeness of the data. We can likely challenge whether or not NYC Airbnb hosts are representative of the population of interest – which are all hosts in the online rental marketplace. Specifically, one could point out that urban areas, and especially NYC, tend to be more racially diverse - this might lead to an expectation that one is more likely to interact with someone of a different race on such an online platform. In turn, this could potentially translate to a higher tolerance by both hosts and guests for engaging in an Airbnb transaction with someone of a different race and might underestimate the scope of discrimination in online markets beyond NYC. 
+
+#### Reactivity
+
+A major strength of this particular research design is the study’s ability to minimize reactivity among the research subjects. Airbnb hosts and users most likely operate under the assumption that their daily behaviors on the platform are not being utilized primarily for research purposes. Thus, there is little to no reason to believe that people on the Airbnb platform altered their behavior in response researchers collecting this data for the purposes of assessing discrimination in the digital marketplace. Thus, this research structure allows researchers to get a less biased measure of how prices are set when controlling for particular factors of interest, such as race. 
+
+#### More Limitations & Challenges
+
+Another significant conclusion one can draw from this study concerns the internet as a mechanism for managing discrimination. The authors point out that in principle, online marketplaces supposedly shield user identity, reduce the flow of undesirable information, and thus can reduce the scope of discrimination. While we have seen this work in other sectors, the findings of this study reveal that platforms like Airbnb may actually have the opposite effect of exacerbating discrimination. The researchers do well in pointing that information such as a guest seeing a host’s profile picture is unnecessary in order to book a room or space (we certainly do not see the faces of all the workers at a Marriott prior to our booking a stay there). Yet, in attempting to delve into a more nuanced discussion surrounding why there is discrimination or what type of discrimination this exposes broader limitations of solely pursuing the observational approach. 
+
+To speak further to these limitations beyond non-representativeness and lack of causal explanation already discussed, the authors readily admit this study’s inability to discern if inequitable pricing results from taste-based discrimination or statistical discrimination. In other words, are users of Airbnb discriminatory through pure “preference” (prejudice) of not wanting to stay with a black host or is decision-making grounded in inferences users make regarding hosts of varying races. These are questions unable to be answered in the observational setting, but that perhaps could be addressed through a digital survey which will be discussed near the end of this paper. 
+
+Operationalizing and measuring complex concepts such as racial discrimination also proves to be challenge in observational studies. Without directly conducting an experiment or engaging in dialogue with those involved in the Airbnb platform regarding their perceptions of discrimination, the researchers must use a proxy measurement for assessing “digital discrimination.” This proxy, we see, comes in the form of measuring the price and other information that is directly provided on profiles. Moreover, issues of race and discrimination are sensitive topics. There could be potential harm to Airbnb hosts whose information might potentially be made public – this could be social or economic harm – and negative reactions are drawn. Some might criticize the lack of informed consent in this study on such a sensitive issue that has broad policy implications. 
+
+#### Concluding Assessment and Evaluation of Observational Study
+
+Even when considering the multitude of limitations that come with such an observational study, we should remain grounded in the fact that the design of the study itself was sound. Moreover, the researchers tackled an issue worth addressing and question worth asking – are online marketplaces facilitating discrimination? We can certainly conclude that for the scope of NYC, observable and significant price differences exist between black and white Airbnb hosts. Classifications of host race and listing quality reinforced through multiple rounds of human computation on Amazon Mechanical Turk allowed researchers to control for all other factors except for host race. Is this study independent proof of racial discrimination in this particular market? Perhaps not. But, for anyone with a shred of historical knowledge regarding the United States– this society is one built on racial discrimination and a clearly delineated racial hierarchy. As we seek to live in a society that is more equitable and just, this research unveils important insight and is a start towards guiding policy to combat such discrimination. 
+
+## Part 1B (Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment)
+
+### Summary of Research Design & Computational Methods Used
+
+In “Racial Discrimination in the Sharing Economy: Evidence from a Field Experiment,” Edelman, Luca, and Svirsky conduct an experiment to assess discrimination on the Airbnb platform – an online marketplace for housing rentals [3]. In the traditional context of housing and apartment rentals, antidiscrimination policies enforced by government has seen a reduction in racial discrimination in the marketplace. Yet, with a growing number of transactions moving online and Airbnb being one of the leading platforms to carve out a significant space in the short-term online rental marketplace, investigating racial discrimination in this new digitized sharing economy has become a necessary.
+
+The experiment is a digital-age take on the seminal labor market resume-based experiment by Bertrand and Mullainathan [4]. In their test for discrimination, the researchers responded to some 6,400 Airbnb listing across five American cities. Airbnb guest profiles were created and were similar in all aspects except for the name on the profile. The guest profile names were drawn from two sets of names – a set that held distinctively African-American sounding names and a set that held distinctively white sounding names. Once the names were chosen and assigned to guest profiles, these pseudo-guests would then respond to Airbnb listings. To assess the occurrence of discrimination, the researchers measured the positive and negative response rates to the treatment (white versus black guest profiles). 
+
+This particular experiment is methodologically computational and digital in nature since the marketplace being measured is an online marketplace. Moving out of the physical spaces of traditional labor markets and apartment buildings to interactions on the internet platform, researchers can take advantage of running the experiment in multiple locations at a single time. In the vein of many of other digital field experiments, researchers harnessed an existing environment which allowed them to move beyond more traditional correspondence studies or audit studies that require greater human labor, time, and money. The utilization of automated tools to quickly respond to Airbnb listings across multiple locales allows for capturing a larger sample size at a quicker rate – although Airbnb became increasingly successful in blocking these automated tools, this is a limitation that we will discuss later on. 
+
+The researchers also complemented these methods in collaboration with Amazon Mechanical Turk workers. Mechanical Turk workers were employed to assess the race, gender, and age of the Airbnb host, quality of the Airbnb listings, and perceived racial-association of names used on the guest profiles. Thus, human computation allowed the researchers to confirm that the named used continued to signal a particular race and thus allow them to accurately formulate the treatment groups. 
+
+The treatments were delivered as roughly 6,400 messages sent to Airbnb hosts from the varying profiles inquiring about availability roughly 8 weeks in advance. Tracking responses over the subsequent 30 days, the researchers then coded responses predominantly into 1 of 6 groups: “No response,” “No or listing is unavailable,” “Yes,” “Yes, with questions,” “Request for more information,” or “Check back later for definitive answer.” Focusing primarily on simple “yes” or “no” responses, the researchers’ findings and our evaluation of the study are elaborated upon below.
+
+### Evaluation of Design and Limitations
+
+#### Casual Mechanism & Related Limitations
+
+The power behind running a digital experiment lies in the fact that one might better be able to draw conclusions about causality. So, to more rigorously answer the question, does discrimination occur on the Airbnb platform and are there impacts from such discrimination? – the findings of this experiment point towards yes. Searching for the mechanism can prove to be a tricky process as Salganik points out, but the researchers in this study took measures to identify it. 
+
+As we already know, there were two broad treatments of Airbnb “guests”: those with white-sounding names and those with black-sounding names. However, to enhance the rigor of the treatment, the researchers tested many related treatments. This means that they used more than a single white-sounding name and a single black-sounding name. In fact, for white female, white male, black male, and black female, five different names were available at treatments in each category (from Table 7). Thus, the researchers were able to isolate this causal mechanism. Specific examples of this include being able to observe that even the black male with the most positive responses (Darnell and Rasheed) received fewer acceptances from Airbnb hosts than the white male with the fewest positive responses (Brad). This method is more rigorous in showing that differences in acceptance rates are truly caused by host perception of guest race. 
+
+These findings contribute to a growing body of literature that suggest that discrimination persists on a variety of online platforms. That being said, the authors’ themselves point out a key limitation of this experiment. Given the use of the name as a proxy, it is difficult to distinguish if this discrimination is caused explicitly by race or through other inferences such as perceived socioeconomic status of potential black guests or a combination of the two. 
+
+#### Heterogeneity of Treatment Effects
+
+At the broadest level, we have learned that white-sounding names are accepted 50% of the time versus black-sounding names, which are accepted 42% of the time. These are results after controlling for a litany of other variables such as host gender, race, experience, etc. Beyond this gap, in harnessing big data, the sample size of the experiment allows us to observe heterogeneity of treatment effects. What this means is that the researchers were able to measure how different groups of Airbnb hosts reacted differently to the varying treatments. 
+
+Specifically, this includes measuring how different groups of people react to differing treatments are receiving requests from white-sounding or black-sounding names. Intuition might suggest that discrimination is driven by in-group bias (homophily); however, the findings show that black male hosts and white hosts in general discriminate against black guests and the only exception is black female hosts who accept higher proportions of black female guests – this runs counter to the homophily theory. Discrimination also persists across age categories, despite intuition that discrimination may be less common among younger hosts. Further, discrimination does not vary when considering varying listing characteristics – in other words, discrimination rates against blacks remain persistent for expensive and less expensive listings across more and less desirable locations. Perhaps among the more astounding findings is that discrimination rates against blacks does not decrease even in more diverse neighborhoods that include more black residents. 
+
+These are compelling findings in that they have already yielded changes in practice and potential policy implications. Without running an experiment with a dataset of this size, these granular findings would not have been as readily identifiable. Yet, it is exactly this micro-level snapshot of discrimination across virtually all sub-groups that has pressured Airbnb to form a task force to address these charges of discrimination. 
+
+#### Validity and Some Limitations
+ 
+In evaluating digital experiments, an assessment of validity is imperative. Underlying the idea of construct validity for this experiment is whether there is a match between the data collected from Airbnb and the theoretical construct the researchers sought to measure – racial discrimination. Recall that the guest profiles created were entirely similar with the key difference being the name. Consider that this method of assigning names that strongly signal a particular race has been tried and tested through a variety of experiments across a multitude of markets, including the Bertrand and Mullainathan labor market study. The researchers of this study further buttressed racial name perception through multiple rounds of Amazon Mechanical Turk workers classifying names into racial categories. Thus, using names as the proxy for race is a valid construct and we can assume that Airbnb hosts interpreted names with the racial connotations that researchers expected.
+
+Internal validity is a question of whether the experiment was run correctly. The randomization occurred through random assignment of one of the 20 profiles created to each host contacted. Again, each message sent was identical save the name and hosts were contacted no more than a single time to avoid repeated measurements. When hosts responded, a research assistant coded the responses into categories. These categorizations initially had subtle differences, but even when restricting the focus to the simplest of “yes” or “no” responses, the findings underlining the existence of discrimination stand.   
+
+Finally, external validity asks the question of whether these findings can be generalized to other situations; that is, can we draw conclusions about the broader online rental marketplace from this study? This is a potential weakness for the study and points to some limitations of digital experiments using existing environments. The researchers initially planned to have a larger sample size beyond the five cities targeted. Airbnb’s systems were able to, at increasingly rapid rates, block the researchers’ automated bots from sending messages to their hosts. While the researchers considered working around this challenge, this did ultimately restrict the number and range of sample size. 
+
+#### Other Limitations and Challenges
+
+When considering more nuanced models of discrimination, this experiment encounters limits. For example, there is no explanation for exactly why black female hosts discriminate less against black female guests. Homophily does not exist for other race/gender combinations. Moreover, discerning between pure taste-based discrimination and statistical discrimination is challenging. Findings that hosts who have previously had black guests discriminate far less than those who have never had black guests suggests a different model of behavior that this experiment is unable to pick up on. 
+
+#### Concluding Assessment and Evaluation of Digital Field Experiment
+
+Tremendous knowledge was gained through the completion of this digital experiment. Building upon previous, rigorous studies in market discrimination, the researchers did indeed uncover an occurrence of discrimination on the Airbnb platform – a new market in the digital age. If our end goal, as the researchers themselves put, is to design a “discrimination-free marketplace” than this experiment is a step the right direction. In particular, this research highlights the potential for online marketplaces to facilitate discrimination. And while there certainly are significant limitations to concretely identifying the causal mechanisms at play and empirically honing in on why black-sounding names suffer much lower rates of acceptance, the evidence shows clear inequity. This research paper is effective in opening the door for broader conversations around digital-age institutions practice and government policies relating to discrimination. To emphasize – by no means should we consider these findings to be conclusive and more studies should and will be conducted on the matter. Yet, even Airbnb’s willingness to formulate a task force to address the issues shows their own recognition of such a potential problem needing to be addressed.
+
+## Part 2: Value-Added of Conducting Both Projects
+
+There are clear advantages and disadvantages to conducting both observational and experimental studies. Luckily for researchers, we are not limited to one or the other. In fact, there is significant value-added to conducting both simultaneously. 
+
+### Balancing Reactivity and Drifting
+
+The observational study holds strength in minimizing reactivity from the subjects. While one may argue that the digital experiment, when carried out with fidelity, also minimizes reactivity from Airbnb hosts and users, we also know that there was reactivity from Airbnb itself. This reactivity came in the form of Airbnb blocking the automated tools the researchers used in logging into guest accounts and communicating with hosts. Over time, this points to another potential weakness of the experiment – the Airbnb system might drift or change in response to groups of researchers conducting such experiments. Thus, coupling a less invasive observational study with a more invasive experimental study – which in essence was the relation between these two research projects – allowed the researchers to balance these benefits and drawbacks. 
+
+### Combined Scope of Observational Study and Experiment
+
+Additionally, the researchers appeared to utilize the observational study as a springboard for further research into the occurrence of discrimination in the online rental marketplace. One could justify conducting an observational study as an initial foray and probe to address a research question; and then, based on the insights gained from such observation, design an experiment that seeks to answer aspects of the research question that were not addressed through the observational study. This broadens the overall scope towards the research question being addressed. 
+
+Specifically, we know that access to data is often a weak point of big data research. Given a lack of access to consumer demand information from Airbnb, the researchers in the observational study were unable to conduct an analysis of consumer demand. Instead, they focused on a pricing analysis from the perspective of those providing the service – the Airbnb hosts. And while observable differences were made between black and white Airbnb hosts, this is a limited scope. Had it not been for conducting the digital field experiment, this scope would have remained restrained in this sense. However, the experimental design allowed for an analysis of discrimination towards Airbnb guests – widening our scope to address the research question. Thus, from conducting both studies, we can answer the question of discrimination from multiple nodes – from the Airbnb host, the Airbnb guest, guests of different races and genders, hosts of different race and genders, hosts of varying locations, etc.
+
+### Learning to Apply Pressure for Change
+
+Conducting the observational study unveiled inequity in the earnings between white Airbnb hosts and black Airbnb hosts. Combine this with the experimental study, which unveiled that black Airbnb guests are significantly less likely to be accepted by nearly all Airbnb hosts in their requests and we see compelling evidence that points towards systematic and institutionalized discriminatory practices that exist on the Airbnb platform. 
+
+Such troubling evidence is more likely to compel major actors like a corporation and the government to rightfully take regulatory action. What we have learned from this is that under our current legal system, companies like Airbnb that operate in the digital marketplace are held to different, and often lower, standards when it comes to discrimination. Government regulation and anti-discrimination laws have not yet caught up with our technological advancements. There is little to no incentive for companies like Airbnb to combat discrimination. As the authors point out, efforts by companies such as Airbnb to combat discrimination would be ethically motivated versus being motivated by law or profit. 
+
+Understanding this dynamic is powerful. Without serious pressure, many institutions are not incentivized to shift towards more equitable and less discriminatory practices. Together, both of these studies can teach us about the potential for a culmination of work addressing the same problem from varying facets to act as the pressure to facilitate change.
+
+## Part 3: Considering a Digital-Survey Approach
+
+Exploring the digital survey approach has the potential to open up a whole new world (cue Aladdin). Recall that the primary research question from these two papers revolves around the occurrence of discrimination on the Airbnb platform; specifically, discrimination in prices paid to black vs. white hosts and discrimination in acceptance rates between black vs. white guests. 
+
+### Elements of a Proposed Digital-Survey on Airbnb
+
+A potential method for applying a digital-survey could be interwoven into the Airbnb “experience” and interface with cooperation from Airbnb itself. Many companies administer surveys on user experience and satisfaction – and traditional hotels and rental services are no exception. From our previous discussions, we saw the limitations of both the observational study and experiment on identifying the exact causal mechanism for discrimination – is it taste-preference discrimination or statistical discrimination? Are black hosts and guests discriminated against purely due to their race or for other factors that are inferred from their race, such as their perceived socioeconomic status? A survey that asks questions to assess both host and user experience in using Airbnb has the potential to unveil insights into these questions.
+
+#### Survey Form and Time Frame
+
+Users of the Airbnb app or website could opt-in to a survey following their experience in booking (or attempting to book) a place to stay for an upcoming trip. This prompting could take the form of a pop-up notification upon accessing the Airbnb app or website; alternatively, it could take the form of an email sent to a host/guest’s following their booking (or attempt at booking) of an Airbnb rental. A time-frame, such as 7 days, could be given for people to complete the survey.
+
+#### Potential Survey Questions
+
+The survey could include both open and closed-type questions. Inclusion of closed-survey questions establishes a standard measurement for comparing users’ perception and experience of racism, prejudice, and bias, while inclusion of open-survey questions would take into consideration the complexity of quantifying “discrimination” as a concept by allowing users to provide more nuanced and detailed responses.
+
+Sample closed-survey questions might include (question wording will shift depending on target: guests or hosts):
+
+-	Do you believe that (users/hosts) of different races are treated equally on Airbnb? (Yes, No, Unsure)
+-	Have you personally faced discrimination in your experience as an Airbnb (guest/host)? (Yes, No, Unsure)
+-	Do you believe that your race, or how a (guest/host) perceives your race, plays a role in whether you (get requests from guests/are accepted by hosts)? (Yes, No, Unsure)
+
+Sample open-survey questions might include (question wording will shift depending on target: guests or hosts):
+
+-	Have you personally faced discrimination or felt that your identity impacted your experience on Airbnb? If yes, could you provide an example of when that happened?
+-	When choosing whether to (message a host/accept a request from a guest) does their identity factor into your consideration? Briefly explain. 
+
+### Potential Drawbacks & Overcoming Them
+
+#### Social Desirability Bias
+
+As with observational studies and experiments, digital surveys have their own drawbacks. One of the largest risks when surveying people on issues of race, discrimination, prejudice, or related-treatment is social desirability bias. Most people in society are socially conditioned to, at least on the surface level, reject outright bigotry or overt discrimination; and most people will certainly not admit to it even if they recognize their guilt or complicity. Thus, from hosts, it is unlikely that many would report that they actively discriminate or consider race when choosing whom to accept to stay in their home – rather, coded language may be used; hosts may say they prefer to choose people whom appear to “have a stable job” or “are reliable” when their views of which groups of people who possess such characteristics differ from racial group to racial group. 
+
+Thus, overcoming this may require complementing such a digital survey study with an observational study or experiment or both. While it may certainly yield added benefits to ask questions, observing behavior is important as well since there is no guarantee that people will answer truthfully in surveys.
+
+#### Cooperation from Airbnb
+
+Implementing a proposed survey requires cooperation from Airbnb. While Airbnb has started to take steps to combat discrimination on its platform, the company would likely be reluctant to allow an administration of such a survey. When we consider potential negative outcomes from such a survey, negative responses alleging discriminatory would be not only damaging for Airbnb’s image but their economic outcomes as well. 
+
+That being said, there is an argument to be made for longer-term consequences of not addressing issues of discrimination at this particular juncture. Now that our previously analyzed observational study and experiment have uncovered potentially problematic discriminatory behavior on Airbnb, their efforts to resolve these issues should be swift and decisive. Of course, without their cooperation in administering such a survey, a survey could still be administered outside of the Airbnb platform which provides a potential avenue for accomplishing this type of study.
+
+#### Potential Errors 
+
+Given the historical context and inherent complexity surrounding terms like “discrimination” or “racism”, operationalizing these concepts will prove challenging. Users taking the survey have diverse lived experiences which will lead them to have varying interpretations of what “discrimination” encapsulates. In a Pew Research study conducted in 2016 reported a significant division of views between white and black Americans in regard to race relations, racism, and inequity [5]. This signals an already wide-ranging disagreement over the severity of racism and discrimination in America and in turn complicates our ability to survey and compare such issues of discrimination. 
+
+To minimize this potential error, it might be necessary to pre-test the questions of the survey prior to launching the survey. This will assist in revealing issues with question wording and interpretation. Yet, realistically, a simple pre-testing of question wording will do little to erase or modify people’s preconceived notions of discrimination or race given that one’s race and racially-based experiences comprises a major part of one’s identity.
+
+## References
+
+[1] Edelman, B. G., & Luca, M. (2014). Digital discrimination: The case of airbnb.com. Harvard Business School NOM Unit Working Paper, (14-054).
+
+[2] Salganik, Matthew J. Bit by Bit: Social Research in the Digital Age, Princeton University Press, Open review edition.
+
+[3] Edelman, B., Luca, M., & Svirsky, D. (2017). Racial discrimination in the sharing economy: Evidence from a field experiment. American Economic Journal: Applied Economics, 9(2), 1-22.
+
+[4] Bertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic review 94 (4): 991–1013.
+
+[5] On Views of Race & Inequality, Blacks and Whites are Worlds Apart (Rep.). (2016, June 27). Retrieved October 18, 2017, from Pew Research Center website: http://assets.pewresearch.org/wp-content/uploads/sites/3/2016/06/ST_2016.06.27_Race-Inequality-Final.pdf.

@@ -20,7 +20,7 @@ first, I will summarize and discuss the research design, with a special
 focus on their computational method. Second, I will assess the
 effectiveness of research design of each paper. Third, I will discuss
 how combination of both an observational study and a field experiment
-complement each other—how we can benefit from combining both research
+complements each other—how we can benefit from combining both research
 projects. Finally, I will consider how a digital survey-based research
 design would help contribute to the primary question of interest from
 these two papers.
@@ -189,8 +189,7 @@ photos of the room, into quantitative one, a seven-point scale. MTurk
 workers are hired to this job. However, whether such quantification is a
 stable index for guest perceptions of quality can be questioned. Whether
 Mturk workers results are similar and stable, and whether their works
-represent general perception, might be questionable. (This issue is
-address in the next article)
+represent general perception, might be questionable.
 
 **“Racial Discrimination in the Sharing Economy: Evidence from a Field
 Experiment” (2017)**

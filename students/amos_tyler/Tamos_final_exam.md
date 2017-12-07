@@ -205,7 +205,7 @@ This study usefully uncovers a number of causal mechanisms at play. For example,
 | Heterogeneity of Treatment Effects       | Strong     |
 | Causal Mechanisms                        | Moderate   |
 
-In conclusion, we can say this research design is quite robust, leveraging the advantages of big data while mitigating successfully against most of the risks. The weakest aspect of the design is the researchers' willingness to accept the data made available to them by Airbnb. This resulted in a sample size substantially smaller than originally planned. Additional information on potential risks of drifting and algorithmic confounding could usefully have been addressed with respect to the study itself, not just in the context of the policy implications of findings. 
+In conclusion, we can say this research design is quite robust, leveraging the advantages of big data while mitigating successfully against most of the risks. The weakest aspect of the design is the researchers' willingness to accept the data made available to them by Airbnb (i.e., before Airbnb blocked their collection). This resulted in a sample size substantially smaller than originally planned. Additional information on potential risks of drifting and algorithmic confounding could usefully have been addressed with respect to the study itself, not just in the context of the policy implications of findings. 
 
 ## Joint Evaluation
 

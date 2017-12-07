@@ -178,7 +178,7 @@ expirements are better at internal validity.
 Survey
 ------
 
-### How I would build it
+### How I would do it
 
 To answer this question through a survey design, I would use an enriched
 asking approach similar to the Facebook personality study done by

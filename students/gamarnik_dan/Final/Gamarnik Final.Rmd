@@ -48,7 +48,7 @@ These are, however, ideal types. When it came to the two studies specifically, t
 
 ## Survey
 
-### How I would build it
+### How I would do it
 
 To answer this question through a survey design, I would use an enriched asking approach similar to the Facebook personality study done by [Kosinski et al. (2013)](http://www.pnas.org/content/110/15/5802.full). That is, I would have thousands of participants come in for a personality survey, indirect social questions regarding racial hostility (ie questions of how "warmly" they feel towards groups like black people) and Implicit Association Tests (IAT). These would require giving their Airbnb accounts and compare their performance on the tests with whether they rented to black people. As controls, I would also ask for their demographic information to see if factors like where they grew up or their income (as well as the controls in the study for things like gender, race and sex) affected this. This would be able to control for various confounders as well as be able to find the causal mechanism (that is, latent racism) with the IAT and indirect race relations questions. That is, those with a higher IAT scores and more problematic racial answers should be less likely to have rented to black people.
 

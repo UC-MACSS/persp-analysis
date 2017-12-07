@@ -1,9 +1,14 @@
 
 Final Exam: Discrimination in Airbnb
+
 Name: Yangyang Dai
 
+
+
 Part 1:
+
 Summarize the research design and explain how the research design leverages computational methods to ask and answer a question.
+
 
 Paper 1:
 
@@ -30,6 +35,7 @@ Also, using online work market platforms, they hire two Mechanical Turk workers 
 
 
 Part 2:
+
 Evaluate the effectiveness of each paper's research design independently. That is to say, what do we learn from each paper on its own? What are the limitations of each paper on its own? Think back to Salganik's characteristics of big data and our assessment of experiments' validity, heterogeneity of treatment effects, and causal mechanisms. Draw on these methods of assessment as you evaluate the effectiveness of each paper.
 
 Paper 1:
@@ -84,6 +90,7 @@ Lastly, since this study is a real-life experiment, it brings about the problem 
 
 
 Part 3:
+
 Identify the value-added of conducting both research projects. That is, what do we learn from running both an observational study and a field experiment that we could not learn from just one of these methods?
 
 An observational study like the first project enables us to conduct observations that we can observe what people actually do or say, rather than what they say they do. In our case, we directly observe the real offered prices by different races of people, rather than letting them tell us what they offered. Because if it is a survey or experiment, people might not always willing to write their true views on a questionnaire or tell a stranger what they really think at interview. Observations are made in real life situations, allowing the researcher access to the context and meaning surrounding what people react in the Aribnb market. If using other methods in which approaching people for interview or questionnaire completion, there might be unlikely to yield a positive response, but observations could yield valuable insights on this issue. 
@@ -100,6 +107,7 @@ Actually, in the second project, apart from using field experiment, the research
 
 
 Part 4:
+
 Consider how you could apply a digital survey-based research design to the primary question of interest from these two papers. What are the potential drawbacks to a survey approach? How might you overcome these drawbacks?
 
 Primary question of interest:

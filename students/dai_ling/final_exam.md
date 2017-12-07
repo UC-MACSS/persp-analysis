@@ -1,11 +1,6 @@
----
-title: "Ling's Final Exam Response"
-author: "Ling Dai"
-date: "12/06/2017"
-output:
-    html_document:
-        keep_md: TRUE
----
+# Ling's Final Exam Response
+Ling Dai  
+12/06/2017  
 
 
 ####Summary of research resign (Edelman, B. G., & Luca, M. (2014).)

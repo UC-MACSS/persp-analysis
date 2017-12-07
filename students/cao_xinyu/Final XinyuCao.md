@@ -105,7 +105,9 @@ If I were to implement a research design for survey study of racial discriminati
         Checking rating: 8.5 
 ~~~~
 One of the thing we need to consider is we should be careful about matching photo with those properties. Both profile photos of landlord and photo of the property are very important for decision making. However, those photos are highly sensitive. In order to avoid those ethic and legal concerns, instead of using the photo of Airbnb website directly, we could apply a machine learning technique in (Dosovitskiy, et. 2016)  to match the photo with property, then we could randomly generalize a photo with those features using machine learning method.
+
 After we generate our desired property and linking it with photo with the feature, we could ask the Amazon Turk workers to rate on the quality photo and then give an estimation of the price of house. Then we could collect the pricing information they give to study both the price and demand of the problem. 
+
 Ideally, we could use a wiki survey, so that we could ask why they price the property in that way. Through this process, we might be able to increase our survey and find some more reason why people pricing differently. This could exploit the advantage of survey, that is we could only know what people think by asking them questions.
 ### Drawbacks
 1. Reactive: \

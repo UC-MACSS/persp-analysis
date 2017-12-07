@@ -1,0 +1,17 @@
+---
+title: "POCA Final Exam"
+author: "Nora Nickels"
+date: "12/6/2017"
+output: github_document
+---
+
+# Final Exam
+## Evaluating Research Designs
+## Perspectives of Computational Analysis - Fall 2017
+
+Nora Nickels  
+Perspectives of Computational Social Sciences  
+Fall 2017  
+Final Exam  
+
+

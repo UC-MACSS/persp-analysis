@@ -10,8 +10,6 @@ _December 6 2017_
 #### Edelman and Luca, 2014. _Digital Discrimination: The Case of Airbnb.com_ 
 
 ### Summary of Research Design
-
-
 _How does the paper use computational methods to ask and answer a question?_
 
 The 2014 paper from Edelman and Luca apply an observational approach to data on accommodation listing data collected from Airbnb.com for New York on July 17, 2012. (Edelman and Luca 2014, "About Airbnb") To this 3,752 observation corpus, the researchers apply human computation techniques to process the data. (Salganik, "Mass Collaboration") Edelman and Luca hired Amazon Mechanical Turk workers to code Airbnb data in different mediums (image, text) to build a dataset with the following features: 
@@ -207,7 +205,7 @@ This study usefully uncovers a number of causal mechanisms at play. For example,
 | Heterogeneity of Treatment Effects       | Strong     |
 | Causal Mechanisms                        | Moderate   |
 
-In conclusion, we can say this research design is quite robust, leveraging the advantages of big data while mitigating successfully against most of the risks. The weakest aspect of the design is the researchers' willingness to accept the data make available to them by Airbnb. This resulted in a sample size substantially smaller than originally planned. Additional information on potential risks of drifting and algorithmic confounding could usefully have been addressed with respect to the study itself, not just in the context of the policy implications of findings. 
+In conclusion, we can say this research design is quite robust, leveraging the advantages of big data while mitigating successfully against most of the risks. The weakest aspect of the design is the researchers' willingness to accept the data made available to them by Airbnb. This resulted in a sample size substantially smaller than originally planned. Additional information on potential risks of drifting and algorithmic confounding could usefully have been addressed with respect to the study itself, not just in the context of the policy implications of findings. 
 
 ## Joint Evaluation
 

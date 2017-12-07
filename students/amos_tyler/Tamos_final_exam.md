@@ -263,7 +263,7 @@ Edelman, B., Luca, M., & Svirsky, D. 2017. "Racial discrimination in the sharing
 
 Salganik. 2017. _Bit by Bit_ http://www.bitbybitbook.com
 
-NORC. 2017. General Social Survey Codebook. http://gss.norc.org/documents/codebook/GSS_Codebook.pdf
+NORC. 2017. _General Social Survey Codebook_. http://gss.norc.org/documents/codebook/GSS_Codebook.pdf
 
 --- 
 

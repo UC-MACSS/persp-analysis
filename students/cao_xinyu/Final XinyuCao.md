@@ -97,10 +97,13 @@ Ideally, big data is big, it could help us identify the small differences. With 
 However, in this case, the actual responsive data is withheld by Airbnb.  To get an estimation of the difference of responsive rate, the author conducted a field experiment by using existing platform of Airbnb to test if they will have a different rate of response for the same Message of a profile one with a distinctive black name and one with a distinctive white name. From this experiment, we know not only the black host has to charge a 12% of price lower in the market as the observation method suggested, but also the black guest is subject to an 8% higher of refuse rate. These two ways of discrimination showed to us that the market design of Airbnb is suffered from critics of racial justice.  
 ## Digital Survey Based Research design
 If I were to implement a research design for survey study of racial discrimination. I will implement a pricing game at Amazon Turk. Because we already have the data of Airbnb, we could use those data to randomly generate characteristics of a property. For example: 
+~~~~
+
         An apartment 
         Bed rooms: 3 
         Location rating: 8
         Checking rating: 8.5 
+~~~~
 One of the thing we need to consider is we should be careful about matching photo with those properties. Both profile photos of landlord and photo of the property are very important for decision making. However, those photos are highly sensitive. In order to avoid those ethic and legal concerns, instead of using the photo of Airbnb website directly, we could apply a machine learning technique in (Dosovitskiy, et. 2016)  to match the photo with property, then we could randomly generalize a photo with those features using machine learning method.
 After we generate our desired property and linking it with photo with the feature, we could ask the Amazon Turk workers to rate on the quality photo and then give an estimation of the price of house. Then we could collect the pricing information they give to study both the price and demand of the problem. 
 Ideally, we could use a wiki survey, so that we could ask why they price the property in that way. Through this process, we might be able to increase our survey and find some more reason why people pricing differently. This could exploit the advantage of survey, that is we could only know what people think by asking them questions.

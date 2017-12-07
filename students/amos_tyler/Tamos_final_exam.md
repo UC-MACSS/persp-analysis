@@ -221,11 +221,11 @@ In summary, these two approaches are not mutually exclusive, in fact they reinfo
  
 ### Application of a Survey Approach
 
-Research Question, Paper 1<sup>1</sup>: _The extent of racial discrimination against hosts on Airbnb_
+Research Question, Paper 1<sup>1</sup>: _The extent of racial discrimination against hosts on Airbnb._
 
-Research Question, Paper 2<sup>1</sup>: _The existence and extent of racial discrimination on Airbnb_
+Research Question, Paper 2<sup>1</sup>: _The existence and extent of racial discrimination on Airbnb._
 
-Both of these research questions (essentially the same research question, with some variation) could be investigated using a digital survey methodology. This would be implemented through a series of questions on individuals' (hosts' and renters') attitudes towards renting to or from specific races or other categories of guests. This would provide a certain measure of the extent of discrimination on this platform. However, this approach has a number of drawbacks, as detailed below. 
+Both of these research questions (essentially the same research question, with some variation) could be investigated using a digital survey methodology. This would be implemented through a series of questions on individuals' (hosts' and renters') attitudes towards renting to or from specific races or other categories of individual. This would provide a certain measure of the extent of discrimination on this platform. However, this approach has a number of drawbacks, as detailed below. 
 
 _What are the potential drawbacks?_
 
@@ -235,7 +235,7 @@ There are a number of risks apparent with respect to representation error. Cover
 
 __Measurement Error__
 
-As a charged subject, it would be very difficult to collect viable response data from hosts without substantial risk of social desirability bias. While it may not be a challenge to draw out honest responses from guests (who may or may not have experienced discrimination), there are strong social norms which would prevent hosts from admitting to prejudiced feelings. In fact, this effect is likely to be so strong that it is unlikely the results would have any meaningful external validity. 
+As a charged subject, it would be very difficult to collect viable response data from hosts without encountering social desirability bias. While it may not be a challenge to draw out honest responses from guests who have experienced discrimination, there are strong social norms which would prevent hosts and guests from admitting to prejudiced feelings or behavior. In fact, this effect is likely to be so strong that it is unlikely the results would have any meaningful external validity. 
 
 Another potential drawback is that this approach would require permission from Airbnb to engage with their members in a systematic way. The researchers are unlikely to evade detection if they use guest accounts to contact hosts asking them to respond to a survey. This likely violates Airbnb's terms of service. Thus, the only way to conduct this survey would be in collaboration with Airbnb itself. The introduction of a new stakeholder, Airbnb, would be a limiting factor in terms of what can be asked, and how the survey can be conducted. 
 
